@@ -1,0 +1,23 @@
+.page-header {
+  background: $carbon--black-100;
+  color: $inverse-01;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: rem(240px);
+}
+
+.ibm--grid.page-header__label-wrapper {
+  padding-top: rem(24px);
+  margin-bottom: auto;
+}
+
+.page-header__label {
+  @include carbon--type-style('expressive-heading-03', true);
+}
+
+.page-header__title {
+  margin-bottom: $layout-xs;
+  margin-top: auto;
+}

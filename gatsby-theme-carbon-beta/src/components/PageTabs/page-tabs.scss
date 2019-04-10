@@ -1,0 +1,45 @@
+.page-tabs {
+  margin: 0;
+  width: 100%;
+  height: rem(48px);
+  position: relative;
+  border-top: 1px solid rgba($ui-02, 0.25);
+}
+
+.page-tabs__list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  height: rem(48px);
+  position: relative;
+  top: -1px;
+}
+
+.page-tabs__list li {
+  display: flex;
+  align-self: center;
+}
+
+.page-tabs__list li a {
+  @include carbon--type-style('body-short-02');
+  padding: 0 $spacing-3xl 0 $spacing-md;
+  text-decoration: none;
+  color: $inverse-01;
+  white-space: nowrap;
+  border-top: 2px solid transparent;
+  height: rem(48px);
+  display: inline-flex;
+  align-items: center;
+  transition: $transition--base;
+
+  &:hover {
+    background: #353535;
+  }
+}
+
+.page-tabs__list li.selected a {
+  border-top: 2px solid $brand-01;
+  background: $carbon--gray-80;
+}

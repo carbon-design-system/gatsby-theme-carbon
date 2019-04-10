@@ -1,0 +1,45 @@
+.bx--side-nav {
+  width: rem(256px);
+  will-change: transform;
+  transition: $transition--expansion transform $carbon--standard-easing;
+  transform: translateX(0);
+}
+
+.side-nav__closed,
+.side-nav__closed--final {
+  transform: translateX(-(rem(256px)));
+  border-right-width: 0px;
+}
+
+@include carbon--breakpoint("lg") {
+  .bx--side-nav.side-nav,
+  .side-nav__closed,
+  .side-nav__closed--final {
+    border-right-width: 1px;
+    transform: translateX(0);
+  }
+}
+
+//===================
+// SIDE NAV click to close
+//===================
+
+.side-nav-click-to-close {
+  display: block;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 500;
+}
+
+@include carbon--breakpoint("lg") {
+  .side-nav-click-to-close {
+    display: none;
+  }
+}
+
+.side-nav-click-to-close__closed {
+  display: none;
+}

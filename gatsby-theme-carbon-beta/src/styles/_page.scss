@@ -1,0 +1,313 @@
+//---------------------------------------
+// Global styles
+//---------------------------------------
+body {
+  background: $ui-01;
+  font-family: $font-family;
+}
+
+.side-nav + div, //Issue #51 weird bug where sometimes on reload of the page the classnames on container div disapear
+  .container {
+  width: 100%;
+  margin-left: 0;
+  transition: $transition--base ease;
+  position: relative;
+  min-height: calc(100vh - 48px);
+  margin-top: rem(48px);
+}
+
+.container .ibm--grid {
+  margin: 0;
+  max-width: rem(1584px);
+}
+
+//---------------------------------------
+// Header styles
+//---------------------------------------
+.bx--header__menu-trigger {
+  @include carbon--breakpoint("lg") {
+    display: none;
+  }
+}
+
+.bx--header .bx--header__name {
+  font-weight: 400;
+}
+
+.bx--header .bx--header__name span {
+  font-weight: 600;
+}
+
+//---------------------------------------
+// Page styles
+//---------------------------------------
+.page-p,
+.component-docs p {
+  @include carbon--type-style("body-long-02");
+  padding: 0 0 $spacing-lg;
+
+  &:empty {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+.page-content {
+  // padding-top: rem(80px);
+  // padding-bottom: rem(136px);
+
+  // All paragraphs on Markdown pages
+  // And divs when markdown doesn't wrap text in paragraphs (when you have to use html for links to open in a new window)
+
+  > div > div:first-child p {
+    padding-bottom: 0;
+  }
+
+  > div > div:nth-child(2) h2:before {
+    padding-bottom: rem(80px);
+  }
+
+  > div > div:nth-child(2) h3 {
+    margin-top: rem(48px);
+  }
+
+  // All links on Markdown pages but not inside component examples
+  // & > div > * > a,
+  // .page-table td a,
+  // .page-ul a {
+  //   color: $brand-01;
+  // }
+
+  // Inline code
+  p > code,
+  li > code,
+  td > code {
+    @include reset;
+    position: relative;
+    display: inline;
+    padding: rem(1px) $spacing-xs;
+    background: transparent;
+    border-radius: 4px;
+    background-color: $carbon--gray-20;
+  }
+
+  td > code {
+    @include carbon--type-style("code-01");
+  }
+
+  p > code,
+  li > code {
+    @include carbon--type-style("code-02");
+  }
+
+  // HR dividers
+  hr.divider {
+    display: block;
+    margin: 3rem 0;
+    height: 1px;
+    background: $ui-03;
+    border: 0px transparent;
+  }
+
+  img {
+    margin-bottom: rem(24px);
+  }
+
+  td > img {
+    margin-bottom: 0;
+  }
+
+  img + img {
+    margin-bottom: 0;
+  }
+
+  .bx--image-component > img {
+    margin-bottom: 0;
+  }
+
+  .bx--image-component__caption {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.bx--platform-header {
+  z-index: 9999;
+}
+
+// iframe
+.gatsby-resp-iframe-wrapper {
+  position: relative;
+  height: 0px;
+  overflow: hidden;
+  padding-bottom: 56.543%;
+
+  @include carbon--breakpoint("lg") {
+    margin-left: calc(25% + 0.5rem) !important;
+    padding-bottom: 43% !important;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+}
+.website-tabs .gatsby-resp-iframe-wrapper,
+.example .gatsby-resp-iframe-wrapper {
+  @include carbon--breakpoint("lg") {
+    margin-left: 0;
+    padding-bottom: 56.543% !important;
+  }
+}
+
+.ibm--row .gatsby-resp-iframe-wrapper,
+.example__content .gatsby-resp-iframe-wrapper {
+  margin-left: 0 !important;
+}
+
+//images
+.gatsby-resp-image-wrapper {
+  // background: $ui-02;
+  margin-left: 0 !important;
+  margin-bottom: rem(24px);
+
+  @include carbon--breakpoint("lg") {
+    margin-left: calc(25% + 0.5rem) !important;
+    max-width: calc(75% - 0.5rem);
+  }
+}
+
+//svg and gif images
+.page-content > div > img[src*="svg"],
+.page-content > div > img[src*="gif"] {
+  background: $ui-02;
+
+  @include carbon--breakpoint("lg") {
+    margin-left: calc(25% + 0.5rem) !important;
+    max-width: calc(75% - 0.5rem);
+  }
+}
+
+.ibm--row .gatsby-resp-image-wrapper,
+.ibm-row img[src*="svg"],
+.ibm-row img[src*="gif"] {
+  margin-left: 0 !important;
+  margin-bottom: 0;
+}
+
+// Caption styles - All em on Markdown pages after images
+.gatsby-resp-image-link,
+.gatsby-resp-image-wrapper,
+img[src*="svg"],
+img[src*="gif"] {
+  + div > div > p > em {
+    @include carbon--type-style("body-short-01");
+    font-style: normal;
+    color: $text-01;
+    display: block;
+
+    &:first-child {
+      padding-top: $spacing-xs;
+    }
+  }
+}
+
+.page-content iframe {
+  margin-bottom: rem(24px);
+}
+
+// Website alert banner
+.website-alert {
+  height: rem(40px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  z-index: 9999;
+  background: $brand-01;
+}
+
+.website-alert__icon {
+  margin-right: 1.375rem;
+  margin-left: 0.875rem;
+  fill: $inverse-01;
+
+  @include carbon--breakpoint("lg") {
+    margin: 0 1rem;
+  }
+}
+
+.website-alert__button {
+  justify-self: flex-end;
+  margin-left: auto;
+  height: 100%;
+  text-decoration: none;
+}
+
+.website-alert .bx--btn {
+  height: 100%;
+  width: 100%;
+  padding: 0 1rem;
+  display: inline-flex;
+  align-items: center;
+
+  svg {
+    margin-left: rem(8px);
+    fill: $inverse-01;
+  }
+}
+
+.website-alert__text {
+  @include carbon--type-style("body-short-01");
+  color: $inverse-01;
+  padding: 0;
+}
+
+.website-alert__text span {
+  &:nth-of-type(1),
+  &:nth-of-type(2) {
+    font-weight: 600;
+  }
+
+  &:nth-of-type(2),
+  &:nth-of-type(3) {
+    display: none;
+
+    @include carbon--breakpoint("md") {
+      display: inline;
+    }
+  }
+}
+
+.website-alert + .bx--header {
+  top: rem(40px);
+}
+
+.website-alert + .bx--header ~ div > .bx--side-nav {
+  top: 5.5rem;
+}
+
+.website-alert + .bx--header ~ div > .bx--side-nav + div,
+.website-alert + .bx--header ~ div > .bx--side-nav + .container {
+  margin-top: 5.5rem;
+}
+
+.website-alert
+  + .bx--header
+  ~ .bx--side-nav
+  + div
+  .color-token-table__theme-switcher--sticky {
+  top: 104px;
+}
+
+.website-alert + .bx--header ~ .bx--website-switcher {
+  top: 5.5rem;
+}

@@ -1,0 +1,9 @@
+{
+  "extends": ["wesbos"],
+  "rules": {
+    "react/prop-types": false,
+    "react/destructuring-assignment": false,
+    "react/no-access-state-in-setstate": false,
+    "no-useless-escape": 0
+  }
+}

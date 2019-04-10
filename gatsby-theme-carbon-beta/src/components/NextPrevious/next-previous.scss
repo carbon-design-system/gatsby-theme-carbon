@@ -1,0 +1,36 @@
+.next-previous-wrapper {
+  background: $carbon--gray-90;
+  color: $carbon--white-0;
+  min-height: rem(128px);
+  position: relative;
+}
+
+.next-previous-wrapper .ibm--grid,
+.next-previous-wrapper .ibm--row {
+  min-height: rem(128px);
+}
+
+.next-previous-link {
+  position: relative;
+  color: $carbon--white-0;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  text-decoration: none;
+  transition: 0.35s ease all;
+}
+
+.next-previous-link:hover {
+  background: $carbon--gray-80;
+  transition: 0.1s ease all;
+}
+
+.target-page-direction {
+  display: block;
+  @include carbon--type-style('body-short-01');
+}
+
+.target-page-name {
+  @include carbon--type-style('expressive-heading-03', true);
+  display: block;
+  max-width: rem(275px);
+}
