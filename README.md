@@ -2,7 +2,7 @@
 
 ## What is this?
 
-> Gatsby has implemented a new feature called [themes](https://www.gatsbyjs.org/docs/themes/). Themes encapsulate all of the configuration and implementation details of Gatsby websites. This project is a boilerplate with the the theme included.
+> Gatsby has implemented a new feature called [themes](https://www.gatsbyjs.org/docs/themes/). Themes encapsulate all of the configuration and implementation details of Gatsby websites. This is the theme for the Carbon Design System.
 
 ## How are Gatsby themes different than Gatsby starters?
 
