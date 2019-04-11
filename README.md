@@ -29,3 +29,4 @@ You're also free to make your own components and use them in your MDX pages.
 - Parameters to configure Carbon theme
 - Customizable core components
 - Intelligent image loading
+- Document components
