@@ -5,10 +5,26 @@ module.exports = {
     title: 'Gatsby Theme Carbon Beta',
   },
   plugins: [
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-mdx`,
       options: {
         extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
+          { resolve: `gatsby-remark-unwrap-images` },
+          { resolve: `gatsby-remark-smartypants` },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1164,
+              sizeByPixelDensity: true,
+              tracedSVG: true,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-responsive-iframe',
+          },
+        ],
         defaultLayouts: {
           default: require.resolve('./src/templates/Page.js'),
         },
@@ -40,5 +56,6 @@ module.exports = {
         modules: ['gatsby-theme-carbon-beta'],
       },
     },
+    `gatsby-plugin-react-helmet`,
   ],
 };
