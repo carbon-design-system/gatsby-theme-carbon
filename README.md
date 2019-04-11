@@ -1,68 +1,31 @@
-# Gatsby Starter Theme
+# Gatsby Theme Carbon
 
-Gatsby starter for creating a theme
+## What is this?
 
-```shell
-gatsby new my-theme https://github.com/ChristopherBiscardi/gatsby-starter-theme
-cd my-theme
-yarn workspace gatsby-theme-minimal-example develop
-```
+> Gatsby has implemented a new feature called [themes](https://www.gatsbyjs.org/docs/themes/). Themes encapsulate all of the configuration and implementation details of Gatsby websites. This is the theme for the Carbon Design System.
 
-## Layout
+## How are Gatsby themes different than Gatsby starters?
 
-```shell
-➜ tree . -L 2 -I node_modules
-.
-├── README.md
-├── gatsby-theme-minimal
-│   ├── README.md
-│   ├── gatsby-config.js
-│   ├── index.js
-│   └── package.json
-├── example
-│   ├── README.md
-│   ├── gatsby-config.js
-│   ├── package.json
-│   └── src
-├── package.json
-└── yarn.lock
+> Starters are essentially gatsby boilerplates. Over time, projects diverge from the original boilerplate and do not benefit from future updates. Gatsby themesm are proper npm dependencies that can be updated to install new components, features, and optimizations.
 
-3 directories, 10 files
-```
+## What's included?
 
-### gatsby-theme-minimal
+- Carbon Elements and Carbon React
+- [Emotion](https://emotion.sh) for React component styling
+- [gatsby-mdx](https://gatsby-mdx.netlify.com/) with brand new markdown components
 
-This directory is the theme package itself. You should rename this at
-some point to be `gatsby-theme-my-theme-name`. Also change the
-`package.json` name field and the corresponding dependency in the
-example directory's `package.json`/`gatsby-config.js`.
+## How do I use it?
 
-- `gatsby-theme-minimal/`
-  - gatsby-config.js
-    An empty gatsby-config that you can use as a starting point for
-    building functionality into your theme.
-  - index.js
-    Since themes also function as plugins, this is an empty file that
-    gatsby needs to use this theme as a plugin.
-  - package.json
-    The dependencies that your theme will pull in when people install
-    it. `gatsby` should be a `peerDependency`.
+`gatsby-theme-carbon` at it's core relies on mdx for page creation. Check out the pages directory for examples for using mdx.
 
-### example
+A key feature of gatsby themes is "component shadowing." By simply placing a component into the `src/components` location it you can override components provided by the theme. You can read more about component shadowing [here](https://www.gatsbyjs.org/docs/themes/api-reference#component-shadowing).
 
-This is an example usage of your theme. It should look the same as the
-site of someone who installed and used your theme from npm.
+You're also free to make your own components and use them in your MDX pages.
 
-- `example/`
-  - gatsby-config.js
-    Specifies which theme to use and any other one-off config a site
-    might need.
-  - src/
-    source code such as one-off pages or components that might live in
-    a user's site.
+## What's Next?
 
-You can run the example with:
-
-```sh
-yarn workspace example start
-```
+- Convert website components to Emotion for runtime theming and reduced compile time.
+- Migrate reusable MDX components from `@carbon/addons-website`
+- Parameters to configure Carbon theme
+- Customizable core components
+- Intelligent image loading
