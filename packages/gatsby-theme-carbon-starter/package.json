@@ -1,9 +1,12 @@
 {
   "name": "gatsby-theme-carbon-starter",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:ChristopherBiscardi/gatsby-theme-minimal-example.git",
-  "author": "christopherbiscardi <chris@christopherbiscardi.com> (@chrisbiscardi)",
+  "main": "src",
+  "repository": {
+    "url": "git@github.com:carbon-design-system/gatsby-theme-carbon.git",
+    "type": "git"
+  },
+  "author": "vpicone <vp@vincepic.one> (@vpicone)",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",

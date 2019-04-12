@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "vpicone <vp@vincepic.one> (@vpicone)",
+  "repository": {
+    "url": "git@github.com:carbon-design-system/gatsby-theme-carbon.git",
+    "type": "git"
+  },
   "license": "MIT",
   "peerDependencies": {
     "gatsby": "^2.3.5",
