@@ -18,28 +18,8 @@
     border-right-width: 1px;
     transform: translateX(0);
   }
-}
-
-//===================
-// SIDE NAV click to close
-//===================
-
-.side-nav-click-to-close {
-  display: block;
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 500;
-}
-
-@include carbon--breakpoint("lg") {
-  .side-nav-click-to-close {
-    display: none;
+  .bx--side-nav__item {
+    width: auto;
+    height: auto;
   }
-}
-
-.side-nav-click-to-close__closed {
-  display: none;
 }
