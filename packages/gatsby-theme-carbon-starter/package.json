@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-carbon-starter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "src",
   "repository": {
     "url": "git@github.com:carbon-design-system/gatsby-theme-carbon.git",
