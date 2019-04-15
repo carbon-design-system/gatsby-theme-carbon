@@ -3,7 +3,7 @@ import mq from '../../util/media-queries';
 
 const LeftNavWrapper = styled.div(({ expanded }) => ({
   width: '224px',
-  transition: 'all 0.5s ease',
+  transition: 'transform 0.3s ease',
   height: '100vh',
   position: 'fixed',
   left: 0,

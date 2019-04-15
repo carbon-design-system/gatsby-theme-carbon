@@ -14,6 +14,7 @@ import LeftNavItem from './LeftNavItem';
 import { useOnClickOutside, useWindowSize } from '../../util/hooks';
 
 import LeftNavWrapper from './LeftNavWrapper';
+import resourceLinks from './resourceLinks';
 
 const LeftNav = props => {
   console.log('navprops', props);
@@ -77,21 +78,17 @@ const LeftNav = props => {
         <SideNavItems>
           {renderNavItems()}
           <hr className="bx--side-nav__divider" />
-          <SideNavLink
-            icon={<Launch16 />}
-            href="https://github.com/ibm/carbon-design-kit"
-            className="bx--side-nav--website-link"
-          >
-            Design Kit
-          </SideNavLink>
-          <SideNavLink
-            icon={<Launch16 />}
-            to="/resources#github-repos"
-            className="bx--side-nav--website-link"
-            element={Link}
-          >
-            GitHub Repos
-          </SideNavLink>
+          {resourceLinks.map((link, i) => (
+            <SideNavLink
+              style={{ marginTop: i === 0 ? '1rem' : 0 }}
+              icon={<Launch16 />}
+              href={link.href}
+              className="bx--side-nav--website-link"
+              element={link.internal ? Link : 'a'}
+            >
+              {link.label}
+            </SideNavLink>
+          ))}
         </SideNavItems>
       </SideNav>
     </LeftNavWrapper>

@@ -2,11 +2,7 @@ import React, { useContext } from 'react';
 
 import { MDXProvider } from '@mdx-js/react';
 
-import {
-  WebsiteFooter,
-  WebsiteSwitcher,
-  WebsiteCodeSnippet,
-} from '@carbon/addons-website';
+import { WebsiteFooter, WebsiteCodeSnippet } from '@carbon/addons-website';
 
 // import timestamp from 'raw-loader!../../../build-timestamp';
 import Packages from '../../package.json';
@@ -14,6 +10,7 @@ import Packages from '../../package.json';
 import LeftNav from './LeftNav';
 import Meta from './Meta';
 import Header from './Header';
+import Switcher from './Switcher';
 
 import { useSmoothScroll, useDocSearch } from '../util/hooks';
 
@@ -46,37 +43,7 @@ const PageLayout = ({ children, ...rest }) => {
     <>
       <Meta />
       <Header />
-      <WebsiteSwitcher
-        isSwitcherFinal={openState.switcher}
-        isSwitcherOpen={openState.switcher}
-        links={[
-          { href: 'https://www.ibm.com/design/', linkText: 'IBM Design' },
-          {
-            href: 'https://www.ibm.com/design/language/',
-            linkText: 'IBM Design Language',
-          },
-          {
-            href: 'https://www.carbondesignsystem.com',
-            linkText: 'IBM Product Design',
-          },
-          {
-            href: 'https://www.ibm.com/standards/web/',
-            linkText: 'IBM Digital Design',
-          },
-          {
-            href: 'https://www.ibm.com/design/research/',
-            linkText: 'IBM Design Research',
-          },
-          {
-            href: 'https://www.ibm.com/design/thinking/',
-            linkText: 'Enterprise Design Thinking',
-          },
-          {
-            href: 'https://www.ibm.com/services/ibmix/',
-            linkText: 'IBM iX',
-          },
-        ]}
-      />
+      <Switcher />
       <LeftNav homepage={rest.homepage} is404Page={is404} />
       <div className="container">
         <MDXProvider
