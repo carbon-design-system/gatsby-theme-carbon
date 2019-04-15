@@ -1,19 +1,6 @@
 import React, { useContext } from 'react';
-import { Link } from 'gatsby';
-import { MDXProvider } from '@mdx-js/tag';
-import {
-  Header,
-  HeaderMenuButton,
-  HeaderName,
-  SkipToContent,
-  HeaderGlobalBar,
-  HeaderGlobalAction,
-} from 'carbon-components-react/lib/components/UIShell';
 
-import ArrowRight20 from '@carbon/icons-react/es/arrow--right/20';
-import AppSwitcher20 from '@carbon/icons-react/es/app-switcher/20';
-import Close20 from '@carbon/icons-react/es/close/20';
-import Information20 from '@carbon/icons-react/es/information/20';
+import { MDXProvider } from '@mdx-js/react';
 
 import {
   WebsiteFooter,
@@ -23,9 +10,10 @@ import {
 
 // import timestamp from 'raw-loader!../../../build-timestamp';
 import Packages from '../../package.json';
-import GlobalSearch from './GlobalSearch';
+
 import LeftNav from './LeftNav';
 import Meta from './Meta';
+import Header from './Header';
 
 import { useSmoothScroll, useDocSearch } from '../util/hooks';
 
@@ -38,13 +26,11 @@ import { P, H1, H2, H3, H4, H5, Ul, Ol } from './markdown';
 
 import '../styles/index.scss';
 
-const PageLayout = ({ children }) => {
+const PageLayout = ({ children, ...rest }) => {
   const { openState, toggleNav } = useContext(NavContext);
   useSmoothScroll();
   useDocSearch();
 
-  const { GATSBY_CARBON_ENV } = process.env;
-  const isInternal = GATSBY_CARBON_ENV === 'internal';
   const version = Packages.dependencies['carbon-components'];
   const reactVersion = Packages.dependencies['carbon-components-react'];
   const currentYear = new Date().getFullYear();
@@ -59,57 +45,7 @@ const PageLayout = ({ children }) => {
   return (
     <>
       <Meta />
-      <aside aria-label="alert banner" className="website-alert">
-        <Information20 className="website-alert__icon" />
-        <p className="website-alert__text">
-          <span>Carbon v10 is live!</span>
-          <span /> <span>View the migration guide to upgrade from v9.</span>
-        </p>
-        <Link
-          className="website-alert__button"
-          tabIndex="-1"
-          to="/updates/v10-migration/overview"
-        >
-          <button
-            className="bx--btn bx--btn--secondary bx--btn--sm"
-            type="button"
-          >
-            <span>Migrate to v10</span>
-            <ArrowRight20 />
-          </button>
-        </Link>
-      </aside>
-      <Header aria-label="Header" className="bx--header--website">
-        <SkipToContent />
-        <HeaderMenuButton
-          className="bx--header__action--menu"
-          aria-label="Open menu"
-          onClick={() => toggleNav('leftNav')}
-          isActive={openState.leftNav}
-        />
-        {isInternal ? (
-          <HeaderName prefix="" to="/" element={Link}>
-            Carbon&nbsp;<span>Design System</span>
-          </HeaderName>
-        ) : (
-          <HeaderName prefix="" to="/" element={Link}>
-            Carbon&nbsp;<span>Design System</span>
-          </HeaderName>
-        )}
-        <HeaderGlobalBar>
-          <GlobalSearch />
-          <HeaderGlobalAction
-            className="bx--header__action--switcher"
-            aria-label="Switch"
-            onClick={() => {
-              toggleNav('switcher');
-              toggleNav('search', 'close');
-            }}
-          >
-            {openState.switcher ? <Close20 /> : <AppSwitcher20 />}
-          </HeaderGlobalAction>
-        </HeaderGlobalBar>
-      </Header>
+      <Header />
       <WebsiteSwitcher
         isSwitcherFinal={openState.switcher}
         isSwitcherOpen={openState.switcher}
@@ -141,11 +77,10 @@ const PageLayout = ({ children }) => {
           },
         ]}
       />
-      <LeftNav is404Page={is404} />
+      <LeftNav homepage={rest.homepage} is404Page={is404} />
       <div className="container">
         <MDXProvider
           components={{
-            // Map HTML element tag to React component
             p: P,
             h1: H1,
             h2: H2,

@@ -11,10 +11,19 @@ import {
 import Launch16 from '@carbon/icons-react/es/launch/16';
 import NavContext from '../../util/context/NavContext';
 import LeftNavItem from './LeftNavItem';
-import { useOnClickOutside } from '../../util/hooks';
+import { useOnClickOutside, useWindowSize } from '../../util/hooks';
+
+import LeftNavWrapper from './LeftNavWrapper';
 
 const LeftNav = props => {
+  console.log('navprops', props);
   const { openState, toggleNav } = useContext(NavContext);
+  const windowSize = useWindowSize();
+
+  if (windowSize.innerWidth > 1056 && !openState.leftNav) {
+    toggleNav('leftNav', 'open');
+  }
+
   const data = useStaticQuery(graphql`
     query LEFT_NAV_QUERY {
       allFile {
@@ -43,7 +52,6 @@ const LeftNav = props => {
   );
 
   const renderNavItems = () => {
-    // items with category '' (no sub items) will go last
     const sortedTopNavItems = topLevelNavItems.sort((a, b) => a < b);
     return sortedTopNavItems.map((item, i) => (
       <LeftNavItem
@@ -56,28 +64,18 @@ const LeftNav = props => {
     ));
   };
 
-  const { is404Page } = props;
-
-  const navItems = renderNavItems();
-
-  const classNames = classnames('side-nav', {
-    'side-nav__closed': !openState.leftNav,
-    'bx--side-nav--website--light':
-      window.location.pathname !== '/' &&
-      window.location.pathname !== '/design/product/' &&
-      !is404Page,
-    'bx--side-nav--website': true,
-  });
-
   return (
-    <div ref={sideNavRef}>
+    <LeftNavWrapper expanded={openState.leftNav} homepage={props.homepage}>
       <SideNav
         isExpanded={openState.leftNav}
         aria-label="Side navigation"
-        className={classNames}
+        className={classnames({
+          'bx--side-nav--website': true,
+          'bx--side-nav--website--light': !props.homepage,
+        })}
       >
         <SideNavItems>
-          {navItems}
+          {renderNavItems()}
           <hr className="bx--side-nav__divider" />
           <SideNavLink
             icon={<Launch16 />}
@@ -96,7 +94,7 @@ const LeftNav = props => {
           </SideNavLink>
         </SideNavItems>
       </SideNav>
-    </div>
+    </LeftNavWrapper>
   );
 };
 

@@ -66,7 +66,6 @@ export default class LeftNavItem extends React.Component {
             key={i}
             activeClassName="bx--side-nav__link--current"
             to={item.name}
-            icon={<Awake16 />}
           >
             {item.childMdx.frontmatter.title}
           </SideNavLink>
@@ -77,11 +76,9 @@ export default class LeftNavItem extends React.Component {
       <Location>
         {({ location }) => (
           <SideNavMenu
-            style={{ width: '100%' }}
             isActive={location.pathname.includes(category)}
             defaultExpanded={location.pathname.includes(category)}
             title={category[0].toUpperCase() + category.slice(1)}
-            icon={<Awake16 />}
           >
             {this.renderSubNavItems(items, location, category)}
           </SideNavMenu>
