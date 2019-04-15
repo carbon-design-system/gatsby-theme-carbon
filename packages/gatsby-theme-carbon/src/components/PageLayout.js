@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import { MDXProvider } from '@mdx-js/react';
 
@@ -15,7 +15,6 @@ import Switcher from './Switcher';
 import { useSmoothScroll, useDocSearch } from '../util/hooks';
 
 // import favicon32 from '../../content/global/images/favicon-32.png';
-import NavContext from '../util/context/NavContext';
 
 import PageTable from './PageTable';
 
@@ -24,18 +23,12 @@ import { P, H1, H2, H3, H4, H5, Ul, Ol } from './markdown';
 import '../styles/index.scss';
 
 const PageLayout = ({ children, ...rest }) => {
-  const { openState, toggleNav } = useContext(NavContext);
   useSmoothScroll();
   useDocSearch();
 
   const version = Packages.dependencies['carbon-components'];
   const reactVersion = Packages.dependencies['carbon-components-react'];
   const currentYear = new Date().getFullYear();
-  // const lastUpdated = new Intl.DateTimeFormat(undefined, {
-  //   year: 'numeric',
-  //   month: 'long',
-  //   day: 'numeric',
-  // }).format(new Date(Number(timestamp)));
 
   const is404 = children.key === null;
 

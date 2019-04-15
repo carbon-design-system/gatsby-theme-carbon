@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import mq from '../../util/media-queries';
 
 const LeftNavWrapper = styled.div(({ expanded }) => ({
   width: '224px',
