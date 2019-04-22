@@ -1,6 +1,6 @@
 import React from 'react';
 import { WebsiteBackToTopBtn } from '@carbon/addons-website';
-import Layout from '../components/PageLayout';
+import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
 import EditLink from '../components/EditLink';
 import NextPrevious from '../components/NextPrevious';
@@ -17,7 +17,6 @@ const Default = ({ title, slug, tabs, currentTab, children }) => (
       id="maincontent"
     >
       {children}
-      <EditLink slug={slug} />
     </main>
     <NextPrevious slug={slug} currentTabs={tabs} currentPage={currentTab} />
     <WebsiteBackToTopBtn />

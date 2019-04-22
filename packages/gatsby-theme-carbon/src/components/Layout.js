@@ -2,7 +2,7 @@ import React from 'react';
 
 import { MDXProvider } from '@mdx-js/react';
 
-import { WebsiteFooter, WebsiteCodeSnippet } from '@carbon/addons-website';
+import { WebsiteCodeSnippet } from '@carbon/addons-website';
 
 // import timestamp from 'raw-loader!../../../build-timestamp';
 import Packages from '../../package.json';
@@ -11,6 +11,7 @@ import LeftNav from './LeftNav';
 import Meta from './Meta';
 import Header from './Header';
 import Switcher from './Switcher';
+import Footer from './Footer';
 
 import { useSmoothScroll, useDocSearch } from '../util/hooks';
 
@@ -22,7 +23,7 @@ import { P, H1, H2, H3, H4, H5, Ul, Ol } from './markdown';
 
 import '../styles/index.scss';
 
-const PageLayout = ({ children, ...rest }) => {
+const Layout = ({ children, ...rest }) => {
   useSmoothScroll();
   useDocSearch();
 
@@ -55,8 +56,7 @@ const PageLayout = ({ children, ...rest }) => {
         >
           {children}
         </MDXProvider>
-        <WebsiteFooter
-          logoOffset
+        <Footer
           linksCol1={[
             { href: '/contributing/designers', linkText: 'Contribute' },
             { href: 'https://www.ibm.com/privacy', linkText: 'Privacy' },
@@ -82,12 +82,13 @@ const PageLayout = ({ children, ...rest }) => {
           ]}
         >
           <p>
-            Have questions? Email us or open
-            <br /> an issue in{' '}
+            Have questions? Email us or open an issue on
             <a href="https://github.com/carbon-design-system/carbon-website/issues/new/choose">
+              {' '}
               GitHub.
             </a>
           </p>
+          <br />
           <p>
             Vanilla Components version {version}
             <br />
@@ -97,10 +98,10 @@ const PageLayout = ({ children, ...rest }) => {
             <br />
             Copyright © {currentYear} IBM
           </p>
-        </WebsiteFooter>
+        </Footer>
       </div>
     </>
   );
 };
 
-export default PageLayout;
+export default Layout;

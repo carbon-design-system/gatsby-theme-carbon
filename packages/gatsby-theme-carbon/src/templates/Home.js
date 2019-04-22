@@ -4,7 +4,7 @@ import {
   HomepageHeader,
   HomepageFooter,
 } from '../components/Homepage/Homepage';
-import Layout from '../components/PageLayout';
+import Layout from '../components/Layout';
 
 const HomePage = () => (
   <Layout homepage>
