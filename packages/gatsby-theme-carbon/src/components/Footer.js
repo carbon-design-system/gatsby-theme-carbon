@@ -92,7 +92,7 @@ const Footer = ({ Content, links, Logo }) => {
           </Column>
         </Row>
         <Row>
-          <Column offsetLg={3}>
+          <Column offsetLg={3} colLg={4}>
             <Logo />
           </Column>
         </Row>

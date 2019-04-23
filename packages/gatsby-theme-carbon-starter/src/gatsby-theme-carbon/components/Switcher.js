@@ -1,3 +1,6 @@
+import React from 'react';
+import Switcher from 'gatsby-theme-carbon/src/components/Switcher';
+
 const links = [
   { href: 'https://www.ibm.com/design/', linkText: 'IBM Design' },
   {
@@ -26,4 +29,6 @@ const links = [
   },
 ];
 
-export default links;
+const CustomSwitcher = () => <Switcher links={links} />;
+
+export default CustomSwitcher;

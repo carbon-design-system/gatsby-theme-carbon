@@ -13,7 +13,7 @@ import Close20 from '@carbon/icons-react/es/close/20';
 import GlobalSearch from './GlobalSearch';
 import NavContext from '../util/context/NavContext';
 
-const Header = () => {
+const Header = ({ children }) => {
   const { openState, toggleNav } = useContext(NavContext);
   return (
     <ShellHeader aria-label="Header" className="bx--header--website">
@@ -25,7 +25,7 @@ const Header = () => {
         isActive={openState.leftNav}
       />
       <HeaderName prefix="" to="/" element={Link}>
-        Carbon&nbsp;<span>Design System</span>
+        {children}
       </HeaderName>
       <HeaderGlobalBar>
         <GlobalSearch />
@@ -42,6 +42,16 @@ const Header = () => {
       </HeaderGlobalBar>
     </ShellHeader>
   );
+};
+
+const DefaultHeaderText = () => (
+  <>
+    Carbon&nbsp;<span>Design System</span>
+  </>
+);
+
+Header.defaultProps = {
+  children: <DefaultHeaderText />,
 };
 
 export default Header;
