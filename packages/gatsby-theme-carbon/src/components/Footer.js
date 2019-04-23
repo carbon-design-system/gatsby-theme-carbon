@@ -57,7 +57,7 @@ const contentStyles = ({ colors, typeStyles }) => ({
   },
 });
 
-const Footer = ({ content, links, Logo }) => {
+const Footer = ({ Content, links, Logo }) => {
   const { firstCol, secondCol } = links;
   return (
     <footer css={footerStyles}>
@@ -88,7 +88,7 @@ const Footer = ({ content, links, Logo }) => {
             </ul>
           </Column>
           <Column css={contentStyles} colLg={4} colMd={4}>
-            {content}
+            <Content />
           </Column>
         </Row>
         <Row>
@@ -142,8 +142,8 @@ Footer.defaultProps = {
       },
     ],
   },
-  content: <DefaultContent />,
-  Logo: <IBMLogo />,
+  Content: DefaultContent,
+  Logo: IBMLogo,
 };
 
 Footer.propTypes = {
@@ -168,7 +168,7 @@ Footer.propTypes = {
   /**
    * Specify the first and second columns of your links
    */
-  content: PropTypes.node,
+  Content: PropTypes.node,
 
   /**
    * Provide a logo to be rendered in the bottom left corner

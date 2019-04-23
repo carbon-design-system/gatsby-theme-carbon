@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from 'gatsby-theme-carbon/src/components/Footer';
 
-const FooterContent = () => (
+const Content = () => (
   <>
     <p>
       By importing the <code>Footer</code> component from gatsby-carbon-theme,
@@ -34,7 +34,7 @@ const links = {
 };
 
 const CustomFooter = props => (
-  <Footer {...props} links={links} content={<FooterContent />} />
+  <Footer {...props} links={links} Content={Content} />
 );
 
 export default CustomFooter;

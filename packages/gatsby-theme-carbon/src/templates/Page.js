@@ -5,7 +5,7 @@ import Default from './Default';
 const Page = props => {
   const slug = props.location.pathname;
   const {
-    frontmatter: { tabs, hidden, title },
+    frontmatter: { tabs, title },
   } = props.pageContext;
 
   const currentTab = slug.split('/').slice(-1)[0];
