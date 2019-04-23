@@ -2,7 +2,7 @@ import React from 'react';
 import { WebsiteBackToTopBtn } from '@carbon/addons-website';
 import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
-import EditLink from '../components/EditLink';
+// import EditLink from '../components/EditLink';
 import NextPrevious from '../components/NextPrevious';
 import PageTabs from '../components/PageTabs';
 

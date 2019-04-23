@@ -4,9 +4,6 @@ import { MDXProvider } from '@mdx-js/react';
 
 import { WebsiteCodeSnippet } from '@carbon/addons-website';
 
-// import timestamp from 'raw-loader!../../../build-timestamp';
-import Packages from '../../package.json';
-
 import LeftNav from './LeftNav';
 import Meta from './Meta';
 import Header from './Header';
@@ -26,10 +23,6 @@ import '../styles/index.scss';
 const Layout = ({ children, ...rest }) => {
   useSmoothScroll();
   useDocSearch();
-
-  const version = Packages.dependencies['carbon-components'];
-  const reactVersion = Packages.dependencies['carbon-components-react'];
-  const currentYear = new Date().getFullYear();
 
   const is404 = children.key === null;
 
@@ -56,49 +49,7 @@ const Layout = ({ children, ...rest }) => {
         >
           {children}
         </MDXProvider>
-        <Footer
-          linksCol1={[
-            { href: '/contributing/designers', linkText: 'Contribute' },
-            { href: 'https://www.ibm.com/privacy', linkText: 'Privacy' },
-            {
-              href: 'https://www.ibm.com/legal',
-              linkText: 'Terms of Use',
-            },
-            { href: 'https://www.ibm.com', linkText: 'IBM.com' },
-          ]}
-          linksCol2={[
-            {
-              href: 'https://dribbble.com/_carbondesign',
-              linkText: 'Dribbble',
-            },
-            {
-              href: 'https://medium.com/@_carbondesign',
-              linkText: 'Medium',
-            },
-            {
-              href: 'https://twitter.com/_carbondesign',
-              linkText: 'Twitter',
-            },
-          ]}
-        >
-          <p>
-            Have questions? Email us or open an issue on
-            <a href="https://github.com/carbon-design-system/carbon-website/issues/new/choose">
-              {' '}
-              GitHub.
-            </a>
-          </p>
-          <br />
-          <p>
-            Vanilla Components version {version}
-            <br />
-            React Components version {reactVersion}
-            <br />
-            {/* Last updated {lastUpdated} */}
-            <br />
-            Copyright © {currentYear} IBM
-          </p>
-        </Footer>
+        <Footer />
       </div>
     </>
   );

@@ -1,13 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import { settings } from 'carbon-components';
-import styled from '@emotion/styled';
-import { css } from '@emotion/core';
 import { Row, Grid, Column } from './Grid';
 import mq from '../util/media-queries';
-
-const { prefix } = settings;
 
 const IBMLogo = () => (
   <Column offsetLg={3}>
@@ -42,7 +36,8 @@ const gridStyles = () => ({
 });
 
 const listStyles = ({ colors, typeStyles }) => ({
-  position: 'relative',
+  paddingBottom: '1.5rem',
+  marginBottom: '2.5rem',
   ...typeStyles.bodyLong01,
   a: {
     lineHeight: '1.25rem',
@@ -52,10 +47,16 @@ const listStyles = ({ colors, typeStyles }) => ({
   'a:hover': {
     textDecoration: 'underline',
   },
+  borderBottom: `1px solid ${colors.ui04}`,
+  [mq.md]: {
+    borderBottom: 'none',
+  },
 });
 
 const contentStyles = ({ colors, typeStyles }) => ({
   maxWidth: '33ch',
+  paddingBottom: '1.5rem',
+  marginBottom: '2.5rem',
   ...typeStyles.bodyLong01,
   a: {
     color: colors.ui02,
@@ -66,55 +67,107 @@ const contentStyles = ({ colors, typeStyles }) => ({
   },
 });
 
-const WebsiteFooter = ({ children, linksCol1, linksCol2 }) => (
-  <footer css={footerStyles}>
-    <Grid css={gridStyles}>
-      <Row>
-        <Column colLg={2} colMd={2} offsetLg={3}>
-          <ul css={listStyles}>
-            {linksCol1 &&
-              linksCol1.map((link, i) => (
-                <li key={i}>
-                  <a href={link.href} aria-label={link.linkText}>
-                    {link.linkText}
-                  </a>
-                </li>
-              ))}
-          </ul>
-        </Column>
-        <Column colLg={2} colMd={2}>
-          <ul css={listStyles}>
-            {linksCol2 &&
-              linksCol2.map((link, i) => (
-                <li key={i}>
-                  <a href={link.href} aria-label={link.linkText}>
-                    {link.linkText}
-                  </a>
-                </li>
-              ))}
-          </ul>
-        </Column>
-        <Column css={contentStyles} colLg={4} colMd={4}>
-          {children}
-        </Column>
-      </Row>
-      <Row>
-        <IBMLogo />
-      </Row>
-    </Grid>
-  </footer>
+const WebsiteFooter = ({ content, links }) => {
+  const { firstCol, secondCol } = links;
+  return (
+    <footer css={footerStyles}>
+      <Grid css={gridStyles}>
+        <Row>
+          <Column colLg={2} colMd={2} offsetLg={3}>
+            <ul css={listStyles}>
+              {firstCol &&
+                firstCol.map((link, i) => (
+                  <li key={i}>
+                    <a href={link.href} aria-label={link.linkText}>
+                      {link.linkText}
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </Column>
+          <Column colLg={2} colMd={2}>
+            <ul css={listStyles}>
+              {secondCol &&
+                secondCol.map((link, i) => (
+                  <li key={i}>
+                    <a href={link.href} aria-label={link.linkText}>
+                      {link.linkText}
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </Column>
+          <Column css={contentStyles} colLg={4} colMd={4}>
+            {content}
+          </Column>
+        </Row>
+        <Row>
+          <IBMLogo />
+        </Row>
+      </Grid>
+    </footer>
+  );
+};
+
+const DefaultContent = () => (
+  <p>
+    Shadow this content by importing the theme Footer and supplying your own
+    props.
+  </p>
 );
+
+WebsiteFooter.defaultProps = {
+  links: {
+    firstCol: [
+      { href: 'https://www.ibm.com/design', linkText: 'Sample' },
+      { href: 'https://www.ibm.com/design', linkText: 'Links' },
+      {
+        href: 'https://www.ibm.com/design',
+        linkText: 'Column',
+      },
+      { href: 'https://www.ibm.com/design', linkText: 'One' },
+    ],
+    secondCol: [
+      {
+        href: 'https://www.ibm.com/design',
+        linkText: 'Dribbble',
+      },
+      {
+        href: 'https://www.ibm.com/design',
+        linkText: 'Medium',
+      },
+      {
+        href: 'https://www.ibm.com/design',
+        linkText: 'Twitter',
+      },
+    ],
+  },
+  content: <DefaultContent />,
+};
 
 WebsiteFooter.propTypes = {
   /**
-   * Specify an array of links
+   * Specify the first and second columns of your links
    */
-  linksCol1: PropTypes.array,
+  links: PropTypes.exact({
+    firstCol: PropTypes.arrayOf(
+      PropTypes.shape({
+        href: PropTypes.string,
+        linkText: PropTypes.string,
+      })
+    ),
+    secondCol: PropTypes.arrayOf(
+      PropTypes.shape({
+        href: PropTypes.string,
+        linkText: PropTypes.string,
+      })
+    ),
+  }),
 
   /**
-   * Specify second array of links
+   * Specify the first and second columns of your links
    */
-  linksCol2: PropTypes.array,
+  content: PropTypes.node,
 };
 
 export default WebsiteFooter;
