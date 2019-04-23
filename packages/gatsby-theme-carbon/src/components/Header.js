@@ -14,7 +14,7 @@ import GlobalSearch from './GlobalSearch';
 import NavContext from '../util/context/NavContext';
 
 const Header = ({ children }) => {
-  const { openState, toggleNav } = useContext(NavContext);
+  const { leftNavIsOpen, toggleNav, switcherIsOpen } = useContext(NavContext);
   return (
     <ShellHeader aria-label="Header" className="bx--header--website">
       <SkipToContent />
@@ -22,7 +22,7 @@ const Header = ({ children }) => {
         className="bx--header__action--menu"
         aria-label="Open menu"
         onClick={() => toggleNav('leftNav')}
-        isActive={openState.leftNav}
+        isActive={leftNavIsOpen}
       />
       <HeaderName prefix="" to="/" element={Link}>
         {children}
@@ -37,7 +37,7 @@ const Header = ({ children }) => {
             toggleNav('search', 'close');
           }}
         >
-          {openState.switcher ? <Close20 /> : <AppSwitcher20 />}
+          {switcherIsOpen ? <Close20 /> : <AppSwitcher20 />}
         </HeaderGlobalAction>
       </HeaderGlobalBar>
     </ShellHeader>

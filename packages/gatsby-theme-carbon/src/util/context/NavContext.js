@@ -18,11 +18,14 @@ const reducer = (state, action) => {
   }
 };
 export const NavContextProvider = ({ children }) => {
-  const [openState, dispatch] = useReducer(reducer, {
-    leftNav: false,
-    search: false,
-    switcher: false,
-  });
+  const { leftNavIsOpen, searchIsOpen, switcherIsOpen, dispatch } = useReducer(
+    reducer,
+    {
+      leftNav: false,
+      search: false,
+      switcher: false,
+    }
+  );
 
   const [expandedCategories, setExpandedCategories] = useState([]);
 
@@ -44,7 +47,14 @@ export const NavContextProvider = ({ children }) => {
 
   return (
     <NavContext.Provider
-      value={{ openState, toggleNav, expandedCategories, toggleCategory }}
+      value={{
+        leftNavIsOpen,
+        searchIsOpen,
+        switcherIsOpen,
+        toggleNav,
+        expandedCategories,
+        toggleCategory,
+      }}
     >
       {children}
     </NavContext.Provider>

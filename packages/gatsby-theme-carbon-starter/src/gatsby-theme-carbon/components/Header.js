@@ -3,7 +3,7 @@ import Header from 'gatsby-theme-carbon/src/components/Header';
 
 const CustomSwitcher = () => (
   <Header>
-    <em>Shadowed</em>&nbsp;Name
+    gatsby theme <span style={{ fontWeight: 200 }}>&nbsp;Carbon</span>
   </Header>
 );
 

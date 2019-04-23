@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import NavContext from '../util/context/NavContext';
 
 const Switcher = ({ links }) => {
-  const { openState } = useContext(NavContext);
+  const { switcherIsOpen } = useContext(NavContext);
   return (
     <WebsiteSwitcher
-      isSwitcherFinal={openState.switcher}
-      isSwitcherOpen={openState.switcher}
+      isSwitcherFinal={switcherIsOpen}
+      isSwitcherOpen={switcherIsOpen}
       links={links}
     />
   );

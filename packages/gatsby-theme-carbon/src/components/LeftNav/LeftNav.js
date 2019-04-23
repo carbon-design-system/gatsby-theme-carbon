@@ -17,11 +17,10 @@ import LeftNavWrapper from './LeftNavWrapper';
 import resourceLinks from './resourceLinks';
 
 const LeftNav = props => {
-  console.log('navprops', props);
-  const { openState, toggleNav } = useContext(NavContext);
+  const { leftNavIsOpen, toggleNav } = useContext(NavContext);
   const windowSize = useWindowSize();
 
-  if (windowSize.innerWidth > 1056 && !openState.leftNav) {
+  if (windowSize.innerWidth > 1056 && !leftNavIsOpen) {
     toggleNav('leftNav', 'open');
   }
 
@@ -66,9 +65,9 @@ const LeftNav = props => {
   };
 
   return (
-    <LeftNavWrapper expanded={openState.leftNav} homepage={props.homepage}>
+    <LeftNavWrapper expanded={leftNavIsOpen} homepage={props.homepage}>
       <SideNav
-        isExpanded={openState.leftNav}
+        isExpanded={leftNavIsOpen}
         aria-label="Side navigation"
         className={classnames({
           'bx--side-nav--website': true,

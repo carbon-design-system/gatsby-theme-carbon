@@ -6,9 +6,9 @@ import GlobalSearchInput from './GlobalSearchInput';
 import NavContext from '../../util/context/NavContext';
 
 const GlobalSearch = () => {
-  const { openState, toggleNav } = useContext(NavContext);
+  const { searchIsOpen, toggleNav } = useContext(NavContext);
 
-  if (openState.search) {
+  if (searchIsOpen) {
     return <GlobalSearchInput />;
   }
 

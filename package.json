@@ -12,6 +12,7 @@
   "scripts": {
     "dev": "yarn workspace gatsby-theme-carbon-starter develop",
     "start": "yarn workspace gatsby-theme-carbon-starter start",
+    "build": "yarn workspace gatsby-theme-carbon-starter build",
     "lint": "eslint ."
   },
   "eslintIgnore": [
