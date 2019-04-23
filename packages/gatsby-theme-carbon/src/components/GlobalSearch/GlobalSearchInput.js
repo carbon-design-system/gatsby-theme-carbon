@@ -8,7 +8,7 @@ import NavContext from '../../util/context/NavContext';
 const GlobalSearchInput = () => {
   const inputRef = useRef(null);
   const [input, setInput] = useState('');
-  const { toggleNav } = useContext(NavContext);
+  const { toggleNavState } = useContext(NavContext);
 
   useEffect(() => {
     if (inputRef.current) inputRef.current.focus();
@@ -40,7 +40,7 @@ const GlobalSearchInput = () => {
         aria-label="Clear search input"
         onClick={() => {
           setInput('');
-          toggleNav('search', 'close');
+          toggleNavState('searchIsOpen', 'close');
         }}
       >
         <Close20 description="Search Clear" className="bx--search-clear" />

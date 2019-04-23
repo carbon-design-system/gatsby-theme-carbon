@@ -1,10 +1,9 @@
-import React, { useState, useReducer } from 'react';
+import React, { useReducer } from 'react';
 
 const NavContext = React.createContext({
-  leftNav: false,
-  search: false,
-  switcher: false,
-  expandedCategories: [],
+  leftNavIsOpen: true,
+  searchIsOpen: false,
+  switcherIsOpen: false,
 });
 
 const reducer = (state, action) => {
@@ -18,30 +17,16 @@ const reducer = (state, action) => {
   }
 };
 export const NavContextProvider = ({ children }) => {
-  const { leftNavIsOpen, searchIsOpen, switcherIsOpen, dispatch } = useReducer(
-    reducer,
-    {
-      leftNav: false,
-      search: false,
-      switcher: false,
-    }
-  );
+  const [
+    { leftNavIsOpen, searchIsOpen, switcherIsOpen },
+    dispatch,
+  ] = useReducer(reducer, {
+    leftNav: false,
+    search: false,
+    switcher: false,
+  });
 
-  const [expandedCategories, setExpandedCategories] = useState([]);
-
-  const toggleCategory = category => {
-    if (expandedCategories.includes(category)) {
-      setExpandedCategories(
-        expandedCategories.filter(
-          expandedCategory => expandedCategory === category
-        )
-      );
-    } else {
-      setExpandedCategories([...expandedCategories, category]);
-    }
-  };
-
-  const toggleNav = (nav, type) => {
+  const toggleNavState = (nav, type) => {
     dispatch({ nav, type });
   };
 
@@ -51,9 +36,7 @@ export const NavContextProvider = ({ children }) => {
         leftNavIsOpen,
         searchIsOpen,
         switcherIsOpen,
-        toggleNav,
-        expandedCategories,
-        toggleCategory,
+        toggleNavState,
       }}
     >
       {children}

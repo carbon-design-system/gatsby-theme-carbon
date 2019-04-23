@@ -6,7 +6,7 @@ import GlobalSearchInput from './GlobalSearchInput';
 import NavContext from '../../util/context/NavContext';
 
 const GlobalSearch = () => {
-  const { searchIsOpen, toggleNav } = useContext(NavContext);
+  const { searchIsOpen, toggleNavState } = useContext(NavContext);
 
   if (searchIsOpen) {
     return <GlobalSearchInput />;
@@ -17,8 +17,8 @@ const GlobalSearch = () => {
       className="bx--header__action--search"
       aria-label="Search Website"
       onClick={() => {
-        toggleNav('search', 'open');
-        toggleNav('switcher', 'close');
+        toggleNavState('searchIsOpen', 'open');
+        toggleNavState('switcherIsOpen', 'close');
       }}
     >
       <Search20 />

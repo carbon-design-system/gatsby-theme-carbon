@@ -17,11 +17,11 @@ import LeftNavWrapper from './LeftNavWrapper';
 import resourceLinks from './resourceLinks';
 
 const LeftNav = props => {
-  const { leftNavIsOpen, toggleNav } = useContext(NavContext);
+  const { leftNavIsOpen, toggleNavState } = useContext(NavContext);
   const windowSize = useWindowSize();
 
   if (windowSize.innerWidth > 1056 && !leftNavIsOpen) {
-    toggleNav('leftNav', 'open');
+    toggleNavState('leftNavIsOpen', 'open');
   }
 
   const data = useStaticQuery(graphql`
@@ -44,7 +44,7 @@ const LeftNav = props => {
     }
   `);
   const sideNavRef = useRef(null);
-  useOnClickOutside(sideNavRef, () => toggleNav('leftNav', 'close'));
+  useOnClickOutside(sideNavRef, () => toggleNavState('leftNavIsOpen', 'close'));
 
   const nodes = data.allFile.edges.map(edge => edge.node);
   const topLevelNavItems = Array.from(
