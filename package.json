@@ -12,7 +12,8 @@
   "scripts": {
     "dev": "yarn workspace gatsby-theme-carbon-starter develop",
     "start": "yarn workspace gatsby-theme-carbon-starter start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "publish": "lerna publish --yes && git push --follow-tags"
   },
   "eslintIgnore": [
     "**/node_modules/"
@@ -30,6 +31,7 @@
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.3.0",
     "lerna": "^3.13.2",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "yarn": "^1.15.2"
   }
 }
