@@ -55,20 +55,24 @@ export default class LeftNavItem extends React.Component {
     });
   };
 
+  shouldRenderSubNav = (items, category) => {
+    const index = items.find(item => item.name === 'index');
+    return index == null && category != null;
+  };
+
   render() {
     const { items, category } = this.props;
-    if (category === '') {
-      return items.map((item, i) =>
-        item.name === 'index' ? null : (
-          <SideNavLink
-            element={Link}
-            key={i}
-            activeClassName="bx--side-nav__link--current"
-            to={item.name}
-          >
-            {item.childMdx.frontmatter.title}
-          </SideNavLink>
-        )
+    if (items[0] && items[0].name === 'index') return null;
+    if (!this.shouldRenderSubNav(items, category)) {
+      return (
+        <SideNavLink
+          element={Link}
+          partiallyActive
+          activeClassName="bx--side-nav__link--current"
+          to={category}
+        >
+          {category}
+        </SideNavLink>
       );
     }
     return (

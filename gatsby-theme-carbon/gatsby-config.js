@@ -63,6 +63,13 @@ module.exports = themeOptions => {
         },
       },
       {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `images`,
+          path: path.resolve('./src/images/'),
+        },
+      },
+      {
         resolve: 'gatsby-plugin-compile-es6-packages',
         options: {
           modules: ['gatsby-theme-carbon'],

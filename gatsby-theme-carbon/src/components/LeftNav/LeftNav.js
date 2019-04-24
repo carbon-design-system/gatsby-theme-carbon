@@ -26,7 +26,12 @@ const LeftNav = props => {
 
   const data = useStaticQuery(graphql`
     query LEFT_NAV_QUERY {
-      allFile {
+      allFile(
+        filter: {
+          sourceInstanceName: { eq: "pages" }
+          ext: { in: [".mdx", ".js", ".md"] }
+        }
+      ) {
         edges {
           node {
             relativeDirectory
@@ -35,7 +40,6 @@ const LeftNav = props => {
             childMdx {
               frontmatter {
                 title
-                hidden
               }
             }
           }
@@ -52,7 +56,7 @@ const LeftNav = props => {
   );
 
   const renderNavItems = () => {
-    const sortedTopNavItems = topLevelNavItems.sort((a, b) => a < b);
+    const sortedTopNavItems = topLevelNavItems.sort((a, b) => a > b);
     return sortedTopNavItems.map((item, i) => (
       <LeftNavItem
         items={nodes.filter(

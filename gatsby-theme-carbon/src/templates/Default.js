@@ -6,7 +6,7 @@ import PageHeader from '../components/PageHeader';
 import NextPrevious from '../components/NextPrevious';
 import PageTabs from '../components/PageTabs';
 
-const Default = ({ title, slug, tabs, currentTab, children }) => (
+const Default = ({ title, slug, tabs, currentTab, children, ...rest }) => (
   <Layout>
     <PageHeader title={title} label="label">
       {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}
