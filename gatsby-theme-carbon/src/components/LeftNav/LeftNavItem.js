@@ -62,9 +62,9 @@ export default class LeftNavItem extends React.Component {
 
   render() {
     const { items, category } = this.props;
-    if (items[0] && items[0].name === 'index') return null;
+    console.log('props', this.props);
     if (!this.shouldRenderSubNav(items, category)) {
-      return (
+      return category ? (
         <SideNavLink
           element={Link}
           partiallyActive
@@ -73,13 +73,13 @@ export default class LeftNavItem extends React.Component {
         >
           {category}
         </SideNavLink>
-      );
+      ) : null; // don't render homepage
     }
     return (
       <Location>
         {({ location }) => (
           <SideNavMenu
-            isActive={location.pathname.includes(category)}
+            isActive={location.pathname.includes(category)} // TODO similar categories
             defaultExpanded={location.pathname.includes(category)}
             title={category[0].toUpperCase() + category.slice(1)}
           >
