@@ -112,26 +112,6 @@ em {
     background: $ui-03;
     border: 0px transparent;
   }
-
-  img {
-    margin-bottom: rem(24px);
-  }
-
-  td > img {
-    margin-bottom: 0;
-  }
-
-  img + img {
-    margin-bottom: 0;
-  }
-
-  .#{$prefix}--image-component > img {
-    margin-bottom: 0;
-  }
-
-  .#{$prefix}--image-component__caption {
-    margin-bottom: 1.5rem;
-  }
 }
 
 .#{$prefix}--platform-header {
@@ -166,49 +146,10 @@ em {
   margin-left: 0 !important;
 }
 
-//images
-.gatsby-resp-image-wrapper {
-  margin-left: 0 !important;
-  margin-bottom: rem(24px);
-
-  @include carbon--breakpoint("lg") {
-    max-width: calc(75% - 0.5rem);
-  }
-}
-
 //svg and gif images
 .page-content > div > img[src*="svg"],
 .page-content > div > img[src*="gif"] {
   background: $ui-02;
-
-  @include carbon--breakpoint("lg") {
-    margin-left: 0.5rem !important;
-    max-width: calc(100% - 0.5rem);
-  }
-}
-
-.#{$prefix}--row .gatsby-resp-image-wrapper,
-.ibm-row img[src*="svg"],
-.ibm-row img[src*="gif"] {
-  margin-left: 0 !important;
-  margin-bottom: 0;
-}
-
-// Caption styles - All em on Markdown pages after images
-.gatsby-resp-image-link,
-.gatsby-resp-image-wrapper,
-img[src*="svg"],
-img[src*="gif"] {
-  + div > div > p > em {
-    @include carbon--type-style("body-short-01");
-    font-style: normal;
-    color: $text-01;
-    display: block;
-
-    &:first-child {
-      padding-top: $spacing-xs;
-    }
-  }
 }
 
 .page-content iframe {

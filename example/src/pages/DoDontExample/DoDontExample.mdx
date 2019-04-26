@@ -1,0 +1,49 @@
+---
+title: DoDontExample
+---
+
+import {
+  Row,
+  Column,
+  DoDontExample
+} from "gatsby-theme-carbon";
+
+## DoDontExample
+
+
+<Row>
+<Column colMd={4} colLg={4}>
+<DoDontExample correct label="label text">
+
+![Alt text](images/Light_theme_01.png)
+
+</DoDontExample>
+</Column>
+<Column colMd={4} colLg={4} >
+<DoDontExample label="label text">
+
+![Alt text](images/Light_theme_02.png)
+
+</DoDontExample>
+</Column>
+</Row>
+
+<Row>
+  <Column colMd={4} colLg={4}>
+    <DoDontExample
+      square
+      dark
+      label="Don’t use complex future tenses when simple ones will suffice."
+      text="The API will be returning a promise."
+    />
+  </Column>
+  <Column colMd={4} colLg={4}>
+    <DoDontExample
+      square
+      dark
+      correct
+      label="Don’t use complex future tenses when simple ones will suffice."
+      text="The API will be returning a promise."
+    />
+  </Column>
+</Row>
