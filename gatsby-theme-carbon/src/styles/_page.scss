@@ -145,11 +145,6 @@ em {
   overflow: hidden;
   padding-bottom: 56.543%;
 
-  @include carbon--breakpoint("lg") {
-    margin-left: 0.5rem !important;
-    padding-bottom: 43% !important;
-  }
-
   iframe {
     position: absolute;
     top: 0px;
