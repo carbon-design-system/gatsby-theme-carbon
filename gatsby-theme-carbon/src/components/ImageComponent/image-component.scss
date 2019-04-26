@@ -1,0 +1,101 @@
+.#{$prefix}--image-component__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.#{$prefix}--image-component > img {
+  margin-bottom: 0;
+}
+
+.#{$prefix}--image-component.no-caption {
+  margin-bottom: $spacing-06;
+}
+
+.#{$prefix}--image-component > *:not(.#{$prefix}--image-component__caption) {
+  background: white;
+}
+
+.#{$prefix}--image-component.transparent-bg
+  > *:not(.#{$prefix}--image-component__caption) {
+  background: transparent;
+}
+
+.#{$prefix}--image-component.border
+  > *:not(.#{$prefix}--image-component__caption) {
+  border: 1px solid $ui-03;
+}
+
+.#{$prefix}--image-component.fixed-default {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $ui-02;
+
+  .#{$prefix}--image-component__caption {
+    align-self: flex-start;
+  }
+
+  > span.gatsby-resp-image-wrapper {
+    background: $ui-02;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0 !important;
+    width: 70% !important;
+    max-width: 100% !important;
+  }
+
+  img.gatsby-resp-image-image {
+    max-width: 736px;
+    width: 736px !important;
+    height: auto !important;
+    position: relative !important;
+  }
+}
+
+.#{$prefix}--image-component.fixed-large {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $ui-02;
+
+  .#{$prefix}--image-component__caption {
+    align-self: flex-start;
+  }
+
+  > span.gatsby-resp-image-wrapper {
+    background: $ui-02;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+
+    @include breakpoint("1230px") {
+      width: 70% !important;
+    }
+  }
+
+  img.gatsby-resp-image-image {
+    max-width: 1120px;
+    height: auto !important;
+    position: relative !important;
+
+    @include breakpoint("1056px") {
+      width: 900px !important;
+    }
+
+    @include breakpoint("1230px") {
+      width: 1120px !important;
+    }
+  }
+}
+
+p.#{$prefix}--image-component__caption {
+  @include carbon--type-style("body-short-01");
+  padding-top: $spacing-03;
+  margin-bottom: $spacing-06;
+}

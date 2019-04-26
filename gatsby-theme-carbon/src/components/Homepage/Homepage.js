@@ -1,6 +1,6 @@
-import React from 'react';
-import ArrowRightIcon from '@carbon/icons-react/es/arrow--right/24';
-import { Link } from 'gatsby';
+import React from "react";
+import ArrowRightIcon from "@carbon/icons-react/es/arrow--right/24";
+import { Link } from "gatsby";
 
 export const HomepageHeader = () => {
   const homeTitle = (
@@ -18,7 +18,7 @@ export const HomepageHeader = () => {
       <section className="homepage--header">
         <div className="bx--grid">
           <div className="bx--row">
-            <div className="bx--col-lg-4 bx--offset-lg-4">{homeTitle}</div>
+            <div className="bx--col-lg-4">{homeTitle}</div>
           </div>
         </div>
       </section>
@@ -27,7 +27,7 @@ export const HomepageHeader = () => {
           <div className="bx--row">
             <aside
               aria-label="header callout"
-              className="bx--col-md-4  bx--col-lg-4 bx--offset-lg-4"
+              className="bx--col-md-4  bx--col-lg-4"
             >
               <h3>
                 Inclusive, flexible
@@ -57,7 +57,7 @@ export const HomepageFooter = () => (
       <section className="bx--row">
         <aside
           aria-label="footer callout"
-          className="bx--col-md-4 bx--col-lg-4 bx--offset-lg-4"
+          className="bx--col-md-4 bx--col-lg-4"
         >
           <h3>
             Wondering how <br />

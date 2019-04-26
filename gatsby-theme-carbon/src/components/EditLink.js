@@ -1,21 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { css } from '@emotion/core';
+import React from "react";
+import PropTypes from "prop-types";
+import { css } from "@emotion/core";
 
-const repository = 'https://github.com/temporary/master/tree';
+const repository = "https://github.com/temporary/master/tree";
 
 const rowCss = css({
-  position: 'relative',
-  bottom: 'calc(-160px + 0.875rem + 32px)',
+  position: "relative",
+  bottom: "calc(-160px + 0.875rem + 32px)"
 });
 
 const aCss = ({ typeStyles, colors }) => ({
   ...typeStyles.bodyShort01,
   color: colors.text02,
-  transition: '.11s',
-  ':hover': {
-    color: colors.text01,
-  },
+  transition: ".11s",
+  ":hover": {
+    color: colors.text01
+  }
 });
 
 export default class EditLink extends React.Component {
@@ -25,7 +25,7 @@ export default class EditLink extends React.Component {
 
     return (
       <div css={rowCss} className="bx--row">
-        <div className="bx--offset-lg-4 bx--col">
+        <div className="bx--col">
           <a css={aCss} href={href}>
             Edit this page on GitHub
           </a>
@@ -38,10 +38,10 @@ export default class EditLink extends React.Component {
 EditLink.propTypes = {
   repositoryUrl: PropTypes.string,
   fileType: PropTypes.string,
-  slug: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired
 };
 
 EditLink.defaultProps = {
   repositoryUrl: repository.url,
-  fileType: 'mdx',
+  fileType: "mdx"
 };

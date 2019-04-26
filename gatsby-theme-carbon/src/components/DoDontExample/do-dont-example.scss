@@ -63,7 +63,7 @@ p.#{$prefix}--example__text {
 }
 
 .#{$prefix}--example-card::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: -1px;
@@ -98,8 +98,8 @@ p.#{$prefix}--example__text {
   fill: $carbon--magenta-50;
 }
 
-.#{$prefix}--example__icon--correct path[dataIconPath="inner-path"],
-.#{$prefix}--example__icon--incorrect path[dataIconPath="inner-path"] {
+.#{$prefix}--example__icon path[dataIconPath="inner-path"],
+.#{$prefix}--example__icon path[data-icon-path="inner-path"] {
   fill: $carbon--white-0;
   opacity: 1;
 }
@@ -109,20 +109,20 @@ p.#{$prefix}--example__text {
 }
 
 p.#{$prefix}--example__title {
-  @include carbon--type-style('body-short-01');
+  @include carbon--type-style("body-short-01");
   margin: 0;
 
   @media (orientation: landscape) {
     padding: 0 25% 0 0;
   }
 
-  @include breakpoint('md') {
+  @include breakpoint("md") {
     padding: 0 25% 0 0;
   }
 }
 
 p.#{$prefix}--example__description {
-  @include carbon--type-style('body-short-01');
+  @include carbon--type-style("body-short-01");
   @include font-smoothing;
   margin: 0;
   padding: 0;
@@ -130,17 +130,17 @@ p.#{$prefix}--example__description {
 }
 
 .#{$prefix}--example__caption {
-  @include breakpoint('sm') {
+  @include breakpoint("sm") {
     width: 100%;
   }
 
-  @include breakpoint('md') {
+  @include breakpoint("md") {
     width: 75%;
   }
 }
 
 .#{$prefix}--col-lg-4 .#{$prefix}--example__caption {
-  @include breakpoint('md') {
+  @include breakpoint("md") {
     width: 100%;
   }
 }

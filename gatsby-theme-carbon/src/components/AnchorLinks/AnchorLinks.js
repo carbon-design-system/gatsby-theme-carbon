@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import { settings } from 'carbon-components';
+import React from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
+import { settings } from "carbon-components";
 const { prefix } = settings;
 
 export default class AnchorLinks extends React.Component {
@@ -12,7 +12,7 @@ export default class AnchorLinks extends React.Component {
     const classNames = classnames({
       [`${prefix}--anchor-links`]: true,
       [`${prefix}--anchor-links--small`]: small,
-      [`${prefix}--anchor-links--column`]: isColumn,
+      [`${prefix}--anchor-links--column`]: isColumn
     });
     return <div className={classNames}>{children}</div>;
   }
@@ -20,5 +20,5 @@ export default class AnchorLinks extends React.Component {
 
 AnchorLinks.propTypes = {
   children: PropTypes.node,
-  small: PropTypes.bool,
+  small: PropTypes.bool
 };

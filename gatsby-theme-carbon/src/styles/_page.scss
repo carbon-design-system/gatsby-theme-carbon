@@ -19,6 +19,14 @@ body {
 .container .#{$prefix}--grid {
   margin: 0;
   max-width: rem(1584px);
+
+  @include carbon--breakpoint("lg") {
+    padding-left: 25%;
+  }
+}
+
+.container .#{$prefix}--col-no-gutter {
+  padding: 0;
 }
 
 //---------------------------------------
@@ -138,7 +146,7 @@ em {
   padding-bottom: 56.543%;
 
   @include carbon--breakpoint("lg") {
-    margin-left: calc(25% + 0.5rem) !important;
+    margin-left: 0.5rem !important;
     padding-bottom: 43% !important;
   }
 
@@ -165,12 +173,10 @@ em {
 
 //images
 .gatsby-resp-image-wrapper {
-  // background: $ui-02;
   margin-left: 0 !important;
   margin-bottom: rem(24px);
 
   @include carbon--breakpoint("lg") {
-    margin-left: calc(25% + 0.5rem) !important;
     max-width: calc(75% - 0.5rem);
   }
 }
@@ -181,8 +187,8 @@ em {
   background: $ui-02;
 
   @include carbon--breakpoint("lg") {
-    margin-left: calc(25% + 0.5rem) !important;
-    max-width: calc(75% - 0.5rem);
+    margin-left: 0.5rem !important;
+    max-width: calc(100% - 0.5rem);
   }
 }
 
@@ -272,7 +278,11 @@ img[src*="gif"] {
 }
 
 .website-alert + .#{$prefix}--header ~ div > .#{$prefix}--side-nav + div,
-.website-alert + .#{$prefix}--header ~ div > .#{$prefix}--side-nav + .container {
+.website-alert
+  + .#{$prefix}--header
+  ~ div
+  > .#{$prefix}--side-nav
+  + .container {
   margin-top: 5.5rem;
 }
 
