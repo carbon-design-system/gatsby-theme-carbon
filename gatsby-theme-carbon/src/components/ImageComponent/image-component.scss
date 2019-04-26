@@ -2,6 +2,14 @@
   margin-bottom: $spacing-06;
 }
 
+.#{$prefix}--image-component > *:not(.#{$prefix}--image-component__caption) {
+  background: $carbon--white-0;
+}
+
+.#{$prefix}--image-component.#{$prefix}--transparent-bg > *:not(.#{$prefix}--image-component__caption) {
+  background: transparent;
+}
+
 // Caption
 
 .#{$prefix}--image-component__caption {
