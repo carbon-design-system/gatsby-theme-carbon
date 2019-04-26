@@ -7,15 +7,12 @@ import Switcher from './Switcher';
 import Footer from './Footer';
 import MDXProvider from './MDXProvider';
 
-import { useSmoothScroll, useDocSearch } from '../util/hooks';
-
-// import favicon32 from '../../content/global/images/favicon-32.png';
+import { useSmoothScroll } from '../util/hooks';
 
 import '../styles/index.scss';
 
 const Layout = ({ children, ...rest }) => {
   useSmoothScroll();
-  useDocSearch();
 
   const is404 = children.key === null;
 

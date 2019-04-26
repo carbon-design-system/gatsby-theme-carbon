@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 // import classnames from 'classnames';
 import { Link } from 'gatsby';
 import { Location } from '@reach/router';
-import { uniqBy } from 'lodash';
+import slugify from 'slugify';
 
 import {
   SideNavLink,
@@ -31,57 +31,55 @@ export default class LeftNavItem extends React.Component {
     });
   };
 
-  renderSubNavItems = (items, location) => {
-    const subItems = uniqBy(items, 'relativeDirectory');
-    return subItems.map((item, i) => {
-      const slug = `/${item.relativeDirectory}/${item.name}`;
-
-      const isActive = () => {
-        if (item.relativeDirectory.includes('/')) {
-          return location.pathname.includes(item.relativeDirectory);
-        }
-        return location.pathname === slug;
-      };
-
-      const active = isActive();
-
+  renderSubNavItems = (items, location, category) => {
+    const isActive = item => {
+      const titleSlug = slugify(item.title, { lower: true });
+      return location.pathname.includes(titleSlug);
+    };
+    return items.map((item, i) => {
+      const active = isActive(item);
       return (
-        <SideNavMenuItem to={slug} element={Link} isActive={active} key={i}>
+        <SideNavMenuItem
+          to={item.path}
+          element={Link}
+          isActive={active}
+          key={i}
+        >
           <span style={{ color: active ? '#171717' : 'inherit' }}>
-            {item.childMdx.frontmatter.title}
+            {item.title}
           </span>
         </SideNavMenuItem>
       );
     });
   };
 
-  shouldRenderSubNav = (items, category) => {
-    const index = items.find(item => item.name === 'index');
-    return index == null && category != null;
-  };
+  shouldRenderSubNav = pages => pages.length > 1;
 
   render() {
     const { items, category } = this.props;
-    console.log('props', this.props);
-    if (!this.shouldRenderSubNav(items, category)) {
-      return category ? (
+    if (items.length === 1) {
+      return (
         <SideNavLink
           element={Link}
           partiallyActive
           activeClassName="bx--side-nav__link--current"
-          to={category}
+          to={items[0].path}
         >
           {category}
         </SideNavLink>
-      ) : null; // don't render homepage
+      );
     }
     return (
       <Location>
         {({ location }) => (
           <SideNavMenu
-            isActive={location.pathname.includes(category)} // TODO similar categories
-            defaultExpanded={location.pathname.includes(category)}
-            title={category[0].toUpperCase() + category.slice(1)}
+            isActive={location.pathname.includes(
+              slugify(category, { lower: true })
+            )} // TODO similar categories
+            defaultExpanded={location.pathname.includes(
+              slugify(category, { lower: true })
+            )}
+            title={category}
           >
             {this.renderSubNavItems(items, location, category)}
           </SideNavMenu>

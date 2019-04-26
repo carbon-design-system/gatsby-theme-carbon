@@ -6402,6 +6402,16 @@ gatsby-telemetry@^1.0.7:
     stack-utils "1.0.2"
     uuid "3.3.2"
 
+gatsby-transformer-yaml@^2.1.12:
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-yaml/-/gatsby-transformer-yaml-2.1.12.tgz#2d1ee6ed6f399315d76caaa53888b02d2049bf31"
+  integrity sha512-KkRKb3ysNwYwBRE0kUA17gLHA5bg6NOmjf8OeSeHhNkJJrn8DQkRhqd8aGCXgfg5m7AeN7XU/5MGtF4uDXVM0A==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    js-yaml "^3.13.0"
+    lodash "^4.17.10"
+    unist-util-select "^1.5.0"
+
 gatsby@^2.3.5:
   version "2.3.26"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.3.26.tgz#002785f7edca2949e548959d086309e7570a5dc4"

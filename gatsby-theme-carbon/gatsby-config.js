@@ -18,6 +18,14 @@ module.exports = themeOptions => {
     },
     plugins: [
       `gatsby-plugin-sharp`,
+      `gatsby-transformer-yaml`,
+      {
+        resolve: `gatsby-source-filesystem`,
+        name: `Nav`,
+        options: {
+          path: path.resolve(`./src/data/nav-items.yaml`),
+        },
+      },
       {
         resolve: `gatsby-mdx`,
         options: {
