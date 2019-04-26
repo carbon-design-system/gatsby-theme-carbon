@@ -48,7 +48,7 @@
   justify-content: center;
 }
 
-p.#{$prefix}--example__text {
+.#{$prefix}--example__text {
   padding: 10%;
   font-weight: 300;
   font-size: rem(24px);
@@ -108,7 +108,7 @@ p.#{$prefix}--example__text {
   padding: $spacing-03 0 0 0;
 }
 
-p.#{$prefix}--example__title {
+.#{$prefix}--example__title {
   @include carbon--type-style("body-short-01");
   margin: 0;
 
@@ -121,7 +121,7 @@ p.#{$prefix}--example__title {
   }
 }
 
-p.#{$prefix}--example__description {
+.#{$prefix}--example__description {
   @include carbon--type-style("body-short-01");
   @include font-smoothing;
   margin: 0;
