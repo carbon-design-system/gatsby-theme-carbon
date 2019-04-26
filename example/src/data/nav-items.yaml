@@ -1,5 +1,7 @@
 - title: Component examples
   pages:
+    - title: Demo
+      path: /components/demo
     - title: DoDontExample
       path: /components/DoDontExample
     - title: ImageComponent
