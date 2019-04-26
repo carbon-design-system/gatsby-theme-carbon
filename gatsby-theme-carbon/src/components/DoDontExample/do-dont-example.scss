@@ -13,15 +13,16 @@
   font-size: 1.25rem;
   font-weight: 300;
   width: 100%;
-
-  .gatsby-resp-image-link {
-    width: 100%;
-  }
-
-  img {
-    margin-bottom: 0;
-  }
 }
+
+.#{$prefix}--example__content .gatsby-resp-image-link {
+  width: 100%;
+}
+
+.#{$prefix}--example__content img {
+  margin-bottom: 0;
+}
+
 
 .#{$prefix}--example-card {
   background: $carbon--white-0;
