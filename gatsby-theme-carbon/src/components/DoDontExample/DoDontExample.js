@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import CheckmarkFilled24 from '@carbon/icons-react/es/checkmark--filled/24';
-import CloseFilled16 from '@carbon/icons-react/es/close--filled/16';
+import Misuse24 from '@carbon/icons-react/es/misuse/24';
 import { settings } from 'carbon-components';
 
 const { prefix } = settings;
@@ -71,7 +71,7 @@ export default class DoDontExample extends React.Component {
             {correct ? (
               <CheckmarkFilled24 className={iconClassNames} />
             ) : (
-              <CloseFilled16 className={iconClassNames} />
+              <Misuse24 className={iconClassNames} />
             )} 
             <div className={`${prefix}--example__content`}>
               {children}

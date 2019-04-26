@@ -98,6 +98,11 @@ p.#{$prefix}--example__text {
   fill: $carbon--magenta-50;
 }
 
+.#{$prefix}--example__icon--correct path[dataIconPath="inner-path"],
+.#{$prefix}--example__icon--incorrect path[dataIconPath="inner-path"] {
+  fill: $carbon--white-0;
+}
+
 .#{$prefix}--example__caption {
   padding: $spacing-03 0 0 0;
 }
