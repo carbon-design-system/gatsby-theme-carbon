@@ -8,7 +8,7 @@
   height: rem(240px);
 }
 
-.bx--grid.page-header__label-wrapper {
+.#{$prefix}--grid.page-header__label-wrapper {
   padding-top: rem(24px);
   margin-bottom: auto;
 }

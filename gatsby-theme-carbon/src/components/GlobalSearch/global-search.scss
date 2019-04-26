@@ -1,29 +1,29 @@
 // Needs dark theme colors
-.bx--header {
-  .bx--header__action--search {
+.#{$prefix}--header {
+  .#{$prefix}--header__action--search {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .bx--search {
+  .#{$prefix}--search {
     width: rem(448px);
     height: 100%;
   }
 
-  .bx--search-input {
+  .#{$prefix}--search-input {
     width: rem(448px);
     height: 100%;
   }
 
-  .bx--search-magnifier,
-  .bx--search-clear {
+  .#{$prefix}--search-magnifier,
+  .#{$prefix}--search-clear {
     width: rem(20px);
     height: rem(20px);
     fill: $carbon--gray-10;
   }
 
-  .bx--search-close {
+  .#{$prefix}--search-close {
     width: rem(48px);
     height: 100%;
 
@@ -34,7 +34,7 @@
     }
   }
 
-  .bx--search--dark .bx--search-input {
+  .#{$prefix}--search--dark .#{$prefix}--search-input {
     background-color: $carbon--gray-80;
     color: $carbon--gray-10;
 
@@ -205,16 +205,16 @@
 }
 
 @media all and (max-width: 725px) {
-  .bx--header {
-    .bx--search,
-    .bx--header__action--search {
+  .#{$prefix}--header {
+    .#{$prefix}--search,
+    .#{$prefix}--header__action--search {
       display: none;
     }
   }
 }
 
 @media all and (max-width: 768px) {
-  .bx--header {
+  .#{$prefix}--header {
     .algolia-autocomplete
       .algolia-docsearch-suggestion
       .algolia-docsearch-suggestion--subcategory-column:after {

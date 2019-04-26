@@ -16,7 +16,7 @@ body {
   margin-top: rem(48px);
 }
 
-.container .bx--grid {
+.container .#{$prefix}--grid {
   margin: 0;
   max-width: rem(1584px);
 }
@@ -24,7 +24,7 @@ body {
 //---------------------------------------
 // Header styles
 //---------------------------------------
-.bx--header__menu-trigger {
+.#{$prefix}--header__menu-trigger {
   @include carbon--breakpoint("lg") {
     display: none;
   }
@@ -117,16 +117,16 @@ em {
     margin-bottom: 0;
   }
 
-  .bx--image-component > img {
+  .#{$prefix}--image-component > img {
     margin-bottom: 0;
   }
 
-  .bx--image-component__caption {
+  .#{$prefix}--image-component__caption {
     margin-bottom: 1.5rem;
   }
 }
 
-.bx--platform-header {
+.#{$prefix}--platform-header {
   z-index: 9999;
 }
 
@@ -158,7 +158,7 @@ em {
   }
 }
 
-.bx--row .gatsby-resp-iframe-wrapper,
+.#{$prefix}--row .gatsby-resp-iframe-wrapper,
 .example__content .gatsby-resp-iframe-wrapper {
   margin-left: 0 !important;
 }
@@ -186,7 +186,7 @@ em {
   }
 }
 
-.bx--row .gatsby-resp-image-wrapper,
+.#{$prefix}--row .gatsby-resp-image-wrapper,
 .ibm-row img[src*="svg"],
 .ibm-row img[src*="gif"] {
   margin-left: 0 !important;
@@ -244,7 +244,7 @@ img[src*="gif"] {
   text-decoration: none;
 }
 
-.website-alert .bx--btn {
+.website-alert .#{$prefix}--btn {
   height: 100%;
   width: 100%;
   padding: 0 1rem;
@@ -263,27 +263,27 @@ img[src*="gif"] {
   padding: 0;
 }
 
-.website-alert + .bx--header {
+.website-alert + .#{$prefix}--header {
   top: rem(40px);
 }
 
-.website-alert + .bx--header ~ div > .bx--side-nav {
+.website-alert + .#{$prefix}--header ~ div > .#{$prefix}--side-nav {
   top: 5.5rem;
 }
 
-.website-alert + .bx--header ~ div > .bx--side-nav + div,
-.website-alert + .bx--header ~ div > .bx--side-nav + .container {
+.website-alert + .#{$prefix}--header ~ div > .#{$prefix}--side-nav + div,
+.website-alert + .#{$prefix}--header ~ div > .#{$prefix}--side-nav + .container {
   margin-top: 5.5rem;
 }
 
 .website-alert
-  + .bx--header
-  ~ .bx--side-nav
+  + .#{$prefix}--header
+  ~ .#{$prefix}--side-nav
   + div
   .color-token-table__theme-switcher--sticky {
   top: 104px;
 }
 
-.website-alert + .bx--header ~ .bx--website-switcher {
+.website-alert + .#{$prefix}--header ~ .#{$prefix}--website-switcher {
   top: 5.5rem;
 }

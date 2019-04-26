@@ -5,8 +5,8 @@
   position: relative;
 }
 
-.next-previous-wrapper .bx--grid,
-.next-previous-wrapper .bx--row {
+.next-previous-wrapper .#{$prefix}--grid,
+.next-previous-wrapper .#{$prefix}--row {
   min-height: rem(128px);
 }
 
