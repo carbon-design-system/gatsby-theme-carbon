@@ -63,8 +63,7 @@ class ImageComponent extends Component {
     const imgComponentClasses = classnames(className, {
       [`${prefix}--image-component`]: true,
       [`${prefix}--image-component--no-caption`]: caption === undefined,
-      [`${prefix}--transparent-bg`]: bg === "none",
-      zoom: zoom === "true"
+      [`${prefix}--transparent-bg`]: bg === "none"
     });
 
     const imgWrapperClasses = classnames({
