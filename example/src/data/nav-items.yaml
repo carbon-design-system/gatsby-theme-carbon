@@ -1,9 +1,9 @@
-- title: Components
+- title: Component examples
   pages:
-    - title: Accordion
-      path: /components/accordion/code
-    - title: Breadcrumb
-      path: /components/breadcrumb/code
+    - title: DoDontExample
+      path: /components/DoDontExample
+    - title: ImageComponent
+      path: /components/ImageComponent
 - title: Contributing
   pages:
     - title: Agreement
