@@ -17,14 +17,14 @@ export default class PageTable extends React.Component {
     }
 
     const classNames = classnames({
-      'ibm--col-lg-8 ibm--col-md-6': gridSize < 4,
-      'ibm--col-lg-12': gridSize > 3,
-      'ibm--offset-lg-4 ibm--col-bleed': true,
+      'bx--col-lg-8 bx--col-md-6': gridSize < 4,
+      'bx--col-lg-12': gridSize > 3,
+      'bx--offset-lg-4 bx--col-bleed': true,
       'page-table__container': true,
     });
 
     return (
-      <div className="ibm--row">
+      <div className="bx--row">
         <div className={classNames}>
           <table className="page-table">{children}</table>
         </div>

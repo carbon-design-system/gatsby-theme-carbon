@@ -9,13 +9,13 @@ const Row = ({ children, type, className }) => (
         css={({ spacing }) => ({
           padding: `0 ${spacing[5]}`,
         })}
-        className={cx('ibm--row', className)}
+        className={cx('bx--row', className)}
       >
         <div
           className={cx(
-            'ibm--col-lg-7',
-            'ibm--offset-lg-4',
-            type === 'p' && 'ibm--col-md-6'
+            'bx--col-lg-7',
+            'bx--offset-lg-4',
+            type === 'p' && 'bx--col-md-6'
           )}
         >
           {children}

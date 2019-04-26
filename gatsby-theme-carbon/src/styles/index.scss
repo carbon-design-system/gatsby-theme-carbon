@@ -21,17 +21,11 @@
 @include carbon--type-classes();
 
 $feature-flags: (
-  components-x: true,
-  ui-shell: true
+  ui-shell: true,
+  grid-columns-16: true,
 );
 
-.container {
-  //   //need this to avoid conflicts with old grid code
-  $prefix: "ibm";
-  $imported-modules-local: ();
-  @import "~@carbon/elements/scss/grid/grid";
-}
-// @import "~@carbon/elements/grid/scss/aspect-ratio";
+$prefix: "bx";
 
 @import "~carbon-components/scss/globals/scss/styles";
 
@@ -61,3 +55,4 @@ $font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
 @import "../components/PageHeader/page-header.scss";
 @import "../components/PageTable/page-table.scss";
 @import "../components/PageTabs/page-tabs.scss";
+@import "../components/DoDontExample/do-dont-example.scss";
