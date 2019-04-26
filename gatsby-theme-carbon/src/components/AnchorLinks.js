@@ -40,8 +40,8 @@ const Li = styled.li`
 const WrappedAnchorLinks = ({ children }) => (
   <Row>
     <Ul splitColumns>
-      {children.map(child => (
-        <Li>{child}</Li>
+      {children.map((child, i) => (
+        <Li key={i}>{child}</Li>
       ))}
     </Ul>
   </Row>

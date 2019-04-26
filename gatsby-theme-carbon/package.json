@@ -48,6 +48,7 @@
     "gatsby-remark-smartypants": "^2.0.9",
     "gatsby-remark-unwrap-images": "^1.0.1",
     "gatsby-source-filesystem": "^2.0.31",
+    "gatsby-transformer-yaml": "^2.1.12",
     "lodash": "^4.17.11",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.11.0",

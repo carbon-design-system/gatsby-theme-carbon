@@ -12,14 +12,10 @@ export default class PageTabs extends React.Component {
 
   render() {
     const { tabs, slug, currentTab } = this.props;
-    console.log(this.props);
-    let slugRoot = slug.substring(0, slug.lastIndexOf(currentTab));
-    if (slugRoot === '/') slugRoot += `${currentTab}/`;
-    console.log(slugRoot);
     const pageTabs = tabs.map(tab => {
       const slugifiedTab = slugify(tab, { lower: true });
       const selected = slugifiedTab === currentTab;
-      const href = slugRoot + slugifiedTab;
+      const href = slug.replace(currentTab, slugifiedTab);
       return (
         <li key={tab} className={selected ? 'selected' : ''}>
           <Link to={href}>{tab}</Link>

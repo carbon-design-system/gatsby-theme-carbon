@@ -168,12 +168,12 @@ Footer.propTypes = {
   /**
    * Specify the first and second columns of your links
    */
-  Content: PropTypes.node,
+  Content: PropTypes.elementType,
 
   /**
    * Provide a logo to be rendered in the bottom left corner
    */
-  Logo: PropTypes.node,
+  Logo: PropTypes.elementType,
 };
 
 export default Footer;

@@ -1,0 +1,23 @@
+- title: Components
+  pages:
+    - title: Accordion
+      path: /components/accordion/code
+    - title: Breadcrumb
+      path: /components/breadcrumb/code
+- title: Contributing
+  pages:
+    - title: Agreement
+      path: /contributing/agreement
+    - title: Governance
+      path: /contributing/governance
+- title: Getting Started
+  pages:
+    - title: Developers
+      path: /getting-started/developers/react
+    - title: About Carbon
+      path: /getting-started/about-carbon
+    - title: Designers
+      path: /getting-started/designers
+- title: Resources
+  pages:
+    - path: /resources
