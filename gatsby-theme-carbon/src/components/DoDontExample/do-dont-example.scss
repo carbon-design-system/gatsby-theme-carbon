@@ -101,6 +101,7 @@ p.#{$prefix}--example__text {
 .#{$prefix}--example__icon--correct path[dataIconPath="inner-path"],
 .#{$prefix}--example__icon--incorrect path[dataIconPath="inner-path"] {
   fill: $carbon--white-0;
+  opacity: 1;
 }
 
 .#{$prefix}--example__caption {
