@@ -1,3 +1,2 @@
-import AnchorLinks from './AnchorLinks';
-
-export default AnchorLinks;
+export { default as AnchorLinks } from './AnchorLinks';
+export { default as AnchorLink } from './AnchorLink';

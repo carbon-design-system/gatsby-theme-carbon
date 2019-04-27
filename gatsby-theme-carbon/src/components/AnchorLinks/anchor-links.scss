@@ -1,15 +1,15 @@
-.#{$prefix}--anchor-links .markdown-ul {
+.#{$prefix}--anchor-links__list {
   width: auto;
   margin-bottom: 0;
   margin-top: $spacing-05;
 
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     margin-bottom: $spacing-07;
   }
 }
 
-.#{$prefix}--anchor-links .markdown-ul li {
-  @include carbon--type-style("expressive-heading-03", true);
+.#{$prefix}--anchor-links__item {
+  @include carbon--type-style('expressive-heading-03', true);
   width: auto;
   list-style: none;
   padding-left: 0;
@@ -22,8 +22,8 @@
   }
 }
 
-.#{$prefix}--anchor-links a {
-  @include carbon--type-style("expressive-heading-03", true);
+.#{$prefix}--anchor-links__link {
+  @include carbon--type-style('expressive-heading-03', true);
   position: relative;
   display: inline-block;
   transition: color $transition--base;
@@ -40,7 +40,7 @@
   }
 
   &:before {
-    content: "\21B3"; //"↳"
+    content: '\21B3'; //"↳"
     font-family: IBM Plex Sans, ibm-plex-sans, Helvetica Neue, Arial, sans-serif;
     color: $interactive-02;
     transition: color $transition--base;
@@ -50,18 +50,18 @@
 }
 
 // Multiple Columns
-.#{$prefix}--anchor-links--column .markdown-ul {
-  @include carbon--breakpoint("md") {
+.#{$prefix}--anchor-links__list--column {
+  @include carbon--breakpoint('md') {
     column-count: 2;
   }
 }
 
 // Small
-.#{$prefix}--anchor-links--small .markdown-ul {
+.#{$prefix}--anchor-links__list--small {
   margin-top: $spacing-05;
 }
 
-.#{$prefix}--anchor-links--small a {
-  @include carbon--type-style("body-long-02");
+.#{$prefix}--anchor-links__link--small {
+  @include carbon--type-style('body-long-02');
   margin-bottom: 0;
 }
