@@ -1,6 +1,6 @@
-import React from "react";
-import ArrowRightIcon from "@carbon/icons-react/es/arrow--right/24";
-import { Link } from "gatsby";
+import React from 'react';
+import ArrowRightIcon from '@carbon/icons-react/es/arrow--right/24';
+import { Link } from 'gatsby';
 
 export const HomepageHeader = () => {
   const homeTitle = (

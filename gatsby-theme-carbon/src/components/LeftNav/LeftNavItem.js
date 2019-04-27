@@ -31,7 +31,7 @@ export default class LeftNavItem extends React.Component {
     });
   };
 
-  renderSubNavItems = (items, location, category) => {
+  renderSubNavItems = (items, location) => {
     const isActive = item => {
       const titleSlug = slugify(item.title, { lower: true });
       return location.pathname.includes(titleSlug);

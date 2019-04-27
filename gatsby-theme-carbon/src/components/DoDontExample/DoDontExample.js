@@ -17,7 +17,7 @@ export default class DoDontExample extends React.Component {
     /** text displayed in the example card */
     text: PropTypes.string,
     /** path to the image displayed in the example card, starting under `src` folder. e.g.: `content/guidelines/content/img-test.svg` */
-    imgpath: PropTypes.string,
+    // imgpath: PropTypes.string,
     /** mark card as true? if not defined, card will be marked as false */
     correct: PropTypes.bool,
     /** default to false, set to true for dark background */
@@ -72,7 +72,7 @@ export default class DoDontExample extends React.Component {
               <CheckmarkFilled24 className={iconClassNames} />
             ) : (
               <Misuse24 className={iconClassNames} />
-            )} 
+            )}
             <div className={`${prefix}--example__content`}>
               {children}
               {text ? (

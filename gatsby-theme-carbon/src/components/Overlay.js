@@ -10,11 +10,12 @@ export default class Overlay extends React.Component {
     /** caption (optional) */
     caption: PropTypes.string,
     /** default to false, set to true for dark background */
-    dark: PropTypes.string,
+    // dark: PropTypes.string,
     show: PropTypes.bool,
   };
+
   state = {
-    showOverlay: false,
+    // showOverlay: false,
   };
 
   getImage(reactTree, image) {
@@ -34,7 +35,7 @@ export default class Overlay extends React.Component {
 
   render() {
     const image = this.getImage(this.props.children, {});
-    //const { children } = this.props;
+    // const { children } = this.props;
     const displayTitle = image.title ? image.title : this.props.caption;
 
     return (
@@ -42,7 +43,8 @@ export default class Overlay extends React.Component {
         <div className={`${prefix}--overlay-bg`} />
         <div className={`${prefix}--overlay-leftArea`} show={this.props.show}>
           <div
-            className={`${prefix}--overlay-caption ${prefix}--type-heading-02`}>
+            className={`${prefix}--overlay-caption ${prefix}--type-heading-02`}
+          >
             {displayTitle}
           </div>
         </div>

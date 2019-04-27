@@ -8,7 +8,6 @@ const { prefix } = settings;
 export default class AnchorLinks extends React.Component {
   render() {
     const { children, small } = this.props;
-    console.log('child', children);
     const isColumn = React.Children.count(children) > 6;
     const classNames = classnames({
       [`${prefix}--anchor-links__list`]: true,

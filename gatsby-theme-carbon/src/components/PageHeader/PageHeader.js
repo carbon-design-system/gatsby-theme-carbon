@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const PageHeader = ({ children, title }) => (
   <div className="page-header">
@@ -28,7 +28,7 @@ PageHeader.propTypes = {
   /**
    * Specify the title for the page
    */
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 export default PageHeader;
