@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "gatsby": "^2.3.5",
-    "gatsby-theme-carbon": "^0.1.0",
+    "gatsby-theme-carbon": "^0.2.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }
