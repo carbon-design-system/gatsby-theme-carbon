@@ -14,6 +14,7 @@
     "dev": "yarn workspace example develop",
     "start": "yarn workspace example start",
     "build": "yarn workspace example build",
+    "netlify-build": "yarn build",
     "now-build": "yarn build",
     "lint": "eslint ."
   },
