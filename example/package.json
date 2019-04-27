@@ -6,7 +6,7 @@
     "build": "gatsby build"
   },
   "dependencies": {
-    "gatsby": "^2.3.5",
+    "gatsby": "^2.3.31",
     "gatsby-theme-carbon": "^0.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
