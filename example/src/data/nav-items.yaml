@@ -1,11 +1,11 @@
 - title: Component examples
   pages:
     - title: Demo
-      path: /components/demo
+      path: /component-examples/demo
     - title: DoDontExample
-      path: /components/DoDontExample
-    - title: ImageComponent
-      path: /components/ImageComponent
+      path: /component-examples/DoDontExample
+    # - title: ImageComponent
+    # path: /component-examples/ImageComponent
 - title: Contributing
   pages:
     - title: Agreement
