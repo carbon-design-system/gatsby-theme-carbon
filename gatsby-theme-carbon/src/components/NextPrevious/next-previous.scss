@@ -5,8 +5,8 @@
   position: relative;
 }
 
-.next-previous-wrapper .ibm--grid,
-.next-previous-wrapper .ibm--row {
+.next-previous-wrapper .#{$prefix}--grid,
+.next-previous-wrapper .#{$prefix}--row {
   min-height: rem(128px);
 }
 

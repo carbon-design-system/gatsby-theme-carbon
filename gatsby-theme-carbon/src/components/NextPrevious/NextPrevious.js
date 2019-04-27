@@ -90,10 +90,10 @@ export default class NextPrevious extends React.Component {
   //   const nextButtonClassnames = classnames({
   //     'next-previous-link': true,
   //     'next-previous-link--next': true,
-  //     'ibm--col-lg-6': true,
-  //     'ibm--col-md-4': true,
-  //     'ibm--col-sm-2': true,
-  //     'ibm--offset-lg-10': !prevPath,
+  //     'bx--col-lg-6': true,
+  //     'bx--col-md-4': true,
+  //     'bx--col-sm-2': true,
+  //     'bx--offset-lg-10': !prevPath,
   //   });
 
   //   return (
@@ -101,7 +101,7 @@ export default class NextPrevious extends React.Component {
   //       <div>next prev</div>
   //       {/* {prevPath && (
   //         <Link
-  //           className="next-previous-link next-previous-link--previous ibm--col-lg-6 ibm--col-md-4 ibm--col-sm-2 ibm--offset-lg-4"
+  //           className="next-previous-link next-previous-link--previous bx--col-lg-6 bx--col-md-4 bx--col-sm-2 bx--offset-lg-4"
   //           to={prevPath}>
   //           <span className="target-page-direction">Previous </span>
   //           <span className="target-page-name">{truncatedPrevName}</span>
@@ -265,8 +265,8 @@ export default class NextPrevious extends React.Component {
 
   //   return (
   //     <div className="next-previous-wrapper">
-  //       <div className="ibm--grid">
-  //         <div className="next-previous-controls ibm--row">
+  //       <div className="bx--grid">
+  //         <div className="next-previous-controls bx--row">
   //           {this.renderNextPreviousLinks(
   //             prevPagePath,
   //             prevPageTitle,

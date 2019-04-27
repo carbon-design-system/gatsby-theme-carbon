@@ -14,10 +14,12 @@
     "dev": "yarn workspace example develop",
     "start": "yarn workspace example start",
     "build": "yarn workspace example build",
+    "serve": "yarn workspace example serve",
     "lint": "eslint ."
   },
   "eslintIgnore": [
-    "**/node_modules/"
+    "**/node_modules/",
+    "**/public/"
   ],
   "devDependencies": {
     "babel-eslint": "^9.0.0",

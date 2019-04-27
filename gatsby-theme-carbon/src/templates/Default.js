@@ -20,7 +20,7 @@ const Default = ({
       </PageHeader>
       <main
         style={{ paddingTop: '80px' }}
-        className="page-content ibm--grid"
+        className="page-content bx--grid"
         id="maincontent"
       >
         {children}

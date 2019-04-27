@@ -5,19 +5,8 @@ import { ClassNames } from '@emotion/core';
 const Row = ({ children, type, className }) => (
   <ClassNames>
     {({ cx }) => (
-      <div
-        css={({ spacing }) => ({
-          padding: `0 ${spacing[5]}`,
-        })}
-        className={cx('ibm--row', className)}
-      >
-        <div
-          className={cx(
-            'ibm--col-lg-7',
-            'ibm--offset-lg-4',
-            type === 'p' && 'ibm--col-md-6'
-          )}
-        >
+      <div className={cx('bx--row', className)}>
+        <div className={cx('bx--col-lg-7', type === 'p' && 'bx--col-md-6')}>
           {children}
         </div>
       </div>

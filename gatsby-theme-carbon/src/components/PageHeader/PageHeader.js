@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 const PageHeader = ({ children, title }) => (
   <div className="page-header">
-    <div className="ibm--grid">
-      <div className="ibm--row">
-        <div className="ibm--col-lg-12 ibm--offset-lg-4">
+    <div className="bx--grid">
+      <div className="bx--row">
+        <div className="bx--col-lg-12">
           <h2
             id="page-title"
             className="page-header__title bx--type-display-01"
