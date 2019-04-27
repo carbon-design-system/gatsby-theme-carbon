@@ -5,6 +5,9 @@
     "url": "git@github.com:carbon-design-system/gatsby-theme-carbon.git",
     "type": "git"
   },
+  "np": {
+    "contents": "gatsby-theme-carbon"
+  },
   "license": "MIT",
   "workspaces": [
     "example",
