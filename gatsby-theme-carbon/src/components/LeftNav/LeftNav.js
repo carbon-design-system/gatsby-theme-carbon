@@ -9,10 +9,10 @@ import {
 
 import NavContext from '../../util/context/NavContext';
 import LeftNavItem from './LeftNavItem';
+import LeftNavResourceLinks from './ResourceLinks';
 import { useOnClickOutside, useWindowSize } from '../../util/hooks';
 
 import LeftNavWrapper from './LeftNavWrapper';
-import resourceLinks from './resourceLinks';
 
 const LeftNav = props => {
   const { leftNavIsOpen, toggleNavState } = useContext(NavContext);
@@ -61,23 +61,11 @@ const LeftNav = props => {
       >
         <SideNavItems>
           {renderNavItems()}
-          <hr className="bx--side-nav__divider" />
+          <LeftNavResourceLinks />
         </SideNavItems>
       </SideNav>
     </LeftNavWrapper>
   );
 };
-
-// {resourceLinks.map((link, i) => (
-//   <SideNavLink
-//     style={{ marginTop: i === 0 ? '1rem' : 0 }}
-//     icon={<Launch16 />}
-//     href={link.href}
-//     className="bx--side-nav--website-link"
-//     element={link.internal ? Link : 'a'}
-//   >
-//     {link.label}
-//   </SideNavLink>
-// ))}
 
 export default LeftNav;
