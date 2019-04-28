@@ -7,7 +7,7 @@
     "url": "git@github.com:carbon-design-system/gatsby-theme-carbon.git",
     "type": "git"
   },
-  "license": "MIT",
+  "license": "Apache 2.0",
   "peerDependencies": {
     "gatsby": "^2.3.5",
     "react": "^16.8.6",

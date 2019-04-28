@@ -1,6 +1,7 @@
 {
   "name": "example",
-  "version": "0.0.7",
+  "version": "0.2.1",
+  "license": "Apache 2.0",
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",

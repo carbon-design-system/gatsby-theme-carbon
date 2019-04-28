@@ -1,0 +1,9 @@
+{
+  "packages": ["packages/*"],
+  "version": "0.2.1",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "publish": {
+    "conventionalCommits": true
+  }
+}
