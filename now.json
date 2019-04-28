@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "gatsby-theme-carbon",
+  "alias": "gatsby-theme-carbon",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "packages/example/public"
+      }
+    }
+  ]
+}
