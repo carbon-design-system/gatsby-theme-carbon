@@ -750,20 +750,23 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@carbon/addons-website@0.0.1-alpha.20":
-  version "0.0.1-alpha.20"
-  resolved "https://registry.yarnpkg.com/@carbon/addons-website/-/addons-website-0.0.1-alpha.20.tgz#dd3beb2116a81cfbc2693205020b270547f01514"
-  integrity sha512-+YXIoDD9BImulJbrhTz8k0rNwsaueggRws7TxG8iBtn3t9ftASXnKyVxr4Hbq4IIVksf85z1bj7UoN3VY9YlxQ==
+"@carbon/addons-website@0.0.1-alpha.21":
+  version "0.0.1-alpha.21"
+  resolved "https://registry.yarnpkg.com/@carbon/addons-website/-/addons-website-0.0.1-alpha.21.tgz#c7f08273778da206685ac37147634845ae3260ad"
+  integrity sha512-EbVcRz6TP4wH/g8OEpzA0P7MY3xiaAurGo5F2XzlGj4r5YQaAH+r5QUrtzAvrzEWibtyMVCDUJwG74wtoT4Rqw==
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.3.4"
     "@babel/plugin-syntax-dynamic-import" "^7.2.0"
-    "@carbon/grid" "0.0.1-alpha.32"
-    "@carbon/layout" "0.0.1-alpha.32"
+    "@carbon/grid" "10.1.1"
+    "@carbon/layout" "10.1.1"
+    "@ibm/plex" "^1.4.1"
     babel-loader "^8.0.5"
     classnames "^2.2.6"
+    lodash.throttle "^4.1.1"
     prismjs "^1.15.0"
     react-copy-to-clipboard "^5.0.1"
     react-scroll-up "^1.3.3"
+    react-textarea-autosize "^7.1.0"
 
 "@carbon/colors@10.1.1", "@carbon/colors@^10.0.0":
   version "10.1.1"
@@ -783,14 +786,6 @@
     "@carbon/motion" "10.1.1"
     "@carbon/themes" "10.1.1"
     "@carbon/type" "10.1.1"
-
-"@carbon/grid@0.0.1-alpha.32":
-  version "0.0.1-alpha.32"
-  resolved "https://registry.yarnpkg.com/@carbon/grid/-/grid-0.0.1-alpha.32.tgz#c1fcf21b90524e87f5aa2b713f92d860e5e1d85e"
-  integrity sha512-eT2mKlCaxpZmji+gqUoknYScsAQWuqdJcSyjGjtafJNBR3ibiPv7ZOdJ08e1j6Ni0gOHkpOqXsfLQOkR7nzl5Q==
-  dependencies:
-    "@carbon/import-once" "0.0.1-alpha.32"
-    "@carbon/layout" "0.0.1-alpha.32"
 
 "@carbon/grid@10.1.1", "@carbon/grid@^10.0.0":
   version "10.1.1"
@@ -831,20 +826,10 @@
   resolved "https://registry.yarnpkg.com/@carbon/icons/-/icons-10.1.0.tgz#12daa64ef63c47128c2b2cc570456df5fdc34f1d"
   integrity sha512-LEgjcD2W87t6vmmv9cfEMIji92gAgadMMOmb6LqXFepPn3dQechHmejS4td8K2thOf4hIuqcOQUlJSHJwCFMuA==
 
-"@carbon/import-once@0.0.1-alpha.32":
-  version "0.0.1-alpha.32"
-  resolved "https://registry.yarnpkg.com/@carbon/import-once/-/import-once-0.0.1-alpha.32.tgz#44f4f78399899d659fcd4d7550defe5ac8802c6f"
-  integrity sha512-TXtjzIz05OpSQPIvG867O1vHzAFdKgVTCi6sMwQsL48SBuVm9yW8RrfW4z3zDAId2fnMwf0bG/+lMqNNwFKlJQ==
-
 "@carbon/import-once@10.1.0":
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/@carbon/import-once/-/import-once-10.1.0.tgz#dc6d06d45f77c24461a1a4d48d90f6ba63622f3f"
   integrity sha512-cZTifeQvvYKDSJ/arFPXF/tLOz8jn2tmp+ukCAL6n/J1flz3fYIwq9L1R0RyzRJTiKA5f+bT7wYW62xDqrOOnw==
-
-"@carbon/layout@0.0.1-alpha.32":
-  version "0.0.1-alpha.32"
-  resolved "https://registry.yarnpkg.com/@carbon/layout/-/layout-0.0.1-alpha.32.tgz#1fae6b9c771d2e145b3e7ac28f030e6be1321592"
-  integrity sha512-LOGnUdPm6CtwIDR1xrWNvD5VgCDF2v7b7G6TMZX3Pt9a3Y6UGoKEBfPx9+GCbmfv1NRJx5WHjyszV6I6hdnqag==
 
 "@carbon/layout@10.1.1", "@carbon/layout@^10.0.0":
   version "10.1.1"
@@ -1010,6 +995,11 @@
     relay-runtime "2.0.0"
     signedsource "^1.0.0"
     yargs "^9.0.0"
+
+"@ibm/plex@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@ibm/plex/-/plex-1.4.1.tgz#daed951f4c5bbdef698c184abb78dcc3de13223a"
+  integrity sha512-Sq6TBdApZV+y4kOstaVoGy2wIxboJnyzwESMcaRbC9+kMO/5Z0sxapQmQb0foKyLVRRsmn5LEA5LeVsncFsLwA==
 
 "@lerna/add@3.13.3":
   version "3.13.3"
@@ -8794,6 +8784,11 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "~3.0.0"
 
+lodash.throttle@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
+  integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
+
 lodash.toarray@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.toarray/-/lodash.toarray-4.4.0.tgz#24c4bfcd6b2fba38bfd0594db1179d8e9b656561"
@@ -11185,7 +11180,7 @@ promzard@^0.3.0:
   dependencies:
     read "1"
 
-prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -11508,6 +11503,14 @@ react-side-effect@^1.1.0:
   dependencies:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
+
+react-textarea-autosize@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/react-textarea-autosize/-/react-textarea-autosize-7.1.0.tgz#3132cb77e65d94417558d37c0bfe415a5afd3445"
+  integrity sha512-c2FlR/fP0qbxmlrW96SdrbgP/v0XZMTupqB90zybvmDVDutytUgPl7beU35klwcTeMepUIQEpQUn3P3bdshGPg==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    prop-types "^15.6.0"
 
 react@^16.8.6:
   version "16.8.6"

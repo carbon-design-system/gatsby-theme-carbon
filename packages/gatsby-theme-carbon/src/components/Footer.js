@@ -63,7 +63,7 @@ const Footer = ({ Content, links, Logo }) => {
     <footer css={footerStyles}>
       <Grid css={gridStyles}>
         <Row>
-          <Column colLg={2} colMd={2} offsetLg={3}>
+          <Column colLg={2} colMd={2}>
             <ul css={listStyles}>
               {firstCol &&
                 firstCol.map((link, i) => (
