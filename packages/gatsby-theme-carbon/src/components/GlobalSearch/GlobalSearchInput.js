@@ -4,9 +4,11 @@ import React, { useState, useEffect, useContext, useRef } from 'react';
 import Close20 from '@carbon/icons-react/es/close/20';
 import Search20 from '@carbon/icons-react/es/search/20';
 import NavContext from '../../util/context/NavContext';
+import { useOnClickOutside } from '../../util/hooks';
 
 const GlobalSearchInput = () => {
   const inputRef = useRef(null);
+  const searchRef = useRef(null);
   const [input, setInput] = useState('');
   const { toggleNavState } = useContext(NavContext);
 
@@ -14,8 +16,14 @@ const GlobalSearchInput = () => {
     if (inputRef.current) inputRef.current.focus();
   });
 
+  useOnClickOutside(searchRef, () => toggleNavState('searchIsOpen', 'close'));
+
   return (
-    <div className="bx--search bx--search--lg bx--search--dark" role="search">
+    <div
+      ref={searchRef}
+      className="bx--search bx--search--lg bx--search--dark"
+      role="search"
+    >
       <Search20
         description="Search Maginfier"
         className="bx--search-magnifier"

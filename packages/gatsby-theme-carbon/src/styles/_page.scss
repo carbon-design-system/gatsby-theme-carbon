@@ -8,6 +8,7 @@ body {
 
 .side-nav + div, //Issue #51 weird bug where sometimes on reload of the page the classnames on container div disapear
   .container {
+  background: $ui-01;
   width: 100%;
   margin-left: 0;
   transition: $transition--base ease;

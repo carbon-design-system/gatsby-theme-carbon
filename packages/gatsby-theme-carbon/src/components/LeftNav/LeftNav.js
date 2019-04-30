@@ -10,7 +10,7 @@ import {
 import NavContext from '../../util/context/NavContext';
 import LeftNavItem from './LeftNavItem';
 import LeftNavResourceLinks from './ResourceLinks';
-import { useOnClickOutside, useWindowSize } from '../../util/hooks';
+import { useWindowSize } from '../../util/hooks';
 
 import LeftNavWrapper from './LeftNavWrapper';
 
@@ -42,7 +42,6 @@ const LeftNav = props => {
 
   const navItems = edges.map(({ node }) => node);
   const sideNavRef = useRef(null);
-  useOnClickOutside(sideNavRef, () => toggleNavState('leftNavIsOpen', 'close'));
 
   const renderNavItems = () =>
     navItems.map((item, i) => (
@@ -50,7 +49,11 @@ const LeftNav = props => {
     ));
 
   return (
-    <LeftNavWrapper expanded={leftNavIsOpen} homepage={props.homepage}>
+    <LeftNavWrapper
+      ref={sideNavRef}
+      expanded={leftNavIsOpen}
+      homepage={props.homepage}
+    >
       <SideNav
         isExpanded={leftNavIsOpen}
         aria-label="Side navigation"
