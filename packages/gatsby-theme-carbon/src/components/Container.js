@@ -18,7 +18,6 @@ const Container = ({ children }) => {
   const closeNavs = () => {
     toggleNavState('leftNavIsOpen', 'close');
     toggleNavState('switcherIsOpen', 'close');
-    toggleNavState('searchIsOpen', 'close');
   };
 
   return (
