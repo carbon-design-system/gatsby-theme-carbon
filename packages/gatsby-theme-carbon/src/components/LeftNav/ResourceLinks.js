@@ -9,6 +9,7 @@ const LeftNavResourceLinks = ({ links }) =>
       <hr className="bx--side-nav__divider" />
       {links.map((link, i) => (
         <SideNavLink
+          key={i}
           style={{ marginTop: i === 0 ? '1rem' : 0 }}
           icon={<LaunchIcon />}
           href={link.href}

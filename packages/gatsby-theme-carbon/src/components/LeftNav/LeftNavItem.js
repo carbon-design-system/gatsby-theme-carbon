@@ -19,6 +19,7 @@ const LeftNavItem = props => {
     return (
       <SideNavLink
         onClick={closeLeftNav}
+        icon={<span>dummy icon</span>}
         element={Link}
         partiallyActive
         activeClassName="bx--side-nav__link--current"
@@ -33,6 +34,7 @@ const LeftNavItem = props => {
     <Location>
       {({ location }) => (
         <SideNavMenu
+          icon={<span>dummy icon</span>}
           isActive={location.pathname.includes(
             slugify(category, { lower: true })
           )} // TODO similar categories

@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "yarn workspace example develop",
     "build": "yarn workspace example build",
-    "serve": "yarn workspace example serve",
+    "serve": "yarn build && yarn workspace example serve",
     "now-build": "yarn workspace example build",
     "lint": "eslint ."
   },
