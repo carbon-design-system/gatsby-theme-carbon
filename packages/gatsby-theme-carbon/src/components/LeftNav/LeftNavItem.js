@@ -1,6 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-// import classnames from 'classnames';
+import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { Location } from '@reach/router';
 import slugify from 'slugify';
@@ -10,81 +8,71 @@ import {
   SideNavMenu,
   SideNavMenuItem,
 } from 'carbon-components-react/lib/components/UIShell';
+import NavContext from '../../util/context/NavContext';
 
-export default class LeftNavItem extends React.Component {
-  static propTypes = {
-    /**
-     * The data structure for the nav item.
-     */
-    item: PropTypes.shape({
-      title: PropTypes.string,
-    }),
-  };
+const LeftNavItem = props => {
+  const { items, category } = props;
+  const { toggleNavState } = useContext(NavContext);
+  const closeLeftNav = () => toggleNavState('leftNavIsOpen', 'close');
 
-  state = {
-    open: false,
-  };
-
-  toggleSubNav = () => {
-    this.setState({
-      open: !this.state.open,
-    });
-  };
-
-  renderSubNavItems = (items, location) => {
-    const isActive = item => {
-      const titleSlug = slugify(item.title, { lower: true });
-      return location.pathname.includes(titleSlug);
-    };
-    return items.map((item, i) => {
-      const active = isActive(item);
-      return (
-        <SideNavMenuItem
-          to={item.path}
-          element={Link}
-          isActive={active}
-          key={i}
-        >
-          <span style={{ color: active ? '#171717' : 'inherit' }}>
-            {item.title}
-          </span>
-        </SideNavMenuItem>
-      );
-    });
-  };
-
-  shouldRenderSubNav = pages => pages.length > 1;
-
-  render() {
-    const { items, category } = this.props;
-    if (items.length === 1) {
-      return (
-        <SideNavLink
-          element={Link}
-          partiallyActive
-          activeClassName="bx--side-nav__link--current"
-          to={items[0].path}
-        >
-          {category}
-        </SideNavLink>
-      );
-    }
+  if (items.length === 1) {
     return (
-      <Location>
-        {({ location }) => (
-          <SideNavMenu
-            isActive={location.pathname.includes(
-              slugify(category, { lower: true })
-            )} // TODO similar categories
-            defaultExpanded={location.pathname.includes(
-              slugify(category, { lower: true })
-            )}
-            title={category}
-          >
-            {this.renderSubNavItems(items, location, category)}
-          </SideNavMenu>
-        )}
-      </Location>
+      <SideNavLink
+        onClick={closeLeftNav}
+        element={Link}
+        partiallyActive
+        activeClassName="bx--side-nav__link--current"
+        to={items[0].path}
+      >
+        {category}
+      </SideNavLink>
     );
   }
-}
+
+  return (
+    <Location>
+      {({ location }) => (
+        <SideNavMenu
+          isActive={location.pathname.includes(
+            slugify(category, { lower: true })
+          )} // TODO similar categories
+          defaultExpanded={location.pathname.includes(
+            slugify(category, { lower: true })
+          )}
+          title={category}
+        >
+          <SubNavItems
+            onClick={closeLeftNav}
+            items={items}
+            location={location}
+          />
+        </SideNavMenu>
+      )}
+    </Location>
+  );
+};
+
+const SubNavItems = ({ items, location, onClick }) => {
+  const isActive = item => {
+    const titleSlug = slugify(item.title, { lower: true });
+    return location.pathname.includes(titleSlug);
+  };
+  return items.map((item, i) => {
+    const active = isActive(item);
+    return (
+      <SideNavMenuItem
+        to={item.path}
+        onClick={onClick}
+        element={Link}
+        isActive={active}
+        key={i}
+      >
+        <span style={{ color: active ? '#171717' : 'inherit' }}>
+          {item.title}
+        </span>
+      </SideNavMenuItem>
+    );
+  });
+};
+
+export default LeftNavItem;

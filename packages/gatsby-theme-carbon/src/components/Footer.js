@@ -57,12 +57,16 @@ const contentStyles = ({ colors, typeStyles }) => ({
   },
 });
 
+const rowStyles = () => ({
+  maxWidth: '100rem',
+});
+
 const Footer = ({ Content, links, Logo }) => {
   const { firstCol, secondCol } = links;
   return (
     <footer className="container" css={footerStyles}>
       <Grid css={gridStyles}>
-        <Row>
+        <Row css={rowStyles}>
           <Column colLg={2} colMd={2}>
             <ul css={listStyles}>
               {firstCol &&
@@ -91,7 +95,7 @@ const Footer = ({ Content, links, Logo }) => {
             <Content />
           </Column>
         </Row>
-        <Row>
+        <Row css={rowStyles}>
           <Column colLg={4}>
             <Logo />
           </Column>

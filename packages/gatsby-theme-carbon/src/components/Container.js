@@ -24,8 +24,9 @@ const Container = ({ children }) => {
 
   const shouldShowOverlay = () => {
     const navOpen = leftNavIsOpen || switcherIsOpen;
-    return navOpen && windowSize.innerWidth < 1056;
+    return navOpen && windowSize.innerWidth && windowSize.innerWidth < 1056;
   };
+
   return (
     <>
       {shouldShowOverlay() ? <Overlay onClick={closeNavs} /> : null}

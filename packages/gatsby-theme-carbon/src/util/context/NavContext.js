@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 
 const NavContext = React.createContext({
-  leftNavIsOpen: true,
+  leftNavIsOpen: false,
   searchIsOpen: false,
   switcherIsOpen: false,
 });
@@ -21,9 +21,9 @@ export const NavContextProvider = ({ children }) => {
     { leftNavIsOpen, searchIsOpen, switcherIsOpen },
     dispatch,
   ] = useReducer(reducer, {
-    leftNav: false,
-    search: false,
-    switcher: false,
+    leftNavIsOpen: false,
+    searchIsOpen: false,
+    switcherIsOpen: false,
   });
 
   const toggleNavState = (nav, type) => {

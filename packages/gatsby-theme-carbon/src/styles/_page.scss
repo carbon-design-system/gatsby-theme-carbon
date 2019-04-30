@@ -24,6 +24,10 @@ body {
   @include carbon--breakpoint('lg') {
     padding-left: 25%;
   }
+
+  @include carbon--breakpoint('max') {
+    padding-left: 400px;
+  }
 }
 
 .container .#{$prefix}--col-no-gutter {
