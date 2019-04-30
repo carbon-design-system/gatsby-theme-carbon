@@ -6,13 +6,13 @@ import mq from '../util/media-queries';
 const footerStyles = ({ colors }) => ({
   width: '100%',
   display: 'flex',
+  minHeight: '370px',
   margin: 0,
   color: colors.active01,
   backgroundColor: colors.interactive02,
 });
 
 const gridStyles = () => ({
-  minHeight: '370px',
   margin: 0,
   display: 'flex',
   justifyContent: 'space-between',
@@ -60,7 +60,7 @@ const contentStyles = ({ colors, typeStyles }) => ({
 const Footer = ({ Content, links, Logo }) => {
   const { firstCol, secondCol } = links;
   return (
-    <footer css={footerStyles}>
+    <footer className="container" css={footerStyles}>
       <Grid css={gridStyles}>
         <Row>
           <Column colLg={2} colMd={2}>
