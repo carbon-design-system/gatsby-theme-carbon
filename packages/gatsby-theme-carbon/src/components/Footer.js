@@ -14,13 +14,13 @@ const footerStyles = ({ colors }) => ({
 const gridStyles = () => ({
   minHeight: '370px',
   margin: 0,
-  maxWidth: '100rem',
   display: 'flex',
   justifyContent: 'space-between',
   flexDirection: 'column',
   padding: '2rem',
-  width: '100%',
   [mq.lg]: {
+    maxWidth: '100rem',
+    width: '100%',
     padding: '2rem 0',
   },
 });
@@ -92,7 +92,7 @@ const Footer = ({ Content, links, Logo }) => {
           </Column>
         </Row>
         <Row>
-          <Column offsetLg={3} colLg={4}>
+          <Column colLg={4}>
             <Logo />
           </Column>
         </Row>

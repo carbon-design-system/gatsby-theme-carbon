@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import NavContext from '../util/context/NavContext';
+import useWindowSize from '../util/hooks/useWindowSize';
 
 const Overlay = styled.div`
   z-index: 500;
@@ -15,14 +16,19 @@ const Container = ({ children }) => {
   const { leftNavIsOpen, switcherIsOpen, toggleNavState } = useContext(
     NavContext
   );
+  const windowSize = useWindowSize();
   const closeNavs = () => {
     toggleNavState('leftNavIsOpen', 'close');
     toggleNavState('switcherIsOpen', 'close');
   };
 
+  const shouldShowOverlay = () => {
+    const navOpen = leftNavIsOpen || switcherIsOpen;
+    return navOpen && windowSize.innerWidth < 1056;
+  };
   return (
     <>
-      {leftNavIsOpen || switcherIsOpen ? <Overlay onClick={closeNavs} /> : null}
+      {shouldShowOverlay() ? <Overlay onClick={closeNavs} /> : null}
       <div className="container">{children}</div>
     </>
   );
