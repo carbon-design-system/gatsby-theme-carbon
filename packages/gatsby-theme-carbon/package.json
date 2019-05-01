@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-carbon",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "index.js",
   "author": "vpicone <vp@vincepic.one> (@vpicone)",
   "repository": {
@@ -32,8 +32,8 @@
     "@mdx-js/mdx": "^1.0.5",
     "@mdx-js/react": "^1.0.2",
     "@reach/router": "^1.2.1",
-    "carbon-components": "^10.1.0",
-    "carbon-components-react": "^7.0.0",
+    "carbon-components": "^10.2.0",
+    "carbon-components-react": "^7.2.0",
     "classnames": "^2.2.6",
     "emotion-theming": "^10.0.10",
     "gatsby-mdx": "^0.6.2",

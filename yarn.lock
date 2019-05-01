@@ -3228,7 +3228,7 @@ capture-stack-trace@^1.0.0:
   resolved "https://registry.yarnpkg.com/capture-stack-trace/-/capture-stack-trace-1.0.1.tgz#a6c0bbe1f38f3aa0b92238ecb6ff42c344d4135d"
   integrity sha512-mYQLZnx5Qt1JgB1WEiMCf2647plpGeQ2NMR/5L0HNZzGQo4fuSPnK+wjfPnKZV0aiJDgzmWqqkV/g7JD+DW0qw==
 
-carbon-components-react@^7.0.0:
+carbon-components-react@^7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.2.0.tgz#195e4f2e45d6e59a934f44da1b327aaadc647267"
   integrity sha512-BS1dtqY6e9zaGYhaLEAxP+S5ERDUPqAGbmjgaaNWgZcfDO/EFah+NXEK/p7S9wUAae4/9H/Ks4N8FkT2aTDn/g==
@@ -3246,7 +3246,7 @@ carbon-components-react@^7.0.0:
     warning "^3.0.0"
     window-or-global "^1.0.1"
 
-carbon-components@^10.1.0:
+carbon-components@^10.2.0:
   version "10.2.0"
   resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.2.0.tgz#a7c3631d31cdbb3e9efe6601f02303e0c704fe45"
   integrity sha512-LAtwYD5LvH60kx+Y7VyWAAL66kzrANrclThKMzv+fwLLO3xNZ6mLmEdvuEbPdjnTiRSUdlHajgA+evVu672F1w==
