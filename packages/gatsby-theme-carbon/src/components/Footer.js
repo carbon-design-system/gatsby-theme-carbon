@@ -6,21 +6,21 @@ import mq from '../util/media-queries';
 const footerStyles = ({ colors }) => ({
   width: '100%',
   display: 'flex',
+  minHeight: '370px',
   margin: 0,
   color: colors.active01,
   backgroundColor: colors.interactive02,
 });
 
 const gridStyles = () => ({
-  minHeight: '370px',
   margin: 0,
-  maxWidth: '100rem',
   display: 'flex',
   justifyContent: 'space-between',
   flexDirection: 'column',
   padding: '2rem',
-  width: '100%',
   [mq.lg]: {
+    maxWidth: '100rem',
+    width: '100%',
     padding: '2rem 0',
   },
 });
@@ -57,13 +57,17 @@ const contentStyles = ({ colors, typeStyles }) => ({
   },
 });
 
+const rowStyles = () => ({
+  maxWidth: '100rem',
+});
+
 const Footer = ({ Content, links, Logo }) => {
   const { firstCol, secondCol } = links;
   return (
-    <footer css={footerStyles}>
+    <footer className="container" css={footerStyles}>
       <Grid css={gridStyles}>
-        <Row>
-          <Column colLg={2} colMd={2} offsetLg={3}>
+        <Row css={rowStyles}>
+          <Column colLg={2} colMd={2}>
             <ul css={listStyles}>
               {firstCol &&
                 firstCol.map((link, i) => (
@@ -91,8 +95,8 @@ const Footer = ({ Content, links, Logo }) => {
             <Content />
           </Column>
         </Row>
-        <Row>
-          <Column offsetLg={3} colLg={4}>
+        <Row css={rowStyles}>
+          <Column colLg={4}>
             <Logo />
           </Column>
         </Row>

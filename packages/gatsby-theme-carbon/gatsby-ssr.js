@@ -1,6 +1,9 @@
 import React from 'react';
 import ThemeProvider from './src/components/ThemeProvider';
+import { NavContextProvider } from './src/util/context/NavContext';
 
 export const wrapRootElement = ({ element }) => (
-  <ThemeProvider>{element}</ThemeProvider>
+  <NavContextProvider>
+    <ThemeProvider>{element}</ThemeProvider>
+  </NavContextProvider>
 );

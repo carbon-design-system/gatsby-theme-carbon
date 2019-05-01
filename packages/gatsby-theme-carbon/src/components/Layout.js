@@ -6,7 +6,7 @@ import Header from './Header';
 import Switcher from './Switcher';
 import Footer from './Footer';
 import MDXProvider from './MDXProvider';
-
+import Container from './Container';
 import { useSmoothScroll } from '../util/hooks';
 
 import '../styles/index.scss';
@@ -22,10 +22,10 @@ const Layout = ({ children, ...rest }) => {
       <Header />
       <Switcher />
       <LeftNav homepage={rest.homepage} is404Page={is404} />
-      <div className="container">
+      <Container>
         <MDXProvider>{children}</MDXProvider>
         <Footer />
-      </div>
+      </Container>
     </>
   );
 };
