@@ -56,6 +56,7 @@ const LeftNav = props => {
     >
       <SideNav
         expanded
+        defaultExpanded
         aria-label="Side navigation"
         className={classnames({
           'bx--side-nav--website': true,
