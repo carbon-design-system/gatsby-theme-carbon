@@ -63,7 +63,7 @@
 }
 
 .#{$prefix}--example-card::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: -1px;
@@ -98,8 +98,8 @@
   fill: $carbon--magenta-50;
 }
 
-.#{$prefix}--example__icon path[dataIconPath="inner-path"],
-.#{$prefix}--example__icon path[data-icon-path="inner-path"] {
+.#{$prefix}--example__icon path[dataIconPath='inner-path'],
+.#{$prefix}--example__icon path[data-icon-path='inner-path'] {
   fill: $carbon--white-0;
   opacity: 1;
 }
@@ -109,38 +109,37 @@
 }
 
 .#{$prefix}--example__title {
-  @include carbon--type-style("body-short-01");
+  @include carbon--type-style('body-short-01');
   margin: 0;
 
   @media (orientation: landscape) {
     padding: 0 25% 0 0;
   }
 
-  @include breakpoint("md") {
+  @include carbon--breakpoint('md') {
     padding: 0 25% 0 0;
   }
 }
 
 .#{$prefix}--example__description {
-  @include carbon--type-style("body-short-01");
-  @include font-smoothing;
+  @include carbon--type-style('body-short-01');
   margin: 0;
   padding: 0;
   padding-bottom: $spacing-06;
 }
 
 .#{$prefix}--example__caption {
-  @include breakpoint("sm") {
+  @include carbon--breakpoint('sm') {
     width: 100%;
   }
 
-  @include breakpoint("md") {
+  @include carbon--breakpoint('md') {
     width: 75%;
   }
 }
 
 .#{$prefix}--col-lg-4 .#{$prefix}--example__caption {
-  @include breakpoint("md") {
+  @include carbon--breakpoint('md') {
     width: 100%;
   }
 }
