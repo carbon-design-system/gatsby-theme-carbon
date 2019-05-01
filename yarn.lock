@@ -3191,9 +3191,9 @@ capture-stack-trace@^1.0.0:
   integrity sha512-mYQLZnx5Qt1JgB1WEiMCf2647plpGeQ2NMR/5L0HNZzGQo4fuSPnK+wjfPnKZV0aiJDgzmWqqkV/g7JD+DW0qw==
 
 carbon-components-react@^7.0.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.1.0.tgz#fd8f93c3a2ec439dca2583c19dcffa3b212b422c"
-  integrity sha512-dotToRieStjjQaWdXs2yXR2KjNtxkJs2ZB/o+9Br1FO5AK9VPKlHZeF9iFgCcarMWNpaNpjI5mPIjpcbG9KDvg==
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.2.0.tgz#195e4f2e45d6e59a934f44da1b327aaadc647267"
+  integrity sha512-BS1dtqY6e9zaGYhaLEAxP+S5ERDUPqAGbmjgaaNWgZcfDO/EFah+NXEK/p7S9wUAae4/9H/Ks4N8FkT2aTDn/g==
   dependencies:
     "@carbon/icons-react" "^0.0.1-beta.4"
     classnames "2.2.6"
@@ -3204,14 +3204,14 @@ carbon-components-react@^7.0.0:
     lodash.debounce "^4.0.8"
     lodash.isequal "^4.5.0"
     lodash.omit "^4.5.0"
-    react-is "^16.8.5"
+    react-is "^16.8.6"
     warning "^3.0.0"
     window-or-global "^1.0.1"
 
 carbon-components@^10.1.0:
-  version "10.1.0"
-  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.1.0.tgz#c7d60ef3aaa4ec11629d1224e0064d15716e5072"
-  integrity sha512-CdybWT+lDhDnY4fp7HDacmL8X3i/9LD12WKK/AlmIZeoCAmqa0fo9GwRz1o8gQdQYOF/5LAjrdqOlKXkAOrGDQ==
+  version "10.2.0"
+  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.2.0.tgz#a7c3631d31cdbb3e9efe6601f02303e0c704fe45"
+  integrity sha512-LAtwYD5LvH60kx+Y7VyWAAL66kzrANrclThKMzv+fwLLO3xNZ6mLmEdvuEbPdjnTiRSUdlHajgA+evVu672F1w==
   dependencies:
     carbon-icons "^7.0.7"
     flatpickr "4.5.7"
@@ -11476,7 +11476,7 @@ react-hot-loader@^4.6.2:
     shallowequal "^1.0.2"
     source-map "^0.7.3"
 
-react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.5:
+react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
