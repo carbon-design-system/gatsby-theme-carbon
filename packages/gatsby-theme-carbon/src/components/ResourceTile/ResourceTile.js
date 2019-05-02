@@ -84,7 +84,8 @@ export default class ResourceTile extends React.Component {
     const aspectRatioClassNames = classnames([`${prefix}--aspect-ratio`], {
       [`${prefix}--aspect-ratio--2x1`]: aspectRatio === '2:1',
       [`${prefix}--aspect-ratio--1x1`]: aspectRatio === '1:1',
-      // Add other aspect ratio classes here
+      [`${prefix}--aspect-ratio--16x9`]: aspectRatio === '16:9',
+      [`${prefix}--aspect-ratio--4x3`]: aspectRatio === '4:3',
     });
 
     return (
