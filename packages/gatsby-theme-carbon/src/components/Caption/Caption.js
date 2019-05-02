@@ -22,12 +22,6 @@ export default class Caption extends React.Component {
       [className]: className,
     });
 
-    return (
-      <div className={`${prefix}--row`}>
-        <div className={`${prefix}--col-lg-4 ${prefix}--col-md-4`}>
-          <p className={captionClasses}>{children}</p>
-        </div>
-      </div>
-    );
+    return <p className={captionClasses}>{children}</p>;
   }
 }
