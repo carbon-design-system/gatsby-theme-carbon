@@ -1,0 +1,6 @@
+.#{$prefix}--caption {
+  @include carbon--type-style('body-short-01');
+  padding-top: $spacing-03;
+  margin-bottom: $spacing-06;
+  margin-top: -$spacing-06; // to account for default spacing below images
+}
