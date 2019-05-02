@@ -1,3 +1,8 @@
+.#{$prefix}--resource-tile {
+  margin: 1px 1px 0 0;
+  outline: 1px solid $carbon--gray-20;
+}
+
 .#{$prefix}--resource-tile .#{$prefix}--tile {
   background: $ui-background;
   height: 100%;
@@ -40,6 +45,10 @@
 }
 
 // Dark
+.#{$prefix}--resource-tile--dark {
+  outline-color: $carbon--black-100;
+}
+
 .#{$prefix}--resource-tile--dark .#{$prefix}--tile {
   background: $carbon--gray-90; //$ui-background for gray 90 theme
 }

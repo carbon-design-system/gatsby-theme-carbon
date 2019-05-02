@@ -35,7 +35,7 @@ export default class ResourceTile extends React.Component {
     actionIcon: PropTypes.string,
 
     /**
-     * Set tile aspect ratio, default is 2:1
+     * Set tile aspect ratio, default is 2:1, options are 1:1, 16:9, 4:3
      */
     aspectRatio: PropTypes.bool,
 
