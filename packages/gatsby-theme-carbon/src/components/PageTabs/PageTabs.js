@@ -18,7 +18,7 @@ export default class PageTabs extends React.Component {
       const href = slug.replace(currentTab, slugifiedTab);
       return (
         <li key={tab} className={selected ? 'selected' : ''}>
-          <Link to={href}>{tab}</Link>
+          <Link to={`/${href}`}>{tab}</Link>
         </li>
       );
     });
