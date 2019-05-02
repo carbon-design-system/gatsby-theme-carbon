@@ -3,7 +3,10 @@
   padding-top: $spacing-03;
   margin-bottom: $spacing-06;
   margin-top: -$spacing-06; // to account for default spacing below images
+}
 
+// Full width
+.#{$prefix}--caption--responsive {
   // 4 columns wide
   @include carbon--breakpoint('lg') {
     width: 50%;
@@ -13,11 +16,6 @@
   @include carbon--breakpoint('lg') {
     width: 33.333%;
   }
-}
-
-// Full width
-.#{$prefix}--caption--full {
-  width: 100%;
 }
 
 // If caption is inside a user specified row then allow the grid code to set the width

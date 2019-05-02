@@ -25,7 +25,7 @@ export default class Caption extends React.Component {
 
     const captionClasses = classnames([`${prefix}--caption`], {
       [className]: className,
-      [`${prefix}--caption--full`]: fullWidth,
+      [`${prefix}--caption--responsive`]: !fullWidth,
     });
 
     return <p className={captionClasses}>{children}</p>;
