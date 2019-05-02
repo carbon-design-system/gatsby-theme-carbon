@@ -15,6 +15,11 @@
   }
 }
 
+// Full width
+.#{$prefix}--caption--full {
+  width: 100%;
+}
+
 // If caption is inside a user specified row then allow the grid code to set the width
 .#{$prefix}--row .#{$prefix}--caption {
   width: 100%;
