@@ -4,6 +4,8 @@
       path: /component-examples/demo
     - title: DoDontExample
       path: /component-examples/DoDontExample
+    - title: Caption
+      path: /component-examples/Caption
     # - title: ImageComponent
     # path: /component-examples/ImageComponent
 - title: Contributing
