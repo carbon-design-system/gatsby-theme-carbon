@@ -128,6 +128,15 @@ em {
   margin-bottom: $spacing-06;
 }
 
+.gatsby-resp-image-background-image {
+  background: transparent !important; // Need important to override inline style added by gatsby-remark-images
+}
+
+.gatsby-resp-image-image {
+  box-shadow: none !important; // Need important to override inline style added by gatsby-remark-images
+  border: none !important;
+}
+
 // iframe
 .gatsby-resp-iframe-wrapper {
   position: relative;

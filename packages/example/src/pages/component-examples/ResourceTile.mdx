@@ -1,0 +1,97 @@
+---
+title: ResourceTile
+---
+
+import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
+
+## ResourceTile
+
+<Row>
+<Column colMd={4} colLg={4} noGutterLg>
+    <ResourceTile
+      subTitle="Design Kit"
+      title="Explore & Create"
+      aspectRatio="2:1"
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      >
+
+![](/images/github-icon.png)
+
+  </ResourceTile>
+</Column>
+<Column colMd={4} colLg={4} noGutterLg>
+    <ResourceTile
+      subTitle="Download"
+      actionIcon="download"
+      aspectRatio="2:1"
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      >
+
+![](/images/github-icon.png)
+
+  </ResourceTile>
+</Column>
+</Row>
+
+### Dark
+
+<Row>
+<Column colMd={4} colLg={4} noGutterLg>
+    <ResourceTile
+      subTitle="Design Kit"
+      title="Explore & Create"
+      actionIcon="arrowRight"
+      aspectRatio="2:1"
+      dark
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      >
+
+![](/images/github-icon.png)
+
+  </ResourceTile>
+</Column>
+<Column colMd={4} colLg={4} noGutterLg>
+    <ResourceTile
+      subTitle="Design Kit"
+      actionIcon="launch"
+      aspectRatio="2:1"
+      dark
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      >
+
+![](/images/github-icon.png)
+
+  </ResourceTile>
+</Column>
+</Row>
+
+### Disabled
+
+<Row>
+  <Column colMd={4} colLg={4} noGutterLg>
+    <ResourceTile
+      subTitle="Design Kit"
+      title="Explore & Create"
+      aspectRatio="2:1"
+      actionIcon="launch"
+      disabled
+    />
+  </Column>
+  <Column colMd={4} colLg={4} noGutterLg>
+    <ResourceTile subTitle="Design Kit" aspectRatio="2:1" disabled />
+  </Column>
+</Row>
+<Row>
+  <Column colMd={4} colLg={4} noGutterLg>
+    <ResourceTile
+      subTitle="Design Kit"
+      title="Explore & Create"
+      aspectRatio="2:1"
+      disabled
+      dark
+    />
+  </Column>
+  <Column colMd={4} colLg={4} noGutterLg>
+    <ResourceTile subTitle="Design Kit" aspectRatio="2:1" disabled dark />
+  </Column>
+</Row>

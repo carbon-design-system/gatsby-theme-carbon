@@ -6,6 +6,8 @@
       path: /component-examples/DoDontExample
     - title: Caption
       path: /component-examples/Caption
+    - title: Tile
+      path: /component-examples/Tile
     # - title: ImageComponent
     # path: /component-examples/ImageComponent
 - title: Contributing

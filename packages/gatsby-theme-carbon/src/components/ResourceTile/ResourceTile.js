@@ -1,0 +1,126 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import { ClickableTile } from 'carbon-components-react';
+import Launch20 from '@carbon/icons-react/es/launch/20';
+import Download20 from '@carbon/icons-react/es/download/20';
+import ArrowRight20 from '@carbon/icons-react/es/arrow--right/20';
+import Error20 from '@carbon/icons-react/es/error/20';
+import { settings } from 'carbon-components';
+
+const { prefix } = settings;
+
+export default class ResourceTile extends React.Component {
+  static propTypes = {
+    children: PropTypes.node,
+
+    /**
+     * Set url for tile
+     */
+    href: PropTypes.string,
+
+    /**
+     * Smaller heading
+     */
+    subTitle: PropTypes.string,
+
+    /**
+     * Large heading
+     */
+    title: PropTypes.string,
+
+    /**
+     * Action icon, default is launch, options are Launch, ArrowRight, Download, Error
+     */
+    actionIcon: PropTypes.string,
+
+    /**
+     * Set tile aspect ratio, default is 2:1
+     */
+    aspectRatio: PropTypes.bool,
+
+    /**
+     * Use for dark tile
+     */
+    dark: PropTypes.bool,
+
+    /**
+     * Use for disabled tile
+     */
+    disabled: PropTypes.bool,
+
+    /**
+     * Specify a custom class
+     */
+    className: PropTypes.string,
+  };
+
+  static defaultProps = {
+    dark: false,
+    disabled: false,
+    aspectRatio: '2:1',
+    actionIcon: 'launch',
+  };
+
+  render() {
+    const {
+      children,
+      href,
+      subTitle,
+      title,
+      dark,
+      disabled,
+      aspectRatio,
+      actionIcon,
+      className,
+    } = this.props;
+
+    const classNames = classnames([`${prefix}--resource-tile`], {
+      [className]: className,
+      [`${prefix}--resource-tile--disabled`]: disabled,
+      [`${prefix}--resource-tile--dark`]: dark,
+    });
+
+    const aspectRatioClassNames = classnames([`${prefix}--aspect-ratio`], {
+      [`${prefix}--aspect-ratio--2x1`]: aspectRatio === '2:1',
+      [`${prefix}--aspect-ratio--1x1`]: aspectRatio === '1:1',
+      // Add other aspect ratio classes here
+    });
+
+    return (
+      <div className={classNames}>
+        <div className={aspectRatioClassNames}>
+          <div className={`${prefix}--aspect-ratio--object`}>
+            <ClickableTile
+              target="_blank"
+              rel="noopener noreferrer"
+              href={href}
+            >
+              <h5 className={`${prefix}--resource-tile__subtitle`}>
+                {subTitle}
+              </h5>
+              <h4 className={`${prefix}--resource-tile__title`}>{title}</h4>
+              <div className={`${prefix}--resource-tile__icon--img`}>
+                {children}
+              </div>
+              <div className={`${prefix}--resource-tile__icon--action`}>
+                {actionIcon === 'launch' && !disabled ? (
+                  <Launch20 aria-label="Open resource" />
+                ) : null}
+                {actionIcon === 'arrowRight' && !disabled ? (
+                  <ArrowRight20 aria-label="Open resource" />
+                ) : null}
+                {actionIcon === 'download' && !disabled ? (
+                  <Download20 aria-label="Download" />
+                ) : null}
+                {actionIcon === 'disabled' || disabled === true ? (
+                  <Error20 aria-label="disabled" />
+                ) : null}
+              </div>
+            </ClickableTile>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
