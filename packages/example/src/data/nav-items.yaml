@@ -6,8 +6,8 @@
       path: /component-examples/DoDontExample
     - title: Caption
       path: /component-examples/Caption
-    - title: ResourceTile
-      path: /component-examples/ResourceTile
+    - title: ResourceCard
+      path: /component-examples/ResourceCard
     # - title: ImageComponent
     # path: /component-examples/ImageComponent
 - title: Contributing

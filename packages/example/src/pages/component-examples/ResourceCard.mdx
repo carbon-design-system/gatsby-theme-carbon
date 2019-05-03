@@ -1,14 +1,14 @@
 ---
-title: ResourceTile
+title: ResourceCard
 ---
 
-import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
+import { Row, Column, ResourceCard } from 'gatsby-theme-carbon';
 
-## ResourceTile
+## ResourceCard
 
-<Row className="resource-tile-group">
+<Row className="resource-card-group">
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceTile
+    <ResourceCard
       subTitle="Design Kit"
       title="Explore & Create"
       aspectRatio="2:1"
@@ -17,15 +17,33 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
 
 ![](/images/sketch-icon.png)
 
-  </ResourceTile>
+  </ResourceCard>
+</Column>
+</Row>
+
+### Square
+
+<Row>
+<Column colMd={3} colLg={3} noGutterSm>
+    <ResourceCard
+      subTitle="Demo"
+      title="Internal link"
+      aspectRatio="1:1"
+      actionIcon="arrowRight"
+      href="/component-examples/demo"
+      >
+
+![](/images/github-icon.png)
+
+  </ResourceCard>
 </Column>
 </Row>
 
 ### Two
 
-<Row className="resource-tile-group">
+<Row className="resource-card-group">
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceTile
+    <ResourceCard
       subTitle="Demo"
       title="Internal link"
       aspectRatio="2:1"
@@ -35,10 +53,10 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
 
 ![](/images/github-icon.png)
 
-  </ResourceTile>
+  </ResourceCard>
 </Column>
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceTile
+    <ResourceCard
       subTitle="Download"
       actionIcon="download"
       aspectRatio="2:1"
@@ -47,15 +65,15 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
 
 ![](/images/sketch-icon.png)
 
-  </ResourceTile>
+  </ResourceCard>
 </Column>
 </Row>
 
 ### Three
 
-<Row className="resource-tile-group">
+<Row className="resource-card-group">
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceTile
+    <ResourceCard
       subTitle="Design Kit"
       title="Explore & Create"
       aspectRatio="2:1"
@@ -65,10 +83,10 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
 
 ![](/images/github-icon.png)
 
-  </ResourceTile>
+  </ResourceCard>
 </Column>
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceTile
+    <ResourceCard
       subTitle="Download"
       actionIcon="download"
       aspectRatio="2:1"
@@ -77,10 +95,10 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
 
 ![](/images/github-icon.png)
 
-  </ResourceTile>
+  </ResourceCard>
 </Column>
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceTile
+    <ResourceCard
       subTitle="Design Kit"
       title="Explore & Create"
       aspectRatio="2:1"
@@ -89,15 +107,15 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
 
 ![](/images/github-icon.png)
 
-  </ResourceTile>
+  </ResourceCard>
 </Column>
 </Row>
 
 ### Four
 
-<Row className="resource-tile-group">
+<Row className="resource-card-group">
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceTile
+    <ResourceCard
       subTitle="Design Kit"
       title="Explore & Create"
       aspectRatio="2:1"
@@ -106,10 +124,10 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
 
 ![](/images/github-icon.png)
 
-  </ResourceTile>
+  </ResourceCard>
 </Column>
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceTile
+    <ResourceCard
       subTitle="Download"
       actionIcon="download"
       aspectRatio="2:1"
@@ -118,10 +136,10 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
 
 ![](/images/github-icon.png)
 
-  </ResourceTile>
+  </ResourceCard>
 </Column>
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceTile
+    <ResourceCard
       subTitle="Design Kit"
       title="Explore & Create"
       aspectRatio="2:1"
@@ -130,10 +148,10 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
 
 ![](/images/github-icon.png)
 
-  </ResourceTile>
+  </ResourceCard>
 </Column>
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceTile
+    <ResourceCard
       subTitle="Design Kit"
       title="Explore & Create"
       aspectRatio="2:1"
@@ -142,15 +160,15 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
 
 ![](/images/github-icon.png)
 
-  </ResourceTile>
+  </ResourceCard>
 </Column>
 </Row>
 
 ### Dark
 
-<Row className="resource-tile-group">
+<Row className="resource-card-group">
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceTile
+    <ResourceCard
       subTitle="Design Kit"
       title="Explore & Create"
       actionIcon="arrowRight"
@@ -161,10 +179,10 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
 
 ![](/images/sketch-icon.png)
 
-  </ResourceTile>
+  </ResourceCard>
 </Column>
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceTile
+    <ResourceCard
       subTitle="Design Kit"
       actionIcon="launch"
       aspectRatio="2:1"
@@ -174,15 +192,15 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
 
 ![](/images/sketch-icon.png)
 
-  </ResourceTile>
+  </ResourceCard>
 </Column>
 </Row>
 
 ### Disabled
 
-<Row className="resource-tile-group">
+<Row className="resource-card-group">
   <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceTile
+    <ResourceCard
       subTitle="Design Kit"
       title="Explore & Create"
       aspectRatio="2:1"
@@ -191,15 +209,15 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
     />
   </Column>
   <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceTile subTitle="Design Kit" aspectRatio="2:1" disabled />
+    <ResourceCard subTitle="Design Kit" aspectRatio="2:1" disabled />
   </Column>
 </Row>
 
 ### Disabled dark
 
-<Row className="resource-tile-group">
+<Row className="resource-card-group">
   <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceTile
+    <ResourceCard
       subTitle="Design Kit"
       title="Explore & Create"
       aspectRatio="2:1"
@@ -208,6 +226,6 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
     />
   </Column>
   <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceTile subTitle="Design Kit" aspectRatio="2:1" disabled dark />
+    <ResourceCard subTitle="Design Kit" aspectRatio="2:1" disabled dark />
   </Column>
 </Row>

@@ -10,7 +10,7 @@ import { settings } from 'carbon-components';
 
 const { prefix } = settings;
 
-export default class ResourceTile extends React.Component {
+export default class ResourceCard extends React.Component {
   static propTypes = {
     children: PropTypes.node,
 
@@ -80,10 +80,10 @@ export default class ResourceTile extends React.Component {
       isLink = href.charAt(0) === '/';
     }
 
-    const resourceTileClassNames = classnames([`${prefix}--resource-tile`], {
+    const ResourceCardClassNames = classnames([`${prefix}--resource-card`], {
       [className]: className,
-      [`${prefix}--resource-tile--disabled`]: disabled,
-      [`${prefix}--resource-tile--dark`]: dark,
+      [`${prefix}--resource-card--disabled`]: disabled,
+      [`${prefix}--resource-card--dark`]: dark,
     });
 
     const aspectRatioClassNames = classnames([`${prefix}--aspect-ratio`], {
@@ -100,10 +100,10 @@ export default class ResourceTile extends React.Component {
 
     const tileContent = (
       <>
-        <h5 className={`${prefix}--resource-tile__subtitle`}>{subTitle}</h5>
-        <h4 className={`${prefix}--resource-tile__title`}>{title}</h4>
-        <div className={`${prefix}--resource-tile__icon--img`}>{children}</div>
-        <div className={`${prefix}--resource-tile__icon--action`}>
+        <h5 className={`${prefix}--resource-card__subtitle`}>{subTitle}</h5>
+        <h4 className={`${prefix}--resource-card__title`}>{title}</h4>
+        <div className={`${prefix}--resource-card__icon--img`}>{children}</div>
+        <div className={`${prefix}--resource-card__icon--action`}>
           {actionIcon === 'launch' && !disabled ? (
             <Launch20 aria-label="Open resource" />
           ) : null}
@@ -143,7 +143,7 @@ export default class ResourceTile extends React.Component {
     }
 
     return (
-      <div className={resourceTileClassNames}>
+      <div className={ResourceCardClassNames}>
         <div className={aspectRatioClassNames}>
           <div className={`${prefix}--aspect-ratio--object`}>
             {tileContainer}
