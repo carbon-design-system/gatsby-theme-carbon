@@ -4,7 +4,7 @@
 
 Get started using with the Gatsby Carbon theme which includes all configuration you might need to build a beautiful site inspired by the [Carbon Design System](https://www.carbondesignsystem.com).
 
-## 🧗 Getting started
+## 🧗 Getting started . 
 
 1. **Create your site**
 
