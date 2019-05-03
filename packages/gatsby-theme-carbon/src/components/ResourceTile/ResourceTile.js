@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { ClickableTile } from 'carbon-components-react';
+import { Link } from 'gatsby';
 import Launch20 from '@carbon/icons-react/es/launch/20';
 import Download20 from '@carbon/icons-react/es/download/20';
 import ArrowRight20 from '@carbon/icons-react/es/arrow--right/20';
@@ -75,6 +75,11 @@ export default class ResourceTile extends React.Component {
       className,
     } = this.props;
 
+    let isLink;
+    if (href !== undefined) {
+      isLink = href.charAt(0) === '/';
+    }
+
     const classNames = classnames([`${prefix}--resource-tile`], {
       [className]: className,
       [`${prefix}--resource-tile--disabled`]: disabled,
@@ -88,37 +93,60 @@ export default class ResourceTile extends React.Component {
       [`${prefix}--aspect-ratio--4x3`]: aspectRatio === '4:3',
     });
 
+    const carbonTileclassNames = classnames(
+      [`${prefix}--tile`],
+      [`${prefix}--tile--clickable`]
+    );
+
+    const tileContent = (
+      <>
+        <h5 className={`${prefix}--resource-tile__subtitle`}>{subTitle}</h5>
+        <h4 className={`${prefix}--resource-tile__title`}>{title}</h4>
+        <div className={`${prefix}--resource-tile__icon--img`}>{children}</div>
+        <div className={`${prefix}--resource-tile__icon--action`}>
+          {actionIcon === 'launch' && !disabled ? (
+            <Launch20 aria-label="Open resource" />
+          ) : null}
+          {actionIcon === 'arrowRight' && !disabled ? (
+            <ArrowRight20 aria-label="Open resource" />
+          ) : null}
+          {actionIcon === 'download' && !disabled ? (
+            <Download20 aria-label="Download" />
+          ) : null}
+          {actionIcon === 'disabled' || disabled === true ? (
+            <Error20 aria-label="disabled" />
+          ) : null}
+        </div>
+      </>
+    );
+
+    let tileContainer;
+    if (disabled === true) {
+      tileContainer = <div className={carbonTileclassNames}>{tileContent}</div>;
+    } else if (isLink === true) {
+      tileContainer = (
+        <Link to={href} className={carbonTileclassNames}>
+          {tileContent}
+        </Link>
+      );
+    } else {
+      tileContainer = (
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={href}
+          className={carbonTileclassNames}
+        >
+          {tileContent}
+        </a>
+      );
+    }
+
     return (
       <div className={classNames}>
         <div className={aspectRatioClassNames}>
           <div className={`${prefix}--aspect-ratio--object`}>
-            <ClickableTile
-              target="_blank"
-              rel="noopener noreferrer"
-              href={href}
-            >
-              <h5 className={`${prefix}--resource-tile__subtitle`}>
-                {subTitle}
-              </h5>
-              <h4 className={`${prefix}--resource-tile__title`}>{title}</h4>
-              <div className={`${prefix}--resource-tile__icon--img`}>
-                {children}
-              </div>
-              <div className={`${prefix}--resource-tile__icon--action`}>
-                {actionIcon === 'launch' && !disabled ? (
-                  <Launch20 aria-label="Open resource" />
-                ) : null}
-                {actionIcon === 'arrowRight' && !disabled ? (
-                  <ArrowRight20 aria-label="Open resource" />
-                ) : null}
-                {actionIcon === 'download' && !disabled ? (
-                  <Download20 aria-label="Download" />
-                ) : null}
-                {actionIcon === 'disabled' || disabled === true ? (
-                  <Error20 aria-label="disabled" />
-                ) : null}
-              </div>
-            </ClickableTile>
+            {tileContainer}
           </div>
         </div>
       </div>
