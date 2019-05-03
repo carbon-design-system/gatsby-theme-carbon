@@ -15,7 +15,7 @@ export default class ResourceCard extends React.Component {
     children: PropTypes.node,
 
     /**
-     * Set url for tile
+     * Set url for card
      */
     href: PropTypes.string,
 
@@ -35,17 +35,17 @@ export default class ResourceCard extends React.Component {
     actionIcon: PropTypes.string,
 
     /**
-     * Set tile aspect ratio, default is 2:1, options are 1:1, 16:9, 4:3
+     * Set card aspect ratio, default is 2:1, options are 1:1, 16:9, 4:3
      */
     aspectRatio: PropTypes.bool,
 
     /**
-     * Use for dark tile
+     * Use for dark card
      */
     dark: PropTypes.bool,
 
     /**
-     * Use for disabled tile
+     * Use for disabled card
      */
     disabled: PropTypes.bool,
 
@@ -98,7 +98,7 @@ export default class ResourceCard extends React.Component {
       [`${prefix}--tile--clickable`]
     );
 
-    const tileContent = (
+    const cardContent = (
       <>
         <h5 className={`${prefix}--resource-card__subtitle`}>{subTitle}</h5>
         <h4 className={`${prefix}--resource-card__title`}>{title}</h4>
@@ -120,24 +120,24 @@ export default class ResourceCard extends React.Component {
       </>
     );
 
-    let tileContainer;
+    let cardContainer;
     if (disabled === true) {
-      tileContainer = <div className={carbonTileclassNames}>{tileContent}</div>;
+      cardContainer = <div className={carbonTileclassNames}>{cardContent}</div>;
     } else if (isLink === true) {
-      tileContainer = (
+      cardContainer = (
         <Link to={href} className={carbonTileclassNames}>
-          {tileContent}
+          {cardContent}
         </Link>
       );
     } else {
-      tileContainer = (
+      cardContainer = (
         <a
           target="_blank"
           rel="noopener noreferrer"
           href={href}
           className={carbonTileclassNames}
         >
-          {tileContent}
+          {cardContent}
         </a>
       );
     }
@@ -146,7 +146,7 @@ export default class ResourceCard extends React.Component {
       <div className={ResourceCardClassNames}>
         <div className={aspectRatioClassNames}>
           <div className={`${prefix}--aspect-ratio--object`}>
-            {tileContainer}
+            {cardContainer}
           </div>
         </div>
       </div>

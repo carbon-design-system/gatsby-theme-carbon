@@ -1,4 +1,4 @@
-//Tile groups
+//Card groups
 // Set spacing to the right of the group
 .resource-card-group .#{$prefix}--col-lg-4:nth-child(2) {
   @include carbon--breakpoint('lg') {
@@ -6,7 +6,7 @@
   }
 }
 
-// set border between tiles
+// set border between cards
 .resource-card-group .#{$prefix}--resource-card {
   border-top: 1px solid $carbon--gray-20;
 }
@@ -48,7 +48,7 @@
   }
 }
 
-// set border between tiles
+// set border between cards
 .resource-card-group .#{$prefix}--resource-card {
   border-top: 1px solid $carbon--gray-20;
 }
