@@ -54,7 +54,7 @@
 }
 
 .#{$prefix}--resource-card--dark .#{$prefix}--resource-card__icon--action svg {
-  fill: $carbon--white-0;
+  fill: $carbon--gray-10; //$icon-01 for grsay 90 theme
 }
 
 // Disabled
@@ -84,7 +84,7 @@
   .#{$prefix}--resource-card__title,
 .#{$prefix}--resource-card--disabled.#{$prefix}--resource-card--dark
   .#{$prefix}--resource-card__subtitle {
-  color: $carbon--gray-50; //$disabled-023for gray 90
+  color: $carbon--gray-50; //$disabled-03 for gray 90
 }
 
 .#{$prefix}--resource-card--disabled.#{$prefix}--resource-card--dark
