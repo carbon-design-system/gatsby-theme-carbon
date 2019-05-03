@@ -123,6 +123,11 @@ em {
   z-index: 9999;
 }
 
+// images
+.gatsby-resp-image-wrapper {
+  margin-bottom: $spacing-06;
+}
+
 // iframe
 .gatsby-resp-iframe-wrapper {
   position: relative;
