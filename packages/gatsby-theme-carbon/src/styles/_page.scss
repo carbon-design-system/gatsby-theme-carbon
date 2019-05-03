@@ -22,7 +22,7 @@ body {
   max-width: rem(1584px);
 
   @include carbon--breakpoint('lg') {
-    padding-left: 25%;
+    padding-left: calc(25% + 2rem); //2rem to account for 2rem left padding default on grid
   }
 
   @include carbon--breakpoint('max') {

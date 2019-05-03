@@ -6,12 +6,30 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
 
 ## ResourceTile
 
-<Row className="resource-tile--wrapper">
+<Row className="resource-tile-group">
 <Column colMd={4} colLg={4} noGutterLg>
     <ResourceTile
       subTitle="Design Kit"
       title="Explore & Create"
       aspectRatio="2:1"
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      >
+
+![](/images/github-icon.png)
+
+  </ResourceTile>
+</Column>
+</Row>
+
+### Two
+
+<Row className="resource-tile-group">
+<Column colMd={4} colLg={4} noGutterLg>
+    <ResourceTile
+      subTitle="Design Kit"
+      title="Explore & Create"
+      aspectRatio="2:1"
+      actionIcon="arrowRight"
       href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
       >
 
@@ -32,7 +50,52 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
   </ResourceTile>
 </Column>
 </Row>
-<Row>
+
+### Three
+
+<Row className="resource-tile-group">
+<Column colMd={4} colLg={4} noGutterLg>
+    <ResourceTile
+      subTitle="Design Kit"
+      title="Explore & Create"
+      aspectRatio="2:1"
+      actionIcon="arrowRight"
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      >
+
+![](/images/github-icon.png)
+
+  </ResourceTile>
+</Column>
+<Column colMd={4} colLg={4} noGutterLg>
+    <ResourceTile
+      subTitle="Download"
+      actionIcon="download"
+      aspectRatio="2:1"
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      >
+
+![](/images/github-icon.png)
+
+  </ResourceTile>
+</Column>
+<Column colMd={4} colLg={4} noGutterLg>
+    <ResourceTile
+      subTitle="Design Kit"
+      title="Explore & Create"
+      aspectRatio="2:1"
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      >
+
+![](/images/github-icon.png)
+
+  </ResourceTile>
+</Column>
+</Row>
+
+### Four
+
+<Row className="resource-tile-group">
 <Column colMd={4} colLg={4} noGutterLg>
     <ResourceTile
       subTitle="Design Kit"
@@ -49,6 +112,30 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
     <ResourceTile
       subTitle="Download"
       actionIcon="download"
+      aspectRatio="2:1"
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      >
+
+![](/images/github-icon.png)
+
+  </ResourceTile>
+</Column>
+<Column colMd={4} colLg={4} noGutterLg>
+    <ResourceTile
+      subTitle="Design Kit"
+      title="Explore & Create"
+      aspectRatio="2:1"
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      >
+
+![](/images/github-icon.png)
+
+  </ResourceTile>
+</Column>
+<Column colMd={4} colLg={4} noGutterLg>
+    <ResourceTile
+      subTitle="Design Kit"
+      title="Explore & Create"
       aspectRatio="2:1"
       href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
       >
@@ -61,7 +148,7 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
 
 ### Dark
 
-<Row>
+<Row className="resource-tile-group">
 <Column colMd={4} colLg={4} noGutterLg>
     <ResourceTile
       subTitle="Design Kit"
@@ -93,7 +180,7 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
 
 ### Disabled
 
-<Row>
+<Row className="resource-tile-group">
   <Column colMd={4} colLg={4} noGutterLg>
     <ResourceTile
       subTitle="Design Kit"
@@ -107,7 +194,10 @@ import { Row, Column, ResourceTile } from 'gatsby-theme-carbon';
     <ResourceTile subTitle="Design Kit" aspectRatio="2:1" disabled />
   </Column>
 </Row>
-<Row>
+
+### Disabled dark
+
+<Row className="resource-tile-group">
   <Column colMd={4} colLg={4} noGutterLg>
     <ResourceTile
       subTitle="Design Kit"
