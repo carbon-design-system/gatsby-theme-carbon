@@ -75,6 +75,7 @@
 
 .#{$prefix}--article-card--disabled .#{$prefix}--tile:hover {
   background: $ui-background;
+  cursor: not-allowed;
 }
 
 .#{$prefix}--article-card--disabled .#{$prefix}--article-card__title,
