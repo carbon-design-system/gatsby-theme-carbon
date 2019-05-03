@@ -80,7 +80,7 @@ export default class ResourceTile extends React.Component {
       isLink = href.charAt(0) === '/';
     }
 
-    const classNames = classnames([`${prefix}--resource-tile`], {
+    const resourceTileClassNames = classnames([`${prefix}--resource-tile`], {
       [className]: className,
       [`${prefix}--resource-tile--disabled`]: disabled,
       [`${prefix}--resource-tile--dark`]: dark,
@@ -143,7 +143,7 @@ export default class ResourceTile extends React.Component {
     }
 
     return (
-      <div className={classNames}>
+      <div className={resourceTileClassNames}>
         <div className={aspectRatioClassNames}>
           <div className={`${prefix}--aspect-ratio--object`}>
             {tileContainer}
