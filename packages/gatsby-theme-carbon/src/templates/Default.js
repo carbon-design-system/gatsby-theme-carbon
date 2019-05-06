@@ -25,7 +25,7 @@ const Default = ({
       >
         {children}
       </main>
-      <NextPrevious slug={slug} currentTabs={tabs} currentPage={currentTab} />
+      {/* <NextPrevious slug={slug} currentTabs={tabs} currentPage={currentTab} /> */}
       <WebsiteBackToTopBtn />
     </Layout>
   );
