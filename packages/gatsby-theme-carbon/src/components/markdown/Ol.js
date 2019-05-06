@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Row from '../Row';
-import mq from '../../util/media-queries';
 
-const textCss = ({ typeStyles }) => ({
-  ...typeStyles.bodyLong02,
-});
+import mq from '../../util/media-queries';
+import responsiveStyles from '../shared/responsiveStyles';
+
+const textCss = ({ typeStyles }) => [typeStyles.bodyLong02, responsiveStyles];
 
 const List = styled.ol`
   list-style: none;
@@ -33,10 +32,10 @@ const List = styled.ol`
   }
 `;
 
-const Ol = ({ children, className }) => (
-  <Row className={className}>
-    <List css={textCss}>{children}</List>
-  </Row>
+const Ol = ({ children }) => (
+  <List css={textCss} className="carbon--mdx__ol">
+    {children}
+  </List>
 );
 
 export default Ol;

@@ -22,7 +22,9 @@ body {
   max-width: rem(1584px);
 
   @include carbon--breakpoint('lg') {
-    padding-left: 25%;
+    padding-left: calc(
+      25% + 2rem
+    ); //2rem to account for 2rem left padding default on grid
   }
 
   @include carbon--breakpoint('max') {
@@ -59,6 +61,10 @@ body {
 
 em {
   font-style: italic;
+}
+
+button {
+  font-family: inherit;
 }
 
 .page-content {
@@ -126,6 +132,15 @@ em {
 // images
 .gatsby-resp-image-wrapper {
   margin-bottom: $spacing-06;
+}
+
+.gatsby-resp-image-background-image {
+  background: transparent !important; // Need important to override inline style added by gatsby-remark-images
+}
+
+.gatsby-resp-image-image {
+  box-shadow: none !important; // Need important to override inline style added by gatsby-remark-images
+  border: none !important;
 }
 
 // iframe

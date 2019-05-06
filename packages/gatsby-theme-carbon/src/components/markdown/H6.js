@@ -1,8 +1,8 @@
 import React from 'react';
 import responsiveStyles from '../shared/responsiveStyles';
 
-const h4Css = ({ typeStyles, layout }) => [
-  typeStyles.heading02,
+const h5Css = ({ typeStyles, layout }) => [
+  typeStyles.heading01,
   responsiveStyles,
   {
     marginTop: layout[0],
@@ -10,10 +10,10 @@ const h4Css = ({ typeStyles, layout }) => [
   },
 ];
 
-const H4 = ({ children }) => (
-  <h4 css={h4Css} className="carbon--mdx__h4">
+const H6 = ({ children }) => (
+  <h6 css={h5Css} className="carbon--mdx__h6">
     {children}
-  </h4>
+  </h6>
 );
 
-export default H4;
+export default H6;

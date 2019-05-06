@@ -1,0 +1,165 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import { Link } from 'gatsby';
+import Launch20 from '@carbon/icons-react/es/launch/20';
+import Download20 from '@carbon/icons-react/es/download/20';
+import ArrowRight20 from '@carbon/icons-react/es/arrow--right/20';
+import Error20 from '@carbon/icons-react/es/error/20';
+import { settings } from 'carbon-components';
+
+const { prefix } = settings;
+
+export default class ArticleCard extends React.Component {
+  static propTypes = {
+    children: PropTypes.node,
+
+    /**
+     * Set url for card
+     */
+    href: PropTypes.string,
+
+    /**
+     * Title
+     */
+    title: PropTypes.string,
+
+    /**
+     * Author
+     */
+    author: PropTypes.string,
+
+    /**
+     * date
+     */
+    date: PropTypes.string,
+
+    /**
+     * Reat time of article
+     */
+    readTime: PropTypes.string,
+
+    /**
+     * Action icon, default is blank, options are Launch, ArrowRight, Download, Error
+     */
+    actionIcon: PropTypes.string,
+
+    /**
+     * Use for dark card
+     */
+    dark: PropTypes.bool,
+
+    /**
+     * Use for disabled card
+     */
+    disabled: PropTypes.bool,
+
+    /**
+     * Specify a custom class
+     */
+    className: PropTypes.string,
+  };
+
+  static defaultProps = {
+    dark: false,
+    disabled: false,
+    actionIcon: '',
+  };
+
+  render() {
+    const {
+      children,
+      href,
+      title,
+      author,
+      date,
+      readTime,
+      dark,
+      disabled,
+      actionIcon,
+      className,
+    } = this.props;
+
+    let isLink;
+    if (href !== undefined) {
+      isLink = href.charAt(0) === '/';
+    }
+
+    const ResourceCardClassNames = classnames([`${prefix}--article-card`], {
+      [className]: className,
+      [`${prefix}--article-card--disabled`]: disabled,
+      [`${prefix}--article-card--dark`]: dark,
+    });
+
+    const aspectRatioClassNames = classnames(
+      [`${prefix}--aspect-ratio`],
+      [`${prefix}--aspect-ratio--2x1`]
+    );
+
+    const carbonTileclassNames = classnames(
+      [`${prefix}--tile`],
+      [`${prefix}--tile--clickable`]
+    );
+
+    const cardContent = (
+      <>
+        <div className={`${prefix}--article-card__img`}>{children}</div>
+        <div className={aspectRatioClassNames}>
+          <div
+            className={`${prefix}--aspect-ratio--object ${prefix}--article-card__tile`}
+          >
+            <h4 className={`${prefix}--article-card__title`}>{title}</h4>
+            <div className={`${prefix}--article-card__info`}>
+              {author ? (
+                <p className={`${prefix}--article-card__author`}>{author}</p>
+              ) : null}
+              {date ? (
+                <p className={`${prefix}--article-card__date`}>{date}</p>
+              ) : null}
+              {readTime ? (
+                <p className={`${prefix}--article-card__read-time`}>
+                  {readTime}
+                </p>
+              ) : null}
+            </div>
+            <div className={`${prefix}--article-card__icon--action`}>
+              {actionIcon === 'launch' && !disabled ? (
+                <Launch20 aria-label="Open resource" />
+              ) : null}
+              {actionIcon === 'arrowRight' && !disabled ? (
+                <ArrowRight20 aria-label="Open resource" />
+              ) : null}
+              {actionIcon === 'download' && !disabled ? (
+                <Download20 aria-label="Download" />
+              ) : null}
+              {actionIcon === 'disabled' || disabled === true ? (
+                <Error20 aria-label="disabled" />
+              ) : null}
+            </div>
+          </div>
+        </div>
+      </>
+    );
+
+    if (disabled === true) {
+      return (
+        <div className={ResourceCardClassNames}>
+          <div className={carbonTileclassNames}>{cardContent}</div>
+        </div>
+      );
+    } else {
+      return (
+        <div className={ResourceCardClassNames}>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={href}
+            className={carbonTileclassNames}
+          >
+            {cardContent}
+          </a>
+        </div>
+      );
+    }
+  }
+}

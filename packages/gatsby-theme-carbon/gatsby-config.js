@@ -38,6 +38,7 @@ module.exports = themeOptions => {
               options: {
                 maxWidth: 1164,
                 sizeByPixelDensity: true,
+                linkImagesToOriginal: false,
                 tracedSVG: true,
               },
             },
@@ -57,12 +58,7 @@ module.exports = themeOptions => {
           includePaths: [path.resolve(__dirname, 'node_modules')],
         },
       },
-      {
-        resolve: `gatsby-plugin-emotion`,
-        options: {
-          // Accepts all options defined by `babel-plugin-emotion` plugin.
-        },
-      },
+      `gatsby-plugin-emotion`,
       {
         resolve: `gatsby-source-filesystem`,
         options: {

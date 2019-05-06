@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import mq from '../../util/media-queries';
-import Row from '../Row';
+import responsiveStyles from '../shared/responsiveStyles';
 
-const textCss = ({ typeStyles }) => ({
-  ...typeStyles.bodyLong02,
-});
+const textCss = ({ typeStyles }) => [typeStyles.bodyLong02, responsiveStyles];
 
 const List = styled.ul`
   list-style: none;
@@ -33,11 +31,9 @@ const List = styled.ul`
 `;
 
 const UnorderedList = ({ children }) => (
-  <Row>
-    <List className="markdown-ul" css={textCss}>
-      {children}
-    </List>
-  </Row>
+  <List css={textCss} className="carbon--mdx__ul">
+    {children}
+  </List>
 );
 
 export default UnorderedList;
