@@ -38,6 +38,7 @@ module.exports = themeOptions => {
               options: {
                 maxWidth: 1164,
                 sizeByPixelDensity: true,
+                linkImagesToOriginal: false,
                 tracedSVG: true,
               },
             },
