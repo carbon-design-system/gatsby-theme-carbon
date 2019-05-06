@@ -1,0 +1,94 @@
+.#{$prefix}--resource-card .#{$prefix}--tile {
+  background: $ui-background;
+  height: 100%;
+  padding: $spacing-05;
+  position: relative;
+  transition: background $duration--fast-01;
+  text-decoration: none;
+}
+
+.#{$prefix}--resource-card .#{$prefix}--tile:hover {
+  background: $hover-ui;
+}
+
+.#{$prefix}--resource-card__title {
+  @include carbon--type-style('productive-heading-03');
+  text-decoration: none;
+  color: $text-01;
+}
+
+.#{$prefix}--resource-card__subtitle {
+  @include carbon--type-style('body-short-02');
+  text-decoration: none;
+  color: $text-01;
+}
+
+.#{$prefix}--resource-card__icon--img {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  width: 32px;
+  height: 32px;
+}
+
+.#{$prefix}--resource-card__icon--action {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 20px;
+  height: 20px;
+}
+
+// Dark
+.#{$prefix}--resource-card--dark .#{$prefix}--tile {
+  background: $carbon--gray-90; //$ui-background for gray 90 theme
+}
+
+.#{$prefix}--resource-card--dark .#{$prefix}--tile:hover {
+  background: $carbon--gray-80; //$hover-ui for gray 90 theme
+}
+
+.#{$prefix}--resource-card--dark .#{$prefix}--resource-card__title,
+.#{$prefix}--resource-card--dark .#{$prefix}--resource-card__subtitle {
+  color: $text-04;
+}
+
+.#{$prefix}--resource-card--dark .#{$prefix}--resource-card__icon--action svg {
+  fill: $carbon--white-0;
+}
+
+// Disabled
+.#{$prefix}--resource-card--disabled .#{$prefix}--tile:hover {
+  background: $ui-background;
+  cursor: not-allowed;
+}
+
+.#{$prefix}--resource-card--disabled .#{$prefix}--resource-card__title,
+.#{$prefix}--resource-card--disabled .#{$prefix}--resource-card__subtitle {
+  color: $disabled-03;
+}
+
+.#{$prefix}--resource-card--disabled
+  .#{$prefix}--resource-card__icon--action
+  svg {
+  fill: $disabled-02;
+}
+
+// Disabled dark
+.#{$prefix}--resource-card--disabled.#{$prefix}--resource-card--dark
+  .#{$prefix}--tile:hover {
+  background: $carbon--gray-90; //$ui-background for gray 90 theme
+}
+
+.#{$prefix}--resource-card--disabled.#{$prefix}--resource-card--dark
+  .#{$prefix}--resource-card__title,
+.#{$prefix}--resource-card--disabled.#{$prefix}--resource-card--dark
+  .#{$prefix}--resource-card__subtitle {
+  color: $carbon--gray-50; //$disabled-023for gray 90
+}
+
+.#{$prefix}--resource-card--disabled.#{$prefix}--resource-card--dark
+  .#{$prefix}--resource-card__icon--action
+  svg {
+  fill: $carbon--gray-70; //$disabled-02 for gray 90
+}
