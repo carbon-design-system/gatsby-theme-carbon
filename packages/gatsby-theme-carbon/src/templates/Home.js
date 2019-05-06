@@ -1,17 +1,13 @@
 import React from 'react';
 import { WebsiteBackToTopBtn } from '@carbon/addons-website';
-import {
-  HomepageHeader,
-  HomepageFooter,
-} from '../components/Homepage/Homepage';
 import Layout from '../components/Layout';
 
-const HomePage = () => (
+const HomePage = ({ children }) => (
   <Layout homepage>
     <div className="container--homepage">
-      <HomepageHeader />
-      <main className="page-content bx--grid" id="maincontent" />
-      <HomepageFooter />
+      <main className="page-content bx--grid" id="maincontent">
+        {children}
+      </main>
     </div>
     <WebsiteBackToTopBtn />
   </Layout>

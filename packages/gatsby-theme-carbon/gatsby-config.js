@@ -47,6 +47,7 @@ module.exports = themeOptions => {
           ],
           defaultLayouts: {
             default: require.resolve('./src/templates/Page.js'),
+            home: require.resolve('./src/templates/Home.js'),
           },
         },
       },
@@ -68,6 +69,13 @@ module.exports = themeOptions => {
           name: `pages`,
           path: path.resolve('./src/pages/'),
           ignore: [`**/\.*`], // ignore files starting with a dot
+        },
+      },
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `home`,
+          path: path.resolve('./src/pages/index.mdx'),
         },
       },
       {
