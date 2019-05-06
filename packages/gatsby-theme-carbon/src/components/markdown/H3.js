@@ -1,22 +1,24 @@
 import React from 'react';
-import Row from '../Row';
-import mq from '../../util/media-queries';
 
-const h3Css = ({ typeStyles, layout }) => ({
-  ...typeStyles.expressiveHeading03,
-  marginTop: layout[1],
-  marginBottom: layout[0],
-  [mq.sm]: {
-    marginTop: layout[2],
+import mq from '../../util/media-queries';
+import responsiveStyles from '../shared/responsiveStyles';
+
+const h3Css = ({ typeStyles, layout }) => [
+  responsiveStyles,
+  typeStyles.expressiveHeading03,
+  {
+    marginTop: layout[1],
+    marginBottom: layout[0],
+    [mq.sm]: {
+      marginTop: layout[2],
+    },
   },
-});
+];
 
 const H3 = ({ children }) => (
-  <Row>
-    <h3 css={h3Css} className="markdown-h3">
-      {children}
-    </h3>
-  </Row>
+  <h3 css={h3Css} className="carbon--mdx__h3">
+    {children}
+  </h3>
 );
 
 export default H3;

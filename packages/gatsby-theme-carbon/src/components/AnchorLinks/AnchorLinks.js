@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { settings } from 'carbon-components';
+import responsiveStyles from '../shared/responsiveStyles';
 
 const { prefix } = settings;
 
@@ -14,8 +15,9 @@ export default class AnchorLinks extends React.Component {
       [`${prefix}--anchor-links__list--small`]: small,
       [`${prefix}--anchor-links__list--column`]: isColumn,
     });
+
     return (
-      <ul className={classNames}>
+      <ul css={responsiveStyles} className={classNames}>
         {children.map(item => (
           <li className={`${prefix}--anchor-links__item`}>{item}</li>
         ))}
