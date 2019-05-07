@@ -54,6 +54,10 @@ blockquote {
   font-style: italic;
 }
 
+blockquote .#{$prefix}--paragraph {
+  @include carbon--type-style('expressive-heading-03');
+}
+
 //---------------------------------------
 // Page styles
 //---------------------------------------
