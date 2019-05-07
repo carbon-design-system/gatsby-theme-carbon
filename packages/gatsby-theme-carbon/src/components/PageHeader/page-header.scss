@@ -8,16 +8,8 @@
   height: rem(240px);
 }
 
-.#{$prefix}--grid.page-header__label-wrapper {
-  padding-top: rem(24px);
-  margin-bottom: auto;
-}
-
-.page-header__label {
-  @include carbon--type-style('expressive-heading-03', true);
-}
-
 .page-header__title {
+  padding-left: 1rem;
   margin-bottom: $layout-xs;
   margin-top: auto;
 }

@@ -1,20 +1,19 @@
 import React from 'react';
 import { WebsiteBackToTopBtn } from '@carbon/addons-website';
 import Layout from '../components/Layout';
-import Banner from '../components/Homepage/Banner';
-import Callout from '../components/Homepage/Callout';
+import { HomepageBanner, HomepageCallout } from '../components/Homepage';
 import Light from '../images/blossom.jpg';
 import Main from '../components/Main';
 
 const Homepage = ({
   children,
-  Banner: UserBanner,
+  Banner,
   FirstCallout,
   SecondCallout,
   ...rest
 }) => (
   <Layout homepage>
-    {UserBanner}
+    {Banner}
     {FirstCallout}
     <Main>{children}</Main>
     {SecondCallout}
@@ -24,7 +23,7 @@ const Homepage = ({
 
 Homepage.defaultProps = {
   Banner: (
-    <Banner
+    <HomepageBanner
       renderText={() => (
         <h1>
           Carbon
@@ -35,8 +34,10 @@ Homepage.defaultProps = {
       image={Light}
     />
   ),
-  FirstCallout: <Callout />,
-  SecondCallout: <Callout color="inverse01" backgroundColor="#061f80" />,
+  FirstCallout: <HomepageCallout />,
+  SecondCallout: (
+    <HomepageCallout color="inverse01" backgroundColor="#061f80" />
+  ),
 };
 
 export default Homepage;

@@ -54,7 +54,7 @@ const secondColumn = ({ typeStyles }) => [
   },
 ];
 
-const Callout = ({ leftText, rightText, ...rest }) => (
+const HomepageCallout = ({ leftText, rightText, ...rest }) => (
   <StyledGrid {...rest}>
     <StyledRow>
       <div css={firstColumn}>{leftText()}</div>
@@ -63,7 +63,7 @@ const Callout = ({ leftText, rightText, ...rest }) => (
   </StyledGrid>
 );
 
-Callout.defaultProps = {
+HomepageCallout.defaultProps = {
   leftText: function renderLeftText() {
     return (
       <>
@@ -84,4 +84,4 @@ Callout.defaultProps = {
   },
 };
 
-export default Callout;
+export default HomepageCallout;

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Banner, Callout } from 'gatsby-theme-carbon';
+import { HomepageBanner, HomepageCallout } from 'gatsby-theme-carbon';
 
 // Component to be shadowed
-import Home from 'gatsby-theme-carbon/src/templates/Home';
+import Homepage from 'gatsby-theme-carbon/src/templates/Homepage';
 
 import Carbon from '../../images/carbon.jpg';
 
@@ -41,7 +41,7 @@ const SecondRightText = () => (
 
 const customProps = {
   Banner: (
-    <Banner
+    <HomepageBanner
       renderText={() => (
         <h1>
           Carbon
@@ -52,9 +52,11 @@ const customProps = {
       image={Carbon}
     />
   ),
-  FirstCallout: <Callout leftText={FirstLeftText} rightText={FirstRightText} />,
+  FirstCallout: (
+    <HomepageCallout leftText={FirstLeftText} rightText={FirstRightText} />
+  ),
   SecondCallout: (
-    <Callout
+    <HomepageCallout
       leftText={SecondLeftText}
       rightText={SecondRightText}
       color="white"
@@ -64,8 +66,8 @@ const customProps = {
 };
 
 // spreading the original props gives us props.children (mdx content)
-function ShadowedHomeTemplate(props) {
-  return <Home {...props} {...customProps} />;
+function ShadowedHomepage(props) {
+  return <Homepage {...props} {...customProps} />;
 }
 
-export default ShadowedHomeTemplate;
+export default ShadowedHomepage;
