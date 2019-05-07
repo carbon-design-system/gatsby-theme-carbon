@@ -6,6 +6,8 @@
       path: /component-examples/DoDontExample
     - title: Caption
       path: /component-examples/Caption
+    - title: Aside
+      path: /component-examples/Aside
     - title: ResourceCard
       path: /component-examples/ResourceCard
     - title: ArticleCard
