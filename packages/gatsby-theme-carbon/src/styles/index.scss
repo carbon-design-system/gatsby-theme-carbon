@@ -18,7 +18,6 @@
 // @include carbon--font-face-mono();
 @include carbon--font-face-sans();
 @include carbon--font-face-serif();
-@include carbon--type-classes();
 
 $feature-flags: (
   ui-shell: true,
@@ -62,3 +61,10 @@ $font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
 @import '../components/ArticleCard/article-card.scss';
 @import '../components/Aside/aside.scss';
 //@import '../components/ImageComponent/image-component.scss'; //WIP
+
+//---------------------------------------
+// Included last to ensure that class
+// names take precedence over includes
+// inside component class names
+//---------------------------------------
+@include carbon--type-classes();
