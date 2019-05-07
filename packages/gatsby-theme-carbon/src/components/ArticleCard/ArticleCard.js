@@ -85,7 +85,7 @@ export default class ArticleCard extends React.Component {
       isLink = href.charAt(0) === '/';
     }
 
-    const ResourceCardClassNames = classnames([`${prefix}--article-card`], {
+    const ArticleCardClassNames = classnames([`${prefix}--article-card`], {
       [className]: className,
       [`${prefix}--article-card--disabled`]: disabled,
       [`${prefix}--article-card--dark`]: dark,
@@ -124,10 +124,10 @@ export default class ArticleCard extends React.Component {
             </div>
             <div className={`${prefix}--article-card__icon--action`}>
               {actionIcon === 'launch' && !disabled ? (
-                <Launch20 aria-label="Open resource" />
+                <Launch20 aria-label="Open" />
               ) : null}
               {actionIcon === 'arrowRight' && !disabled ? (
-                <ArrowRight20 aria-label="Open resource" />
+                <ArrowRight20 aria-label="Open" />
               ) : null}
               {actionIcon === 'download' && !disabled ? (
                 <Download20 aria-label="Download" />
@@ -141,25 +141,28 @@ export default class ArticleCard extends React.Component {
       </>
     );
 
+    let cardContainer;
     if (disabled === true) {
-      return (
-        <div className={ResourceCardClassNames}>
-          <div className={carbonTileclassNames}>{cardContent}</div>
-        </div>
+      cardContainer = <div className={carbonTileclassNames}>{cardContent}</div>;
+    } else if (isLink === true) {
+      cardContainer = (
+        <Link to={href} className={carbonTileclassNames}>
+          {cardContent}
+        </Link>
       );
     } else {
-      return (
-        <div className={ResourceCardClassNames}>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={href}
-            className={carbonTileclassNames}
-          >
-            {cardContent}
-          </a>
-        </div>
+      cardContainer = (
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={href}
+          className={carbonTileclassNames}
+        >
+          {cardContent}
+        </a>
       );
     }
+
+    return <div className={ArticleCardClassNames}>{cardContainer}</div>;
   }
 }
