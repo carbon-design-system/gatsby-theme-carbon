@@ -11,7 +11,7 @@ import { useSmoothScroll } from '../util/hooks';
 
 import '../styles/index.scss';
 
-const Layout = ({ children, ...rest }) => {
+const Layout = ({ children, homepage, ...rest }) => {
   useSmoothScroll();
 
   const is404 = children.key === null;
@@ -21,8 +21,8 @@ const Layout = ({ children, ...rest }) => {
       <Meta />
       <Header />
       <Switcher />
-      <LeftNav homepage={rest.homepage} is404Page={is404} />
-      <Container>
+      <LeftNav homepage={homepage} is404Page={is404} />
+      <Container homepage={homepage}>
         <MDXProvider>{children}</MDXProvider>
         <Footer />
       </Container>

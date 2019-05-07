@@ -2,6 +2,7 @@
   "version": 2,
   "name": "gatsby-theme-carbon",
   "alias": "gatsby-theme-carbon",
+  "public": true,
   "builds": [
     {
       "src": "package.json",

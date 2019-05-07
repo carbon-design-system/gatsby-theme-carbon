@@ -4,7 +4,7 @@ import Footer from 'gatsby-theme-carbon/src/components/Footer';
 const Content = () => (
   <>
     <p>
-      By importing the <code>Footer</code> component from gatsby-carbon-theme,
+      By importing the <code>Footer</code> component from gatsby-theme-carbon,
       we can supply our own props.
     </p>
     <br />

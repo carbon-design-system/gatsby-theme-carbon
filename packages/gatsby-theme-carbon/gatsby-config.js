@@ -46,7 +46,8 @@ module.exports = themeOptions => {
             },
           ],
           defaultLayouts: {
-            default: require.resolve('./src/templates/Page.js'),
+            default: require.resolve('./src/templates/Default.js'),
+            home: require.resolve('./src/templates/Homepage.js'),
           },
         },
       },

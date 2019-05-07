@@ -7,6 +7,7 @@ const LeftNavWrapper = styled.div(({ expanded }) => ({
   width: '256px',
   position: 'fixed',
   left: 0,
+  top: '48px',
   zIndex: 8000,
   transform: expanded ? 'translateX(0px)' : 'translateX(-256px)',
   '.bx--side-nav.bx--side-nav--website': {

@@ -1,20 +1,12 @@
-import React from 'react';
 import styled from '@emotion/styled';
-import Row from './Row';
+import responsiveStyles from './shared/responsiveStyles';
 
-const P = styled.p`
-  ${props => props.theme.typeStyles.expressiveHeading03}
-  margin-bottom: ${props => props.theme.layout[2]};
-  &:empty: {
-    padding: 0;
-    margin: 0;
-  }
-`;
-
-const PageDescription = ({ children }) => (
-  <Row type="p">
-    <P>{children}</P>
-  </Row>
-);
+const PageDescription = styled.p(({ theme }) => [
+  theme.typeStyles.expressiveHeading03,
+  responsiveStyles,
+  {
+    marginBottom: theme.layout[2],
+  },
+]);
 
 export default PageDescription;
