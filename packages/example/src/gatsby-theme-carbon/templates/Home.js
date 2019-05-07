@@ -1,16 +1,18 @@
 import React from 'react';
+import { Banner, Callout } from 'gatsby-theme-carbon';
+
+// Component to be shadowed
 import Home from 'gatsby-theme-carbon/src/templates/Home';
-import Banner from 'gatsby-theme-carbon/src/components/Homepage/Banner';
-import Callout from 'gatsby-theme-carbon/src/components/Homepage/Callout';
+
 import Carbon from '../../images/carbon.jpg';
 
-const LeftText = () => (
+const FirstLeftText = () => (
   <p>
     Think → <strong>Guidance</strong>
   </p>
 );
 
-const RightText = () => (
+const FirstRightText = () => (
   <p>
     <strong>Build Bonds</strong>
     <br />
@@ -50,7 +52,7 @@ const customProps = {
       image={Carbon}
     />
   ),
-  FirstCallout: <Callout leftText={LeftText} rightText={RightText} />,
+  FirstCallout: <Callout leftText={FirstLeftText} rightText={FirstRightText} />,
   SecondCallout: (
     <Callout
       leftText={SecondLeftText}

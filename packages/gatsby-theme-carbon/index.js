@@ -6,4 +6,5 @@ export { Row, Column, Grid } from './src/components/Grid';
 export { default as Caption } from './src/components/Caption';
 export { default as ResourceCard } from './src/components/ResourceCard';
 export { default as ArticleCard } from './src/components/ArticleCard';
+export { Callout, Banner } from './src/components/Homepage';
 // export { default as ImageComponent } from './src/components/ImageComponent'; // in progress
