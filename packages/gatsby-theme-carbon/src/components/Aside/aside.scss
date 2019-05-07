@@ -1,0 +1,20 @@
+.#{$prefix}--aside {
+  @include carbon--type-style('body-long-01');
+  position: relative;
+  padding-top: $spacing-04;
+}
+
+.#{$prefix}--aside:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  width: 75%;
+  height: 1px;
+  background: $ui-05;
+}
+
+.#{$prefix}--aside .#{$prefix}--paragraph {
+  @include carbon--type-style('body-long-01');
+  width: 75%;
+}

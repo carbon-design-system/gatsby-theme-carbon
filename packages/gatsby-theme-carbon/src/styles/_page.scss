@@ -45,6 +45,19 @@ body {
 }
 
 //---------------------------------------
+// Blockquote
+//---------------------------------------
+blockquote {
+  margin: $spacing-08 0 $spacing-08 $spacing-08;
+  color: $carbon--blue-60;
+  font-style: italic;
+}
+
+blockquote .#{$prefix}--paragraph {
+  @include carbon--type-style('expressive-heading-03');
+}
+
+//---------------------------------------
 // Page styles
 //---------------------------------------
 .page-p,
@@ -67,16 +80,6 @@ button {
 }
 
 .page-content {
-  // padding-top: rem(80px);
-  // padding-bottom: rem(136px);
-
-  // All paragraphs on Markdown pages
-  // And divs when markdown doesn't wrap text in paragraphs (when you have to use html for links to open in a new window)
-
-  > div > div:first-child p {
-    padding-bottom: 0;
-  }
-
   > div > div:nth-child(2) h2:before {
     padding-bottom: rem(80px);
   }
@@ -84,13 +87,6 @@ button {
   > div > div:nth-child(2) h3 {
     margin-top: rem(48px);
   }
-
-  // All links on Markdown pages but not inside component examples
-  // & > div > * > a,
-  // .page-table td a,
-  // .page-ul a {
-  //   color: $brand-01;
-  // }
 
   // Inline code
   p > code,

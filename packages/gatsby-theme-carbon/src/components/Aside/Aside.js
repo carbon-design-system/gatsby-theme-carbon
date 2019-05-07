@@ -5,14 +5,9 @@ import { settings } from 'carbon-components';
 
 const { prefix } = settings;
 
-export default class P extends React.Component {
+export default class Aside extends React.Component {
   static propTypes = {
     children: PropTypes.node,
-
-    /**
-     * Set to full width
-     */
-    fullWidth: PropTypes.bool,
 
     /**
      * Specify a custom class
@@ -21,13 +16,12 @@ export default class P extends React.Component {
   };
 
   render() {
-    const { children, className, fullWidth } = this.props;
+    const { children, className } = this.props;
 
-    const paragraphClasses = classnames([`${prefix}--paragraph`], {
+    const captionClasses = classnames([`${prefix}--aside`], {
       [className]: className,
-      [`${prefix}--paragraph--responsive`]: !fullWidth,
     });
 
-    return <p className={paragraphClasses}>{children}</p>;
+    return <aside className={captionClasses}>{children}</aside>;
   }
 }
