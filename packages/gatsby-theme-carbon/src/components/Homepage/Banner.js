@@ -7,6 +7,7 @@ const StyledGrid = styled(Grid)`
   background-size: cover;
   background-image: url(${props => props.image});
   height: 50vh;
+  max-height: 560px;
   width: 100%;
   background-position: left bottom;
   ${mq.lg} {
@@ -32,7 +33,7 @@ const StyledColumn = styled(Column)`
 const columCss = ({ typeStyles }) => typeStyles.quotation01;
 
 const HomepageBanner = ({ image, renderText }) => (
-  <StyledGrid style={{ maxWidth: '100%', width: '100%' }} image={image}>
+  <StyledGrid image={image}>
     <StyledRow>
       <StyledColumn css={columCss}>{renderText()}</StyledColumn>
     </StyledRow>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { WebsiteBackToTopBtn } from '@carbon/addons-website';
-import styled from '@emotion/styled';
 import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
 // import EditLink from '../components/EditLink';

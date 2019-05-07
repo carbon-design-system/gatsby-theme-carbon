@@ -58,7 +58,7 @@ const customProps = {
       leftText={SecondLeftText}
       rightText={SecondRightText}
       color="white"
-      backgroundColor="activePrimary"
+      backgroundColor="#061f80"
     />
   ),
 };
