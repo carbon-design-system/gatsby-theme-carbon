@@ -37,7 +37,6 @@ module.exports = themeOptions => {
               resolve: `gatsby-remark-images`,
               options: {
                 maxWidth: 1164,
-                sizeByPixelDensity: true,
                 linkImagesToOriginal: false,
                 tracedSVG: true,
               },
