@@ -18,7 +18,6 @@
 // @include carbon--font-face-mono();
 @include carbon--font-face-sans();
 @include carbon--font-face-serif();
-@include carbon--type-classes();
 
 $feature-flags: (
   ui-shell: true,
@@ -47,6 +46,7 @@ $font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
 
 @import 'page';
 
+@import '../components/markdown/markdown.scss';
 @import '../components/Homepage/homepage.scss';
 @import '../components/GlobalSearch/global-search.scss';
 @import '../components/NextPrevious/next-previous.scss';
@@ -59,4 +59,12 @@ $font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
 @import '../components/ResourceCard/resource-card.scss';
 @import '../components/ResourceCard/resource-card-group.scss';
 @import '../components/ArticleCard/article-card.scss';
+@import '../components/Aside/aside.scss';
 //@import '../components/ImageComponent/image-component.scss'; //WIP
+
+//---------------------------------------
+// Included last to ensure that class
+// names take precedence over includes
+// inside component class names
+//---------------------------------------
+@include carbon--type-classes();
