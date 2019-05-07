@@ -1,0 +1,42 @@
+import React from 'react';
+import styled from '@emotion/styled';
+import { Grid, Row, Column } from '../Grid';
+import mq from '../../util/media-queries';
+
+const StyledGrid = styled(Grid)`
+  background-size: cover;
+  background-image: url(${props => props.image});
+  height: 50vh;
+  width: 100%;
+  background-position: left bottom;
+  ${mq.lg} {
+    padding-left: 256px;
+  }
+`;
+
+const StyledRow = styled(Row)`
+  height: 100%;
+  h1 {
+    padding: 2rem 1rem;
+  }
+`;
+
+const StyledColumn = styled(Column)`
+  color: ${props => props.theme.colors.inverse01};
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+`;
+
+const columCss = ({ typeStyles }) => typeStyles.quotation01;
+
+const HomepageBanner = ({ image, renderText }) => (
+  <StyledGrid style={{ maxWidth: '100%', width: '100%' }} image={image}>
+    <StyledRow>
+      <StyledColumn css={columCss}>{renderText()}</StyledColumn>
+    </StyledRow>
+  </StyledGrid>
+);
+
+export default HomepageBanner;

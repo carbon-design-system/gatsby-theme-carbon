@@ -1,16 +1,40 @@
 import React from 'react';
 import { WebsiteBackToTopBtn } from '@carbon/addons-website';
 import Layout from '../components/Layout';
+import Banner from '../components/Homepage/Banner';
+import Callout from '../components/Homepage/Callout';
+import Light from '../images/blossom.jpg';
 
-const HomePage = ({ children }) => (
+const Homepage = ({
+  children,
+  Banner: UserBanner,
+  FirstCallout,
+  SecondCallout,
+}) => (
   <Layout homepage>
-    <div className="container--homepage">
-      <main className="page-content bx--grid" id="maincontent">
-        {children}
-      </main>
-    </div>
+    {UserBanner}
+    {FirstCallout}
+    <main className="bx--grid">{children}</main>
+    {SecondCallout}
     <WebsiteBackToTopBtn />
   </Layout>
 );
 
-export default HomePage;
+Homepage.defaultProps = {
+  Banner: (
+    <Banner
+      renderText={() => (
+        <h1>
+          Carbon
+          <br />
+          Design System
+        </h1>
+      )}
+      image={Light}
+    />
+  ),
+  FirstCallout: <Callout />,
+  SecondCallout: <Callout color="white" backgroundColor="activePrimary" />,
+};
+
+export default Homepage;

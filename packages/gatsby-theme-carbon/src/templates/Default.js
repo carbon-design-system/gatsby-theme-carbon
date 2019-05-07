@@ -3,18 +3,15 @@ import { WebsiteBackToTopBtn } from '@carbon/addons-website';
 import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
 // import EditLink from '../components/EditLink';
-import NextPrevious from '../components/NextPrevious';
+// import NextPrevious from '../components/NextPrevious';
 import PageTabs from '../components/PageTabs';
 
-const Default = ({
-  pathContext: { frontmatter },
-  slug,
-  currentTab,
-  children,
-}) => {
+const Default = ({ pathContext: { frontmatter }, children, ...props }) => {
   const { tabs, title } = frontmatter;
+  const slug = props.location.pathname;
+  const currentTab = slug.split('/').slice(-1)[0];
   return (
-    <Layout>
+    <Layout homepage={false}>
       <PageHeader title={title} label="label">
         {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}
       </PageHeader>

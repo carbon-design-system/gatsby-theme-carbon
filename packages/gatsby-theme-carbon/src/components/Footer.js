@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { Row, Grid, Column } from './Grid';
 import mq from '../util/media-queries';
 
-const footerStyles = ({ colors }) => ({
+const footerStyles = ({ colors, layout }) => ({
   width: '100%',
   display: 'flex',
-  minHeight: '370px',
   margin: 0,
+  paddingBottom: layout[2],
   color: colors.active01,
   backgroundColor: colors.interactive02,
 });
@@ -17,11 +17,12 @@ const gridStyles = () => ({
   display: 'flex',
   justifyContent: 'space-between',
   flexDirection: 'column',
-  padding: '2rem',
+  padding: '2rem 0',
+  paddingLeft: '1rem',
+  width: '100%',
   [mq.lg]: {
     maxWidth: '100rem',
     width: '100%',
-    padding: '2rem 0',
   },
 });
 
@@ -58,13 +59,14 @@ const contentStyles = ({ colors, typeStyles }) => ({
 });
 
 const rowStyles = () => ({
-  maxWidth: '100rem',
+  padding: '0 2rem',
+  width: '100%',
 });
 
 const Footer = ({ Content, links, Logo }) => {
   const { firstCol, secondCol } = links;
   return (
-    <footer className="container" css={footerStyles}>
+    <footer className="container--homepage" css={footerStyles}>
       <Grid css={gridStyles}>
         <Row css={rowStyles}>
           <Column colLg={2} colMd={2}>
@@ -96,7 +98,7 @@ const Footer = ({ Content, links, Logo }) => {
           </Column>
         </Row>
         <Row css={rowStyles}>
-          <Column colLg={4}>
+          <Column colLg={3}>
             <Logo />
           </Column>
         </Row>
