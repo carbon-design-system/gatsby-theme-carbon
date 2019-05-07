@@ -13,7 +13,6 @@ const StyledGrid = styled(Grid)`
     props.color ||
     props.theme.colors.black100};};
   width: 100%;
-  max-width: 100%;
 `;
 
 const StyledRow = styled.section`
@@ -23,6 +22,7 @@ const StyledRow = styled.section`
   align-items: flex-start;
   padding-top: ${props => props.theme.layout[4]};
   padding-bottom: ${props => props.theme.layout[4]};
+  max-width: 74.25rem;
   flex-direction: column;
   ${mq.md} {
     flex-direction: row;
@@ -36,7 +36,7 @@ const firstColumn = ({ typeStyles, layout }) => [
     paddingBottom: layout[2],
     width: '100%',
     [mq.md]: {
-      width: '45%',
+      width: '33%',
     },
   },
 ];
@@ -46,6 +46,9 @@ const secondColumn = ({ typeStyles }) => [
   {
     padding: '0 1rem',
     width: '100%',
+    [mq.md]: {
+      width: '66%',
+    },
   },
 ];
 

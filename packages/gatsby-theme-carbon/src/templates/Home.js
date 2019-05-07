@@ -4,17 +4,19 @@ import Layout from '../components/Layout';
 import Banner from '../components/Homepage/Banner';
 import Callout from '../components/Homepage/Callout';
 import Light from '../images/blossom.jpg';
+import Main from '../components/Main';
 
 const Homepage = ({
   children,
   Banner: UserBanner,
   FirstCallout,
   SecondCallout,
+  ...rest
 }) => (
   <Layout homepage>
     {UserBanner}
     {FirstCallout}
-    <main className="bx--grid">{children}</main>
+    <Main>{children}</Main>
     {SecondCallout}
     <WebsiteBackToTopBtn />
   </Layout>

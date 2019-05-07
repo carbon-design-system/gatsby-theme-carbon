@@ -60,15 +60,6 @@
   margin-top: -25%;
 }
 
-// Headings on homepage
-
-.container--homepage h3,
-.container--homepage .page-content > div > .#{$prefix}--row:first-child h3 {
-  @include carbon--type-style('expressive-heading-03', true);
-  margin-top: rem(64px);
-  margin-bottom: $spacing-lg;
-}
-
 // Dots background pattern
 
 .homepage--dots {

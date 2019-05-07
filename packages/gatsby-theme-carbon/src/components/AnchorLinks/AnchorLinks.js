@@ -18,8 +18,10 @@ export default class AnchorLinks extends React.Component {
 
     return (
       <ul css={responsiveStyles} className={classNames}>
-        {children.map(item => (
-          <li className={`${prefix}--anchor-links__item`}>{item}</li>
+        {children.map((item, i) => (
+          <li key={i} className={`${prefix}--anchor-links__item`}>
+            {item}
+          </li>
         ))}
       </ul>
     );
