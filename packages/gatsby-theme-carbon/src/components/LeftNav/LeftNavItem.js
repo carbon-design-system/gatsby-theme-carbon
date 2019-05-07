@@ -23,7 +23,7 @@ const LeftNavItem = props => {
         element={Link}
         partiallyActive
         activeClassName="bx--side-nav__link--current"
-        to={`/${items[0].path}`}
+        to={`${items[0].path}`}
       >
         {category}
       </SideNavLink>
@@ -63,7 +63,7 @@ const SubNavItems = ({ items, location, onClick }) => {
     const active = isActive(item);
     return (
       <SideNavMenuItem
-        to={`/${item.path}`}
+        to={`${item.path}`}
         onClick={onClick}
         element={Link}
         isActive={active}

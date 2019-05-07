@@ -12,7 +12,7 @@ const Overlay = styled.div`
   transition: all 0.15s ease;
 `;
 
-const Container = ({ children }) => {
+const Container = ({ children, homepage }) => {
   const { leftNavIsOpen, switcherIsOpen, toggleNavState } = useContext(
     NavContext
   );
@@ -30,7 +30,9 @@ const Container = ({ children }) => {
   return (
     <>
       {shouldShowOverlay() ? <Overlay onClick={closeNavs} /> : null}
-      <div className="container">{children}</div>
+      <div className={`${homepage ? 'container--homepage' : 'container'}`}>
+        {children}
+      </div>
     </>
   );
 };

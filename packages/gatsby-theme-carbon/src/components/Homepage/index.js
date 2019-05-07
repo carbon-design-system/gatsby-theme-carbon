@@ -1,3 +1,2 @@
-import HomepageHeader from './Homepage';
-
-export default HomepageHeader;
+export { default as HomepageBanner } from './Banner';
+export { default as HomepageCallout } from './Callout';

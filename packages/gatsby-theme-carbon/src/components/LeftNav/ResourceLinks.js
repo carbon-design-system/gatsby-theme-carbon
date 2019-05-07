@@ -1,7 +1,7 @@
 import React from 'react';
 import { SideNavLink } from 'carbon-components-react/lib/components/UIShell';
 import { Link } from 'gatsby';
-import LaunchIcon from '@carbon/icons-react/lib/launch/16';
+import LaunchIcon from '@carbon/icons-react/es/launch/16';
 
 const LeftNavResourceLinks = ({ links }) =>
   links ? (

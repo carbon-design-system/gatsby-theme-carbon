@@ -68,7 +68,7 @@ export const Column = ({
 };
 
 Column.defaultProps = {
-  colLg: '12',
+  colLg: 12,
 };
 
 Column.propTypes = {
