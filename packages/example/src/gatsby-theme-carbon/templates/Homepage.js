@@ -2,7 +2,7 @@ import React from 'react';
 import { HomepageBanner, HomepageCallout } from 'gatsby-theme-carbon';
 
 // Component to be shadowed
-import Homepage from 'gatsby-theme-carbon/src/templates/Homepage';
+import HomepageTemplate from 'gatsby-theme-carbon/src/templates/Homepage';
 
 import Carbon from '../../images/carbon.jpg';
 
@@ -30,10 +30,7 @@ const SecondRightText = () => (
     possible experience for our users. If you’re interested in contributing,
     check out our contributing guidelines to get started.
     <br />
-    <a
-      css={({ typeStyles }) => typeStyles.bodyShort02}
-      href="https://www.carbondesignsystem.com/contributing/governance"
-    >
+    <a href="https://www.carbondesignsystem.com/contributing/governance">
       Start Contributing →
     </a>
   </p>
@@ -67,7 +64,7 @@ const customProps = {
 
 // spreading the original props gives us props.children (mdx content)
 function ShadowedHomepage(props) {
-  return <Homepage {...props} {...customProps} />;
+  return <HomepageTemplate {...props} {...customProps} />;
 }
 
 export default ShadowedHomepage;
