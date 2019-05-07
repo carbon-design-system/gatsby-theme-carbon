@@ -30,6 +30,7 @@
   color: $interactive-02;
   text-decoration: none;
   margin-bottom: $spacing-02;
+  margin-left: $spacing-06;
 
   &:hover {
     color: $interactive-01;
@@ -41,10 +42,11 @@
 
   &:before {
     content: '\21B3'; //"↳"
+    position: absolute;
+    left: -$spacing-06;
     font-family: IBM Plex Sans, ibm-plex-sans, Helvetica Neue, Arial, sans-serif;
     color: $interactive-02;
     transition: color $transition--base;
-    padding-right: $spacing-03;
     cursor: pointer;
   }
 }
