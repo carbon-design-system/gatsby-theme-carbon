@@ -15,7 +15,7 @@
 @import '~@carbon/elements/scss/colors/colors';
 
 @include carbon--type-reset();
-// @include carbon--font-face-mono();
+@include carbon--font-face-mono();
 @include carbon--font-face-sans();
 @include carbon--font-face-serif();
 

@@ -1,5 +1,43 @@
+// Inline code
+p > code,
+li > code,
+td > code {
+  @include reset;
+  position: relative;
+  display: inline;
+  padding: rem(1px) $spacing-xs;
+  background: transparent;
+  border-radius: 4px;
+  background-color: $carbon--gray-20;
+}
+
+td > code {
+  @include carbon--type-style('code-01');
+}
+
+p > code,
+li > code {
+  @include carbon--type-style('code-02');
+}
+
 .#{$prefix}--snippet--website {
   margin-bottom: $spacing-06;
+
+  // 8 columns wide
+  @include carbon--breakpoint('lg') {
+    width: 66.667%;
+  }
+}
+
+// If code is inside a user specified row then allow the grid code to set the width
+.#{$prefix}--row .#{$prefix}--snippet--website {
+  @include carbon--breakpoint('lg') {
+    width: 100%;
+  }
+}
+
+.#{$prefix}--snippet--website code {
+  @include carbon--type-style('code-02');
 }
 
 .#{$prefix}--snippet--website .#{$prefix}--snippet--single {

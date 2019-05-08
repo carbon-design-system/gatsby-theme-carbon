@@ -88,28 +88,6 @@ button {
     margin-top: rem(48px);
   }
 
-  // Inline code
-  p > code,
-  li > code,
-  td > code {
-    @include reset;
-    position: relative;
-    display: inline;
-    padding: rem(1px) $spacing-xs;
-    background: transparent;
-    border-radius: 4px;
-    background-color: $carbon--gray-20;
-  }
-
-  td > code {
-    @include carbon--type-style('code-01');
-  }
-
-  p > code,
-  li > code {
-    @include carbon--type-style('code-02');
-  }
-
   // HR dividers
   hr.divider {
     display: block;
