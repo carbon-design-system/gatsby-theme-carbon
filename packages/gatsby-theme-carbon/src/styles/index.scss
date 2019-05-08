@@ -60,7 +60,7 @@ $font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
 @import '../components/ResourceCard/resource-card-group.scss';
 @import '../components/ArticleCard/article-card.scss';
 @import '../components/Aside/aside.scss';
-//@import '../components/ImageComponent/image-component.scss'; //WIP
+@import '../components/Video/video.scss';
 
 //---------------------------------------
 // Included last to ensure that class
