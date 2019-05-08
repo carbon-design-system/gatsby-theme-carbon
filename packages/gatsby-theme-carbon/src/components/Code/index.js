@@ -1,2 +1,2 @@
-import WebsiteCodeSnippet from './WebsiteCodeSnippet';
-export default WebsiteCodeSnippet;
+import Code from './Code';
+export default Code;
