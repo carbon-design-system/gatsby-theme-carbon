@@ -1,7 +1,7 @@
 import React from 'react';
-
 import mq from '../../util/media-queries';
 import responsiveStyles from '../shared/responsiveStyles';
+import AutolinkHeader from './AutolinkHeader';
 
 const h3Css = ({ typeStyles, layout }) => [
   responsiveStyles,
@@ -15,10 +15,10 @@ const h3Css = ({ typeStyles, layout }) => [
   },
 ];
 
-const H3 = ({ children }) => (
-  <h3 css={h3Css} className="carbon--mdx__h3">
+const H3 = ({ children, ...rest }) => (
+  <AutolinkHeader is="h3" css={h3Css} {...rest}>
     {children}
-  </h3>
+  </AutolinkHeader>
 );
 
 export default H3;

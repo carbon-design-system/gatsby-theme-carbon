@@ -21,13 +21,17 @@ export default class P extends React.Component {
   };
 
   render() {
-    const { children, className, fullWidth } = this.props;
+    const { children, className, fullWidth, ...rest } = this.props;
 
     const paragraphClasses = classnames([`${prefix}--paragraph`], {
       [className]: className,
       [`${prefix}--paragraph--responsive`]: !fullWidth,
     });
 
-    return <p className={paragraphClasses}>{children}</p>;
+    return (
+      <p className={paragraphClasses} {...rest}>
+        {children}
+      </p>
+    );
   }
 }
