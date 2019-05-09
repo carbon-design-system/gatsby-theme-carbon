@@ -1,7 +1,7 @@
 import React from 'react';
 import mq from '../../util/media-queries';
 import responsiveStyles from '../shared/responsiveStyles';
-import AutolinkHeader from './AutolinkHeader';
+import AutolinkHeader from '../AutolinkHeader';
 
 const h3Css = ({ typeStyles, layout }) => [
   responsiveStyles,

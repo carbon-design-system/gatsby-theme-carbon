@@ -1,7 +1,7 @@
 import React from 'react';
 import mq from '../../util/media-queries';
 import responsiveStyles from '../shared/responsiveStyles';
-import AutolinkHeader from './AutolinkHeader';
+import AutolinkHeader from '../AutolinkHeader';
 
 const h2Css = ({ typeStyles, layout }) => [
   typeStyles.expressiveHeading04,
@@ -16,7 +16,7 @@ const h2Css = ({ typeStyles, layout }) => [
 ];
 
 const H2 = ({ children, ...rest }) => (
-  <AutolinkHeader is="h2" css={h2Css} className="carbon--mdx__h2" {...rest}>
+  <AutolinkHeader is="h2" css={h2Css} {...rest}>
     {children}
   </AutolinkHeader>
 );

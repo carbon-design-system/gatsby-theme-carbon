@@ -20,8 +20,8 @@ const Layout = ({ children, homepage, ...rest }) => {
       durationMin: 250,
       durationMax: 700,
       easing: 'easeInOutCubic',
-      offset: 87,
       clip: true,
+      header: '[data-scroll-header]',
     });
   }, []);
 

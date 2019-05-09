@@ -18,7 +18,11 @@ const Header = ({ children }) => {
     NavContext
   );
   return (
-    <ShellHeader aria-label="Header" className="bx--header--website">
+    <ShellHeader
+      data-scroll-header
+      aria-label="Header"
+      className="bx--header--website"
+    >
       <SkipToContent />
       <HeaderMenuButton
         className="bx--header__action--menu"

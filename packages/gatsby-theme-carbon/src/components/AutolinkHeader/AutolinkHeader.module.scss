@@ -1,0 +1,25 @@
+@import '~carbon-components/scss/globals/scss/vars';
+
+.header {
+  position: relative;
+  &:hover {
+    .anchor {
+      opacity: 1;
+    }
+  }
+}
+
+.anchor {
+  opacity: 0;
+  transition: opacity $duration--fast-01 $carbon--standard-easing;
+  position: absolute;
+  left: -0.75rem;
+  top: 0px;
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
+  svg {
+    fill: $interactive-01;
+  }
+}
