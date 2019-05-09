@@ -2,14 +2,9 @@
 title: DoDontExample
 ---
 
-import {
-  Row,
-  Column,
-  DoDontExample
-} from "gatsby-theme-carbon";
+import { Row, Column, DoDontExample, Video } from 'gatsby-theme-carbon';
 
 ## DoDontExample
-
 
 <Row>
 <Column colMd={4} colLg={4}>
@@ -46,4 +41,16 @@ import {
       text="The API will be returning a promise."
     />
   </Column>
+</Row>
+
+### Video
+
+<Row>
+<Column>
+<DoDontExample correct label="Productive moments are labeled in blue, and expressive moments are labeled in magenta.">
+
+<Video vimeoId="310583077" />
+
+</DoDontExample>
+</Column>
 </Row>

@@ -9,7 +9,7 @@
   position: absolute;
   top: 0;
   left: -1rem;
-  width: 75%;
+  width: 40%;
   height: 1px;
   background: $ui-05;
 }
@@ -17,4 +17,5 @@
 .#{$prefix}--aside .#{$prefix}--paragraph {
   @include carbon--type-style('body-long-01');
   width: 75%;
+  padding-right: $spacing-05;
 }
