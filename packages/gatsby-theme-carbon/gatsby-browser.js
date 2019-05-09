@@ -1,18 +1,10 @@
 import React from 'react';
 import ThemeProvider from './src/components/ThemeProvider';
 import { NavContextProvider } from './src/util/context/NavContext';
-import { useSmoothScroll } from './src/util/hooks';
-
-const SmoothLoader = ({ children }) => {
-  useSmoothScroll();
-  return children;
-};
 
 export const wrapRootElement = ({ element }) => (
   <NavContextProvider>
-    <ThemeProvider>
-      <SmoothLoader>{element}</SmoothLoader>
-    </ThemeProvider>
+    <ThemeProvider>{element}</ThemeProvider>
   </NavContextProvider>
 );
 

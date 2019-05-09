@@ -39,19 +39,16 @@ const SecondRightText = () => (
   </p>
 );
 
+const BannerText = () => (
+  <h1>
+    Carbon
+    <br />
+    Design System
+  </h1>
+);
+
 const customProps = {
-  Banner: (
-    <HomepageBanner
-      renderText={() => (
-        <h1>
-          Carbon
-          <br />
-          Design System
-        </h1>
-      )}
-      image={Carbon}
-    />
-  ),
+  Banner: <HomepageBanner renderText={BannerText} image={Carbon} />,
   FirstCallout: (
     <HomepageCallout leftText={FirstLeftText} rightText={FirstRightText} />
   ),

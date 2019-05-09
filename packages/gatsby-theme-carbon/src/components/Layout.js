@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 
 import LeftNav from './LeftNav';
 import Meta from './Meta';
@@ -12,6 +12,18 @@ import '../styles/index.scss';
 
 const Layout = ({ children, homepage, ...rest }) => {
   const is404 = children.key === null;
+
+  useLayoutEffect(() => {
+    // eslint-disable-next-line global-require
+    require('smooth-scroll')('a[href*="#"]', {
+      speed: 400,
+      durationMin: 250,
+      durationMax: 700,
+      easing: 'easeInOutCubic',
+      offset: 87,
+      clip: true,
+    });
+  }, []);
 
   return (
     <>
