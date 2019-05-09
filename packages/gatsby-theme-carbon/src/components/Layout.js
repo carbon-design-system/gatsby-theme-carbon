@@ -7,13 +7,10 @@ import Switcher from './Switcher';
 import Footer from './Footer';
 import MDXProvider from './MDXProvider';
 import Container from './Container';
-import { useSmoothScroll } from '../util/hooks';
 
 import '../styles/index.scss';
 
 const Layout = ({ children, homepage, ...rest }) => {
-  useSmoothScroll();
-
   const is404 = children.key === null;
 
   return (
