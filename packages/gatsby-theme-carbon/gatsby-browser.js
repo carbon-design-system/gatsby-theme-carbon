@@ -21,7 +21,7 @@ const getTargetOffset = hash => {
   if (id !== ``) {
     const element = document.getElementById(id);
     if (element) {
-      return element.offsetTop - 48;
+      return element.offsetTop;
     }
   }
   return null;
