@@ -41,9 +41,8 @@ module.exports = themeOptions => {
                 tracedSVG: true,
               },
             },
-            {
-              resolve: 'gatsby-remark-responsive-iframe',
-            },
+            { resolve: `gatsby-remark-responsive-iframe` },
+            { resolve: `gatsby-remark-copy-linked-files` },
           ],
           defaultLayouts: {
             default: require.resolve('./src/templates/Default.js'),
