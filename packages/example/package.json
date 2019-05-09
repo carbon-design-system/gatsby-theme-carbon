@@ -5,6 +5,7 @@
   "license": "Apache 2.0",
   "scripts": {
     "develop": "gatsby develop",
+    "develop:clean": "rm -rf ./.cache && yarn develop",
     "build": "gatsby build",
     "serve": "gatsby serve"
   },

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 
 import LeftNav from './LeftNav';
 import Meta from './Meta';
@@ -7,14 +7,23 @@ import Switcher from './Switcher';
 import Footer from './Footer';
 import MDXProvider from './MDXProvider';
 import Container from './Container';
-import { useSmoothScroll } from '../util/hooks';
 
 import '../styles/index.scss';
 
 const Layout = ({ children, homepage, ...rest }) => {
-  useSmoothScroll();
-
   const is404 = children.key === null;
+
+  useLayoutEffect(() => {
+    // eslint-disable-next-line global-require
+    require('smooth-scroll')('a[href*="#"]', {
+      speed: 400,
+      durationMin: 250,
+      durationMax: 700,
+      easing: 'easeInOutCubic',
+      clip: true,
+      offset: 48,
+    });
+  }, []);
 
   return (
     <>

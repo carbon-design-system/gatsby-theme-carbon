@@ -10,8 +10,8 @@ const h5Css = ({ typeStyles, layout }) => [
   },
 ];
 
-const H6 = ({ children }) => (
-  <h6 css={h5Css} className="carbon--mdx__h6">
+const H6 = ({ children, ...rest }) => (
+  <h6 css={h5Css} {...rest}>
     {children}
   </h6>
 );
