@@ -30,25 +30,25 @@ const SecondRightText = () => (
     possible experience for our users. If you’re interested in contributing,
     check out our contributing guidelines to get started.
     <br />
-    <a href="https://www.carbondesignsystem.com/contributing/governance">
+    <a
+      css={({ typeStyles }) => typeStyles.bodyShort02}
+      href="https://www.carbondesignsystem.com/contributing/governance"
+    >
       Start Contributing →
     </a>
   </p>
 );
 
+const BannerText = () => (
+  <h1>
+    Carbon
+    <br />
+    Design System
+  </h1>
+);
+
 const customProps = {
-  Banner: (
-    <HomepageBanner
-      renderText={() => (
-        <h1>
-          Carbon
-          <br />
-          Design System
-        </h1>
-      )}
-      image={Carbon}
-    />
-  ),
+  Banner: <HomepageBanner renderText={BannerText} image={Carbon} />,
   FirstCallout: (
     <HomepageCallout leftText={FirstLeftText} rightText={FirstRightText} />
   ),

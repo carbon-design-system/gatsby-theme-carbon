@@ -32,8 +32,8 @@ const List = styled.ol`
   }
 `;
 
-const Ol = ({ children }) => (
-  <List css={textCss} className="carbon--mdx__ol">
+const Ol = ({ children, ...rest }) => (
+  <List css={textCss} {...rest}>
     {children}
   </List>
 );

@@ -30,8 +30,8 @@ const List = styled.ul`
   }
 `;
 
-const UnorderedList = ({ children }) => (
-  <List css={textCss} className="carbon--mdx__ul">
+const UnorderedList = ({ children, ...rest }) => (
+  <List css={textCss} {...rest}>
     {children}
   </List>
 );
