@@ -21,7 +21,7 @@ const Layout = ({ children, homepage, ...rest }) => {
       durationMax: 700,
       easing: 'easeInOutCubic',
       clip: true,
-      header: '[data-scroll-header]',
+      offset: 48,
     });
   }, []);
 
