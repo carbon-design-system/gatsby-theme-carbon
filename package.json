@@ -11,6 +11,7 @@
   ],
   "scripts": {
     "dev": "yarn workspace example develop",
+    "dev:clean": "yarn workspace example develop:clean",
     "build": "yarn workspace example build",
     "serve": "yarn build && yarn workspace example serve",
     "now-build": "yarn workspace example build",
