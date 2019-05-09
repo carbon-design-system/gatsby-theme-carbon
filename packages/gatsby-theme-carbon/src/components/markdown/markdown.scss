@@ -8,10 +8,6 @@
 
 // Responsive by default
 .#{$prefix}--paragraph--responsive {
-  // simulate column padding
-  padding-left: 1rem;
-  padding-right: 1rem;
-
   // 7 columns wide
   @include carbon--breakpoint('md') {
     width: 62.5%;
@@ -26,6 +22,4 @@
 // If paragraph is inside a user specified row then allow the grid code to set the width
 .#{$prefix}--row .#{$prefix}--paragraph {
   width: 100%;
-  padding-left: 0;
-  padding-right: 0;
 }
