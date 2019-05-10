@@ -5,6 +5,8 @@ import { HomepageBanner, HomepageCallout } from '../components/Homepage';
 import Light from '../images/blossom.jpg';
 import Main from '../components/Main';
 
+// import NextPrevious from '../components/NextPrevious';
+
 const Homepage = ({
   children,
   Banner,
@@ -17,6 +19,7 @@ const Homepage = ({
     {FirstCallout}
     <Main>{children}</Main>
     {SecondCallout}
+    {/* <NextPrevious {...rest} /> */}
     <WebsiteBackToTopBtn />
   </Layout>
 );

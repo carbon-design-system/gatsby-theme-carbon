@@ -1,281 +1,164 @@
 import React from 'react';
-// import { Link } from 'gatsby';
-// import navigation from '../../data/navigation/navigation.json';
+import { Link, useStaticQuery, graphql } from 'gatsby';
+import slugify from 'slugify';
+import cx from 'classnames';
 
-export default class NextPrevious extends React.Component {
-  render() {
-    return <div>next prev in progress</div>;
+import {
+  wrapper,
+  link,
+  direction,
+  name,
+  firstLink,
+  secondLink,
+  linkContainer,
+} from './NextPrevious.module.scss';
+
+const useNavigationList = () => {
+  const {
+    allNavItemsYaml: { edges },
+  } = useStaticQuery(graphql`
+    query NAV_ITEM_QUERY {
+      allNavItemsYaml {
+        edges {
+          node {
+            title
+            pages {
+              title
+              path
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  return edges.flatMap(({ node }) =>
+    node.pages.map(page => ({ ...page, category: node.title }))
+  );
+};
+
+const getTabItems = ({ currentTitle, tabs }) => {
+  if (!tabs) {
+    return {
+      prevTabItem: null,
+      nextTabItem: null,
+    };
   }
-  // static propTypes = {
-  //   /**
-  //    * array of tabs on this current page
-  //    */
-  //   currentTabs: PropTypes.array,
-  //   /**
-  //    * the lower-case slug-friendly name of the page
-  //    */
-  //   currentPage: PropTypes.string,
-  //   /**
-  //    * the full slug of the current page */
-  //   slug: PropTypes.string,
-  // };
 
-  // /**
-  //  * e.g.converts "Item Name" to "item-name"
-  //  */
-  // titleToSlug = string => {
-  //   if (string) return string.toLowerCase().replace(' ', '-');
-  // };
+  const tabItems = tabs.map(title => {
+    const slug = slugify(title, { lower: true });
+    return {
+      title,
+      slug,
+      currentTab: slug === slugify(currentTitle, { lower: true }),
+    };
+  });
 
-  // /**
-  //  * e.g. converts "item-name" to "Item Name"
-  //  */
-  // slugToTitle = string => {
-  //   if (string && string.charAt(0) === '/') {
-  //     string = string.substr(1);
-  //   }
-  //   let newString;
-  //   if (string) {
-  //     newString = string
-  //       .split('/')
-  //       .pop()
-  //       .split('-');
-  //     newString = newString
-  //       .map((word, i) => {
-  //         let newWord;
-  //         if (newString.length === 1 || !(i == newString.length - 1)) {
-  //           newWord = word.charAt(0).toUpperCase() + word.slice(1);
-  //         } else {
-  //           newWord = word;
-  //         }
-  //         return newWord;
-  //       })
-  //       .join(' ');
-  //     if (string === 'ui-shell') {
-  //       newString = 'UI shell';
-  //     }
-  //     if (string === 'faq') {
-  //       newString = 'FAQ';
-  //     }
-  //   }
-  //   return newString;
-  // };
+  const currentTabIndex = tabItems.findIndex(tab => tab.currentTab);
 
-  // slugToTitleWithPath = string => {
-  //   if (string && string.charAt(0) === '/') {
-  //     string = string.substr(1);
-  //   }
-  //   let newString = string;
-  //   if (string) {
-  //     newString = string
-  //       .split('/')
-  //       .map(word => this.slugToTitle(word))
-  //       .join(': ');
-  //   }
-  //   return newString;
-  // };
+  return {
+    prevTabItem: tabItems[currentTabIndex - 1],
+    nextTabItem: tabItems[currentTabIndex + 1],
+  };
+};
 
-  // getKeyByValue = (object, value) => Object.keys(object).find(key => object[key] === value);
+const useNavigationItems = ({ tabs, location }) => {
+  const navigationList = useNavigationList();
+  const { pathname } = location;
+  const currentNavigationItem = tabs
+    ? pathname.replace(/\/[^/]*\/?$/, '') // removes the last url segment
+    : pathname.replace(/\/$/, ''); // removes the last slash
 
-  // renderNextPreviousLinks = (prevPath, prevName, nextPath, nextName) => {
-  //   let truncatedPrevName; let truncatedNextName;
-  //   if (typeof prevName !== 'undefined') {
-  //     truncatedPrevName = prevName.substring(prevName.indexOf(':') + 1).trim();
-  //   }
+  const navIndex = navigationList.findIndex(item =>
+    item.path.includes(currentNavigationItem)
+  );
 
-  //   if (typeof nextName !== 'undefined') {
-  //     truncatedNextName = nextName.substring(nextName.indexOf(':') + 1).trim();
-  //   }
+  return {
+    prevCategory: navigationList[navIndex - 1],
+    nextCategory: navigationList[navIndex + 1],
+    navIndex,
+  };
+};
 
-  //   const nextButtonClassnames = classnames({
-  //     'next-previous-link': true,
-  //     'next-previous-link--next': true,
-  //     'bx--col-lg-6': true,
-  //     'bx--col-md-4': true,
-  //     'bx--col-sm-2': true,
-  //     'bx--offset-lg-10': !prevPath,
-  //   });
+const NextPrevious = props => {
+  const { tabs, location, pageContext } = props;
+  const navigationList = useNavigationList();
 
-  //   return (
-  //     <>
-  //       <div>next prev</div>
-  //       {/* {prevPath && (
-  //         <Link
-  //           className="next-previous-link next-previous-link--previous bx--col-lg-6 bx--col-md-4 bx--col-sm-2 bx--offset-lg-4"
-  //           to={prevPath}>
-  //           <span className="target-page-direction">Previous </span>
-  //           <span className="target-page-name">{truncatedPrevName}</span>
-  //         </Link>
-  //       )}
-  //       {nextPath && (
-  //         <Link className={nextButtonClassnames} to={nextPath}>
-  //           <span className="target-page-direction">Next </span>
-  //           <span className="target-page-name">{truncatedNextName}</span>
-  //         </Link>
-  //       )} */}
-  //     </>
-  //   );
-  // };
+  const currentTitle = slugify(pageContext.frontmatter.title, {
+    lower: true,
+  });
 
-  // render() {
-  //   const { GATSBY_CARBON_ENV } = process.env;
+  const getName = (category, title) =>
+    category.concat(title ? `: ${title}` : '');
 
-  //   const {currentTabs} = this.props;
-  //   const {currentPage} = this.props;
-  //   const {slug} = this.props;
+  const tabItems = getTabItems({
+    currentTitle,
+    tabs,
+  });
 
-  //   let currentParentPath = slug.split('/');
-  //   currentParentPath.length -= 1;
-  //   currentParentPath = currentParentPath.join('/');
+  const { prevCategory, nextCategory, navIndex } = useNavigationItems({
+    location,
+    tabs,
+  });
 
-  //   const currentSection = slug.substr(1).split('/')[0];
+  const { prevTabItem, nextTabItem } = tabItems;
 
-  //   let currentHasSubnav;
-  //   if (navigation[currentSection]) {
-  //     currentHasSubnav =
-  //       typeof navigation[currentSection]['sub-nav'] === 'object';
-  //   }
+  const getPreviousItem = () => {
+    if (prevTabItem) {
+      return {
+        to: `${location.pathname.replace(currentTitle, prevTabItem.slug)}`,
+        name: getName(navigationList[navIndex].title, prevTabItem.title),
+      };
+    }
 
-  //   let currentSubnavItem;
-  //   if (currentHasSubnav) {
-  //     currentSubnavItem = slug.substr(1).split('/')[1];
-  //   }
+    if (prevCategory) {
+      return {
+        to: prevCategory.path,
+        name: getName(prevCategory.category, prevCategory.title),
+      };
+    }
 
-  //   let prevPagePath; let prevPageTitle; let nextPagePath; let nextPageTitle;
+    return {};
+  };
 
-  //   /**
-  //    * Neighboring tabs:
-  //    * tabs aren't in navigation. so lets first check
-  //    * if we have any sibling tabs to go to thru in props,
-  //    * before we bother looking at the navigation data
-  //    */
-  //   if (currentTabs) {
-  //     currentTabs.forEach((tab, index) => {
-  //       if (this.titleToSlug(tab) === currentPage) {
-  //         if (currentTabs[index - 1]) {
-  //           prevPagePath =
-  //             `${currentParentPath
-  //             }/${
-  //             this.titleToSlug(currentTabs[index - 1])}`;
-  //         }
-  //         if (currentTabs[index + 1]) {
-  //           nextPagePath =
-  //             `${currentParentPath
-  //             }/${
-  //             this.titleToSlug(currentTabs[index + 1])}`;
-  //         }
-  //       }
-  //     });
-  //   }
+  const getNextItem = () => {
+    if (nextTabItem && nextTabItem.slug) {
+      return {
+        to: `${location.pathname.replace(currentTitle, nextTabItem.slug)}`,
+        name: getName(navigationList[navIndex].title, nextTabItem.title),
+      };
+    }
 
-  //   /**
-  //    * if we have/are in a subnav, we need to
-  //    * find the previous and next siblings in the  subnav
-  //    * if the above didn't assign a value to prevPagePath,
-  //    * that means we were either at the first tab, or that there are no tabs on the current page.
-  //    */
-  //   if (
-  //     currentHasSubnav &&
-  //     (prevPagePath === undefined || nextPagePath === undefined)
-  //   ) {
-  //     const currentSubnavArray = Object.keys(
-  //       navigation[currentSection]['sub-nav']
-  //     );
-  //     const currentSubnavIndex = this.getKeyByValue(
-  //       currentSubnavArray,
-  //       currentSubnavItem
-  //     );
+    if (nextCategory) {
+      return {
+        to: nextCategory.path,
+        name: getName(nextCategory.category, nextCategory.title),
+      };
+    }
+    return {};
+  };
 
-  //     if (prevPagePath === undefined && currentSubnavIndex > 0) {
-  //       const prevPathSlugPart = currentSubnavArray[currentSubnavIndex - 1];
-  //       prevPagePath = `/${currentSection}/${prevPathSlugPart}`;
-  //       // const prevTitle =
-  //       //   navigation[currentSection]['sub-nav'][
-  //       //     currentSubnavArray[currentSubnavIndex - 1]
-  //       //   ].title;
-  //     }
+  const previousItem = getPreviousItem();
+  const nextItem = getNextItem();
 
-  //     if (
-  //       nextPagePath === undefined &&
-  //       currentSubnavIndex < currentSubnavArray.length - 1
-  //     ) {
-  //       const nextPathSlugPart =
-  //         currentSubnavArray[parseInt(currentSubnavIndex, 10) + 1];
-  //       nextPagePath = `/${currentSection}/${nextPathSlugPart}`;
-  //     }
-  //   }
+  return (
+    <div className={wrapper}>
+      <div className={cx(linkContainer, 'bx--grid')}>
+        {previousItem.to && (
+          <Link className={cx(link, firstLink)} to={previousItem.to}>
+            <div className={direction}>Previous</div>
+            <div className={name}>{previousItem.name}</div>
+          </Link>
+        )}
+        {nextItem.to && (
+          <Link className={cx(link, secondLink)} to={nextItem.to}>
+            <div className={direction}>Next</div>
+            <div className={name}>{nextItem.name}</div>
+          </Link>
+        )}
+      </div>
+    </div>
+  );
+};
 
-  //   /**
-  //    * if still undefined, we need to look in other sections
-  //    */
-  //   const sectionArray = Object.keys(navigation);
-  //   let currentSectionIndex = this.getKeyByValue(sectionArray, currentSection);
-
-  //   if (prevPagePath === undefined) {
-  //     let prevSection = sectionArray[parseInt(currentSectionIndex) - 1];
-  //     let prevSectionObject = navigation[prevSection];
-  //     if (GATSBY_CARBON_ENV !== 'internal') {
-  //       while (prevSection && prevSectionObject.internal === true) {
-  //         currentSectionIndex--;
-  //         prevSection = sectionArray[parseInt(currentSectionIndex) - 1];
-  //         prevSectionObject = navigation[prevSection];
-  //       }
-  //     }
-  //     if (prevSection) {
-  //       prevPagePath = `${prevSection}`;
-  //       const prevHasSubnav = typeof prevSectionObject['sub-nav'] === 'object';
-  //       let prevSubnavTarget;
-  //       if (prevHasSubnav) {
-  //         const prevSubnavArray = Object.keys(prevSectionObject['sub-nav']);
-  //         prevSubnavTarget = prevSubnavArray[prevSubnavArray.length - 1];
-  //       }
-  //       if (prevSubnavTarget !== undefined) {
-  //         prevPagePath += `/${prevSubnavTarget}`;
-  //       }
-  //     }
-  //   }
-
-  //   if (nextPagePath === undefined) {
-  //     let nextSection = sectionArray[parseInt(currentSectionIndex) + 1];
-  //     let nextSectionObject = navigation[nextSection];
-  //     if (GATSBY_CARBON_ENV !== 'internal') {
-  //       while (nextSection && nextSectionObject.internal === true) {
-  //         currentSectionIndex++;
-  //         nextSection = sectionArray[parseInt(currentSectionIndex) + 1];
-  //         nextSectionObject = navigation[nextSection];
-  //       }
-  //     }
-  //     if (nextSection) {
-  //       nextPagePath = `${nextSection}`;
-  //       const nextHasSubnav = typeof nextSectionObject['sub-nav'] === 'object';
-  //       let nextSubnavTarget;
-  //       if (nextHasSubnav) {
-  //         const nextSubnavArray = Object.keys(nextSectionObject['sub-nav']);
-  //         nextSubnavTarget = nextSubnavArray[0];
-  //       }
-  //       if (nextSubnavTarget !== undefined) {
-  //         nextPagePath += `/${nextSubnavTarget}`;
-  //       }
-  //     }
-  //   }
-
-  //   // TODO: get title properly!
-  //   prevPageTitle = this.slugToTitleWithPath(prevPagePath);
-  //   nextPageTitle = this.slugToTitleWithPath(nextPagePath);
-
-  //   return (
-  //     <div className="next-previous-wrapper">
-  //       <div className="bx--grid">
-  //         <div className="next-previous-controls bx--row">
-  //           {this.renderNextPreviousLinks(
-  //             prevPagePath,
-  //             prevPageTitle,
-  //             nextPagePath,
-  //             nextPageTitle
-  //           )}
-  //         </div>
-  //       </div>
-  //     </div>
-  //   );
-  // }
-}
+export default NextPrevious;
