@@ -1,19 +1,19 @@
 - title: Components
   pages:
     - title: Demo
-      path: /component-examples/demo
+      path: /components/demo
     - title: DoDontExample
-      path: /component-examples/DoDontExample
+      path: /components/DoDontExample
     - title: Caption
-      path: /component-examples/Caption
+      path: /components/Caption
     - title: Aside
-      path: /component-examples/Aside
+      path: /components/Aside
     - title: ResourceCard
-      path: /component-examples/ResourceCard
+      path: /components/ResourceCard
     - title: ArticleCard
-      path: /component-examples/ArticleCard
+      path: /components/ArticleCard
     # - title: ImageComponent
-    # path: /component-examples/ImageComponent
+    # path: /components/ImageComponent
 - title: Contributing
   pages:
     - title: Agreement
