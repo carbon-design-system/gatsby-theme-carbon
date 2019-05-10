@@ -1,8 +1,8 @@
 import React from 'react';
 import { MDXProvider as Provider } from '@mdx-js/react';
-import { WebsiteCodeSnippet } from '@carbon/addons-website';
 import { P, H1, H2, H3, H4, H5, Ul, Ol } from './markdown';
 import PageTable from './PageTable';
+import Code from './Code';
 
 const components = {
   wrapper: function Wrapper({ children, ...props }) {
@@ -16,7 +16,7 @@ const components = {
   p: P,
   ol: Ol,
   ul: Ul,
-  pre: WebsiteCodeSnippet,
+  pre: Code,
   table: PageTable,
 };
 

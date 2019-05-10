@@ -8,10 +8,6 @@
 
 // Responsive by default
 .#{$prefix}--paragraph--responsive {
-  // simulate column padding
-  padding-left: 1rem;
-  padding-right: 1rem;
-
   // 7 columns wide
   @include carbon--breakpoint('md') {
     width: 62.5%;

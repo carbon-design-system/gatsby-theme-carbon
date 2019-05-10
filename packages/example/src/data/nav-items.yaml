@@ -1,5 +1,7 @@
 - title: Components
   pages:
+    - title: Markdown
+      path: /component-examples/markdown
     - title: Demo
       path: /components/demo
     - title: DoDontExample

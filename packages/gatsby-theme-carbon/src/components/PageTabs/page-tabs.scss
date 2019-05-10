@@ -3,7 +3,7 @@
   width: 100%;
   height: rem(48px);
   position: relative;
-  border-top: 1px solid rgba($ui-02, 0.25);
+  box-shadow: 0 -1px 0 rgba($ui-02, 0.25);
 }
 
 .page-tabs__list {
@@ -14,7 +14,6 @@
   padding: 0;
   height: rem(48px);
   position: relative;
-  top: -1px;
 }
 
 .page-tabs__list li {
@@ -24,11 +23,11 @@
 
 .page-tabs__list li a {
   @include carbon--type-style('body-short-02');
-  padding: 0 $spacing-3xl 0 $spacing-md;
+  padding: 0 $spacing-09 0 $spacing-05;
   text-decoration: none;
   color: $inverse-01;
   white-space: nowrap;
-  border-top: 2px solid transparent;
+  border-top: 3px solid transparent; // 3px accessibility minimum
   height: rem(48px);
   display: inline-flex;
   align-items: center;
@@ -40,6 +39,6 @@
 }
 
 .page-tabs__list li.selected a {
-  border-top: 2px solid $brand-01;
+  border-top: 3px solid $brand-01; // 3px accessibility minimum
   background: $carbon--gray-80;
 }

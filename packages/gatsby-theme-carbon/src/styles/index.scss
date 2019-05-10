@@ -15,7 +15,7 @@
 @import '~@carbon/elements/scss/colors/colors';
 
 @include carbon--type-reset();
-// @include carbon--font-face-mono();
+@include carbon--font-face-mono();
 @include carbon--font-face-sans();
 @include carbon--font-face-serif();
 
@@ -36,7 +36,6 @@ $prefix: 'bx';
 @import '~@carbon/addons-website/scss/components/website-header-nav';
 @import '~@carbon/addons-website/scss/components/website-side-nav';
 @import '~@carbon/addons-website/scss/components/website-back-to-top-btn';
-@import '~@carbon/addons-website/scss/components/website-code-snippet';
 
 $font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
 
@@ -59,7 +58,8 @@ $font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
 @import '../components/ResourceCard/resource-card-group.scss';
 @import '../components/ArticleCard/article-card.scss';
 @import '../components/Aside/aside.scss';
-//@import '../components/ImageComponent/image-component.scss'; //WIP
+@import '../components/Video/video.scss';
+@import '../components/Code/code.scss';
 
 //---------------------------------------
 // Included last to ensure that class

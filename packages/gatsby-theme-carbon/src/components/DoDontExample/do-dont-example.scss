@@ -148,8 +148,7 @@
   max-width: 100% !important; // marked !important to overcome inline styles inserted by gatsby.
 }
 
-// Example video content
-.#{$prefix}--example__content .gatsby-resp-iframe-wrapper {
-  height: 100% !important;
-  position: static !important;
+// Video
+.#{$prefix}--example .#{$prefix}--video {
+  margin-bottom: 0;
 }
