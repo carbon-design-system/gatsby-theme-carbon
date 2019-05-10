@@ -1,0 +1,46 @@
+@import '~carbon-components/scss/globals/scss/vars';
+@import '~@carbon/elements/scss/type/type';
+
+.wrapper {
+  background: $carbon--gray-90;
+  color: $carbon--white-0;
+}
+
+.wrapper .link-container {
+  height: 8rem;
+  display: flex;
+  max-width: 99rem;
+}
+
+.link-container .link {
+  color: $carbon--white-0;
+  padding: 1rem;
+  text-decoration: none;
+  width: 50%;
+  transition: background $duration--moderate-02 $carbon--standard-easing;
+  &:hover {
+    background: $carbon--gray-80;
+  }
+}
+
+.first-link {
+  margin-right: auto;
+}
+
+.second-link {
+  margin-left: auto;
+}
+
+.direction {
+  @include carbon--type-style('body-short-01');
+}
+
+.name {
+  @include carbon--type-style('expressive-heading-03', true);
+  padding-bottom: $spacing-05;
+  max-width: 17rem;
+}
+
+.home {
+  color: $inverse-01;
+}

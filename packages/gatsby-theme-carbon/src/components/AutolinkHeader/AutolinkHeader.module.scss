@@ -13,8 +13,8 @@
   opacity: 0;
   transition: opacity $duration--fast-01 $carbon--standard-easing;
   position: absolute;
-  left: -0.75rem;
-  top: 0px;
+  left: -$spacing-06;
+  top: 0;
   &:hover,
   &:active {
     opacity: 1;
