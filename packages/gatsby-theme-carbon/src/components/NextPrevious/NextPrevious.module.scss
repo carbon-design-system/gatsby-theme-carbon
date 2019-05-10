@@ -9,16 +9,15 @@
 .link-container {
   min-height: rem(128px);
   display: flex;
-}
-
-.link {
-  color: $carbon--white-0;
-  padding: 1rem;
-  text-decoration: none;
-  width: 50%;
-  transition: 0.07s background ease;
-  &:hover {
-    background: $carbon--gray-80;
+  .link {
+    color: $carbon--white-0;
+    padding: 1rem;
+    text-decoration: none;
+    width: 50%;
+    transition: 0.07s background ease;
+    &:hover {
+      background: $carbon--gray-80;
+    }
   }
 }
 
@@ -38,4 +37,8 @@
   @include carbon--type-style('expressive-heading-03', true);
   padding-bottom: 3rem;
   max-width: rem(275px);
+}
+
+.home {
+  color: $inverse-01;
 }

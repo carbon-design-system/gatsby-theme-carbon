@@ -80,13 +80,20 @@ const useNavigationItems = ({ tabs, location }) => {
   };
 };
 
-const NextPrevious = props => {
-  const { tabs, location, pageContext } = props;
-  const navigationList = useNavigationList();
-
-  const currentTitle = slugify(pageContext.frontmatter.title, {
+const getTitle = pageContext => {
+  if (!pageContext.frontmatter.title) {
+    return 'Home';
+  }
+  return slugify(pageContext.frontmatter.title, {
     lower: true,
   });
+};
+
+const NextPrevious = props => {
+  const { tabs, location, pageContext = { frontmatter: 'Home' } } = props;
+  const navigationList = useNavigationList();
+
+  const currentTitle = getTitle(pageContext);
 
   const getName = (category, title) =>
     category.concat(title ? `: ${title}` : '');
@@ -118,10 +125,25 @@ const NextPrevious = props => {
       };
     }
 
-    return {};
+    return currentTitle === 'Home'
+      ? {}
+      : {
+          to: '/',
+          name: 'Home',
+        };
   };
 
   const getNextItem = () => {
+    if (currentTitle === 'Home') {
+      return {
+        to: navigationList[navIndex].path,
+        name: getName(
+          navigationList[navIndex].category,
+          navigationList[navIndex].title
+        ),
+      };
+    }
+
     if (nextTabItem && nextTabItem.slug) {
       return {
         to: `${location.pathname.replace(currentTitle, nextTabItem.slug)}`,
@@ -135,7 +157,8 @@ const NextPrevious = props => {
         name: getName(nextCategory.category, nextCategory.title),
       };
     }
-    return {};
+
+    return {}; // final page
   };
 
   const previousItem = getPreviousItem();

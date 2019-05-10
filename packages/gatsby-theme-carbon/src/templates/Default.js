@@ -7,8 +7,8 @@ import NextPrevious from '../components/NextPrevious';
 import PageTabs from '../components/PageTabs';
 import Main from '../components/Main';
 
-const Default = ({ pathContext, children, location, ...rest }) => {
-  const { frontmatter = {} } = pathContext;
+const Default = ({ pageContext, children, location }) => {
+  const { frontmatter = {} } = pageContext;
   const { tabs, title } = frontmatter;
   const slug = location.pathname;
   const currentTab = slug.split('/').slice(-1)[0];
@@ -19,12 +19,11 @@ const Default = ({ pathContext, children, location, ...rest }) => {
       </PageHeader>
       <Main padded>{children}</Main>
       <NextPrevious
-        pathContext={pathContext}
+        pageContext={pageContext}
         location={location}
         slug={slug}
         tabs={tabs}
         currentTab={currentTab}
-        {...rest}
       />
       <WebsiteBackToTopBtn />
     </Layout>
