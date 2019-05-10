@@ -1,14 +1,15 @@
 @import '~carbon-components/scss/globals/scss/vars';
-@import '~@carbon/elements/scss/type/styles';
+@import '~@carbon/elements/scss/type/type';
 
 .wrapper {
   background: $carbon--gray-90;
   color: $carbon--white-0;
 }
 
-.link-container {
-  min-height: rem(128px);
+.wrapper .link-container {
+  height: 8rem;
   display: flex;
+  max-width: 99rem;
 }
 
 .link-container .link {
@@ -36,8 +37,8 @@
 
 .name {
   @include carbon--type-style('expressive-heading-03', true);
-  padding-bottom: 2rem;
-  max-width: rem(275px);
+  padding-bottom: $spacing-05;
+  max-width: 17rem;
 }
 
 .home {
