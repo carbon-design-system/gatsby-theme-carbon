@@ -1,17 +1,8 @@
 import React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import slugify from 'slugify';
-import cx from 'classnames';
 
-import {
-  wrapper,
-  link,
-  direction,
-  name,
-  firstLink,
-  secondLink,
-  linkContainer,
-} from './NextPrevious.module.scss';
+import NextPrevious from './NextPreviousStyles';
 
 const useNavigationList = () => {
   const {
@@ -89,16 +80,14 @@ const getTitle = pageContext => {
   });
 };
 
-const NextPrevious = props => {
+const getName = (category, title) => category.concat(title ? `: ${title}` : '');
+
+const NextPreviousContainer = props => {
   const { tabs, location, pageContext = { frontmatter: 'Home' } } = props;
   const navigationList = useNavigationList();
-
   const currentTitle = getTitle(pageContext);
 
-  const getName = (category, title) =>
-    category.concat(title ? `: ${title}` : '');
-
-  const tabItems = getTabItems({
+  const { prevTabItem, nextTabItem } = getTabItems({
     currentTitle,
     tabs,
   });
@@ -107,8 +96,6 @@ const NextPrevious = props => {
     location,
     tabs,
   });
-
-  const { prevTabItem, nextTabItem } = tabItems;
 
   const getPreviousItem = () => {
     if (prevTabItem) {
@@ -164,24 +151,7 @@ const NextPrevious = props => {
   const previousItem = getPreviousItem();
   const nextItem = getNextItem();
 
-  return (
-    <div className={wrapper}>
-      <div className={cx(linkContainer, 'bx--grid')}>
-        {previousItem.to && (
-          <Link className={cx(link, firstLink)} to={previousItem.to}>
-            <div className={direction}>Previous</div>
-            <div className={name}>{previousItem.name}</div>
-          </Link>
-        )}
-        {nextItem.to && (
-          <Link className={cx(link, secondLink)} to={nextItem.to}>
-            <div className={direction}>Next</div>
-            <div className={name}>{nextItem.name}</div>
-          </Link>
-        )}
-      </div>
-    </div>
-  );
+  return <NextPrevious previousItem={previousItem} nextItem={nextItem} />;
 };
 
-export default NextPrevious;
+export default NextPreviousContainer;
