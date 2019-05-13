@@ -34,8 +34,9 @@ td > code {
   }
 }
 
-.#{$prefix}--snippet--website code {
+.#{$prefix}--snippet--website code pre {
   @include carbon--type-style('code-02');
+  font-family: $font-family-mono;
 }
 
 .#{$prefix}--snippet--website .#{$prefix}--snippet--single {
