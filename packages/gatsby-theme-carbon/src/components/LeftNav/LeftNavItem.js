@@ -2,30 +2,35 @@ import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { Location } from '@reach/router';
 import slugify from 'slugify';
-
+import cx from 'classnames';
 import {
   SideNavLink,
   SideNavMenu,
   SideNavMenuItem,
 } from 'carbon-components-react/lib/components/UIShell';
+
+import { currentItem, currentItemText } from './LeftNavItem.module.scss';
+
 import NavContext from '../../util/context/NavContext';
 
 const LeftNavItem = props => {
   const { items, category } = props;
   const { toggleNavState } = useContext(NavContext);
   const closeLeftNav = () => toggleNavState('leftNavIsOpen', 'close');
-
   if (items.length === 1) {
+    const isActive =
+      typeof window !== 'undefined' &&
+      window.location.pathname.includes(slugify(category, { lower: true }));
     return (
       <SideNavLink
         onClick={closeLeftNav}
         icon={<span>dummy icon</span>}
         element={Link}
-        partiallyActive
-        activeClassName="bx--side-nav__link--current"
+        className={cx({ [currentItem]: isActive })}
+        isActive={isActive}
         to={`${items[0].path}`}
       >
-        {category}
+        <span className={cx({ [currentItemText]: isActive })}>{category}</span>
       </SideNavLink>
     );
   }
