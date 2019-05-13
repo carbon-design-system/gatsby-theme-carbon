@@ -12,7 +12,7 @@ const { prefix } = settings;
 
 export default class Code extends React.Component {
   static propTypes = {
-    children: PropTypes.array,
+    children: PropTypes.node,
   };
 
   state = {

@@ -1,26 +1,24 @@
 // Inline code
+code {
+  font-family: $font-family-mono;
+}
+
 p > code,
 li > code,
 td > code {
   @include reset;
+  @include carbon--type-style('code-01');
   position: relative;
   display: inline;
-  padding: rem(1px) $spacing-xs;
+  padding: rem(1px) $spacing-03;
   background: transparent;
   border-radius: 4px;
-  background-color: $carbon--gray-20;
-}
-
-td > code {
-  @include carbon--type-style('code-01');
-}
-
-p > code,
-li > code {
-  @include carbon--type-style('code-02');
+  background-color: $ui-03;
+  color: $text-01;
 }
 
 .#{$prefix}--snippet--website {
+  @include carbon--type-style('code-02');
   margin-bottom: $spacing-06;
 
   // 8 columns wide
