@@ -16,6 +16,7 @@ module.exports = themeOptions => {
     siteMetadata: {
       title: 'Gatsby Theme Carbon',
     },
+    pathPrefix: `/prefix`,
     plugins: [
       `gatsby-plugin-sharp`,
       `gatsby-transformer-yaml`,

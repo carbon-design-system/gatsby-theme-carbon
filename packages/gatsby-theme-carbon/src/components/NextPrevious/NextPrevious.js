@@ -7,6 +7,7 @@ import NextPrevious from './NextPreviousStyles';
 const useNavigationList = () => {
   const {
     allNavItemsYaml: { edges },
+    site: { pathPrefix },
   } = useStaticQuery(graphql`
     query NAV_ITEM_QUERY {
       allNavItemsYaml {
@@ -20,12 +21,18 @@ const useNavigationList = () => {
           }
         }
       }
+      site {
+        pathPrefix
+      }
     }
   `);
 
-  return edges.flatMap(({ node }) =>
-    node.pages.map(page => ({ ...page, category: node.title }))
-  );
+  return [
+    edges.flatMap(({ node }) =>
+      node.pages.map(page => ({ ...page, category: node.title }))
+    ),
+    pathPrefix,
+  ];
 };
 
 const getTabItems = ({ currentTitle, tabs }) => {
@@ -54,11 +61,12 @@ const getTabItems = ({ currentTitle, tabs }) => {
 };
 
 const useNavigationItems = ({ tabs, location }) => {
-  const navigationList = useNavigationList();
+  const [navigationList, pathPrefix] = useNavigationList();
   const { pathname } = location;
+  const unPrefixedPathname = pathname.replace(pathPrefix, '');
   const currentNavigationItem = tabs
-    ? pathname.replace(/\/[^/]*\/?$/, '') // removes the last url segment
-    : pathname.replace(/\/$/, ''); // removes the last slash
+    ? unPrefixedPathname.replace(/\/[^/]*\/?$/, '') // removes the last url segment
+    : unPrefixedPathname.replace(/\/$/, ''); // removes the last syalash
 
   const navIndex = navigationList.findIndex(item =>
     item.path.includes(currentNavigationItem)
@@ -80,11 +88,11 @@ const getTitle = pageContext => {
   });
 };
 
-const getName = (category, title) => category.concat(title ? `: ${title}` : '');
+const getName = (category, title) => `${category}${title ? `: ${title}` : ''}`;
 
 const NextPreviousContainer = props => {
   const { tabs, location, pageContext = { frontmatter: 'Home' } } = props;
-  const navigationList = useNavigationList();
+  const [navigationList] = useNavigationList();
   const currentTitle = getTitle(pageContext);
 
   const { prevTabItem, nextTabItem } = getTabItems({
