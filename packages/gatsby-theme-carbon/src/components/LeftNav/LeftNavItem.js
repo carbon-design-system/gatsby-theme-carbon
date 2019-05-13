@@ -18,9 +18,9 @@ const LeftNavItem = props => {
   const { toggleNavState } = useContext(NavContext);
   const closeLeftNav = () => toggleNavState('leftNavIsOpen', 'close');
   if (items.length === 1) {
-    const isActive = window.location.pathname.includes(
-      slugify(category, { lower: true })
-    );
+    const isActive =
+      typeof window !== 'undefined' &&
+      window.location.pathname.includes(slugify(category, { lower: true }));
     return (
       <SideNavLink
         onClick={closeLeftNav}
