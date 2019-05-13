@@ -2,12 +2,15 @@ import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { Location } from '@reach/router';
 import slugify from 'slugify';
-
+import cx from 'classnames';
 import {
   SideNavLink,
   SideNavMenu,
   SideNavMenuItem,
 } from 'carbon-components-react/lib/components/UIShell';
+
+import { currentItem, currentItemText } from './LeftNavItem.module.scss';
+
 import NavContext from '../../util/context/NavContext';
 
 const LeftNavItem = props => {
@@ -23,12 +26,11 @@ const LeftNavItem = props => {
         onClick={closeLeftNav}
         icon={<span>dummy icon</span>}
         element={Link}
-        isActive={isActive} // TODO similar categories
+        className={cx({ [currentItem]: isActive })}
+        isActive={isActive}
         to={`${items[0].path}`}
       >
-        <span style={{ color: isActive ? '#171717' : 'inherit' }}>
-          {category}
-        </span>
+        <span className={cx({ [currentItemText]: isActive })}>{category}</span>
       </SideNavLink>
     );
   }
