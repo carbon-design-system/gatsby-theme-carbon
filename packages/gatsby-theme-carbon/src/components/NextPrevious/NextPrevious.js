@@ -92,7 +92,7 @@ const getName = (category, title) => `${category}${title ? `: ${title}` : ''}`;
 
 const NextPreviousContainer = props => {
   const { tabs, location, pageContext = { frontmatter: 'Home' } } = props;
-  const [navigationList] = useNavigationList();
+  const [navigationList, pathPrefix] = useNavigationList();
   const currentTitle = getTitle(pageContext);
 
   const { prevTabItem, nextTabItem } = getTabItems({
@@ -106,9 +106,10 @@ const NextPreviousContainer = props => {
   });
 
   const getPreviousItem = () => {
+    const href = location.pathname.replace(pathPrefix, '');
     if (prevTabItem) {
       return {
-        to: `${location.pathname.replace(currentTitle, prevTabItem.slug)}`,
+        to: `${href.replace(currentTitle, prevTabItem.slug)}`,
         name: getName(navigationList[navIndex].title, prevTabItem.title),
       };
     }
@@ -140,8 +141,9 @@ const NextPreviousContainer = props => {
     }
 
     if (nextTabItem && nextTabItem.slug) {
+      const href = location.pathname.replace(pathPrefix, '');
       return {
-        to: `${location.pathname.replace(currentTitle, nextTabItem.slug)}`,
+        to: `${href.replace(currentTitle, nextTabItem.slug)}`,
         name: getName(navigationList[navIndex].title, nextTabItem.title),
       };
     }
