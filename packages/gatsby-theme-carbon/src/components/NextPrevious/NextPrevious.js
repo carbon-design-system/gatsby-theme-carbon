@@ -110,7 +110,10 @@ const NextPreviousContainer = props => {
     if (prevTabItem) {
       return {
         to: `${href.replace(currentTitle, prevTabItem.slug)}`,
-        name: getName(navigationList[navIndex].title, prevTabItem.title),
+        name: getName(
+          navigationList[navIndex].title || navigationList[navIndex].category,
+          prevTabItem.title
+        ),
       };
     }
 
@@ -144,7 +147,10 @@ const NextPreviousContainer = props => {
       const href = location.pathname.replace(pathPrefix, '');
       return {
         to: `${href.replace(currentTitle, nextTabItem.slug)}`,
-        name: getName(navigationList[navIndex].title, nextTabItem.title),
+        name: getName(
+          navigationList[navIndex].title || navigationList[navIndex].category,
+          nextTabItem.title
+        ),
       };
     }
 

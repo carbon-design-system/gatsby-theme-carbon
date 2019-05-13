@@ -14,18 +14,21 @@ const LeftNavItem = props => {
   const { items, category } = props;
   const { toggleNavState } = useContext(NavContext);
   const closeLeftNav = () => toggleNavState('leftNavIsOpen', 'close');
-
   if (items.length === 1) {
+    const isActive = window.location.pathname.includes(
+      slugify(category, { lower: true })
+    );
     return (
       <SideNavLink
         onClick={closeLeftNav}
         icon={<span>dummy icon</span>}
         element={Link}
-        partiallyActive
-        activeClassName="bx--side-nav__link--current"
+        isActive={isActive} // TODO similar categories
         to={`${items[0].path}`}
       >
-        {category}
+        <span style={{ color: isActive ? '#171717' : 'inherit' }}>
+          {category}
+        </span>
       </SideNavLink>
     );
   }

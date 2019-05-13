@@ -28,6 +28,9 @@
       path: /getting-started/about-carbon
     - title: Designers
       path: /getting-started/designers
+- title: Top Level With Tabs
+  pages:
+    - path: /top-level-with-tabs/tab-one
 - title: Resources
   pages:
     - path: /resources
