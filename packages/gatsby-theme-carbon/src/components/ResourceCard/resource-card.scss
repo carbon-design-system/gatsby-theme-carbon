@@ -1,7 +1,7 @@
 .#{$prefix}--resource-card .#{$prefix}--tile {
   background: $ui-background;
   height: 100%;
-  padding: $spacing-05;
+  padding: $spacing-05 25% $spacing-05 $spacing-05;
   position: relative;
   transition: background $duration--fast-01;
   text-decoration: none;
@@ -18,7 +18,8 @@
 }
 
 .#{$prefix}--resource-card__subtitle {
-  @include carbon--type-style('body-short-02');
+  @include carbon--type-style('body-heading-01');
+  font-weight: 400;
   text-decoration: none;
   color: $text-01;
 }
