@@ -6,51 +6,71 @@ import { Row, Column, DoDontExample, Video } from 'gatsby-theme-carbon';
 
 ## DoDontExample
 
+The `<DoDontExample>` component will generally need to be placed inside `<Row>` and `<Column>` components to align them to the grid at the correct size.
+
 <Row>
-<Column colMd={4} colLg={4}>
-<DoDontExample correct label="label text">
+<Column colMd={3} colLg={3}>
 
-![Alt text](images/Light_theme_01.png)
+#### Image
 
-</DoDontExample>
-</Column>
-<Column colMd={4} colLg={4} >
-<DoDontExample label="label text">
+<DoDontExample type="do" captionTitle="Caption title" caption="Caption">
 
 ![Alt text](images/Light_theme_02.png)
 
 </DoDontExample>
 </Column>
-</Row>
+<Column colMd={3} colLg={3}>
 
-<Row>
-  <Column colMd={4} colLg={4}>
-    <DoDontExample
-      square
-      dark
-      label="Don’t use complex future tenses when simple ones will suffice."
-      text="The API will be returning a promise."
-    />
-  </Column>
-  <Column colMd={4} colLg={4}>
-    <DoDontExample
-      square
-      dark
-      correct
-      label="Don’t use complex future tenses when simple ones will suffice."
-      text="The API will be returning a promise."
-    />
-  </Column>
-</Row>
+#### Text
 
-### Video
+<DoDontExample type="dont" aspectRatio="1:1"  color="dark" captionTitle="Caption title" caption="Caption" text="This is some text"></DoDontExample>
+</Column>
+<Column colMd={3} colLg={3}>
 
-<Row>
-<Column>
-<DoDontExample correct label="Productive moments are labeled in blue, and expressive moments are labeled in magenta.">
+#### Video
+
+<DoDontExample type="do" caption="Caption" captionTitle="Caption title">
 
 <Video vimeoId="310583077" />
 
 </DoDontExample>
 </Column>
 </Row>
+
+#### Image
+
+```
+<DoDontExample type="do" captionTitle="Caption title" caption="Caption">
+
+![Alt text](images/Light_theme_02.png)
+
+</DoDontExample>
+```
+
+#### Text
+
+```
+<DoDontExample type="dont" aspectRatio="1:1"  color="dark" captionTitle="Caption title" caption="Caption" text="This is some text"></DoDontExample>
+```
+
+#### Video
+
+```
+<DoDontExample type="do" caption="Caption" captionTitle="Caption title">
+
+<Video vimeoId="310583077" />
+
+</DoDontExample>
+```
+
+### PropTypes
+
+| property     | propType | required | default | description                                                       |
+| ------------ | -------- | -------- | ------- | ----------------------------------------------------------------- |
+| children     | node     |          |         | child node, expects a markdown image or `<Video>` component       |
+| text         | string   |          |         | text to display inside the component instead of an image or video |
+| caption      | string   |          |         | caption                                                           |
+| captionTitle | string   |          |         | caption title                                                     |
+| type         | string   |          | dont    | set to `do` to show green check, otherwise shows pink X           |
+| color        | string   |          | light   | set to `dark` for dark background card                            |
+| aspectRatio  | string   |          |         | set to `1:1` to force square example                              |
