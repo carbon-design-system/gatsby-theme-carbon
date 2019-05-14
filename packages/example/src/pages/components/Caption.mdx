@@ -6,13 +6,9 @@ import { Row, Column, Caption } from 'gatsby-theme-carbon';
 
 ## Caption
 
-<Row>
-<Column colMd={4} colLg={4}>
+Captions are usually used below images or videos, they will default to 4 columns wide unless placed inside a `<Row>` component, then they will become the full width of their containing column.
 
-![Alt text](images/Light_theme_01.png)
-
-</Column>
-</Row>
+<br />
 
 <Caption>
   This is a caption. This is a caption. This is a caption. This is a caption.
@@ -27,13 +23,26 @@ import { Row, Column, Caption } from 'gatsby-theme-carbon';
   width caption. This is a full width caption.
 </Caption>
 
-<Row>
-<Column colMd={4} colLg={4}>
-
+```
 <Caption>
-  This is a caption inside a column. This is a caption inside a column. This is
-  a caption inside a column. This is a caption inside a column.{' '}
+  This is a caption. This is a caption. This is a caption. This is a caption.
+  This is a caption. This is a caption. This is a caption. This is a caption.
+  This is a caption
 </Caption>
 
-</Column>
-</Row>
+<Caption fullWidth>
+  This is a full width caption. This is a full width caption. This is a full
+  width caption. This is a full width caption. This is a full width caption.
+  This is a full width caption. This is a full width caption. This is a full
+  width caption. This is a full width caption.
+</Caption>
+
+```
+
+### PropTypes
+
+| property  | propType | required | default | description           |
+| --------- | -------- | -------- | ------- | --------------------- |
+| children  | node     |          |         |                       |
+| fullWidth | bool     |          |         | Set to full width     |
+| className | string   |          |         | Add custom class name |
