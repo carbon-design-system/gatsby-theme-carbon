@@ -9,11 +9,20 @@ import { Row, Column, Aside } from 'gatsby-theme-carbon';
 <Row>
 <Column colMd={5} colLg={7} className="bx--type-expressive-heading-03">
 
-<p className="bx--type-expressive-heading-03">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in pulvinar ipsum. Etiam sit amet nibh ultricies, pretium quam vitae, auctor nunc. Curabitur hendrerit lectus eros, eget imperdiet ante interdum non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis nisi dictum sapien euismod facilisis. Donec in nisl urna. Sed pellentesque ex dui, vitae egestas ante laoreet id. Ut eros odio, cursus vitae finibus vel, laoreet vel quam.</p>
+The `<Aside>` component is a wrapper component that adds styling to make the text display smaller than the default body text; using`body-long-01` and adds the correct top border styles. It will likely be used within a smaller `<Column>` width.
 
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in pulvinar ipsum. Etiam sit amet nibh ultricies, pretium quam vitae, auctor nunc.
+```
+<Column colSm={0} colMd={2} colLg={3} offsetMd={1} noGutterSm>
+<Aside>
 
-<p className="bx--type-expressive-heading-03">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in pulvinar ipsum. Etiam sit amet nibh ultricies, pretium quam vitae, auctor nunc. Curabitur hendrerit lectus eros, eget imperdiet ante interdum non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis nisi dictum sapien euismod facilisis. Donec in nisl urna. Sed pellentesque ex dui, vitae egestas ante laoreet id. Ut eros odio, cursus vitae finibus vel, laoreet vel quam.</p>
+**Good design is always good design.**
+
+What we borrow from our own design history is not a mid-century aesthetic in stylistic terms, but the modernist attitudes and approach used at the time.
+
+</Aside>
+
+</Column>
+```
 
 </Column>
 <Column colSm={0} colMd={2} colLg={3} offsetMd={1} noGutterSm>
@@ -23,11 +32,14 @@ import { Row, Column, Aside } from 'gatsby-theme-carbon';
 
 What we borrow from our own design history is not a mid-century aesthetic in stylistic terms, but the modernist attitudes and approach used at the time.
 
-Eliot Noyes taught us brand is character, and should be built through curation. Paul Rand taught us the importance of endless experimentation. Charles and Ray Eames brought out our playful nature, and were pioneering what is now referred to as “branded content” and “experiential.”
-
-Their methods are as modern today as ever before, maybe more so.
-
 </Aside>
 
 </Column>
 </Row>
+
+### PropTypes
+
+| property  | propType | required | default | description           |
+| --------- | -------- | -------- | ------- | --------------------- |
+| children  | node     |          |         |                       |
+| className | string   |          |         | Add custom class name |
