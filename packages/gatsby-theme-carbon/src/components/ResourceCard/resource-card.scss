@@ -18,7 +18,7 @@
 }
 
 .#{$prefix}--resource-card__subtitle {
-  @include carbon--type-style('body-heading-01');
+  @include carbon--type-style('heading-01');
   font-weight: 400;
   text-decoration: none;
   color: $text-01;
