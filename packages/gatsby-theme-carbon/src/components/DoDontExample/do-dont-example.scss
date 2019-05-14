@@ -110,6 +110,7 @@
 
 .#{$prefix}--example__title {
   @include carbon--type-style('body-short-01');
+  font-weight: 600;
   margin: 0;
 
   @media (orientation: landscape) {
@@ -146,6 +147,7 @@
 
 .#{$prefix}--example span.gatsby-resp-image-wrapper {
   max-width: 100% !important; // marked !important to overcome inline styles inserted by gatsby.
+  margin-bottom: 0;
 }
 
 // Video

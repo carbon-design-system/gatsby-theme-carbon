@@ -11,28 +11,28 @@ export default class DoDontExample extends React.Component {
   static propTypes = {
     children: PropTypes.node,
     /** title for the caption (optional) */
-    label: PropTypes.string,
+    caption: PropTypes.string,
     /** description for the card caption (optional) */
-    description: PropTypes.string,
+    captionTitle: PropTypes.string,
     /** text displayed in the example card */
     text: PropTypes.string,
-    /** path to the image displayed in the example card, starting under `src` folder. e.g.: `content/guidelines/content/img-test.svg` */
-    // imgpath: PropTypes.string,
-    /** mark card as true? if not defined, card will be marked as false */
-    correct: PropTypes.bool,
-    /** default to false, set to true for dark background */
-    dark: PropTypes.bool,
-    /** default to false, set to true for forced aspect ratio */
-    square: PropTypes.bool,
+    /** 1:1 to force square example */
+    aspectRatio: PropTypes.string,
+    /** set to "dark" for dark background card */
+    color: PropTypes.string,
+    /** set to "do" to show green check, otherwise shows pink X */
+    type: PropTypes.string,
   };
 
-  renderCaption = (label, description) => {
-    if (label || description) {
+  renderCaption = (caption, captionTitle) => {
+    if (caption || captionTitle) {
       return (
         <div className={`${prefix}--example__caption`}>
-          {label && <p className={`${prefix}--example__title`}>{label}</p>}
-          {description && (
-            <p className={`${prefix}--example__description`}>{description}</p>
+          {captionTitle && (
+            <p className={`${prefix}--example__title`}>{captionTitle}</p>
+          )}
+          {caption && (
+            <p className={`${prefix}--example__description`}>{caption}</p>
           )}
         </div>
       );
@@ -42,33 +42,33 @@ export default class DoDontExample extends React.Component {
   render() {
     const {
       children,
-      label,
-      description,
+      caption,
+      captionTitle,
       text,
-      dark,
-      square,
-      correct,
+      aspectRatio,
+      color,
+      type,
     } = this.props;
 
     const wrapperClassNames = classnames({
       [`${prefix}--example`]: true,
-      [`${prefix}--example--square`]: square,
-      [`${prefix}--example--correct`]: correct,
-      [`${prefix}--example--incorrect`]: !correct,
-      [`${prefix}--example--dark`]: dark,
+      [`${prefix}--example--square`]: aspectRatio === '1:1',
+      [`${prefix}--example--correct`]: type === 'do',
+      [`${prefix}--example--incorrect`]: type !== 'do',
+      [`${prefix}--example--dark`]: color === 'dark',
     });
 
     const iconClassNames = classnames({
       [`${prefix}--example__icon`]: true,
-      [`${prefix}--example__icon--correct`]: correct,
-      [`${prefix}--example__icon--incorrect`]: !correct,
+      [`${prefix}--example__icon--correct`]: type === 'do',
+      [`${prefix}--example__icon--incorrect`]: type !== 'do',
     });
 
     return (
       <div className={wrapperClassNames}>
         <div className={`${prefix}--example-card`}>
           <div className={`${prefix}--example-card__content`}>
-            {correct ? (
+            {type === 'do' ? (
               <CheckmarkFilled24 className={iconClassNames} />
             ) : (
               <Misuse24 className={iconClassNames} />
@@ -81,7 +81,7 @@ export default class DoDontExample extends React.Component {
             </div>
           </div>
         </div>
-        {this.renderCaption(label, description)}
+        {this.renderCaption(caption, captionTitle)}
       </div>
     );
   }
