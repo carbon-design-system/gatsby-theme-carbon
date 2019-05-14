@@ -44,7 +44,7 @@
     content: '\21B3'; //"↳"
     position: absolute;
     left: -$spacing-06;
-    font-family: IBM Plex Sans, ibm-plex-sans, Helvetica Neue, Arial, sans-serif;
+    font-family: $font-family;
     color: $interactive-02;
     transition: color $transition--base;
     cursor: pointer;
