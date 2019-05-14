@@ -164,10 +164,13 @@ const NextPreviousContainer = props => {
     return {}; // final page
   };
 
-  const previousItem = getPreviousItem();
-  const nextItem = getNextItem();
+  if (currentTitle !== 'Home' && !navigationList[navIndex]) {
+    return null;
+  }
 
-  return <NextPrevious previousItem={previousItem} nextItem={nextItem} />;
+  return (
+    <NextPrevious previousItem={getPreviousItem()} nextItem={getNextItem()} />
+  );
 };
 
 export default NextPreviousContainer;
