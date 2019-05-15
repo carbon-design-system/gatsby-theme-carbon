@@ -2,17 +2,26 @@
 title: ResourceCard
 ---
 
-import { Row, Column, ResourceCard } from 'gatsby-theme-carbon';
+import {
+  Row,
+  Column,
+  ResourceCard,
+  PageDescription,
+} from 'gatsby-theme-carbon';
 
-## ResourceCard
+<PageDescription>
 
-The `<ResourceCard>` component should generally be used inside of a `<Row>` and `<Column>` with a `className="resource-card-group"` placed on the container row. This allows the correct border placement between a group of cards.
+The `<ResourceCard>` component should generally be used inside of a `<Row>` and test `<Column>` with a `className="resource-card-group"` placed on the container row. This allows the correct border placement between a group of cards.
+
+</PageDescription>
+
+## Examples
 
 <Row className="resource-card-group">
 <Column colMd={4} colLg={4} noGutterSm>
     <ResourceCard
-      subTitle="Design Kit"
-      title="Explore & Create"
+      subTitle="With subtitle"
+      title="Title"
       aspectRatio="2:1"
       actionIcon="arrowRight"
       href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
@@ -24,7 +33,7 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
 </Column>
 <Column colMd={4} colLg={4} noGutterSm>
     <ResourceCard
-      subTitle="Download"
+      subTitle="Only subtitle"
       actionIcon="download"
       aspectRatio="2:1"
       href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
@@ -36,8 +45,8 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
 </Column>
 <Column colMd={4} colLg={4} noGutterSm>
     <ResourceCard
-      subTitle="Design Kit"
-      title="Explore & Create"
+      subTitle="Alternate color"
+      title="Dark"
       aspectRatio="2:1"
       dark
       href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
@@ -59,14 +68,14 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
 </Column>
 </Row>
 
-<br />
+## Code
 
+#### With title
 ```
-<Row className="resource-card-group">
 <Column colMd={4} colLg={4} noGutterSm>
     <ResourceCard
-      subTitle="Design Kit"
-      title="Explore & Create"
+      subTitle="With subtitle"
+      title="Title"
       aspectRatio="2:1"
       actionIcon="arrowRight"
       href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
@@ -76,9 +85,13 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
 
   </ResourceCard>
 </Column>
+```
+
+#### Only subtitle
+```
 <Column colMd={4} colLg={4} noGutterSm>
     <ResourceCard
-      subTitle="Download"
+      subTitle="Only subtitle"
       actionIcon="download"
       aspectRatio="2:1"
       href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
@@ -88,10 +101,15 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
 
   </ResourceCard>
 </Column>
+
+```
+
+#### Dark
+```
 <Column colMd={4} colLg={4} noGutterSm>
     <ResourceCard
-      subTitle="Design Kit"
-      title="Explore & Create"
+      subTitle="Alternate color"
+      title="Dark"
       aspectRatio="2:1"
       dark
       href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
@@ -101,20 +119,21 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
 
   </ResourceCard>
 </Column>
+```
+
+#### Disabled
+```
 <Column colMd={4} colLg={4} noGutterSm>
     <ResourceCard
       title="Disabled card"
       aspectRatio="2:1"
       disabled
       href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-      >
-
-  </ResourceCard>
+    />
 </Column>
-</Row>
 ```
 
-### PropTypes
+## Props
 
 | property    | propType | required | default  | description                                                                             |
 | ----------- | -------- | -------- | -------- | --------------------------------------------------------------------------------------- |

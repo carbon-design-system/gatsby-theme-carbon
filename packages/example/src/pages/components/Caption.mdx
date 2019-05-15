@@ -2,44 +2,55 @@
 title: Caption
 ---
 
-import { Row, Column, Caption } from 'gatsby-theme-carbon';
+import { Row, Column, Caption, PageDescription } from 'gatsby-theme-carbon';
 
-## Caption
+<PageDescription>
 
-Captions are usually used below images or videos, they will default to 4 columns wide unless placed inside a `<Row>` component, then they will become the full width of their containing column.
+The `<Caption>` component is typically used below images or videos. They will default to 4 columns wide unless placed inside a `<Row>` component. In this case, it will assume the full width of its containing column.
 
-<br />
+</PageDescription>
+
+## Example
+
+#### Normal
+
+![Colors](images/colors.png)
 
 <Caption>
-  This is a caption. This is a caption. This is a caption. This is a caption.
-  This is a caption. This is a caption. This is a caption. This is a caption.
-  This is a caption
+  This is a regular caption. It will attempt to respond to it's container
+  element appropriately.
 </Caption>
 
+#### Full-width
+
+![Colors](images/colors.png)
+
 <Caption fullWidth>
-  This is a full width caption. This is a full width caption. This is a full
-  width caption. This is a full width caption. This is a full width caption.
-  This is a full width caption. This is a full width caption. This is a full
-  width caption. This is a full width caption.
+  This is a full width caption. With this prop, the caption's width will be 100%
+  so it will fill its container.
 </Caption>
+
+## Code
+
+#### Normal
 
 ```
 <Caption>
-  This is a caption. This is a caption. This is a caption. This is a caption.
-  This is a caption. This is a caption. This is a caption. This is a caption.
-  This is a caption
+  This is a regular caption. It will attempt to respond to it's container element appropriately.
 </Caption>
+```
 
+#### Full-width
+
+```
 <Caption fullWidth>
-  This is a full width caption. This is a full width caption. This is a full
-  width caption. This is a full width caption. This is a full width caption.
-  This is a full width caption. This is a full width caption. This is a full
-  width caption. This is a full width caption.
+  This is a full width caption. With this prop, the caption's width will be 100%
+  so it will fill its container.
 </Caption>
 
 ```
 
-### PropTypes
+## Props
 
 | property  | propType | required | default | description           |
 | --------- | -------- | -------- | ------- | --------------------- |

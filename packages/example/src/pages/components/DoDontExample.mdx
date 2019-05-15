@@ -2,11 +2,21 @@
 title: DoDontExample
 ---
 
-import { Row, Column, DoDontExample, Video } from 'gatsby-theme-carbon';
+import {
+  Row,
+  Column,
+  DoDontExample,
+  Video,
+  PageDescription,
+} from 'gatsby-theme-carbon';
 
-## DoDontExample
+<PageDescription>
 
 The `<DoDontExample>` component will generally need to be placed inside `<Row>` and `<Column>` components to align them to the grid at the correct size.
+
+</PageDescription>
+
+## Example
 
 <Row>
 <Column colMd={3} colLg={3}>
@@ -37,6 +47,8 @@ The `<DoDontExample>` component will generally need to be placed inside `<Row>` 
 </Column>
 </Row>
 
+## Code
+
 #### Image
 
 ```
@@ -63,7 +75,7 @@ The `<DoDontExample>` component will generally need to be placed inside `<Row>` 
 </DoDontExample>
 ```
 
-### PropTypes
+## Props
 
 | property     | propType | required | default | description                                                                                                                                                                                                                                        |
 | ------------ | -------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
