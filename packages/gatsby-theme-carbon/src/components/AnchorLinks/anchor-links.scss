@@ -1,15 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&text=%E2%86%B3');
+
 .#{$prefix}--anchor-links__list {
   width: auto;
-  margin-bottom: 0;
-  margin-top: $spacing-05;
-
-  @include carbon--breakpoint('md') {
-    margin-bottom: $spacing-07;
-  }
+  margin-bottom: $spacing-07;
 }
 
 .#{$prefix}--anchor-links__item {
-  @include carbon--type-style('expressive-heading-03', true);
   width: auto;
   list-style: none;
   padding-left: 0;
@@ -59,11 +55,11 @@
 }
 
 // Small
-.#{$prefix}--anchor-links__list--small {
-  margin-top: $spacing-05;
-}
+// .#{$prefix}--anchor-links__list--small {
+//   margin-top: $spacing-05;
+// }
 
-.#{$prefix}--anchor-links__link--small {
+.#{$prefix}--anchor-links__list--small .#{$prefix}--anchor-links__link {
   @include carbon--type-style('body-long-02');
   margin-bottom: 0;
 }

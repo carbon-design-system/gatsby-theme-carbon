@@ -21,6 +21,20 @@ module.exports = themeOptions => {
       `gatsby-plugin-sharp`,
       `gatsby-transformer-yaml`,
       {
+        resolve: `gatsby-plugin-prefetch-google-fonts`,
+        options: {
+          fonts: [
+            {
+              family: `IBM Plex Sans`,
+              variants: [`300`, `400`, `600`],
+            },
+            {
+              family: `IBM Plex Mono`,
+            },
+          ],
+        },
+      },
+      {
         resolve: `gatsby-source-filesystem`,
         name: `Nav`,
         options: {

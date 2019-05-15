@@ -3,15 +3,11 @@ import mq from '../../util/media-queries';
 import responsiveStyles from '../shared/responsiveStyles';
 import AutolinkHeader from '../AutolinkHeader';
 
-const h3Css = ({ typeStyles, layout }) => [
+const h3Css = ({ typeStyles, spacing }) => [
   responsiveStyles,
   typeStyles.expressiveHeading03,
   {
-    marginTop: layout[1],
-    marginBottom: layout[0],
-    [mq.sm]: {
-      marginTop: layout[2],
-    },
+    marginBottom: spacing[3],
   },
 ];
 

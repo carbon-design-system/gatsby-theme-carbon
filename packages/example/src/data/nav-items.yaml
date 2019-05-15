@@ -34,3 +34,6 @@
 - title: Resources
   pages:
     - path: /resources
+- title: Layout
+  pages:
+    - path: /layout
