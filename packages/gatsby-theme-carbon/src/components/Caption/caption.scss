@@ -8,7 +8,7 @@
 // Responsive by default
 .#{$prefix}--caption--responsive {
   // 4 columns wide
-  @include carbon--breakpoint('lg') {
+  @include carbon--breakpoint('md') {
     width: 50%;
   }
 

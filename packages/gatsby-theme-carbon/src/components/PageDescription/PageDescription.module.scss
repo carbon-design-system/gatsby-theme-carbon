@@ -1,0 +1,20 @@
+@import '~carbon-components/scss/globals/scss/vars';
+@import '~@carbon/elements/scss/type/type';
+
+.page-description p {
+  @include carbon--type-style('expressive-heading-03', true);
+  margin-bottom: $layout-03;
+
+  @include carbon--breakpoint('md') {
+    width: 70.833%;
+  }
+
+  @include carbon--breakpoint('lg') {
+    width: 62.5%;
+  }
+}
+
+.page-description code {
+  font-size: 0.75em;
+  line-height: 1.25;
+}
