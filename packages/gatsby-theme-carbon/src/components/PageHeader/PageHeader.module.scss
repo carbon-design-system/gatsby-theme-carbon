@@ -14,7 +14,7 @@
 }
 
 .text {
-  @include carbon--type-style('display-01');
+  @include carbon--type-style('display-01', true);
   margin-bottom: $spacing-06;
   margin-top: auto;
 }
