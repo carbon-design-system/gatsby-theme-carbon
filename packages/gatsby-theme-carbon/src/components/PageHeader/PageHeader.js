@@ -1,14 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import {
+  pageHeader,
+  text,
+  pageHeaderSticky,
+  pageHeaderShifted,
+} from './PageHeader.module.scss';
 
-import { pageHeader, text, pageHeaderSticky } from './PageHeader.module.scss';
-
-const PageHeader = ({ children, title, tabs = [] }) => (
+const PageHeader = ({ children, title, tabs = [], shouldHideHeader }) => (
   <div
     className={cx({
       [pageHeader]: pageHeader,
       [pageHeaderSticky]: tabs.length,
+      [pageHeaderShifted]: shouldHideHeader,
     })}
   >
     <div className="bx--grid">

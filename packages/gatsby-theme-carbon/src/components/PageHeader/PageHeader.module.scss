@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: flex-end;
   height: 15rem;
+  transition: top $duration--fast-02;
 }
 
 .text {
@@ -21,9 +22,9 @@
 .page-header--sticky {
   position: sticky;
   z-index: z('header');
-
-  /* page-head (15rem) 
-    - global-head (3rem) 
-    - tabs (3rem) */
   top: -9rem;
+}
+
+.page-header--sticky.page-header--shifted {
+  top: -12rem;
 }

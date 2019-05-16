@@ -10,7 +10,7 @@ import Container from './Container';
 
 import '../styles/index.scss';
 
-const Layout = ({ children, homepage, ...rest }) => {
+const Layout = ({ children, homepage, shouldHideHeader, ...rest }) => {
   const is404 = children.key === null;
 
   useLayoutEffect(() => {
@@ -28,9 +28,13 @@ const Layout = ({ children, homepage, ...rest }) => {
   return (
     <>
       <Meta />
-      <Header />
+      <Header shouldHideHeader={shouldHideHeader} />
       <Switcher />
-      <LeftNav homepage={homepage} is404Page={is404} />
+      <LeftNav
+        shouldHideHeader={shouldHideHeader}
+        homepage={homepage}
+        is404Page={is404}
+      />
       <Container homepage={homepage}>
         <MDXProvider>{children}</MDXProvider>
         <Footer />

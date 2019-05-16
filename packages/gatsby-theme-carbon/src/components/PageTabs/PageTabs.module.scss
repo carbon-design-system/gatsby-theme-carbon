@@ -18,7 +18,6 @@
 
 .list-item {
   display: flex;
-  align-self: center;
 }
 
 .list-item:not(.selected-item) .link {
@@ -31,14 +30,13 @@
 
 .link {
   @include carbon--type-style('body-short-02');
-  padding: 0 $spacing-09 0 $spacing-05;
+  padding: 13px $spacing-09 0 $spacing-05;
   text-decoration: none;
+  line-height: 1;
   color: $inverse-01;
   white-space: nowrap;
   border-top: 3px solid transparent; // 3px accessibility minimum
   height: 3rem;
-  display: inline-flex;
-  align-items: center;
   transition: all $duration--moderate-01 $carbon--standard-easing;
 
   &:hover {
