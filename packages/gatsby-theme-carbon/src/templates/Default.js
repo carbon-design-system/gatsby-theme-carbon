@@ -37,7 +37,7 @@ const Default = ({ pageContext, children, location }) => {
   const currentTab = getCurrentTab();
   return (
     <Layout homepage={false}>
-      <PageHeader title={title} label="label">
+      <PageHeader title={title} label="label" tabs={tabs}>
         {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}
       </PageHeader>
       <Main padded>{children}</Main>

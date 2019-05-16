@@ -1,0 +1,29 @@
+@import '~carbon-components/scss/globals/scss/vars';
+@import '~@carbon/elements/scss/type/type';
+@import '~carbon-components/scss/globals/scss/layout';
+
+.page-header {
+  background: $carbon--black-100;
+  color: $inverse-01;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 15rem;
+}
+
+.text {
+  @include carbon--type-style('display-01');
+  margin-bottom: $spacing-06;
+  margin-top: auto;
+}
+
+.page-header--sticky {
+  position: sticky;
+  z-index: z('header');
+
+  /* page-head (15rem) 
+    - global-head (3rem) 
+    - tabs (3rem) */
+  top: -9rem;
+}
