@@ -16,15 +16,9 @@ const PageHeader = ({ children, title, tabs = [], shouldHideHeader }) => (
       [pageHeaderShifted]: shouldHideHeader,
     })}
   >
-    <div className="bx--grid">
-      <div className="bx--row">
-        <div className="bx--col-lg-12">
-          <h2 id="page-title" className={text}>
-            {title}
-          </h2>
-        </div>
-      </div>
-    </div>
+    <h2 id="page-title" className={text}>
+      {title}
+    </h2>
     {children}
   </div>
 );

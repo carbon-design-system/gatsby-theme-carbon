@@ -1,0 +1,36 @@
+@import '~carbon-components/scss/globals/scss/vars';
+@import '~@carbon/elements/scss/type/type';
+
+.header {
+  margin-top: $spacing-07;
+}
+
+h1.header {
+  @include carbon--type-style('expressive-heading-05');
+  margin-bottom: $spacing-07;
+}
+
+h2.header {
+  @include carbon--type-style('expressive-heading-04');
+  margin-bottom: $spacing-05;
+}
+
+h3.header {
+  @include carbon--type-style('expressive-heading-03');
+  margin-bottom: $spacing-03;
+}
+
+h4.header {
+  @include carbon--type-style('heading-02');
+  margin-bottom: $spacing-01;
+}
+
+h5.header {
+  @include carbon--type-style('heading-01');
+  margin-bottom: $spacing-01;
+}
+
+h6.header {
+  @include carbon--type-style('heading-01');
+  margin-bottom: $spacing-01;
+}

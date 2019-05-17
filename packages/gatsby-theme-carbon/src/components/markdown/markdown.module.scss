@@ -1,0 +1,20 @@
+@import '~carbon-components/scss/globals/scss/vars';
+@import '~@carbon/elements/scss/type/type';
+
+.paragraph {
+  @include carbon--type-style('body-long-02');
+  margin-bottom: $spacing-04;
+}
+
+// Responsive by default
+.responsive {
+  // 7 columns wide
+  @include carbon--breakpoint('md') {
+    width: 62.5%;
+  }
+
+  // 5 columns wide
+  @include carbon--breakpoint('lg') {
+    width: 58.333%;
+  }
+}

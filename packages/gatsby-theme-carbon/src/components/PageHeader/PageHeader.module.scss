@@ -17,6 +17,15 @@
   @include carbon--type-style('display-01', true);
   margin-bottom: $spacing-06;
   margin-top: auto;
+  @include carbon--breakpoint('lg') {
+    padding-left: calc(
+      25% + 2rem
+    ); //2rem to account for 2rem left padding default on grid
+  }
+
+  @include carbon--breakpoint('max') {
+    padding-left: 400px;
+  }
 }
 
 .page-header--sticky {

@@ -1,16 +1,8 @@
 import React from 'react';
-import responsiveStyles from '../shared/responsiveStyles';
-
-const h5Css = ({ typeStyles, spacing }) => [
-  typeStyles.heading01,
-  responsiveStyles,
-  {
-    marginBottom: 0,
-  },
-];
+import { header } from './headers.module.scss';
 
 const H6 = ({ children, ...rest }) => (
-  <h6 css={h5Css} {...rest}>
+  <h6 className={header} {...rest}>
     {children}
   </h6>
 );

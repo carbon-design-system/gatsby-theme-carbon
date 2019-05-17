@@ -6,6 +6,15 @@
   margin: 0;
   width: 100%;
   box-shadow: 0 -1px 0 rgba($ui-02, 0.25);
+  @include carbon--breakpoint('lg') {
+    padding-left: calc(
+      25% + 2rem
+    ); //2rem to account for 2rem left padding default on grid
+  }
+
+  @include carbon--breakpoint('max') {
+    padding-left: 400px;
+  }
 }
 
 .list {

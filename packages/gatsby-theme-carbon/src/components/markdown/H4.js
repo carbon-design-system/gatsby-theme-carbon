@@ -1,16 +1,8 @@
 import React from 'react';
-import responsiveStyles from '../shared/responsiveStyles';
-
-const h4Css = ({ typeStyles, spacing }) => [
-  typeStyles.heading02,
-  responsiveStyles,
-  {
-    marginBottom: 0,
-  },
-];
+import { header } from './headers.module.scss';
 
 const H4 = ({ children, ...rest }) => (
-  <h4 css={h4Css} {...rest}>
+  <h4 className={header} {...rest}>
     {children}
   </h4>
 );

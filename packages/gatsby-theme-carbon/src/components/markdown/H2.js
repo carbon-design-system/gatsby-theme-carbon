@@ -1,18 +1,10 @@
 import React from 'react';
-import mq from '../../util/media-queries';
-import responsiveStyles from '../shared/responsiveStyles';
 import AutolinkHeader from '../AutolinkHeader';
 
-const h2Css = ({ typeStyles, spacing }) => [
-  typeStyles.expressiveHeading04,
-  responsiveStyles,
-  {
-    marginBottom: spacing[4],
-  },
-];
+import { header } from './headers.module.scss';
 
 const H2 = ({ children, ...rest }) => (
-  <AutolinkHeader is="h2" css={h2Css} {...rest}>
+  <AutolinkHeader is="h2" className={header} {...rest}>
     {children}
   </AutolinkHeader>
 );

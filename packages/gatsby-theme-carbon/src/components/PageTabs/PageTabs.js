@@ -40,15 +40,9 @@ export default class PageTabs extends React.Component {
 
     return (
       <div className={tabsContainer}>
-        <div className="bx--grid">
-          <div className="bx--row">
-            <div className="bx--col-lg-12 bx--col-no-gutter">
-              <nav>
-                <ul className={list}>{pageTabs}</ul>
-              </nav>
-            </div>
-          </div>
-        </div>
+        <nav>
+          <ul className={list}>{pageTabs}</ul>
+        </nav>
       </div>
     );
   }

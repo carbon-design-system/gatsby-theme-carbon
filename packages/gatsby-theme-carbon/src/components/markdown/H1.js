@@ -1,18 +1,9 @@
 import React from 'react';
-import mq from '../../util/media-queries';
-import responsiveStyles from '../shared/responsiveStyles';
 import AutolinkHeader from '../AutolinkHeader';
-
-const h1Css = ({ typeStyles, spacing }) => [
-  typeStyles.expressiveHeading05,
-  responsiveStyles,
-  {
-    marginBottom: spacing[4],
-  },
-];
+import { header } from './headers.module.scss';
 
 const H1 = ({ children, ...rest }) => (
-  <AutolinkHeader is="h1" css={h1Css} {...rest}>
+  <AutolinkHeader is="h1" className={header} {...rest}>
     {children}
   </AutolinkHeader>
 );
