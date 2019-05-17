@@ -1,60 +1,34 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { CodeSnippet } from 'carbon-components-react';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
+import theme from 'prism-react-renderer/themes/duotoneDark'
 
-/* import Prism from 'prismjs';
-import 'prismjs/components/prism-bash';
-import 'prismjs/components/prism-scss'; */
-import { CopyToClipboard } from 'react-copy-to-clipboard/lib/Component';
-import { settings } from 'carbon-components';
-
-const { prefix } = settings;
-
-export default class Code extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
-  };
-
-  state = {
-    copied: false,
-    multi: true,
-  };
-
-  componentDidMount() {
-    //Prism.highlightAll();
-    if (this.codeRef) {
-      if (this.codeRef.clientHeight > 20) {
-        this.setState({ multi: true });
-      } else {
-        this.setState({ multi: false });
-      }
-    }
-  }
-
-  /*  componentDidUpdate() {
-    Prism.highlightAll();
-  } */
-
-  render() {
-    const { children } = this.props;
-    const type = this.state.multi ? 'multi' : 'single';
-
-    let textToCopy;
-    if (children.props.children) {
-      textToCopy = children.props.children.replace(/(\$ )+/g, '');
-    }
-
+export default ({children, className, live}) => {
+  const language = className.replace(/language-/, '')
+  if (live) {
     return (
-      <div className={`${prefix}--snippet--website`}>
-        <CopyToClipboard
-          text={textToCopy}
-          onCopy={() => this.setState({ copied: true })}
-        >
-          <CodeSnippet type={type}>
-            <div ref={element => (this.codeRef = element)}>{children}</div>
-          </CodeSnippet>
-        </CopyToClipboard>
+      <div style={{marginTop: '40px'}}>
+        <LiveProvider code={children} theme={theme}>
+          <LivePreview />
+          <LiveEditor />
+          <LiveError />
+        </LiveProvider>
       </div>
-    );
+    )
   }
+  return (
+    <Highlight {...defaultProps} code={children} language={language} theme={theme}>
+      {({className, style, tokens, getLineProps, getTokenProps}) => (
+        <pre className={className} style={{...style, padding: '20px'}}>
+          {tokens.map((line, i) => (
+            <div key={i} {...getLineProps({line, key: i})}>
+              {line.map((token, key) => (
+                <span key={key} {...getTokenProps({token, key})} />
+              ))}
+            </div>
+          ))}
+        </pre>
+      )}
+    </Highlight>
+  )
 }

@@ -16,12 +16,16 @@ const components = {
   p: P,
   ol: Ol,
   ul: Ul,
-  pre: Code,
+  pre: props => <div {...props} />,
+  code: Code,
   table: PageTable,
 };
 
-const MDXProvider = ({ children }) => (
-  <Provider components={components}>{children}</Provider>
+const MDXProvider = props => (
+  <Provider components={components}>
+    <main {...props}>
+    </main>
+  </Provider>
 );
 
 export default MDXProvider;
