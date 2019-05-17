@@ -9,7 +9,7 @@ import {
   SideNavMenuItem,
 } from 'carbon-components-react/lib/components/UIShell';
 
-import { currentItem, currentItemText } from './LeftNavItem.module.scss';
+import { currentItem, currentItemText } from './LeftNav.module.scss';
 
 import NavContext from '../../util/context/NavContext';
 
