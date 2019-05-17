@@ -203,3 +203,7 @@ button {
 .website-alert + .#{$prefix}--header ~ .#{$prefix}--website-switcher {
   top: 5.5rem;
 }
+
+.bx--website-switcher {
+  z-index: z('floating');
+}

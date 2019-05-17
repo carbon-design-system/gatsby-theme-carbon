@@ -52,7 +52,7 @@ const LeftNav = props => {
     <LeftNavWrapper
       ref={sideNavRef}
       expanded={leftNavIsOpen}
-      homepage={props.homepage}
+      shouldHideHeader={props.shouldHideHeader}
     >
       <SideNav
         expanded

@@ -1,44 +1,50 @@
-.page-tabs {
+@import '~carbon-components/scss/globals/scss/vars';
+@import '~carbon-components/scss/globals/scss/layout';
+@import '~@carbon/elements/scss/type/type';
+
+.tabs-container {
   margin: 0;
   width: 100%;
-  height: rem(48px);
-  position: relative;
   box-shadow: 0 -1px 0 rgba($ui-02, 0.25);
 }
 
-.page-tabs__list {
+.list {
   display: flex;
   flex-direction: row;
   width: 100%;
   list-style: none;
   padding: 0;
-  height: rem(48px);
-  position: relative;
 }
 
-.page-tabs__list li {
+.list-item {
   display: flex;
-  align-self: center;
 }
 
-.page-tabs__list li a {
+.list-item:not(.selected-item) .link {
+  color: $active-01;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.link {
   @include carbon--type-style('body-short-02');
-  padding: 0 $spacing-09 0 $spacing-05;
+  padding: 13px $spacing-09 0 $spacing-05;
   text-decoration: none;
+  line-height: 1;
   color: $inverse-01;
   white-space: nowrap;
   border-top: 3px solid transparent; // 3px accessibility minimum
-  height: rem(48px);
-  display: inline-flex;
-  align-items: center;
-  transition: $transition--base;
+  height: 3rem;
+  transition: all $duration--moderate-01 $carbon--standard-easing;
 
   &:hover {
     background: #353535;
   }
 }
 
-.page-tabs__list li.selected a {
+.selected-item .link {
   border-top: 3px solid $brand-01; // 3px accessibility minimum
   background: $carbon--gray-80;
 }
