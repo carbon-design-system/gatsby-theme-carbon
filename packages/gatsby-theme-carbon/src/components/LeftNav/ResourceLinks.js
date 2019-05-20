@@ -7,20 +7,23 @@ const LeftNavResourceLinks = ({ links }) =>
   links ? (
     <>
       <hr className="bx--side-nav__divider" />
-      {links.map((link, i) => (
-        <SideNavLink
-          key={i}
-          style={{ marginTop: i === 0 ? '1rem' : 0 }}
-          icon={<LaunchIcon />}
-          href={link.href}
-          className="bx--side-nav--website-link"
-          element={!link.href.includes('http') ? Link : 'a'}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {link.title}
-        </SideNavLink>
-      ))}
+      {links.map((link, i) => {
+        const linkProps = !link.href.includes('http')
+          ? { element: Link }
+          : { element: 'a', target: '_blank', rel: 'noopener noreferral' }
+        return (
+          <StyledLink
+            key={i}
+            style={{ marginTop: i === 0 ? '1rem' : 0 }}
+            icon={<LaunchIcon />}
+            href={link.href}
+            className="bx--side-nav--website-link"
+            {...linkProps}
+          >
+            {link.title}
+          </StyledLink>
+        )
+      })}
     </>
   ) : null;
 
