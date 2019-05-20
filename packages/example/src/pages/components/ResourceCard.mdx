@@ -48,7 +48,7 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
       subTitle="Alternate color"
       title="Dark"
       aspectRatio="2:1"
-      dark
+      color="dark"
       href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
       >
 
@@ -71,6 +71,7 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
 ## Code
 
 #### With title
+
 ```
 <Column colMd={4} colLg={4} noGutterSm>
     <ResourceCard
@@ -88,6 +89,7 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
 ```
 
 #### Only subtitle
+
 ```
 <Column colMd={4} colLg={4} noGutterSm>
     <ResourceCard
@@ -105,13 +107,14 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
 ```
 
 #### Dark
+
 ```
 <Column colMd={4} colLg={4} noGutterSm>
     <ResourceCard
       subTitle="Alternate color"
       title="Dark"
       aspectRatio="2:1"
-      dark
+      color="dark"
       href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
       >
 
@@ -122,6 +125,7 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
 ```
 
 #### Disabled
+
 ```
 <Column colMd={4} colLg={4} noGutterSm>
     <ResourceCard
@@ -143,6 +147,6 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
 | title       | string   |          |          | Large title                                                                             |
 | actionIcon  | string   |          | `launch` | Action icon, default is launch, options are `Launch`, `ArrowRight`, `Download`, `Error` |
 | aspectRatio | string   |          | 2:1      | Set card aspect ratio, default is 2:1, options are 1:1, 16:9, 4:3                       |
-| dark        | bool     |          | false    | Set true for dark card                                                                  |
+| color       | string   |          | light    | Set to `dark` for dark background                                                       |
 | disabled    | bool     |          | false    | Set for disabled card                                                                   |
 | className   | string   |          |          | Add custom class name                                                                   |
