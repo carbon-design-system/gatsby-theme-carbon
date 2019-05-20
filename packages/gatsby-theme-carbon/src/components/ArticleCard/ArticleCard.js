@@ -45,9 +45,9 @@ export default class ArticleCard extends React.Component {
     actionIcon: PropTypes.string,
 
     /**
-     * Use for dark card
+     * set to "dark" for dark background card
      */
-    dark: PropTypes.bool,
+    color: PropTypes.string,
 
     /**
      * Use for disabled card
@@ -61,7 +61,7 @@ export default class ArticleCard extends React.Component {
   };
 
   static defaultProps = {
-    dark: false,
+    color: 'light',
     disabled: false,
     actionIcon: '',
   };
@@ -74,7 +74,7 @@ export default class ArticleCard extends React.Component {
       author,
       date,
       readTime,
-      dark,
+      color,
       disabled,
       actionIcon,
       className,
@@ -88,7 +88,7 @@ export default class ArticleCard extends React.Component {
     const ArticleCardClassNames = classnames([`${prefix}--article-card`], {
       [className]: className,
       [`${prefix}--article-card--disabled`]: disabled,
-      [`${prefix}--article-card--dark`]: dark,
+      [`${prefix}--article-card--dark`]: color === 'dark',
     });
 
     const aspectRatioClassNames = classnames(
