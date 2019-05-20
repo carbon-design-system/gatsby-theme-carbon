@@ -12,7 +12,7 @@ const LeftNavResourceLinks = ({ links }) =>
           ? { element: Link }
           : { element: 'a', target: '_blank', rel: 'noopener noreferral' }
         return (
-          <StyledLink
+          <SideNavLink
             key={i}
             style={{ marginTop: i === 0 ? '1rem' : 0 }}
             icon={<LaunchIcon />}
@@ -21,7 +21,7 @@ const LeftNavResourceLinks = ({ links }) =>
             {...linkProps}
           >
             {link.title}
-          </StyledLink>
+          </SideNavLink>
         )
       })}
     </>
