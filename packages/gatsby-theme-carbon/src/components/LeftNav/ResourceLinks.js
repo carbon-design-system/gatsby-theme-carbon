@@ -15,6 +15,8 @@ const LeftNavResourceLinks = ({ links }) =>
           href={link.href}
           className="bx--side-nav--website-link"
           element={!link.href.includes('http') ? Link : 'a'}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {link.title}
         </SideNavLink>
