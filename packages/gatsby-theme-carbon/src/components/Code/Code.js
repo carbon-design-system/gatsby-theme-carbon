@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CodeSnippet } from 'carbon-components-react';
+import { Button, CodeSnippet } from 'carbon-components-react';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-import theme from 'prism-react-renderer/themes/dracula';
-import { Button } from 'carbon-components-react';
 
 /* import Prism from 'prismjs';
 import 'prismjs/components/prism-bash';
@@ -11,6 +9,7 @@ import 'prismjs/components/prism-scss'; */
 import { CopyToClipboard } from 'react-copy-to-clipboard/lib/Component';
 import { Row } from '../Grid';
 import { settings } from 'carbon-components';
+import liveCodeTheme from './carbon-theme';
 
 const { prefix } = settings;
 
@@ -42,11 +41,24 @@ export default class Code extends React.Component {
   render() {
     /// Render a live code snippet.
     if (this.props.live) {
+
       const scope = { Button };
 
       return (
-        <LiveProvider code={this.props.children} theme={theme} scope={scope}>
-          <LivePreview />
+        <LiveProvider code={this.props.children} theme={liveCodeTheme} scope={scope}>
+          <LivePreview css={theme => ({
+            display: 'flex',
+            alignTtems: 'center',
+            justifyContent: 'center',
+            width: '100%',
+            minHeight: '12.5rem',
+            position: 'relative',
+            padding: theme.layout[2],
+            margin: '0',
+            backgroundColor: theme.colors.uiBackground,
+            color: theme.colors.text01,
+            border: `${theme.spacing[4] + ' solid ' + theme.colors.uiBackground}`
+          })} />
           <LiveEditor />
           <LiveError />
         </LiveProvider>
