@@ -2,6 +2,7 @@
 
 .header {
   position: relative;
+
   &:hover {
     .anchor {
       opacity: 1;
@@ -15,10 +16,12 @@
   position: absolute;
   left: -$spacing-06;
   top: 0;
+
   &:hover,
   &:active {
     opacity: 1;
   }
+  
   svg {
     fill: $interactive-01;
   }

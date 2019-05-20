@@ -1,0 +1,57 @@
+---
+title: FeatureCard
+---
+
+import { Row, Column, FeatureCard, PageDescription } from 'gatsby-theme-carbon';
+
+<PageDescription>
+
+The `<FeatureCard>` component takes the same props as the `<ResourceCard>` component (except for `aspectRatio`, this is fixed at `1:2` for the card), this component should not be used within `<Row>` or `<Column>` components as the grid is built in to the component already.
+
+</PageDescription>
+
+## Example
+
+<FeatureCard
+  subTitle="With subtitle"
+  title="Title"
+  actionIcon="arrowRight"
+  href="/"
+  color="dark"
+  >
+
+![demo image](/images/large-image.png)
+
+</FeatureCard>
+
+## Code
+
+```
+
+<FeatureCard
+  subTitle="With subtitle"
+  title="Title"
+  actionIcon="arrowRight"
+  href="/"
+  disabled
+  color="dark"
+  >
+
+![demo image](/images/large-image.png)
+
+</FeatureCard>
+
+```
+
+## Props
+
+| property   | propType | required | default  | description                                                                             |
+| ---------- | -------- | -------- | -------- | --------------------------------------------------------------------------------------- |
+| children   | node     |          |          | Use large image as child, will display above the card                                   |
+| href       | string   |          |          | Set url for card                                                                        |
+| subTitle   | string   |          |          | Smaller title                                                                           |
+| title      | string   |          |          | Large title                                                                             |
+| actionIcon | string   |          | `launch` | Action icon, default is launch, options are `Launch`, `ArrowRight`, `Download`, `Error` |
+| color      | string   |          | light    | Set to `dark` for dark background                                                       |
+| disabled   | bool     |          | false    | Set for disabled card                                                                   |
+| className  | string   |          |          | Add custom class name                                                                   |
