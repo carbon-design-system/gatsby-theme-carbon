@@ -1,6 +1,6 @@
 //Card groups
 // Set spacing to the right of the group
-.resource-card-group .#{$prefix}--col-lg-4:nth-child(2) {
+.resource-card-group .#{$prefix}--col-lg-4:nth-child(2n) {
   @include carbon--breakpoint('lg') {
     margin-right: 33%;
   }

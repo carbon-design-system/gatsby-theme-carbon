@@ -9,6 +9,7 @@ import { Button } from 'carbon-components-react';
 import 'prismjs/components/prism-bash';
 import 'prismjs/components/prism-scss'; */
 import { CopyToClipboard } from 'react-copy-to-clipboard/lib/Component';
+import { Row } from '../Grid';
 import { settings } from 'carbon-components';
 
 const { prefix } = settings;
@@ -61,16 +62,18 @@ export default class Code extends React.Component {
 
     /// Render class Carbon code snippet.
     return (
-      <div className={`${prefix}--snippet--website`}>
-        <CopyToClipboard
-          text={textToCopy}
-          onCopy={() => this.setState({ copied: true })}
-        >
-          <CodeSnippet type={type}>
-            <div ref={element => (this.codeRef = element)}>{this.props.children}</div>
-          </CodeSnippet>
-        </CopyToClipboard>
-      </div>
+      <Row>
+        <div className={`${prefix}--snippet--website`}>
+          <CopyToClipboard
+            text={textToCopy}
+            onCopy={() => this.setState({ copied: true })}
+          >
+            <CodeSnippet type={type}>
+              <div ref={element => (this.codeRef = element)}>{children}</div>
+            </CodeSnippet>
+          </CopyToClipboard>
+        </div>
+      </Row>
     );
   }
 }
