@@ -5,19 +5,17 @@
 @import '~@carbon/elements/scss/layout/breakpoint';
 @import '~@carbon/elements/scss/layout/layout';
 @import '~@carbon/elements/scss/grid/grid';
-
-@import '~@carbon/elements/scss/type/type';
-@import '~@carbon/elements/scss/type/font-face/sans';
-@import '~@carbon/elements/scss/type/font-face/serif';
-@import '~@carbon/elements/scss/type/font-face/mono';
-@import '~@carbon/elements/scss/type/classes';
-
 @import '~@carbon/elements/scss/colors/colors';
 
+@import '~@carbon/elements/scss/type/classes';
+@import '~@carbon/elements/scss/type/reset';
 @include carbon--type-reset();
-@include carbon--font-face-mono();
-@include carbon--font-face-sans();
-@include carbon--font-face-serif();
+
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&text=%E2%86%B3'); // ↳ special character
+
+$font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+$font-family-mono: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
+  'Bitstream Vera Sans Mono', Courier, monospace;
 
 $feature-flags: (
   ui-shell: true,
@@ -36,10 +34,6 @@ $prefix: 'bx';
 @import '~@carbon/addons-website/scss/components/website-header-nav';
 @import '~@carbon/addons-website/scss/components/website-side-nav';
 @import '~@carbon/addons-website/scss/components/website-back-to-top-btn';
-
-$font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
-$font-family-mono: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
-  'Bitstream Vera Sans Mono', Courier, monospace;
 
 //---------------------------------------
 // Page styles

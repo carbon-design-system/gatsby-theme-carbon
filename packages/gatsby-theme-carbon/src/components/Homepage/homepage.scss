@@ -87,3 +87,7 @@
     padding-left: 400px;
   }
 }
+
+.container--homepage .#{$prefix}--col-no-gutter {
+  padding: 0;
+}
