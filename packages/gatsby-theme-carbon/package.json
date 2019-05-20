@@ -54,7 +54,6 @@
     "lodash": "^4.17.11",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.11.0",
-    "prism-react-renderer": "^0.1.6",
     "prop-types": "^15.7.2",
     "react-helmet": "^6.0.0-beta",
     "react-live": "^2.1.1",
