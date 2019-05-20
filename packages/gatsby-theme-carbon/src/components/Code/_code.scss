@@ -20,17 +20,11 @@ td > code {
 .#{$prefix}--snippet--website {
   @include carbon--type-style('code-02');
   margin-bottom: $spacing-06;
+  width: 100%;
 
   // 8 columns wide
   @include carbon--breakpoint('lg') {
     width: 66.667%;
-  }
-}
-
-// If code is inside a user specified row then allow the grid code to set the width
-.#{$prefix}--row .#{$prefix}--snippet--website {
-  @include carbon--breakpoint('lg') {
-    width: 100%;
   }
 }
 
