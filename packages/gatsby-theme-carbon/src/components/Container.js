@@ -4,7 +4,7 @@ import NavContext from '../util/context/NavContext';
 import useWindowSize from '../util/hooks/useWindowSize';
 
 const Overlay = styled.div`
-  z-index: 500;
+  z-index: 8000; /* z('overlay') */
   width: 100%;
   height: 100%;
   position: fixed;
