@@ -9,7 +9,7 @@ module.exports = themeOptions => {
     backgroundColor = colors.uiBackground,
     themeColor = colors.interactive01,
     display = 'browser',
-    fontWeights = ['300', '400', '600'],
+    additionalFontWeights = [],
     favicon = require.resolve('./src/images/light.png'),
   } = themeOptions;
 
@@ -27,7 +27,7 @@ module.exports = themeOptions => {
           fonts: [
             {
               family: `IBM Plex Sans`,
-              variants: fontWeights,
+              variants: [300, 400, 600, ...additionalFontWeights],
             },
             {
               family: `IBM Plex Mono`,
