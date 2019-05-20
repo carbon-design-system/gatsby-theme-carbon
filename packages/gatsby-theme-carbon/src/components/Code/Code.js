@@ -69,7 +69,7 @@ export default class Code extends React.Component {
             onCopy={() => this.setState({ copied: true })}
           >
             <CodeSnippet type={type}>
-              <div ref={element => (this.codeRef = element)}>{children}</div>
+              <div ref={element => (this.codeRef = element)}>{this.props.children}</div>
             </CodeSnippet>
           </CopyToClipboard>
         </div>
