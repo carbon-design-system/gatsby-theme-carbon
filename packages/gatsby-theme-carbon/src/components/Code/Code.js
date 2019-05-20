@@ -1,36 +1,76 @@
 import React from 'react';
-import Highlight, { defaultProps } from 'prism-react-renderer';
+import PropTypes from 'prop-types';
+import { CodeSnippet } from 'carbon-components-react';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import theme from 'prism-react-renderer/themes/dracula';
 import { Button } from 'carbon-components-react';
 
-export default ({children, className, live}) => {
-  const language = className.replace(/language-/, '');
-  const scope = { Button };
-  if (live) {
-    return (
-      <div style={{marginTop: '40px'}}>
-        <LiveProvider code={children} theme={theme} scope={scope}>
+/* import Prism from 'prismjs';
+import 'prismjs/components/prism-bash';
+import 'prismjs/components/prism-scss'; */
+import { CopyToClipboard } from 'react-copy-to-clipboard/lib/Component';
+import { settings } from 'carbon-components';
+
+const { prefix } = settings;
+
+export default class Code extends React.Component {
+  static propTypes = {
+    children: PropTypes.node,
+  };
+
+  state = {
+    copied: false,
+    multi: true,
+  };
+
+  componentDidMount() {
+    //Prism.highlightAll();
+    if (this.codeRef) {
+      if (this.codeRef.clientHeight > 20) {
+        this.setState({ multi: true });
+      } else {
+        this.setState({ multi: false });
+      }
+    }
+  }
+
+  /*  componentDidUpdate() {
+    Prism.highlightAll();
+  } */
+
+  render() {
+    /// Render a live code snippet.
+    if (this.props.live) {
+      const scope = { Button };
+
+      return (
+        <LiveProvider code={this.props.children} theme={theme} scope={scope}>
           <LivePreview />
           <LiveEditor />
           <LiveError />
         </LiveProvider>
+      )
+    }
+
+    const type = this.state.multi ? 'multi' : 'single';
+    let textToCopy;
+
+    if (!this.props.live && this.props.children) {
+      textToCopy = this.props.children.replace(/(\$ )+/g, '');
+    }
+
+    /// Render class Carbon code snippet.
+    return (
+      <div className={`${prefix}--snippet--website`}>
+        <CopyToClipboard
+          text={textToCopy}
+          onCopy={() => this.setState({ copied: true })}
+        >
+          <CodeSnippet type={type}>
+            <div ref={element => (this.codeRef = element)}>{this.props.children}</div>
+          </CodeSnippet>
+        </CopyToClipboard>
       </div>
-    )
+    );
   }
-  return (
-    <Highlight {...defaultProps} code={children} language={language} theme={theme}>
-      {({className, style, tokens, getLineProps, getTokenProps}) => (
-        <pre className={className} style={{...style, padding: '20px'}}>
-          {tokens.map((line, i) => (
-            <div key={i} {...getLineProps({line, key: i})}>
-              {line.map((token, key) => (
-                <span key={key} {...getTokenProps({token, key})} />
-              ))}
-            </div>
-          ))}
-        </pre>
-      )}
-    </Highlight>
-  )
 }
