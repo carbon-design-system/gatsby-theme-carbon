@@ -1,14 +1,16 @@
 import React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-import theme from 'prism-react-renderer/themes/duotoneDark'
+import theme from 'prism-react-renderer/themes/dracula';
+import { Button } from 'carbon-components-react';
 
 export default ({children, className, live}) => {
-  const language = className.replace(/language-/, '')
+  const language = className.replace(/language-/, '');
+  const scope = { Button };
   if (live) {
     return (
       <div style={{marginTop: '40px'}}>
-        <LiveProvider code={children} theme={theme}>
+        <LiveProvider code={children} theme={theme} scope={scope}>
           <LivePreview />
           <LiveEditor />
           <LiveError />
