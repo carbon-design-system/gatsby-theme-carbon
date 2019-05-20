@@ -40,9 +40,9 @@ export default class ResourceCard extends React.Component {
     aspectRatio: PropTypes.bool,
 
     /**
-     * Use for dark card
+     * set to "dark" for dark background card
      */
-    dark: PropTypes.bool,
+    color: PropTypes.string,
 
     /**
      * Use for disabled card
@@ -56,7 +56,7 @@ export default class ResourceCard extends React.Component {
   };
 
   static defaultProps = {
-    dark: false,
+    color: 'light',
     disabled: false,
     aspectRatio: '2:1',
     actionIcon: 'launch',
@@ -68,7 +68,7 @@ export default class ResourceCard extends React.Component {
       href,
       subTitle,
       title,
-      dark,
+      color,
       disabled,
       aspectRatio,
       actionIcon,
@@ -83,7 +83,7 @@ export default class ResourceCard extends React.Component {
     const ResourceCardClassNames = classnames([`${prefix}--resource-card`], {
       [className]: className,
       [`${prefix}--resource-card--disabled`]: disabled,
-      [`${prefix}--resource-card--dark`]: dark,
+      [`${prefix}--resource-card--dark`]: color === 'dark',
     });
 
     const aspectRatioClassNames = classnames([`${prefix}--aspect-ratio`], {
