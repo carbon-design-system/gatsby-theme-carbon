@@ -7,8 +7,10 @@
 @import '~@carbon/elements/scss/grid/grid';
 @import '~@carbon/elements/scss/colors/colors';
 
+@import '~@carbon/elements/scss/type/type';
+
 @import '~@carbon/elements/scss/type/classes';
-@import '~@carbon/elements/scss/type/reset';
+
 @include carbon--type-reset();
 
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&text=%E2%86%B3'); // ↳ special character
