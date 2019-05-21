@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { throttle as _throttle } from 'lodash';
 
 const initialValue = {
   innerWidth: null,
@@ -10,20 +11,20 @@ const initialValue = {
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState(initialValue);
 
-  function fetchWindowDimensionsAndSave() {
+  const fetchWindowDimensionsAndSave = _throttle(() => {
     setWindowSize({
       innerHeight: window.innerHeight,
       innerWidth: window.innerWidth,
       outerHeight: window.outerHeight,
       outerWidth: window.outerWidth,
     });
-  }
+  }, 100);
 
   // run on mount
   useEffect(() => {
     // run only once
     fetchWindowDimensionsAndSave();
-  }, []);
+  }, [fetchWindowDimensionsAndSave]);
 
   // set resize handler once on mount and clean before unmount
   useEffect(() => {
@@ -31,7 +32,7 @@ function useWindowSize() {
     return () => {
       window.removeEventListener('resize', fetchWindowDimensionsAndSave);
     };
-  }, []);
+  }, [fetchWindowDimensionsAndSave]);
 
   return windowSize;
 }
