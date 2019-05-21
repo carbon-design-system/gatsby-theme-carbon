@@ -56,7 +56,7 @@
 }
 
 .link--disabled {
-  padding: 6px 1rem;
+  padding: 6px $spacing-05;
   @include carbon--type-style('heading-01');
   display: block;
   color: $carbon--gray-60;
