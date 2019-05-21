@@ -41,33 +41,37 @@ export const SwitcherLink = ({ disabled, children, ...rest }) => (
   </li>
 );
 
-Switcher.defaultProps = {
-  children: [
-    <SwitcherLink href="https://ibm.com/design">IBM Design</SwitcherLink>,
+const DefaultChildren = () => (
+  <>
+    <SwitcherLink href="https://ibm.com/design">IBM Design</SwitcherLink>
     <SwitcherLink href="https://ibm.com/design/language">
       IBM Design Language
-    </SwitcherLink>,
-    <SwitcherLink disabled>IBM Brand Center</SwitcherLink>,
-    <SwitcherDivider>Design disciplines</SwitcherDivider>,
+    </SwitcherLink>
+    <SwitcherLink disabled>IBM Brand Center</SwitcherLink>
+    <SwitcherDivider>Design disciplines</SwitcherDivider>
     <SwitcherLink href="https://www.carbondesignsystem.com/">
       Product
-    </SwitcherLink>,
+    </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/standards/web/">
       Digital
-    </SwitcherLink>,
-    <SwitcherLink disabled>Events</SwitcherLink>,
-    <SwitcherDivider>Design practices</SwitcherDivider>,
+    </SwitcherLink>
+    <SwitcherLink disabled>Events</SwitcherLink>
+    <SwitcherDivider>Design practices</SwitcherDivider>
     <SwitcherLink href="https://www.ibm.com/design/thinking/">
       IBM Enterprise Design Thinking
-    </SwitcherLink>,
+    </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/design/language/disciplines/digital/">
       IBM Design Research
-    </SwitcherLink>,
+    </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/services/ibmix/">
       IBM iX
-    </SwitcherLink>,
-    <SwitcherLink disabled>IBM AI</SwitcherLink>,
-  ],
+    </SwitcherLink>
+    <SwitcherLink disabled>IBM AI</SwitcherLink>
+  </>
+);
+
+Switcher.defaultProps = {
+  children: <DefaultChildren />,
 };
 
 export default Switcher;
