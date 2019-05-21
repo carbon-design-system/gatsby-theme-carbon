@@ -14,6 +14,8 @@
       path: /components/ResourceCard
     - title: ArticleCard
       path: /components/ArticleCard
+    - title: FeatureCard
+      path: /components/FeatureCard
 - title: Contributing
   pages:
     - title: Agreement

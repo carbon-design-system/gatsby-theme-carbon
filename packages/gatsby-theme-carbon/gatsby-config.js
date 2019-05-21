@@ -9,6 +9,7 @@ module.exports = themeOptions => {
     backgroundColor = colors.uiBackground,
     themeColor = colors.interactive01,
     display = 'browser',
+    additionalFontWeights = [],
     favicon = require.resolve('./src/images/light.png'),
   } = themeOptions;
 
@@ -20,6 +21,20 @@ module.exports = themeOptions => {
     plugins: [
       `gatsby-plugin-sharp`,
       `gatsby-transformer-yaml`,
+      {
+        resolve: `gatsby-plugin-prefetch-google-fonts`,
+        options: {
+          fonts: [
+            {
+              family: `IBM Plex Sans`,
+              variants: [300, 400, 600, ...additionalFontWeights],
+            },
+            {
+              family: `IBM Plex Mono`,
+            },
+          ],
+        },
+      },
       {
         resolve: `gatsby-source-filesystem`,
         name: `Nav`,
@@ -37,7 +52,7 @@ module.exports = themeOptions => {
             {
               resolve: `gatsby-remark-images`,
               options: {
-                maxWidth: 1164,
+                maxWidth: 1184,
                 linkImagesToOriginal: false,
                 tracedSVG: true,
               },
