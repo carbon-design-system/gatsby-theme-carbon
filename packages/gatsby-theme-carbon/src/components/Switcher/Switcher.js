@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
-// import PropTypes from 'prop-types';
 import cx from 'classnames';
 import NavContext from '../../util/context/NavContext';
 import { useScrollDirection } from '../../util/hooks';
-import { nav, open, divider, link, linkDisabled } from './switcher.module.scss';
+import { nav, open, divider, link, linkDisabled } from './Switcher.module.scss';
 
 const Switcher = ({ children }) => {
   const { switcherIsOpen, toggleNavState } = useContext(NavContext);
@@ -47,7 +46,7 @@ const DefaultChildren = () => (
     <SwitcherLink href="https://ibm.com/design/language">
       IBM Design Language
     </SwitcherLink>
-    <SwitcherLink disabled>IBM Brand Center</SwitcherLink>
+    <SwitcherLink href="https://ibm.com/brand">IBM Brand Center</SwitcherLink>
     <SwitcherDivider>Design disciplines</SwitcherDivider>
     <SwitcherLink href="https://www.carbondesignsystem.com/">
       Product
