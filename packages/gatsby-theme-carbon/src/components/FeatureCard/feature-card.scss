@@ -4,6 +4,8 @@
 
 .#{$prefix}--feature-card__row {
   @include carbon--breakpoint('md') {
+    margin-left: -1rem;
+    margin-right: -1rem;
     position: absolute;
     bottom: 0;
     right: 0;
