@@ -69,7 +69,7 @@ const Footer = ({ Content, links, Logo }) => {
     <footer className="container--homepage" css={footerStyles}>
       <Grid css={gridStyles}>
         <Row css={rowStyles}>
-          <Column colLg={2} colMd={2}>
+          <Column colLg={2} colMd={2} noGutterSm>
             <ul css={listStyles}>
               {firstCol &&
                 firstCol.map((link, i) => (
@@ -81,7 +81,7 @@ const Footer = ({ Content, links, Logo }) => {
                 ))}
             </ul>
           </Column>
-          <Column colLg={2} colMd={2}>
+          <Column colLg={4} colMd={4}>
             <ul css={listStyles}>
               {secondCol &&
                 secondCol.map((link, i) => (
