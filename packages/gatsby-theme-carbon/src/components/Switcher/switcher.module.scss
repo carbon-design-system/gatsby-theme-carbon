@@ -2,13 +2,13 @@
 @import '~@carbon/elements/scss/type/type';
 
 .nav {
-  color: white;
+  color: $carbon--white-0;
   z-index: 10000;
   position: fixed;
   right: 0;
   top: 48px;
   height: 100%;
-  padding: 1rem 0;
+  padding: $spacing-05 0;
   width: 16rem;
   background-color: $carbon--gray-100;
   border-left: 1px solid $carbon--gray-80;
@@ -50,13 +50,13 @@
   }
 
   &:focus {
-    outline: 2px solid $brand-01;
+    outline: 2px solid $focus;
     outline-offset: -2px;
   }
 }
 
 .link--disabled {
-  padding: 6px 1rem;
+  padding: 6px $spacing-05;
   @include carbon--type-style('heading-01');
   display: block;
   color: $carbon--gray-60;
