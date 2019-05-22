@@ -29,19 +29,13 @@ const getPosition = () => {
   };
 };
 
-const defaultOptions = {
-  throttle: 100,
-};
-
-const useScrollPosition = options => {
-  const _options = { ...defaultOptions, ...options };
-
+const useScrollPosition = () => {
   const [position, setPosition] = useState(getPosition());
 
   useEffect(() => {
     const handleScroll = _throttle(() => {
       setPosition(getPosition());
-    }, _options.throttle);
+    }, 100);
 
     window.addEventListener(
       'scroll',
@@ -53,7 +47,7 @@ const useScrollPosition = options => {
       handleScroll.cancel();
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [_options.throttle]);
+  }, []);
 
   return position;
 };
