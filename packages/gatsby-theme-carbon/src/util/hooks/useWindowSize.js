@@ -30,7 +30,7 @@ function useWindowSize() {
   useEffect(() => {
     const handleResize = _throttle(() => {
       setWindowSize(getWindowSize());
-    }, 300);
+    }, 100);
     window.addEventListener('resize', handleResize);
 
     return () => {
