@@ -63,7 +63,7 @@
   margin-top: $spacing-05;
 }
 
-.#{$prefix}--anchor-links__link--small {
+.#{$prefix}--anchor-links__list--small .#{$prefix}--anchor-links__link {
   @include carbon--type-style('body-long-02');
   margin-bottom: 0;
 }

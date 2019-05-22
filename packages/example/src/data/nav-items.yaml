@@ -4,12 +4,18 @@
       path: /components/markdown
     - title: Demo
       path: /components/demo
+    - title: Grid
+      path: /components/Grid
     - title: DoDontExample
       path: /components/DoDontExample
     - title: Caption
       path: /components/Caption
     - title: Aside
       path: /components/Aside
+    - title: AnchorLinks
+      path: /components/AnchorLinks
+    - title: PageDescription
+      path: /components/PageDescription
     - title: ResourceCard
       path: /components/ResourceCard
     - title: ArticleCard

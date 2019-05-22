@@ -40,7 +40,7 @@ export default class ArticleCard extends React.Component {
     readTime: PropTypes.string,
 
     /**
-     * Action icon, default is blank, options are Launch, ArrowRight, Download, Error
+     * Action icon, default is blank, options are Launch, ArrowRight, Download
      */
     actionIcon: PropTypes.string,
 
