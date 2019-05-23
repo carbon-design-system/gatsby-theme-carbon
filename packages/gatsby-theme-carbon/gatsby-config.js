@@ -10,11 +10,13 @@ module.exports = themeOptions => {
     themeColor = colors.interactive01,
     display = 'browser',
     additionalFontWeights = [],
+    isSearchEnabled = false,
     favicon = require.resolve('./src/images/light.png'),
   } = themeOptions;
 
   return {
     siteMetadata: {
+      isSearchEnabled,
       title: 'Gatsby Theme Carbon',
     },
     pathPrefix: `/gatsby-theme-carbon`,

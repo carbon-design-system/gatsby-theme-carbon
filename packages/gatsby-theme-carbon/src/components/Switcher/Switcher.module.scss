@@ -1,0 +1,61 @@
+@import '~carbon-components/scss/globals/scss/vars';
+@import '~@carbon/elements/scss/type/type';
+
+.nav {
+  color: $carbon--white-0;
+  z-index: 10000;
+  position: fixed;
+  right: 0;
+  top: 48px;
+  height: 100%;
+  padding: $spacing-05 0;
+  width: 16rem;
+  background-color: $carbon--gray-100;
+  border-left: 1px solid $carbon--gray-80;
+  transform: translateX(16rem);
+  transition: transform $duration--moderate-01 $carbon--standard-easing;
+}
+
+.open {
+  transform: translateX(0);
+  box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.divider {
+  margin: 32px 1rem 0 1rem;
+  color: $carbon--gray-70;
+  padding-bottom: 4px;
+  border-bottom: 1px solid $carbon--gray-70;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+.divider span {
+  @include carbon--type-style('caption-01');
+  color: $carbon--gray-30;
+}
+
+.link {
+  padding: 6px 1rem;
+  @include carbon--type-style('heading-01');
+  display: block;
+  text-decoration: none;
+  color: $carbon--gray-30;
+
+  &:hover {
+    background: #353535;
+    color: $carbon--gray-10;
+  }
+
+  &:focus {
+    outline: 2px solid $focus;
+    outline-offset: -2px;
+  }
+}
+
+.link--disabled {
+  padding: 6px $spacing-05;
+  @include carbon--type-style('heading-01');
+  display: block;
+  color: $carbon--gray-60;
+}
