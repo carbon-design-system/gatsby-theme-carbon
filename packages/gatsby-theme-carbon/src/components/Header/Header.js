@@ -42,7 +42,10 @@ const Header = ({ children, shouldHideHeader }) => {
         <HeaderMenuButton
           className="bx--header__action--menu"
           aria-label="Open menu"
-          onClick={() => toggleNavState('leftNavIsOpen')}
+          onClick={() => {
+            toggleNavState('leftNavIsOpen');
+            toggleNavState('switcherIsOpen', 'close');
+          }}
           isActive={leftNavIsOpen}
         />
         <HeaderName prefix="" to="/" element={Link}>
@@ -56,6 +59,7 @@ const Header = ({ children, shouldHideHeader }) => {
             onClick={() => {
               toggleNavState('switcherIsOpen');
               toggleNavState('searchIsOpen', 'close');
+              toggleNavState('leftNavIsOpen', 'close');
             }}
           >
             {switcherIsOpen ? <Close20 /> : <AppSwitcher20 />}
