@@ -1,35 +1,41 @@
 import { useState, useEffect } from 'react';
+import { throttle as _throttle } from 'lodash';
 
-const initialValue = {
-  innerWidth: null,
-  innerHeight: null,
-  outerWidth: null,
-  outerHeight: null,
-};
-
-function useWindowSize() {
-  const [windowSize, setWindowSize] = useState(initialValue);
-
-  function fetchWindowDimensionsAndSave() {
-    setWindowSize({
+const getWindowSize = () => {
+  if (typeof window !== 'undefined') {
+    return {
       innerHeight: window.innerHeight,
       innerWidth: window.innerWidth,
       outerHeight: window.outerHeight,
       outerWidth: window.outerWidth,
-    });
+    };
   }
+  return {
+    innerWidth: null,
+    innerHeight: null,
+    outerWidth: null,
+    outerHeight: null,
+  };
+};
+
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState(getWindowSize());
 
   // run on mount
   useEffect(() => {
-    // run only once
-    fetchWindowDimensionsAndSave();
+    setWindowSize(getWindowSize());
   }, []);
 
   // set resize handler once on mount and clean before unmount
   useEffect(() => {
-    window.addEventListener('resize', fetchWindowDimensionsAndSave);
+    const handleResize = _throttle(() => {
+      setWindowSize(getWindowSize());
+    }, 100);
+    window.addEventListener('resize', handleResize);
+
     return () => {
-      window.removeEventListener('resize', fetchWindowDimensionsAndSave);
+      handleResize.cancel();
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
