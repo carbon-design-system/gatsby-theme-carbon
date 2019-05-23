@@ -9,14 +9,23 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 15rem;
   transition: top $duration--fast-02;
 }
 
 .text {
   @include carbon--type-style('display-01', true);
-  margin-bottom: $spacing-06;
+  margin-bottom: $spacing-07;
   margin-top: auto;
+}
+
+.text-container {
+  height: 20rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.text-container--tabs {
+  height: 17rem;
 }
 
 .page-header--sticky {
