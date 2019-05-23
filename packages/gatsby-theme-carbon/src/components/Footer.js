@@ -9,7 +9,7 @@ const footerStyles = ({ colors, layout }) => ({
   margin: 0,
   paddingBottom: layout[2],
   color: colors.active01,
-  backgroundColor: colors.interactive02,
+  backgroundColor: '#000',
 });
 
 const gridStyles = () => ({
@@ -59,8 +59,13 @@ const contentStyles = ({ colors, typeStyles }) => ({
 });
 
 const rowStyles = () => ({
-  padding: '0 2rem',
   width: '100%',
+  [mq.md]: {
+    paddingLeft: '1rem',
+  },
+  [mq.lg]: {
+    paddingLeft: 0,
+  },
 });
 
 const Footer = ({ Content, links, Logo }) => {

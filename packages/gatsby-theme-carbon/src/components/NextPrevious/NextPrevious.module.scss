@@ -7,9 +7,22 @@
 }
 
 .wrapper .link-container {
-  height: 8rem;
   display: flex;
+  height: 8rem;
   max-width: 99rem;
+
+  @include carbon--breakpoint('md') {
+    padding: 0 1rem;
+  }
+
+  @include carbon--breakpoint('lg') {
+    padding: 0;
+    padding-left: calc(25% + 1rem);
+  }
+
+  @include carbon--breakpoint('max') {
+    padding-left: calc(400px - 1rem);
+  }
 }
 
 .link-container .link {
