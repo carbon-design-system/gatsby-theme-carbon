@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  height: 20rem;
   transition: top $duration--fast-02;
 }
 
@@ -18,22 +19,12 @@
   margin-top: auto;
 }
 
-.text-container {
-  height: 20rem;
-  display: flex;
-  align-items: flex-end;
-}
-
-.text-container--tabs {
-  height: 17rem;
-}
-
 .page-header--sticky {
   position: sticky;
   z-index: z('header');
-  top: -9rem;
+  top: -14rem;
 }
 
 .page-header--sticky.page-header--shifted {
-  top: -12rem;
+  top: -17rem;
 }

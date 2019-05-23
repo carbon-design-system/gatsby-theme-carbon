@@ -6,8 +6,6 @@ import {
   text,
   pageHeaderSticky,
   pageHeaderShifted,
-  textContainer,
-  textContainerTabs,
 } from './PageHeader.module.scss';
 
 const PageHeader = ({ children, title, tabs = [], shouldHideHeader }) => (
@@ -20,11 +18,7 @@ const PageHeader = ({ children, title, tabs = [], shouldHideHeader }) => (
   >
     <div className="bx--grid">
       <div className="bx--row">
-        <div
-          className={cx('bx--col-lg-12', textContainer, {
-            [textContainerTabs]: tabs.length,
-          })}
-        >
+        <div className="bx--col-lg-12">
           <h2 id="page-title" className={text}>
             {title}
           </h2>

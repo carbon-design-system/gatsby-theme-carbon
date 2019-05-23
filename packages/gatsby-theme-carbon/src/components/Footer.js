@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { Row, Grid, Column } from './Grid';
 import mq from '../util/media-queries';
 
-const footerStyles = ({ colors, layout }) => ({
+const footerStyles = ({ layout }) => ({
   width: '100%',
   display: 'flex',
   margin: 0,
   paddingBottom: layout[2],
-  color: colors.active01,
+  color: '#bebebe',
   backgroundColor: '#000',
 });
 
@@ -20,10 +20,7 @@ const gridStyles = () => ({
   padding: '2rem 0',
   paddingLeft: '1rem',
   width: '100%',
-  [mq.lg]: {
-    maxWidth: '100rem',
-    width: '100%',
-  },
+  maxWidth: '99rem !important',
 });
 
 const listStyles = ({ colors, typeStyles }) => ({
@@ -48,6 +45,9 @@ const contentStyles = ({ colors, typeStyles }) => ({
   maxWidth: '33ch',
   paddingBottom: '1.5rem',
   marginBottom: '2.5rem',
+  color: '#bebebe',
+  padding: 0,
+  paddingLeft: '1rem',
   ...typeStyles.bodyLong01,
   a: {
     color: colors.ui02,
@@ -56,10 +56,15 @@ const contentStyles = ({ colors, typeStyles }) => ({
   'a:hover': {
     textDecoration: 'underline',
   },
+  [mq.md]: {
+    paddingLeft: 0,
+  },
+  [mq.lg]: {
+    paddingLeft: '0.5rem',
+  },
 });
 
 const rowStyles = () => ({
-  width: '100%',
   [mq.md]: {
     paddingLeft: '1rem',
   },
@@ -98,7 +103,7 @@ const Footer = ({ Content, links, Logo }) => {
                 ))}
             </ul>
           </Column>
-          <Column css={contentStyles} colLg={4} colMd={4}>
+          <Column css={contentStyles} colLg={4} colMd={4} offsetLg={2}>
             <Content />
           </Column>
         </Row>
