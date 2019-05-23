@@ -16,6 +16,7 @@ import { useScrollDirection } from '../../util/hooks';
 
 import GlobalSearch from '../GlobalSearch';
 import NavContext from '../../util/context/NavContext';
+import useMetadata from '../../util/hooks/useMetadata';
 
 import { hidden, header } from './Header.module.scss';
 
@@ -24,6 +25,7 @@ const Header = ({ children, shouldHideHeader }) => {
     NavContext
   );
   const direction = useScrollDirection();
+  const { isSearchEnabled } = useMetadata();
 
   const isHidden = shouldHideHeader && direction === 'down';
 
@@ -40,20 +42,24 @@ const Header = ({ children, shouldHideHeader }) => {
         <HeaderMenuButton
           className="bx--header__action--menu"
           aria-label="Open menu"
-          onClick={() => toggleNavState('leftNavIsOpen')}
+          onClick={() => {
+            toggleNavState('leftNavIsOpen');
+            toggleNavState('switcherIsOpen', 'close');
+          }}
           isActive={leftNavIsOpen}
         />
         <HeaderName prefix="" to="/" element={Link}>
           {children}
         </HeaderName>
         <HeaderGlobalBar>
-          <GlobalSearch />
+          {isSearchEnabled && <GlobalSearch />}
           <HeaderGlobalAction
             className="bx--header__action--switcher"
             aria-label="Switch"
             onClick={() => {
               toggleNavState('switcherIsOpen');
               toggleNavState('searchIsOpen', 'close');
+              toggleNavState('leftNavIsOpen', 'close');
             }}
           >
             {switcherIsOpen ? <Close20 /> : <AppSwitcher20 />}
