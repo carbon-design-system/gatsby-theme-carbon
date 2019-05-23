@@ -75,7 +75,35 @@ This is where we'll document the various utility components as they're added.
 
 ## 👻 Configuration and Shadowing
 
-Coming soon!
+### Global Search
+
+The GlobalSearch component is disabled by default. If you'd like to implement search functionality, you'll need to follow these two steps:
+
+1. set the isSearchEnabled theme option to true
+```js
+  __experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        isSearchEnabled: true
+      },
+    },
+  ],
+```
+
+2. Shadow the example search implementation at `/src/util/hooks/useSearch.js`
+
+```jsx
+import { useEffect } from 'react';
+const useAlgoliaSearch = () => {
+  // ...
+};
+
+export default useAlgoliaSearch;
+```
+
+
+The example `useSearch` hook demonstrates implementing search with [Algolia](https://www.algolia.com/). Algolia is free for open source libraries. You can shadow this hook and replace it with your Algolia credentials or a library of your choosing.
 
 ## 🚀 Deployment
 
