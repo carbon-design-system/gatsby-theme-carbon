@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import { Row, Grid, Column } from './Grid';
 import mq from '../util/media-queries';
 
-const footerStyles = ({ layout }) => ({
+const footerStyles = () => ({
   width: '100%',
   display: 'flex',
   margin: 0,
-  paddingBottom: layout[2],
   color: '#bebebe',
   backgroundColor: '#000',
 });
@@ -17,25 +16,31 @@ const gridStyles = () => ({
   display: 'flex',
   justifyContent: 'space-between',
   flexDirection: 'column',
-  padding: '2rem 0',
+  padding: '1.5rem 0 2rem 0',
   paddingLeft: '1rem',
   width: '100%',
   maxWidth: '99rem !important',
 });
 
 const listStyles = ({ colors, typeStyles }) => ({
-  paddingBottom: '1.5rem',
-  marginBottom: '2.5rem',
+  padding: 0,
+  paddingBottom: '2.5rem',
+  marginBottom: '1.5rem',
   ...typeStyles.bodyLong01,
   a: {
-    lineHeight: '1.25rem',
     color: colors.ui02,
     textDecoration: 'none',
   },
   'a:hover': {
     textDecoration: 'underline',
   },
-  borderBottom: `1px solid ${colors.ui04}`,
+  borderBottom: '1px solid rgb(86, 86, 86)',
+  [mq.sm]: {
+    li: {
+      lineHeight: '18px',
+      marginBottom: '0.5rem',
+    },
+  },
   [mq.md]: {
     borderBottom: 'none',
   },
@@ -52,9 +57,10 @@ const contentStyles = ({ colors, typeStyles }) => ({
   a: {
     color: colors.ui02,
     textDecoration: 'none',
+    borderBottom: `1px solid ${colors.ui02}`,
   },
-  'a:hover': {
-    textDecoration: 'underline',
+  [mq.sm]: {
+    paddingBottom: '3rem',
   },
   [mq.md]: {
     paddingLeft: 0,
