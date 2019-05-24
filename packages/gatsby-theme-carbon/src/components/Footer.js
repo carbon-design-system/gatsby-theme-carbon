@@ -9,6 +9,7 @@ const footerStyles = () => ({
   margin: 0,
   color: '#bebebe',
   backgroundColor: '#000',
+  overflowX: 'hidden',
 });
 
 const gridStyles = () => ({
@@ -26,6 +27,7 @@ const listStyles = ({ colors, typeStyles }) => ({
   padding: 0,
   paddingBottom: '2.5rem',
   marginBottom: '1.5rem',
+  marginRight: '1rem',
   ...typeStyles.bodyLong01,
   a: {
     color: colors.ui02,
