@@ -22,6 +22,8 @@
       path: /components/ArticleCard
     - title: FeatureCard
       path: /components/FeatureCard
+    - title: ImageCard
+      path: /components/ImageCard
 - title: Contributing
   pages:
     - title: Agreement
