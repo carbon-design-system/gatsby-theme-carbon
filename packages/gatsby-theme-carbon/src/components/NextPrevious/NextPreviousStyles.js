@@ -14,7 +14,7 @@ import {
 
 const NextPreviousContainer = ({ previousItem, nextItem }) => (
   <div className={wrapper}>
-    <div className={cx(linkContainer, 'bx--grid')}>
+    <div className={linkContainer}>
       {previousItem.to && (
         <Link className={cx(link, firstLink)} to={previousItem.to}>
           <div className={direction}>Previous</div>
