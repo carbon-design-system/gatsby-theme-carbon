@@ -79,7 +79,7 @@ export default class FeatureCard extends React.Component {
     const cardContent = (
       <>
         <Row>
-          <Column noGutterSm>
+          <Column noGutterMdLeft>
             <div
               className={`${prefix}--feature-card__img ${prefix}--aspect-ratio--1x1`}
             >
@@ -88,14 +88,15 @@ export default class FeatureCard extends React.Component {
               </div>
             </div>
           </Column>
-
+        </Row>
+        <Row className={`${prefix}--feature-card__row`}>
           <Column
-            className={`${prefix}--feature-card__row`}
             colMd={4}
             colLg={4}
             offsetLg={8}
             offsetMd={4}
-            noGutterSm
+            noGutterMdLeft
+            className={`${prefix}--feature-card__column`}
           >
             <ResourceCard
               title={title}
