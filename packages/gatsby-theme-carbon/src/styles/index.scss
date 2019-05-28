@@ -13,7 +13,8 @@
 
 @include carbon--type-reset();
 
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&text=%E2%86%B3'); // ↳ special character
+// special characters (arrows)
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&text=←→↑↓↔↕↖↗↘↙↚↛↮⟵⟶⟷↰↱↲↳⬐⬎⬑⬏↴↵');
 
 $font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
 $font-family-mono: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
