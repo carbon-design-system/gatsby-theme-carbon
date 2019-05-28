@@ -146,6 +146,9 @@ export default class ImageCard extends React.Component {
           {actionIcon === 'download' && !disabled ? (
             <Download20 aria-label="Download" />
           ) : null}
+          {actionIcon === 'email' && !disabled ? (
+            <Email20 aria-label="Email" />
+          ) : null}
           {actionIcon === 'disabled' || disabled === true ? (
             <Error20 aria-label="disabled" />
           ) : null}
