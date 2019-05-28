@@ -4,11 +4,17 @@
 
 .#{$prefix}--feature-card__row {
   @include carbon--breakpoint('md') {
-    margin-left: -1rem;
-    margin-right: -1rem;
     position: absolute;
+    left: 0;
     bottom: 0;
-    right: 0;
+    width: calc(
+      100% + 2rem
+    ); //needed to make the row the same width as other rows with the negative margins
+  }
+}
+
+.#{$prefix}--feature-card__column {
+  @include carbon--breakpoint('md') {
   }
 }
 
