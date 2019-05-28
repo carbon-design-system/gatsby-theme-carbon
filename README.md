@@ -75,6 +75,30 @@ This is where we'll document the various utility components as they're added.
 
 ## 👻 Configuration and Shadowing
 
+### Image Compression
+
+Leveraging gatsby-image requires you to provide full resolution, quality images. This is _especially_ true when the image is a photo rather than an illustration. The compression plugin falters for large images with relatively low pixel density. Full resolution photos from unsplash, IBM Digital assets, etc. routinely run 7-10mb. It's possible to over-ride the default quality of the gatsby plugin. But our _strong_ recommendation would be to use higher quality source images and let gatsby-image really do it's magic with image optimization. 
+
+If higher resolution is not an option, you can add the following to your gatsby-config and tweak the default optimization to your performance/quality needs:
+
+```js
+module.exports = {
+  siteMetadata: {
+    title: 'Gatsby Theme Carbon'
+  },
+  __experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        name: 'Gatsby Theme Carbon Starter',
+        shortName: 'Carbon Starter'
+      }
+    }
+  ],
+  plugins: [{ resolve: `gatsby-plugin-sharp`, options: { defaultQuality: 80 } }]
+}
+```
+
 ### Global Search
 
 The GlobalSearch component is disabled by default. If you'd like to implement search functionality, you'll need to follow these two steps:
