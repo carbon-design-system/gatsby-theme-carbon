@@ -21,6 +21,7 @@
 
 .list .link {
   @include carbon--type-style('body-short-02');
+  margin-bottom: $spacing-03;
   position: relative;
   display: inline-block;
   transition: color $transition--base;
@@ -50,15 +51,12 @@
   font-size: 1.25rem;
   line-height: 1.5;
   max-width: 500px;
+  margin-bottom: $spacing-06;
 }
 
 .heading {
   @include carbon--type-style('expressive-heading-04', true);
-  margin-bottom: $spacing-07;
-}
-
-.list {
-  margin-top: $spacing-06;
+  margin-bottom: $spacing-06;
 }
 
 .container {
