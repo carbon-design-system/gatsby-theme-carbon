@@ -43,6 +43,7 @@ $prefix: 'bx';
 //---------------------------------------
 
 @import 'page';
+@import './animations.css';
 
 @import '../components/markdown/markdown.scss';
 @import '../components/Homepage/homepage.scss';

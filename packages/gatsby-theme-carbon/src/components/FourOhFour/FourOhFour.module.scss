@@ -1,0 +1,91 @@
+@import '~carbon-components/scss/globals/scss/vars';
+@import '~@carbon/elements/scss/type/type';
+
+.four-oh-four {
+  @include carbon--type-style('display-02');
+  font-size: 144px;
+  background: linear-gradient(35deg, #92eeee, #a66efa);
+  display: inline-block;
+  background-size: 200% 200%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin: $spacing-08 0 10rem 0;
+  @include carbon--breakpoint('md') {
+    font-size: 25vw;
+  }
+  @include carbon--breakpoint('lg') {
+    font-size: 300px;
+  }
+  animation: gradient 2s ease infinite;
+}
+
+.list .link {
+  @include carbon--type-style('body-short-02');
+  margin-bottom: $spacing-03;
+  position: relative;
+  display: inline-block;
+  transition: color $transition--base;
+  color: white;
+  text-decoration: none;
+  margin-left: $spacing-05;
+
+  &:hover {
+    color: $carbon--blue-40;
+    &::before {
+      color: $carbon--blue-40;
+    }
+  }
+
+  &:before {
+    content: '\21B3'; //"↳"
+    position: absolute;
+    left: -$spacing-05;
+    color: white;
+    transition: color $transition--base;
+    cursor: pointer;
+  }
+}
+
+.paragraph {
+  @include carbon--type-style('body-long-01');
+  font-size: 1.25rem;
+  line-height: 1.5;
+  max-width: 500px;
+  margin-bottom: $spacing-06;
+}
+
+.heading {
+  @include carbon--type-style('expressive-heading-04', true);
+  margin-bottom: $spacing-06;
+}
+
+.container {
+  margin: 0;
+  margin-top: 6rem;
+  max-width: 100%;
+  min-height: calc(100vh - 455px);
+  padding-left: $spacing-07;
+  padding-right: $spacing-07;
+
+  @include carbon--breakpoint('lg') {
+    padding-left: calc(
+      25% + 2rem
+    ); //2rem to account for 2rem left padding default on grid
+  }
+
+  @include carbon--breakpoint('max') {
+    padding-left: 400px;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
