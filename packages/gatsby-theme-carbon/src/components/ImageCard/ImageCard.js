@@ -6,6 +6,7 @@ import Launch20 from '@carbon/icons-react/es/launch/20';
 import Download20 from '@carbon/icons-react/es/download/20';
 import ArrowRight20 from '@carbon/icons-react/es/arrow--right/20';
 import Error20 from '@carbon/icons-react/es/error/20';
+import Email20 from '@carbon/icons-react/es/email/20';
 import { settings } from 'carbon-components';
 
 const { prefix } = settings;
