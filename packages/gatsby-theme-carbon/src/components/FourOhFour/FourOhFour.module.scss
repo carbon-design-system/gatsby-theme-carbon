@@ -20,7 +20,7 @@
 }
 
 .list .link {
-  @include carbon--type-style('body-short-02', true);
+  @include carbon--type-style('body-short-02');
   position: relative;
   display: inline-block;
   transition: color $transition--base;
