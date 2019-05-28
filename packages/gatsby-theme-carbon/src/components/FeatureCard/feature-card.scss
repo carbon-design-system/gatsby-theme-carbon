@@ -20,10 +20,8 @@
 
 .#{$prefix}--feature-card__img {
   position: relative;
-}
-
-.#{$prefix}--feature-card .gatsby-resp-image-wrapper {
-  margin-bottom: 0;
+  margin-left: -1px;
+  margin-right: -1px;
 }
 
 .#{$prefix}--feature-card:hover
@@ -72,4 +70,11 @@
     left: auto !important;
     right: 0;
   }
+}
+
+// overrides for larger breakpoints
+.#{$prefix}--feature-card .gatsby-resp-image-wrapper {
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
