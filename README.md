@@ -75,28 +75,52 @@ This is where we'll document the various utility components as they're added.
 
 ## 👻 Configuration and Shadowing
 
+### 404 implementation
+
+1. Make a 404.js in your src/pages
+1. Import the 404 component from the theme
+1. Export the component and provide your own links
+1. If necessary, configure your server to route unknown routes to 404.html
+
+```jsx
+import React from 'react';
+import { FourOhFour } from 'gatsby-theme-carbon';
+
+const links = [
+  { href: '/components/markdown', text: 'Markdown' },
+  { href: '/components/Aside', text: 'Aside' },
+  { href: '/components/demo', text: 'Demo' },
+];
+
+const Custom404 = () => <FourOhFour links={links} />;
+
+export default Custom404;
+```
+
 ### Image Compression
 
-Leveraging gatsby-image requires you to provide full resolution, quality images. This is _especially_ true when the image is a photo rather than an illustration. The compression plugin falters for large images with relatively low pixel density. Full resolution photos from unsplash, IBM Digital assets, etc. routinely run 7-10mb. It's possible to over-ride the default quality of the gatsby plugin. But our _strong_ recommendation would be to use higher quality source images and let gatsby-image really do it's magic with image optimization. 
+Leveraging gatsby-image requires you to provide full resolution, quality images. This is _especially_ true when the image is a photo rather than an illustration. The compression plugin falters for large images with relatively low pixel density. Full resolution photos from unsplash, IBM Digital assets, etc. routinely run 7-10mb. It's possible to over-ride the default quality of the gatsby plugin. But our _strong_ recommendation would be to use higher quality source images and let gatsby-image really do it's magic with image optimization.
 
 If higher resolution is not an option, you can add the following to your gatsby-config and tweak the default optimization to your performance/quality needs:
 
 ```js
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Theme Carbon'
+    title: 'Gatsby Theme Carbon',
   },
   __experimentalThemes: [
     {
       resolve: 'gatsby-theme-carbon',
       options: {
         name: 'Gatsby Theme Carbon Starter',
-        shortName: 'Carbon Starter'
-      }
-    }
+        shortName: 'Carbon Starter',
+      },
+    },
   ],
-  plugins: [{ resolve: `gatsby-plugin-sharp`, options: { defaultQuality: 80 } }]
-}
+  plugins: [
+    { resolve: `gatsby-plugin-sharp`, options: { defaultQuality: 80 } },
+  ],
+};
 ```
 
 ### Global Search
@@ -104,6 +128,7 @@ module.exports = {
 The GlobalSearch component is disabled by default. If you'd like to implement search functionality, you'll need to follow these two steps:
 
 1. set the isSearchEnabled theme option to true
+
 ```js
   __experimentalThemes: [
     {
@@ -125,7 +150,6 @@ const useAlgoliaSearch = () => {
 
 export default useAlgoliaSearch;
 ```
-
 
 The example `useSearch` hook demonstrates implementing search with [Algolia](https://www.algolia.com/). Algolia is free for open source libraries. You can shadow this hook and replace it with your Algolia credentials or a library of your choosing.
 
