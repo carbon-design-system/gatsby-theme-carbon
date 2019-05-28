@@ -3,7 +3,7 @@ import { FourOhFour } from 'gatsby-theme-carbon';
 
 const links = [
   { href: '/components/markdown', text: 'Markdown' },
-  { href: '/components/aside', text: 'Aside' },
+  { href: '/components/Aside', text: 'Aside' },
   { href: '/components/demo', text: 'Demo' },
 ];
 

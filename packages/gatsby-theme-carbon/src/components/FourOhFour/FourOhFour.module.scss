@@ -3,46 +3,71 @@
 
 .four-oh-four {
   @include carbon--type-style('display-02');
-  font-size: 20vw;
+  font-size: 30vw;
   background: linear-gradient(35deg, #92eeee, #a66efa);
   display: inline-block;
   background-size: 200% 200%;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  margin-bottom: 6rem;
+  margin: $spacing-08 0;
+  @include carbon--breakpoint('md') {
+    font-size: 20vw;
+  }
   @include carbon--breakpoint('lg') {
     font-size: 300px;
   }
   animation: gradient 2s ease infinite;
 }
 
+.list .link {
+  @include carbon--type-style('body-short-02', true);
+  position: relative;
+  display: inline-block;
+  transition: color $transition--base;
+  color: white;
+  text-decoration: none;
+  margin-left: $spacing-05;
+
+  &:hover {
+    color: $interactive-01;
+    &::before {
+      color: $interactive-01;
+    }
+  }
+
+  &:before {
+    content: '\21B3'; //"↳"
+    position: absolute;
+    left: -$spacing-05;
+    color: white;
+    transition: color $transition--base;
+    cursor: pointer;
+  }
+}
+
 .paragraph {
   @include carbon--type-style('body-long-01');
   font-size: 1.25rem;
   line-height: 1.5;
+  max-width: 500px;
 }
 
 .heading {
   @include carbon--type-style('expressive-heading-04', true);
-  margin-bottom: 1rem;
+  margin-bottom: $spacing-07;
 }
 
 .list {
-  margin-top: 2rem;
-}
-
-.link {
-  @include carbon--type-style('body-short-01');
-  display: inline-block;
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
+  margin-top: $spacing-06;
 }
 
 .container {
   margin: 0;
-  margin-top: 4rem;
+  margin-top: 6rem;
   max-width: 100%;
   min-height: calc(100vh - 500px);
+  padding-left: $spacing-05;
+  padding-right: $spacing-05;
 
   @include carbon--breakpoint('lg') {
     padding-left: calc(

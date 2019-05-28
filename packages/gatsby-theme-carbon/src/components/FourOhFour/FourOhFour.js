@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../Layout';
-import styles, {
+import {
   container,
   fourOhFour,
   paragraph,
@@ -10,11 +10,10 @@ import styles, {
   list,
 } from './FourOhFour.module.scss';
 
-console.log(styles);
 const whoops = ({ links }) => {
   const getLinks = () => (
     <>
-      <br />
+      {' '}
       Maybe some of these most visited links will help you?
       <ul className={list}>
         {links.map(({ href, text }, i) => (
@@ -31,12 +30,12 @@ const whoops = ({ links }) => {
   return (
     <Layout homepage>
       <div className={container}>
-        <span className={fourOhFour}>404</span>
         <h2 className={heading}>Something's gone wrong...</h2>
         <p className={paragraph}>
           Sorry, we can't find the page you are looking for.
           {links && getLinks()}
         </p>
+        <span className={fourOhFour}>404</span>
       </div>
     </Layout>
   );
