@@ -16,9 +16,9 @@ const FourOhFour = ({ links }) => (
       <h2 className={heading}>Something’s gone wrong...</h2>
       <p className={paragraph}>
         Sorry, we can’t find the page you are looking for.
-        {links && ' Maybe some of these most visited links will help you?'}
+        {!links && ' Maybe some of these most visited links will help you?'}
       </p>
-      {links && (
+      {!links && (
         <ul className={list}>
           {links.map(({ href, text }, i) => (
             <li key={i}>
