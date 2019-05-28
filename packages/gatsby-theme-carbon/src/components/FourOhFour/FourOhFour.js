@@ -30,9 +30,9 @@ const whoops = ({ links }) => {
   return (
     <Layout homepage>
       <div className={container}>
-        <h2 className={heading}>Something's gone wrong...</h2>
+        <h2 className={heading}>Something’s gone wrong...</h2>
         <p className={paragraph}>
-          Sorry, we can't find the page you are looking for.
+          Sorry, we can’t find the page you are looking for.
           {links && getLinks()}
         </p>
         <span className={fourOhFour}>404</span>
