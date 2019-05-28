@@ -6,6 +6,7 @@ import Launch20 from '@carbon/icons-react/es/launch/20';
 import Download20 from '@carbon/icons-react/es/download/20';
 import ArrowRight20 from '@carbon/icons-react/es/arrow--right/20';
 import Error20 from '@carbon/icons-react/es/error/20';
+import Email20 from '@carbon/icons-react/es/email/20';
 import { settings } from 'carbon-components';
 
 const { prefix } = settings;
@@ -23,6 +24,11 @@ export default class ArticleCard extends React.Component {
      * Title
      */
     title: PropTypes.string,
+
+    /**
+     * sub title
+     */
+    subTitle: PropTypes.string,
 
     /**
      * Author
@@ -71,6 +77,7 @@ export default class ArticleCard extends React.Component {
       children,
       href,
       title,
+      subTitle,
       author,
       date,
       readTime,
@@ -108,7 +115,14 @@ export default class ArticleCard extends React.Component {
           <div
             className={`${prefix}--aspect-ratio--object ${prefix}--article-card__tile`}
           >
-            <h4 className={`${prefix}--article-card__title`}>{title}</h4>
+            {subTitle ? (
+              <h5 className={`${prefix}--article-card__subtitle`}>
+                {subTitle}
+              </h5>
+            ) : null}
+            {title ? (
+              <h4 className={`${prefix}--article-card__title`}>{title}</h4>
+            ) : null}
             <div className={`${prefix}--article-card__info`}>
               {author ? (
                 <p className={`${prefix}--article-card__author`}>{author}</p>
@@ -131,6 +145,9 @@ export default class ArticleCard extends React.Component {
               ) : null}
               {actionIcon === 'download' && !disabled ? (
                 <Download20 aria-label="Download" />
+              ) : null}
+              {actionIcon === 'email' && !disabled ? (
+                <Email20 aria-label="Email" />
               ) : null}
               {actionIcon === 'disabled' || disabled === true ? (
                 <Error20 aria-label="disabled" />
