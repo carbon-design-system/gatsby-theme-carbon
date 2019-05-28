@@ -9,22 +9,22 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 15rem;
+  height: 20rem;
   transition: top $duration--fast-02;
 }
 
 .text {
   @include carbon--type-style('display-01', true);
-  margin-bottom: $spacing-06;
+  margin-bottom: $spacing-07;
   margin-top: auto;
 }
 
 .page-header--sticky {
   position: sticky;
   z-index: z('header');
-  top: -9rem;
+  top: -14rem;
 }
 
 .page-header--sticky.page-header--shifted {
-  top: -12rem;
+  top: -17rem;
 }
