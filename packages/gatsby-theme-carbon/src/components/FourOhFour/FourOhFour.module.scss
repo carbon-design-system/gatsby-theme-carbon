@@ -3,15 +3,15 @@
 
 .four-oh-four {
   @include carbon--type-style('display-02');
-  font-size: 30vw;
+  font-size: 144px;
   background: linear-gradient(35deg, #92eeee, #a66efa);
   display: inline-block;
   background-size: 200% 200%;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  margin: $spacing-08 0;
+  margin: $spacing-08 0 10rem 0;
   @include carbon--breakpoint('md') {
-    font-size: 20vw;
+    font-size: 25vw;
   }
   @include carbon--breakpoint('lg') {
     font-size: 300px;
@@ -64,8 +64,8 @@
   margin-top: 6rem;
   max-width: 100%;
   min-height: calc(100vh - 500px);
-  padding-left: $spacing-05;
-  padding-right: $spacing-05;
+  padding-left: $spacing-07;
+  padding-right: $spacing-07;
 
   @include carbon--breakpoint('lg') {
     padding-left: calc(
