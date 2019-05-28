@@ -75,6 +75,21 @@ This is where we'll document the various utility components as they're added.
 
 ## 👻 Configuration and Shadowing
 
+### Additional font weights
+If needed, you can add support for additional Plex font weights
+
+```js
+__experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+		// will get added to default [300, 400, 600]
+        additionalFontWeights: [200]
+      },
+    },
+  ],
+```
+
 ### 404 implementation
 
 1. Make a 404.js in your src/pages
