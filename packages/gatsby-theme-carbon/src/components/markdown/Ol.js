@@ -12,7 +12,7 @@ const List = styled.ol`
   margin-bottom: 1.5rem;
 
   li {
-    margin-left: 1rem;
+    margin-left: 1.25rem;
     counter-increment: step-counter;
     a {
       color: ${({ theme }) => theme.colors.black};
@@ -20,14 +20,10 @@ const List = styled.ol`
     & :before {
       content: counter(step-counter) '. ';
       position: absolute;
-      margin-left: -0.5rem;
-      transform: translate(-100%, 0px);
+      margin-left: -1.25rem;
     }
     & p {
       display: inline;
-    }
-    ${mq.md} {
-      margin-left: 2rem;
     }
   }
 `;
