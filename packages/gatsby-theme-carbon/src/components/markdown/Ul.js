@@ -11,21 +11,17 @@ const List = styled.ul`
   margin-bottom: 1.5rem;
 
   li {
-    margin-left: 1rem;
+    margin-left: 1.25rem;
     a {
       color: ${props => props.theme.colors.white};
     }
     & :before {
       content: '–';
       position: absolute;
-      margin-left: -0.5rem;
-      transform: translate(-100%, 0px);
+      margin-left: -1.25rem;
     }
     & p {
       display: inline;
-    }
-    ${mq.md} {
-      margin-left: 2rem;
     }
   }
 `;
