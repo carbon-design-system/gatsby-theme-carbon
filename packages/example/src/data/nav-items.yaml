@@ -24,6 +24,8 @@
       path: /components/FeatureCard
     - title: ImageCard
       path: /components/ImageCard
+    - title: Tabs
+      path: /components/Tabs
 - title: Contributing
   pages:
     - title: Agreement
