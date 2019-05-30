@@ -57,6 +57,9 @@ module.exports = themeOptions => {
                 maxWidth: 1170,
                 linkImagesToOriginal: false,
                 quality: 75,
+                withWebp: {
+                  quality: 100,
+                },
               },
             },
             { resolve: `gatsby-remark-responsive-iframe` },
