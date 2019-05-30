@@ -4,6 +4,7 @@
 .#{$prefix}--paragraph {
   @include carbon--type-style('body-long-02');
   margin-bottom: $spacing-06;
+  padding-right: $spacing-05;
 }
 
 // Responsive by default
