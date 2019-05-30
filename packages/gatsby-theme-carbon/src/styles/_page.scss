@@ -103,6 +103,10 @@ button {
 }
 
 // images
+img {
+  max-width: 100%;
+}
+
 .gatsby-resp-image-wrapper {
   margin-bottom: $spacing-06;
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import mq from '../../util/media-queries';
 import responsiveStyles from '../shared/responsiveStyles';
 
 const textCss = ({ typeStyles }) => [typeStyles.bodyLong02, responsiveStyles];
