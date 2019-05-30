@@ -8,14 +8,14 @@
 
 // Responsive by default
 .#{$prefix}--paragraph--responsive {
-  // 7 columns wide
+  // 5 columns wide
   @include carbon--breakpoint('md') {
     width: 62.5%;
   }
 
-  // 5 columns wide
+  // 8 columns wide
   @include carbon--breakpoint('lg') {
-    width: 58.333%;
+    width: 66.667%;
   }
 }
 
