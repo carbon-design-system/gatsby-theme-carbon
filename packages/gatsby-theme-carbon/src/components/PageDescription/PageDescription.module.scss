@@ -6,11 +6,11 @@
   margin-bottom: $layout-03;
 
   @include carbon--breakpoint('md') {
-    width: 70.833%;
+    width: 62.5%;
   }
 
   @include carbon--breakpoint('lg') {
-    width: 62.5%;
+    width: 66.667%;
   }
 }
 
