@@ -1,7 +1,7 @@
 @import '~carbon-components/scss/globals/scss/vars';
 @import '~@carbon/elements/scss/type/type';
 
-.tab-container {
+nav.tab-container {
   margin-left: -$spacing-05;
   min-height: 2.5rem;
   width: 100vw;
@@ -10,7 +10,7 @@
   }
 }
 
-.tab-container .tab {
+nav.tab-container .tab {
   margin-left: 0;
   background-color: $ui-background;
   padding-left: $spacing-05;
@@ -34,7 +34,7 @@
   }
 }
 
-.tab-container .tab a {
+nav.tab-container .tab a {
   height: 3rem;
   padding-top: $spacing-05;
   transition: background-color $duration--fast-02;
@@ -77,7 +77,7 @@
 }
 
 // Dropdown container
-.tab-container div {
+nav.tab-container div {
   background-color: $ui-background;
   height: 3rem;
   border-top: 3px solid $interactive-01;
@@ -85,7 +85,7 @@
 }
 
 // Active dropdown item
-.tab-container div a {
+nav.tab-container div a {
   font-weight: 600;
   padding: 0;
 }
