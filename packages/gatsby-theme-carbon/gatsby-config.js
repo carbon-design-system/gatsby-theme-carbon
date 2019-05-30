@@ -54,9 +54,9 @@ module.exports = themeOptions => {
             {
               resolve: `gatsby-remark-images`,
               options: {
-                maxWidth: 1184,
+                maxWidth: 1170,
                 linkImagesToOriginal: false,
-                tracedSVG: true,
+                quality: 75,
               },
             },
             { resolve: `gatsby-remark-responsive-iframe` },
