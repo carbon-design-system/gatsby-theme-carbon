@@ -14,6 +14,7 @@ import FeatureCard from './FeatureCard';
 import ImageCard from './ImageCard';
 import { Row, Column, Grid } from './Grid';
 import { AnchorLink, AnchorLinks } from './AnchorLinks';
+import { Tab, Tabs } from './Tabs';
 
 const components = {
   wrapper: function Wrapper({ children, ...props }) {
@@ -43,6 +44,8 @@ const components = {
   ImageCard,
   AnchorLink,
   AnchorLinks,
+  Tab,
+  Tabs
 };
 
 const MDXProvider = ({ children }) => (
