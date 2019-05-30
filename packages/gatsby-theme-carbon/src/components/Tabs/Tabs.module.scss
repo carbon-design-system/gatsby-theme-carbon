@@ -62,10 +62,11 @@ nav.tab-container .tab a {
     &[aria-selected='true'] {
       background-color: $ui-background;
       padding-top: 9px;
+      padding-left: $spacing-05;
       border-top: 3px solid $interactive-01 !important;
     }
 
-    &:active {
+    &:active:not([aria-selected='true']) {
       padding-top: $spacing-04;
       padding-left: $spacing-05;
     }
