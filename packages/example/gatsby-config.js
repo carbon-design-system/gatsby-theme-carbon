@@ -19,8 +19,7 @@ module.exports = {
     {
       resolve: 'gatsby-theme-carbon',
       options: {
-        name: 'Gatsby Theme Carbon Starter',
-        shortName: 'Carbon Starter',
+        additionalFontWeights: [200],
       },
     },
   ],
