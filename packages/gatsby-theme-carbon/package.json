@@ -37,6 +37,7 @@
     "classnames": "^2.2.6",
     "emotion-theming": "^10.0.10",
     "gatsby-mdx": "^0.6.3",
+    "gatsby-plugin-catch-links": "^2.0.15",
     "gatsby-plugin-compile-es6-packages": "^1.1.0",
     "gatsby-plugin-emotion": "^4.0.7",
     "gatsby-plugin-manifest": "^2.1.1",

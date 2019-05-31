@@ -2,7 +2,7 @@ import React from 'react';
 import { WebsiteBackToTopBtn } from '@carbon/addons-website';
 import Layout from '../components/Layout';
 import { HomepageBanner, HomepageCallout } from '../components/Homepage';
-import Light from '../images/blossom.jpg';
+import Carbon from '../images/carbon.jpg';
 import Main from '../components/Main';
 
 import NextPrevious from '../components/NextPrevious';
@@ -35,7 +35,7 @@ Homepage.defaultProps = {
           Design System
         </h1>
       )}
-      image={Light}
+      image={Carbon}
     />
   ),
   FirstCallout: <HomepageCallout />,
