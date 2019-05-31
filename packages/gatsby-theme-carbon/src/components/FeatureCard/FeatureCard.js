@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Link } from 'gatsby';
+import { settings } from 'carbon-components';
 import { Row, Column } from '../Grid';
 import ResourceCard from '../ResourceCard';
-import { settings } from 'carbon-components';
 
 const { prefix } = settings;
 
