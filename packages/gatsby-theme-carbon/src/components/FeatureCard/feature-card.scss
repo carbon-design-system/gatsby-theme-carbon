@@ -21,10 +21,7 @@
 
 .#{$prefix}--feature-card__img {
   position: relative;
-  margin-left: -1px;
-  margin-right: -1px;
 }
-
 .#{$prefix}--feature-card:hover
   .#{$prefix}--feature-card__link
   .#{$prefix}--tile {
@@ -70,6 +67,7 @@
     width: auto !important;
     left: auto !important;
     right: 0;
+    object-fit: cover;
   }
 }
 
