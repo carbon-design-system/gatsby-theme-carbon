@@ -75,7 +75,33 @@ This is where we'll document the various utility components as they're added.
 
 ## 👻 Configuration and Shadowing
 
+### Favicon and Manifest
+
+One of the first configurations should be to override the default manifest options, you can do this in `gatsby-config.js`. Any options you don't set, will be provided by the theme. See the example project.
+
+```js
+siteMetadata: {
+    title: 'Gatsby Theme Carbon',
+  },
+  plugins: [
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Carbon Design Gatsby Theme',
+        short_name: 'Gatsby Theme Carbon',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#0062ff',
+        display: 'browser',
+        icon: './src/images/custom-favicon.png', // defaults to IBM rebus eye
+      },
+    },
+  ],
+  __experimentalThemes: [
+```
+
 ### Additional font weights
+
 If needed, you can add support for additional Plex font weights
 
 ```js
