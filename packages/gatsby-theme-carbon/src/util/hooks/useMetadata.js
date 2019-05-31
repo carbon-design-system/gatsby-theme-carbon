@@ -6,6 +6,8 @@ const useMetadata = () => {
       site {
         siteMetadata {
           title
+          description
+          keywords
           isSearchEnabled
         }
       }

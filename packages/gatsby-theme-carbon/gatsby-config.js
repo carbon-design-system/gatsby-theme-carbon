@@ -8,6 +8,9 @@ module.exports = themeOptions => {
     siteMetadata: {
       isSearchEnabled,
       title: 'Gatsby Theme Carbon',
+      description:
+        'Add a description by supplying it to siteMetadata in your gatsby-config.js file.',
+      keywords: 'gatsby,theme,carbon,design',
     },
     pathPrefix: `/gatsby-theme-carbon`,
     plugins: [
