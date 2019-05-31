@@ -2,17 +2,7 @@ const path = require('path');
 const colors = require('@carbon/themes');
 
 module.exports = themeOptions => {
-  const {
-    name = 'Gatsby Carbon Theme',
-    shortName = 'Carbon',
-    startUrl = '/',
-    backgroundColor = colors.uiBackground,
-    themeColor = colors.interactive01,
-    display = 'browser',
-    additionalFontWeights = [],
-    isSearchEnabled = false,
-    favicon = require.resolve('./src/images/light.png'),
-  } = themeOptions;
+  const { additionalFontWeights = [], isSearchEnabled = false } = themeOptions;
 
   return {
     siteMetadata: {
@@ -23,6 +13,7 @@ module.exports = themeOptions => {
     plugins: [
       `gatsby-plugin-sharp`,
       `gatsby-transformer-yaml`,
+      `gatsby-plugin-catch-links`,
       {
         resolve: `gatsby-plugin-prefetch-google-fonts`,
         options: {
@@ -102,13 +93,13 @@ module.exports = themeOptions => {
       {
         resolve: 'gatsby-plugin-manifest',
         options: {
-          name,
-          short_name: shortName,
-          start_url: startUrl,
-          background_color: backgroundColor,
-          theme_color: themeColor,
-          display,
-          favicon,
+          name: 'Carbon Design Gatsby Theme',
+          short_name: 'Gatsby Theme Carbon',
+          start_url: '/',
+          background_color: colors.uiBackground,
+          theme_color: colors.interactive01,
+          display: 'browser',
+          icon: require.resolve('./src/images/favicon.png'),
         },
       },
       `gatsby-plugin-react-helmet`,

@@ -15,6 +15,7 @@ import ImageCard from './ImageCard';
 import { Row, Column, Grid } from './Grid';
 import { AnchorLink, AnchorLinks } from './AnchorLinks';
 import { Tab, Tabs } from './Tabs';
+import Link from './Link';
 
 const components = {
   wrapper: function Wrapper({ children, ...props }) {
@@ -30,6 +31,7 @@ const components = {
   ul: Ul,
   pre: Code,
   table: PageTable,
+  a: Link,
   PageDescription,
   Video,
   DoDontExample,
@@ -45,7 +47,7 @@ const components = {
   AnchorLink,
   AnchorLinks,
   Tab,
-  Tabs
+  Tabs,
 };
 
 const MDXProvider = ({ children }) => (
