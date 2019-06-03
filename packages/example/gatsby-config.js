@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: 'gatsby-theme-carbon',
       options: {
-        additionalFontWeights: [200],
+        additionalFontWeights: ['200', '200i'],
       },
     },
   ],

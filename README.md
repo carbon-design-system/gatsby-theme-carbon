@@ -102,7 +102,7 @@ siteMetadata: {
 
 ### Additional font weights
 
-If needed, you can add support for additional Plex font weights
+If needed, you can add support for additional Plex font weights. Don't forget to specify italics for the additional weights if needed.
 
 ```js
 __experimentalThemes: [
@@ -110,7 +110,7 @@ __experimentalThemes: [
       resolve: 'gatsby-theme-carbon',
       options: {
 		// will get added to default [300, 400, 600]
-        additionalFontWeights: [200]
+        additionalFontWeights: ['200', '200i]
       },
     },
   ],
