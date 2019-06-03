@@ -22,5 +22,5 @@
 
 // If paragraph is inside a user specified row then allow the grid code to set the width
 .#{$prefix}--row .#{$prefix}--paragraph {
-  width: 100%;
+  width: calc(100% - 1rem);
 }

@@ -54,6 +54,14 @@ blockquote {
 
 blockquote .#{$prefix}--paragraph {
   @include carbon--type-style('expressive-heading-03');
+  @include carbon--breakpoint('md') {
+    width: calc(62.5% - 3rem);
+  }
+
+  // 8 columns wide
+  @include carbon--breakpoint('lg') {
+    width: calc(66.667% - 3rem);
+  }
 }
 
 //---------------------------------------
