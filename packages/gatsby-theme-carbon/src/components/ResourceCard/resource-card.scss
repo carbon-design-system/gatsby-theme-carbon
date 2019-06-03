@@ -30,6 +30,10 @@
   left: 1rem;
   width: 32px;
   height: 32px;
+
+  // Allows for variable-height icons
+  display: flex;
+  align-items: flex-end;
 }
 
 .#{$prefix}--resource-card__icon--action {
