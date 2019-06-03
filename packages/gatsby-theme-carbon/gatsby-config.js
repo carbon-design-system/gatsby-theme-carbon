@@ -23,7 +23,15 @@ module.exports = themeOptions => {
           fonts: [
             {
               family: `IBM Plex Sans`,
-              variants: [300, 400, 600, ...additionalFontWeights],
+              variants: [
+                300,
+                '300i',
+                400,
+                '400i',
+                600,
+                '600i',
+                ...additionalFontWeights,
+              ],
             },
             {
               family: `IBM Plex Mono`,
