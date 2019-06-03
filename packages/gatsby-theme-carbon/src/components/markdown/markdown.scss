@@ -11,16 +11,16 @@
 .#{$prefix}--paragraph--responsive {
   // 5 columns wide
   @include carbon--breakpoint('md') {
-    width: 62.5%;
+    width: calc(62.5% - 2rem);
   }
 
   // 8 columns wide
   @include carbon--breakpoint('lg') {
-    width: 66.667%;
+    width: calc(66.667% - 2rem);
   }
 }
 
 // If paragraph is inside a user specified row then allow the grid code to set the width
 .#{$prefix}--row .#{$prefix}--paragraph {
-  width: 100%;
+  width: calc(100% - 1rem);
 }
