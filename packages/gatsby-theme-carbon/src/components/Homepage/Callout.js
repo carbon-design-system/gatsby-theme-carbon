@@ -30,14 +30,18 @@ const StyledRow = styled.section`
 `;
 
 const firstColumn = ({ typeStyles, layout }) => [
-  typeStyles.expressiveParagraph01,
+  typeStyles.expressiveHeading03,
   {
     padding: '0 1rem',
+    paddingLeft: 0,
     paddingBottom: layout[2],
     width: '100%',
-    fontSize: '1.5rem',
+    fontSize: 'calc(1.25rem + 0*(100vw - 20rem)/62)',
     [mq.md]: {
       width: '33%',
+    },
+    [mq.max]: {
+      fontSize: '1.5rem',
     },
   },
 ];
@@ -46,10 +50,14 @@ const secondColumn = ({ typeStyles }) => [
   typeStyles.expressiveParagraph01,
   {
     padding: '0 1rem',
-    fontSize: '1.75rem',
+    fontSize: 'calc(1.75rem + 0.25*(100vw - 66rem)/33)',
     width: '100%',
+    paddingLeft: 0,
     [mq.md]: {
       width: '66%',
+    },
+    [mq.max]: {
+      fontSize: '2rem',
     },
   },
 ];
