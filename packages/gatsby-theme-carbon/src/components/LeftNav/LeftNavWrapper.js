@@ -14,10 +14,13 @@ const LeftNavWrapper = styled.div(({ expanded, shouldHideHeader }) => ({
     boxShadow: expanded ? '0 2px 8px rgba(0, 0, 0, 0.2)' : 'none',
   },
   '@media (max-width: 42rem)': {
+    'bx--side-nav__icon': {
+      display: 'inline-block !important;',
+    },
     'nav > ul': {
-      maxHeight: '80vh',
+      maxHeight: '85vh',
       overflowY: 'scroll',
-      scrollbarWidth: 'thin',
+      scrollbarWidth: 'none',
     },
   },
   [mq.lg]: {
