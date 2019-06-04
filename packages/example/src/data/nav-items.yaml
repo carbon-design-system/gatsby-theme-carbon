@@ -32,6 +32,8 @@
       path: /contributing/agreement
     - title: Governance
       path: /contributing/governance
+    - title: Designers
+      path: /contributing/designers
 - title: Getting Started
   pages:
     - title: Developers
