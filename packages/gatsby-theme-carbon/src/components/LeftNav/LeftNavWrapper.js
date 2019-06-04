@@ -7,12 +7,18 @@ const LeftNavWrapper = styled.div(({ expanded, shouldHideHeader }) => ({
   position: 'fixed',
   top: shouldHideHeader ? '0px' : '48px',
   bottom: 0,
-  overflow: 'auto',
-  scrollbarWidth: 'none',
+  overflow: 'hidden',
   zIndex: 10000, // z('floating')
   transform: expanded ? 'translateX(0px)' : 'translateX(-256px)',
   '.bx--side-nav.bx--side-nav--website': {
     boxShadow: expanded ? '0 2px 8px rgba(0, 0, 0, 0.2)' : 'none',
+  },
+  '@media (max-width: 42rem)': {
+    'nav > ul': {
+      maxHeight: '80vh',
+      overflowY: 'scroll',
+      scrollbarWidth: 'thin',
+    },
   },
   [mq.lg]: {
     transform: 'translateX(0px)',
