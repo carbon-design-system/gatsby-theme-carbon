@@ -75,6 +75,25 @@ This is where we'll document the various utility components as they're added.
 
 ## 👻 Configuration and Shadowing
 
+### Title and Description
+
+To add a title and description to each page, simply provide them to siteMetadata in your `gatsby-config.js` file.
+
+```js
+module.exports = {
+  siteMetadata: {
+    title: 'Gatsby Theme Carbon',
+    description: 'A Gatsby theme for the carbon design system',
+    keywords: 'gatsby,theme,carbon',
+  },
+  __experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+    },
+  ],
+};
+```
+
 ### Favicon and Manifest
 
 One of the first configurations should be to override the default manifest options, you can do this in `gatsby-config.js`. Any options you don't set, will be provided by the theme. See the example project.
