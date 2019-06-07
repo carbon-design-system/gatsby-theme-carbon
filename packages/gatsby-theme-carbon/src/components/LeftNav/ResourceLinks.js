@@ -1,7 +1,7 @@
 import React from 'react';
 import { SideNavLink } from 'carbon-components-react/lib/components/UIShell';
 import { Link } from 'gatsby';
-import LaunchIcon from '@carbon/icons-react/es/launch/16';
+import LaunchIcon from '@carbon/icons-react/lib/launch/16';
 
 const LeftNavResourceLinks = ({ links }) =>
   links ? (
@@ -10,10 +10,16 @@ const LeftNavResourceLinks = ({ links }) =>
       {links.map((link, i) => (
         <SideNavLink
           key={i}
-          style={{ marginTop: i === 0 ? '1rem' : 0 }}
-          icon={<LaunchIcon />}
+          style={{
+            marginTop: i === 0 ? '1rem' : 0,
+            display: 'inline-flex',
+            flexDirection: 'row-reverse',
+            justifyContent: 'space-between',
+            width: '100%',
+          }}
+          renderIcon={LaunchIcon}
           href={link.href}
-          className="bx--side-nav--website-link"
+          className=""
           element={!link.href.includes('http') ? Link : 'a'}
         >
           {link.title}

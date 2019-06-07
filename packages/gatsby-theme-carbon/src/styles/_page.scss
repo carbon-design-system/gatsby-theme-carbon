@@ -218,3 +218,8 @@ img {
 .bx--website-switcher {
   z-index: z('floating');
 }
+
+.bx--side-nav.bx--side-nav--website
+  .bx--side-nav__icon:not(.bx--side-nav__submenu-chevron) {
+  display: inline-block !important;
+}

@@ -5,14 +5,17 @@ const LeftNavWrapper = styled.div(({ expanded, shouldHideHeader }) => ({
   transition: 'transform 0.15s cubic-bezier(0.2, 0.2, 0.38, 0.9), top 110ms',
   width: '256px',
   position: 'fixed',
-  top: shouldHideHeader ? '0px' : '48px',
+  top: shouldHideHeader ? '-48px' : '0px',
   bottom: 0,
-  overflow: 'auto',
+  overflow: 'hidden',
   scrollbarWidth: 'none',
   zIndex: 10000, // z('floating')
   transform: expanded ? 'translateX(0px)' : 'translateX(-256px)',
   '.bx--side-nav.bx--side-nav--website': {
     boxShadow: expanded ? '0 2px 8px rgba(0, 0, 0, 0.2)' : 'none',
+  },
+  '.bx--side-nav__items': {
+    scrollbarWidth: 'none',
   },
   [mq.lg]: {
     transform: 'translateX(0px)',

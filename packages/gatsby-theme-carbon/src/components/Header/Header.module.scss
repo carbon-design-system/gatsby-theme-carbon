@@ -5,7 +5,7 @@ header.header {
   transition: top $duration--fast-02;
   background-color: $ui-05;
   border-bottom: 1px solid $inverse-02;
-  z-index: z('floating');
+  z-index: 11000;
 }
 
 .header.hidden {
