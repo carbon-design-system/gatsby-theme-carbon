@@ -5,7 +5,7 @@ module.exports = themeOptions => {
   const {
     additionalFontWeights = [],
     isSearchEnabled = false,
-    isWebPEnabled = false,
+    withWebp = false,
   } = themeOptions;
 
   return {
@@ -63,7 +63,7 @@ module.exports = themeOptions => {
                 maxWidth: 1170,
                 linkImagesToOriginal: false,
                 quality: 75,
-                withWebp: isWebPEnabled,
+                withWebp,
               },
             },
             { resolve: `gatsby-remark-responsive-iframe` },
