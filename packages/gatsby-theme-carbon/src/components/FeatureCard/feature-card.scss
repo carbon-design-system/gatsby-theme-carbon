@@ -1,25 +1,27 @@
 .#{$prefix}--feature-card {
   position: relative;
+  margin-bottom: $spacing-05;
 }
 
 .#{$prefix}--feature-card__row {
   @include carbon--breakpoint('md') {
-    margin-left: -1rem;
-    margin-right: -1rem;
     position: absolute;
+    left: 0;
     bottom: 0;
-    right: 0;
+    width: calc(
+      100% + 2rem
+    ); //needed to make the row the same width as other rows with the negative margins
+  }
+}
+
+.#{$prefix}--feature-card__column {
+  @include carbon--breakpoint('md') {
   }
 }
 
 .#{$prefix}--feature-card__img {
   position: relative;
 }
-
-.#{$prefix}--feature-card .gatsby-resp-image-wrapper {
-  margin-bottom: 0;
-}
-
 .#{$prefix}--feature-card:hover
   .#{$prefix}--feature-card__link
   .#{$prefix}--tile {
@@ -65,5 +67,13 @@
     width: auto !important;
     left: auto !important;
     right: 0;
+    object-fit: cover;
   }
+}
+
+// overrides for larger breakpoints
+.#{$prefix}--feature-card .gatsby-resp-image-wrapper {
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
 }

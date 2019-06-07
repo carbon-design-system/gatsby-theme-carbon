@@ -1,0 +1,157 @@
+---
+title: ImageCard
+---
+
+<PageDescription>
+
+The `<ImageCard>` component should generally be used inside of a `<Row>` and `<Column>` component.
+
+</PageDescription>
+
+## Example
+
+<Row className="image-card-group">
+<Column colMd={4} colLg={4} noGutterSm>
+    <ImageCard
+      title="Title"
+      subTitle="Subtitle"
+      href="/"
+      >
+
+![](/images/square.png)
+
+  </ImageCard>
+  <ImageCard
+      title="Dark title"
+      titleColor="dark"
+      aspectRatio="1:1"
+      href="/"
+      actionIcon="arrowRight"
+      subTitleColor="light"
+      subTitle="Light subtitle"
+      >
+
+![](./images/light-dark.jpg)
+
+  </ImageCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ImageCard
+      title="Title"
+      subTitle="Subtitle"
+      aspectRatio="1:2"
+      href="/"
+      actionIcon="download"
+      titleColor="light"
+      subTitleColor="light"
+      >
+
+![](./images/plane.jpg)
+
+  </ImageCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ImageCard
+      aspectRatio="1:1"
+      href="/"
+      hoverColor="dark"
+      >
+
+![](/images/color-grid.svg)
+
+  </ImageCard>
+      <ImageCard
+      disabled
+      aspectRatio="1:1"
+      href="/"
+      >
+
+![](/images/square.png)
+
+  </ImageCard>
+</Column>
+</Row>
+
+## Code
+
+```
+
+<Row>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <ImageCard
+      title="Title"
+      subTitle="Subtitle"
+      href="/"
+      >
+
+![](/images/square.png)
+
+  </ImageCard>
+  <ImageCard
+      title="Title"
+      aspectRatio="1:1"
+      href="/"
+      actionIcon="arrowRight"
+      subTitleColor="dark"
+      subTitle="subTitle"
+      >
+
+![](/images/color-grid.svg)
+
+  </ImageCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ImageCard
+      title="Title"
+      subTitle="Subtitle"
+      aspectRatio="1:2"
+      href="/"
+      actionIcon="download"
+      titleColor="dark"
+      subTitleColor="dark"
+      >
+
+![](/images/featured.png)
+
+  </ImageCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ImageCard
+      aspectRatio="1:1"
+      href="/"
+      hoverColor="dark"
+      >
+
+![](/images/color-grid.svg)
+
+  </ImageCard>
+      <ImageCard
+      disabled
+      aspectRatio="1:1"
+      href="/"
+      >
+
+![](/images/square.png)
+
+  </ImageCard>
+</Column>
+</Row>
+
+```
+
+## Props
+
+| property      | propType | required | default | description                                                                                                      |
+| ------------- | -------- | -------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
+| children      | node     |          |         | Background image for the card, make sure it is saved out at the correct aspect ratio or it will appear distorted |
+| href          | string   |          |         | Set url for card                                                                                                 |
+| aspectRatio   | string   |          | `1:1`   | Set card aspect ratio, default is `1:1`, options are `1:1`, `16:9`, `4:3`, `2:1`, `1:2`                          |
+| subTitle      | string   |          |         | Smaller title in bottom left of card                                                                             |
+| title         | string   |          |         | Large title                                                                                                      |
+| actionIcon    | string   |          |         | Action icon, default is no icon, options are `Launch`, `ArrowRight`, `Download`, `Disabled`, `Email`             |
+| titleColor    | string   |          | `light` | Set title text color, default is `light`, options are `light` or `dark`                                          |
+| subTitleColor | string   |          | `light` | Set sub title text color, default is `light`, options are `light` or `dark`                                      |
+| iconColor     | string   |          | `light` | Set icon color, default is `light`, options are `light` or `dark`                                                |
+| hoverColor    | string   |          | `light` | Set hover to lighten or darken the image, default is `light`, options are `light` or `dark`                      |
+| disabled      | bool     |          | `false` | Set for disabled card                                                                                            |
+| className     | string   |          |         | Add custom class name                                                                                            |

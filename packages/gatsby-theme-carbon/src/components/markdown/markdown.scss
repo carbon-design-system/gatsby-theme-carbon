@@ -4,22 +4,23 @@
 .#{$prefix}--paragraph {
   @include carbon--type-style('body-long-02');
   margin-bottom: $spacing-06;
+  padding-right: $spacing-05;
 }
 
 // Responsive by default
 .#{$prefix}--paragraph--responsive {
-  // 7 columns wide
+  // 5 columns wide
   @include carbon--breakpoint('md') {
-    width: 62.5%;
+    width: calc(62.5% - 2rem);
   }
 
-  // 5 columns wide
+  // 8 columns wide
   @include carbon--breakpoint('lg') {
-    width: 58.333%;
+    width: calc(66.667% - 2rem);
   }
 }
 
 // If paragraph is inside a user specified row then allow the grid code to set the width
 .#{$prefix}--row .#{$prefix}--paragraph {
-  width: 100%;
+  width: calc(100% - 1rem);
 }

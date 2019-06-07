@@ -1,23 +1,6 @@
 //---------------------------------------
 // Carbon Components
 //---------------------------------------
-@import '~@carbon/elements/scss/layout/convert';
-@import '~@carbon/elements/scss/layout/breakpoint';
-@import '~@carbon/elements/scss/layout/layout';
-@import '~@carbon/elements/scss/grid/grid';
-@import '~@carbon/elements/scss/colors/colors';
-
-@import '~@carbon/elements/scss/type/type';
-
-@import '~@carbon/elements/scss/type/classes';
-
-@include carbon--type-reset();
-
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&text=%E2%86%B3'); // ↳ special character
-
-$font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
-$font-family-mono: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
-  'Bitstream Vera Sans Mono', Courier, monospace;
 
 $feature-flags: (
   ui-shell: true,
@@ -26,12 +9,30 @@ $feature-flags: (
 
 $prefix: 'bx';
 
-@import '~carbon-components/scss/globals/scss/styles';
+// Carbon globals/helpers
+@import '~carbon-components/scss/globals/grid/grid';
+@import '~carbon-components/scss/globals/scss/vars';
+@import '~carbon-components/scss/globals/scss/layout';
+
+// Typography
+@include carbon--type-reset();
+@import '~@carbon/elements/scss/type/classes';
+
+// special characters (arrows)
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&text=←→↑↓↔↕↖↗↘↙↚↛↮⟵⟶⟷↰↱↲↳⬐⬎⬑⬏↴↵');
+
+$font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+$font-family-mono: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
+  'Bitstream Vera Sans Mono', Courier, monospace;
+
+// Carbon components
+@import '~carbon-components/scss/components/ui-shell/ui-shell';
+@import '~carbon-components/scss/components/tile/tile';
+@import '~carbon-components/scss/components/code-snippet/code-snippet';
+@import '~carbon-components/scss/components/button/button';
+@import '~carbon-components/scss/components/tabs/tabs';
 
 @import '~@carbon/addons-website/scss/components/website-grid';
-@import '~@carbon/addons-website/scss/components/404';
-@import '~@carbon/addons-website/scss/components/website-footer';
-@import '~@carbon/addons-website/scss/components/website-switcher';
 @import '~@carbon/addons-website/scss/components/website-header';
 @import '~@carbon/addons-website/scss/components/website-header-nav';
 @import '~@carbon/addons-website/scss/components/website-side-nav';
@@ -57,6 +58,8 @@ $prefix: 'bx';
 @import '../components/Video/video.scss';
 @import '../components/Code/code.scss';
 @import '../components/FeatureCard/feature-card.scss';
+@import '../components/ImageCard/image-card.scss';
+@import '../components/ImageCard/aspect-ratio.scss';
 
 //---------------------------------------
 // Included last to ensure that class

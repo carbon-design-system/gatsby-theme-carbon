@@ -1,0 +1,105 @@
+---
+title: Tabs
+---
+
+<PageDescription>
+
+The `<Tabs>` and `<Tab>` components are used together to display and swap between content. Like all of the MDX components, you'll need to give the content you pass in a line of whitespace. When in doubt, follow the examples. Everything should be left aligned, indenting `<Tab>` will result in errors.
+
+</PageDescription>
+
+## Example
+
+<Tabs>
+
+<Tab label="Text">
+
+The tab component can be used for a variety of content. From text, to images, to columns. If you want to have multiple columns, you'll need to use our `Row` and `Column` helpers as demonstrated in the "Two images" tab.
+
+</Tab>
+
+<Tab label="Single image">
+
+If your content is full width, you don't need `Row` and `Column`
+
+![Plane window](images/colors.png)
+
+</Tab>
+
+<Tab label="Two images">
+
+<Row>
+<Column colSm={6} colLg={6}>
+
+Column one
+
+![Plane window](images/colors.png)
+
+</Column>
+<Column colSm={6} colLg={6}>
+
+Column two
+
+![Plane window](images/colors.png)
+
+</Column>
+</Row>
+
+</Tab>
+
+</Tabs>
+
+## Code
+
+#### Text
+
+```
+// Start with the wrapper component (Tabs)
+<Tabs>
+
+<Tab label="Text">
+
+The tab component can be used for a variety of content. From text, to images, to columns. If you want to have multiple columns, you'll need to use our `Row` and `Column` helpers as demonstrated in the "Two images" tab.
+
+</Tab>
+```
+
+#### Single image
+
+```
+<Tab label="Single image">
+
+If your content is full width, you don't need `Row` and `Column`
+
+![Plane window](images/colors.png)
+
+</Tab>
+```
+
+#### Multiple images
+
+```
+<Tab label="Two images">
+
+<Row>
+<Column colSm={6} colLg={6}>
+
+Column one
+
+![Plane window](images/colors.png)
+
+</Column>
+<Column colSm={6} colLg={6}>
+
+Column two
+
+![Plane window](images/colors.png)
+
+</Column>
+</Row>
+
+</Tab>
+
+// Make sure you close the wrapper component
+</Tabs>
+```

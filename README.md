@@ -75,11 +75,120 @@ This is where we'll document the various utility components as they're added.
 
 ## 👻 Configuration and Shadowing
 
+### Title and Description
+
+To add a title and description to each page, simply provide them to siteMetadata in your `gatsby-config.js` file.
+
+```js
+module.exports = {
+  siteMetadata: {
+    title: 'Gatsby Theme Carbon',
+    description: 'A Gatsby theme for the carbon design system',
+    keywords: 'gatsby,theme,carbon',
+  },
+  __experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+    },
+  ],
+};
+```
+
+### Favicon and Manifest
+
+One of the first configurations should be to override the default manifest options, you can do this in `gatsby-config.js`. Any options you don't set, will be provided by the theme. See the example project.
+
+```js
+siteMetadata: {
+    title: 'Gatsby Theme Carbon',
+  },
+  plugins: [
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Carbon Design Gatsby Theme',
+        short_name: 'Gatsby Theme Carbon',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#0062ff',
+        display: 'browser',
+        icon: './src/images/custom-favicon.png', // defaults to IBM rebus eye
+      },
+    },
+  ],
+  __experimentalThemes: [
+```
+
+### Additional font weights
+
+If needed, you can add support for additional Plex font weights. Don't forget to specify italics for the additional weights if needed.
+
+```js
+__experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+		// will get added to default [300, 400, 600]
+        additionalFontWeights: ['200', '200i]
+      },
+    },
+  ],
+```
+
+### 404 implementation
+
+1. Make a 404.js in your src/pages
+1. Import the 404 component from the theme
+1. Export the component and provide your own links
+1. If necessary, configure your server to route unknown routes to 404.html
+
+```jsx
+import React from 'react';
+import { FourOhFour } from 'gatsby-theme-carbon';
+
+const links = [
+  { href: '/components/markdown', text: 'Markdown' },
+  { href: '/components/Aside', text: 'Aside' },
+  { href: '/components/demo', text: 'Demo' },
+];
+
+const Custom404 = () => <FourOhFour links={links} />;
+
+export default Custom404;
+```
+
+### Image Compression
+
+Leveraging gatsby-image requires you to provide full resolution, quality images. This is _especially_ true when the image is a photo rather than an illustration. The compression plugin falters for large images with relatively low pixel density. Full resolution photos from unsplash, IBM Digital assets, etc. routinely run 7-10mb. It's possible to over-ride the default quality of the gatsby plugin. But our _strong_ recommendation would be to use higher quality source images and let gatsby-image really do it's magic with image optimization.
+
+If higher resolution is not an option, you can add the following to your gatsby-config and tweak the default optimization to your performance/quality needs:
+
+```js
+module.exports = {
+  siteMetadata: {
+    title: 'Gatsby Theme Carbon',
+  },
+  __experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        name: 'Gatsby Theme Carbon Starter',
+        shortName: 'Carbon Starter',
+      },
+    },
+  ],
+  plugins: [
+    { resolve: `gatsby-plugin-sharp`, options: { defaultQuality: 80 } },
+  ],
+};
+```
+
 ### Global Search
 
 The GlobalSearch component is disabled by default. If you'd like to implement search functionality, you'll need to follow these two steps:
 
 1. set the isSearchEnabled theme option to true
+
 ```js
   __experimentalThemes: [
     {
@@ -101,7 +210,6 @@ const useAlgoliaSearch = () => {
 
 export default useAlgoliaSearch;
 ```
-
 
 The example `useSearch` hook demonstrates implementing search with [Algolia](https://www.algolia.com/). Algolia is free for open source libraries. You can shadow this hook and replace it with your Algolia credentials or a library of your choosing.
 

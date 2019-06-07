@@ -1,11 +1,11 @@
 {
   "name": "example",
   "private": true,
-  "version": "0.6.1",
+  "version": "1.0.1",
   "license": "Apache 2.0",
   "scripts": {
     "develop": "gatsby develop",
-    "develop:clean": "rm -rf ./.cache && yarn develop",
+    "develop:clean": "gatsby clean && yarn develop",
     "build": "gatsby build",
     "build:prefix": "gatsby build --prefix-paths",
     "build:debug": "node --inspect ../../node_modules/.bin/gatsby build --prefix-paths",
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "gatsby": "^2.4.2",
-    "gatsby-theme-carbon": "^0.6.1",
+    "gatsby-theme-carbon": "^1.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }

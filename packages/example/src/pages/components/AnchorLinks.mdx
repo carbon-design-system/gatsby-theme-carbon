@@ -1,0 +1,56 @@
+---
+title: AnchorLinks
+---
+
+<PageDescription>
+
+The `<AnchorLinks>` and `<AnchorLink>` components are used together to display a list of anchor links for navigation within the page. Use these to link to `<h2>` or `<h3>` anywhere within your page. As long as the anchor link text and header text matches the link will work.
+
+</PageDescription>
+
+## Example
+
+#### Normal
+
+<AnchorLinks>
+  <AnchorLink>Link 1</AnchorLink>
+  <AnchorLink>Link 2</AnchorLink>
+  <AnchorLink>Link 3</AnchorLink>
+</AnchorLinks>
+
+#### Small
+
+<AnchorLinks small>
+  <AnchorLink>Small link 1</AnchorLink>
+  <AnchorLink>Small link 2</AnchorLink>
+  <AnchorLink>Small link 3</AnchorLink>
+</AnchorLinks>
+
+## Code
+
+#### Normal
+
+```
+<AnchorLinks>
+  <AnchorLink>Link 1</AnchorLink>
+  <AnchorLink>Link 2</AnchorLink>
+  <AnchorLink>Link 3</AnchorLink>
+</AnchorLinks>
+```
+
+#### Small
+
+```
+<AnchorLinks small>
+  <AnchorLink>Small link 1</AnchorLink>
+  <AnchorLink>Small link 2</AnchorLink>
+  <AnchorLink>Small link 3</AnchorLink>
+</AnchorLinks>
+```
+
+## Props
+
+| property | propType | required | default | description             |
+| -------- | -------- | -------- | ------- | ----------------------- |
+| children | node     |          |         |                         |
+| small    | bool     |          |         | Display small font size |

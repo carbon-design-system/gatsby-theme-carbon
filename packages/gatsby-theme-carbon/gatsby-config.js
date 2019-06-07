@@ -2,34 +2,36 @@ const path = require('path');
 const colors = require('@carbon/themes');
 
 module.exports = themeOptions => {
-  const {
-    name = 'Gatsby Carbon Theme',
-    shortName = 'Carbon',
-    startUrl = '/',
-    backgroundColor = colors.uiBackground,
-    themeColor = colors.interactive01,
-    display = 'browser',
-    additionalFontWeights = [],
-    isSearchEnabled = false,
-    favicon = require.resolve('./src/images/light.png'),
-  } = themeOptions;
+  const { additionalFontWeights = [], isSearchEnabled = false } = themeOptions;
 
   return {
     siteMetadata: {
       isSearchEnabled,
       title: 'Gatsby Theme Carbon',
+      description:
+        'Add a description by supplying it to siteMetadata in your gatsby-config.js file.',
+      keywords: 'gatsby,theme,carbon,design',
     },
     pathPrefix: `/gatsby-theme-carbon`,
     plugins: [
       `gatsby-plugin-sharp`,
       `gatsby-transformer-yaml`,
+      `gatsby-plugin-catch-links`,
       {
         resolve: `gatsby-plugin-prefetch-google-fonts`,
         options: {
           fonts: [
             {
               family: `IBM Plex Sans`,
-              variants: [300, 400, 600, ...additionalFontWeights],
+              variants: [
+                300,
+                '300i',
+                400,
+                '400i',
+                600,
+                '600i',
+                ...additionalFontWeights,
+              ],
             },
             {
               family: `IBM Plex Mono`,
@@ -54,9 +56,12 @@ module.exports = themeOptions => {
             {
               resolve: `gatsby-remark-images`,
               options: {
-                maxWidth: 1184,
+                maxWidth: 1170,
                 linkImagesToOriginal: false,
-                tracedSVG: true,
+                quality: 75,
+                withWebp: {
+                  quality: 100,
+                },
               },
             },
             { resolve: `gatsby-remark-responsive-iframe` },
@@ -99,13 +104,13 @@ module.exports = themeOptions => {
       {
         resolve: 'gatsby-plugin-manifest',
         options: {
-          name,
-          short_name: shortName,
-          start_url: startUrl,
-          background_color: backgroundColor,
-          theme_color: themeColor,
-          display,
-          favicon,
+          name: 'Carbon Design Gatsby Theme',
+          short_name: 'Gatsby Theme Carbon',
+          start_url: '/',
+          background_color: colors.uiBackground,
+          theme_color: colors.interactive01,
+          display: 'browser',
+          icon: require.resolve('./src/images/favicon.png'),
         },
       },
       `gatsby-plugin-react-helmet`,

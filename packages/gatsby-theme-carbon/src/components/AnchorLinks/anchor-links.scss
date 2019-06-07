@@ -44,7 +44,6 @@
     content: '\21B3'; //"↳"
     position: absolute;
     left: -$spacing-06;
-    font-family: $font-family;
     color: $interactive-02;
     transition: color $transition--base;
     cursor: pointer;
@@ -63,7 +62,7 @@
   margin-top: $spacing-05;
 }
 
-.#{$prefix}--anchor-links__link--small {
+.#{$prefix}--anchor-links__list--small .#{$prefix}--anchor-links__link {
   @include carbon--type-style('body-long-02');
   margin-bottom: 0;
 }

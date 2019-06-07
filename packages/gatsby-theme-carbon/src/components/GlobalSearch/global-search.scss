@@ -54,7 +54,7 @@
 
   /* Main dropdown wrapper */
   .algolia-autocomplete .ds-dropdown-menu {
-    @include layer("overlay");
+    z-index: z('floating');
     min-width: 448px;
     background-color: $inverse-01;
     border-radius: 0;
@@ -70,7 +70,7 @@
     display: none;
   }
 
-  .algolia-autocomplete .ds-dropdown-menu [class^="ds-dataset-"] {
+  .algolia-autocomplete .ds-dropdown-menu [class^='ds-dataset-'] {
     border: none;
     border-radius: 0;
     padding: 0 0 $spacing-md;
@@ -78,7 +78,7 @@
 
   /* Main category (eg. Getting started) */
   .algolia-autocomplete .algolia-docsearch-suggestion--category-header {
-    @include carbon--type-style("label-01");
+    @include carbon--type-style('label-01');
     margin: 0 16px;
     padding: 0 0 $spacing-xs;
     color: $text-02;
@@ -90,7 +90,7 @@
 
   /* Category (eg. Contributing, Grid, Style) */
   .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
-    @include carbon--type-style("body-short-01");
+    @include carbon--type-style('body-short-01');
     color: $text-02;
     font-size: 0.875rem;
     padding: 0;
@@ -101,7 +101,7 @@
   .algolia-autocomplete .algolia-docsearch-suggestion--title {
     font-weight: bold;
     color: $text-01;
-    @include carbon--type-style("body-short-02");
+    @include carbon--type-style('body-short-02');
     margin-bottom: 0;
   }
 
@@ -155,7 +155,7 @@
 
   /* Description description (eg. Bootstrap currently works...) */
   .algolia-autocomplete .algolia-docsearch-suggestion--text {
-    @include carbon--type-style("body-short-01");
+    @include carbon--type-style('body-short-01');
     color: $text-02;
   }
 
@@ -163,7 +163,7 @@
   .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column-text,
    /* Suggestion Title Text */
    .algolia-autocomplete .algolia-docsearch-suggestion--title {
-    @include carbon--type-style("body-short-01");
+    @include carbon--type-style('body-short-01');
     color: $text-01;
   }
 

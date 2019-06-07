@@ -1,0 +1,252 @@
+---
+title: Grid
+---
+
+<PageDescription>
+
+The `<Grid>`, `<Row>` and `<Column>` components are used to arrange content and components on the grid within a page.
+
+</PageDescription>
+
+The math for the website is calculated using a 12 column grid at the large breakpoint, 8 column at medium (tablet) breakpoint and 4 column at the small (mobile) breakpoint. The design is based on a 16 column grid, however the math is calcualted with 12 to prevent having to add a `offset` class to each row.
+
+To learn more about the grid is built, you can read the docs in the [Carbon](https://github.com/carbon-design-system/carbon/tree/master/packages/grid) repo.
+
+<AnchorLinks>
+  <AnchorLink>Grid</AnchorLink>
+  <AnchorLink>Row</AnchorLink>
+  <AnchorLink>Column</AnchorLink>
+</AnchorLinks>
+
+## Grid
+
+<PageDescription>
+
+The `<Grid>` component is a wrapper that adds the `bx--grid` class to a wrapper div. **You won't need this** when adding components to `.mdx` pages as this is already built into the template.
+
+</PageDescription>
+
+### Code
+
+```
+<Grid></Grid>
+```
+
+### Props
+
+| property  | propType | required | default | description           |
+| --------- | -------- | -------- | ------- | --------------------- |
+| children  | node     |          |         |                       |
+| className | string   |          |         | Add custom class name |
+
+## Row
+
+<PageDescription>
+
+The `<Row>` component is a wrapper that adds the `bx--row` class to a wrapper div. You will want to use this to define rows that you will place `<Column>` components inside of.
+
+</PageDescription>
+
+### Code
+
+```
+<Row>
+  <Column>
+
+Content or additional <Components />
+
+  </Column>
+</Row>
+```
+
+### Props
+
+| property  | propType | required | default | description           |
+| --------- | -------- | -------- | ------- | --------------------- |
+| children  | node     |          |         |                       |
+| className | string   |          |         | Add custom class name |
+
+## Column
+
+<PageDescription>
+
+The `<Column>` component is used to define column widths for your content, you can set the rules at different breakpoints with the props.
+
+</PageDescription>
+
+### Example
+
+<Row>
+<Column colMd={4} colLg={4}>
+
+![Colors](images/Article_05.png)
+
+</Column>
+<Column colMd={4} colLg={4}>
+
+![Colors](images/Article_05.png)
+
+</Column>
+<Column colMd={4} colLg={4}>
+
+![Colors](images/Article_05.png)
+
+</Column>
+</Row>
+
+#### No gutter left
+
+<Row>
+<Column colMd={4} colLg={4} noGutterMdLeft>
+
+![Colors](images/Article_05.png)
+
+</Column>
+<Column colMd={4} colLg={4} noGutterMdLeft>
+
+![Colors](images/Article_05.png)
+
+</Column>
+<Column colMd={4} colLg={4} noGutterMdLeft>
+
+![Colors](images/Article_05.png)
+
+</Column>
+</Row>
+
+#### No gutter
+
+<Row>
+<Column colMd={4} colLg={4} noGutterSm>
+
+![Colors](images/Article_05.png)
+
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+
+![Colors](images/Article_05.png)
+
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+
+![Colors](images/Article_05.png)
+
+</Column>
+</Row>
+
+#### Offset
+
+<Row>
+<Column colMd={4} colLg={4} offsetLg={4}>
+
+![Colors](images/Article_05.png)
+
+</Column>
+<Column colMd={4} colLg={4}>
+
+![Colors](images/Article_05.png)
+
+</Column>
+</Row>
+
+### Code
+
+```
+<Row>
+<Column colMd={4} colLg={4}>
+
+![Colors](images/Article_05.png)
+
+</Column>
+<Column colMd={4} colLg={4}>
+
+![Colors](images/Article_05.png)
+
+</Column>
+<Column colMd={4} colLg={4}>
+
+![Colors](images/Article_05.png)
+
+</Column>
+</Row>
+```
+
+#### No gutter left
+
+```
+<Row>
+<Column colMd={4} colLg={4} noGutterMdLeft>
+
+![Colors](images/Article_05.png)
+
+</Column>
+<Column colMd={4} colLg={4} noGutterMdLeft>
+
+![Colors](images/Article_05.png)
+
+</Column>
+<Column colMd={4} colLg={4} noGutterMdLeft>
+
+![Colors](images/Article_05.png)
+
+</Column>
+</Row>
+```
+
+#### No gutter
+
+```
+<Row>
+<Column colMd={4} colLg={4} noGutterSm>
+
+![Colors](images/Article_05.png)
+
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+
+![Colors](images/Article_05.png)
+
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+
+![Colors](images/Article_05.png)
+
+</Column>
+</Row>
+```
+
+#### Offset
+
+```
+<Row>
+<Column colMd={4} colLg={4} offsetLg={4}>
+
+![Colors](images/Article_05.png)
+
+</Column>
+<Column colMd={4} colLg={4}>
+
+![Colors](images/Article_05.png)
+
+</Column>
+</Row>
+```
+
+### Props
+
+| property       | propType | required | default | description                                 |
+| -------------- | -------- | -------- | ------- | ------------------------------------------- |
+| children       | node     |          |         |                                             |
+| className      | string   |          |         | Add custom class name                       |
+| colSm          | number   |          |         | Specify the col width at small breakpoint   |
+| colMd          | number   |          |         | Specify the col width at medium breakpoint  |
+| colLg          | number   |          | 12      | Specify the col width at large breakpoint   |
+| offsetLg       | number   |          |         | Specify the col offset at large breakpoint  |
+| offsetMd       | number   |          |         | Specify the col offset at medium breakpoint |
+| offsetSm       | number   |          |         | Specify the col offset at small breakpoint  |
+| noGutterSm     | bool     |          |         | Specify no-gutter at small breakpoint       |
+| noGutterMd     | bool     |          |         | Specify no-gutter at medium breakpoint      |
+| noGutterLg     | bool     |          |         | Specify no-gutter at large breakpoint       |
+| noGutterSmLeft | bool     |          |         | Specify no-gutter left at small breakpoint  |
+| noGutterMdLeft | bool     |          |         | Specify no-gutter left at medium breakpoint |
+| noGutterLgLeft | bool     |          |         | Specify no-gutter left at large breakpoint  |

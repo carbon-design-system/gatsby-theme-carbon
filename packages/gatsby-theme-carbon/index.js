@@ -9,6 +9,9 @@ export { default as ResourceCard } from './src/components/ResourceCard';
 export { default as ArticleCard } from './src/components/ArticleCard';
 export { default as Aside } from './src/components/Aside';
 export { default as FeatureCard } from './src/components/FeatureCard';
+export { default as FourOhFour } from './src/components/FourOhFour';
+export { default as ImageCard } from './src/components/ImageCard';
+export { Tabs, Tab } from './src/components/Tabs';
 
 // Homepage Template Components
 export { HomepageCallout, HomepageBanner } from './src/components/Homepage';

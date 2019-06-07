@@ -18,7 +18,7 @@ const StyledGrid = styled(Grid)`
 const StyledRow = styled(Row)`
   height: 100%;
   h1 {
-    padding: 2rem 1rem;
+    padding: 2rem 0;
   }
 `;
 
