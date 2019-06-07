@@ -159,9 +159,7 @@ export default Custom404;
 
 ### Image Compression
 
-Leveraging gatsby-image requires you to provide full resolution, quality images. This is _especially_ true when the image is a photo rather than an illustration. The compression plugin falters for large images with relatively low pixel density. Full resolution photos from unsplash, IBM Digital assets, etc. routinely run 7-10mb. It's possible to over-ride the default quality of the gatsby plugin. But our _strong_ recommendation would be to use higher quality source images and let gatsby-image really do it's magic with image optimization.
-
-If higher resolution is not an option, you can add the following to your gatsby-config and tweak the default optimization to your performance/quality needs:
+You can enable WebP by passing `withWebp: true` or providing your own optimization level. See the gatsby-remark-images [plugin options](https://www.gatsbyjs.org/packages/gatsby-remark-images/#options).
 
 ```js
 module.exports = {
@@ -174,11 +172,9 @@ module.exports = {
       options: {
         name: 'Gatsby Theme Carbon Starter',
         shortName: 'Carbon Starter',
+        withWebp: true,
       },
     },
-  ],
-  plugins: [
-    { resolve: `gatsby-plugin-sharp`, options: { defaultQuality: 80 } },
   ],
 };
 ```
