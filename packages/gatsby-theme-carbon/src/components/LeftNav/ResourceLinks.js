@@ -8,7 +8,7 @@ const LeftNavResourceLinks = ({ links }) =>
     <>
       <hr className="bx--side-nav__divider" />
       {links.map((link, i) => {
-        const Link = !link.href.includes('http') ? ({
+        const additionalProps = !link.href.includes('http') ? ({
           element: Link,
           href: link.href
         }) : ({
