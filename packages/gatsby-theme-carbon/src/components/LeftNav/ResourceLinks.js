@@ -8,22 +8,26 @@ const LeftNavResourceLinks = ({ links }) =>
     <>
       <hr className="bx--side-nav__divider" />
       {links.map((link, i) => {
-        const linkProps = !link.href.includes('http')
-          ? { element: Link }
-          : { element: 'a', target: '_blank', rel: 'noopener noreferral' }
+        const Link = !link.href.includes('http') ? ({
+          element: Link,
+          href: link.href
+        }) : ({
+          element: 'a',
+          target: '_blank',
+          rel: 'noopener noreferral',
+          href: link.href
+        })
         return (
           <SideNavLink
             key={i}
             style={{ marginTop: i === 0 ? '1rem' : 0 }}
             icon={<LaunchIcon />}
-            href={link.href}
             className="bx--side-nav--website-link"
-            {...linkProps}
+            {...additionalProps}
           >
             {link.title}
           </SideNavLink>
-        )
-      })}
+      )})}
     </>
   ) : null;
 
