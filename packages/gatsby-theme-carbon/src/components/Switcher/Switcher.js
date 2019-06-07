@@ -65,7 +65,7 @@ const DefaultChildren = () => (
     <SwitcherLink href="https://www.ibm.com/services/ibmix/">
       IBM iX
     </SwitcherLink>
-    <SwitcherLink disabled>IBM AI</SwitcherLink>
+    <SwitcherLink href="https://www.ibm.com/design/ai">IBM AI</SwitcherLink>
   </>
 );
 

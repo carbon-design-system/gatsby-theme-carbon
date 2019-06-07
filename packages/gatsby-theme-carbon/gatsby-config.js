@@ -2,7 +2,11 @@ const path = require('path');
 const colors = require('@carbon/themes');
 
 module.exports = themeOptions => {
-  const { additionalFontWeights = [], isSearchEnabled = false } = themeOptions;
+  const {
+    additionalFontWeights = [],
+    isSearchEnabled = false,
+    withWebp = false,
+  } = themeOptions;
 
   return {
     siteMetadata: {
@@ -59,9 +63,7 @@ module.exports = themeOptions => {
                 maxWidth: 1170,
                 linkImagesToOriginal: false,
                 quality: 75,
-                withWebp: {
-                  quality: 100,
-                },
+                withWebp,
               },
             },
             { resolve: `gatsby-remark-responsive-iframe` },
