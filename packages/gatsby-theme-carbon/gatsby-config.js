@@ -16,7 +16,6 @@ module.exports = themeOptions => {
         'Add a description by supplying it to siteMetadata in your gatsby-config.js file.',
       keywords: 'gatsby,theme,carbon,design',
     },
-    pathPrefix: `/gatsby-theme-carbon`,
     plugins: [
       `gatsby-plugin-sharp`,
       `gatsby-transformer-yaml`,

@@ -11,18 +11,20 @@ import {
 import { currentItem, currentItemText } from './LeftNav.module.scss';
 
 import NavContext from '../../util/context/NavContext';
+import usePathprefix from '../../util/hooks/usePathprefix';
 
 const LeftNavItem = props => {
   const { items, category } = props;
   const { toggleNavState } = useContext(NavContext);
   const closeLeftNav = () => toggleNavState('leftNavIsOpen', 'close');
-
+  const pathPrefix = usePathprefix();
   return (
     <Location>
       {({ location }) => {
-        const isActive = items.some(item =>
-          location.pathname.includes(item.path)
-        );
+        const pathname = pathPrefix
+          ? location.pathname.replace(pathPrefix, '')
+          : location.pathname;
+        const isActive = items.some(item => pathname === item.path);
         if (items.length === 1) {
           return (
             <SideNavLink
@@ -49,7 +51,7 @@ const LeftNavItem = props => {
             <SubNavItems
               onClick={closeLeftNav}
               items={items}
-              location={location}
+              pathname={pathname}
             />
           </SideNavMenu>
         );
@@ -58,18 +60,18 @@ const LeftNavItem = props => {
   );
 };
 
-const SubNavItems = ({ items, location, onClick }) =>
+const SubNavItems = ({ items, pathname, onClick }) =>
   items.map((item, i) => (
     <SideNavMenuItem
       to={`${item.path}`}
       onClick={onClick}
       element={Link}
-      isActive={location.pathname.includes(item.path)}
+      isActive={pathname === item.path}
       key={i}
     >
       <span
         style={{
-          color: location.pathname.includes(item.path) ? '#171717' : 'inherit',
+          color: pathname === item.path ? '#171717' : 'inherit',
         }}
       >
         {item.title}
