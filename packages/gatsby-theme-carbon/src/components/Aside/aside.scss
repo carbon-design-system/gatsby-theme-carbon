@@ -2,6 +2,7 @@
   @include carbon--type-style('body-long-01');
   position: relative;
   padding-top: $spacing-04;
+  top: -$spacing-04;
 }
 
 .#{$prefix}--aside:before {
