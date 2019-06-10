@@ -56,7 +56,6 @@ const Header = ({ children, shouldHideHeader }) => {
           <HeaderGlobalAction
             className={cx({
               [icon]: true,
-           
             })}
             aria-label="Switch"
             onClick={() => {
