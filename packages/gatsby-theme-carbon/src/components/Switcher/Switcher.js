@@ -62,10 +62,12 @@ const DefaultChildren = () => (
     <SwitcherLink href="https://www.ibm.com/design/language/disciplines/digital/">
       IBM Design Research
     </SwitcherLink>
+    <SwitcherLink href="https://www.ibm.com/design/ai">
+      IBM Design for AI
+    </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/services/ibmix/">
       IBM iX
     </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/design/ai">IBM AI</SwitcherLink>
   </>
 );
 
