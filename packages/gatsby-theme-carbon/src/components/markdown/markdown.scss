@@ -4,19 +4,22 @@
 .#{$prefix}--paragraph {
   @include carbon--type-style('body-long-02');
   margin-bottom: $spacing-06;
-  padding-right: $spacing-05;
+  padding-right: $spacing-07;
 }
 
 // Responsive by default
 .#{$prefix}--paragraph--responsive {
+  margin-left: -$spacing-05;
+  padding-left: $spacing-05;
+
   // 5 columns wide
   @include carbon--breakpoint('md') {
-    width: calc(62.5% - 2rem);
+    width: calc(63%);
   }
 
   // 8 columns wide
   @include carbon--breakpoint('lg') {
-    width: calc(66.667% - 2rem);
+    width: calc(67.3%);
   }
 }
 
