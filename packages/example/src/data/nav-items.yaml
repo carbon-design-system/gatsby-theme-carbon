@@ -48,3 +48,6 @@
 - title: Resources
   pages:
     - path: /resources
+- title: Designers
+  pages:
+    - path: /designers
