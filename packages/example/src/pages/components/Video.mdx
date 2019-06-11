@@ -1,0 +1,43 @@
+---
+title: Video
+---
+
+<PageDescription>
+
+The `<Video>` component can render a Vimeo player or a html video player.
+
+</PageDescription>
+
+## Example
+
+#### Vimeo
+
+<Video title="Eyes" vimeoId="310583077" />
+
+#### Video
+
+<Video autoplay src="/videos/hero-video.mp4" poster="/images/image.png" />
+
+## Code
+
+#### Vimeo
+
+```
+<Video title="Eyes" vimeoId="310583077" />
+```
+
+#### Video
+
+```
+<Video src="/videos/hero-video.mp4" />
+
+```
+
+## Props
+
+| property | propType | required | default | description                                                                                                                                                                                 |
+| -------- | -------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| vimeoId  | string   |          |         | To find your `vimeoId`, go to the Vimeo page and find the video you want to put on your website. Once it is loaded, look at the URL and look for the numbers that come after the slash (/). |
+| src      | string   |          |         | Use the html `<video>` player with a local `.mp4` video                                                                                                                                     |
+| title    | string   |          |         | Vimeo title                                                                                                                                                                                 |
+| poster   | string   |          |         | Provides an image to show before the video loads                                                                                                                                            |

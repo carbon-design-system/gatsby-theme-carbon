@@ -2,6 +2,11 @@
   margin-bottom: $spacing-08;
 }
 
+// video
+.#{$prefix}--video video {
+  width: 100%;
+}
+
 // iframe
 .gatsby-resp-iframe-wrapper {
   position: relative;
