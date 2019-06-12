@@ -38,7 +38,7 @@ export default class ResourceCard extends React.Component {
     /**
      * Set card aspect ratio, default is 2:1, options are 1:1, 16:9, 4:3
      */
-    aspectRatio: PropTypes.bool,
+    aspectRatio: PropTypes.string,
 
     /**
      * set to "dark" for dark background card
