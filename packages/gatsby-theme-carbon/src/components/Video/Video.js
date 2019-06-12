@@ -23,9 +23,7 @@ export const Video = ({ vimeoId, title, src, poster, ...props }) => {
   );
 
   const videoVid = (
-    <video controls poster={poster} {...props}>
-      <source src={src} type="video/mp4" />
-    </video>
+    <video controls poster={poster} {...props} src={src} type="video/mp4" />
   );
 
   return (
