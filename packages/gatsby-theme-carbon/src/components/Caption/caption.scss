@@ -2,7 +2,17 @@
   @include carbon--type-style('body-short-01');
   padding-top: $spacing-03;
   margin-bottom: $spacing-06;
-  margin-top: -$spacing-06; // to account for default spacing below images
+}
+
+// Caption after images
+.gatsby-resp-image-wrapper + .#{$prefix}--caption,
+img + .#{$prefix}--caption {
+  margin-top: -$spacing-06;
+}
+
+// Caption after video
+.#{$prefix}--video + .#{$prefix}--caption {
+  margin-top: -$spacing-08;
 }
 
 // Responsive by default
