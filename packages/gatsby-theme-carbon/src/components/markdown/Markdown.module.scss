@@ -1,0 +1,149 @@
+@import '~carbon-components/scss/globals/scss/vars';
+@import '~@carbon/elements/scss/type/type';
+
+//---------------------------------------
+// P
+//---------------------------------------
+.paragraph {
+  @include carbon--type-style('body-long-02');
+  margin-bottom: $spacing-06;
+  padding-right: $spacing-07;
+}
+
+// Responsive by default
+.paragraph--responsive {
+  margin-left: -$spacing-05;
+  padding-left: $spacing-05;
+
+  // 5 columns wide
+  @include carbon--breakpoint('md') {
+    width: calc(63%);
+  }
+
+  // 8 columns wide
+  @include carbon--breakpoint('lg') {
+    width: calc(67.3%);
+  }
+}
+
+// If paragraph is inside a user specified row then allow the grid code to set the width
+:global(.#{$prefix}--row) .paragraph {
+  width: calc(100% - 1rem);
+}
+
+//---------------------------------------
+// Blockquote
+//---------------------------------------
+.blockquote {
+  margin: $spacing-08 0 $spacing-08 $spacing-08;
+  color: $carbon--blue-60;
+  font-style: italic;
+}
+
+.blockquote .paragraph {
+  @include carbon--type-style('expressive-heading-03');
+  @include carbon--breakpoint('md') {
+    width: calc(62.5% - 3rem);
+  }
+
+  // 8 columns wide
+  @include carbon--breakpoint('lg') {
+    width: calc(66.667% - 3rem);
+  }
+}
+
+//---------------------------------------
+// Responsive widths
+//---------------------------------------
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.list {
+  width: 100%;
+  @include carbon--breakpoint('md') {
+    width: 75%;
+  }
+  @include carbon--breakpoint('lg') {
+    width: 58.33%;
+  }
+}
+
+//---------------------------------------
+// Headings
+//---------------------------------------
+
+.h1 {
+  @include carbon--type-style('expressive-heading-05', true);
+  margin-top: 0;
+  margin-bottom: $layout-02;
+}
+
+.h2 {
+  margin-top: 4.5rem;
+  margin-bottom: $spacing-05;
+  @include carbon--type-style('expressive-heading-04', true);
+}
+
+.h3 {
+  margin-top: 4.5rem;
+  margin-bottom: $spacing-05;
+  @include carbon--type-style('expressive-heading-03', true);
+}
+
+.h4 {
+  margin-top: $spacing-04;
+  @include carbon--type-style('heading-02');
+}
+
+.h5,
+.h6 {
+  // h5 and h6 intentionally mimic eachother
+  margin-top: $spacing-04;
+  @include carbon--type-style('heading-01');
+}
+
+//---------------------------------------
+// Lists
+//---------------------------------------
+
+.list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  @include carbon--type-style('body-long-02');
+  li {
+    margin-left: 1.25rem;
+    &:before {
+      position: absolute;
+      margin-left: -1.25rem;
+    }
+    & p {
+      display: inline;
+    }
+  }
+}
+
+.ordered {
+  composes: list;
+  li {
+    counter-increment: step;
+    &:before {
+      content: counter(step) '. ';
+    }
+  }
+}
+
+.unordered {
+  composes: list;
+  li {
+    &:before {
+      position: absolute;
+      margin-left: -1.25rem;
+      content: '–';
+    }
+  }
+}

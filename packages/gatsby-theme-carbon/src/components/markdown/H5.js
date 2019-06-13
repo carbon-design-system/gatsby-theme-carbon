@@ -1,17 +1,8 @@
 import React from 'react';
-import responsiveStyles from '../shared/responsiveStyles';
-
-const h5Css = ({ typeStyles, spacing }) => [
-  typeStyles.heading01,
-  responsiveStyles,
-  {
-    marginTop: spacing[4],
-    lineHeight: 1.5,
-  },
-];
+import { h5 } from './Markdown.module.scss';
 
 const H5 = ({ children, ...rest }) => (
-  <h5 css={h5Css} {...rest}>
+  <h5 className={h5} {...rest}>
     {children}
   </h5>
 );
