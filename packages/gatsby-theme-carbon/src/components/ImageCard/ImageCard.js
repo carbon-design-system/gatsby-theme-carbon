@@ -38,7 +38,7 @@ export default class ImageCard extends React.Component {
     /**
      * Set card aspect ratio, default is 1:1, options are 1:1, 16:9, 4:3, 2:1, 1:2
      */
-    aspectRatio: PropTypes.bool,
+    aspectRatio: PropTypes.string,
 
     /**
      * Use for disabled card
