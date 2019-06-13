@@ -44,27 +44,6 @@ body {
 }
 
 //---------------------------------------
-// Blockquote
-//---------------------------------------
-blockquote {
-  margin: $spacing-08 0 $spacing-08 $spacing-08;
-  color: $carbon--blue-60;
-  font-style: italic;
-}
-
-blockquote .#{$prefix}--paragraph {
-  @include carbon--type-style('expressive-heading-03');
-  @include carbon--breakpoint('md') {
-    width: calc(62.5% - 3rem);
-  }
-
-  // 8 columns wide
-  @include carbon--breakpoint('lg') {
-    width: calc(66.667% - 3rem);
-  }
-}
-
-//---------------------------------------
 // Page styles
 //---------------------------------------
 .page-p,
@@ -114,7 +93,9 @@ img {
   max-width: 100%;
 }
 
-.gatsby-resp-image-wrapper {
+.gatsby-resp-image-wrapper,
+img[src*='gif'],
+img[src*='svg'] {
   margin-bottom: $spacing-06;
 }
 
