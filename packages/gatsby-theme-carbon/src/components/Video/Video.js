@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-
 import { video, vimeo } from './Video.module.scss';
 
 export const Video = ({ vimeoId, title, ...props }) => {
@@ -26,7 +25,7 @@ export const Video = ({ vimeoId, title, ...props }) => {
 
   return (
     // eslint-disable-next-line jsx-a11y/media-has-caption
-    <video className={video} controls type="video/mp4" {...props} />
+    <video className={cx(video)} controls type="video/mp4" {...props} />
   );
 };
 

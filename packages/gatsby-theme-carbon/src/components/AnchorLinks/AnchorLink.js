@@ -1,15 +1,13 @@
 import React from 'react';
-import { settings } from 'carbon-components';
 import GHSlugger from 'github-slugger';
+import { link } from './AnchorLinks.module.scss';
 
 const slugger = new GHSlugger();
-
-const { prefix } = settings;
 
 const AnchorLink = ({ to, children }) => {
   const href = to || `#${slugger.slug(children)}`;
   return (
-    <a className={`${prefix}--anchor-links__link`} href={href}>
+    <a className={link} href={href}>
       {children}
     </a>
   );

@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { settings } from 'carbon-components';
-
-const { prefix } = settings;
+import { aside } from './Aside.module.scss';
 
 export default class Aside extends React.Component {
   static propTypes = {
@@ -18,7 +16,7 @@ export default class Aside extends React.Component {
   render() {
     const { children, className } = this.props;
 
-    const captionClasses = classnames([`${prefix}--aside`], {
+    const captionClasses = classnames(aside, {
       [className]: className,
     });
 

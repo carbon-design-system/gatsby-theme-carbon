@@ -152,6 +152,6 @@
 }
 
 // Video
-.#{$prefix}--example .#{$prefix}--video {
+.#{$prefix}--example [class^='Video-module--video'] {
   margin-bottom: 0;
 }
