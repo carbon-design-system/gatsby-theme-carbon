@@ -77,9 +77,9 @@
 //---------------------------------------
 
 .h1 {
-  @include carbon--type-style('expressive-heading-05', true);
   margin-top: 0;
-  margin-bottom: $layout-02;
+  margin-bottom: $spacing-05;
+  @include carbon--type-style('expressive-heading-04', true);
 }
 
 .h2 {
