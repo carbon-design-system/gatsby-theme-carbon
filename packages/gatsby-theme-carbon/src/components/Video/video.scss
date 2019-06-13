@@ -4,7 +4,7 @@
 }
 
 // iframe
-.gatsby-resp-iframe-wrapper {
+.#{$prefix}--video--vimeo {
   position: relative;
   height: 0px;
   overflow: hidden;

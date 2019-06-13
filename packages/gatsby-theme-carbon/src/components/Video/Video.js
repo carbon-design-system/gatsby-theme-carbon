@@ -7,20 +7,18 @@ const { prefix } = settings;
 export const Video = ({ vimeoId, title, src, poster, ...props }) => {
   if (vimeoId !== '') {
     return (
-      <div className={`${prefix}--video`}>
-        <div className="gatsby-resp-iframe-wrapper">
-          <div className="embedVideo-container">
-            <iframe
-              title={title}
-              src={`https://player.vimeo.com/video/${vimeoId}`}
-              width="640"
-              height="360"
-              frameBorder="0"
-              webkitallowfullscreen="true"
-              mozallowfullscreen="true"
-              allowFullScreen
-            />
-          </div>
+      <div className={`${prefix}--video ${prefix}--video--vimeo`}>
+        <div className="embedVideo-container">
+          <iframe
+            title={title}
+            src={`https://player.vimeo.com/video/${vimeoId}`}
+            width="640"
+            height="360"
+            frameBorder="0"
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+            allowFullScreen
+          />
         </div>
       </div>
     );
