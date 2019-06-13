@@ -5,36 +5,39 @@ import { settings } from 'carbon-components';
 const { prefix } = settings;
 
 export const Video = ({ vimeoId, title, src, poster, ...props }) => {
-  const vimeoVid = (
-    <div className="gatsby-resp-iframe-wrapper">
-      <div className="embedVideo-container">
-        <iframe
-          title={title}
-          src={`https://player.vimeo.com/video/${vimeoId}`}
-          width="640"
-          height="360"
-          frameBorder="0"
-          webkitallowfullscreen="true"
-          mozallowfullscreen="true"
-          allowFullScreen
-        />
+  if (vimeoId !== '') {
+    return (
+      <div className={`${prefix}--video`}>
+        <div className="gatsby-resp-iframe-wrapper">
+          <div className="embedVideo-container">
+            <iframe
+              title={title}
+              src={`https://player.vimeo.com/video/${vimeoId}`}
+              width="640"
+              height="360"
+              frameBorder="0"
+              webkitallowfullscreen="true"
+              mozallowfullscreen="true"
+              allowFullScreen
+            />
+          </div>
+        </div>
       </div>
-    </div>
-  );
-
-  const videoVid = (
-    <video controls poster={poster} {...props} src={src} type="video/mp4" />
-  );
-
-  return (
-    <div className={`${prefix}--video`}>
-      {src === '' && vimeoId === '' ? (
-        <p>Please add a vimeoId or src to your video component</p>
-      ) : null}
-      {src !== '' ? <>{videoVid}</> : null}
-      {vimeoId !== '' ? <>{vimeoVid}</> : null}
-    </div>
-  );
+    );
+  } else if (src !== '') {
+    return (
+      <video
+        className={`${prefix}--video`}
+        controls
+        poster={poster}
+        {...props}
+        src={src}
+        type="video/mp4"
+      />
+    );
+  } else {
+    return <p>Please add a vimeoId or src to your video component</p>;
+  }
 };
 
 Video.defaultProps = {
