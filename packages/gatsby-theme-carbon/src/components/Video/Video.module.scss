@@ -1,9 +1,12 @@
-.#{$prefix}--video {
+@import '~carbon-components/scss/globals/scss/vars';
+
+.video {
   margin-bottom: $spacing-08;
+  width: 100%;
 }
 
 // iframe
-.gatsby-resp-iframe-wrapper {
+.vimeo {
   position: relative;
   height: 0px;
   overflow: hidden;
