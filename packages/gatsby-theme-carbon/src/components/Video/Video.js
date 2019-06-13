@@ -34,7 +34,7 @@ export const Video = ({ vimeoId, title, src, poster, ...props }) => {
       />
     );
   } else {
-    return <p>Please add a vimeoId or src to your video component</p>;
+    return null;
   }
 };
 
