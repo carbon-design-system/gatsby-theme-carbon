@@ -24,7 +24,17 @@ const LeftNavItem = props => {
         const pathname = pathPrefix
           ? location.pathname.replace(pathPrefix, '')
           : location.pathname;
-        const isActive = items.some(item => pathname === item.path);
+        const isActive = items.some(
+          item => pathname === item.path || pathname === `${item.path}/`
+        );
+        const isActiveWithin = items.some(item => {
+          if (item.path.split('/').length > 2) {
+            return pathname.includes(
+              item.path.slice(0, item.path.lastIndexOf('/'))
+            );
+          }
+          return isActive;
+        });
         if (items.length === 1) {
           return (
             <SideNavLink
@@ -44,8 +54,8 @@ const LeftNavItem = props => {
         return (
           <SideNavMenu
             icon={<span>dummy icon</span>}
-            isActive={isActive} // TODO similar categories
-            defaultExpanded={isActive}
+            isActive={isActiveWithin} // TODO similar categories
+            defaultExpanded={isActiveWithin}
             title={category}
           >
             <SubNavItems
@@ -61,22 +71,28 @@ const LeftNavItem = props => {
 };
 
 const SubNavItems = ({ items, pathname, onClick }) =>
-  items.map((item, i) => (
-    <SideNavMenuItem
-      to={`${item.path}`}
-      onClick={onClick}
-      element={Link}
-      isActive={pathname === item.path}
-      key={i}
-    >
-      <span
-        style={{
-          color: pathname === item.path ? '#171717' : 'inherit',
-        }}
+  items.map((item, i) => {
+    const hasActiveTab =
+      item.path.split('/').filter(Boolean).length > 2
+        ? pathname.includes(item.path.slice(0, item.path.lastIndexOf('/')))
+        : pathname.includes(item.path);
+    return (
+      <SideNavMenuItem
+        to={`${item.path}`}
+        onClick={onClick}
+        element={Link}
+        isActive={hasActiveTab}
+        key={i}
       >
-        {item.title}
-      </span>
-    </SideNavMenuItem>
-  ));
+        <span
+          style={{
+            color: hasActiveTab ? '#171717' : 'inherit',
+          }}
+        >
+          {item.title}
+        </span>
+      </SideNavMenuItem>
+    );
+  });
 
 export default LeftNavItem;
