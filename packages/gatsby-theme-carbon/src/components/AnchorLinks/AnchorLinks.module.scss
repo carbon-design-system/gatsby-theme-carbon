@@ -1,14 +1,29 @@
-.#{$prefix}--anchor-links__list {
-  width: auto;
+@import '~carbon-components/scss/globals/scss/vars';
+@import '~@carbon/elements/scss/type/type';
+
+.list {
   margin-bottom: 0;
   margin-top: $spacing-05;
-
+  width: 100%;
   @include carbon--breakpoint('md') {
     margin-bottom: $spacing-07;
+    width: 75%;
+  }
+  @include carbon--breakpoint('lg') {
+    width: 58.33%;
   }
 }
 
-.#{$prefix}--anchor-links__item {
+.list--small {
+  margin-top: $spacing-05;
+}
+
+.list--small .link {
+  @include carbon--type-style('body-long-02');
+  margin-bottom: 0;
+}
+
+.list-item {
   @include carbon--type-style('expressive-heading-03', true);
   width: auto;
   list-style: none;
@@ -22,7 +37,7 @@
   }
 }
 
-.#{$prefix}--anchor-links__link {
+.link {
   @include carbon--type-style('expressive-heading-03', true);
   position: relative;
   display: inline-block;
@@ -51,18 +66,8 @@
 }
 
 // Multiple Columns
-.#{$prefix}--anchor-links__list--column {
+.multiple-columns {
   @include carbon--breakpoint('md') {
     column-count: 2;
   }
-}
-
-// Small
-.#{$prefix}--anchor-links__list--small {
-  margin-top: $spacing-05;
-}
-
-.#{$prefix}--anchor-links__list--small .#{$prefix}--anchor-links__link {
-  @include carbon--type-style('body-long-02');
-  margin-bottom: 0;
 }

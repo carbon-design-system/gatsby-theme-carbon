@@ -1,26 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { settings } from 'carbon-components';
-import responsiveStyles from '../shared/responsiveStyles';
-
-const { prefix } = settings;
+import {
+  list,
+  listSmall,
+  multipleColumns,
+  item,
+} from './AnchorLinks.module.scss';
 
 export default class AnchorLinks extends React.Component {
   render() {
     const { children, small } = this.props;
     const isColumn = React.Children.count(children) > 6;
-    const classNames = classnames({
-      [`${prefix}--anchor-links__list`]: true,
-      [`${prefix}--anchor-links__list--small`]: small,
-      [`${prefix}--anchor-links__list--column`]: isColumn,
+    const classNames = classnames(list, {
+      [listSmall]: small,
+      [multipleColumns]: isColumn,
     });
 
     return (
-      <ul css={responsiveStyles} className={classNames}>
-        {children.map((item, i) => (
-          <li key={i} className={`${prefix}--anchor-links__item`}>
-            {item}
+      <ul className={classNames}>
+        {children.map((link, i) => (
+          <li key={i} className={item}>
+            {link}
           </li>
         ))}
       </ul>
@@ -29,6 +30,6 @@ export default class AnchorLinks extends React.Component {
 }
 
 AnchorLinks.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   small: PropTypes.bool,
 };
