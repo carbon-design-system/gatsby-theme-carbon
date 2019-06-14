@@ -1,6 +1,15 @@
 @import '~carbon-components/scss/globals/scss/vars';
 @import '~carbon-components/scss/globals/scss/layout';
 
+header.header button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    margin-top: 0;
+  }
+}
+
 header.header {
   transition: top $duration--fast-02;
   background-color: $ui-05;
@@ -12,6 +21,8 @@ header.header {
   top: -48px;
 }
 
-.icon svg {
-  margin-top: 2px;
+button.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
