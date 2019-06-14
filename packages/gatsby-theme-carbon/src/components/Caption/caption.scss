@@ -11,7 +11,7 @@ img + .#{$prefix}--caption {
 }
 
 // Caption after video
-.#{$prefix}--video + .#{$prefix}--caption {
+[class^='Video-module--video'] + .#{$prefix}--caption {
   margin-top: -$spacing-08;
 }
 

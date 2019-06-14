@@ -35,6 +35,12 @@ Combined emphasis with **asterisks and _underscores_**.
 Strikethrough uses two tildes. ~~Scratch this.~~
 ```
 
+## Headers
+
+Since the `h1` role effectively consumed by the page header, we style `h1` tags the same as `h2` tags. The only difference is the lack of a margin-top on `h1` components.
+
+This means the start of your content should be either a [PageDescription](/components/PageDescription) or an `h1` tag (single #). We recommend the former strategy. For most content, we think `PageDescription` → `AnchorLinks` creates a nice hierarchy.
+
 # H1
 
 ## H2
@@ -62,9 +68,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 3. Actual numbers don't matter, just that it's a number
 4. And another item.
 
-- Unordered list can use asterisks
-
-* Or minuses
+- Unordered list can use asterisks `*`
+- Or minuses `-` to create list items
 
 #### Code
 
@@ -74,9 +79,9 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 3. Actual numbers don't matter, just that it's a number
 4. And another item.
 
-* Unordered list can use asterisks
+- Unordered list can use asterisks `*`
+- Or minuses `-` to create list items
 
-- Or minuses
 ```
 
 ## Links

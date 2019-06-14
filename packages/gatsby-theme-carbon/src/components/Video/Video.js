@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-
 import { video, vimeo } from './Video.module.scss';
 
 export const Video = ({ vimeoId, title, ...props }) => {

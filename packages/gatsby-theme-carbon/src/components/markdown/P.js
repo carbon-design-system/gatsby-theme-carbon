@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { settings } from 'carbon-components';
 
-const { prefix } = settings;
+import { paragraph, paragraphResponsive } from './Markdown.module.scss';
 
 export default class P extends React.Component {
   static propTypes = {
@@ -23,9 +22,9 @@ export default class P extends React.Component {
   render() {
     const { children, className, fullWidth, ...rest } = this.props;
 
-    const paragraphClasses = classnames([`${prefix}--paragraph`], {
+    const paragraphClasses = classnames(paragraph, {
       [className]: className,
-      [`${prefix}--paragraph--responsive`]: !fullWidth,
+      [paragraphResponsive]: !fullWidth,
     });
 
     return (
