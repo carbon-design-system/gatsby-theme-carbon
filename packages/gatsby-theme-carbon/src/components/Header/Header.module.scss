@@ -12,6 +12,8 @@ header.header {
   top: -48px;
 }
 
-.icon svg {
-  margin-top: 2px;
+button.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,16 +1,10 @@
 import React, { useContext } from 'react';
 import cx from 'classnames';
 import NavContext from '../../util/context/NavContext';
-import { useScrollDirection } from '../../util/hooks';
 import { nav, open, divider, link, linkDisabled } from './Switcher.module.scss';
 
 const Switcher = ({ children }) => {
-  const { switcherIsOpen, toggleNavState } = useContext(NavContext);
-  const direction = useScrollDirection();
-
-  if (direction === 'down' && switcherIsOpen) {
-    toggleNavState('switcherIsOpen', 'close');
-  }
+  const { switcherIsOpen } = useContext(NavContext);
 
   return (
     <nav
