@@ -25,7 +25,7 @@ export const Video = ({ vimeoId, title, ...props }) => {
 
   return (
     // eslint-disable-next-line jsx-a11y/media-has-caption
-    <video className={cx(video)} controls type="video/mp4" {...props} />
+    <video className={video} controls type="video/mp4" {...props} />
   );
 };
 
