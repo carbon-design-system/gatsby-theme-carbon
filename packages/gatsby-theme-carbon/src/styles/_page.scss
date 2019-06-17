@@ -28,6 +28,15 @@ body {
   @include carbon--breakpoint('max') {
     padding-left: 400px;
   }
+
+  > h1:first-of-type,
+  > h2:first-of-type,
+  > h3:first-of-type,
+  > h4:first-of-type,
+  > h5:first-of-type,
+  > h6:first-of-type {
+    margin-top: 0;
+  }
 }
 
 .container .#{$prefix}--col-no-gutter {
