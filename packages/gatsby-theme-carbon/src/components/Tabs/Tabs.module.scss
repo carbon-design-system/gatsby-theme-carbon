@@ -96,6 +96,7 @@ nav.tab-container div a {
   padding-top: $spacing-09;
   background: $ui-background;
   margin-left: -$spacing-05;
+  margin-bottom: $spacing-08;
   width: 100vw;
   @include carbon--breakpoint('md') {
     width: 100%;
