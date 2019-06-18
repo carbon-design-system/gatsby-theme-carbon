@@ -1,0 +1,13 @@
+@import '~carbon-components/scss/globals/scss/vars';
+
+.main {
+  padding-bottom: 80px;
+}
+
+.padded {
+  min-height: calc(100vh - 40rem);
+  padding-bottom: $layout-07;
+  :first-child {
+    margin-top: 0;
+  }
+}
