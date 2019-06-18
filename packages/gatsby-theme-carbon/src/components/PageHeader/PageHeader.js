@@ -19,9 +19,9 @@ const PageHeader = ({ children, title, tabs = [], shouldHideHeader }) => (
     <div className="bx--grid">
       <div className="bx--row">
         <div className="bx--col-lg-12">
-          <h2 id="page-title" className={text}>
+          <h1 id="page-title" className={text}>
             {title}
-          </h2>
+          </h1>
         </div>
       </div>
     </div>
