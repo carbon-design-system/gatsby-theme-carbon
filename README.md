@@ -119,6 +119,16 @@ siteMetadata: {
   __experimentalThemes: [
 ```
 
+### Global style injection
+
+You can inject imports and other global values into the theme bundle by shadowing `src/gatsby-theme-carbon/styles/_global.scss` in your project.
+
+### Notes:
+
+- This file is empty by default; it exists only to be shadowed if desired
+- Use this file to inject `carbon-components` or other dependencies into the theme bundle
+- This file is imported directly after our internal theme globals. As such it will only be able to override those global values. **To override other stylesheets, you'll need to shadow them separately.**
+
 ### Additional font weights
 
 If needed, you can add support for additional Plex font weights. Don't forget to specify italics for the additional weights if needed.
