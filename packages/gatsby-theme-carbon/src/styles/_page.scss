@@ -1,10 +1,3 @@
-//---------------------------------------
-// Global styles
-//---------------------------------------
-body {
-  background: $ui-05;
-}
-
 .container {
   background: $ui-01;
   width: 100%;
@@ -55,14 +48,6 @@ body {
     padding: 0;
     margin: 0;
   }
-}
-
-em {
-  font-style: italic;
-}
-
-button {
-  font-family: inherit;
 }
 
 .page-content {
@@ -116,84 +101,6 @@ img[src*='svg'] {
 
 .page-content iframe {
   margin-bottom: rem(24px);
-}
-
-// Website alert banner
-.website-alert {
-  height: rem(40px);
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  z-index: 9999;
-  background: $brand-01;
-}
-
-.website-alert__icon {
-  margin-right: 1.375rem;
-  margin-left: 0.875rem;
-  fill: $inverse-01;
-
-  @include carbon--breakpoint('lg') {
-    margin: 0 1rem;
-  }
-}
-
-.website-alert__button {
-  justify-self: flex-end;
-  margin-left: auto;
-  height: 100%;
-  text-decoration: none;
-}
-
-.website-alert .#{$prefix}--btn {
-  height: 100%;
-  width: 100%;
-  padding: 0 1rem;
-  display: inline-flex;
-  align-items: center;
-
-  svg {
-    margin-left: rem(8px);
-    fill: $inverse-01;
-  }
-}
-
-.website-alert__text {
-  @include carbon--type-style('body-short-01');
-  color: $inverse-01;
-  padding: 0;
-}
-
-.website-alert + .#{$prefix}--header {
-  top: rem(40px);
-}
-
-.website-alert + .#{$prefix}--header ~ div > .#{$prefix}--side-nav {
-  top: 5.5rem;
-}
-
-.website-alert + .#{$prefix}--header ~ div > .#{$prefix}--side-nav + div,
-.website-alert
-  + .#{$prefix}--header
-  ~ div
-  > .#{$prefix}--side-nav
-  + .container {
-  margin-top: 5.5rem;
-}
-
-.website-alert
-  + .#{$prefix}--header
-  ~ .#{$prefix}--side-nav
-  + div
-  .color-token-table__theme-switcher--sticky {
-  top: 104px;
-}
-
-.website-alert + .#{$prefix}--header ~ .#{$prefix}--website-switcher {
-  top: 5.5rem;
 }
 
 .bx--website-switcher {
