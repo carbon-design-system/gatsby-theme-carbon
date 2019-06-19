@@ -119,15 +119,11 @@ siteMetadata: {
   __experimentalThemes: [
 ```
 
-### Global style injection
+### Global Styles
 
-You can inject imports and other global values into the theme bundle by shadowing `src/gatsby-theme-carbon/styles/_global.scss` in your project.
+You can inject global styles into the theme's style bundle by shadowing `gatsby-theme-carbon/styles/_global.scss` in your project's `src` directory. This technique is especially useful for `node_module` dependencies that assume a single bundle (such as individual `carbon-components`).
 
-### Notes:
-
-- This file is empty by default; it exists only to be shadowed if desired
-- Use this file to inject `carbon-components` or other dependencies into the theme bundle
-- This file is imported directly after our internal theme globals. As such it will only be able to override those global values. **To override other stylesheets, you'll need to shadow them separately.**
+For your application's local styles, import your style sheet [directly into a `gatsby-browser.js`](https://www.gatsbyjs.org/docs/global-css/#adding-global-styles-without-a-layout-component) file at the root of your project.
 
 ### Additional font weights
 
