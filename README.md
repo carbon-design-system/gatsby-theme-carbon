@@ -20,7 +20,7 @@ Navigate into your directory and start it up
 
 ```sh
     cd my-carbon-site/
-    gatsby develop
+    npx gatsby develop
 ```
 
 3. **Make some changes!**
