@@ -123,7 +123,7 @@ siteMetadata: {
 
 You can inject global styles into the theme's style bundle by shadowing `gatsby-theme-carbon/styles/_global.scss` in your project's `src` directory. This technique is especially useful for `node_module` dependencies that assume a single bundle (such as individual `carbon-components`).
 
-For your application's local styles, import your style sheet [directly into a `gatsby-browser.js`](https://www.gatsbyjs.org/docs/global-css/#adding-global-styles-without-a-layout-component) file at the root of your project.
+For your application's local styles, you can just import your style sheet [directly into a `gatsby-browser.js`](https://www.gatsbyjs.org/docs/global-css/#adding-global-styles-without-a-layout-component) file at the root of your project.
 
 ### Additional font weights
 
