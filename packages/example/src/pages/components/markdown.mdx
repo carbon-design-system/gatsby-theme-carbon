@@ -37,11 +37,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 ## Headers
 
-Since the `h1` role effectively consumed by the page header, we style `h1` tags the same as `h2` tags. The only difference is the lack of a margin-top on `h1` components.
-
-This means the start of your content should be either a [PageDescription](/components/PageDescription) or an `h1` tag (single #). We recommend the former strategy. For most content, we think `PageDescription` → `AnchorLinks` creates a nice hierarchy.
-
-# H1
+**Note:** It's generally considered [best practice](https://webaim.org/techniques/semanticstructure/#contentstructure) to include just one `h1` heading per page. This heading signals the title or primary subject matter of the content to your audience. Because the title component generated at the top of each page already uses an `h1` heading, we recommend using `h2` tags for section headings within your content.
 
 ## H2
 
@@ -54,7 +50,6 @@ This means the start of your content should be either a [PageDescription](/compo
 #### Code
 
 ```
-# H1
 ## H2
 ### H3
 #### H4
