@@ -1,7 +1,7 @@
-// Base globals
-@import 'default-global';
+// Base global
+@import 'theme-global';
 
-// Global scss file to override via shadowing
+// Global stylesbeet to inject global dependencies via shadowing
 @import 'global';
 
 // Carbon components
