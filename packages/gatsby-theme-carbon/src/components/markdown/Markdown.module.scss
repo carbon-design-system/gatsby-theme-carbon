@@ -126,17 +126,20 @@
 // Lists
 //---------------------------------------
 
-.list {
-  list-style: none;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
+.ordered,
+.unordered {
+  // removes spacing around nested lists
+  margin: 0 0 $spacing-06 $spacing-06;
+  line-height: 1.5;
+  position: relative;
   @include carbon--type-style('body-long-02');
+
+  .ordered,
+  .unordered {
+    margin-top: -1.25rem;
+    margin-bottom: 0;
+  }
   li {
-    margin-left: 1.25rem;
-    &:before {
-      position: absolute;
-      margin-left: -1.25rem;
-    }
     & p {
       display: inline;
     }
@@ -144,22 +147,45 @@
 }
 
 .ordered {
-  composes: list;
+  list-style: decimal;
   li {
-    counter-increment: step;
+    margin-left: -0.5rem;
+    padding-left: 0;
     &:before {
-      content: counter(step) '. ';
+      content: none;
     }
   }
 }
 
 .unordered {
-  composes: list;
+  margin-left: 0;
+  list-style: none;
   li {
+    padding-left: $spacing-05;
+    position: relative;
     &:before {
       position: absolute;
-      margin-left: -1.25rem;
-      content: '–';
+      content: '\2013';
+      margin-right: $spacing-03;
+      margin-bottom: 0.25rem;
+      left: 0;
     }
+  }
+}
+
+// nested list overrides
+.unordered .ordered {
+  list-style: decimal;
+  li {
+    padding-left: 0;
+    &:before {
+      content: none;
+    }
+  }
+}
+
+.ordered .unordered {
+  li {
+    margin-left: 0;
   }
 }
