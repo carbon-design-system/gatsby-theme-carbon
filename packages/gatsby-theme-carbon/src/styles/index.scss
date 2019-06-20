@@ -1,29 +1,8 @@
-//---------------------------------------
-// Carbon Components
-//---------------------------------------
+// Base global
+@import 'theme-global';
 
-$feature-flags: (
-  ui-shell: true,
-  grid-columns-16: false,
-);
-
-$prefix: 'bx';
-
-// Carbon globals/helpers
-@import '~carbon-components/scss/globals/grid/grid';
-@import '~carbon-components/scss/globals/scss/vars';
-@import '~carbon-components/scss/globals/scss/layout';
-
-// Typography
-@include carbon--type-reset();
-@import '~@carbon/elements/scss/type/classes';
-
-// special characters (arrows)
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&text=←→↑↓↔↕↖↗↘↙↚↛↮⟵⟶⟷↰↱↲↳⬐⬎⬑⬏↴↵');
-
-$font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
-$font-family-mono: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
-  'Bitstream Vera Sans Mono', Courier, monospace;
+// Global stylesbeet to inject global dependencies via shadowing
+@import 'global';
 
 // Carbon components
 @import '~carbon-components/scss/components/ui-shell/ui-shell';
