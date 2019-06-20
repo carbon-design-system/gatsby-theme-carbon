@@ -77,9 +77,9 @@
 //---------------------------------------
 
 .h1 {
-  margin-top: 0;
+  margin-top: 4.5rem;
   margin-bottom: $spacing-05;
-  @include carbon--type-style('expressive-heading-04', true);
+  @include carbon--type-style('expressive-heading-05', true);
 }
 
 .h2 {
@@ -101,7 +101,7 @@
 
 .h5,
 .h6 {
-  // h5 and h6 intentionally mimic eachother
+  // h5 and h6 intentionally mimic one another
   margin-top: $spacing-04;
   @include carbon--type-style('heading-01');
 }
