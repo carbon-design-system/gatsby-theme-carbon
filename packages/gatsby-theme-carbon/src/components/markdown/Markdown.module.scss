@@ -15,14 +15,14 @@
   margin-left: -$spacing-05;
   padding-left: $spacing-05;
 
-  // 5 columns wide
+  // 6 col
   @include carbon--breakpoint('md') {
-    width: calc(63%);
+    width: 75%;
   }
 
-  // 8 columns wide
+  // 8 col
   @include carbon--breakpoint('lg') {
-    width: calc(67.3%);
+    width: 66.667%;
   }
 }
 
@@ -42,14 +42,30 @@
 
 .blockquote .paragraph {
   @include carbon--type-style('expressive-heading-03');
+  margin-bottom: 0;
+}
+
+.blockquote .paragraph--responsive {
+  // 6 col
   @include carbon--breakpoint('md') {
-    width: calc(62.5% - 3rem);
+    width: calc(75% - 3rem);
   }
 
-  // 8 columns wide
+  // 8 col
   @include carbon--breakpoint('lg') {
     width: calc(66.667% - 3rem);
   }
+}
+
+// If quote is inside a user specified row then allow the grid code to set the width
+:global(.#{$prefix}--row) .blockquote .paragraph {
+  width: calc(100% - 3rem);
+}
+
+.blockquote cite {
+  @include carbon--type-style('body-long-01');
+  display: block;
+  margin-top: $spacing-02;
 }
 
 //---------------------------------------

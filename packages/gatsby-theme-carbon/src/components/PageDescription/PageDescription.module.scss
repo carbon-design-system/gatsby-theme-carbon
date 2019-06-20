@@ -5,13 +5,14 @@
   @include carbon--type-style('expressive-heading-03', true);
   margin-bottom: $layout-03;
 
+  // 6 col
   @include carbon--breakpoint('md') {
-    width: calc(62.5% - 2rem);
+    width: 75%;
   }
 
-  // 8 columns wide
+  // 8 col
   @include carbon--breakpoint('lg') {
-    width: calc(66.667% - 2rem);
+    width: 66.667%;
   }
 }
 
