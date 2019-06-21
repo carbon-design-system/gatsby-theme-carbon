@@ -16,11 +16,20 @@ npx gatsby new my-carbon-site https://github.com/carbon-design-system/gatsby-sta
 
 2. **Start developing**
 
-Navigate into your directory and start it up
+Navigate into your directory and start it up using one of the following snippets. You can tell which command to use based on the lock file at the root of your project (`yarn.lock` for yarn and `package-lock.json` for npm).
+
+#### yarn
 
 ```sh
     cd my-carbon-site/
-    gatsby develop
+    yarn develop
+```
+
+#### npm
+
+```sh
+    cd my-carbon-site/
+    npm run develop
 ```
 
 3. **Make some changes!**

@@ -1,11 +1,9 @@
 import React from 'react';
-import GHSlugger from 'github-slugger';
+import slugify from 'slugify';
 import { link } from './AnchorLinks.module.scss';
 
-const slugger = new GHSlugger();
-
 const AnchorLink = ({ to, children }) => {
-  const href = to || `#${slugger.slug(children)}`;
+  const href = to || `#${slugify(children, { lower: true })}`;
   return (
     <a className={link} href={href}>
       {children}

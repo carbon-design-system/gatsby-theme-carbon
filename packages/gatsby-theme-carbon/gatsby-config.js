@@ -1,5 +1,6 @@
 const path = require('path');
 const colors = require('@carbon/themes');
+const remarkSlug = require('remark-slug');
 
 module.exports = themeOptions => {
   const {
@@ -68,6 +69,7 @@ module.exports = themeOptions => {
             { resolve: `gatsby-remark-responsive-iframe` },
             { resolve: `gatsby-remark-copy-linked-files` },
           ],
+          remarkPlugins: [remarkSlug],
           defaultLayouts: {
             default: require.resolve('./src/templates/Default.js'),
             home: require.resolve('./src/templates/Homepage.js'),

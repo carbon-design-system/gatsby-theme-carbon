@@ -50,9 +50,16 @@ For most pages, we recommend starting with a `PageDescription` followed by `Anch
 </AnchorLinks>
 ```
 
-## Props
+### `AnchorLinks` Props
 
 | property | propType | required | default | description             |
 | -------- | -------- | -------- | ------- | ----------------------- |
 | children | node     |          |         |                         |
 | small    | bool     |          |         | Display small font size |
+
+### `AnchorLink` Props
+
+| property | propType | required | default        | description                                                                                              |
+| -------- | -------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------- |
+| children | node     |          |                |                                                                                                          |
+| to       | string   |          | props.children | By default, the `AnchorLink` slugifys the children you pass in. Use the to prop to override this target. |
