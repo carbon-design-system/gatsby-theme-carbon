@@ -125,41 +125,66 @@
 //---------------------------------------
 // Lists
 //---------------------------------------
-
-.list {
-  list-style: none;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  @include carbon--type-style('body-long-02');
-  li {
-    margin-left: 1.25rem;
-    &:before {
-      position: absolute;
-      margin-left: -1.25rem;
-    }
-    & p {
-      display: inline;
-    }
-  }
-}
-
-.ordered {
-  composes: list;
-  li {
-    counter-increment: step;
-    &:before {
-      content: counter(step) '. ';
-    }
-  }
-}
-
+.ordered,
 .unordered {
-  composes: list;
+  margin-bottom: $spacing-06;
+  padding-left: 1.25em;
+  line-height: 1.5;
+  @include carbon--type-style('body-long-02');
+  @include carbon--breakpoint('md') {
+    padding-left: 1em;
+  }
+
+  // No margin for nested lists
+  .ordered,
+  .unordered {
+    margin-bottom: 0;
+  }
+}
+
+// Unordered lists
+.unordered {
+  padding-left: 0;
   li {
-    &:before {
-      position: absolute;
-      margin-left: -1.25rem;
-      content: '–';
+    list-style: none;
+    &::before {
+      content: '– ';
+      display: inline-block;
+      margin-right: $spacing-03;
     }
   }
+}
+
+.unordered .ordered {
+  margin-left: $spacing-08;
+}
+
+.unordered .unordered {
+  padding-left: $spacing-08;
+}
+
+// Ordered lists
+.ordered {
+  li {
+    list-style: decimal;
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.ordered .unordered {
+  padding-left: $spacing-06;
+  li {
+    list-style: none;
+    &::before {
+      content: '– ';
+      display: inline-block;
+      margin-right: $spacing-03;
+    }
+  }
+}
+
+.ordered .ordered {
+  margin-left: $spacing-06;
 }
