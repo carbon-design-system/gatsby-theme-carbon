@@ -7,11 +7,11 @@ import PropTypes from 'prop-types';
 
 import { resourceLink, outboundLink } from './LeftNav.module.scss';
 
-const LeftNavResourceLinks = ({ links, newTab }) => {
+const LeftNavResourceLinks = ({ links, shouldOpenNewTabs }) => {
   if (!links) return null;
 
-  const newTabProps = {
-    ...(newTab && { rel: 'noopener noreferrer', target: '_blank' }),
+  const shouldOpenNewTabsProps = {
+    ...(shouldOpenNewTabs && { rel: 'noopener noreferrer', target: '_blank' }),
   };
 
   return (
@@ -30,7 +30,7 @@ const LeftNavResourceLinks = ({ links, newTab }) => {
             href={href}
             className={cx(resourceLink, { [outboundLink]: outbound })}
             element={outbound ? 'a' : Link}
-            {...newTabProps}
+            {...shouldOpenNewTabsProps}
           >
             {title}
           </SideNavLink>
@@ -48,7 +48,7 @@ LeftNavResourceLinks.propTypes = {
     })
   ),
   // true if outbound links should open in a new tab
-  newTab: PropTypes.bool,
+  shouldOpenNewTabs: PropTypes.bool,
 };
 
 export default LeftNavResourceLinks;

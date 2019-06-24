@@ -6,7 +6,7 @@ const links = [
   { title: 'Storybook', href: 'https://react.carbondesignsystem.com' },
 ];
 
-// newTab: true if outbound links should open in a new tab
-const CustomResources = () => <ResourceLinks newTab links={links} />;
+// shouldOpenNewTabs: true if outbound links should open in a new tab
+const CustomResources = () => <ResourceLinks shouldOpenNewTabs links={links} />;
 
 export default CustomResources;
