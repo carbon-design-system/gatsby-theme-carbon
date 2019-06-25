@@ -17,14 +17,14 @@ img + .#{$prefix}--caption {
 
 // Responsive by default
 .#{$prefix}--caption--responsive {
-  // 4 columns wide
+  // 6/8 columns
   @include carbon--breakpoint('md') {
-    width: 50%;
+    width: 75%;
   }
 
-  // 4 columns wide
+  // 6/12 columns wide
   @include carbon--breakpoint('lg') {
-    width: 33.333%;
+    width: 50%;
   }
 }
 
