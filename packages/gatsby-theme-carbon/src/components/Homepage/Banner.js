@@ -9,7 +9,7 @@ const StyledGrid = styled(Grid)`
   height: 50vh;
   max-height: 560px;
   width: 100%;
-  background-position: left bottom;
+  background-position: ${props => (props.position ? props.position : 'center')};
   ${mq.lg} {
     padding-left: 256px;
   }
@@ -32,8 +32,8 @@ const StyledColumn = styled(Column)`
 
 const columCss = ({ typeStyles }) => typeStyles.quotation01;
 
-const HomepageBanner = ({ image, renderText }) => (
-  <StyledGrid image={image}>
+const HomepageBanner = ({ image, position, renderText }) => (
+  <StyledGrid position={position} image={image}>
     <StyledRow>
       <StyledColumn css={columCss}>{renderText()}</StyledColumn>
     </StyledRow>
