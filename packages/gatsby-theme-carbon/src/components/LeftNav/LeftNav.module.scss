@@ -7,3 +7,20 @@
 .current-item .current-item-text {
   color: #171717;
 }
+
+.resource-link {
+  &:first-of-type {
+    margin-top: $spacing-05;
+  }
+}
+// Moves icons to the right
+.outboundLink {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+// Icons
+.outboundLink div {
+  display: inline-block !important;
+  flex: 0;
+}
