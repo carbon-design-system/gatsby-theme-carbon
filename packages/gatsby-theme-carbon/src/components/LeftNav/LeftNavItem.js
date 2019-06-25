@@ -8,7 +8,7 @@ import {
   SideNavMenuItem,
 } from 'carbon-components-react/lib/components/UIShell';
 
-import { currentItem, currentItemText } from './LeftNav.module.scss';
+import { currentItem } from './LeftNav.module.scss';
 
 import NavContext from '../../util/context/NavContext';
 import usePathprefix from '../../util/hooks/usePathprefix';
@@ -45,9 +45,7 @@ const LeftNavItem = props => {
               isActive={isActive}
               to={`${items[0].path}`}
             >
-              <span className={cx({ [currentItemText]: isActive })}>
-                {category}
-              </span>
+              {category}
             </SideNavLink>
           );
         }
