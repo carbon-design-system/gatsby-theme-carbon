@@ -52,7 +52,6 @@
 
 .container--homepage .#{$prefix}--grid {
   margin: 0;
-  //max-width: 100%;
 
   @include carbon--breakpoint('lg') {
     padding-left: calc(
