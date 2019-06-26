@@ -33,8 +33,8 @@
 }
 
 .#{$prefix}--resource-card__icon--img .gatsby-resp-image-wrapper,
-img[src*='gif'],
-img[src*='svg'] {
+.#{$prefix}--resource-card__icon--img img[src*='gif'],
+.#{$prefix}--resource-card__icon--img img[src*='svg'] {
   margin-bottom: 0;
 }
 
