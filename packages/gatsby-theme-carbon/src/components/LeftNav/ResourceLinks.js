@@ -42,7 +42,7 @@ const LeftNavResourceLinks = ({ links, shouldOpenNewTabs }) => {
 
 LeftNavResourceLinks.propTypes = {
   links: PropTypes.arrayOf(
-    PropTypes.objectOf({
+    PropTypes.shape({
       title: PropTypes.string,
       href: PropTypes.string,
     })
