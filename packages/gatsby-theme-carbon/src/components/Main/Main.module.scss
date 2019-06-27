@@ -8,7 +8,7 @@
   min-height: calc(100vh - 40rem);
   padding-top: 80px;
   padding-bottom: $layout-07;
-  :first-child {
+  & > :first-child {
     margin-top: 0;
   }
 }
