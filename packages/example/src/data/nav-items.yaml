@@ -10,6 +10,8 @@
       path: /components/DoDontExample
     - title: Caption
       path: /components/Caption
+    - title: Accordion
+      path: /components/Accordion
     - title: Aside
       path: /components/Aside
     - title: AnchorLinks

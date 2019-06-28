@@ -1,0 +1,98 @@
+---
+title: Accordion
+---
+import { AccordionGroup, Accordion, AccordionItem } from "../../../../gatsby-theme-carbon";
+
+<PageDescription>
+
+The Accordion feature is comprised of three components - **AccordionGroup**, **Accordion**, and **AccordionItem**. The AccordionGroup is wrapper for a collection of Accordion components, providing margins and an optional group title. The Accordion component is a wrapper for AccordionItems where each item has a title and content. An AccordionGroup can be used inside of a `<Row>` and `<Column>`. 
+
+</PageDescription>
+
+## Example with group title
+
+<AccordionGroup title="Accordion Example">
+<Accordion>
+<AccordionItem title="First Item">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+</AccordionItem>
+<AccordionItem title="Second Item">
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+
+</AccordionItem>
+<AccordionItem title="Third Item">
+
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+</AccordionItem>
+</Accordion>
+
+</AccordionGroup>
+
+## Example without group title
+
+<AccordionGroup >
+<Accordion>
+<AccordionItem title="First Item">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+</AccordionItem>
+<AccordionItem title="Second Item">
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+
+</AccordionItem>
+<AccordionItem title="Third Item">
+
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+</AccordionItem>
+</Accordion>
+
+</AccordionGroup>
+
+## Code
+
+```
+<AccordionGroup title="Accordion Example">
+<Accordion>
+<AccordionItem title="First Accordion Item">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+</AccordionItem>
+<AccordionItem title="Second Accordion Item">
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+</AccordionItem>
+</Accordion>
+</AccordionGroup>
+```
+
+## AccordionGroup Props
+
+| property  | propType | required | default | description             |
+| --------- | -------- | -------- | ------- | ---------------------   |
+| children  | node     |          |         |                         |
+| title     | string   |          |         | Title/heading for group |
+| className | string   |          |         | Add custom class name   |
+
+## Accordion Props
+
+| property  | propType | required | default | description             |
+| --------- | -------- | -------- | ------- | ---------------------   |
+| children  | node     |          |         |                         |
+| className | string   |          |         | Add custom class name   |
+
+## AccordionItem Props
+
+| property  | propType | required | default | description               |
+| --------- | -------- | -------- | ------- | ---------------------     |
+| children  | node     |          |         |                           |
+| title     | string   |   yes    |         | Title/heading for content |
+| className | string   |          |         | Add custom class name     |
