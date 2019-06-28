@@ -2,7 +2,7 @@
   @import "~carbon-components/scss/components/accordion/accordion";
 }  
 
-.gtc__title {
+.accordionItem .bx--accordion__title {
   font-weight: 600 ;
   font-size: 1rem ;
   padding-top: 0.5rem ;
@@ -11,12 +11,12 @@
   padding-left: 0rem ;
 }
 
-.gtc__content {
+.accordionItem .bx--accordion__content {
   padding-right: 9.4% !important;
   padding-top: 0 !important;
 }
 
-.gtc__content p {
+.accordionItem .bx--accordion__content p {
   font-size: 1rem !important;
   font-weight: 400 !important;
   line-height: 1.5rem !important;
@@ -24,62 +24,58 @@
 }
 
 @media (min-width: 66rem) {
-  .gtc__content p {
+  .accordionItem .bx--accordion__content p {
     width: 100% !important;
   }
 }
 
 @media (min-width: 42rem) {
-  .gtc__content p {
+  .accordionItem .bx--accordion__content p {
     width: 100% !important;
   }
-  .gtc__content li {
+  .accordionItem .bx--accordion__content li {
     margin-left: 0rem !important;
     width: 92.75%;
   }
-  .gtc__content ul {
+  .accordionItem .bx--accordion__content ul {
     width: 100% !important;
   }
-  .gtc__content ol {
+  .accordionItem .bx--accordion__content ol {
     width: 92.75% !important;
   }
 }
 
-.gtc__content li {
+.accordionItem .bx--accordion__content li {
   margin-left: 1.25rem !important;
 }
 
-.gtc__content ol li {
+.accordionItem .bx--accordion__content ol li {
   margin-left: 0rem !important;
   width: 100% !important;
 }
 
-.gtc__content ol li p {
+.accordionItem .bx--accordion__content ol li p {
   padding-right: 0rem !important;
 }
 
-.gtc__content ol {
+.accordionItem .bx--accordion__content ol {
   margin-left: 1.3rem !important;
   margin-right: 2rem !important;
   margin-bottom: 0rem !important;
 }
 
-.gtc__item .gtc__content p{
-  display: none;
-}
-
-.gtc__item__active .gtc__content {
+.accordionItem .bx--accordion__item--active .bx--accordion__content {
   padding-bottom: 1.25rem !important;
 }
 
-.gtc__item__active .gtc__content p {
+.accordionItem .bx--accordion__item--active .bx--accordion__content p {
   display: block;
 }
 
-.gtc__heading {
+.accordionItem .bx--accordion__heading {
   align-items: flex-start;
 }
 
-.gtc__heading svg {
+.accordionItem .bx--accordion__heading svg {
   margin-top: 0.7rem !important;
 }

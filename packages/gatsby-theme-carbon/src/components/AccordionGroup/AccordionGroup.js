@@ -2,38 +2,24 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styled from '@emotion/styled'
 import { settings } from 'carbon-components'
+import { 
+  accordionGroupHeader,
+  accordionGroupWrapper,
+  noGutter 
+} from './AccordionGroup.module.scss'
 
 const { prefix } = settings
 
-const AccordionGroupHeader = styled.h3`
-  margin-left: -1rem;
-  margin-right: -1rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  background-color: #FFFFFF;
-  font-size: 1rem;
-`
-
-const AccordionGroupSection = styled.div`
-  margin-bottom: 3rem;
-`
-
-const NoGutter = styled.div`
-  margin-left: -1rem;
-  margin-right: -1rem;
-  width: auto;
-`
-
 const AccordionGroup = ({ children, className, title, ...rest }) => {
   return (
-    <AccordionGroupSection {...rest} className={className}>
+    <div className={`${accordionGroupWrapper} ${className}`}>
       { typeof title !== 'undefined' ? (
-        <AccordionGroupHeader className={`${prefix}--type-semibold`}>
+        <h3 className={`${accordionGroupHeader} ${prefix}--type-semibold`}>
           {title}
-        </AccordionGroupHeader>
+        </h3>
       ) : ( null )}
-      <NoGutter>{children}</NoGutter>
-    </AccordionGroupSection>
+      <div className={noGutter}>{children}</div>
+    </div>
   )
 }
 
