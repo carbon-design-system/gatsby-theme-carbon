@@ -7,12 +7,10 @@ const Content = () => (
       By importing the <code>Footer</code> component from gatsby-theme-carbon,
       we can supply our own props.
     </p>
-    <br />
     <p>
       The default export from a shadowed component will replace that component
       in the theme.
     </p>
-    <br />
     <a href="https://www.gatsbyjs.org/docs/themes/api-reference/#component-shadowing">
       More about component shadowing
     </a>
