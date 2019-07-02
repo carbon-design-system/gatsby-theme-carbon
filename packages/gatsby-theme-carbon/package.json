@@ -23,7 +23,7 @@
     "@carbon/colors": "^10.2.0",
     "@carbon/elements": "^10.3.0",
     "@carbon/grid": "^10.3.0",
-    "@carbon/icons-react": "^10.3.0",
+    "@carbon/icons-react": "^10.4.0-alpha.5407",
     "@carbon/layout": "^10.2.0",
     "@carbon/themes": "^10.3.0",
     "@carbon/type": "^10.2.0",
