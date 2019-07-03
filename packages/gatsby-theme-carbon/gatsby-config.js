@@ -82,6 +82,12 @@ module.exports = themeOptions => {
           includePaths: [path.resolve(__dirname, 'node_modules')],
         },
       },
+      {
+        resolve: `gatsby-plugin-sass-resources`,
+        options: {
+          resources: [require.resolve('./src/styles/theme-resources.scss')],
+        },
+      },
       `gatsby-plugin-emotion`,
       {
         resolve: `gatsby-source-filesystem`,
