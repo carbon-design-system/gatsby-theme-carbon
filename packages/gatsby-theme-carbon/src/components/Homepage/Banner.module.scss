@@ -1,0 +1,25 @@
+.column {
+  @include carbon--type-style('quotation-01');
+  color: $inverse-01;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.row {
+  height: 100%;
+  h1 {
+    padding: 2rem 0;
+  }
+}
+
+.grid {
+  background-size: cover;
+  height: 50vh;
+  max-height: 560px;
+  width: 100%;
+  @include carbon--breakpoint('lg') {
+    padding-left: 256px;
+  }
+}
