@@ -1,5 +1,5 @@
 // Generic MDX Components
-export { Accordion, AccordionItems } from './src/components/Accordion';
+export { Accordion, AccordionItem } from './src/components/Accordion';
 export { AnchorLinks, AnchorLink } from './src/components/AnchorLinks';
 export { default as PageDescription } from './src/components/PageDescription';
 export { default as Video } from './src/components/Video/Video';
