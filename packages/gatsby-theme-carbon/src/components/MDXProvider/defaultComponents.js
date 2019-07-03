@@ -16,7 +16,7 @@ import { Row, Column, Grid } from '../Grid';
 import { AnchorLink, AnchorLinks } from '../AnchorLinks';
 import { Tab, Tabs } from '../Tabs';
 import Link from '../Link';
-import { Accordion, AccordionItems } from '../Accordion';
+import { Accordion, AccordionItem } from '../Accordion';
 
 const components = {
   wrapper: function Wrapper({ children, ...props }) {
@@ -36,7 +36,7 @@ const components = {
   a: Link,
   PageDescription,
   Accordion,
-  AccordionItems,
+  AccordionItem,
   Video,
   DoDontExample,
   Row,
