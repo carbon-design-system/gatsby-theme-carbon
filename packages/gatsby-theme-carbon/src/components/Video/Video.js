@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { video, vimeo } from './Video.module.scss';
 
-export const Video = ({ vimeoId, title, ...props }) => {
+const Video = ({ vimeoId, title, ...props }) => {
   if (vimeoId) {
     return (
       <div className={cx(video, vimeo)}>

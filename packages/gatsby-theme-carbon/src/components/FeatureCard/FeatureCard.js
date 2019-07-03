@@ -33,11 +33,6 @@ export default class FeatureCard extends React.Component {
     actionIcon: PropTypes.string,
 
     /**
-     * set to "dark" for dark background card
-     */
-    color: PropTypes.string,
-
-    /**
      * Use for disabled card
      */
     disabled: PropTypes.bool,
@@ -49,9 +44,7 @@ export default class FeatureCard extends React.Component {
   };
 
   static defaultProps = {
-    dark: false,
     disabled: false,
-    aspectRatio: '2:1',
     actionIcon: 'launch',
   };
 
