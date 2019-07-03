@@ -16,6 +16,7 @@ import { Row, Column, Grid } from '../Grid';
 import { AnchorLink, AnchorLinks } from '../AnchorLinks';
 import { Tab, Tabs } from '../Tabs';
 import Link from '../Link';
+import { Accordion, AccordionItem } from '../Accordion';
 
 const components = {
   wrapper: function Wrapper({ children, ...props }) {
@@ -34,6 +35,8 @@ const components = {
   table: PageTable,
   a: Link,
   PageDescription,
+  Accordion,
+  AccordionItem,
   Video,
   DoDontExample,
   Row,

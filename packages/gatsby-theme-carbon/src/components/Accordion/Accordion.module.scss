@@ -1,0 +1,20 @@
+:global {
+  @import '~carbon-components/scss/components/accordion/accordion';
+}
+
+@import '~carbon-components/scss/globals/scss/vars';
+@import '~@carbon/elements/scss/type/type';
+
+.accordion {
+  width: 100%;
+  @include carbon--breakpoint('md') {
+    width: 75%;
+  }
+  @include carbon--breakpoint('lg') {
+    width: 58.33%;
+  }
+}
+
+.accordion :global(.bx--accordion__title) {
+  font-weight: bold;
+}
