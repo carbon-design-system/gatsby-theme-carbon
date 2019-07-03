@@ -1,0 +1,33 @@
+.leftNavWrapper {
+  transition: transform 0.15s cubic-bezier(0.2, 0.2, 0.38, 0.9), top 110ms;
+  width: 256px;
+  position: fixed;
+  top: 48px;
+  bottom: 0;
+  overflow: auto;
+  scrollbar-width: none;
+  z-index: 10000;
+  transform: translateX(-256px);
+
+  & :global(.bx--side-nav.bx--side-nav--website) {
+    box-shadow: none;
+  }
+
+  @include carbon--breakpoint('lg') {
+    transform: translateX(0px);
+    & :global(.bx--side-nav.bx--side-nav--website) {
+      box-shadow: none;
+    }
+  }
+}
+
+.expanded {
+  transform: translateX(0px);
+  & :global(.bx--side-nav.bx--side-nav--website) {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.shouldHideHeader {
+  top: 0px;
+}

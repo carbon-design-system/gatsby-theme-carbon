@@ -35,7 +35,6 @@ const Container = ({ children, homepage }) => {
     <>
       <div
         className={cx(overlay, { [visible]: overlayVisible })}
-        visible={overlayVisible}
         onClick={closeNavs}
         onKeyPress={closeNavs}
         role="presentation"
