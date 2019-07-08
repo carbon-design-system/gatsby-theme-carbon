@@ -36,6 +36,7 @@ button.video-button {
   bottom: 0%;
   margin: auto;
   z-index: 10;
+  transition: all $duration--fast-01 motion(entrance, productive);
 }
 
 button.video-button:focus {
@@ -51,6 +52,7 @@ button.video-button:hover {
 button.video-button > svg {
   fill: $white-0;
   margin-left: 4px;
+  transition: all $duration--fast-01 motion(entrance, productive);
 }
 
 button.video--is-playing > svg {
