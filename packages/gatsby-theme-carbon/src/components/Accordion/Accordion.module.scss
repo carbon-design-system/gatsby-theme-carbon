@@ -2,9 +2,6 @@
   @import '~carbon-components/scss/components/accordion/accordion';
 }
 
-@import '~carbon-components/scss/globals/scss/vars';
-@import '~@carbon/elements/scss/type/type';
-
 .accordion {
   width: 100%;
   @include carbon--breakpoint('md') {

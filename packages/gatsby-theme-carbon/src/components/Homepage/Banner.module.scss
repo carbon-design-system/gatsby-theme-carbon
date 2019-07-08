@@ -9,9 +9,10 @@
 
 .row {
   height: 100%;
-  h1 {
-    padding: 2rem 0;
-  }
+}
+
+.row h1 {
+  padding: 2rem 0;
 }
 
 .grid {
@@ -19,6 +20,8 @@
   height: 50vh;
   max-height: 560px;
   width: 100%;
+  max-width: 100%;
+
   @include carbon--breakpoint('lg') {
     padding-left: 256px;
   }

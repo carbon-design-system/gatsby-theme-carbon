@@ -1,5 +1,6 @@
 .grid {
   width: 100%;
+  max-width: 100%;
 }
 
 .row {
@@ -11,6 +12,7 @@
   padding-bottom: $layout-05;
   max-width: 74.25rem;
   flex-direction: column;
+
   @include carbon--breakpoint('md') {
     flex-direction: row;
   }
@@ -18,23 +20,9 @@
 
 .firstColumn {
   @include carbon--type-style('expressive-heading-03');
-  padding: 0 1rem;
-  padding-left: 0;
-  padding-bottom: $layout-03;
-  width: 100%;
-  font-size: calc(1.25rem + 0 * (100vw - 20rem) / 62);
+  margin-bottom: $spacing-07;
 }
 
 .secondColumn {
   @include carbon--type-style('expressive-paragraph-01');
-  padding: 0 1rem;
-  padding-left: 0;
-  width: 100%;
-  font-size: calc(1.75rem + 0.25 * (100vw - 66rem) / 33);
-  @include carbon--breakpoint('md') {
-    width: 66%;
-  }
-  @include carbon--breakpoint('max') {
-    font-size: 2rem;
-  }
 }

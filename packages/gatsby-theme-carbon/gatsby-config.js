@@ -85,7 +85,7 @@ module.exports = themeOptions => {
       {
         resolve: `gatsby-plugin-sass-resources`,
         options: {
-          resources: [require.resolve('./src/styles/theme-resources.scss')],
+          resources: [require.resolve('./src/styles/internal/resources.scss')],
         },
       },
       `gatsby-plugin-emotion`,

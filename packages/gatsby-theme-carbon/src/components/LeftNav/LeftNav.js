@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext } from 'react';
 import classnames from 'classnames';
 import { useStaticQuery, graphql } from 'gatsby';
 
