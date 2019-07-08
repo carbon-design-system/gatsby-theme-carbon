@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import CheckmarkFilled24 from '@carbon/icons-react/es/checkmark--filled/24';
-import Misuse24 from '@carbon/icons-react/es/misuse/24';
+import { CheckmarkFilled24, Misuse24 } from '@carbon/icons-react';
 import { settings } from 'carbon-components';
 
 const { prefix } = settings;

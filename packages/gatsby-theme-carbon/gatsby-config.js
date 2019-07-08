@@ -7,6 +7,7 @@ module.exports = themeOptions => {
     additionalFontWeights = [],
     isSearchEnabled = false,
     withWebp = false,
+    iconPath,
   } = themeOptions;
 
   return {
@@ -119,7 +120,9 @@ module.exports = themeOptions => {
           background_color: colors.uiBackground,
           theme_color: colors.interactive01,
           display: 'browser',
-          icon: require.resolve('./src/images/favicon.png'),
+          icon: iconPath
+            ? path.resolve(iconPath)
+            : require.resolve('./src/images/favicon.png'),
         },
       },
       `gatsby-plugin-react-helmet`,

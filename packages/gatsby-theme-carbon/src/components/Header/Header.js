@@ -8,8 +8,7 @@ import {
   HeaderGlobalBar,
   HeaderGlobalAction,
 } from 'carbon-components-react/lib/components/UIShell';
-import AppSwitcher20 from '@carbon/icons-react/es/app-switcher/20';
-import Close20 from '@carbon/icons-react/es/close/20';
+import { AppSwitcher20, Close20 } from '@carbon/icons-react';
 import cx from 'classnames';
 
 import { useScrollDirection } from '../../util/hooks';

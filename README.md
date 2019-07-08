@@ -103,7 +103,7 @@ module.exports = {
 };
 ```
 
-### Favicon and Manifest
+### Manifest
 
 One of the first configurations should be to override the default manifest options, you can do this in `gatsby-config.js`. Any options you don't set, will be provided by the theme. See the example project.
 
@@ -121,11 +121,31 @@ siteMetadata: {
         background_color: '#ffffff',
         theme_color: '#0062ff',
         display: 'browser',
-        icon: './src/images/custom-favicon.png', // defaults to IBM rebus eye
       },
     },
   ],
   __experimentalThemes: [
+```
+
+### Favicon
+
+If you need to override the default favicon, you can do so by passing a relative path to the icon. It's recommended to provide a 512 x 512 version.
+
+**IMPORTANT:** For best results, if you’re providing an icon for generation it should be…
+
+- at least as big as the largest icon being generated (512x512 by default).
+- square (if it’s not, transparent bars will add to make it square).
+- of one of the follow formats: JPEG, PNG, WebP, TIFF, GIF or SVG.
+
+```js
+__experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        iconPath: './src/images/custom-icon-512.png'
+      },
+    },
+  ],
 ```
 
 ### Global Styles

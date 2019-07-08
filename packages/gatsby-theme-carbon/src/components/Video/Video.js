@@ -1,9 +1,32 @@
-import React from 'react';
+import { Play32, Pause32 } from '@carbon/icons-react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { video, vimeo } from './Video.module.scss';
+import {
+  video,
+  videoButton,
+  videoContainer,
+  vimeo,
+  videoIsPlaying,
+} from './Video.module.scss';
 
 const Video = ({ vimeoId, title, ...props }) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef(null);
+  const buttonClassName = cx(videoButton, {
+    [videoIsPlaying]: isPlaying,
+  });
+
+  useEffect(() => {
+    if (vimeoId) {
+      return;
+    }
+
+    if (videoRef.current) {
+      videoRef.current.controls = false;
+    }
+  });
+
   if (vimeoId) {
     return (
       <div className={cx(video, vimeo)}>
@@ -23,9 +46,45 @@ const Video = ({ vimeoId, title, ...props }) => {
     );
   }
 
+  function onClick() {
+    if (isPlaying) {
+      videoRef.current.pause();
+      setIsPlaying(false);
+      return;
+    }
+
+    return videoRef.current
+      .play()
+      .then(() => {
+        setIsPlaying(true);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+
+  function onEnded() {
+    setIsPlaying(false);
+  }
+
   return (
-    // eslint-disable-next-line jsx-a11y/media-has-caption
-    <video className={video} controls type="video/mp4" {...props} />
+    <div className={videoContainer}>
+      <button className={buttonClassName} type="button" onClick={onClick}>
+        {isPlaying ? <Pause32 /> : <Play32 />}
+        <span className="bx--assistive-text">
+          {isPlaying ? 'Pause' : 'Play'}
+        </span>
+      </button>
+      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+      <video
+        className={video}
+        type="video/mp4"
+        ref={videoRef}
+        controls
+        onEnded={onEnded}
+        {...props}
+      />
+    </div>
   );
 };
 
