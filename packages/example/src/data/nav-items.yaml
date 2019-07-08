@@ -30,28 +30,6 @@
       path: /components/Tabs
     - title: Video
       path: /components/Video
-- title: Contributing
+- title: Demo
   pages:
-    - title: Agreement
-      path: /contributing/agreement
-    - title: Governance
-      path: /contributing/governance
-    - title: Designers
-      path: /contributing/designers
-- title: Getting Started
-  pages:
-    - title: Developers
-      path: /getting-started/developers/react
-    - title: About Carbon
-      path: /getting-started/about-carbon
-    - title: Designers
-      path: /getting-started/designers
-- title: Top Level With Tabs
-  pages:
-    - path: /top-level-with-tabs/tab-one
-- title: Resources
-  pages:
-    - path: /resources
-- title: Designers
-  pages:
-    - path: /designers
+    - path: /demo
