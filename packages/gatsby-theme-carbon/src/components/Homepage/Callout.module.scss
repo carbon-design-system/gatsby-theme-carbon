@@ -1,0 +1,28 @@
+.grid {
+  width: 100%;
+  max-width: 100%;
+}
+
+.row {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding-top: $layout-05;
+  padding-bottom: $layout-05;
+  max-width: 74.25rem;
+  flex-direction: column;
+
+  @include carbon--breakpoint('md') {
+    flex-direction: row;
+  }
+}
+
+.firstColumn {
+  @include carbon--type-style('expressive-heading-03', true);
+  margin-bottom: $spacing-07;
+}
+
+.secondColumn {
+  @include carbon--type-style('expressive-paragraph-01', true);
+}
