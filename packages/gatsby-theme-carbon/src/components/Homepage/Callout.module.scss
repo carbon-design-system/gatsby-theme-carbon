@@ -19,10 +19,10 @@
 }
 
 .firstColumn {
-  @include carbon--type-style('expressive-heading-03');
+  @include carbon--type-style('expressive-heading-03', true);
   margin-bottom: $spacing-07;
 }
 
 .secondColumn {
-  @include carbon--type-style('expressive-paragraph-01');
+  @include carbon--type-style('expressive-paragraph-01', true);
 }
