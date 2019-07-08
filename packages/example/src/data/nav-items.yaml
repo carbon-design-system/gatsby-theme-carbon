@@ -6,6 +6,8 @@
       path: /components/demo
     - title: Grid
       path: /components/Grid
+    - title: Accordion
+      path: /components/Accordion
     - title: DoDontExample
       path: /components/DoDontExample
     - title: Caption
