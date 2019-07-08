@@ -1,9 +1,23 @@
+- title: Getting Started
+  pages:
+    - path: /getting-started
+- title: Demo
+  pages:
+    - path: /demo
+- title: Guides
+  pages:
+    - title: Configuration
+      path: /guides/configuration
+    - title: Shadowing
+      path: /guides/shadowing
+    - title: Styling
+      path: /guides/styling
+    - title: Navigation
+      path: /guides/navigation
 - title: Components
   pages:
     - title: Markdown
       path: /components/markdown
-    - title: Demo
-      path: /components/demo
     - title: Grid
       path: /components/Grid
     - title: Accordion
@@ -30,6 +44,6 @@
       path: /components/Tabs
     - title: Video
       path: /components/Video
-- title: Demo
+- title: Gallery
   pages:
-    - path: /demo
+    - path: /gallery

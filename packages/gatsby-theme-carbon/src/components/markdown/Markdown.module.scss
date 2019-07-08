@@ -140,6 +140,11 @@
   }
 }
 
+.ordered,
+.unordered p {
+  width: 100%;
+}
+
 // Unordered lists
 .unordered {
   padding-left: 0;
