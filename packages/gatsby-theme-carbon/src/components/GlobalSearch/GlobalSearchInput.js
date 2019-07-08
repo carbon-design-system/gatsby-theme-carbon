@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/label-has-for */
 import React, { useState, useEffect, useContext, useRef } from 'react';
-import Close20 from '@carbon/icons-react/es/close/20';
-import Search20 from '@carbon/icons-react/es/search/20';
+import { Close20, Search20 } from '@carbon/icons-react';
 import NavContext from '../../util/context/NavContext';
 import { useOnClickOutside } from '../../util/hooks';
 

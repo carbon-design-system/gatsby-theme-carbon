@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import ArrowRight20 from '@carbon/icons-react/es/arrow--right/20';
-import Information20 from '@carbon/icons-react/es/information/20';
+import { ArrowRight20, Information20 } from '@carbon/icons-react';
 
 const AlertBanner = ({ alertText, buttonText }) => (
   <aside aria-label="alert banner" className="website-alert">
