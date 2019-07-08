@@ -10,8 +10,20 @@ $feature-flags: (
 
 // Carbon globals/helpers
 @import '~carbon-components/scss/globals/grid/grid';
-@import '~carbon-components/scss/globals/scss/vars';
 @import '~carbon-components/scss/globals/scss/layout';
+
+// Carbon components
+@import '~carbon-components/scss/components/ui-shell/ui-shell';
+@import '~carbon-components/scss/components/tile/tile';
+@import '~carbon-components/scss/components/code-snippet/code-snippet';
+@import '~carbon-components/scss/components/button/button';
+@import '~carbon-components/scss/components/tabs/tabs';
+
+@import '~@carbon/addons-website/scss/components/website-grid';
+@import '~@carbon/addons-website/scss/components/website-header';
+@import '~@carbon/addons-website/scss/components/website-header-nav';
+@import '~@carbon/addons-website/scss/components/website-side-nav';
+@import '~@carbon/addons-website/scss/components/website-back-to-top-btn';
 
 // Typography
 @include carbon--type-reset();
