@@ -38,6 +38,11 @@ button.video-button {
   z-index: 10;
 }
 
+button.video-button:focus {
+  outline: 2px solid $focus;
+  outline-offset: -2px;
+}
+
 button.video-button:hover {
   background-color: $gray-90;
   opacity: 0.8;
