@@ -113,7 +113,7 @@ module.exports = themeOptions => {
           start_url: '/',
           background_color: colors.uiBackground,
           theme_color: colors.interactive01,
-          display: 'standalone',
+          display: 'browser',
           icon: iconPath
             ? path.resolve(iconPath)
             : require.resolve('./src/images/favicon.png'),
