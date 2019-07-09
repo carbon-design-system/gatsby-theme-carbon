@@ -9,9 +9,13 @@ const Switcher = ({ children }) => {
   return (
     <nav
       className={cx(nav, { [open]: switcherIsOpen })}
-      aria-label="website switcher"
+      aria-label="IBM Design ecosystem navigation"
+      aria-expanded={switcherIsOpen}
+      id="switcher-navigation"
     >
-      <ul>{children}</ul>
+      <ul hidden={!switcherIsOpen} aria-labelledby="switcher-navigation">
+        {children}
+      </ul>
     </nav>
   );
 };
@@ -22,17 +26,29 @@ export const SwitcherDivider = props => (
   </li>
 );
 
-export const SwitcherLink = ({ disabled, children, ...rest }) => (
-  <li>
-    {disabled ? (
-      <span className={linkDisabled}>{children}</span>
-    ) : (
-      <a className={link} {...rest}>
+export const SwitcherLink = ({
+  disabled,
+  children,
+  href: hrefProp,
+  ...rest
+}) => {
+  const href = disabled || !hrefProp ? undefined : hrefProp;
+  const className = disabled ? linkDisabled : link;
+
+  return (
+    <li>
+      <a
+        aria-disabled={disabled}
+        role="button"
+        className={className}
+        href={href}
+        {...rest}
+      >
         {children}
       </a>
-    )}
-  </li>
-);
+    </li>
+  );
+};
 
 const DefaultChildren = () => (
   <>

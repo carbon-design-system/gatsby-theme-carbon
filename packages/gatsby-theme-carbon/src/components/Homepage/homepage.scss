@@ -1,9 +1,14 @@
 .container--homepage {
   background: $carbon--gray-100;
   color: $carbon--white-0;
+}
 
-  a {
-    color: $carbon--blue-40;
+.container--homepage a {
+  color: $carbon--blue-40;
+  font-size: 1rem;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
   }
 }
 

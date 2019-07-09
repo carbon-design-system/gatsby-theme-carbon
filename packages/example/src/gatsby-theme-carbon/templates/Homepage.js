@@ -6,46 +6,34 @@ import HomepageTemplate from 'gatsby-theme-carbon/src/templates/Homepage';
 
 import Carbon from '../../images/carbon.jpg';
 
-const FirstLeftText = () => (
-  <p>
-    Think → <strong>Guidance</strong>
-  </p>
-);
+const FirstLeftText = () => <p>Callout #1</p>;
 
 const FirstRightText = () => (
   <p>
-    <strong>Build Bonds</strong>
+    This is a callout component. You can edit the contents by updating the
+    pre-shadowed homepage template. You can provide a color and backgroundColor
+    props to suit your theme.
     <br />
-    This is the guiding ethos behind IBM’s design philosophy and principles.
-    This helps us distinguish every element and every experience Designed by
-    IBM.
-  </p>
-);
-
-const SecondLeftText = () => <p>Wondering how to contribute?</p>;
-
-const SecondRightText = () => (
-  <p>
-    We welcome all feedback, designs, or ideas in order to produce the best
-    possible experience for our users. If you’re interested in contributing,
-    check out our contributing guidelines to get started.
-    <br />
-    <a
-      css={({ typeStyles }) => typeStyles.bodyShort02}
-      href="https://www.carbondesignsystem.com/contributing/governance"
-    >
-      Start Contributing →
+    <a href="https://github.com/carbon-design-system/gatsby-theme-carbon/blob/master/packages/example/src/gatsby-theme-carbon/templates/Homepage.js">
+      Homepage source →
     </a>
   </p>
 );
 
-const BannerText = () => (
-  <h1>
-    Carbon
+const SecondLeftText = () => <p>Callout #2</p>;
+
+const SecondRightText = () => (
+  <p>
+    You can also not use these components at all by not providing the callout
+    props to the template or writing your own template.
     <br />
-    Design System
-  </h1>
+    <a href="https://github.com/carbon-design-system/gatsby-theme-carbon/blob/master/packages/example/src/gatsby-theme-carbon/templates/Homepage.js">
+      Homepage source →
+    </a>
+  </p>
 );
+
+const BannerText = () => <h1>Banner component</h1>;
 
 const customProps = {
   Banner: <HomepageBanner renderText={BannerText} image={Carbon} />,
