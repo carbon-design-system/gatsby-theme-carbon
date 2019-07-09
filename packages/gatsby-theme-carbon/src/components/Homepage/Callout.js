@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Grid } from '../Grid';
-import mq from '../../util/media-queries';
+import { Grid, Column, Row } from '../Grid';
+
+import { grid, row, firstColumn, secondColumn } from './Callout.module.scss';
 
 const StyledGrid = styled(Grid)`
   background-color: ${props =>
@@ -13,61 +14,19 @@ const StyledGrid = styled(Grid)`
     props.color ||
     props.theme.colors.inverse01}};
   width: 100%;
+  max-width: 100%;
 `;
-
-const StyledRow = styled.section`
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  padding-top: ${props => props.theme.layout[4]};
-  padding-bottom: ${props => props.theme.layout[4]};
-  max-width: 74.25rem;
-  flex-direction: column;
-  ${mq.md} {
-    flex-direction: row;
-  }
-`;
-
-const firstColumn = ({ typeStyles, layout }) => [
-  typeStyles.expressiveHeading03,
-  {
-    padding: '0 1rem',
-    paddingLeft: 0,
-    paddingBottom: layout[2],
-    width: '100%',
-    fontSize: 'calc(1.25rem + 0*(100vw - 20rem)/62)',
-    [mq.md]: {
-      width: '33%',
-    },
-    [mq.max]: {
-      fontSize: '1.5rem',
-    },
-  },
-];
-
-const secondColumn = ({ typeStyles }) => [
-  typeStyles.expressiveParagraph01,
-  {
-    padding: '0 1rem',
-    fontSize: 'calc(1.75rem + 0.25*(100vw - 66rem)/33)',
-    width: '100%',
-    paddingLeft: 0,
-    [mq.md]: {
-      width: '66%',
-    },
-    [mq.max]: {
-      fontSize: '2rem',
-    },
-  },
-];
 
 const HomepageCallout = ({ leftText, rightText, ...rest }) => (
-  <StyledGrid {...rest}>
-    <StyledRow>
-      <div css={firstColumn}>{leftText()}</div>
-      <div css={secondColumn}>{rightText()}</div>
-    </StyledRow>
+  <StyledGrid className={grid} {...rest}>
+    <Row className={row}>
+      <Column colLg={4} colMd={4} className={firstColumn}>
+        {leftText()}
+      </Column>
+      <Column colLg={8} colMd={4} className={secondColumn}>
+        {rightText()}
+      </Column>
+    </Row>
   </StyledGrid>
 );
 

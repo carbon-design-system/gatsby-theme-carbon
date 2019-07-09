@@ -1,9 +1,10 @@
 // Base global
-@import 'theme-global';
+@import './internal/global';
 
 // Global stylesheet to inject global dependencies via shadowing
 @import 'global';
 
+<<<<<<< HEAD
 // Carbon components
 @import '~carbon-components/scss/components/ui-shell/ui-shell';
 @import '~carbon-components/scss/components/tile/tile';
@@ -18,11 +19,13 @@
 @import '~@carbon/addons-website/scss/components/website-side-nav';
 @import '~@carbon/addons-website/scss/components/website-back-to-top-btn';
 
+=======
+>>>>>>> ff662179c391cd182121ae337edd3a5f7c4295b3
 //---------------------------------------
 // Page styles
 //---------------------------------------
 
-@import 'page';
+@import './internal/page';
 
 @import '../components/Homepage/homepage.scss';
 @import '../components/GlobalSearch/global-search.scss';

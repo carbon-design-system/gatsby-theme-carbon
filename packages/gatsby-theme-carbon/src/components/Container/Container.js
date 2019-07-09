@@ -1,19 +1,8 @@
 import React, { useContext, useEffect, useRef, useCallback } from 'react';
-import styled from '@emotion/styled';
-import NavContext from '../util/context/NavContext';
-import useWindowSize from '../util/hooks/useWindowSize';
-
-const Overlay = styled.div`
-  z-index: 8000; /* z('overlay') */
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.25);
-  transition: all 0.15s ease;
-  pointer-events: ${({ visible }) => (visible ? 'auto' : 'none')};
-  opacity: ${({ visible }) => (visible ? 1 : 0)};
-  transition: opacity 150ms ease;
-`;
+import cx from 'classnames';
+import NavContext from '../../util/context/NavContext';
+import useWindowSize from '../../util/hooks/useWindowSize';
+import { overlay, visible } from './Container.module.scss';
 
 const Container = ({ children, homepage }) => {
   const { leftNavIsOpen, switcherIsOpen, toggleNavState } = useContext(
@@ -44,7 +33,13 @@ const Container = ({ children, homepage }) => {
 
   return (
     <>
-      <Overlay visible={overlayVisible} onClick={closeNavs} />
+      <div
+        className={cx(overlay, { [visible]: overlayVisible })}
+        onClick={closeNavs}
+        onKeyPress={closeNavs}
+        role="presentation"
+        tabIndex="-1"
+      />
       <div
         aria-hidden={overlayVisible}
         className={`${homepage ? 'container--homepage' : 'container'}`}

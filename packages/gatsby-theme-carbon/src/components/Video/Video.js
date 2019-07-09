@@ -10,7 +10,7 @@ import {
   videoIsPlaying,
 } from './Video.module.scss';
 
-export const Video = ({ vimeoId, title, ...props }) => {
+const Video = ({ vimeoId, title, ...props }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
   const buttonClassName = cx(videoButton, {
