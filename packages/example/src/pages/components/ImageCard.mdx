@@ -18,7 +18,7 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       href="/"
       >
 
-![](/images/square.png)
+![Square](/images/square.png)
 
   </ImageCard>
   <ImageCard
@@ -31,7 +31,7 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       subTitle="Light subtitle"
       >
 
-![](./images/light-dark.jpg)
+![Light dark](./images/light-dark.jpg)
 
   </ImageCard>
 </Column>
@@ -46,7 +46,7 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       subTitleColor="light"
       >
 
-![](./images/plane.jpg)
+![Plane image](./images/plane.jpg)
 
   </ImageCard>
 </Column>
@@ -57,7 +57,7 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       hoverColor="dark"
       >
 
-![](/images/color-grid.svg)
+![color pallete array](/images/color-grid.svg)
 
   </ImageCard>
       <ImageCard
@@ -66,7 +66,7 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       href="/"
       >
 
-![](/images/square.png)
+![Square](/images/square.png)
 
   </ImageCard>
 </Column>
@@ -76,27 +76,28 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
 
 ```
 
-<Row>
-  <Column colMd={4} colLg={4} noGutterSm>
+<Row className="image-card-group">
+<Column colMd={4} colLg={4} noGutterSm>
     <ImageCard
       title="Title"
       subTitle="Subtitle"
       href="/"
       >
 
-![](/images/square.png)
+![Square](/images/square.png)
 
   </ImageCard>
   <ImageCard
-      title="Title"
+      title="Dark title"
+      titleColor="dark"
       aspectRatio="1:1"
       href="/"
       actionIcon="arrowRight"
-      subTitleColor="dark"
-      subTitle="subTitle"
+      subTitleColor="light"
+      subTitle="Light subtitle"
       >
 
-![](/images/color-grid.svg)
+![Light dark](./images/light-dark.jpg)
 
   </ImageCard>
 </Column>
@@ -107,11 +108,11 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       aspectRatio="1:2"
       href="/"
       actionIcon="download"
-      titleColor="dark"
-      subTitleColor="dark"
+      titleColor="light"
+      subTitleColor="light"
       >
 
-![](/images/featured.png)
+![Plane image](./images/plane.jpg)
 
   </ImageCard>
 </Column>
@@ -122,7 +123,7 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       hoverColor="dark"
       >
 
-![](/images/color-grid.svg)
+![color pallete array](/images/color-grid.svg)
 
   </ImageCard>
       <ImageCard
@@ -131,7 +132,7 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       href="/"
       >
 
-![](/images/square.png)
+![Square](/images/square.png)
 
   </ImageCard>
 </Column>

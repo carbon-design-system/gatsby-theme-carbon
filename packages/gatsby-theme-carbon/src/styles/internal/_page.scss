@@ -106,3 +106,8 @@ img[src*='svg'] {
 .bx--website-switcher {
   z-index: z('floating');
 }
+
+// ie 11 hidden fix
+[hidden] {
+  display: none;
+}
