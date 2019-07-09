@@ -30,6 +30,7 @@
   transition: background $duration--fast-02 $carbon--standard-easing;
   &:hover {
     background: $carbon--gray-80;
+    text-decoration: none;
   }
 }
 
