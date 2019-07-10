@@ -889,10 +889,10 @@
   resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-0.0.1-beta.5.tgz#829e8593dbcee76e5d6300839d2b5d734f90c98d"
   integrity sha512-3gFkiIWRlfPrDsYSfgKyveS4kkp0+HIg2fUP4jm5G9JgzOfE+Ebw4f0ASg02z4YMywrs2sw60hbdrFi1GGihGQ==
 
-"@carbon/icon-helpers@^10.2.0":
-  version "10.2.0"
-  resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-10.2.0.tgz#f58ab1d14b8b63d485d31e7d785d25057eac5409"
-  integrity sha512-PAxu8KMuSrifF4VCW7N7bgu/QKG/Q4T9ojWUEqI0zKjTCkJnzEZTYgK1FrWAdE1uAdAwLlbPIjzIS/QzP15Uvw==
+"@carbon/icon-helpers@10.3.0-rc.0":
+  version "10.3.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-10.3.0-rc.0.tgz#c4c9a36fe63ad1f1a62aa0bcf583524a441a10c6"
+  integrity sha512-xinsoeBrW214/w3RrBxrfa+g2ChYm7Qn0qWVszkzwNVi8d9ZfW7v6WE1NfiWLLv3Y78t5PcQ4d7WAdcJAOJsHg==
 
 "@carbon/icons-react@^0.0.1-beta.4":
   version "0.0.1-beta.5"
@@ -903,11 +903,11 @@
     prop-types "^15.6.2"
 
 "@carbon/icons-react@^10.4.0-alpha.5407":
-  version "10.4.0-alpha.5407"
-  resolved "https://registry.yarnpkg.com/@carbon/icons-react/-/icons-react-10.4.0-alpha.5407.tgz#74978844b5ba1e78a0312109bfbaea28b1c4e8f3"
-  integrity sha512-j3lR1OBr4iuOPLLcCeapO3hKz0lJ54JNKGxZEEuT3SQ2OvclT9AYxt+7pytXLGeUcCAlh+5N9n+udO/rMvKO8g==
+  version "10.4.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@carbon/icons-react/-/icons-react-10.4.0-rc.0.tgz#73c25d3c526d2b552548346c6cad39d3824b08e3"
+  integrity sha512-VNG2Ql5VZWeR3338ZV1Z+phac7BpnR89NeKY3fvB2gkBe79142O8Vq9gftw7RwrrC1YGJ/1z1lv/oUikQQD3gQ==
   dependencies:
-    "@carbon/icon-helpers" "^10.2.0"
+    "@carbon/icon-helpers" "10.3.0-rc.0"
 
 "@carbon/icons@10.3.0":
   version "10.3.0"
