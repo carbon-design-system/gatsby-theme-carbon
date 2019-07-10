@@ -1,7 +1,7 @@
 {
   "name": "example",
   "private": true,
-  "version": "1.3.5",
+  "version": "1.4.0",
   "license": "Apache 2.0",
   "scripts": {
     "develop": "gatsby develop",
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "gatsby": "^2.4.2",
-    "gatsby-theme-carbon": "^1.3.5",
+    "gatsby-theme-carbon": "^1.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }

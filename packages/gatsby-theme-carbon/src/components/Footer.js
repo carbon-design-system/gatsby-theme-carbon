@@ -58,8 +58,6 @@ const contentStyles = ({ colors, typeStyles }) => ({
   ...typeStyles.bodyLong01,
   a: {
     color: colors.ui02,
-    textDecoration: 'none',
-    borderBottom: `1px solid ${colors.ui02}`,
   },
   [mq.sm]: {
     paddingBottom: '3rem',
