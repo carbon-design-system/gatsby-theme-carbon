@@ -8,6 +8,10 @@ module.exports = themeOptions => {
     isSearchEnabled = false,
     withWebp = false,
     iconPath,
+    repository = {
+      baseUrl: '',
+      subDirectory: '',
+    },
   } = themeOptions;
 
   return {
@@ -17,6 +21,7 @@ module.exports = themeOptions => {
       description:
         'Add a description by supplying it to siteMetadata in your gatsby-config.js file.',
       keywords: 'gatsby,theme,carbon,design',
+      repository,
     },
     plugins: [
       `gatsby-plugin-sharp`,

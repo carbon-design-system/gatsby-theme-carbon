@@ -7,7 +7,7 @@ import { useScrollDirection } from '../util/hooks';
 
 import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
-// import EditLink from '../components/EditLink';
+import EditLink from '../components/EditLink';
 import NextPrevious from '../components/NextPrevious';
 import PageTabs from '../components/PageTabs';
 import Main from '../components/Main';
@@ -20,11 +20,20 @@ const Default = ({ pageContext, children, location }) => {
 
   // get the path prefix if it exists
   const {
-    site: { pathPrefix },
+    site: {
+      pathPrefix,
+      siteMetadata: { repository },
+    },
   } = useStaticQuery(graphql`
     query PATH_PREFIX_QUERY {
       site {
         pathPrefix
+        siteMetadata {
+          repository {
+            baseUrl
+            subDirectory
+          }
+        }
       }
     }
   `);
@@ -50,7 +59,11 @@ const Default = ({ pageContext, children, location }) => {
       >
         {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}
       </PageHeader>
-      <Main padded>{children}</Main>
+      <Main padded>
+        {children}
+        <EditLink repository={repository} slug={slug} />
+      </Main>
+
       <NextPrevious
         pageContext={pageContext}
         location={location}

@@ -1,6 +1,11 @@
 .link {
-  color: $text02;
+  color: $text-02;
   &:hover {
-    color: $text01;
+    color: $text-01;
   }
+}
+
+.row {
+  position: relative;
+  bottom: calc(-160px + 0.875rem + 32px);
 }

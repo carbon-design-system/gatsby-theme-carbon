@@ -15,6 +15,7 @@ Gatsby themes allow you to override configuration from the theme by defining the
   <AnchorLink>Additional font weights</AnchorLink>
   <AnchorLink>Image Compression</AnchorLink>
   <AnchorLink>Global Search</AnchorLink>
+  <AnchorLink>Edit on Github link</AnchorLink>
 </AnchorLinks>
 
 ## Site Title and Description
@@ -148,3 +149,23 @@ export default useAlgoliaSearch;
 ```
 
 The example `useSearch` hook demonstrates implementing search with [Algolia](https://www.algolia.com/). Algolia is free for open source libraries. You can shadow this hook and replace it with your Algolia credentials or a library of your choosing.
+
+## Edit on GitHub link
+
+To add a link to the bottom of each page that points to the current page source in GitHub, provide an `repository` object to `siteMetadata` in your `gatsby-config.js` file. You can provide a `baseUrl`, and if needed, the `subDirectory` where your site source lives.
+
+```js
+module.exports = {
+  siteMetadata: {
+    repository: {
+      baseUrl: 'https://github.com/carbon-design-system/gatsby-theme-carbon',
+      subDirectory: '/packages/example',
+    },
+  },
+  __experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+    },
+  ],
+};
+```
