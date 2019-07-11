@@ -52,7 +52,7 @@ module.exports = themeOptions => {
         },
       },
       {
-        resolve: `gatsby-mdx`,
+        resolve: `gatsby-plugin-mdx`,
         options: {
           extensions: ['.mdx', '.md'],
           gatsbyRemarkPlugins: [
