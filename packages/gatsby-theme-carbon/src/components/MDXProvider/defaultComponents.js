@@ -32,7 +32,10 @@ const components = {
   ul: Ul,
   li: Li,
   blockquote: Blockquote,
-  pre: Code,
+  pre: function Pre(props) {
+    return <div {...props} />;
+  },
+  code: Code,
   table: PageTable,
   a: Link,
   PageDescription,

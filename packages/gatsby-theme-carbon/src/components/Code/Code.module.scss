@@ -1,0 +1,31 @@
+.container {
+  padding: $spacing-05;
+  margin-bottom: $spacing-08;
+  position: relative;
+
+  // 6 col
+  @include carbon--breakpoint('md') {
+    width: 75%;
+  }
+
+  // 8 col
+  @include carbon--breakpoint('lg') {
+    width: 66.667%;
+  }
+}
+
+.container :global(.bx--snippet-button) {
+  background-color: transparent;
+  svg {
+    fill: $inverse-01;
+  }
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.container :global(.bx--btn--copy__feedback) {
+  &::after {
+    background-color: red;
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import ThemeProvider from './src/components/ThemeProvider';
 import { NavContextProvider } from './src/util/context/NavContext';
+import './src/styles/prism.css';
 
 export const wrapRootElement = ({ element }) => (
   <NavContextProvider>

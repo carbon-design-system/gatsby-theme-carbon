@@ -1,59 +1,42 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { CodeSnippet } from 'carbon-components-react';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import { CopyButton } from 'carbon-components-react';
 
 /* import Prism from 'prismjs';
 import 'prismjs/components/prism-bash';
 import 'prismjs/components/prism-scss'; */
-import { CopyToClipboard } from 'react-copy-to-clipboard/lib/Component';
-import { settings } from 'carbon-components';
+// import { CopyToClipboard } from 'react-copy-to-clipboard/lib/Component';
+import cx from 'classnames';
 import { Row } from '../Grid';
+import { container } from './Code.module.scss';
 
-const { prefix } = settings;
+const Code = ({ children, className: classNameProp }) => {
+  const language = classNameProp.replace(/language-/, '');
+  return (
+    <Row>
+      <Highlight {...defaultProps} code={children} language={language}>
+        {({ className, style, tokens, getLineProps, getTokenProps }) => (
+          <pre
+            className={cx(className, container)}
+            style={{ ...style, padding: '20px' }}
+          >
+            <CopyButton
+              onClick={() => {
+                console.log(children);
+              }}
+            />
+            {tokens.map((line, i) => (
+              <div key={i} {...getLineProps({ line, key: i })}>
+                {line.map((token, key) => (
+                  <span key={key} {...getTokenProps({ token, key })} />
+                ))}
+              </div>
+            ))}
+          </pre>
+        )}
+      </Highlight>
+    </Row>
+  );
+};
 
-export default class Code extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
-  };
-
-  state = {
-    multi: true,
-  };
-
-  componentDidMount() {
-    // Prism.highlightAll();
-    if (this.codeRef) {
-      if (this.codeRef.clientHeight > 20) {
-        this.setState({ multi: true });
-      } else {
-        this.setState({ multi: false });
-      }
-    }
-  }
-
-  /*  componentDidUpdate() {
-    Prism.highlightAll();
-  } */
-
-  render() {
-    const { children } = this.props;
-    const type = this.state.multi ? 'multi' : 'single';
-
-    let textToCopy;
-    if (children.props.children) {
-      textToCopy = children.props.children.replace(/(\$ )+/g, '');
-    }
-
-    return (
-      <Row>
-        <div className={`${prefix}--snippet--website`}>
-          <CopyToClipboard text={textToCopy}>
-            <CodeSnippet type={type}>
-              <div ref={element => (this.codeRef = element)}>{children}</div>
-            </CodeSnippet>
-          </CopyToClipboard>
-        </div>
-      </Row>
-    );
-  }
-}
+export default Code;
