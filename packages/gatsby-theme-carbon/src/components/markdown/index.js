@@ -6,4 +6,5 @@ export { default as H5 } from './H5';
 export { default as Ol } from './Ol';
 export { default as P } from './P';
 export { default as Ul } from './Ul';
+export { default as Li } from './Li';
 export { default as Blockquote } from './Blockquote';

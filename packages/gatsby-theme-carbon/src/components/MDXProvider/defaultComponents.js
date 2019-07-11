@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { P, H1, H2, H3, H4, H5, Ul, Ol, Blockquote } from '../markdown';
+import { P, H1, H2, H3, H4, H5, Ul, Ol, Li, Blockquote } from '../markdown';
 import PageTable from '../PageTable';
 import Code from '../Code';
 import PageDescription from '../PageDescription';
@@ -30,6 +30,7 @@ const components = {
   p: P,
   ol: Ol,
   ul: Ul,
+  li: Li,
   blockquote: Blockquote,
   pre: Code,
   table: PageTable,
