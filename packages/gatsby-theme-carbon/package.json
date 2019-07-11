@@ -32,6 +32,7 @@
     "@mdx-js/mdx": "^1.0.20",
     "@mdx-js/react": "^1.0.20",
     "@reach/router": "^1.2.1",
+    "@vimeo/player": "^2.9.1",
     "carbon-components": "10.2.0",
     "carbon-components-react": "7.2.0",
     "classnames": "^2.2.6",
