@@ -1,9 +1,7 @@
 import React from 'react';
 
-import { ordered } from './Markdown.module.scss';
-
 const Ol = ({ children, ...rest }) => (
-  <ol className={ordered} {...rest}>
+  <ol className="bx--list--ordered" {...rest}>
     {children}
   </ol>
 );
