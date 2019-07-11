@@ -1,0 +1,150 @@
+---
+title: Configuration
+---
+
+<PageDescription>
+
+Gatsby themes allow you to override configuration from the theme by defining the same property in your `gatsby-config.js` at the root of your project. You can see the default configuration provided by the theme's [`gatsby-config.js`](https://github.com/carbon-design-system/gatsby-theme-carbon/blob/master/packages/gatsby-theme-carbon/gatsby-config.js) file.
+
+</PageDescription>
+
+<AnchorLinks>
+  <AnchorLink>Site Title and Description</AnchorLink>
+  <AnchorLink>Manifest</AnchorLink>
+  <AnchorLink>Favicon</AnchorLink>
+  <AnchorLink>Additional font weights</AnchorLink>
+  <AnchorLink>Image Compression</AnchorLink>
+  <AnchorLink>Global Search</AnchorLink>
+</AnchorLinks>
+
+## Site Title and Description
+
+To add a title and description to each page, simply provide them to siteMetadata in your `gatsby-config.js` file.
+
+```js
+module.exports = {
+  siteMetadata: {
+    title: 'Gatsby Theme Carbon',
+    description: 'A Gatsby theme for the carbon design system',
+    keywords: 'gatsby,theme,carbon',
+  },
+  __experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+    },
+  ],
+};
+```
+
+## Manifest
+
+One of the first configurations should be to override the default manifest options, you can do this in `gatsby-config.js`. Any options you don't set, will be provided by the theme. See the example project.
+
+```js
+siteMetadata: {
+    title: 'Gatsby Theme Carbon',
+  },
+  plugins: [
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Carbon Design Gatsby Theme',
+        short_name: 'Gatsby Theme Carbon',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#0062ff',
+        display: 'browser',
+      },
+    },
+  ],
+  __experimentalThemes: [
+```
+
+## Favicon
+
+If you need to override the default favicon, you can do so by passing a relative path to the icon. It's recommended to provide a 512 x 512 version.
+
+**IMPORTANT:** For best results, if you’re providing an icon for generation it should be…
+
+- at least as big as the largest icon being generated (512x512 by default).
+- square (if it’s not, transparent bars will add to make it square).
+- of one of the follow formats: JPEG, PNG, WebP, TIFF, GIF or SVG.
+
+```js
+__experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        iconPath: './src/images/custom-icon-512.png'
+      },
+    },
+  ],
+```
+
+## Additional font weights
+
+If needed, you can add support for additional Plex font weights. Don't forget to specify italics for the additional weights if needed.
+
+```js
+__experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+		// will get added to default [300, 400, 600]
+        additionalFontWeights: ['200', '200i]
+      },
+    },
+  ],
+```
+
+## Image Compression
+
+You can enable WebP by passing `withWebp: true` or providing your own optimization level. See the gatsby-remark-images [plugin options](https://www.gatsbyjs.org/packages/gatsby-remark-images/#options).
+
+```js
+module.exports = {
+  siteMetadata: {
+    title: 'Gatsby Theme Carbon',
+  },
+  __experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        name: 'Gatsby Theme Carbon Starter',
+        shortName: 'Carbon Starter',
+        withWebp: true,
+      },
+    },
+  ],
+};
+```
+
+## Global Search
+
+The GlobalSearch component is disabled by default. If you'd like to implement search functionality, you'll need to follow these two steps:
+
+1. set the isSearchEnabled theme option to true
+
+```js
+  __experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        isSearchEnabled: true
+      },
+    },
+  ],
+```
+
+2. Shadow the example search implementation at `/src/util/hooks/useSearch.js`
+
+```jsx
+import { useEffect } from 'react';
+const useAlgoliaSearch = () => {
+  // ...
+};
+
+export default useAlgoliaSearch;
+```
+
+The example `useSearch` hook demonstrates implementing search with [Algolia](https://www.algolia.com/). Algolia is free for open source libraries. You can shadow this hook and replace it with your Algolia credentials or a library of your choosing.

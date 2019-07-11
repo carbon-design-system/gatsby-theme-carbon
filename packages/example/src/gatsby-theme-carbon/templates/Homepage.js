@@ -1,56 +1,52 @@
 import React from 'react';
 import { HomepageBanner, HomepageCallout } from 'gatsby-theme-carbon';
-
-// Component to be shadowed
 import HomepageTemplate from 'gatsby-theme-carbon/src/templates/Homepage';
+import { calloutLink } from './Homepage.module.scss';
 
 import Carbon from '../../images/carbon.jpg';
 
-const FirstLeftText = () => (
-  <p>
-    Think → <strong>Guidance</strong>
-  </p>
-);
+const FirstLeftText = () => <p>Callout component</p>;
 
 const FirstRightText = () => (
   <p>
-    <strong>Build Bonds</strong>
-    <br />
-    This is the guiding ethos behind IBM’s design philosophy and principles.
-    This helps us distinguish every element and every experience Designed by
-    IBM.
-  </p>
-);
-
-const SecondLeftText = () => <p>Wondering how to contribute?</p>;
-
-const SecondRightText = () => (
-  <p>
-    We welcome all feedback, designs, or ideas in order to produce the best
-    possible experience for our users. If you’re interested in contributing,
-    check out our contributing guidelines to get started.
-    <br />
+    This is a callout component. You can edit the contents by updating the
+    pre-shadowed homepage template. You can provide <code>color</code> and{' '}
+    <code>backgroundColor</code> props to suit your theme.
     <a
-      css={({ typeStyles }) => typeStyles.bodyShort02}
-      href="https://www.carbondesignsystem.com/contributing/governance"
+      className={calloutLink}
+      href="https://github.com/carbon-design-system/gatsby-theme-carbon/blob/master/packages/example/src/gatsby-theme-carbon/templates/Homepage.js"
     >
-      Start Contributing →
+      Homepage source →
     </a>
   </p>
 );
 
-const BannerText = () => (
-  <h1>
-    Carbon
-    <br />
-    Design System
-  </h1>
+const SecondLeftText = () => <p>Callout component</p>;
+
+const SecondRightText = () => (
+  <p>
+    You can also not use these components at all by not providing the callout
+    props to the template or writing your own template.
+    <a
+      className={calloutLink}
+      href="https://github.com/carbon-design-system/gatsby-theme-carbon/blob/master/packages/example/src/gatsby-theme-carbon/templates/Homepage.js"
+    >
+      Homepage source →
+    </a>
+  </p>
 );
+
+const BannerText = () => <h1>Banner component</h1>;
 
 const customProps = {
   Banner: <HomepageBanner renderText={BannerText} image={Carbon} />,
   FirstCallout: (
-    <HomepageCallout leftText={FirstLeftText} rightText={FirstRightText} />
+    <HomepageCallout
+      backgroundColor="#030303"
+      color="white"
+      leftText={FirstLeftText}
+      rightText={FirstRightText}
+    />
   ),
   SecondCallout: (
     <HomepageCallout
