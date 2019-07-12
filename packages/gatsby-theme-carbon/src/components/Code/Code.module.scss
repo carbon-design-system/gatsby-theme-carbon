@@ -39,7 +39,7 @@
   position: relative;
   overflow: visible;
   width: 100%;
-  margin-bottom: $spacing-08;
+  margin-bottom: $spacing-06;
   // 6 col
   @include carbon--breakpoint('md') {
     width: 75%;
