@@ -2,11 +2,11 @@
   transition: transform 0.15s cubic-bezier(0.2, 0.2, 0.38, 0.9), top 110ms;
   width: 256px;
   position: fixed;
-  top: 48px;
+  top: 0px;
   bottom: 0;
+  z-index: 9999;
   overflow: auto;
   scrollbar-width: none;
-  z-index: 10000;
   transform: translateX(-256px);
 
   & :global(.bx--side-nav.bx--side-nav--website) {
@@ -21,6 +21,10 @@
   }
 }
 
+.leftNavWrapper :global(.bx--side-nav__navigation) {
+  padding-top: 0;
+}
+
 .expanded {
   transform: translateX(0px);
   & :global(.bx--side-nav.bx--side-nav--website) {
@@ -29,5 +33,5 @@
 }
 
 .shouldHideHeader {
-  top: 0px;
+  top: -48px;
 }

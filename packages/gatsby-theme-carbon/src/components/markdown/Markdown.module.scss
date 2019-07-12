@@ -86,6 +86,21 @@
   }
 }
 
+:global(.bx--list--ordered).ordered {
+  @include carbon--type-style('body-long-02');
+}
+
+:global(.bx--list--ordered).ordered p {
+  @include carbon--type-style('body-long-02');
+  padding-right: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.list-item:last-of-type {
+  margin-bottom: $spacing-06;
+}
+
 //---------------------------------------
 // Headings
 //---------------------------------------
@@ -119,4 +134,3 @@
   margin-top: $spacing-04;
   @include carbon--type-style('heading-01');
 }
-

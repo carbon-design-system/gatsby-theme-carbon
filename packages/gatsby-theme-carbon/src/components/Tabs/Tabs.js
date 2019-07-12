@@ -5,9 +5,8 @@ import { tabContainer, tab, tabContents } from './Tabs.module.scss';
 export const Tab = props => <CarbonTab className={tab} {...props} />;
 
 export const Tabs = props => (
-  <CarbonTabs
-    className={tabContainer}
-    tabContentClassName={tabContents}
-    {...props}
-  />
+  <CarbonTabs className={tabContainer} tabContentClassName={tabContents}>
+    {console.log(props.children)}
+    {props.children}
+  </CarbonTabs>
 );

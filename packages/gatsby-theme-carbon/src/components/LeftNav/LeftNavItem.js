@@ -8,10 +8,12 @@ import {
   SideNavMenuItem,
 } from 'carbon-components-react/lib/components/UIShell';
 
-import { currentItem } from './LeftNav.module.scss';
+import styles, { currentItem } from './LeftNav.module.scss';
 
 import NavContext from '../../util/context/NavContext';
 import usePathprefix from '../../util/hooks/usePathprefix';
+
+console.log(styles);
 
 const LeftNavItem = props => {
   const { items, category } = props;
@@ -70,6 +72,7 @@ const LeftNavItem = props => {
 
 const SubNavItems = ({ items, pathname, onClick }) =>
   items.map((item, i) => {
+    console.log('pat', pathname);
     const hasActiveTab =
       item.path.split('/').filter(Boolean).length > 2
         ? pathname.includes(item.path.slice(0, item.path.lastIndexOf('/')))
@@ -77,15 +80,18 @@ const SubNavItems = ({ items, pathname, onClick }) =>
     return (
       <SideNavMenuItem
         to={`${item.path}`}
+        className={cx({
+          [styles.linkText__homepage]: pathname === '/',
+        })}
         onClick={onClick}
         element={Link}
         isActive={hasActiveTab}
         key={i}
       >
         <span
-          style={{
-            color: hasActiveTab ? '#171717' : 'inherit',
-          }}
+          className={cx(styles.linkText, {
+            [styles.linkText__active]: hasActiveTab,
+          })}
         >
           {item.title}
         </span>
