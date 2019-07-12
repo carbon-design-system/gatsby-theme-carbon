@@ -1,8 +1,45 @@
-.container {
-  padding: $spacing-05;
-  margin-bottom: $spacing-08;
-  position: relative;
+.title-row {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  background: $ui-05;
+  padding-left: $spacing-05;
+}
 
+.title {
+  color: $inverse-01;
+}
+
+.sourceLink {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: $carbon--blue-40;
+  transition: border-bottom $duration--fast-01;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    border-bottom: 1px solid $carbon--blue-40;
+  }
+
+  &:visited {
+    color: $carbon--blue-40;
+  }
+}
+
+.sourceLink svg {
+  fill: currentColor;
+  position: relative;
+  top: 1px;
+}
+
+.container {
+  font-family: 'IBM Plex Mono';
+  @include carbon--type-style('code-02');
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  margin-bottom: $spacing-08;
   // 6 col
   @include carbon--breakpoint('md') {
     width: 75%;
@@ -15,17 +52,59 @@
 }
 
 .container :global(.bx--snippet-button) {
-  background-color: transparent;
+  background: $ui-05;
+  transition: background $duration--fast-02;
+  overflow: visible;
+  top: 8px;
+  right: 8px;
+  z-index: 1000;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   svg {
     fill: $inverse-01;
   }
   &:hover {
-    background-color: transparent;
+    background-color: $inverse-02;
   }
 }
 
 .container :global(.bx--btn--copy__feedback) {
-  &::after {
-    background-color: red;
+  position: absolute;
+
+  &:before {
+    z-index: 10000;
+    position: absolute;
+  }
+}
+
+.pre {
+  padding: $spacing-05;
+  padding-top: 0;
+  position: relative;
+  overflow: auto;
+}
+
+// Inline code
+:global {
+  code {
+    font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
+      'Bitstream Vera Sans Mono', Courier, monospace;
+  }
+
+  p > code,
+  li > code,
+  td > code {
+    @include carbon--type-style('code-01');
+    position: relative;
+    display: inline;
+    padding: 0 0.5em;
+    font-size: 0.75em;
+    bottom: 0.0625em;
+    border-radius: 4px;
+    background-color: $ui-03;
+    color: $text-01;
   }
 }

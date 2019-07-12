@@ -14,28 +14,30 @@ const LeftNavResourceLinks = ({ links, shouldOpenNewTabs }) => {
     ...(shouldOpenNewTabs && { rel: 'noopener noreferrer', target: '_blank' }),
   };
 
-  return <>
-    <hr className="bx--side-nav__divider" />
-    {links.map(({ title, href, ...rest }, i) => {
-      const outbound = !/^\/(?!\/)/.test(href);
-      return (
-        <SideNavLink
-          key={i}
-          style={{ marginTop: i === 0 ? '1rem' : 0 }}
-          icon={<LaunchIcon />}
-          // eslint-disable-next-line jsx-a11y/aria-proptypes
-          aria-current=""
-          to={href}
-          href={href}
-          className={cx(resourceLink, { [outboundLink]: outbound })}
-          element={outbound ? 'a' : Link}
-          {...shouldOpenNewTabsProps}
-        >
-          {title}
-        </SideNavLink>
-      );
-    })}
-  </>;
+  return (
+    <>
+      <hr className="bx--side-nav__divider" />
+      {links.map(({ title, href, ...rest }, i) => {
+        const outbound = !/^\/(?!\/)/.test(href);
+        return (
+          <SideNavLink
+            key={i}
+            style={{ marginTop: i === 0 ? '1rem' : 0 }}
+            icon={<LaunchIcon />}
+            // eslint-disable-next-line jsx-a11y/aria-proptypes
+            aria-current=""
+            to={href}
+            href={href}
+            className={cx(resourceLink, { [outboundLink]: outbound })}
+            element={outbound ? 'a' : Link}
+            {...shouldOpenNewTabsProps}
+          >
+            {title}
+          </SideNavLink>
+        );
+      })}
+    </>
+  );
 };
 
 LeftNavResourceLinks.propTypes = {

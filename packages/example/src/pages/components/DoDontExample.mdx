@@ -25,7 +25,7 @@ The `<DoDontExample>` component will generally need to be placed inside `<Row>` 
 
 #### Text
 
-<DoDontExample type="dont" aspectRatio="1:1"  color="dark" captionTitle="Caption title" caption="Caption" text="This is some text"></DoDontExample>
+<DoDontExample type="dont" aspectRatio="1:1"  color="dark" captionTitle="Caption title" caption="Caption" text="This is some text" />
 </Column>
 </Row>
 <Row>
@@ -45,27 +45,30 @@ The `<DoDontExample>` component will generally need to be placed inside `<Row>` 
 
 #### Image
 
-```
+```jsx https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/DoDontExample
 <DoDontExample type="do" captionTitle="Caption title" caption="Caption">
-
-![Alt text](images/light-theme.png)
-
+  ![Alt text](images/light-theme.png)
 </DoDontExample>
 ```
 
 #### Text
 
-```
-<DoDontExample type="dont" aspectRatio="1:1"  color="dark" captionTitle="Caption title" caption="Caption" text="This is some text"></DoDontExample>
+```jsx https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/DoDontExample
+<DoDontExample
+  type="dont"
+  aspectRatio="1:1"
+  color="dark"
+  captionTitle="Caption title"
+  caption="Caption"
+  text="This is some text"
+/>
 ```
 
 #### Video
 
-```
+```jsx https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/DoDontExample
 <DoDontExample type="do" caption="Caption" captionTitle="Caption title">
-
-<Video vimeoId="310583077" />
-
+  <Video vimeoId="310583077" />
 </DoDontExample>
 ```
 
