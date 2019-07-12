@@ -1,9 +1,9 @@
 .list {
-  margin-bottom: 0;
+  margin-bottom: $carbon--layout-04;
   margin-top: $spacing-05;
   width: 100%;
   @include carbon--breakpoint('md') {
-    margin-bottom: $spacing-07;
+    margin-bottom: $carbon--layout-05;
     width: 75%;
   }
   @include carbon--breakpoint('lg') {
