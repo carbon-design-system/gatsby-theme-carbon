@@ -13,8 +13,6 @@ import styles, { currentItem } from './LeftNav.module.scss';
 import NavContext from '../../util/context/NavContext';
 import usePathprefix from '../../util/hooks/usePathprefix';
 
-console.log(styles);
-
 const LeftNavItem = props => {
   const { items, category } = props;
   const { toggleNavState } = useContext(NavContext);
@@ -72,7 +70,6 @@ const LeftNavItem = props => {
 
 const SubNavItems = ({ items, pathname, onClick }) =>
   items.map((item, i) => {
-    console.log('pat', pathname);
     const hasActiveTab =
       item.path.split('/').filter(Boolean).length > 2
         ? pathname.includes(item.path.slice(0, item.path.lastIndexOf('/')))
