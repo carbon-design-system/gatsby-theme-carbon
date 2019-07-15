@@ -16,7 +16,7 @@
     "build:prefix": "yarn workspace example build:prefix",
     "serve": "yarn build && yarn workspace example serve",
     "now-build": "yarn workspace example build",
-    "lint": "eslint ."
+    "lint": "eslint . --fix"
   },
   "eslintIgnore": [
     "**/node_modules/",
