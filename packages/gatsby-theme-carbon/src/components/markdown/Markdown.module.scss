@@ -75,8 +75,7 @@
 .h4,
 .h5,
 .h6,
-.ordered,
-.unordered {
+.list {
   width: 100%;
   @include carbon--breakpoint('md') {
     width: 75%;
@@ -86,24 +85,36 @@
   }
 }
 
+:global(.bx--list--ordered).list,
+:global(.bx--list--unordered).list {
+  margin-bottom: $spacing-06;
+}
+
+.list-item {
+  @include carbon--type-style('body-long-02');
+  padding-right: 0;
+  margin: 0;
+  width: 100%;
+}
+
 //---------------------------------------
 // Headings
 //---------------------------------------
 
 .h1 {
-  margin-top: 4.5rem;
+  margin-top: $spacing-12;
   margin-bottom: $spacing-05;
   @include carbon--type-style('expressive-heading-05', true);
 }
 
 .h2 {
-  margin-top: 4.5rem;
+  margin-top: $spacing-11;
   margin-bottom: $spacing-05;
   @include carbon--type-style('expressive-heading-04', true);
 }
 
 .h3 {
-  margin-top: 4.5rem;
+  margin-top: $spacing-10;
   margin-bottom: $spacing-05;
   @include carbon--type-style('expressive-heading-03', true);
 }
@@ -119,4 +130,3 @@
   margin-top: $spacing-04;
   @include carbon--type-style('heading-01');
 }
-

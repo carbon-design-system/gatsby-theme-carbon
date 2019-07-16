@@ -22,3 +22,30 @@
   display: inline-block !important;
   flex: 0;
 }
+
+// Padding overrides for top level menu items
+:global {
+  .bx--side-nav__items > .bx--side-nav__item > .bx--side-nav__link span {
+    padding-left: 0 !important;
+  }
+  .bx--side-nav__items > .bx--side-nav__item > .bx--side-nav__submenu span {
+    padding-left: 0 !important;
+  }
+}
+
+// Style overrides waiting for UI Shell theming
+.link-text {
+  color: inherit;
+}
+
+.link-text__active {
+  color: #171717;
+}
+
+.link-text__homepage {
+  &:hover {
+    :global(.bx--side-nav__link-text) {
+      color: #f3f3f3 !important;
+    }
+  }
+}
