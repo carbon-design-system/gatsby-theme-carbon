@@ -2,7 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Link } from 'gatsby';
-import { Launch20, Download20, ArrowRight20, Error20, Email20 } from '@carbon/icons-react';
+import {
+  Launch20,
+  Download20,
+  ArrowRight20,
+  Error20,
+  Email20,
+} from '@carbon/icons-react';
 import { settings } from 'carbon-components';
 
 const { prefix } = settings;
