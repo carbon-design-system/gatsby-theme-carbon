@@ -49,6 +49,10 @@
     "*.js": [
       "eslint --fix",
       "git add"
+    ],
+    "*.{css,scss,json,html,yaml}": [
+      "prettier --write",
+      "git add"
     ]
   }
 }
