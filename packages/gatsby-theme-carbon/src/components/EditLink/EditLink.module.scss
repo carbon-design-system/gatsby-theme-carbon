@@ -1,11 +1,11 @@
 .link {
-  color: $text-02;
+  @include carbon--type-style('body-short-01');
   &:hover {
-    color: $text-01;
+    @include carbon--type-style('body-short-01');
   }
 }
 
 .row {
   position: relative;
-  bottom: calc(-160px + 0.875rem + 32px);
+  top: 9rem;
 }
