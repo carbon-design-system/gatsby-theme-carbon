@@ -11,15 +11,12 @@ The `<Accordion>` and `<AccordionItem>` components are used together to display 
 ## Example
 
 <Accordion>
-  <AccordionItem title={(<div>Title 1</div>)}>Content Section</AccordionItem>
-  <AccordionItem title='Title 2'>Content Section</AccordionItem>
-  <AccordionItem title='Title 3'>Content Section</AccordionItem>
+  <AccordionItem title="Title 1">Content Section</AccordionItem>
+  <AccordionItem title="Title 2">Content Section</AccordionItem>
+  <AccordionItem title="Title 3">Content Section</AccordionItem>
 </Accordion>
 
-
-
 ## Code
-
 
 ```
 <Accordion>
@@ -29,18 +26,17 @@ The `<Accordion>` and `<AccordionItem>` components are used together to display 
 </Accordion>
 ```
 
-
 ### `Accordion` Props
 
 | property  | propType | required | default | description                                                       |
-| --------  | -------- | -------- | ------- | ----------------------------------------------------------------- |
+| --------- | -------- | -------- | ------- | ----------------------------------------------------------------- |
 | children  | node     |          |         | Pass in the children that will be rendered within the Accordion   |
 | className | string   |          |         | Specify an optional className to be applied to the container node |
 
 ### `AccordionItem` Props
 
 | property        | propType | required | default                        | description                                                                         |
-| --------------- | -------- | -------- | -------------- ----------------| ----------------------------------------------------------------------------------- |
+| --------------- | -------- | -------- | ------------------------------ | ----------------------------------------------------------------------------------- |
 | title           | node     |          | 'title'                        | The accordion title                                                                 |
 | renderExpando   | func     |          | props => <button {...props} /> | The callback function to render the expando button. Can be a React component class. |
 | iconDescription | string   |          | 'Expand/Collapse'              | The description of the expando icon                                                 |
