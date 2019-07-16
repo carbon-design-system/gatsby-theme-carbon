@@ -42,7 +42,7 @@
           min-width: rem(100px);
         }
 
-       @include carbon--breakpoint('xlg')  {
+        @include carbon--breakpoint('xlg') {
           min-width: rem(150px);
         }
       }
