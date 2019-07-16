@@ -57,7 +57,7 @@ module.exports = themeOptions => {
         },
       },
       {
-        resolve: `gatsby-mdx`,
+        resolve: `gatsby-plugin-mdx`,
         options: {
           extensions: ['.mdx', '.md'],
           gatsbyRemarkPlugins: [
@@ -66,7 +66,7 @@ module.exports = themeOptions => {
             {
               resolve: `gatsby-remark-images`,
               options: {
-                maxWidth: 1170,
+                maxWidth: 1152,
                 linkImagesToOriginal: false,
                 quality: 75,
                 withWebp,
@@ -75,6 +75,7 @@ module.exports = themeOptions => {
             { resolve: `gatsby-remark-responsive-iframe` },
             { resolve: `gatsby-remark-copy-linked-files` },
           ],
+          plugins: ['gatsby-remark-images'],
           remarkPlugins: [remarkSlug],
           defaultLayouts: {
             default: require.resolve('./src/templates/Default.js'),

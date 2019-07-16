@@ -75,8 +75,7 @@
 .h4,
 .h5,
 .h6,
-.ordered,
-.unordered {
+.list {
   width: 100%;
   @include carbon--breakpoint('md') {
     width: 75%;
@@ -86,24 +85,36 @@
   }
 }
 
+:global(.bx--list--ordered).list,
+:global(.bx--list--unordered).list {
+  margin-bottom: $spacing-06;
+}
+
+.list-item {
+  @include carbon--type-style('body-long-02');
+  padding-right: 0;
+  margin: 0;
+  width: 100%;
+}
+
 //---------------------------------------
 // Headings
 //---------------------------------------
 
 .h1 {
-  margin-top: 4.5rem;
+  margin-top: $spacing-12;
   margin-bottom: $spacing-05;
   @include carbon--type-style('expressive-heading-05', true);
 }
 
 .h2 {
-  margin-top: 4.5rem;
+  margin-top: $spacing-11;
   margin-bottom: $spacing-05;
   @include carbon--type-style('expressive-heading-04', true);
 }
 
 .h3 {
-  margin-top: 4.5rem;
+  margin-top: $spacing-10;
   margin-bottom: $spacing-05;
   @include carbon--type-style('expressive-heading-03', true);
 }
@@ -118,76 +129,4 @@
   // h5 and h6 intentionally mimic one another
   margin-top: $spacing-04;
   @include carbon--type-style('heading-01');
-}
-
-//---------------------------------------
-// Lists
-//---------------------------------------
-.ordered,
-.unordered {
-  margin-bottom: $spacing-06;
-  padding-left: 1.25em;
-  line-height: 1.5;
-  @include carbon--type-style('body-long-02');
-  @include carbon--breakpoint('md') {
-    padding-left: 1em;
-  }
-
-  // No margin for nested lists
-  .ordered,
-  .unordered {
-    margin-bottom: 0;
-  }
-}
-
-.ordered p,
-.unordered p {
-  width: 100%;
-}
-
-// Unordered lists
-.unordered {
-  padding-left: 0;
-  li {
-    list-style: none;
-    &::before {
-      content: '– ';
-      display: inline-block;
-      margin-right: $spacing-03;
-    }
-  }
-}
-
-.unordered .ordered {
-  margin-left: $spacing-08;
-}
-
-.unordered .unordered {
-  padding-left: $spacing-08;
-}
-
-// Ordered lists
-.ordered {
-  li {
-    list-style: decimal;
-    &::before {
-      content: none;
-    }
-  }
-}
-
-.ordered .unordered {
-  padding-left: $spacing-06;
-  li {
-    list-style: none;
-    &::before {
-      content: '– ';
-      display: inline-block;
-      margin-right: $spacing-03;
-    }
-  }
-}
-
-.ordered .ordered {
-  margin-left: $spacing-06;
 }

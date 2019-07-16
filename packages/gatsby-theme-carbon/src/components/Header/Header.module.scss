@@ -16,3 +16,7 @@ header.header {
 .header.hidden {
   top: -48px;
 }
+
+.header :global(.bx--header__name):focus {
+  box-shadow: none;
+}
