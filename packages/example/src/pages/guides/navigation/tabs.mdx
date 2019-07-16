@@ -1,0 +1,54 @@
+---
+title: Tabs
+tabs: ['Sidebar', 'Tabs']
+---
+
+<PageDescription>
+
+You have the option of adding tabs to your pages. This is only recommended if you have several pages that will use the same tabs. If you only have one page with a set of tabs, it might be better for discoverability to change the tabs to menu items.
+
+</PageDescription>
+
+## Tabs in YAML
+
+To create a tabbed page, you just need to point the theme to the path of your first tab. This is the structure of the YAML configuration for this page and it's siblings.
+
+```yaml
+- title: Guides
+  pages:
+    - title: Configuration
+      path: /guides/configuration
+    - title: Shadowing
+      path: /guides/shadowing
+    - title: Styling
+      path: /guides/styling
+    - title: Navigation
+      path: /guides/navigation/sidebar
+```
+
+## File structure
+
+Let's check out the directory structure for this page. Notice how you'll add another directory that corresponds with the one in the YAML file.
+
+    .
+    ├── pages
+    │   └── guides
+    │       ├── configuration.mdx
+    │       ├── shadowing.mdx
+    │       ├── styling.mdx
+    │       └── navigation
+    │           ├── tabs.mdx
+    │           └── sidebar.mdx
+
+## Markdown updates
+
+The last step is to add the name of your tabs to the front matter of each markdown file that has tabs.
+
+**Known issue**: at the moment, your tab name needs to match your title for the navigation components to function properly.
+
+```markdown
+---
+title: Sidebar
+tabs: ['Sidebar', 'Tabs']
+---
+```
