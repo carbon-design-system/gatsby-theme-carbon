@@ -33,7 +33,9 @@ const Code = ({
     return [...lines, lastLine];
   };
 
-  // todo disable title bar
+  // TODO: move title row to row
+  // TODO: create column and add fade out
+  // TODO: add show more button
   return (
     <Row>
       <Highlight
