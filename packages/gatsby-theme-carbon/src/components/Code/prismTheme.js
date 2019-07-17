@@ -26,7 +26,7 @@ const theme /* : PrismTheme */ = {
       },
     },
     {
-      types: ['tag', 'operator', 'number'],
+      types: ['tag', 'operator'],
       style: {
         color: '#6ea6ff',
       },
@@ -61,7 +61,6 @@ const theme /* : PrismTheme */ = {
         'entity',
         'url',
         'attr-value',
-        'keyword',
         'control',
         'directive',
         'unit',
