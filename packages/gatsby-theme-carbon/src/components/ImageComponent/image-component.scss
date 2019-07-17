@@ -6,52 +6,53 @@
   background: $carbon--white-0;
 }
 
-.#{$prefix}--image-component.#{$prefix}--transparent-bg > *:not(.#{$prefix}--image-component__caption) {
+.#{$prefix}--image-component.#{$prefix}--transparent-bg
+  > *:not(.#{$prefix}--image-component__caption) {
   background: transparent;
 }
 
 // Caption
 
 .#{$prefix}--image-component__caption {
-  @include carbon--type-style("body-short-01");
+  @include carbon--type-style('body-short-01');
   margin-bottom: $spacing-06;
   padding-top: $spacing-03;
 
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     padding-right: 50%;
   }
 
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     padding-right: 75%;
   }
 }
 
 .#{$prefix}--col-lg-4 .#{$prefix}--image-component__caption {
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     padding-right: 0;
   }
 
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     padding-right: 20%;
   }
 }
 
 .#{$prefix}--col-lg-6 .#{$prefix}--image-component__caption {
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     padding-right: 0;
   }
 
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     padding-right: 50%;
   }
 }
 
 .#{$prefix}--col-lg-8 .#{$prefix}--image-component__caption {
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     padding-right: 0;
   }
 
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     padding-right: 66.7%;
   }
 }
@@ -61,7 +62,7 @@
 .#{$prefix}--image-component-wrapper-zoom {
   padding: 0;
 
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     box-sizing: border-box;
     background-color: $carbon--white-0;
     cursor: pointer;
@@ -77,7 +78,7 @@
     fill: $carbon--gray-80;
   }
 
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     display: flex;
   }
 }
@@ -163,4 +164,3 @@
   right: 0;
   z-index: 16;
 }
-
