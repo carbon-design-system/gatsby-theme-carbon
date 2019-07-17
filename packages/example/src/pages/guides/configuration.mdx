@@ -156,15 +156,17 @@ To add a link to the bottom of each page that points to the current page source 
 
 ```js
 module.exports = {
-  siteMetadata: {
-    repository: {
-      baseUrl: 'https://github.com/carbon-design-system/gatsby-theme-carbon',
-      subDirectory: '/packages/example',
-    },
-  },
   __experimentalThemes: [
     {
       resolve: 'gatsby-theme-carbon',
+      options: {
+        additionalFontWeights: ['200', '200i'],
+        repository: {
+          baseUrl:
+            'https://github.com/carbon-design-system/gatsby-theme-carbon',
+          subDirectory: '/packages/example',
+        },
+      },
     },
   ],
 };
