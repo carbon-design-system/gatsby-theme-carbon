@@ -13,27 +13,18 @@ import PageTabs from '../components/PageTabs';
 import Main from '../components/Main';
 
 const Default = ({ pageContext, children, location }) => {
-  const { frontmatter = {} } = pageContext;
+  const { frontmatter = {}, relativePagePath } = pageContext;
   const { tabs, title } = frontmatter;
   const scrollDirection = useScrollDirection();
   const shouldHideHeader = !!tabs && scrollDirection === 'down';
 
   // get the path prefix if it exists
   const {
-    site: {
-      pathPrefix,
-      siteMetadata: { repository },
-    },
+    site: { pathPrefix },
   } = useStaticQuery(graphql`
     query PATH_PREFIX_QUERY {
       site {
         pathPrefix
-        siteMetadata {
-          repository {
-            baseUrl
-            subDirectory
-          }
-        }
       }
     }
   `);
@@ -61,9 +52,8 @@ const Default = ({ pageContext, children, location }) => {
       </PageHeader>
       <Main padded>
         {children}
-        <EditLink repository={repository} slug={slug} />
+        <EditLink relativePagePath={relativePagePath} />
       </Main>
-
       <NextPrevious
         pageContext={pageContext}
         location={location}
