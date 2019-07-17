@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Row, Grid, Column } from '../Grid';
-import { footer, grid, nav, list, logo } from './Footer.module.scss';
+import { footer, grid, nav, listItem, logo } from './Footer.module.scss';
 
 const Footer = ({ Content, links, Logo }) => {
   const { firstCol, secondCol } = links;
@@ -13,7 +13,7 @@ const Footer = ({ Content, links, Logo }) => {
             <ul className={nav}>
               {firstCol &&
                 firstCol.map((link, i) => (
-                  <li key={i} className={list}>
+                  <li key={i} className={listItem}>
                     <a href={link.href} aria-label={link.linkText}>
                       {link.linkText}
                     </a>
@@ -25,7 +25,7 @@ const Footer = ({ Content, links, Logo }) => {
             <ul className={nav}>
               {secondCol &&
                 secondCol.map((link, i) => (
-                  <li key={i} className={list}>
+                  <li key={i} className={listItem}>
                     <a href={link.href} aria-label={link.linkText}>
                       {link.linkText}
                     </a>
