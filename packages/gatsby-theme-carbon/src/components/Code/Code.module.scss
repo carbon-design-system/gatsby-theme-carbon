@@ -1,93 +1,110 @@
-.title-row {
-  display: flex;
-  align-items: center;
-  height: 48px;
-  background: $ui-05;
-  padding-left: $spacing-05;
-}
-
-.title {
+.row {
+  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
+    'Bitstream Vera Sans Mono', Courier, monospace;
   color: $inverse-01;
-}
-
-.sourceLink {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  color: $carbon--blue-40;
-  transition: border-bottom $duration--fast-01;
-  border-bottom: 1px solid transparent;
-
-  &:hover {
-    border-bottom: 1px solid $carbon--blue-40;
+  @include carbon--type-style('code-02');
+  width: calc(100% + 2rem);
+  @include carbon--breakpoint('md') {
+    width: calc(75% - 1rem);
   }
-
-  &:visited {
-    color: $carbon--blue-40;
+  @include carbon--breakpoint('lg') {
+    width: calc(66.667% - 1rem);
   }
-}
-
-.sourceLink svg {
-  fill: currentColor;
-  position: relative;
-  top: 1px;
 }
 
 .container {
-  font-family: 'IBM Plex Mono';
-  @include carbon--type-style('code-02');
   position: relative;
-  overflow: visible;
   width: 100%;
   margin-bottom: $spacing-06;
-  // 6 col
-  @include carbon--breakpoint('md') {
-    width: 75%;
-  }
+}
 
-  // 8 col
-  @include carbon--breakpoint('lg') {
-    width: 66.667%;
+.highlight {
+  padding: $spacing-05;
+  position: relative;
+  overflow: auto;
+  width: 100%;
+}
+
+.sideBarMinHeight {
+  min-height: 96px;
+}
+
+// feedback tooltip adjustments
+.container :global(.bx--btn--copy__feedback) {
+  position: absolute;
+  &::before {
+    left: $spacing-07;
+  }
+  &::after {
+    left: $spacing-07;
+  }
+  &::before,
+  &::after {
+    z-index: z('floating');
   }
 }
 
-.container :global(.bx--snippet-button) {
+.path-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: $spacing-09;
   background: $ui-05;
-  transition: background $duration--fast-02;
+  padding-left: $spacing-05;
+  padding-right: $spacing-03;
+  border-bottom: 1px solid $inverse-02;
+}
+
+.sidebar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 16px;
+  padding: 8px;
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow: visible;
-  top: 8px;
-  right: 8px;
-  z-index: 1000;
+  background: linear-gradient(
+    90deg,
+    rgba(23, 23, 23, 0) 0%,
+    rgba(23, 23, 23, 1) 24px
+  );
+}
+
+// Copy button and src button
+.copy-button.button,
+.button {
   width: 32px;
   height: 32px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  svg {
-    fill: $inverse-01;
-  }
+  align-items: center;
+  background: transparent;
+  transition: background $duration--fast-02;
+  z-index: 1000;
   &:hover {
     background-color: $inverse-02;
   }
-}
-
-.container :global(.bx--btn--copy__feedback) {
-  position: absolute;
-
-  &:before {
-    z-index: 10000;
-    position: absolute;
+  svg {
+    fill: $inverse-01;
   }
 }
 
-.pre {
-  padding: $spacing-05;
-  padding-top: 0;
+.path-row .button {
   position: relative;
-  overflow: auto;
+  right: 0;
+  top: 0;
 }
 
-// Inline code
+.sidebar .button {
+  position: static;
+  margin-bottom: $spacing-01;
+  flex-shrink: 0;
+}
+
 :global {
   code {
     font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
@@ -106,5 +123,10 @@
     border-radius: 4px;
     background-color: $ui-03;
     color: $text-01;
+  }
+
+  // Add's additional length for scrolling under sidebar
+  .token:last-of-type {
+    margin-right: 64px;
   }
 }

@@ -1,29 +1,23 @@
 import React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import { CopyButton } from 'carbon-components-react';
-import copy from 'copy-to-clipboard';
+
 import cx from 'classnames';
-import { Launch16 } from '@carbon/icons-react';
 
 import { Row } from '../Grid';
 import prismTheme from './prismTheme';
 
 import {
-  pre,
+  highlight,
   container,
-  titleRow,
-  title,
-  sourceLink,
+  sideBarMinHeight,
+  row,
 } from './Code.module.scss';
 
-const Code = ({
-  children,
-  className: classNameProp = 'markdown',
-  metastring: titleText = '',
-  ...rest
-}) => {
+import PathRow from './PathRow';
+import Sidebar from './Sidebar';
+
+const Code = ({ children, className: classNameProp = '', path, src }) => {
   const language = classNameProp.replace(/language-/, '');
-  const isUrl = !!titleText.match(/http/);
 
   const removeTrailingEmptyLine = lines => {
     const [lastLine] = lines.splice(-1);
@@ -33,11 +27,11 @@ const Code = ({
     return [...lines, lastLine];
   };
 
-  // TODO: move title row to row
-  // TODO: create column and add fade out
-  // TODO: add show more button
   return (
-    <Row>
+    <Row className={row}>
+      <PathRow src={src} path={path}>
+        {children}
+      </PathRow>
       <Highlight
         {...defaultProps}
         code={children}
@@ -46,22 +40,13 @@ const Code = ({
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <div className={container}>
-            <div className={titleRow}>
-              {isUrl ? (
-                <a className={sourceLink} href={titleText}>
-                  Source&nbsp;
-                  <Launch16 />
-                </a>
-              ) : (
-                <span className={title}>{titleText}</span>
-              )}
-              <CopyButton
-                onClick={() => {
-                  copy(children);
-                }}
-              />
-            </div>
-            <pre className={cx(pre, className)} style={style}>
+            <pre
+              className={cx(highlight, {
+                [sideBarMinHeight]: !path && src,
+                [className]: className,
+              })}
+              style={style}
+            >
               {removeTrailingEmptyLine(tokens).map((line, i) => (
                 <div {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (
@@ -70,6 +55,9 @@ const Code = ({
                 </div>
               ))}
             </pre>
+            <Sidebar path={path} src={src}>
+              {children}
+            </Sidebar>
           </div>
         )}
       </Highlight>

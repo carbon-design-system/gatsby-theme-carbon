@@ -26,6 +26,8 @@
       path: /components/DoDontExample
     - title: Caption
       path: /components/Caption
+    - title: Code blocks
+      path: /components/code-blocks
     - title: Aside
       path: /components/Aside
     - title: AnchorLinks
