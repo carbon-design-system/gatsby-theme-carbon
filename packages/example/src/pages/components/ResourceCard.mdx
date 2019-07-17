@@ -68,69 +68,62 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
 
 #### With title
 
-```
+```jsx https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceCard
-      subTitle="With subtitle"
-      title="Title"
-      aspectRatio="2:1"
-      actionIcon="arrowRight"
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-      >
-
-![Github icon](/images/github-icon.png)
-
+  <ResourceCard
+    subTitle="With subtitle"
+    title="Title"
+    aspectRatio="2:1"
+    actionIcon="arrowRight"
+    href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  >
+    ![Github icon](/images/github-icon.png)
   </ResourceCard>
 </Column>
 ```
 
 #### Only subtitle
 
-```
+```jsx https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceCard
-      subTitle="Only subtitle"
-      actionIcon="download"
-      aspectRatio="2:1"
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-      >
-
-![Github icon](/images/github-icon.png)
-
+  <ResourceCard
+    subTitle="Only subtitle"
+    actionIcon="download"
+    aspectRatio="2:1"
+    href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  >
+    ![Github icon](/images/github-icon.png)
   </ResourceCard>
 </Column>
-
 ```
 
 #### Dark
 
-```
+```jsx https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceCard
-      subTitle="Alternate color"
-      title="Dark"
-      aspectRatio="2:1"
-      color="dark"
-      actionIcon="email"
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-      >
-
-![Sketch icon](/images/sketch-icon.png)
-
+  <ResourceCard
+    subTitle="Alternate color"
+    title="Dark"
+    aspectRatio="2:1"
+    color="dark"
+    actionIcon="email"
+    href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  >
+    ![Sketch icon](/images/sketch-icon.png)
   </ResourceCard>
 </Column>
 ```
 
 #### Disabled
 
-```
+```jsx https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceCard
-      title="Disabled card"
-      aspectRatio="2:1"
-      disabled
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-    />
+  <ResourceCard
+    title="Disabled card"
+    aspectRatio="2:1"
+    disabled
+    href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  />
 </Column>
 ```
 

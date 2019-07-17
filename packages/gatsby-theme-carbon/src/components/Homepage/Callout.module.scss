@@ -4,18 +4,9 @@
 }
 
 .row {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
   padding-top: $layout-05;
   padding-bottom: $layout-05;
   max-width: 74.25rem;
-  flex-direction: column;
-
-  @include carbon--breakpoint('md') {
-    flex-direction: row;
-  }
 }
 
 .firstColumn {
