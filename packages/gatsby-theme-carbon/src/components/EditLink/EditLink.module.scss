@@ -1,6 +1,13 @@
 .link {
-  color: $text02;
+  @include carbon--type-style('body-short-01');
+  transition: color $transition--base;
+  color: $text-02;
   &:hover {
-    color: $text01;
+    color: $text-01;
   }
+}
+
+.row {
+  position: relative;
+  top: 9rem;
 }
