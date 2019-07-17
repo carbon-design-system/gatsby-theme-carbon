@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import { link, row } from './EditLink.module.scss';
 
-const EditLink = ({ relativePagePath }) => {
+const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
   const {
     site: {
       siteMetadata: { repository },
@@ -22,7 +22,8 @@ const EditLink = ({ relativePagePath }) => {
     }
   `);
 
-  const { baseUrl, subDirectory } = repository;
+  const { baseUrl, subDirectory } = repositoryProp || repository;
+
   const href = `${baseUrl}/tree/master${subDirectory}/src/pages${relativePagePath}`;
 
   return baseUrl ? (
@@ -42,10 +43,6 @@ EditLink.propTypes = {
     subDirectory: PropTypes.string,
   }),
   relativePagePath: PropTypes.string,
-};
-
-EditLink.defaultProps = {
-  relativePagePath: '/index.mdx',
 };
 
 export default EditLink;
