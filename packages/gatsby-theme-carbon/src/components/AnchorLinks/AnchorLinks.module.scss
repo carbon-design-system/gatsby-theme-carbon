@@ -11,8 +11,16 @@
   }
 }
 
+.list + * {
+  margin-top: $spacing-11;
+}
+
 .list--small {
   margin-top: $spacing-05;
+}
+
+.list--small + * {
+  margin-top: $spacing-10;
 }
 
 .list--small .link {
