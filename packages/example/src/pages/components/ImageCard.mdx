@@ -74,20 +74,13 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
 
 ## Code
 
-```
-
+```jsx https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ImageCard
 <Row className="image-card-group">
-<Column colMd={4} colLg={4} noGutterSm>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <ImageCard title="Title" subTitle="Subtitle" href="/">
+      ![Square](/images/square.png)
+    </ImageCard>
     <ImageCard
-      title="Title"
-      subTitle="Subtitle"
-      href="/"
-      >
-
-![Square](/images/square.png)
-
-  </ImageCard>
-  <ImageCard
       title="Dark title"
       titleColor="dark"
       aspectRatio="1:1"
@@ -95,13 +88,11 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       actionIcon="arrowRight"
       subTitleColor="light"
       subTitle="Light subtitle"
-      >
-
-![Light dark](./images/light-dark.jpg)
-
-  </ImageCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
+    >
+      ![Light dark](./images/light-dark.jpg)
+    </ImageCard>
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
     <ImageCard
       title="Title"
       subTitle="Subtitle"
@@ -110,34 +101,19 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       actionIcon="download"
       titleColor="light"
       subTitleColor="light"
-      >
-
-![Plane image](./images/plane.jpg)
-
-  </ImageCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
-    <ImageCard
-      aspectRatio="1:1"
-      href="/"
-      hoverColor="dark"
-      >
-
-![color pallete array](/images/color-grid.svg)
-
-  </ImageCard>
-      <ImageCard
-      disabled
-      aspectRatio="1:1"
-      href="/"
-      >
-
-![Square](/images/square.png)
-
-  </ImageCard>
-</Column>
+    >
+      ![Plane image](./images/plane.jpg)
+    </ImageCard>
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <ImageCard aspectRatio="1:1" href="/" hoverColor="dark">
+      ![color pallete array](/images/color-grid.svg)
+    </ImageCard>
+    <ImageCard disabled aspectRatio="1:1" href="/">
+      ![Square](/images/square.png)
+    </ImageCard>
+  </Column>
 </Row>
-
 ```
 
 ## Props
