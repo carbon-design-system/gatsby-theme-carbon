@@ -25,7 +25,7 @@ const Footer = ({ Content, links, Logo }) => {
             <ul className={nav}>
               {secondCol &&
                 secondCol.map((link, i) => (
-                  <li key={i} classNam={list}>
+                  <li key={i} className={list}>
                     <a href={link.href} aria-label={link.linkText}>
                       {link.linkText}
                     </a>
