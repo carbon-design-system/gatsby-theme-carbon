@@ -21,14 +21,6 @@
   display: flex;
 }
 
-.list-item:not(.selected-item) .link {
-  color: $active-01;
-
-  &:hover {
-    color: #fff;
-  }
-}
-
 .link {
   @include carbon--type-style('body-short-02');
   padding: 13px $spacing-09 0 $spacing-05;
@@ -48,4 +40,12 @@
 .selected-item .link {
   border-top: 3px solid $brand-01; // 3px accessibility minimum
   background: $carbon--gray-80;
+}
+
+.list-item:not(.selected-item) .link {
+  color: $active-01;
+
+  &:hover {
+    color: #fff;
+  }
 }

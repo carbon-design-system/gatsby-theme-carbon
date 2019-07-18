@@ -1,3 +1,29 @@
+:global {
+  code {
+    font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
+      'Bitstream Vera Sans Mono', Courier, monospace;
+  }
+
+  p > code,
+  li > code,
+  td > code {
+    @include carbon--type-style('code-01');
+    position: relative;
+    display: inline;
+    padding: 0 0.5em;
+    font-size: 0.75em;
+    bottom: 0.0625em;
+    border-radius: 4px;
+    background-color: $ui-03;
+    color: $text-01;
+  }
+
+  // Add's additional length for scrolling under sidebar
+  .token:last-of-type {
+    margin-right: 64px;
+  }
+}
+
 .row {
   font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
     'Bitstream Vera Sans Mono', Courier, monospace;
@@ -75,8 +101,8 @@
 }
 
 // Copy button and src button
-.copy-button.button,
-.button {
+.button,
+.copy-button.button {
   width: 32px;
   height: 32px;
   display: flex;
@@ -103,30 +129,4 @@
   position: static;
   margin-bottom: $spacing-01;
   flex-shrink: 0;
-}
-
-:global {
-  code {
-    font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
-      'Bitstream Vera Sans Mono', Courier, monospace;
-  }
-
-  p > code,
-  li > code,
-  td > code {
-    @include carbon--type-style('code-01');
-    position: relative;
-    display: inline;
-    padding: 0 0.5em;
-    font-size: 0.75em;
-    bottom: 0.0625em;
-    border-radius: 4px;
-    background-color: $ui-03;
-    color: $text-01;
-  }
-
-  // Add's additional length for scrolling under sidebar
-  .token:last-of-type {
-    margin-right: 64px;
-  }
 }

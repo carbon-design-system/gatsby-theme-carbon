@@ -17,7 +17,8 @@
     "serve": "yarn build && yarn workspace example serve",
     "now-build": "yarn workspace example build",
     "format": "prettier --write \"**/*.{scss,css,js,md}\"",
-    "lint": "eslint . --fix"
+    "lint:js": "eslint . --fix",
+    "lint:scss": "stylelint \"packages/**/*.scss\" --fix"
   },
   "eslintIgnore": [
     "**/node_modules/",
@@ -39,6 +40,10 @@
     "lerna": "^3.13.4",
     "lint-staged": "^9.2.0",
     "prettier": "^1.17.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-css-modules": "^1.4.0",
+    "stylelint-config-recommended-scss": "^3.3.0",
+    "stylelint-scss": "^3.9.1",
     "yarn": "^1.15.2"
   },
   "husky": {
@@ -53,6 +58,10 @@
     ],
     "*.{css,scss,json,html,yaml}": [
       "prettier --write",
+      "git add"
+    ],
+    "*.{css,scss}": [
+      "stylelint --fix",
       "git add"
     ]
   }
