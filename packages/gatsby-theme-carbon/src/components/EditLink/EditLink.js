@@ -1,40 +1,48 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from '@emotion/core';
+import { graphql, useStaticQuery } from 'gatsby';
 
-import { link } from './EditLink.module.scss';
+import { link, row } from './EditLink.module.scss';
 
-const repository = 'https://github.com/temporary/master/tree';
+const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
+  const {
+    site: {
+      siteMetadata: { repository },
+    },
+  } = useStaticQuery(graphql`
+    query REPOSITORY_QUERY {
+      site {
+        siteMetadata {
+          repository {
+            baseUrl
+            subDirectory
+          }
+        }
+      }
+    }
+  `);
 
-const rowCss = css({
-  position: 'relative',
-  bottom: 'calc(-160px + 0.875rem + 32px)',
-});
+  const { baseUrl, subDirectory } = repositoryProp || repository;
 
-export default class EditLink extends React.Component {
-  render() {
-    const { repositoryUrl, slug, fileType } = this.props;
-    const href = `${repositoryUrl}tree/master/src/content${slug}.${fileType}`;
+  const href = `${baseUrl}/tree/master${subDirectory}/src/pages${relativePagePath}`;
 
-    return (
-      <div css={rowCss} className="bx--row">
-        <div className="bx--col">
-          <a className={link} href={href}>
-            Edit this page on GitHub
-          </a>
-        </div>
+  return baseUrl ? (
+    <div className={`bx--row ${row}`}>
+      <div className="bx--col">
+        <a className={link} href={href}>
+          Edit this page on GitHub
+        </a>
       </div>
-    );
-  }
-}
+    </div>
+  ) : null;
+};
 
 EditLink.propTypes = {
-  repositoryUrl: PropTypes.string,
-  fileType: PropTypes.string,
-  slug: PropTypes.string.isRequired,
+  repository: PropTypes.shape({
+    baseUrl: PropTypes.string,
+    subDirectory: PropTypes.string,
+  }),
+  relativePagePath: PropTypes.string,
 };
 
-EditLink.defaultProps = {
-  repositoryUrl: repository.url,
-  fileType: 'mdx',
-};
+export default EditLink;
