@@ -68,6 +68,7 @@ const theme /* : PrismTheme */ = {
         'regex',
         'at-rule',
         'selector',
+        'keyword',
         'placeholder',
       ],
       style: {
