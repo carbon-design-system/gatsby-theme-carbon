@@ -2,16 +2,19 @@
   @import '~carbon-components/scss/components/accordion/accordion';
 }
 
-.accordion {
-  width: 100%;
-  @include carbon--breakpoint('md') {
-    width: 75%;
-  }
-  @include carbon--breakpoint('lg') {
-    width: 58.33%;
-  }
+.accordion :global(.bx--accordion__content p) {
+  @include carbon--type-style('body-long-02');
+}
+
+.accordion :global(.bx--accordion__content) {
+  padding-right: 0;
+}
+
+.accordion :global(.bx--accordion__heading) {
+  padding-top: $spacing-04;
+  padding-bottom: $spacing-04;
 }
 
 .accordion :global(.bx--accordion__title) {
-  font-weight: bold;
+  @include carbon--type-style('heading-02');
 }
