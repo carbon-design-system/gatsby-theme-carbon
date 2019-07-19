@@ -4,6 +4,12 @@
 - title: Demo
   pages:
     - path: /demo
+- title: Gallery
+  pages:
+    - path: /gallery
+- title: Contributing
+  pages:
+    - path: /contributing
 - title: Guides
   pages:
     - title: Configuration
@@ -46,6 +52,3 @@
       path: /components/Tabs
     - title: Video
       path: /components/Video
-- title: Gallery
-  pages:
-    - path: /gallery
