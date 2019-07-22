@@ -15,10 +15,8 @@
   },
   "devDependencies": {
     "gatsby": "^2.4.2",
-    "lerna": "^3.13.4",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "yarn": "^1.15.2"
+    "react-dom": "^16.8.6"
   },
   "dependencies": {
     "@carbon/addons-website": "0.0.1-alpha.21",
