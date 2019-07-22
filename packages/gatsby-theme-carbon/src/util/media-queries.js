@@ -1,4 +1,4 @@
-import { breakpoints as CarbonBreakpoints, breakpoint } from '@carbon/layout';
+import { breakpoints as CarbonBreakpoints, breakpoint } from '@carbon/elements';
 
 /**
  * Returns an object containing various mediaqueries for Carbon breakpoints
