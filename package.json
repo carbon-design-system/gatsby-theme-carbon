@@ -41,7 +41,6 @@
     "lint-staged": "^9.2.0",
     "prettier": "^1.17.0",
     "stylelint": "^10.1.0",
-    "stylelint-config-css-modules": "^1.4.0",
     "stylelint-config-recommended-scss": "^3.3.0",
     "stylelint-scss": "^3.9.1",
     "yarn": "^1.15.2"
