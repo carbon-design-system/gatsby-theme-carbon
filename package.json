@@ -16,6 +16,7 @@
     "build:prefix": "yarn workspace example build:prefix",
     "serve": "yarn build && yarn workspace example serve",
     "now-build": "yarn workspace example build",
+    "present": "yarn workspace webinar dev",
     "format": "prettier --write \"**/*.{scss,css,js,md}\"",
     "lint": "eslint . --fix"
   },

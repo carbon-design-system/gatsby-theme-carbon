@@ -1,0 +1,16 @@
+{
+  "name": "webinar",
+  "scripts": {
+    "dev": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx",
+    "now-build": "mdx-deck build deck.mdx"
+  },
+  "private": true,
+  "version": "1.0.0",
+  "description": "gatsby webinar presentation",
+  "main": "deck.mdx",
+  "license": "MIT",
+  "dependencies": {
+    "mdx-deck": "^3.0.7"
+  }
+}
