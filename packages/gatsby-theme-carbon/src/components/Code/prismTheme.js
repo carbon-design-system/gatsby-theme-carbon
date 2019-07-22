@@ -5,7 +5,7 @@
 // Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
 
 /* :: import type { PrismTheme } from '../src/types' */
-import { ui05 } from '@carbon/themes';
+import { ui05 } from '@carbon/elements';
 
 const theme /* : PrismTheme */ = {
   plain: {
