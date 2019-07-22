@@ -781,7 +781,7 @@
     react-scroll-up "^1.3.3"
     react-textarea-autosize "^7.1.0"
 
-"@carbon/colors@10.3.0", "@carbon/colors@^10.3.0":
+"@carbon/colors@10.3.0":
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/@carbon/colors/-/colors-10.3.0.tgz#99df98f141c6d3a237d72ac9b21ad58a07112348"
   integrity sha512-LI+ZINCwf7iKXtaE3BkTdRtHpSwOe5FJtLwWxkqdsy69X4nMDKPc41ZJOW/lYAemeN4EHvm+LL9GD66eQpcVQQ==
@@ -808,7 +808,7 @@
     "@carbon/import-once" "10.1.0"
     "@carbon/layout" "10.1.1"
 
-"@carbon/grid@10.4.0", "@carbon/grid@^10.4.0":
+"@carbon/grid@10.4.0":
   version "10.4.0"
   resolved "https://registry.yarnpkg.com/@carbon/grid/-/grid-10.4.0.tgz#e6b7ece22c16f25b222f5039fb53c8a408194334"
   integrity sha512-4XfasIBTzqsezjxO9GfWwZK9hgBb7zQ+ZS4L7/HBhYOxkhBUbtVKIFS5VNRGrSaiS3jXewtOeahkidBjitQVpQ==
@@ -848,7 +848,7 @@
   resolved "https://registry.yarnpkg.com/@carbon/layout/-/layout-10.1.1.tgz#06608c451b222ee89abe3753cca6990690127af2"
   integrity sha512-FC5iOJLR2CwG5gJX5Wz6jpFCdiLOsKaCw949+t3waWRhdb1CJ9B3PDXM8KUOKRuwo4tsXQb2kd8wXkGNfdkWTw==
 
-"@carbon/layout@10.3.0", "@carbon/layout@^10.3.0":
+"@carbon/layout@10.3.0":
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/@carbon/layout/-/layout-10.3.0.tgz#bbcac550bd3dcf573e504a48a61e290fa30b664c"
   integrity sha512-qToFKyBVRATPz6TP8xBGmbQUj7qb9NUaxMYUJKcnVD+ssnV9KA2zLdwnm9wRP6bpLVXqoTNKIvHc+J3MP54Weg==
@@ -858,14 +858,14 @@
   resolved "https://registry.yarnpkg.com/@carbon/motion/-/motion-10.3.0.tgz#894c3241aaab8fcae2a47bad31c6e409078913da"
   integrity sha512-eGCUBDdc23ye6IKMjx/+TO1Xnalha18sRJXxA0pdWE+wHUiugs3vVRG08fkxt2vm2QLZfaXPF3Pzmc0w9Janvw==
 
-"@carbon/themes@10.4.0", "@carbon/themes@^10.4.0":
+"@carbon/themes@10.4.0":
   version "10.4.0"
   resolved "https://registry.yarnpkg.com/@carbon/themes/-/themes-10.4.0.tgz#c957feb6315006f16e98d5fd319f9f5821393daf"
   integrity sha512-KVaSkp9XgK8yAmhJyua2DE+klRt7+R85ymQ0O79A3aOko1GWm1J2L/v+Gk8xQpU/wkNT8TFOaJtHBgGOz28Qkg==
   dependencies:
     "@carbon/colors" "10.3.0"
 
-"@carbon/type@10.3.0", "@carbon/type@^10.3.0":
+"@carbon/type@10.3.0":
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/@carbon/type/-/type-10.3.0.tgz#77e180710d54e9367afab87708623a9370f17277"
   integrity sha512-cH/cfsQKXsspeR1y7ZXvxdr3yNFvRbadKLbYF0Q448gS8Ypt/2OPamDdeqgQuDSVpd0d/q0AI5OwVNAdW3COXA==
