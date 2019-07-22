@@ -9,7 +9,7 @@
     - path: /gallery
 - title: Contributions
   pages:
-    - path: /contributing
+    - path: /contributions
 - title: Guides
   pages:
     - title: Configuration
