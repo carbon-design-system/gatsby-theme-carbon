@@ -1,11 +1,5 @@
 .header {
   position: relative;
-
-  &:hover {
-    .anchor {
-      opacity: 1;
-    }
-  }
 }
 
 .anchor {
@@ -22,5 +16,11 @@
 
   svg {
     fill: $interactive-01;
+  }
+}
+
+.header:hover {
+  .anchor {
+    opacity: 1;
   }
 }
