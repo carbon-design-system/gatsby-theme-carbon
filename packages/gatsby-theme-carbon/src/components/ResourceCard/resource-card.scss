@@ -28,8 +28,8 @@
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-  max-width: 64px;
-  min-height: 64px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .#{$prefix}--resource-card__icon--img .gatsby-resp-image-wrapper,
