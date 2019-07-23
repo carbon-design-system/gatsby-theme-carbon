@@ -1,7 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Row, Grid, Column } from '../Grid';
-import { footer, grid, nav, listItem, logo } from './Footer.module.scss';
+import {
+  footer,
+  grid,
+  nav,
+  listItem,
+  logo,
+  content,
+} from './Footer.module.scss';
 
 const Footer = ({ Content, links, Logo }) => {
   const { firstCol, secondCol } = links;
@@ -33,7 +40,13 @@ const Footer = ({ Content, links, Logo }) => {
                 ))}
             </ul>
           </Column>
-          <Column colLg={4} colMd={4} colSm={3} offsetLg={2}>
+          <Column
+            className={content}
+            colLg={4}
+            colMd={4}
+            colSm={3}
+            offsetLg={2}
+          >
             <Content />
           </Column>
         </Row>
