@@ -14,11 +14,6 @@
   }
 }
 
-.#{$prefix}--feature-card__column {
-  @include carbon--breakpoint('md') {
-  }
-}
-
 .#{$prefix}--feature-card__img {
   position: relative;
 }
