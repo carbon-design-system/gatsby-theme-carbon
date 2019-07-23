@@ -17,6 +17,7 @@
     "serve": "yarn build && yarn workspace example serve",
     "now-build": "yarn workspace example build",
     "present": "yarn workspace webinar dev",
+    "present:deploy": "now packages/webinar --target production",
     "format": "prettier --write \"**/*.{scss,css,js,md}\"",
     "lint": "eslint . --fix"
   },
