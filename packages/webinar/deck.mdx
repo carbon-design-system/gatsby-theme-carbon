@@ -1,6 +1,7 @@
 import { Notes } from 'mdx-deck';
 import { Split, Image } from 'gatsby-theme-mdx-deck';
 import DeckTheme from './theme.js';
+import Wow from './wow.png';
 
 export const theme = DeckTheme;
 
@@ -16,7 +17,7 @@ export const theme = DeckTheme;
 
 ---
 
-# Carbon backstory
+# Carbon's website backstory
 
 - Started as a standard React project
 - Rebuilt using Gatsby and MDX
@@ -59,14 +60,18 @@ export const theme = DeckTheme;
 
 ## Aha! moments with Gatsby themes
 
-1. Shadowing to provide props
-1. Shadowing theme components
-1. Shadowing anything processed by webpack
+1. Oh wow I really just had to write markdown tho
+1. The immense power of shadowing
+
+---
+
+## Aha! moments with Gatsby themes
+
+<img src={Wow} />
 
 <Notes>
 
-Actual first: Oh wow I really just had to write markdown though
-Developers need to do at least the first one
+Need to do at least the first one
 
 </Notes>
 
@@ -120,12 +125,6 @@ export default props => {
 1. Less is more
 
 1. Communication
-
-<Appear>
-
-[shadowing docs](https://gatsby-theme-carbon.now.sh/guides/shadowing)
-
-</Appear>
 
 <Notes>
 
