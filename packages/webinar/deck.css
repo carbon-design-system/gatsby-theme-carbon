@@ -1,3 +1,37 @@
 li p {
   margin: 0;
 }
+
+.quotes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.quote {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+  text-align: right;
+}
+
+.quote.rtl {
+  flex-direction: row-reverse;
+  text-align: left;
+}
+
+.quote blockquote {
+  color: #6ea6ff;
+  padding: 1rem;
+  max-width: 50%;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.quote img {
+  max-width: 300px;
+  border-radius: 4px;
+}
