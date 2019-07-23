@@ -70,3 +70,4 @@ yarn-error.log
 
 # Vscode settings
 .vscode/settings.json
+.vscode/tasks.json

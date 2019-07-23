@@ -28,8 +28,8 @@
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-  width: 32px;
-  min-height: 32px;
+  max-width: 64px;
+  min-height: 64px;
 }
 
 .#{$prefix}--resource-card__icon--img .gatsby-resp-image-wrapper,
