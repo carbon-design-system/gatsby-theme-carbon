@@ -2,6 +2,7 @@ import { Notes, Appear } from 'mdx-deck';
 import { Split } from 'gatsby-theme-mdx-deck';
 import DeckTheme from './theme.js';
 import Wow from './wow2.png';
+import './deck.css';
 
 export const theme = DeckTheme;
 
@@ -24,14 +25,33 @@ export const theme = DeckTheme;
 - Started as a standard React project
 - Rebuilt using Gatsby and MDX
 - Other teams wanted in
+- Pre-theme pitfalls
 
 <Notes>
 
-- Difficult for content authors and designers to contribute
-- Big win for empowering non-technical contributors
-- Only option was to fork Carbon
-  - No way to get new features or fixes.
-  - Developers innundated with config they don't own or understand
+## - Difficult for content authors and designers to contribute
+
+## - Big win for empowering non-technical contributors
+
+## - Only option was to fork Carbon
+
+---
+
+### Pitfalls
+
+## - No way to get new features or fixes.
+
+## - Developers stuck with config they don't own/understand
+
+</Notes>
+
+---
+
+# Poll 🏝️
+
+<Notes>
+
+# ans: gtc
 
 </Notes>
 
@@ -42,29 +62,75 @@ export const theme = DeckTheme;
 - Development speed
 - Visual solidarity
 - Shared features and fixes between teams
-- Managed dependancies and configuration
+- Theme-managed configuration
 
 <Notes>
 
 - Broke ground April 15th,
-  - 2 teams with no Gatsby or react experience
-  - Both hit June 1st deadline
-  - If you can write markdown, you can build a site with Carbon we fill in the blanks around your content
-- unity through UI
-- Encouraged community envolvement
+  1. 2 teams with no Gatsby or react experience
+  2. sold with just write markdown
+  3. Both hit June 1st deadline
+- unity through core UI components and global MDX
+- community envolvement flourished due to shared tooling
   - in core theme components (edit in Github)
   - in MDX components (Accordion)
-- Easily move between projects, only manage the config you want (progressive disclosure)
+- only manage the dependancies & config you want (progressive disclosure)
+
+## transition: big win for devs, shadowing another new big win
 
 </Notes>
 
 ---
 
-# Aha! moments with Gatsby themes
+# What is shadowing?
 
-1. Oh wow. really just had to write markdown tho
+<ul>
+<li>Allows developers to augment or replace files in a theme</li>
+
+<Appear>
+
+<li>Shadowed files go in directory named after the theme
+<ul>
+<li className="list-p">
+
+ex. `src/gatsby-theme-carbon/components/Footer.js`
+
+</li>
+<li>anything in this folder replaces the theme's version</li>
+</ul>
+</li>
+<li>
+
+The theme will reach for _your_ component first
+
+</li>
+<li>Shadowed components receive same props</li>
+
+</Appear>
+
+</ul>
+
+<Notes>
+
+# Content heavy slide
+
+</Notes>
+
+---
+
+## Revelations building with themes
+
+1. Oh wow. Actually just writing fancy markdown tho
 1. Can't be blocked by theme
 1. Immense power of shadowing
+
+<Notes>
+
+# In order
+
+## - 2. big selling point for teams considering
+
+</Notes>
 
 ---
 
@@ -80,7 +146,7 @@ export const theme = DeckTheme;
 
 <Notes>
 
-Need to do at least the first one
+# At least the first one to get rid of filler content
 
 </Notes>
 
@@ -100,6 +166,12 @@ const CustomHeader = props => (
 export default CustomHeader;
 ```
 
+<Notes>
+
+# Don't forget to spread props
+
+</Notes>
+
 ---
 
 # Shadow whole components
@@ -116,6 +188,12 @@ export default props => {
   return <CustomHeader>Gatsby Theme Carbon</CustomHeader>;
 };
 ```
+
+<Notes>
+
+# Log to view props
+
+</Notes>
 
 ---
 
@@ -135,9 +213,11 @@ export default props => {
 
 <Notes>
 
-- to make sure no one is working on your change already
-- Shadow as few files as you can to achieve your goal
-- If you do shadow, tell the theme developer, used to inform future development
+## - to make sure no one is working on your change already
+
+## - Shadow as few files as you can to achieve your goal
+
+## - If you do shadow, tell the theme developer, used to inform future development
 
 </Notes>
 
@@ -154,17 +234,18 @@ TODO
 <ul>
   <li>Themes empower content authors</li>
   <Appear>
-    <li>Themes save devs time and overhead</li>
-    <li>Themes foster alignment on form and function</li>
+    <li>Themes save developers time and overhead</li>
     <li>Themes encourage community contribution</li>
+    <li>Themes align teams on form and function</li>
     <li>Shadow things. Not too much. Mostly to provide props.</li>
   </Appear>
 </ul>
 
 <Notes>
 
-- content authors and designers contribute like never before
-- also complexity overhead
+- ## content authors and designers contribute like never before
+
+- ## also complexity overhead
 
 </Notes>
 
