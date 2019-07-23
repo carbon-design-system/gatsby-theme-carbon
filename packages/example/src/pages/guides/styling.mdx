@@ -36,10 +36,3 @@ However, you can target the classes without the hash by using a partial selector
 ```
 
 This will match the class that starts with `Banner-module--column` and would be immune to any changes to the hash. We may at some point remove the hash if this becomes an issue.
-
-## Dependancies
-
-You normally shouldn't need this unless you're using a carbon-component that isn't in the theme yet.
-
-If you have `node_module` dependencies that assume a single bundle (such as individual `carbon-components`),
-You can inject global dependancies into the theme's style bundle. To do this, shadow `gatsby-theme-carbon/styles/_global.scss` in your project's `src` directory. This technique
