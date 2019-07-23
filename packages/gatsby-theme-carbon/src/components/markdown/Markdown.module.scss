@@ -94,6 +94,7 @@
   @include carbon--type-style('body-long-02');
   padding-right: 0;
   margin: 0;
+  margin-bottom: $spacing-05;
   width: 100%;
 }
 
@@ -104,14 +105,15 @@
 }
 
 // If a paragraph is the last item in a list don't push next list item down
-.list-item .paragraph:last-child {
-  margin-bottom: 0;
+.list-item .paragraph {
+  margin-bottom: $spacing-03;
 }
 
 // Fix bleed when code snippets are used in a list
 .list-item > pre {
   margin-left: -1rem;
   margin-right: -1.5rem;
+  margin-top: $spacing-05;
   @include carbon--breakpoint('md') {
     margin-right: 1.5rem;
   }
