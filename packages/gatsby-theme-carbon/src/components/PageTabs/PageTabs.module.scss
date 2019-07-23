@@ -20,7 +20,7 @@
 
 .link {
   @include carbon--type-style('body-short-02');
-  padding: 13px $spacing-09 0 $spacing-05;
+  padding: 13px $spacing-05 0 $spacing-05;
   text-decoration: none;
   line-height: 1;
   color: $inverse-01;
@@ -28,6 +28,10 @@
   border-top: 3px solid transparent; // 3px accessibility minimum
   height: 3rem;
   transition: all $duration--moderate-01 $carbon--standard-easing;
+
+  @include carbon--breakpoint('md') {
+    padding-right: $spacing-09;
+  }
 
   &:hover {
     background: #353535;
