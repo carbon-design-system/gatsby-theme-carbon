@@ -31,6 +31,12 @@ div.tab-container .tab {
   }
 }
 
+// Active dropdown item
+div.tab-container div a {
+  font-weight: 600;
+  padding: 0;
+}
+
 div.tab-container .tab a {
   height: 3rem;
   padding-top: $spacing-05;
@@ -39,11 +45,6 @@ div.tab-container .tab a {
   border-bottom: 1px solid #d8d8d8 !important;
   margin-left: 0;
   background-color: transparent;
-
-  &:active {
-    padding-top: $spacing-05;
-    padding-left: 0;
-  }
 
   @include carbon--breakpoint('md') {
     padding-top: $spacing-04;
@@ -74,18 +75,17 @@ div.tab-container .tab a {
   border-bottom: none !important;
 }
 
+div.tab-container .tab a:active {
+  padding-top: $spacing-05;
+  padding-left: 0;
+}
+
 // Dropdown container
 div.tab-container div {
   background-color: $ui-background;
   height: 3rem;
   border-top: 3px solid $interactive-01;
   border-bottom: 1px solid #d8d8d8;
-}
-
-// Active dropdown item
-div.tab-container div a {
-  font-weight: 600;
-  padding: 0;
 }
 
 .tab-contents {
