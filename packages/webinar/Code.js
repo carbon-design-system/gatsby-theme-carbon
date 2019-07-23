@@ -24,7 +24,7 @@ const Code = ({ children, className: classNameProp = '' }) => {
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
           className={className}
-          style={{ ...style, fontFamily: 'IBM Plex Mono', fontSize: '0.8em' }}
+          style={{ ...style, fontFamily: 'IBM Plex Mono', fontSize: '0.7em' }}
         >
           {removeTrailingEmptyLine(tokens).map((line, i) => (
             <div {...getLineProps({ line, key: i })}>

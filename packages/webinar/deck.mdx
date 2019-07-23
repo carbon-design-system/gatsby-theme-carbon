@@ -1,11 +1,13 @@
-import { Notes } from 'mdx-deck';
-import { Split, Image } from 'gatsby-theme-mdx-deck';
+import { Notes, Appear } from 'mdx-deck';
+import { Split } from 'gatsby-theme-mdx-deck';
 import DeckTheme from './theme.js';
-import Wow from './wow.png';
+import Wow from './wow2.png';
 
 export const theme = DeckTheme;
 
 # Gatsby themes at IBM
+
+### Vince & Alison
 
 ---
 
@@ -35,7 +37,7 @@ export const theme = DeckTheme;
 
 ---
 
-## Enter Gatsby themes
+# Enter Gatsby themes
 
 - Development speed
 - Visual solidarity
@@ -58,16 +60,23 @@ export const theme = DeckTheme;
 
 ---
 
-## Aha! moments with Gatsby themes
+# Aha! moments with Gatsby themes
 
-1. Oh wow I really just had to write markdown tho
-1. The immense power of shadowing
+1. Oh wow. really just had to write markdown tho
+1. Can't be blocked by theme
+1. Immense power of shadowing
 
 ---
 
-## Aha! moments with Gatsby themes
+# Shadowing revelations
 
-<img src={Wow} />
+<img style={{ width: '60vw' }} src={Wow} />
+
+<span style={{fontWeight: 300, fontSize: '0.6em', color: 'darkgrey', position: 'absolute', bottom: '-0.5em'}}>
+
+**note:** the Carbon designers did not approve this slide
+
+</span>
 
 <Notes>
 
@@ -77,7 +86,7 @@ Need to do at least the first one
 
 ---
 
-# Shadowing to provide props
+# Shadow to provide props
 
 ```jsx
 import Header from 'gatsby-theme-carbon/src/components/Header';
@@ -93,7 +102,7 @@ export default CustomHeader;
 
 ---
 
-# Shadow theme components
+# Shadow whole components
 
 ```jsx
 import { styles } from '@carbon/type';
@@ -110,7 +119,7 @@ export default props => {
 
 ---
 
-# Shadow **everything**
+# Shadow _everything_
 
 - Sass – `src/components/Markdown.module.scss`
 - Data – `src/components/Code/prismTheme.js`
@@ -118,12 +127,10 @@ export default props => {
 
 ---
 
-# Caveats with shadowing
+# Shadowing guidelines
 
 1. Communication
-
 1. Less is more
-
 1. Communication
 
 <Notes>
@@ -136,13 +143,23 @@ export default props => {
 
 ---
 
-# Takeaways
+# Quotes & Gallery
 
-- Themes empower content authors
-- Themes save devs a tremendous amount of time
-- Themes allow teams to align on form and function
-- Themes encourage community engagement and contribution
-- Shadow things. Not too much. Mostly to provide props.
+TODO
+
+---
+
+# Gatsby Theme takeaways
+
+<ul>
+  <li>Themes empower content authors</li>
+  <Appear>
+    <li>Themes save devs time and overhead</li>
+    <li>Themes foster alignment on form and function</li>
+    <li>Themes encourage community contribution</li>
+    <li>Shadow things. Not too much. Mostly to provide props.</li>
+  </Appear>
+</ul>
 
 <Notes>
 
@@ -153,10 +170,4 @@ export default props => {
 
 ---
 
-# Quotes
-
-TODO: Quotes
-
----
-
-# Thanks
+# Thanks!
