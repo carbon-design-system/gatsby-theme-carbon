@@ -1,19 +1,22 @@
-import { Notes, themes } from 'mdx-deck';
-export const theme = themes.dark;
+import { Notes } from 'mdx-deck';
+import { Split, Image } from 'gatsby-theme-mdx-deck';
+import DeckTheme from './theme.js';
+
+export const theme = DeckTheme;
 
 # Gatsby themes at IBM
 
 ---
 
-## Outline
+# Outline
 
-- Carbon website background
-- Enter Gatsby themes
-- AHA moments with Gatsby themes
+1. Carbon's website backstory – 🌧️
+1. Enter Gatsby themes – 🌤️
+1. Aha! moments of themes – ☀️
 
 ---
 
-## Carbon website backstory
+# Carbon backstory
 
 - Started as a standard React project
 - Rebuilt using Gatsby and MDX
@@ -34,7 +37,7 @@ export const theme = themes.dark;
 ## Enter Gatsby themes
 
 - Development speed
-- Visual solidarity through common UI
+- Visual solidarity
 - Shared features and fixes between teams
 - Managed dependancies and configuration
 
@@ -43,7 +46,8 @@ export const theme = themes.dark;
 - Broke ground April 15th,
   - 2 teams with no Gatsby or react experience
   - Both hit June 1st deadline
-- If you can write markdown, you can build a site with Carbon we fill in the blanks around your content
+  - If you can write markdown, you can build a site with Carbon we fill in the blanks around your content
+- unity through UI
 - Encouraged community envolvement
   - in core theme components (edit in Github)
   - in MDX components (Accordion)
@@ -53,30 +57,107 @@ export const theme = themes.dark;
 
 ---
 
-## AHA moments with Gatsby themes
+## Aha! moments with Gatsby themes
 
 1. Shadowing to provide props
-1. Shadow theme components
-1. Shadow anything processed by webpack
+1. Shadowing theme components
+1. Shadowing anything processed by webpack
 
 <Notes>
 
 Actual first: Oh wow I really just had to write markdown though
+Developers need to do at least the first one
 
 </Notes>
 
 ---
 
-## Shadowing to provide props
+# Shadowing to provide props
+
+```jsx
+import Header from 'gatsby-theme-carbon/src/components/Header';
+
+const CustomHeader = props => (
+  <Header {...props}>
+    <span>Gatsby theme </span>Carbon
+  </Header>
+);
+
+export default CustomHeader;
+```
 
 ---
 
-## Shadow theme components
+# Shadow theme components
+
+```jsx
+import { styles } from '@carbon/type';
+
+const CustomHeader = styled.span({
+  ...styles.expressiveHeading04,
+});
+
+export default props => {
+  console.log(props);
+  return <CustomHeader>Gatsby Theme Carbon</CustomHeader>;
+};
+```
 
 ---
 
-## Shadow anything processed by webpack
+# Shadow **everything**
+
+- Sass – `src/components/Markdown.module.scss`
+- Data – `src/components/Code/prismTheme.js`
+- Hooks - `src/util/hooks/useSearch.js`
 
 ---
 
-## Caveats with shadowing
+# Caveats with shadowing
+
+1. Communication
+
+1. Less is more
+
+1. Communication
+
+<Appear>
+
+[shadowing docs](https://gatsby-theme-carbon.now.sh/guides/shadowing)
+
+</Appear>
+
+<Notes>
+
+- to make sure no one is working on your change already
+- Shadow as few files as you can to achieve your goal
+- If you do shadow, tell the theme developer, used to inform future development
+
+</Notes>
+
+---
+
+# Takeaways
+
+- Themes empower content authors
+- Themes save devs a tremendous amount of time
+- Themes allow teams to align on form and function
+- Themes encourage community engagement and contribution
+- Shadow things. Not too much. Mostly to provide props.
+
+<Notes>
+
+- content authors and designers contribute like never before
+- also complexity overhead
+
+</Notes>
+
+---
+
+# Quotes
+
+TODO: Quotes
+
+---
+
+# Thanks
