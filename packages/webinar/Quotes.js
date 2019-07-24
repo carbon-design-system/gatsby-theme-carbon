@@ -8,7 +8,7 @@ const Quotes = () => (
       <div className="text-container">
         <blockquote>
           My list of web development skills ends after HTML and Markdown, but I
-          was able to migrate nearly all of the Carbon site the the Gatsby theme
+          was able to migrate nearly all of the Carbon site to the Gatsby theme
           in a matter of hours.
         </blockquote>
         <span className="name">Connor Leech</span>
@@ -21,7 +21,8 @@ const Quotes = () => (
         <blockquote>
           After forking Carbon's website 6 months ago, we made the decision to
           migrate our site to the Gatsby theme. Doing so has allowed us to focus
-          our efforts elsewhere, while benefiting from and contributing updates.
+          our efforts elsewhere, while benefiting from and contributing the
+          theme.
         </blockquote>
         <span className="name">Taylor Jones</span>
         <span className="title">Front-end developer – Watson IoT</span>
