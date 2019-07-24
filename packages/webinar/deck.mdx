@@ -5,12 +5,15 @@ import Wow from './wow2.png';
 import Quotes from './Quotes';
 import Demo from './Demo';
 import './deck.css';
-
+import Hexagon from './Hexagon';
+import Intro from './Intro.js';
 export const theme = DeckTheme;
 
-# Gatsby themes at IBM
+<Intro />
 
-### Vince & Alison
+---
+
+<h2 ><a style={{color: 'white'}} href="https://gatsby-theme-carbon.now.sh">https://gatsby-theme-carbon.now.sh</a></h2>
 
 ---
 
@@ -27,7 +30,7 @@ export const theme = DeckTheme;
 - Started as a standard React project
 - Rebuilt using Gatsby and MDX
 - Other teams at IBM wanted in
-- Pitfalls with forking TODO: Old sites screenshot
+- Pitfalls with forking
 
 <Notes>
 
@@ -72,16 +75,15 @@ export const theme = DeckTheme;
 
 <Notes>
 
-TODO: practice/make more clear, links to contributions?
-
-- Broke ground April 15th,
-  1. 2 teams with no Gatsby or react experience
-  2. liked the idea of just writing markdown
-  3. Both hit June 1st deadline
+- speed
+  - Broke ground April 15th,
+  - 2 teams with June 1st deadline (45 days)
+  - both teams with 0 no react and no gatsby experience
+  - 3. Both hit June 1st deadline
 - unity through core UI components and global MDX
 - community envolvement grew due to shared tooling
   - in core theme components (edit in Github)
-  - in MDX components (Accordion)
+  - in MDX content components
 - only manage the dependancies & config you want (progressive disclosure)
 
 ## transition: big win for devs, shadowing another new big win
@@ -221,7 +223,7 @@ export default props => {
 
 ## - shadowing hook to provide 3rd party search
 
-## - reveals search component TODO: screen shot?
+## - reveals search component
 
 </Notes>
 
@@ -249,14 +251,26 @@ export default props => {
 
 ---
 
-## TODO: ai wont load!
-
 <Demo src="https://www.ibm.com/design/ai/" title="IBM Design for AI" />
 
 <Notes>
 
 - Signature homepage
 - ## a11y (skip to content, tab control, return to top)
+
+</Notes>
+
+---
+
+<Demo
+  src="https://design-language-website.netlify.com/"
+  title="IBM Design Language"
+/>
+
+<Notes>
+
+- ## Switcher
+- ## Familiar navigation/IA
 
 </Notes>
 

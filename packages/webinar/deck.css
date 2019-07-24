@@ -105,11 +105,10 @@ li p {
 
 .hexagon {
   position: absolute;
+  pointer-events: none;
   width: 50vw;
-  top: -200px;
-  left: -200px;
-  z-index: 0;
   animation: spin 60s linear infinite;
+  filter: drop-shadow(0px 8px 8px rgba(26, 13, 39, 1));
 }
 
 @keyframes spin {
