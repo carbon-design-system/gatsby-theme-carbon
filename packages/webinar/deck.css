@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 li p {
   margin: 0;
 }

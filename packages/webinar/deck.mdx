@@ -26,8 +26,8 @@ export const theme = DeckTheme;
 
 - Started as a standard React project
 - Rebuilt using Gatsby and MDX
-- Other teams wanted in
-- Pre-theme pitfalls
+- Other teams at IBM wanted in
+- Pitfalls with forking TODO: Old sites screenshot
 
 <Notes>
 
@@ -61,24 +61,46 @@ export const theme = DeckTheme;
 
 # Enter Gatsby themes
 
+---
+
+# Big wins with Gatsby themes
+
 - Development speed
 - Visual solidarity
-- Shared features and fixes between teams
+- Shared features and fixes
 - Theme-managed configuration
 
 <Notes>
 
+TODO: practice/make more clear, links to contributions?
+
 - Broke ground April 15th,
   1. 2 teams with no Gatsby or react experience
-  2. sold with just write markdown
+  2. liked the idea of just writing markdown
   3. Both hit June 1st deadline
 - unity through core UI components and global MDX
-- community envolvement flourished due to shared tooling
+- community envolvement grew due to shared tooling
   - in core theme components (edit in Github)
   - in MDX components (Accordion)
 - only manage the dependancies & config you want (progressive disclosure)
 
 ## transition: big win for devs, shadowing another new big win
+
+</Notes>
+
+---
+
+## Revelations while building with themes
+
+1. Oh wow. Actually just writing fancy markdown tho
+1. Can't be blocked by theme
+1. Immense power of shadowing
+
+<Notes>
+
+# In order
+
+## - 2. big selling point for teams considering
 
 </Notes>
 
@@ -115,22 +137,6 @@ The theme will reach for _your_ component first
 <Notes>
 
 # Content heavy slide
-
-</Notes>
-
----
-
-## Revelations building with themes
-
-1. Oh wow. Actually just writing fancy markdown tho
-1. Can't be blocked by theme
-1. Immense power of shadowing
-
-<Notes>
-
-# In order
-
-## - 2. big selling point for teams considering
 
 </Notes>
 
@@ -193,6 +199,10 @@ export default props => {
 
 <Notes>
 
+# Here we're creating our own novel component
+
+# no need to import
+
 # Log to view props
 
 </Notes>
@@ -204,6 +214,16 @@ export default props => {
 - Sass – `src/components/Markdown.module.scss`
 - Data – `src/components/Code/prismTheme.js`
 - Hooks - `src/util/hooks/useSearch.js`
+
+<Notes>
+
+## - Hooks are a new react API that allow you to encapsulate logic/behavior
+
+## - shadowing hook to provide 3rd party search
+
+## - reveals search component TODO: screen shot?
+
+</Notes>
 
 ---
 
@@ -228,6 +248,8 @@ export default props => {
 <Quotes />
 
 ---
+
+## TODO: ai wont load!
 
 <Demo src="https://www.ibm.com/design/ai/" title="IBM Design for AI" />
 
