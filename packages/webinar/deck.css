@@ -5,33 +5,70 @@ li p {
 .quotes {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0062ff;
   align-items: center;
+  justify-content: center;
 }
 
 .quote {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  margin: 2rem;
-  text-align: right;
+  justify-content: space-between;
+  width: 70vw;
+}
+
+.quote:first-of-type {
+  margin-bottom: 1em;
 }
 
 .quote.rtl {
   flex-direction: row-reverse;
-  text-align: left;
+}
+
+.name,
+.title {
+  display: block;
+  font-size: 3vh;
+}
+
+.text-container {
+  max-width: 65%;
+}
+
+.name {
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+.title {
+  font-weight: 300;
 }
 
 .quote blockquote {
-  color: #6ea6ff;
-  padding: 1rem;
-  max-width: 50%;
-  font-size: 30px;
-  font-style: italic;
+  color: white;
+  font-size: 3.75vh;
+  margin: 0;
+  font-weight: 400;
+  position: relative;
+  line-height: 1.5;
+}
+
+.quote blockquote::before {
+  content: '\201C';
+  color: white;
+  font-size: 9em;
+  font-weight: 600;
+  opacity: 0.2;
+  position: absolute;
+  top: -0.425em;
+  left: -0.2em;
+  text-shadow: none;
 }
 
 .quote img {
-  max-width: 300px;
-  border-radius: 4px;
+  max-width: 325px;
+  border-radius: 2px;
 }
