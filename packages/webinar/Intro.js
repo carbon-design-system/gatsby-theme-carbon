@@ -7,35 +7,37 @@ const Intro = () => (
       style={{
         zIndex: '4',
         fontWeight: 600,
+        textAlign: 'center',
         margin: 0,
         textShadow: '0px 6px 6px rgba(0,0,0,0.3)',
       }}
     >
       IBM and Gatsby themes
     </h1>
-    <Hexagon style={{ left: '-10%', top: '-10%', zIndex: '0' }} />
-    <h3 style={{ margin: 0, marginTop: '-1rem', zIndex: '2', fontWeight: 600 }}>
+    <Hexagon style={{ left: '0', top: '30vh', zIndex: '0', width: '55vw' }} />
+    <h3 style={{ margin: 0, marginTop: '-1rem', zIndex: '4', fontWeight: 600 }}>
       Driving impact through design
     </h3>
-    <span style={{ margin: 0, position: 'relative', fontWeight: 300 }}>
+    <span
+      style={{ margin: 0, position: 'relative', fontWeight: 300, zIndex: '4' }}
+    >
       Vince Picone & Alison Joseph
     </span>
     <Hexagon
       style={{
-        left: '55%',
-        top: '-10%',
+        right: '25vw',
+        top: '-8vh',
         zIndex: '3',
-        width: '22vw',
-        animation: 'spin 40s linear infinite',
+        width: '35vmax',
+        animationDirection: 'reverse',
       }}
     />
     <Hexagon
       style={{
-        left: '69.5%',
-        top: '42%',
+        right: '-5vw',
+        top: '30vh',
         zIndex: '3',
-        width: '30vw',
-        animation: 'spin 50s linear infinite reverse',
+        width: '40vmax',
       }}
     />
   </>
