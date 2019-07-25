@@ -29,13 +29,18 @@ const useNavigationList = () => {
 
   return [
     edges.flatMap(({ node }) =>
-      node.pages.map(page => ({ ...page, category: node.title }))
+      node.pages.map(page => ({
+        ...page,
+        category: node.title,
+      }))
     ),
     pathPrefix,
   ];
 };
 
-const getTabItems = ({ currentTitle, tabs }) => {
+const getTabItems = ({ tabs, location }) => {
+  const { pathname } = location;
+  const currentPage = pathname.split('/');
   if (!tabs) {
     return {
       prevTabItem: null,
@@ -44,16 +49,21 @@ const getTabItems = ({ currentTitle, tabs }) => {
   }
 
   const tabItems = tabs.map(title => {
-    const slug = slugify(title, { lower: true });
+    const slug = slugify(title, {
+      lower: true,
+    });
     return {
       title,
       slug,
-      currentTab: slug === slugify(currentTitle, { lower: true }),
+      currentTab:
+        slug ===
+        slugify(currentPage[3], {
+          lower: true,
+        }),
     };
   });
 
   const currentTabIndex = tabItems.findIndex(tab => tab.currentTab);
-
   return {
     prevTabItem: tabItems[currentTabIndex - 1],
     nextTabItem: tabItems[currentTabIndex + 1],
@@ -91,12 +101,19 @@ const getTitle = pageContext => {
 const getName = (category, title) => `${category}${title ? `: ${title}` : ''}`;
 
 const NextPreviousContainer = props => {
-  const { tabs, location, pageContext = { frontmatter: 'Home' } } = props;
+  const {
+    tabs,
+    location,
+    pageContext = {
+      frontmatter: 'Home',
+    },
+  } = props;
   const [navigationList, pathPrefix] = useNavigationList();
   const currentTitle = getTitle(pageContext);
 
   const { prevTabItem, nextTabItem } = getTabItems({
     currentTitle,
+    location,
     tabs,
   });
 
@@ -106,10 +123,19 @@ const NextPreviousContainer = props => {
   });
 
   const getPreviousItem = () => {
-    const href = location.pathname.replace(pathPrefix, '');
+    // Splitting the href into a array
+    const hrefSegment = location.pathname.split('/');
     if (prevTabItem) {
+      // Checking if the last segment is there
+      // If last segment there the use that
+      // Else use the one next one up
+      const segmentLocation = hrefSegment[hrefSegment.length - 1]
+        ? hrefSegment.length - 1
+        : hrefSegment.length - 2;
+      hrefSegment[segmentLocation] = prevTabItem.slug;
       return {
-        to: `${href.replace(currentTitle, prevTabItem.slug)}`,
+        // Join the link back together
+        to: hrefSegment.join('/'),
         name: getName(
           navigationList[navIndex].title || navigationList[navIndex].category,
           prevTabItem.title
@@ -143,10 +169,15 @@ const NextPreviousContainer = props => {
       };
     }
 
+    // Same as the previous Tab above
+    const hrefSegment = location.pathname.split('/');
     if (nextTabItem && nextTabItem.slug) {
-      const href = location.pathname.replace(pathPrefix, '');
+      const segmentIndex = hrefSegment[hrefSegment.length - 1]
+        ? hrefSegment.length - 1
+        : hrefSegment.length - 2;
+      hrefSegment[segmentIndex] = nextTabItem.slug;
       return {
-        to: `${href.replace(currentTitle, nextTabItem.slug)}`,
+        to: hrefSegment.join('/'),
         name: getName(
           navigationList[navIndex].title || navigationList[navIndex].category,
           nextTabItem.title
