@@ -12,6 +12,7 @@ import ArticleCard from '../ArticleCard';
 import Aside from '../Aside';
 import FeatureCard from '../FeatureCard';
 import ImageCard from '../ImageCard';
+import ImageGallery from '../ImageGallery';
 import { Row, Column, Grid } from '../Grid';
 import { AnchorLink, AnchorLinks } from '../AnchorLinks';
 import { Tab, Tabs } from '../Tabs';
@@ -52,6 +53,7 @@ const components = {
   Aside,
   FeatureCard,
   ImageCard,
+  ImageGallery,
   AnchorLink,
   AnchorLinks,
   Tab,
