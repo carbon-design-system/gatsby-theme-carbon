@@ -1,0 +1,323 @@
+import { Notes, Appear } from 'mdx-deck';
+import { Split } from 'gatsby-theme-mdx-deck';
+import DeckTheme from './theme.js';
+import Wow from './wow2.png';
+import Quotes from './Quotes';
+import Demo from './Demo';
+import './deck.css';
+import Hexagon from './Hexagon';
+import Intro from './Intro.js';
+export const theme = DeckTheme;
+import Backstory from './Backstory.js';
+
+<Intro />
+
+---
+
+<h2 ><a style={{color: 'white'}} href="https://gatsby-theme-carbon.now.sh">https://gatsby-theme-carbon.now.sh</a></h2>
+
+---
+
+# Outline
+
+1. Carbon's website backstory – 🌧️
+1. Enter Gatsby themes – 🌤️
+1. Aha! moments of themes – ☀️
+
+---
+
+# Carbon's website backstory
+
+<Backstory />
+
+<Notes>
+
+## - Difficult for content authors and designers to contribute
+
+## - Big win for empowering non-technical contributors
+
+## - Only option was to fork Carbon
+
+---
+
+### Pitfalls
+
+## - No way to get new features or fixes.
+
+## - Developers stuck with config they don't own/understand
+
+</Notes>
+
+---
+
+# Other teams at IBM wanted in
+
+- Process was to fork and copy the Carbon website
+- Needed to understand configuration settings
+- No design updates
+- No bug fixes
+
+---
+
+# Poll 🏝️
+
+<Notes>
+
+# ans: gtc
+
+</Notes>
+
+---
+
+# Enter Gatsby themes
+
+---
+
+# Big wins with Gatsby themes
+
+- Development speed
+- Visual solidarity
+- Shared features and fixes
+- Theme-managed configuration
+
+<Notes>
+
+- speed
+  - Broke ground April 15th,
+  - 2 teams with June 1st deadline (45 days)
+  - both teams with 0 no react and no gatsby experience
+  - 3. Both hit June 1st deadline
+- unity through core UI components and global MDX
+- community envolvement grew due to shared tooling
+  - in core theme components (edit in Github)
+  - in MDX content components
+- only manage the dependancies & config you want (progressive disclosure)
+
+## transition: big win for devs, shadowing another new big win
+
+</Notes>
+
+---
+
+## Revelations while building with themes
+
+1. Oh wow. Actually just writing fancy markdown tho
+1. Can't be blocked by theme
+1. Immense power of shadowing
+
+<Notes>
+
+# In order
+
+## - 2. big selling point for teams considering
+
+</Notes>
+
+---
+
+# What is shadowing?
+
+<ul>
+<li>Allows developers to augment or replace files in a theme</li>
+
+<Appear>
+
+<li>Shadowed files go in directory named after the theme
+<ul>
+<li className="list-p">
+
+ex. `src/gatsby-theme-carbon/components/Footer.js`
+
+</li>
+<li>anything in this folder replaces the theme's version</li>
+</ul>
+</li>
+<li>
+
+The theme will reach for _your_ component first
+
+</li>
+<li>Shadowed components receive same props</li>
+
+</Appear>
+
+</ul>
+
+<Notes>
+
+# Content heavy slide
+
+</Notes>
+
+---
+
+# Shadowing revelations
+
+<img style={{ width: '60vw' }} src={Wow} />
+
+<span style={{fontWeight: 300, fontSize: '0.6em', color: 'darkgrey', position: 'absolute', bottom: '-0.5em'}}>
+
+**note:** the Carbon designers did not approve this slide
+
+</span>
+
+<Notes>
+
+# At least the first one to get rid of filler content
+
+</Notes>
+
+---
+
+# Shadow to provide props
+
+```jsx
+import Header from 'gatsby-theme-carbon/src/components/Header';
+
+const CustomHeader = props => (
+  <Header {...props}>
+    <span>Gatsby theme </span>Carbon
+  </Header>
+);
+
+export default CustomHeader;
+```
+
+<Notes>
+
+# Don't forget to spread props
+
+</Notes>
+
+---
+
+# Shadow whole components
+
+```jsx
+import { styles } from '@carbon/type';
+
+const CustomHeader = styled.span({
+  ...styles.expressiveHeading04,
+});
+
+export default props => {
+  console.log(props);
+  return <CustomHeader>Gatsby Theme Carbon</CustomHeader>;
+};
+```
+
+<Notes>
+
+# Here we're creating our own novel component
+
+# no need to import
+
+# Log to view props
+
+</Notes>
+
+---
+
+# Shadow _everything_
+
+- Sass – `src/components/Markdown.module.scss`
+- Data – `src/components/Code/prismTheme.js`
+- Hooks - `src/util/hooks/useSearch.js`
+
+<Notes>
+
+## - Hooks are a new react API that allow you to encapsulate logic/behavior
+
+## - shadowing hook to provide 3rd party search
+
+## - reveals search component
+
+</Notes>
+
+---
+
+# Shadowing guidelines
+
+1. Communication
+1. Less is more
+1. Communication
+
+<Notes>
+
+## - to make sure no one is working on your change already
+
+## - Shadow as few files as you can to achieve your goal
+
+## - If you do shadow, tell the theme developer, used to inform future development
+
+</Notes>
+
+---
+
+<Quotes />
+
+---
+
+<Demo src="https://www.ibm.com/design/ai/" title="IBM Design for AI" />
+
+<Notes>
+
+- Signature homepage
+- ## a11y (skip to content, tab control, return to top)
+
+</Notes>
+
+---
+
+<Demo
+  src="https://design-language-website.netlify.com/"
+  title="IBM Design Language"
+/>
+
+<Notes>
+
+- ## Switcher
+- ## Familiar navigation/IA
+
+</Notes>
+
+---
+
+<Demo src="https://idr-public.netlify.com/" title="IBM Design Research" />
+
+<Notes>
+
+- ## Switcher
+- ## Familiar navigation/IA
+
+</Notes>
+
+---
+
+# Gatsby Theme takeaways
+
+<ul>
+  <li>Themes empower content authors</li>
+  <Appear>
+    <li>Themes save developers time and overhead</li>
+    <li>Themes encourage community contribution</li>
+    <li>Themes align teams on form and function</li>
+    <li>Shadow things. Not too much. Mostly to provide props.</li>
+  </Appear>
+</ul>
+
+<Notes>
+
+- ## content authors and designers contribute like never before
+
+- ## also complexity overhead
+
+</Notes>
+
+---
+
+# Thanks!
+
+---
+
+# Q & A
