@@ -38,6 +38,7 @@
 .#{$prefix}--resource-card__icon--img img[src*='gif'],
 .#{$prefix}--resource-card__icon--img img[src*='svg'] {
   margin-bottom: 0;
+  position: static;
 }
 
 .#{$prefix}--resource-card__icon--action {
