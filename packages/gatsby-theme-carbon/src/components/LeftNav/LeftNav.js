@@ -58,7 +58,8 @@ const LeftNav = props => {
         aria-label="Side navigation"
         className={classnames({
           'bx--side-nav--website': true,
-          'bx--side-nav--website--light': !props.homepage,
+          'bx--side-nav--website--light':
+            props.theme !== 'dark' && !props.homepage,
         })}
       >
         <SideNavItems>

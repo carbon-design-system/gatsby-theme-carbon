@@ -10,7 +10,7 @@ import Container from './Container';
 
 import '../styles/index.scss';
 
-const Layout = ({ children, homepage, shouldHideHeader, ...rest }) => {
+const Layout = ({ children, homepage, theme, shouldHideHeader, ...rest }) => {
   const is404 = children.key === null;
 
   useLayoutEffect(() => {
@@ -34,6 +34,7 @@ const Layout = ({ children, homepage, shouldHideHeader, ...rest }) => {
         shouldHideHeader={shouldHideHeader}
         homepage={homepage}
         is404Page={is404}
+        theme={theme}
       />
       <Container homepage={homepage}>
         <MDXProvider>{children}</MDXProvider>
