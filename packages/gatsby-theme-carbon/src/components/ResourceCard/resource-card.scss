@@ -38,6 +38,9 @@
 .#{$prefix}--resource-card__icon--img img[src*='gif'],
 .#{$prefix}--resource-card__icon--img img[src*='svg'] {
   margin-bottom: 0;
+}
+
+.#{$prefix}--resource-card__icon--img .gatsby-resp-image-wrapper {
   position: static !important; //important needed to override inline style added by Gatsby
 }
 
