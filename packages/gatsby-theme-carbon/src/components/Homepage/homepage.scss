@@ -1,9 +1,9 @@
-.container--homepage {
+.container--dark {
   background: $carbon--gray-100;
   color: $carbon--white-0;
 }
 
-.container--homepage a {
+.container--dark a {
   color: $carbon--blue-40;
   text-decoration: none;
 
@@ -32,7 +32,7 @@
   height: 100%;
 }
 
-.container--homepage h3.homepage--header__title {
+.container--dark h3.homepage--header__title {
   @include carbon--type-style('expressive-heading-03', true);
   display: none;
   font-weight: 600;
@@ -55,7 +55,7 @@
   margin-top: -25%;
 }
 
-.container--homepage .#{$prefix}--grid {
+.container--dark .#{$prefix}--grid {
   margin: 0;
 
   @include carbon--breakpoint('lg') {
@@ -69,6 +69,6 @@
   }
 }
 
-.container--homepage .#{$prefix}--col-no-gutter {
+.container--dark .#{$prefix}--col-no-gutter {
   padding: 0;
 }

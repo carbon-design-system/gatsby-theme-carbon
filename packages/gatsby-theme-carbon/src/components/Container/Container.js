@@ -4,7 +4,7 @@ import NavContext from '../../util/context/NavContext';
 import useWindowSize from '../../util/hooks/useWindowSize';
 import { overlay, visible } from './Container.module.scss';
 
-const Container = ({ children, homepage }) => {
+const Container = ({ children, homepage, theme }) => {
   const { leftNavIsOpen, switcherIsOpen, toggleNavState } = useContext(
     NavContext
   );
@@ -31,6 +31,8 @@ const Container = ({ children, homepage }) => {
     return navOpen && windowSize.innerWidth && windowSize.innerWidth < 1056;
   })();
 
+  const darkTheme = theme === 'dark' || homepage;
+
   return (
     <>
       <div
@@ -42,7 +44,7 @@ const Container = ({ children, homepage }) => {
       />
       <div
         aria-hidden={overlayVisible}
-        className={`${homepage ? 'container--homepage' : 'container'}`}
+        className={`${darkTheme ? 'container--dark' : 'container'}`}
       >
         {children}
       </div>

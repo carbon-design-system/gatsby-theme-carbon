@@ -36,7 +36,7 @@ const Layout = ({ children, homepage, theme, shouldHideHeader, ...rest }) => {
         is404Page={is404}
         theme={theme}
       />
-      <Container homepage={homepage}>
+      <Container homepage={homepage} theme={theme}>
         <MDXProvider>{children}</MDXProvider>
         <Footer />
       </Container>
