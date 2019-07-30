@@ -8,6 +8,7 @@ module.exports = themeOptions => {
     isSearchEnabled = false,
     withWebp = false,
     iconPath,
+    mdxExtensions = ['.mdx', '.md'],
     repository = {
       baseUrl: '',
       subDirectory: '',
@@ -59,7 +60,7 @@ module.exports = themeOptions => {
       {
         resolve: `gatsby-plugin-mdx`,
         options: {
-          extensions: ['.mdx', '.md'],
+          extensions: mdxExtensions,
           gatsbyRemarkPlugins: [
             { resolve: `gatsby-remark-unwrap-images` },
             { resolve: `gatsby-remark-smartypants` },
