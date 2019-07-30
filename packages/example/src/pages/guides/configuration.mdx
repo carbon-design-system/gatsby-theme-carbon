@@ -80,20 +80,16 @@ plugins: [
 
 ## Image Compression
 
-You can enable WebP by passing `withWebp: true` or providing your own optimization level. See the gatsby-remark-images [plugin options](https://www.gatsbyjs.org/packages/gatsby-remark-images/#options).
+You can enable WebP by passing `withWebp: true` or providing your own optimization level. See the gatsby-remark-images [plugin options](https://www.gatsbyjs.org/packages/gatsby-remark-images/#options). You can also tweak the image quality based on design tolerance and performance thresholds.
 
 ```js
 module.exports = {
-  siteMetadata: {
-    title: 'Gatsby Theme Carbon',
-  },
   plugins: [
     {
       resolve: 'gatsby-theme-carbon',
       options: {
-        name: 'Gatsby Theme Carbon Starter',
-        shortName: 'Carbon Starter',
-        withWebp: true,
+        withWebp: true, // true, false (default false)
+        imageQuality: 50, // 0-100 (default 75)
       },
     },
   ],
