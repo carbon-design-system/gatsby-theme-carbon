@@ -1,4 +1,6 @@
+/* eslint-disable import/no-duplicates */
 import React, { useContext, useEffect, useRef, useCallback } from 'react';
+import classnames from 'classnames';
 import cx from 'classnames';
 import NavContext from '../../util/context/NavContext';
 import useWindowSize from '../../util/hooks/useWindowSize';
@@ -31,7 +33,7 @@ const Container = ({ children, homepage, theme }) => {
     return navOpen && windowSize.innerWidth && windowSize.innerWidth < 1056;
   })();
 
-  const classNames = cx({
+  const containerClassNames = classnames({
     container: theme !== 'dark' || !homepage,
     'container--homepage': homepage,
     'container--dark': theme === 'dark',
@@ -46,7 +48,7 @@ const Container = ({ children, homepage, theme }) => {
         role="presentation"
         tabIndex="-1"
       />
-      <div aria-hidden={overlayVisible} className={classNames}>
+      <div aria-hidden={overlayVisible} className={containerClassNames}>
         {children}
       </div>
     </>
