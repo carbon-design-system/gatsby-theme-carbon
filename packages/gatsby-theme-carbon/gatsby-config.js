@@ -1,5 +1,5 @@
 const path = require('path');
-const colors = require('@carbon/themes');
+const { uiBackground, interactive01 } = require('@carbon/elements');
 const remarkSlug = require('remark-slug');
 
 module.exports = themeOptions => {
@@ -8,6 +8,8 @@ module.exports = themeOptions => {
     isSearchEnabled = false,
     withWebp = false,
     iconPath,
+    mdxExtensions = ['.mdx', '.md'],
+    imageQuality = 75,
     repository = {
       baseUrl: '',
       subDirectory: '',
@@ -59,7 +61,7 @@ module.exports = themeOptions => {
       {
         resolve: `gatsby-plugin-mdx`,
         options: {
-          extensions: ['.mdx', '.md'],
+          extensions: mdxExtensions,
           gatsbyRemarkPlugins: [
             { resolve: `gatsby-remark-unwrap-images` },
             { resolve: `gatsby-remark-smartypants` },
@@ -68,7 +70,7 @@ module.exports = themeOptions => {
               options: {
                 maxWidth: 1152,
                 linkImagesToOriginal: false,
-                quality: 75,
+                quality: imageQuality,
                 withWebp,
               },
             },
@@ -123,8 +125,8 @@ module.exports = themeOptions => {
           name: 'Carbon Design Gatsby Theme',
           short_name: 'Gatsby Theme Carbon',
           start_url: '/',
-          background_color: colors.uiBackground,
-          theme_color: colors.interactive01,
+          background_color: uiBackground,
+          theme_color: interactive01,
           display: 'browser',
           icon: iconPath
             ? path.resolve(iconPath)
