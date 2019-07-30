@@ -52,14 +52,12 @@ const getTabItems = ({ tabs, location }) => {
     const slug = slugify(title, {
       lower: true,
     });
+    const currentTab =
+      currentPage.filter(item => item === slug).toString() === slug;
     return {
       title,
       slug,
-      currentTab:
-        slug ===
-        slugify(currentPage[3], {
-          lower: true,
-        }),
+      currentTab,
     };
   });
 
@@ -108,7 +106,7 @@ const NextPreviousContainer = props => {
       frontmatter: 'Home',
     },
   } = props;
-  const [navigationList, pathPrefix] = useNavigationList();
+  const [navigationList] = useNavigationList();
   const currentTitle = getTitle(pageContext);
 
   const { prevTabItem, nextTabItem } = getTabItems({
@@ -124,15 +122,10 @@ const NextPreviousContainer = props => {
 
   const getPreviousItem = () => {
     // Splitting the href into a array
-    const hrefSegment = location.pathname.split('/');
+    const hrefSegment = location.pathname.split('/').filter(Boolean);
+
     if (prevTabItem) {
-      // Checking if the last segment is there
-      // If last segment there the use that
-      // Else use the one next one up
-      const segmentLocation = hrefSegment[hrefSegment.length - 1]
-        ? hrefSegment.length - 1
-        : hrefSegment.length - 2;
-      hrefSegment[segmentLocation] = prevTabItem.slug;
+      hrefSegment[hrefSegment.length - 1] = prevTabItem.slug;
       return {
         // Join the link back together
         to: hrefSegment.join('/'),
@@ -170,12 +163,9 @@ const NextPreviousContainer = props => {
     }
 
     // Same as the previous Tab above
-    const hrefSegment = location.pathname.split('/');
+    const hrefSegment = location.pathname.split('/').filter(Boolean);
     if (nextTabItem && nextTabItem.slug) {
-      const segmentIndex = hrefSegment[hrefSegment.length - 1]
-        ? hrefSegment.length - 1
-        : hrefSegment.length - 2;
-      hrefSegment[segmentIndex] = nextTabItem.slug;
+      hrefSegment[hrefSegment.length - 1] = nextTabItem.slug;
       return {
         to: hrefSegment.join('/'),
         name: getName(
