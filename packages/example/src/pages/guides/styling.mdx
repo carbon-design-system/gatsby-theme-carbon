@@ -27,10 +27,10 @@ Every Sass file in your project automatically has access to the the following ca
 
 Theme component classes have a hash of their styles tacked on to the end. This is both to prevent collisions, and also to prevent sneaky breaking changes to your styles if we update the class underneath you and you were relying on our styles.
 
-However, you can target the classes without the hash by using a partial selector:
+However, you can target the classes without the hash by using a [partial selector](https://css-tricks.com/almanac/selectors/a/attribute/):
 
 ```scss
-[class^='Banner-module--column'] {
+[class*='Banner-module--column'] {
   color: $text-04;
 }
 ```
