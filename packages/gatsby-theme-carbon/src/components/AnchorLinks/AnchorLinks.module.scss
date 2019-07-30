@@ -79,8 +79,8 @@
   }
 }
 
-// Dark theme
-:global(.container--dark) .link {
+// gray100 background
+:global(.container--gray100) .link {
   color: $carbon--white-0;
 
   &:before {

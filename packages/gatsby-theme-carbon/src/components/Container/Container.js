@@ -34,9 +34,9 @@ const Container = ({ children, homepage, theme }) => {
   })();
 
   const containerClassNames = classnames({
-    container: theme !== 'dark' || !homepage,
+    container: theme !== 'gray100' || !homepage,
     'container--homepage': homepage,
-    'container--dark': theme === 'dark',
+    'container--gray100': theme === 'gray100',
   });
 
   return (

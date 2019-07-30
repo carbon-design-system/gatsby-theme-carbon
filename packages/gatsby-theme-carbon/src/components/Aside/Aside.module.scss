@@ -21,7 +21,7 @@
   padding-right: $spacing-05;
 }
 
-// Dark background
-:global(.container--dark) .aside:before {
+// gray100 background
+:global(.container--gray100) .aside:before {
   background: $carbon--white-0;
 }

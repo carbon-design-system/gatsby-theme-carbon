@@ -37,8 +37,10 @@
   .bx--side-nav--website--dark
     .bx--side-nav__menu[role='menu']
     a.bx--side-nav__link--current,
-  .bx--side-nav__menu[role='menu'] a.bx--side-nav__link[aria-current='page'],
-  a.bx--side-nav__link--current {
+  .bx--side-nav--website--dark
+    .bx--side-nav__menu[role='menu']
+    a.bx--side-nav__link[aria-current='page'],
+  .bx--side-nav--website--dark a.bx--side-nav__link--current {
     background-color: #282828 !important;
   }
 
@@ -46,7 +48,8 @@
     .bx--side-nav__item:not(.bx--side-nav__item--active)
     > .bx--side-nav__link:hover
     > span,
-  .bx--side-nav__item:not(.bx--side-nav__item--active)
+  .bx--side-nav--website--dark
+    .bx--side-nav__item:not(.bx--side-nav__item--active)
     .bx--side-nav__menu-item
     > .bx--side-nav__link:hover
     > span {

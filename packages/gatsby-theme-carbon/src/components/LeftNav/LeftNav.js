@@ -59,9 +59,9 @@ const LeftNav = props => {
         className={classnames({
           'bx--side-nav--website': true,
           'bx--side-nav--website--dark':
-            props.theme === 'dark' && props.homepage,
+            props.theme === 'gray100' || props.homepage,
           'bx--side-nav--website--light':
-            props.theme !== 'dark' && !props.homepage,
+            props.theme !== 'gray100' && !props.homepage,
         })}
       >
         <SideNavItems>

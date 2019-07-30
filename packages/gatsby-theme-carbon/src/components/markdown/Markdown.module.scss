@@ -37,7 +37,7 @@
   font-style: italic;
 }
 
-:global(.container--dark) .blockquote {
+:global(.container--gray100) .blockquote {
   color: $carbon--blue-40;
 }
 
@@ -160,6 +160,6 @@
 //---------------------------------------
 // Lists
 //---------------------------------------
-:global(.container--dark) :global(.bx--list__item) {
+:global(.container--gray100) :global(.bx--list__item) {
   color: $carbon--white-0;
 }

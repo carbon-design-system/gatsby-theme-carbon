@@ -9,16 +9,17 @@ Gatsby themes allow you to override configuration from the theme by defining the
 </PageDescription>
 
 <AnchorLinks>
-  <AnchorLink>Site Title and Description</AnchorLink>
+  <AnchorLink>Site title and description</AnchorLink>
   <AnchorLink>Manifest</AnchorLink>
   <AnchorLink>Favicon</AnchorLink>
   <AnchorLink>Additional font weights</AnchorLink>
-  <AnchorLink>Image Compression</AnchorLink>
-  <AnchorLink>Global Search</AnchorLink>
+  <AnchorLink>Image compression</AnchorLink>
+  <AnchorLink>Global search</AnchorLink>
   <AnchorLink>Edit on Github link</AnchorLink>
+  <AnchorLink>Gray 100 theme</AnchorLink>
 </AnchorLinks>
 
-## Site Title and Description
+## Site title and description
 
 To add a title and description to each page, simply provide them to siteMetadata in your `gatsby-config.js` file.
 
@@ -94,7 +95,7 @@ plugins: [
   ],
 ```
 
-## Image Compression
+## Image compression
 
 You can enable WebP by passing `withWebp: true` or providing your own optimization level. See the gatsby-remark-images [plugin options](https://www.gatsbyjs.org/packages/gatsby-remark-images/#options).
 
@@ -116,7 +117,7 @@ module.exports = {
 };
 ```
 
-## Global Search
+## Global search
 
 The GlobalSearch component is disabled by default. If you'd like to implement search functionality, you'll need to follow these two steps:
 
@@ -162,4 +163,15 @@ To add a link to the bottom of each page that points to the current page source 
       },
     },
   ],
+```
+
+## Gray 100 theme
+
+You have the option of setting your background color to gray-100. To configure this you need to set the theme color in the front matter. You can view the [Galley](/gallery) page as an example.
+
+```markdown
+---
+title: Gallery
+theme: gray100
+---
 ```
