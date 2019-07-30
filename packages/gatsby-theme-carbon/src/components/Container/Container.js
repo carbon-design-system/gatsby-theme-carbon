@@ -31,7 +31,11 @@ const Container = ({ children, homepage, theme }) => {
     return navOpen && windowSize.innerWidth && windowSize.innerWidth < 1056;
   })();
 
-  const darkTheme = theme === 'dark' || homepage;
+  const classNames = cx({
+    container: theme !== 'dark' || !homepage,
+    'container--homepage': homepage,
+    'container--dark': theme === 'dark',
+  });
 
   return (
     <>
@@ -42,10 +46,7 @@ const Container = ({ children, homepage, theme }) => {
         role="presentation"
         tabIndex="-1"
       />
-      <div
-        aria-hidden={overlayVisible}
-        className={`${darkTheme ? 'container--dark' : 'container'}`}
-      >
+      <div aria-hidden={overlayVisible} className={classNames}>
         {children}
       </div>
     </>

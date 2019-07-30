@@ -78,7 +78,7 @@ const SubNavItems = ({ items, pathname, onClick }) =>
       <SideNavMenuItem
         to={`${item.path}`}
         className={cx({
-          [styles.linkText__homepage]: pathname === '/',
+          [styles.linkText__dark]: pathname === '/',
         })}
         onClick={onClick}
         element={Link}

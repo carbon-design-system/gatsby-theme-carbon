@@ -28,7 +28,9 @@
   text-decoration: none;
   width: 50%;
   transition: background $duration--fast-02 $carbon--standard-easing;
+
   &:hover {
+    color: $carbon--white-0;
     background: $carbon--gray-80;
     text-decoration: none;
   }
