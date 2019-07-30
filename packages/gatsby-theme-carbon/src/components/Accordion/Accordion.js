@@ -6,7 +6,7 @@ import { Row, Column } from '../Grid';
 
 const Accordion = ({ className, ...rest }) => (
   <Row>
-    <Column colLg={8}>
+    <Column noGutterSm colLg={8}>
       <CarbonAccordion {...rest} className={cx(className, accordion)} />
     </Column>
   </Row>
