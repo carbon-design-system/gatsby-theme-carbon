@@ -1,0 +1,38 @@
+.gallery-container {
+  position: fixed;
+  z-index: 10000000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+.button-class {
+  height: 32px;
+  background: none;
+  border: none;
+}
+
+.icon {
+  fill: white;
+}
+
+.gallery-menu {
+  display: flex;
+}
+
+.image-container img {
+  width: 50%;
+  height: auto;
+  position: relative;
+}
+.image-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
