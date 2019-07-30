@@ -1,0 +1,118 @@
+body {
+  overflow: hidden;
+}
+
+li p {
+  margin: 0;
+}
+
+.quotes {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0062ff;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 70vw;
+}
+
+.quote:first-of-type {
+  margin-bottom: 1em;
+}
+
+.quote.rtl {
+  flex-direction: row-reverse;
+}
+
+.name,
+.title {
+  display: block;
+  font-size: 3vh;
+}
+
+.text-container {
+  max-width: 65%;
+}
+
+.name {
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+.title {
+  font-weight: 300;
+}
+
+.quote blockquote {
+  color: white;
+  font-size: 3.75vh;
+  margin: 0;
+  font-weight: 400;
+  position: relative;
+  line-height: 1.5;
+}
+
+.quote blockquote::before {
+  content: '\201C';
+  color: white;
+  font-size: 9em;
+  font-weight: 600;
+  opacity: 0.2;
+  position: absolute;
+  top: -0.425em;
+  left: -0.2em;
+  text-shadow: none;
+}
+
+.quote img {
+  max-width: 325px;
+  border-radius: 2px;
+}
+
+.iframe {
+  border: none;
+}
+
+.demo {
+  height: 100vh;
+  width: 100vw;
+  background-color: #282828;
+  /* color: #171717; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  text-align: center;
+  z-index: 1;
+}
+
+.demo h2 {
+  margin: 0;
+  margin-bottom: 2rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hexagon {
+  position: absolute;
+  pointer-events: none;
+  width: 50vw;
+  animation: spin 60s linear infinite;
+  filter: drop-shadow(0px 8px 8px rgba(26, 13, 39, 1));
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -2,10 +2,6 @@
   @import '~carbon-components/scss/components/accordion/accordion';
 }
 
-.accordion :global(.bx--accordion__content p) {
-  @include carbon--type-style('body-long-02');
-}
-
 .accordion :global(.bx--accordion__content) {
   padding-right: 0;
 }
@@ -17,4 +13,8 @@
 
 .accordion :global(.bx--accordion__title) {
   @include carbon--type-style('heading-02');
+}
+
+.accordion :global(.bx--accordion__content) p {
+  @include carbon--type-style('body-long-02');
 }

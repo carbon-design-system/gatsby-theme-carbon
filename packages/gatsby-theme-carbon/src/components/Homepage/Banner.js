@@ -5,6 +5,7 @@ import { Grid, Row, Column } from '../Grid';
 import { column, row, grid } from './Banner.module.scss';
 
 const StyledGrid = styled(Grid)`
+  max-width: 100%;
   background-image: url(${props => props.image});
   background-position: ${props => (props.position ? props.position : 'center')};
 `;

@@ -16,8 +16,11 @@
     "build:prefix": "yarn workspace example build:prefix",
     "serve": "yarn build && yarn workspace example serve",
     "now-build": "yarn workspace example build",
+    "present": "yarn workspace webinar dev",
+    "present:deploy": "now packages/webinar --target production",
     "format": "prettier --write \"**/*.{scss,css,js,md}\"",
-    "lint": "eslint . --fix"
+    "lint:js": "eslint . --fix",
+    "lint:scss": "stylelint \"packages/**/*.scss\" --fix"
   },
   "eslintIgnore": [
     "**/node_modules/",
@@ -36,9 +39,12 @@
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-react-hooks": "^1.3.0",
     "husky": "^3.0.0",
-    "lerna": "^3.13.4",
+    "lerna": "^3.16.2",
     "lint-staged": "^9.2.0",
     "prettier": "^1.17.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended-scss": "^3.3.0",
+    "stylelint-scss": "^3.9.1",
     "yarn": "^1.15.2"
   },
   "husky": {
@@ -53,6 +59,10 @@
     ],
     "*.{css,scss,json,html,yaml}": [
       "prettier --write",
+      "git add"
+    ],
+    "*.{css,scss}": [
+      "stylelint --fix",
       "git add"
     ]
   }
