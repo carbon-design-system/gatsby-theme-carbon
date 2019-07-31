@@ -9,6 +9,7 @@ module.exports = themeOptions => {
     withWebp = false,
     iconPath,
     mdxExtensions = ['.mdx', '.md'],
+    imageQuality = 75,
     repository = {
       baseUrl: '',
       subDirectory: '',
@@ -69,7 +70,7 @@ module.exports = themeOptions => {
               options: {
                 maxWidth: 1152,
                 linkImagesToOriginal: false,
-                quality: 75,
+                quality: imageQuality,
                 withWebp,
               },
             },
