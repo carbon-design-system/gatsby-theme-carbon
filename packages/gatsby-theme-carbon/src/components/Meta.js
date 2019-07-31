@@ -2,11 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useMetadata } from '../util/hooks';
 
-const Meta = () => {
+const Meta = ({ title: pageTitle }) => {
   const { title, description, keywords } = useMetadata();
   return (
     <Helmet
-      title={title}
+      title={pageTitle ? `${title} - ${pageTitle}` : title}
       meta={[
         {
           name: 'description',

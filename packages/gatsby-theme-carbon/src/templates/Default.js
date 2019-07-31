@@ -41,7 +41,11 @@ const Default = ({ pageContext, children, location }) => {
 
   const currentTab = getCurrentTab();
   return (
-    <Layout shouldHideHeader={shouldHideHeader} homepage={false}>
+    <Layout
+      shouldHideHeader={shouldHideHeader}
+      homepage={false}
+      pageTitle={title}
+    >
       <PageHeader
         shouldHideHeader={shouldHideHeader}
         title={title}

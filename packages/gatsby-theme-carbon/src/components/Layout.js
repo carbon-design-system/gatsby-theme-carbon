@@ -10,7 +10,13 @@ import Container from './Container';
 
 import '../styles/index.scss';
 
-const Layout = ({ children, homepage, shouldHideHeader, ...rest }) => {
+const Layout = ({
+  children,
+  homepage,
+  shouldHideHeader,
+  pageTitle,
+  ...rest
+}) => {
   const is404 = children.key === null;
 
   useLayoutEffect(() => {
@@ -27,7 +33,7 @@ const Layout = ({ children, homepage, shouldHideHeader, ...rest }) => {
 
   return (
     <>
-      <Meta />
+      <Meta title={pageTitle} />
       <Header shouldHideHeader={shouldHideHeader} />
       <Switcher />
       <LeftNav
