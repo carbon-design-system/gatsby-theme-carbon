@@ -106,8 +106,12 @@ const NextPreviousContainer = props => {
       frontmatter: 'Home',
     },
   } = props;
-  const [navigationList] = useNavigationList();
+  const [navigationList, pathPrefix] = useNavigationList();
   const currentTitle = getTitle(pageContext);
+  const hrefSegments = location.pathname
+    .replace(pathPrefix, '')
+    .split('/')
+    .filter(Boolean);
 
   const { prevTabItem, nextTabItem } = getTabItems({
     currentTitle,
@@ -121,14 +125,11 @@ const NextPreviousContainer = props => {
   });
 
   const getPreviousItem = () => {
-    // Splitting the href into a array
-    const hrefSegment = location.pathname.split('/').filter(Boolean);
-
     if (prevTabItem) {
-      hrefSegment[hrefSegment.length - 1] = prevTabItem.slug;
+      const previousSegments = [...hrefSegments.slice(0, -1), prevTabItem.slug];
       return {
         // Join the link back together
-        to: hrefSegment.join('/'),
+        to: `/${previousSegments.join('/')}`,
         name: getName(
           navigationList[navIndex].title || navigationList[navIndex].category,
           prevTabItem.title
@@ -162,12 +163,10 @@ const NextPreviousContainer = props => {
       };
     }
 
-    // Same as the previous Tab above
-    const hrefSegment = location.pathname.split('/').filter(Boolean);
     if (nextTabItem && nextTabItem.slug) {
-      hrefSegment[hrefSegment.length - 1] = nextTabItem.slug;
+      const nextSegments = [...hrefSegments.slice(0, -1), nextTabItem.slug];
       return {
-        to: hrefSegment.join('/'),
+        to: `/${nextSegments.join('/')}`,
         name: getName(
           navigationList[navIndex].title || navigationList[navIndex].category,
           nextTabItem.title
