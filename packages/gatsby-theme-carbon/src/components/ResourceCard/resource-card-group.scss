@@ -12,7 +12,7 @@
 }
 
 .resource-card-group .#{$prefix}--resource-card--dark {
-  border-top-color: 1px solid $carbon--black-100;
+  border-top-color: $carbon--black-100;
 }
 
 .resource-card-group
