@@ -15,6 +15,8 @@ const Layout = ({
   homepage,
   shouldHideHeader,
   pageTitle,
+  pageDescription,
+  pageKeywords,
   ...rest
 }) => {
   const is404 = children.key === null;
@@ -33,7 +35,11 @@ const Layout = ({
 
   return (
     <>
-      <Meta title={pageTitle} />
+      <Meta
+        pageTitle={pageTitle}
+        pageDescription={pageDescription}
+        pageKeywords={pageKeywords}
+      />
       <Header shouldHideHeader={shouldHideHeader} />
       <Switcher />
       <LeftNav

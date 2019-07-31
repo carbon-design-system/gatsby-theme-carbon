@@ -14,7 +14,7 @@ import Main from '../components/Main';
 
 const Default = ({ pageContext, children, location }) => {
   const { frontmatter = {}, relativePagePath } = pageContext;
-  const { tabs, title } = frontmatter;
+  const { tabs, title, description, keywords } = frontmatter;
   const scrollDirection = useScrollDirection();
   const shouldHideHeader = !!tabs && scrollDirection === 'down';
 
@@ -45,6 +45,8 @@ const Default = ({ pageContext, children, location }) => {
       shouldHideHeader={shouldHideHeader}
       homepage={false}
       pageTitle={title}
+      pageDescription={description}
+      pageKeywords={keywords}
     >
       <PageHeader
         shouldHideHeader={shouldHideHeader}
