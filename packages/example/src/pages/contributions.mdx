@@ -173,3 +173,11 @@ To lint the entire project and get errors in your `Problems` tray, you can add t
   ]
 }
 ```
+
+## Testing Pages
+
+If you want to add examples of what you are working on or see changes you've made, you can add an MDX file to `packages/src/pages/test` that will be visible at `(your-server-name)/test/(added-file)` during development. If you do add a page to the `/test` directory, update the below list with the file you added and its purpose to be included with your pull request.
+
+It currently contains:
+
+- `spacing-audit.mdx`: this can be used to see the spacing around different components when combined in common patterns. This makes it easy to see the cross site changes that would occur when you change the spacing to any component.
