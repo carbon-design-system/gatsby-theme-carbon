@@ -97,20 +97,16 @@ plugins: [
 
 ## Image compression
 
-You can enable WebP by passing `withWebp: true` or providing your own optimization level. See the gatsby-remark-images [plugin options](https://www.gatsbyjs.org/packages/gatsby-remark-images/#options).
+You can enable WebP by passing `withWebp: true` or providing your own optimization level. See the gatsby-remark-images [plugin options](https://www.gatsbyjs.org/packages/gatsby-remark-images/#options). You can also tweak the image quality based on design tolerance and performance thresholds.
 
 ```js
 module.exports = {
-  siteMetadata: {
-    title: 'Gatsby Theme Carbon',
-  },
   plugins: [
     {
       resolve: 'gatsby-theme-carbon',
       options: {
-        name: 'Gatsby Theme Carbon Starter',
-        shortName: 'Carbon Starter',
-        withWebp: true,
+        withWebp: true, // true, false (default false)
+        imageQuality: 50, // 0-100 (default 75)
       },
     },
   ],
@@ -174,4 +170,21 @@ You have the option of setting your background color to gray-100. To configure t
 title: Gallery
 theme: gray100
 ---
+```
+
+## Other options
+
+- `additionalFontWeights` – add support for additional Plex font weights. Don't forget to specify italics for the additional weights if needed.
+- `mdxExtensions` – change the file extensions processed by `gatsby-mdx` (default ['.mdx', '.md'])
+
+```js
+plugins: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        additionalFontWeights: ['200', '200i'],
+        mdxExtensions: ['.mdx']
+      },
+    },
+  ],
 ```

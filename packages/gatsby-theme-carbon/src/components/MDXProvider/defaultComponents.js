@@ -17,6 +17,7 @@ import { AnchorLink, AnchorLinks } from '../AnchorLinks';
 import { Tab, Tabs } from '../Tabs';
 import Link from '../Link';
 import { Accordion, AccordionItem } from '../Accordion';
+import ArtDirection from '../ArtDirection';
 
 const components = {
   wrapper: function Wrapper({ children, ...props }) {
@@ -35,6 +36,7 @@ const components = {
   code: Code,
   table: PageTable,
   a: Link,
+  ArtDirection,
   PageDescription,
   Accordion,
   AccordionItem,

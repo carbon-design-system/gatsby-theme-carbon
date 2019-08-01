@@ -7,11 +7,6 @@
 .container--gray100 a,
 .container--homepage a {
   color: $carbon--blue-40;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 // Homepage image header area
