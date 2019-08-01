@@ -1,0 +1,33 @@
+---
+title: Art Direction
+---
+
+<PageDescription>
+
+On the web, [art direction](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Art_direction) refers to changing the image rendered at different display sizes. The `ArtDirection` component allows you to to provide multiple images achieve this goal.
+
+</PageDescription>
+
+## Example
+
+<ArtDirection>
+
+![Mobile image](./mobile.png)
+![Tablet image](./tablet.png)
+![Desktop image](./desktop.png)
+
+</ArtDirection>
+
+## Code
+
+You can place up to three images inside of the ArtDirection component. The first will be used for mobile, the second for tablet, and the third for desktop. If only two images are provided, the second image will be used for both tablet and desktop.
+
+```markdown path=components/ArtDirection.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ArtDirection
+<ArtDirection>
+
+![Mobile image](./mobile.png)
+![Tablet image](./tablet.png)
+![Desktop image](./desktop.png)
+
+</ArtDirection>
+```
