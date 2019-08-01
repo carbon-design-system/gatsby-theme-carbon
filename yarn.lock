@@ -7119,14 +7119,6 @@ gatsby-plugin-catch-links@^2.0.15, gatsby-plugin-catch-links@^2.1.0:
     "@babel/runtime" "^7.0.0"
     escape-string-regexp "^1.0.5"
 
-gatsby-plugin-compile-es6-packages@^1.1.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-compile-es6-packages/-/gatsby-plugin-compile-es6-packages-1.2.0.tgz#1bdd0f25f32b19f09ef7c550c6cdc805e7b7b9a8"
-  integrity sha512-imFA3VFJHSs+Jfu4HKhF9b89nZE24bSR0Xn9g9OK2vTI945kszstWoxKSWJYXQB7K6rsJ2Ml5iONjvwqfX8y6w==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    regex-escape "^3.4.8"
-
 gatsby-plugin-compile-es6-packages@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-compile-es6-packages/-/gatsby-plugin-compile-es6-packages-2.1.0.tgz#eb6068d8936fd8b404716e47b821d09bf0656af7"
