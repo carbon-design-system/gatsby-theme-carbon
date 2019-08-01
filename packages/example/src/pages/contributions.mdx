@@ -14,6 +14,7 @@ Use this guide to contribute to the theme. We'll show you how to get the develop
   <AnchorLink>Work in a branch</AnchorLink>
   <AnchorLink>Sass and CSS Modules</AnchorLink>
   <AnchorLink>VS Code</AnchorLink>
+  <AnchorLink>Test pages</AnchorLink>
 </AnchorLinks>
 
 ## Project setup
@@ -174,10 +175,8 @@ To lint the entire project and get errors in your `Problems` tray, you can add t
 }
 ```
 
-## Testing Pages
+## Test pages
 
 If you want to add examples of what you are working on or see changes you've made, you can add an MDX file to `packages/src/pages/test` that will be visible at `(your-server-name)/test/(added-file)` during development. If you do add a page to the `/test` directory, update the below list with the file you added and its purpose to be included with your pull request.
 
-It currently contains:
-
-- `spacing-audit.mdx`: this can be used to see the spacing around different components when combined in common patterns. This makes it easy to see the cross site changes that would occur when you change the spacing to any component.
+- [`Spacing audit`](/test/spacing-audit): use this page to test spacing around components when combined in common patterns.
