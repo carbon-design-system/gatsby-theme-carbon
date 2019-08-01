@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-carbon",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "main": "index.js",
   "author": "vpicone <vp@vincepic.one> (@vpicone)",
   "repository": {
@@ -35,7 +35,6 @@
     "emotion-theming": "^10.0.10",
     "focus-trap-react": "^6.0.0",
     "gatsby-plugin-catch-links": "^2.0.15",
-    "gatsby-plugin-compile-es6-packages": "^1.1.0",
     "gatsby-plugin-emotion": "^4.0.7",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-mdx": "^1.0.11",
