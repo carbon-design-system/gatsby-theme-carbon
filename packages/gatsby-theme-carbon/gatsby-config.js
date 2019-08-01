@@ -114,12 +114,6 @@ module.exports = themeOptions => {
         },
       },
       {
-        resolve: 'gatsby-plugin-compile-es6-packages',
-        options: {
-          modules: ['gatsby-theme-carbon'],
-        },
-      },
-      {
         resolve: 'gatsby-plugin-manifest',
         options: {
           name: 'Carbon Design Gatsby Theme',
