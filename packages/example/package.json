@@ -5,11 +5,13 @@
   "license": "Apache 2.0",
   "scripts": {
     "develop": "gatsby develop",
-    "develop:clean": "gatsby clean && yarn develop",
+    "develop:clean": "yarn clean && yarn develop",
     "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
     "build:prefix": "gatsby build --prefix-paths",
-    "build:debug": "node --inspect ../../node_modules/.bin/gatsby build --prefix-paths",
-    "serve": "gatsby serve"
+    "serve:prefix": "gatsby serve --prefix-paths",
+    "test:prefix": "yarn build:prefix && yarn serve:prefix"
   },
   "dependencies": {
     "gatsby": "^2.4.2",
