@@ -42,7 +42,9 @@ const Container = ({ children, homepage }) => {
       />
       <div
         aria-hidden={overlayVisible}
-        className={`${homepage ? 'container--homepage' : 'container'}`}
+        className={`${
+          homepage ? 'container--homepage container' : 'container'
+        }`}
       >
         {children}
       </div>
