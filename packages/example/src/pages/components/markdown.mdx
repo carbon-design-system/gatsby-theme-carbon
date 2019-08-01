@@ -1,5 +1,7 @@
 ---
 title: Markdown
+description: 'Carbon Gatsby theme markdown documentation'
+keywords: 'ibm,carbon,gatsby,mdx,markdown'
 ---
 
 <PageDescription>
@@ -20,6 +22,18 @@ For most pages, we recommend starting with a `PageDescription` followed by `Anch
   <AnchorLink>Tables</AnchorLink>
   <AnchorLink>Blockquotes</AnchorLink>
 </AnchorLinks>
+
+## MDX Frontmatter
+
+`gatsby-plugin-mdx` allows you to declare frontmatter in your `.mdx` files with triple dashes at the start and end of the data. The frontmatter can contain any additional data on the specific pages it is defined in, and it can be accessed in the GraphQL data layer. This data can include information like page title, SEO metadata, path, and more.
+
+```md
+---
+title: Markdown
+description: 'Carbon Gatsby theme markdown documentation'
+keywords: 'ibm,carbon,gatsby,mdx,markdown'
+---
+```
 
 ## Text decoration
 
