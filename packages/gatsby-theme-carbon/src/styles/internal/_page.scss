@@ -88,6 +88,10 @@ img[src*='svg'] {
   margin-bottom: $spacing-06;
 }
 
+.gatsby-resp-image-wrapper {
+  margin-left: 0 !important;
+}
+
 .gatsby-resp-image-background-image {
   background: transparent !important; // Need important to override inline style added by gatsby-remark-images
 }
