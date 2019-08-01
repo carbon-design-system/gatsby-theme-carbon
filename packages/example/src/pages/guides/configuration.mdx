@@ -148,6 +148,7 @@ To add a link to the bottom of each page that points to the current page source 
 
 - `additionalFontWeights` – add support for additional Plex font weights. Don't forget to specify italics for the additional weights if needed.
 - `mdxExtensions` – change the file extensions processed by `gatsby-mdx` (default ['.mdx', '.md'])
+- `titleType` – the format of the title in your head. `site` for your site title, `page` for your individual page title, or `append` for "title – pageTitle" (default 'page')
 
 ```js
 plugins: [
@@ -155,7 +156,8 @@ plugins: [
       resolve: 'gatsby-theme-carbon',
       options: {
         additionalFontWeights: ['200', '200i'],
-        mdxExtensions: ['.mdx']
+        mdxExtensions: ['.mdx'],
+        titleType: 'append'
       },
     },
   ],

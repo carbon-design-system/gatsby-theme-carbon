@@ -2,11 +2,26 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useMetadata } from '../util/hooks';
 
-const Meta = ({ pageTitle, pageDescription, pageKeywords }) => {
+const Meta = ({ pageTitle, pageDescription, pageKeywords, titleType }) => {
   const { title, description, keywords } = useMetadata();
+
+  const getPageTitle = () => {
+    switch (titleType) {
+      case 'page':
+        // use site title for fallback
+        return pageTitle || title;
+      case 'site':
+        return title;
+      case 'append':
+        return `${title}${pageTitle ? ` – ${pageTitle}` : ''}`;
+      default:
+        return null;
+    }
+  };
+
   return (
     <Helmet
-      title={pageTitle ? `${title} - ${pageTitle}` : title}
+      title={getPageTitle()}
       meta={[
         {
           name: 'description',

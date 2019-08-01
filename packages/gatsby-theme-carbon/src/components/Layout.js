@@ -14,6 +14,7 @@ const Layout = ({
   children,
   homepage,
   shouldHideHeader,
+  titleType,
   pageTitle,
   pageDescription,
   pageKeywords,
@@ -36,6 +37,7 @@ const Layout = ({
   return (
     <>
       <Meta
+        titleType={titleType}
         pageTitle={pageTitle}
         pageDescription={pageDescription}
         pageKeywords={pageKeywords}

@@ -14,17 +14,26 @@ const Homepage = ({
   SecondCallout,
   location,
   pageContext,
-}) => (
-  <Layout homepage>
-    {Banner}
-    {FirstCallout}
-    <Main>{children}</Main>
-    {SecondCallout}
-    <NextPrevious location={location} pageContext={pageContext} />
-    <WebsiteBackToTopBtn />
-  </Layout>
-);
-
+}) => {
+  const { frontmatter = {}, titleType } = pageContext;
+  const { title, description, keywords } = frontmatter;
+  return (
+    <Layout
+      pageTitle={title}
+      pageDescription={description}
+      pageKeywords={keywords}
+      titleType={titleType}
+      homepage
+    >
+      {Banner}
+      {FirstCallout}
+      <Main>{children}</Main>
+      {SecondCallout}
+      <NextPrevious location={location} pageContext={pageContext} />
+      <WebsiteBackToTopBtn />
+    </Layout>
+  );
+};
 Homepage.defaultProps = {
   Banner: (
     <HomepageBanner
