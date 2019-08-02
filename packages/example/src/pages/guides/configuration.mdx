@@ -16,6 +16,7 @@ Gatsby themes allow you to override configuration from the theme by defining the
   <AnchorLink>Image Compression</AnchorLink>
   <AnchorLink>Global Search</AnchorLink>
   <AnchorLink>Edit on Github link</AnchorLink>
+  <AnchorLink>Other options</AnchorLink>
 </AnchorLinks>
 
 ## Site Title and Description
@@ -148,7 +149,11 @@ To add a link to the bottom of each page that points to the current page source 
 
 - `additionalFontWeights` – add support for additional Plex font weights. Don't forget to specify italics for the additional weights if needed.
 - `mdxExtensions` – change the file extensions processed by `gatsby-mdx` (default ['.mdx', '.md'])
-- `titleType` – the format of the title in your head. `site` for your site title, `page` for your individual page title, or `append` for "title – pageTitle" (default 'page')
+- `titleType` – pick between three formats for the `<title>` element for your site. Here are the three options using this page as an example:
+
+  - `page`: "Configuration" (default)
+  - `site`: "Gatsby Theme Carbon"
+  - `append`: "Gatsby Theme Carbon – Configuration"
 
 ```js
 plugins: [
