@@ -29,13 +29,18 @@ const useNavigationList = () => {
 
   return [
     edges.flatMap(({ node }) =>
-      node.pages.map(page => ({ ...page, category: node.title }))
+      node.pages.map(page => ({
+        ...page,
+        category: node.title,
+      }))
     ),
     pathPrefix,
   ];
 };
 
-const getTabItems = ({ currentTitle, tabs }) => {
+const getTabItems = ({ tabs, location }) => {
+  const { pathname } = location;
+  const currentPage = pathname.split('/');
   if (!tabs) {
     return {
       prevTabItem: null,
@@ -44,16 +49,19 @@ const getTabItems = ({ currentTitle, tabs }) => {
   }
 
   const tabItems = tabs.map(title => {
-    const slug = slugify(title, { lower: true });
+    const slug = slugify(title, {
+      lower: true,
+    });
+    const currentTab =
+      currentPage.filter(item => item === slug).toString() === slug;
     return {
       title,
       slug,
-      currentTab: slug === slugify(currentTitle, { lower: true }),
+      currentTab,
     };
   });
 
   const currentTabIndex = tabItems.findIndex(tab => tab.currentTab);
-
   return {
     prevTabItem: tabItems[currentTabIndex - 1],
     nextTabItem: tabItems[currentTabIndex + 1],
@@ -91,12 +99,23 @@ const getTitle = pageContext => {
 const getName = (category, title) => `${category}${title ? `: ${title}` : ''}`;
 
 const NextPreviousContainer = props => {
-  const { tabs, location, pageContext = { frontmatter: 'Home' } } = props;
+  const {
+    tabs,
+    location,
+    pageContext = {
+      frontmatter: 'Home',
+    },
+  } = props;
   const [navigationList, pathPrefix] = useNavigationList();
   const currentTitle = getTitle(pageContext);
+  const hrefSegments = location.pathname
+    .replace(pathPrefix, '')
+    .split('/')
+    .filter(Boolean);
 
   const { prevTabItem, nextTabItem } = getTabItems({
     currentTitle,
+    location,
     tabs,
   });
 
@@ -106,10 +125,11 @@ const NextPreviousContainer = props => {
   });
 
   const getPreviousItem = () => {
-    const href = location.pathname.replace(pathPrefix, '');
     if (prevTabItem) {
+      const previousSegments = [...hrefSegments.slice(0, -1), prevTabItem.slug];
       return {
-        to: `${href.replace(currentTitle, prevTabItem.slug)}`,
+        // Join the link back together
+        to: `/${previousSegments.join('/')}`,
         name: getName(
           navigationList[navIndex].title || navigationList[navIndex].category,
           prevTabItem.title
@@ -144,9 +164,9 @@ const NextPreviousContainer = props => {
     }
 
     if (nextTabItem && nextTabItem.slug) {
-      const href = location.pathname.replace(pathPrefix, '');
+      const nextSegments = [...hrefSegments.slice(0, -1), nextTabItem.slug];
       return {
-        to: `${href.replace(currentTitle, nextTabItem.slug)}`,
+        to: `/${nextSegments.join('/')}`,
         name: getName(
           navigationList[navIndex].title || navigationList[navIndex].category,
           nextTabItem.title

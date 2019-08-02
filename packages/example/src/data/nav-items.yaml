@@ -28,6 +28,8 @@
       path: /components/Grid
     - title: Accordion
       path: /components/Accordion
+    - title: ArtDirection
+      path: /components/ArtDirection
     - title: DoDontExample
       path: /components/DoDontExample
     - title: Caption

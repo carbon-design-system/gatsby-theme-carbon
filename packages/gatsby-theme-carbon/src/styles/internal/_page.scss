@@ -10,7 +10,6 @@
 
 .container .#{$prefix}--grid {
   margin: 0;
-  max-width: rem(1584px);
 
   @include carbon--breakpoint('lg') {
     padding-left: calc(
@@ -25,6 +24,11 @@
 
 .container .#{$prefix}--col-no-gutter {
   padding: 0;
+}
+
+// Grids on the homepage should be full width
+.container:not(.container--homepage) .#{$prefix}--grid {
+  max-width: rem(1584px);
 }
 
 //---------------------------------------
@@ -82,6 +86,10 @@ img {
 img[src*='gif'],
 img[src*='svg'] {
   margin-bottom: $spacing-06;
+}
+
+.gatsby-resp-image-wrapper {
+  margin-left: 0 !important;
 }
 
 .gatsby-resp-image-background-image {

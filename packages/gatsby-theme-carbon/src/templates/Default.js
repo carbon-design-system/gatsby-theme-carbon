@@ -13,8 +13,8 @@ import PageTabs from '../components/PageTabs';
 import Main from '../components/Main';
 
 const Default = ({ pageContext, children, location }) => {
-  const { frontmatter = {}, relativePagePath } = pageContext;
-  const { tabs, title } = frontmatter;
+  const { frontmatter = {}, relativePagePath, titleType } = pageContext;
+  const { tabs, title, description, keywords } = frontmatter;
   const scrollDirection = useScrollDirection();
   const shouldHideHeader = !!tabs && scrollDirection === 'down';
 
@@ -41,7 +41,14 @@ const Default = ({ pageContext, children, location }) => {
 
   const currentTab = getCurrentTab();
   return (
-    <Layout shouldHideHeader={shouldHideHeader} homepage={false}>
+    <Layout
+      shouldHideHeader={shouldHideHeader}
+      homepage={false}
+      pageTitle={title}
+      pageDescription={description}
+      pageKeywords={keywords}
+      titleType={titleType}
+    >
       <PageHeader
         shouldHideHeader={shouldHideHeader}
         title={title}
