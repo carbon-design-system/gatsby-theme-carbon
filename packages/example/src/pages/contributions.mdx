@@ -14,6 +14,7 @@ Use this guide to contribute to the theme. We'll show you how to get the develop
   <AnchorLink>Work in a branch</AnchorLink>
   <AnchorLink>Sass and CSS Modules</AnchorLink>
   <AnchorLink>VS Code</AnchorLink>
+  <AnchorLink>Test pages</AnchorLink>
 </AnchorLinks>
 
 ## Project setup
@@ -55,6 +56,7 @@ New theme development will happen in the theme package while documentation and t
 - `yarn dev:clean` – clear cache and restart dev
 - `yarn format` – format your code with prettier
 - `yarn lint` - check for errors in your javascript
+- `yarn test:prefix` – build and serve with a path prefix
 
 ## Work in a branch
 
@@ -173,3 +175,9 @@ To lint the entire project and get errors in your `Problems` tray, you can add t
   ]
 }
 ```
+
+## Test pages
+
+If you want to add examples of what you are working on or see changes you've made, you can add an MDX file to `packages/src/pages/test` that will be visible at `(your-server-name)/test/(added-file)` during development. If you do add a page to the `/test` directory, update the below list with the file you added and its purpose to be included with your pull request.
+
+- [`Spacing audit`](/test/spacing-audit): use this page to test spacing around components when combined in common patterns.
