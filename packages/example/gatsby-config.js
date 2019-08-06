@@ -20,7 +20,6 @@ module.exports = {
     {
       resolve: 'gatsby-theme-carbon',
       options: {
-        additionalFontWeights: ['200', '200i'],
         repository: {
           baseUrl:
             'https://github.com/carbon-design-system/gatsby-theme-carbon',
