@@ -1,42 +1,104 @@
+$interactive-01: 1;
+$interactive-02: 2;
+
+.add-no-scroll {
+  position: absolute;
+  overflow: hidden;
+}
+
 .gallery-container {
   position: fixed;
-  z-index: 10000000;
+  margin: 0;
+  z-index: 10000;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
+  background: rgba(0, 0, 0, 0.9);
   overflow: hidden;
 }
 
-.button-class {
-  height: 32px;
+.gallery-grid {
+  height: 100%;
+  width: 100%;
+}
+
+.gallery-row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.nav-buttons-container {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-buttons {
+  height: 100%;
+  width: 100%;
+  outline: none;
   background: none;
   border: none;
+  padding: 0;
+  z-index: $interactive-01;
+  cursor: pointer;
+}
+
+.left-nav svg {
+  position: absolute;
+  left: 2rem;
+}
+
+.right-nav svg {
+  position: absolute;
+  right: 2rem;
+}
+
+.first-right-nav {
+  height: 100%;
+  width: 100%;
+  right: 0;
+  outline: none;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: $interactive-01;
+  cursor: pointer;
+}
+
+.first-right-nav svg {
+  position: absolute;
+  right: 2rem;
 }
 
 .icon {
   fill: white;
 }
 
-.gallery-menu {
+.close-button {
   display: flex;
-}
-
-.image-container img {
-  width: 50%;
-  height: auto;
-  position: relative;
-}
-.image-container {
-  margin: 0;
+  position: absolute;
+  align-self: flex-end;
+  right: 0;
+  width: 14.5%;
+  height: 4rem;
+  background: none;
+  border: none;
   padding: 0;
-  width: 100%;
-  height: auto;
+  z-index: $interactive-02;
+  outline: none;
+  cursor: pointer;
 }
 
-// .child-container {
-//   width: auto;
-// }
+.close-button svg {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}

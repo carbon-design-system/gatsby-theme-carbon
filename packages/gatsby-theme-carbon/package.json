@@ -57,6 +57,7 @@
     "prism-react-renderer": "^0.1.7",
     "prop-types": "^15.7.2",
     "react-helmet": "^6.0.0-beta",
+    "remark": "^11.0.0",
     "remark-slug": "^5.1.2",
     "slugify": "^1.3.4",
     "smooth-scroll": "^16.0.3",

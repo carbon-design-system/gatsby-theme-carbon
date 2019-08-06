@@ -1,22 +1,48 @@
 import React, { useState, useEffect, Children } from 'react';
 import ReactDOM from 'react-dom';
+import { breakpoints } from '@carbon/elements';
 import { ChevronRight32, ChevronLeft32, Close32 } from '@carbon/icons-react';
+import cx from 'classnames';
 import FocusTrap from 'focus-trap-react';
+import useMedia from 'use-media';
+import PropTypes from 'prop-types';
+import { Grid, Row, Column } from '../Grid';
 import {
   galleryContainer,
-  // childContainer,
-  buttonClass,
+  galleryGrid,
+  galleryRow,
+  navButtons,
   closeButton,
   icon,
-  galleryMenu,
-  imageContainer,
+  navButtonsContainer,
+  firstRightNav,
+  rightNav,
+  leftNav,
+  addNoScroll,
 } from './ImageGallery.module.scss';
-// import { Column } from '../Grid';
 
 function ImageGallery({ children }) {
   const [portalsNode, updateNode] = useState(null);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [activeImageIndex, updateActiveImageIndex] = useState(null);
+  const childrenAsArray = Children.toArray(children);
+  const rightNavButton = cx({
+    [rightNav]: true,
+    [firstRightNav]: activeImageIndex === 0,
+    [navButtons]: activeImageIndex > 0,
+  });
+  const leftNavButton = cx([leftNav], [navButtons]);
+  const isMobile = useMedia({ maxWidth: breakpoints.md.width });
+
+  useEffect(() => {
+    if (isGalleryOpen) {
+      document.body.classList.add(addNoScroll);
+    }
+
+    return () => {
+      document.body.classList.remove(addNoScroll);
+    };
+  }, [isGalleryOpen]);
 
   useEffect(() => {
     const node = document.createElement('div');
@@ -27,10 +53,6 @@ function ImageGallery({ children }) {
       node.parentNode.removeChild(node);
     };
   }, []);
-
-  const childrenAsArray = Children.toArray(children);
-
-  // Todo: create styling
 
   function openGalleryForImage(index) {
     return () => {
@@ -61,12 +83,10 @@ function ImageGallery({ children }) {
       closeGallery();
       return;
     }
-
     if (event.key === 'ArrowLeft') {
       selectPrevImage();
       return;
     }
-
     if (event.key === 'ArrowRight') {
       selectNextImage();
     }
@@ -81,48 +101,57 @@ function ImageGallery({ children }) {
       )}
       {portalsNode &&
         isGalleryOpen &&
+        !isMobile &&
         ReactDOM.createPortal(
           <FocusTrap>
-            {/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */}
+            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
             <div
-              className={galleryContainer}
               role="group"
+              className={galleryContainer}
               onKeyDown={onKeyDown}
             >
-              <div className={closeButton}>
-                <button
-                  type="button"
-                  className={buttonClass}
-                  onClick={closeGallery}
-                >
-                  <Close32 className={icon} />
-                </button>
-              </div>
-              <div className={galleryMenu}>
-                {activeImageIndex - 1 >= 0 && (
+              <Row>
+                <Column colLg={2}>
                   <button
                     type="button"
-                    className={buttonClass}
-                    onClick={selectPrevImage}
+                    className={closeButton}
+                    onClick={closeGallery}
                   >
-                    <ChevronLeft32 className={icon} />
+                    <Close32 className={icon} />
                   </button>
-                )}
-                <div className={imageContainer}>
-                  {React.cloneElement(childrenAsArray[activeImageIndex], {
-                    isInDialog: true,
-                  })}
-                </div>
-                {activeImageIndex + 1 < childrenAsArray.length && (
-                  <button
-                    type="button"
-                    className={buttonClass}
-                    onClick={selectNextImage}
-                  >
-                    <ChevronRight32 className={icon} />
-                  </button>
-                )}
-              </div>
+                </Column>
+              </Row>
+              <Grid className={galleryGrid}>
+                <Row className={galleryRow}>
+                  <Column colLg={3} colMd={2} className={navButtonsContainer}>
+                    {activeImageIndex - 1 >= 0 && (
+                      <button
+                        type="button"
+                        className={leftNavButton}
+                        onClick={selectPrevImage}
+                      >
+                        <ChevronLeft32 className={icon} />
+                      </button>
+                    )}
+                  </Column>
+                  <Column colLg={6} colMd={4}>
+                    {React.cloneElement(childrenAsArray[activeImageIndex], {
+                      isInDialog: true,
+                    })}
+                  </Column>
+                  <Column colLg={3} colMd={2} className={navButtonsContainer}>
+                    {activeImageIndex + 1 < childrenAsArray.length && (
+                      <button
+                        type="button"
+                        className={rightNavButton}
+                        onClick={selectNextImage}
+                      >
+                        <ChevronRight32 className={icon} />
+                      </button>
+                    )}
+                  </Column>
+                </Row>
+              </Grid>
             </div>
           </FocusTrap>,
           portalsNode
@@ -130,5 +159,9 @@ function ImageGallery({ children }) {
     </>
   );
 }
+
+ImageGallery.propTypes = {
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
+};
 
 export default ImageGallery;

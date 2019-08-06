@@ -13,7 +13,7 @@ import Aside from '../Aside';
 import FeatureCard from '../FeatureCard';
 import ImageCard from '../ImageCard';
 import ImageGallery from '../ImageGallery';
-import ImageWrapper from '../ImageGallery/ImageWrapper';
+import ImageGalleryImage from '../ImageGallery/ImageGalleryImage';
 import { Row, Column, Grid } from '../Grid';
 import { AnchorLink, AnchorLinks } from '../AnchorLinks';
 import { Tab, Tabs } from '../Tabs';
@@ -54,7 +54,7 @@ const components = {
   FeatureCard,
   ImageCard,
   ImageGallery,
-  ImageWrapper,
+  ImageGalleryImage,
   AnchorLink,
   AnchorLinks,
   Tab,

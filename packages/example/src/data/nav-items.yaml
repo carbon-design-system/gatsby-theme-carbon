@@ -54,8 +54,6 @@
       path: /components/Tabs
     - title: Video
       path: /components/Video
-    - title: Image Gallery
-      path: /components/ImageGallery
 - title: Gallery
   pages:
     - path: /gallery
