@@ -104,6 +104,7 @@ function ImageGallery({ children }) {
         !isMobile &&
         ReactDOM.createPortal(
           <FocusTrap>
+            {/* Because of FocusTrap, the key down events will propagate up removing the accessibility problem that would be created by having a keydown event listener on a non-interactive element. */}
             {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
             <div
               role="group"
