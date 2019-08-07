@@ -2,8 +2,11 @@ $interactive-01: 1;
 $interactive-02: 2;
 
 .add-no-scroll {
+  width: 100%;
+  height: 100%;
   position: absolute;
   overflow: hidden;
+  margin: 2rem;
 }
 
 .gallery-container {
@@ -53,18 +56,18 @@ $interactive-02: 2;
 
 .left-nav svg {
   position: absolute;
-  left: 2rem;
+  left: 3rem;
 }
 
 .right-nav svg {
   position: absolute;
-  right: 2rem;
+  right: 1rem;
 }
 
 .first-right-nav {
   height: 100%;
   width: 100%;
-  right: 0;
+  right: 1rem;
   outline: none;
   background: none;
   border: none;
@@ -75,7 +78,7 @@ $interactive-02: 2;
 
 .first-right-nav svg {
   position: absolute;
-  right: 2rem;
+  right: 1rem;
 }
 
 .icon {
