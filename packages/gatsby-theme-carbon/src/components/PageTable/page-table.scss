@@ -81,3 +81,13 @@
 .page-table__container {
   overflow-x: auto;
 }
+
+// gray100 background
+.container--gray100 .page-table thead th {
+  background: $carbon--gray-90;
+  color: $inverse-01;
+}
+
+.container--gray100 .page-table td {
+  color: $inverse-01;
+}

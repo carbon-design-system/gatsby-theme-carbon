@@ -17,3 +17,8 @@
   font-size: 0.75em;
   line-height: 1.25;
 }
+
+// gray100 background
+:global(.container--gray100) .page-description {
+  color: $carbon--white-0;
+}

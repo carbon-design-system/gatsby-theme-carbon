@@ -23,6 +23,15 @@
   flex: 0;
 }
 
+// Style overrides waiting for UI Shell theming
+.link-text {
+  color: inherit;
+}
+
+.link-text__active {
+  color: #171717;
+}
+
 /* stylelint-disable */
 // Padding overrides for top level menu items
 :global {
@@ -41,7 +50,10 @@
   .bx--side-nav--website--dark
     .bx--side-nav__menu[role='menu']
     a.bx--side-nav__link[aria-current='page'],
-  .bx--side-nav--website--dark a.bx--side-nav__link--current {
+  .bx--side-nav--website--dark a.bx--side-nav__link--current,
+  .bx--side-nav--website--dark
+    .bx--side-nav__item--active
+    .bx--side-nav__submenu[aria-expanded='false'] {
     background-color: #282828 !important;
   }
 
@@ -57,14 +69,17 @@
     > span {
     color: $carbon--white-0;
   }
+
+  //active title
+  .bx--side-nav--website--dark
+    .bx--side-nav__item--active
+    .bx--side-nav__submenu-title {
+    color: $carbon--white-0;
+  }
 }
 /* stylelint-enable */
 
-// Style overrides waiting for UI Shell theming
-.link-text {
-  color: inherit;
-}
-
-.link-text__active {
-  color: #171717;
+//active sub-item
+:global(.bx--side-nav--website--dark) .link-text__active {
+  color: $carbon--white-0;
 }
