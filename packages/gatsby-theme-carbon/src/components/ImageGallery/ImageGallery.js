@@ -56,8 +56,10 @@ function ImageGallery({ children }) {
 
   function openGalleryForImage(index) {
     return () => {
-      setIsGalleryOpen(true);
-      updateActiveImageIndex(index);
+      if (!isMobile) {
+        setIsGalleryOpen(true);
+        updateActiveImageIndex(index);
+      }
     };
   }
 

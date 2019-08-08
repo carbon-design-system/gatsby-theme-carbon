@@ -6,7 +6,7 @@ $interactive-02: 2;
   height: 100%;
   position: absolute;
   overflow: hidden;
-  margin: 2rem;
+  margin: $spacing-07;
 }
 
 .gallery-container {
@@ -56,7 +56,7 @@ $interactive-02: 2;
 
 .left-nav svg {
   position: absolute;
-  left: 3rem;
+  left: $spacing-09;
 }
 
 .right-nav svg {
@@ -78,7 +78,7 @@ $interactive-02: 2;
 
 .first-right-nav svg {
   position: absolute;
-  right: 1rem;
+  right: $spacing-05;
 }
 
 .icon {
@@ -102,6 +102,6 @@ $interactive-02: 2;
 
 .close-button svg {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  top: $spacing-07;
+  right: $spacing-07;
 }

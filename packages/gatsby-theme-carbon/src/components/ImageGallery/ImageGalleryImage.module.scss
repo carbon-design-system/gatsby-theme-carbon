@@ -2,7 +2,7 @@
   border: 0;
   background: none;
   padding: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: $spacing-06;
 }
 
 .image-title {
@@ -10,10 +10,10 @@
   display: block;
   width: 100%;
   align-self: flex-start;
-  left: 2rem;
-  color: white;
+  left: $spacing-07;
+  color: $text-04;
   font-weight: bold;
-  margin: 3rem 2rem;
+  margin: $spacing-09 $spacing-07;
   user-select: none;
 }
 
@@ -22,4 +22,5 @@
   width: 100%;
   height: 100%;
   align-items: center;
+  user-select: none;
 }
