@@ -29,47 +29,6 @@
 }
 
 //---------------------------------------
-// Blockquote
-//---------------------------------------
-.blockquote {
-  margin: $spacing-08 0 $spacing-08 $spacing-08;
-  color: $carbon--blue-60;
-  font-style: italic;
-}
-
-:global(.container--gray100) .blockquote {
-  color: $carbon--blue-40;
-}
-
-.blockquote .paragraph {
-  @include carbon--type-style('expressive-heading-03', true);
-  margin-bottom: 0;
-}
-
-.blockquote .paragraph--responsive {
-  // 6 col
-  @include carbon--breakpoint('md') {
-    width: calc(75% - 3rem);
-  }
-
-  // 8 col
-  @include carbon--breakpoint('lg') {
-    width: calc(66.667% - 3rem);
-  }
-}
-
-// If quote is inside a user specified row then allow the grid code to set the width
-:global(.#{$prefix}--row) .blockquote .paragraph {
-  width: calc(100% - 3rem);
-}
-
-.blockquote cite {
-  @include carbon--type-style('body-long-01');
-  display: block;
-  margin-top: $spacing-02;
-}
-
-//---------------------------------------
 // Responsive widths
 //---------------------------------------
 
@@ -121,6 +80,47 @@
   @include carbon--breakpoint('md') {
     margin-right: 1.5rem;
   }
+}
+
+//---------------------------------------
+// Blockquote
+//---------------------------------------
+.blockquote {
+  margin: $spacing-08 0 $spacing-08 $spacing-08;
+  color: $carbon--blue-60;
+  font-style: italic;
+}
+
+.blockquote .paragraph {
+  @include carbon--type-style('expressive-heading-03', true);
+  margin-bottom: 0;
+}
+
+.blockquote .paragraph--responsive {
+  // 6 col
+  @include carbon--breakpoint('md') {
+    width: calc(75% - 3rem);
+  }
+
+  // 8 col
+  @include carbon--breakpoint('lg') {
+    width: calc(66.667% - 3rem);
+  }
+}
+
+// If quote is inside a user specified row then allow the grid code to set the width
+:global(.#{$prefix}--row) .blockquote .paragraph {
+  width: calc(100% - 3rem);
+}
+
+.blockquote cite {
+  @include carbon--type-style('body-long-01');
+  display: block;
+  margin-top: $spacing-02;
+}
+
+.blockquote .list-item {
+  color: $carbon--blue-60;
 }
 
 //---------------------------------------
