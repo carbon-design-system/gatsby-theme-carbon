@@ -13,6 +13,7 @@ import '../styles/index.scss';
 const Layout = ({
   children,
   homepage,
+  theme,
   shouldHideHeader,
   titleType,
   pageTitle,
@@ -48,8 +49,9 @@ const Layout = ({
         shouldHideHeader={shouldHideHeader}
         homepage={homepage}
         is404Page={is404}
+        theme={theme}
       />
-      <Container homepage={homepage}>
+      <Container homepage={homepage} theme={theme}>
         <MDXProvider>{children}</MDXProvider>
         <Footer />
       </Container>

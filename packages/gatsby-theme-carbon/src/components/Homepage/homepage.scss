@@ -1,8 +1,10 @@
+.container--dark,
 .container--homepage {
   background: $carbon--gray-100;
   color: $carbon--white-0;
 }
 
+.container--dark a,
 .container--homepage a {
   color: $carbon--blue-40;
 }

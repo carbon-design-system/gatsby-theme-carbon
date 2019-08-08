@@ -75,7 +75,6 @@ div.tab-container .tab a {
   border-bottom: none !important;
 }
 
-
 // Dropdown container
 div.tab-container div {
   background-color: $ui-background;
@@ -94,4 +93,9 @@ div.tab-container div {
   @include carbon--breakpoint('md') {
     width: 100%;
   }
+}
+
+// dark background
+:global(.container--dark) .tab-contents {
+  color: $text-01;
 }
