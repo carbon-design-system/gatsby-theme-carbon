@@ -123,6 +123,12 @@
   color: $carbon--blue-60;
 }
 
+//gray100
+:global(.container--gray100) .blockquote,
+:global(.container--gray100) .blockquote .list-item {
+  color: $carbon--blue-40;
+}
+
 //---------------------------------------
 // Headings
 //---------------------------------------
