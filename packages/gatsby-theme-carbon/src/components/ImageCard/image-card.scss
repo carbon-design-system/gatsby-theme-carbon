@@ -124,3 +124,8 @@
   svg {
   fill: $carbon--gray-70; //$disabled-02 for gray 90
 }
+
+// dark background
+.container--dark .#{$prefix}--image-card__img {
+  background: $carbon--gray-100;
+}

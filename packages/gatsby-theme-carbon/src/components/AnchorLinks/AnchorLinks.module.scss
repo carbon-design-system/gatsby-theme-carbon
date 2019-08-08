@@ -2,10 +2,12 @@
   margin-bottom: 0;
   margin-top: $spacing-05;
   width: 100%;
+
   @include carbon--breakpoint('md') {
     margin-bottom: $spacing-07;
     width: 75%;
   }
+
   @include carbon--breakpoint('lg') {
     width: 58.33%;
   }
@@ -74,5 +76,22 @@
 .multiple-columns {
   @include carbon--breakpoint('md') {
     column-count: 2;
+  }
+}
+
+// dark background
+:global(.container--dark) .link {
+  color: $carbon--white-0;
+
+  &:before {
+    color: $carbon--white-0;
+  }
+
+  &:hover {
+    color: $carbon--blue-40;
+
+    &::before {
+      color: $carbon--blue-40;
+    }
   }
 }

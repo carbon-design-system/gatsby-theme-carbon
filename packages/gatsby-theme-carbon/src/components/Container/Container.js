@@ -1,10 +1,12 @@
+/* eslint-disable import/no-duplicates */
 import React, { useContext, useEffect, useRef, useCallback } from 'react';
+import classnames from 'classnames';
 import cx from 'classnames';
 import NavContext from '../../util/context/NavContext';
 import useWindowSize from '../../util/hooks/useWindowSize';
 import { overlay, visible } from './Container.module.scss';
 
-const Container = ({ children, homepage }) => {
+const Container = ({ children, homepage, theme }) => {
   const { leftNavIsOpen, switcherIsOpen, toggleNavState } = useContext(
     NavContext
   );
@@ -31,6 +33,12 @@ const Container = ({ children, homepage }) => {
     return navOpen && windowSize.innerWidth && windowSize.innerWidth < 1056;
   })();
 
+  const containerClassNames = classnames({
+    container: theme !== 'dark' || !homepage,
+    'container--homepage': homepage,
+    'container--dark': theme === 'dark',
+  });
+
   return (
     <>
       <div
@@ -40,12 +48,7 @@ const Container = ({ children, homepage }) => {
         role="presentation"
         tabIndex="-1"
       />
-      <div
-        aria-hidden={overlayVisible}
-        className={`${
-          homepage ? 'container--homepage container' : 'container'
-        }`}
-      >
+      <div aria-hidden={overlayVisible} className={containerClassNames}>
         {children}
       </div>
     </>

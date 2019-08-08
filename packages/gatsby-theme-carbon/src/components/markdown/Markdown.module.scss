@@ -123,6 +123,12 @@
   color: $carbon--blue-60;
 }
 
+//dark
+:global(.container--dark) .blockquote,
+:global(.container--dark) .blockquote .list-item {
+  color: $carbon--blue-40;
+}
+
 //---------------------------------------
 // Headings
 //---------------------------------------
@@ -155,4 +161,11 @@
   // h5 and h6 intentionally mimic one another
   margin-top: $spacing-04;
   @include carbon--type-style('heading-01');
+}
+
+//---------------------------------------
+// Lists
+//---------------------------------------
+:global(.container--dark) :global(.bx--list__item) {
+  color: $carbon--white-0;
 }
