@@ -19,8 +19,8 @@
   }
 }
 
-.header:hover {
-  .anchor {
+@include carbon--breakpoint('md') {
+  .header:hover .anchor {
     opacity: 1;
   }
 }
