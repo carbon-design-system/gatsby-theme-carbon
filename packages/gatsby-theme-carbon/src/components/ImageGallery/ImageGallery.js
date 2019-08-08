@@ -96,11 +96,13 @@ function ImageGallery({ children }) {
 
   return (
     <>
-      {Children.map(children, (child, index) =>
-        React.cloneElement(child, {
-          onClick: openGalleryForImage(index),
-        })
-      )}
+      <Row>
+        {Children.map(children, (child, index) =>
+          React.cloneElement(child, {
+            onClick: openGalleryForImage(index),
+          })
+        )}
+      </Row>
       {portalsNode &&
         isGalleryOpen &&
         !isMobile &&
