@@ -95,7 +95,7 @@ div.tab-container div {
   }
 }
 
-// gray100 background
-:global(.container--gray100) .tab-contents {
+// dark background
+:global(.container--dark) .tab-contents {
   color: $text-01;
 }

@@ -123,9 +123,9 @@
   color: $carbon--blue-60;
 }
 
-//gray100
-:global(.container--gray100) .blockquote,
-:global(.container--gray100) .blockquote .list-item {
+//dark
+:global(.container--dark) .blockquote,
+:global(.container--dark) .blockquote .list-item {
   color: $carbon--blue-40;
 }
 
@@ -166,6 +166,6 @@
 //---------------------------------------
 // Lists
 //---------------------------------------
-:global(.container--gray100) :global(.bx--list__item) {
+:global(.container--dark) :global(.bx--list__item) {
   color: $carbon--white-0;
 }

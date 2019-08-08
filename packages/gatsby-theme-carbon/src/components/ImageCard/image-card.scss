@@ -125,7 +125,7 @@
   fill: $carbon--gray-70; //$disabled-02 for gray 90
 }
 
-// gray100 background
-.container--gray100 .#{$prefix}--image-card__img {
+// dark background
+.container--dark .#{$prefix}--image-card__img {
   background: $carbon--gray-100;
 }
