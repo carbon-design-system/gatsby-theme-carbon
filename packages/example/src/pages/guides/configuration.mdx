@@ -9,17 +9,17 @@ Gatsby themes allow you to override configuration from the theme by defining the
 </PageDescription>
 
 <AnchorLinks>
-  <AnchorLink>Site Title and Description</AnchorLink>
+  <AnchorLink>Site title and description</AnchorLink>
   <AnchorLink>Manifest</AnchorLink>
   <AnchorLink>Favicon</AnchorLink>
   <AnchorLink>Additional font weights</AnchorLink>
-  <AnchorLink>Image Compression</AnchorLink>
-  <AnchorLink>Global Search</AnchorLink>
+  <AnchorLink>Image compression</AnchorLink>
+  <AnchorLink>Global search</AnchorLink>
   <AnchorLink>Edit on Github link</AnchorLink>
   <AnchorLink>Other options</AnchorLink>
 </AnchorLinks>
 
-## Site Title and Description
+## Site title and description
 
 To add a title and description to each page, simply provide them to siteMetadata in your `gatsby-config.js` file.
 
@@ -79,7 +79,23 @@ plugins: [
   ],
 ```
 
-## Image Compression
+## Additional font weights
+
+If needed, you can add support for additional Plex font weights. Don't forget to specify italics for the additional weights if needed.
+
+```js
+plugins: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+		// will get added to default [300, 400, 600]
+        additionalFontWeights: ['200', '200i]
+      },
+    },
+  ],
+```
+
+## Image compression
 
 You can enable WebP by passing `withWebp: true` or providing your own optimization level. See the gatsby-remark-images [plugin options](https://www.gatsbyjs.org/packages/gatsby-remark-images/#options). You can also tweak the image quality based on design tolerance and performance thresholds.
 
@@ -97,7 +113,7 @@ module.exports = {
 };
 ```
 
-## Global Search
+## Global search
 
 The GlobalSearch component is disabled by default. If you'd like to implement search functionality, you'll need to follow these two steps:
 
