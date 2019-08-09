@@ -20,9 +20,9 @@ function ImageGalleryImage({
     return (
       <>
         <h3 className={imageTitle}>{title}</h3>
-        <div className={imageInDialog}>
+        <figure role="group" aria-labelledby={alt} className={imageInDialog}>
           <img src={src} title={title} alt={alt} {...rest} />
-        </div>
+        </figure>
       </>
     );
   }

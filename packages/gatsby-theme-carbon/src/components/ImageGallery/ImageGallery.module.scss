@@ -105,3 +105,13 @@ $interactive-02: 2;
   top: $spacing-07;
   right: $spacing-07;
 }
+
+.nav-buttons:focus svg {
+  outline: 2px solid $focus;
+  outline-offset: -2px;
+}
+
+.close-button:focus svg {
+  outline: 2px solid $focus;
+  outline-offset: -2px;
+}

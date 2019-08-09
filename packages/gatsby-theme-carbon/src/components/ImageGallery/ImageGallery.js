@@ -25,7 +25,9 @@ function ImageGallery({ children }) {
   const [portalsNode, updateNode] = useState(null);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [activeImageIndex, updateActiveImageIndex] = useState(null);
-  const childrenAsArray = Children.toArray(children);
+  const mediaChildren = Children.toArray(children).filter(
+    child => child.props.src
+  );
   const rightNavButton = cx({
     [rightNav]: true,
     [firstRightNav]: activeImageIndex === 0,
@@ -54,9 +56,9 @@ function ImageGallery({ children }) {
     };
   }, []);
 
-  function openGalleryForImage(index) {
+  function openGalleryForImage(child, index) {
     return () => {
-      if (!isMobile) {
+      if (!isMobile && child.props.src) {
         setIsGalleryOpen(true);
         updateActiveImageIndex(index);
       }
@@ -69,7 +71,7 @@ function ImageGallery({ children }) {
   }
 
   function selectNextImage() {
-    if (activeImageIndex + 1 < childrenAsArray.length) {
+    if (activeImageIndex + 1 < mediaChildren.length) {
       updateActiveImageIndex(activeImageIndex + 1);
     }
   }
@@ -99,7 +101,7 @@ function ImageGallery({ children }) {
       <Row>
         {Children.map(children, (child, index) =>
           React.cloneElement(child, {
-            onClick: openGalleryForImage(index),
+            onClick: openGalleryForImage(child, index),
           })
         )}
       </Row>
@@ -140,12 +142,12 @@ function ImageGallery({ children }) {
                     )}
                   </Column>
                   <Column colLg={6} colMd={4}>
-                    {React.cloneElement(childrenAsArray[activeImageIndex], {
+                    {React.cloneElement(mediaChildren[activeImageIndex], {
                       isInDialog: true,
                     })}
                   </Column>
                   <Column colLg={3} colMd={2} className={navButtonsContainer}>
-                    {activeImageIndex + 1 < childrenAsArray.length && (
+                    {activeImageIndex + 1 < mediaChildren.length && (
                       <button
                         type="button"
                         className={rightNavButton}
