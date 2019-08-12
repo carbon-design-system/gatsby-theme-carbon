@@ -4,7 +4,6 @@ const remarkSlug = require('remark-slug');
 
 module.exports = themeOptions => {
   const {
-    additionalFontWeights = [],
     isSearchEnabled = false,
     withWebp = false,
     iconPath,
@@ -30,13 +29,14 @@ module.exports = themeOptions => {
       `gatsby-transformer-yaml`,
       `gatsby-plugin-catch-links`,
       {
-        resolve: `gatsby-plugin-prefetch-google-fonts`,
+        resolve: 'gatsby-plugin-web-font-loader',
         options: {
-          fonts: [
-            {
-              family: `IBM Plex Mono`,
-            },
-          ],
+          google: {
+            families: ['IBM Plex Mono'],
+          },
+          custom: {
+            families: ['IBM Plex Sans VF', 'IBM Plex Sans'],
+          },
         },
       },
       {
