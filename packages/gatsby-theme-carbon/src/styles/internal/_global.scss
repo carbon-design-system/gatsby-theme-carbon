@@ -32,9 +32,6 @@ $feature-flags: (
 @import '~@carbon/elements/scss/type/classes';
 @import './plex';
 
-// special characters (arrows)
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&text=←→↑↓↔↕↖↗↘↙↚↛↮⟵⟶⟷↰↱↲↳⬐⬎⬑⬏↴↵');
-
 $font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
 $font-family-mono: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
   'Bitstream Vera Sans Mono', Courier, monospace;
