@@ -30,6 +30,7 @@ $feature-flags: (
 // Typography
 @include carbon--type-reset();
 @import '~@carbon/elements/scss/type/classes';
+@import './plex';
 
 // special characters (arrows)
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&text=←→↑↓↔↕↖↗↘↙↚↛↮⟵⟶⟷↰↱↲↳⬐⬎⬑⬏↴↵');
