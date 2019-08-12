@@ -11,8 +11,7 @@ function ImageGalleryImage({
   src,
   title,
   alt,
-  colMd,
-  colLg,
+  col,
   isInDialog = false,
   ...rest
 }) {
@@ -28,7 +27,7 @@ function ImageGalleryImage({
   }
 
   return (
-    <Column colMd={colMd} colLg={colLg}>
+    <Column colLg={col}>
       <button className={imageButtonWrapper} type="button" {...rest}>
         <img src={src} title={title} alt={alt} />
       </button>

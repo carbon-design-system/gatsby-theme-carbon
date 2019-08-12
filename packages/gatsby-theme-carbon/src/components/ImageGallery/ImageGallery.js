@@ -36,16 +36,7 @@ function ImageGallery({ children }) {
   const leftNavButton = cx([leftNav], [navButtons]);
   const isMobile = useMedia({ maxWidth: breakpoints.md.width });
 
-  useEffect(() => {
-    if (isGalleryOpen) {
-      document.body.classList.add(addNoScroll);
-    }
-
-    return () => {
-      document.body.classList.remove(addNoScroll);
-    };
-  }, [isGalleryOpen]);
-
+  // Creates the node to go into the portalsNode state.
   useEffect(() => {
     const node = document.createElement('div');
     document.body.appendChild(node);
@@ -56,6 +47,31 @@ function ImageGallery({ children }) {
     };
   }, []);
 
+  // Depending on if the gallery is open or not, this adds the addNoScroll class so the screen behind the modal doesn't scroll when opened.
+  useEffect(() => {
+    if (isGalleryOpen) {
+      document.body.classList.add(addNoScroll);
+    }
+
+    return () => {
+      document.body.classList.remove(addNoScroll);
+    };
+  }, [isGalleryOpen]);
+
+  // Removes addNoScroll if view is shrunk to mobile view when the gallery is open
+  useEffect(() => {
+    if (isMobile && document.body.classList.contains(addNoScroll)) {
+      document.body.classList.remove(addNoScroll);
+    }
+
+    return () => {
+      if (!isMobile && isGalleryOpen) {
+        document.body.classList.add(addNoScroll);
+      }
+    };
+  }, [isGalleryOpen, isMobile]);
+
+  // Opens gallery if the breakpoint isn't mobile and the child has a src prop
   function openGalleryForImage(child, index) {
     return () => {
       if (!isMobile && child.props.src) {
@@ -130,7 +146,7 @@ function ImageGallery({ children }) {
               </Row>
               <Grid className={galleryGrid}>
                 <Row className={galleryRow}>
-                  <Column colLg={3} colMd={2} className={navButtonsContainer}>
+                  <Column colLg={2} className={navButtonsContainer}>
                     {activeImageIndex - 1 >= 0 && (
                       <button
                         type="button"
@@ -141,12 +157,12 @@ function ImageGallery({ children }) {
                       </button>
                     )}
                   </Column>
-                  <Column colLg={6} colMd={4}>
+                  <Column colLg={8}>
                     {React.cloneElement(mediaChildren[activeImageIndex], {
                       isInDialog: true,
                     })}
                   </Column>
-                  <Column colLg={3} colMd={2} className={navButtonsContainer}>
+                  <Column colLg={2} className={navButtonsContainer}>
                     {activeImageIndex + 1 < mediaChildren.length && (
                       <button
                         type="button"
