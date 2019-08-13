@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 import { Grid, Row, Column } from '../Grid';
 import {
   galleryContainer,
+  inDialogGalleryContainer,
   galleryGrid,
   galleryRow,
   navButtons,
@@ -60,7 +61,10 @@ function ImageGallery({ children }) {
 
   // Removes addNoScroll if view is shrunk to mobile view when the gallery is open
   useEffect(() => {
-    if (isMobile && document.body.classList.contains(addNoScroll)) {
+    if (
+      (isMobile && document.body.classList.contains(addNoScroll)) ||
+      !isGalleryOpen
+    ) {
       document.body.classList.remove(addNoScroll);
     }
 
@@ -114,7 +118,7 @@ function ImageGallery({ children }) {
 
   return (
     <>
-      <Row>
+      <Row className={galleryContainer}>
         {Children.map(children, (child, index) =>
           React.cloneElement(child, {
             onClick: openGalleryForImage(child, index),
@@ -130,7 +134,7 @@ function ImageGallery({ children }) {
             {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
             <div
               role="group"
-              className={galleryContainer}
+              className={inDialogGalleryContainer}
               onKeyDown={onKeyDown}
             >
               <Row>
@@ -146,7 +150,7 @@ function ImageGallery({ children }) {
               </Row>
               <Grid className={galleryGrid}>
                 <Row className={galleryRow}>
-                  <Column colLg={2} className={navButtonsContainer}>
+                  <Column colLg={3} className={navButtonsContainer}>
                     {activeImageIndex - 1 >= 0 && (
                       <button
                         type="button"
@@ -157,12 +161,12 @@ function ImageGallery({ children }) {
                       </button>
                     )}
                   </Column>
-                  <Column colLg={8}>
+                  <Column colLg={6}>
                     {React.cloneElement(mediaChildren[activeImageIndex], {
                       isInDialog: true,
                     })}
                   </Column>
-                  <Column colLg={2} className={navButtonsContainer}>
+                  <Column colLg={3} className={navButtonsContainer}>
                     {activeImageIndex + 1 < mediaChildren.length && (
                       <button
                         type="button"
