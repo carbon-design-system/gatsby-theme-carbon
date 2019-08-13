@@ -6,11 +6,6 @@
   outline: none;
 }
 
-.image-button-wrapper:focus img {
-  outline: 2px solid $focus;
-  outline-offset: -2px;
-}
-
 .image-title {
   @include carbon--type-style('productive-heading-02');
   position: absolute;
@@ -30,4 +25,13 @@
   align-items: center;
   justify-content: center;
   user-select: none;
+}
+
+.image-in-dialog img {
+  margin: $spacing-05 0;
+}
+
+.image-button-wrapper:focus img {
+  outline: 2px solid $focus;
+  outline-offset: -2px;
 }
