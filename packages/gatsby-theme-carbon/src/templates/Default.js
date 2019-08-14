@@ -1,10 +1,10 @@
 import React from 'react';
-import { WebsiteBackToTopBtn } from '@carbon/addons-website';
 import slugify from 'slugify';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { useScrollDirection } from '../util/hooks';
 
+import BackToTopBtn from '../components/BackToTopBtn';
 import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
 import EditLink from '../components/EditLink';
@@ -69,7 +69,7 @@ const Default = ({ pageContext, children, location }) => {
         tabs={tabs}
         currentTab={currentTab}
       />
-      <WebsiteBackToTopBtn />
+      <BackToTopBtn />
     </Layout>
   );
 };
