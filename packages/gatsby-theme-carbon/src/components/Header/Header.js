@@ -17,7 +17,7 @@ import GlobalSearch from '../GlobalSearch';
 import NavContext from '../../util/context/NavContext';
 import useMetadata from '../../util/hooks/useMetadata';
 
-import { hidden, header, switcherButtonOpen } from './Header.module.scss';
+import { hidden, header, icon } from './Header.module.scss';
 
 const Header = ({ children, shouldHideHeader }) => {
   const { leftNavIsOpen, toggleNavState, switcherIsOpen } = useContext(
@@ -54,7 +54,7 @@ const Header = ({ children, shouldHideHeader }) => {
           {isSearchEnabled && <GlobalSearch />}
           <HeaderGlobalAction
             className={cx({
-              [switcherButtonOpen]: switcherIsOpen,
+              [icon]: true,
             })}
             aria-label="Switch"
             onClick={() => {
