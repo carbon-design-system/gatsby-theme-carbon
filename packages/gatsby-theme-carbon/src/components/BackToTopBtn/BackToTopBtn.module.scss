@@ -1,14 +1,14 @@
-@import '~carbon-components/scss/globals/scss/helper-mixins';
-
 .button {
-  width: rem(48px);
-  height: rem(48px);
-  border-radius: rem(24px);
+  width: $spacing-09;
+  height: $spacing-09;
+  border-radius: 50%;
   background: $carbon--gray-30;
   border-color: transparent;
   position: fixed;
-  bottom: rem(50px);
-  right: rem(30px);
+  bottom: $spacing-09;
+  right: $spacing-07;
+  transition: all $transition--base;
+
   cursor: pointer;
   z-index: 9999;
   padding-top: 0.325rem;

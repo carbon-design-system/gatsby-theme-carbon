@@ -35,7 +35,7 @@ module.exports = themeOptions => {
             families: ['IBM Plex Mono'],
           },
           custom: {
-            families: ['IBM Plex Sans VF', 'IBM Plex Sans'],
+            families: ['IBM Plex Sans VF'],
           },
         },
       },

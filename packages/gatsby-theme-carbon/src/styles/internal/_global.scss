@@ -20,6 +20,8 @@ $feature-flags: (
 @import '~carbon-components/scss/components/button/button';
 @import '~carbon-components/scss/components/tabs/tabs';
 @import '~carbon-components/scss/components/list/list';
+@import '~carbon-components/scss/components/link/link';
+@import '~carbon-components/scss/components/accordion/accordion';
 
 // Shell overrides until themeing is ready
 @import 'website-side-nav';
@@ -27,7 +29,7 @@ $feature-flags: (
 // Typography
 @include carbon--type-reset();
 @import '~@carbon/elements/scss/type/classes';
-@import './plex';
+@import 'plex';
 
 $font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
 $font-family-mono: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
