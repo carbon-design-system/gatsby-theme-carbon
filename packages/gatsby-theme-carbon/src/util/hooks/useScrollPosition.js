@@ -35,7 +35,7 @@ const useScrollPosition = () => {
   useEffect(() => {
     const handleScroll = _throttle(() => {
       setPosition(getPosition());
-    }, 100);
+    }, 200);
 
     window.addEventListener(
       'scroll',

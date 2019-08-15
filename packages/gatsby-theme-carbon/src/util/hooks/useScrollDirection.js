@@ -10,7 +10,6 @@ const useScrollDirection = () => {
 
   useEffect(() => {
     const pastPageHeader = y > 290;
-    // const isDesktop = windowSize.innerWidth > 1056;
     const scrollingDown = lastPosition.current && y >= lastPosition.current;
     if (pastPageHeader && scrollingDown) {
       setDirection('down');
