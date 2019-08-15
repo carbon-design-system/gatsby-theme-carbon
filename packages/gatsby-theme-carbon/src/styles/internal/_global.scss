@@ -21,11 +21,8 @@ $feature-flags: (
 @import '~carbon-components/scss/components/tabs/tabs';
 @import '~carbon-components/scss/components/list/list';
 
-@import '~@carbon/addons-website/scss/components/website-grid';
-@import '~@carbon/addons-website/scss/components/website-header';
-@import '~@carbon/addons-website/scss/components/website-header-nav';
-@import '~@carbon/addons-website/scss/components/website-side-nav';
-@import '~@carbon/addons-website/scss/components/website-back-to-top-btn';
+// Shell overrides until themeing is ready
+@import 'website-side-nav';
 
 // Typography
 @include carbon--type-reset();

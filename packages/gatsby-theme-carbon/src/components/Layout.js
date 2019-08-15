@@ -5,7 +5,6 @@ import Meta from './Meta';
 import Header from './Header';
 import Switcher from './Switcher';
 import Footer from './Footer';
-import MDXProvider from './MDXProvider';
 import Container from './Container';
 
 import '../styles/index.scss';
@@ -52,7 +51,7 @@ const Layout = ({
         theme={theme}
       />
       <Container homepage={homepage} theme={theme}>
-        <MDXProvider>{children}</MDXProvider>
+        {children}
         <Footer />
       </Container>
     </>

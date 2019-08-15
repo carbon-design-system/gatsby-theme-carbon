@@ -17,6 +17,28 @@ header.header {
   top: -48px;
 }
 
+.header :global(.bx--header__action--menu) {
+  border-width: 2px;
+  display: block;
+
+  @include carbon--breakpoint('lg') {
+    display: none;
+  }
+}
+
+.header :global(.bx--header__name) {
+  @include carbon--type-style('body-short-02');
+  padding-left: $spacing-03;
+
+  @include carbon--breakpoint('lg') {
+    padding-left: $spacing-05;
+  }
+}
+
 .header :global(.bx--header__name):focus {
   box-shadow: none;
+}
+
+.header :global(.bx--header__name) span {
+  font-weight: 600;
 }
