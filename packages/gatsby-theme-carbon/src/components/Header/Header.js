@@ -46,7 +46,7 @@ const Header = ({ children, shouldHideHeader }) => {
           {children}
         </HeaderName>
         <HeaderGlobalBar>
-          {isSearchEnabled && <GlobalSearch />}
+          {!isSearchEnabled && <GlobalSearch />}
           <HeaderGlobalAction
             className={cx({
               [icon]: true,

@@ -1,9 +1,9 @@
 @import '~carbon-components/scss/globals/scss/layout';
 
 .header button {
-  svg {
-    margin-top: $spacing-02;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header.header {
