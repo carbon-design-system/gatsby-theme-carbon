@@ -11,6 +11,11 @@
   border-left: 1px solid $carbon--gray-80;
   transform: translateX(16rem);
   transition: transform $duration--moderate-01 $carbon--standard-easing;
+  @include carbon--breakpoint('lg') {
+    height: auto;
+    border-bottom: 1px solid $carbon--gray-80;
+    transition: none;
+  }
 }
 
 .open {
