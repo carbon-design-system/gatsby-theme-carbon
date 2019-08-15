@@ -1,10 +1,10 @@
 import React from 'react';
-import { WebsiteBackToTopBtn } from '@carbon/addons-website';
 import Layout from '../components/Layout';
 import { HomepageBanner, HomepageCallout } from '../components/Homepage';
 import Carbon from '../images/carbon.jpg';
 import Main from '../components/Main';
 
+import BackToTopBtn from '../components/BackToTopBtn';
 import NextPrevious from '../components/NextPrevious';
 
 const Homepage = ({
@@ -30,7 +30,7 @@ const Homepage = ({
       <Main>{children}</Main>
       {SecondCallout}
       <NextPrevious location={location} pageContext={pageContext} />
-      <WebsiteBackToTopBtn />
+      <BackToTopBtn />
     </Layout>
   );
 };

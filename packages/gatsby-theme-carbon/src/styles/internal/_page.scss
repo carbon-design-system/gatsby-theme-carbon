@@ -119,3 +119,52 @@ img[src*='svg'] {
 [hidden] {
   display: none;
 }
+
+// Grid style updates/overrides, moved over from deprecated addons pacakge
+
+// No gutter class names
+.container .#{$prefix}--no-gutter-lg {
+  @include carbon--breakpoint('lg') {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.container .#{$prefix}--no-gutter-md {
+  @include carbon--breakpoint('md') {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.container .#{$prefix}--no-gutter-sm {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container .#{$prefix}--no-gutter-lg--left {
+  @include carbon--breakpoint('lg') {
+    padding-left: 0;
+  }
+}
+
+.container .#{$prefix}--no-gutter-md--left {
+  @include carbon--breakpoint('md') {
+    padding-left: 0;
+  }
+}
+
+.container .#{$prefix}--no-gutter-sm--left {
+  padding-left: 0;
+}
+
+// Clears styles for nested grid components
+.container .#{$prefix}--row .#{$prefix}--row {
+  margin: 0;
+}
+
+.container .#{$prefix}--row .#{$prefix}--row > div {
+  margin: 0;
+  max-width: 100%;
+  flex: auto;
+}

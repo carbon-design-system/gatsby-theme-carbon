@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-carbon",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "main": "index.js",
   "author": "vpicone <vp@vincepic.one> (@vpicone)",
   "repository": {
@@ -19,7 +19,6 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "@carbon/addons-website": "0.0.1-alpha.21",
     "@carbon/elements": "^10.4.0",
     "@carbon/icons-react": "^10.4.1",
     "@emotion/core": "^10.0.10",
@@ -56,6 +55,7 @@
     "prism-react-renderer": "^0.1.7",
     "prop-types": "^15.7.2",
     "react-helmet": "^6.0.0-beta",
+    "react-scroll-up": "^1.3.3",
     "remark-slug": "^5.1.2",
     "slugify": "^1.3.4",
     "smooth-scroll": "^16.0.3",
