@@ -1,6 +1,8 @@
 import React from 'react';
 import slugify from 'slugify';
 import { useStaticQuery, graphql } from 'gatsby';
+import { breakpoints } from '@carbon/elements';
+import useMedia from 'use-media';
 
 import { useScrollDirection } from '../util/hooks';
 
@@ -16,7 +18,8 @@ const Default = ({ pageContext, children, location }) => {
   const { frontmatter = {}, relativePagePath, titleType } = pageContext;
   const { tabs, title, theme, description, keywords } = frontmatter;
   const scrollDirection = useScrollDirection();
-  const shouldHideHeader = !!tabs && scrollDirection === 'down';
+  const isMobile = useMedia({ maxWidth: breakpoints.md.width });
+  const shouldHideHeader = isMobile && tabs && scrollDirection === 'down';
 
   // get the path prefix if it exists
   const {
