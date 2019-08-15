@@ -7,8 +7,12 @@ const links = [
     href: 'https://github.com/carbon-design-system/gatsby-theme-carbon',
   },
   {
-    title: 'Carbon Design System',
-    href: 'https://react.carbondesignsystem.com',
+    title: 'Carbon',
+    href: 'https://www.carbondesignsystem.com',
+  },
+  {
+    title: 'Configuration guide',
+    href: '/guides/configuration',
   },
 ];
 
