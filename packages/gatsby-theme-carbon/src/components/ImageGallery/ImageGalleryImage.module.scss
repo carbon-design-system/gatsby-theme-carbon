@@ -4,6 +4,7 @@
   padding: 0;
   margin-bottom: $spacing-06;
   outline: none;
+  width: 100%;
 }
 
 .image-title {
@@ -15,6 +16,7 @@
   left: $spacing-07;
   color: $text-04;
   margin-top: $spacing-04;
+  margin-left: -1rem;
   user-select: none;
 }
 
@@ -25,6 +27,10 @@
   align-items: center;
   justify-content: center;
   user-select: none;
+}
+
+.image-in-dialog :global(.gatsby-resp-image-wrapper) {
+  width: 100%;
 }
 
 .image-in-dialog img {

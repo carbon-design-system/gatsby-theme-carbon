@@ -26,9 +26,7 @@ function ImageGallery({ children }) {
   const [portalsNode, updateNode] = useState(null);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [activeImageIndex, updateActiveImageIndex] = useState(null);
-  const mediaChildren = Children.toArray(children).filter(
-    child => child.props.src
-  );
+  const childrenAsArray = Children.toArray(children);
   const rightNavButton = cx({
     [rightNav]: true,
     [firstRightNav]: activeImageIndex === 0,
@@ -75,10 +73,10 @@ function ImageGallery({ children }) {
     };
   }, [isGalleryOpen, isMobile]);
 
-  // Opens gallery if the breakpoint isn't mobile and the child has a src prop
-  function openGalleryForImage(child, index) {
+  // Opens gallery if the breakpoint isn't mobile
+  function openGalleryForImage(index) {
     return () => {
-      if (!isMobile && child.props.src) {
+      if (!isMobile) {
         setIsGalleryOpen(true);
         updateActiveImageIndex(index);
       }
@@ -91,7 +89,7 @@ function ImageGallery({ children }) {
   }
 
   function selectNextImage() {
-    if (activeImageIndex + 1 < mediaChildren.length) {
+    if (activeImageIndex + 1 < childrenAsArray.length) {
       updateActiveImageIndex(activeImageIndex + 1);
     }
   }
@@ -118,13 +116,15 @@ function ImageGallery({ children }) {
 
   return (
     <>
-      <Row className={galleryContainer}>
-        {Children.map(children, (child, index) =>
-          React.cloneElement(child, {
-            onClick: openGalleryForImage(child, index),
-          })
-        )}
-      </Row>
+      <figure role="group" aria-label="Gallery of Various Media">
+        <Row className={galleryContainer}>
+          {Children.map(children, (child, index) =>
+            React.cloneElement(child, {
+              onClick: openGalleryForImage(index),
+            })
+          )}
+        </Row>
+      </figure>
       {portalsNode &&
         isGalleryOpen &&
         !isMobile &&
@@ -162,12 +162,12 @@ function ImageGallery({ children }) {
                     )}
                   </Column>
                   <Column colLg={6}>
-                    {React.cloneElement(mediaChildren[activeImageIndex], {
+                    {React.cloneElement(childrenAsArray[activeImageIndex], {
                       isInDialog: true,
                     })}
                   </Column>
                   <Column colLg={3} className={navButtonsContainer}>
-                    {activeImageIndex + 1 < mediaChildren.length && (
+                    {activeImageIndex + 1 < childrenAsArray.length && (
                       <button
                         type="button"
                         className={rightNavButton}

@@ -8,40 +8,39 @@ import {
 } from './ImageGalleryImage.module.scss';
 
 function ImageGalleryImage({
-  src,
   title,
   alt,
   col,
   isInDialog = false,
+  children,
   ...rest
 }) {
   if (isInDialog) {
     return (
       <>
         <h3 className={imageTitle}>{title}</h3>
-        <figure role="group" aria-labelledby={alt} className={imageInDialog}>
-          <img src={src} title={title} alt={alt} {...rest} />
-        </figure>
+        <div className={imageInDialog}>{children}</div>
       </>
     );
   }
 
   return (
     <Column colLg={col}>
-      <button className={imageButtonWrapper} type="button" {...rest}>
-        <img src={src} title={title} alt={alt} />
-      </button>
+      <figure role="group" aria-label={alt}>
+        <button className={imageButtonWrapper} type="button" {...rest}>
+          {children}
+        </button>
+      </figure>
     </Column>
   );
 }
 
 ImageGalleryImage.propTypes = {
-  src: PropTypes.string.isRequired,
   title: PropTypes.string,
   alt: PropTypes.string.isRequired,
-  colMd: PropTypes.number,
-  colLg: PropTypes.number,
+  col: PropTypes.number,
   isInDialog: PropTypes.bool,
+  children: PropTypes.object,
 };
 
 export default ImageGalleryImage;
