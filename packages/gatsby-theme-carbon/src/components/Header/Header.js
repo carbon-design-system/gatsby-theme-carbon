@@ -11,8 +11,6 @@ import {
 import { AppSwitcher20, Close20 } from '@carbon/icons-react';
 import cx from 'classnames';
 
-import { useScrollDirection } from '../../util/hooks';
-
 import GlobalSearch from '../GlobalSearch';
 import NavContext from '../../util/context/NavContext';
 import useMetadata from '../../util/hooks/useMetadata';
@@ -23,10 +21,7 @@ const Header = ({ children, shouldHideHeader }) => {
   const { leftNavIsOpen, toggleNavState, switcherIsOpen } = useContext(
     NavContext
   );
-  const direction = useScrollDirection();
   const { isSearchEnabled } = useMetadata();
-
-  const isHidden = shouldHideHeader && direction === 'down';
 
   return (
     <>
@@ -34,7 +29,7 @@ const Header = ({ children, shouldHideHeader }) => {
         aria-label="Header"
         className={cx({
           [header]: true,
-          [hidden]: isHidden,
+          [hidden]: shouldHideHeader,
         })}
       >
         <SkipToContent />
