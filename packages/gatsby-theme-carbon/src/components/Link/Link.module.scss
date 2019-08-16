@@ -2,6 +2,7 @@
   @import '~carbon-components/scss/components/link/link';
 }
 
-.link {
+.link,
+:global(.bx--link).link {
   font-size: inherit;
 }
