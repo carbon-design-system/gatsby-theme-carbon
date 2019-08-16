@@ -5,6 +5,7 @@
   @include carbon--type-style('body-long-02');
   margin-bottom: $spacing-06;
   padding-right: $spacing-07;
+  outline: 1px dotted blue;
 }
 
 // Responsive by default
@@ -25,7 +26,9 @@
 
 // If paragraph is inside a user specified row then allow the grid code to set the width
 :global(.#{$prefix}--row) .paragraph {
-  width: calc(100% - 1rem);
+  width: 100%;
+  padding-right: 1.5rem;
+  outline: 1px dotted green;
 }
 
 //---------------------------------------

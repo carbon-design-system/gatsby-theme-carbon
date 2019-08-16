@@ -17,8 +17,9 @@
 
 :global(.#{$prefix}--row) .aside p {
   @include carbon--type-style('body-long-01');
-  width: 85%;
-  padding-right: $spacing-05;
+  width: 100%;
+  padding-right: 0;
+  outline: 1px dashed red;
 }
 
 // dark background
