@@ -56,10 +56,10 @@ header.header {
 
 .header .switcher-button--open:not(:focus) {
   border-left: 1px solid $inverse-02;
-  border-bottom: 1px solid #171717;
+  border-bottom: 1px solid $ui-05;
 }
 
 .header .skip-to-content:focus {
-  border: 2px solid white;
+  border: 2px solid $carbon--white-0;
   margin: 0;
 }
