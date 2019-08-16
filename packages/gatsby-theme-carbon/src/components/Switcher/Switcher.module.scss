@@ -10,16 +10,19 @@
   background-color: $carbon--gray-100;
   border-left: 1px solid $carbon--gray-80;
   transform: translateX(16rem);
-  transition: transform $duration--moderate-01 $carbon--standard-easing;
+  transition: transform $duration--fast-02 carbon--motion('exit');
   @include carbon--breakpoint('lg') {
+    transform: translateX(0) scaleY(0);
+    z-index: 9000;
+    transform-origin: 0 -48px;
     height: auto;
     border-bottom: 1px solid $carbon--gray-80;
-    transition: none;
   }
 }
 
 .open {
-  transform: translateX(0);
+  transform: translateX(0) scaleY(1);
+  transition: transform $duration--moderate-01 carbon--motion('entrance');
   box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
