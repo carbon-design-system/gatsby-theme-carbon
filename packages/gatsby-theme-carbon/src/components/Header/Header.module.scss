@@ -18,9 +18,9 @@ header.header {
 }
 
 .header :global(.bx--header__action--menu) {
-  border-width: 2px;
-  display: block;
-
+  border: none;
+  top: 0.5px;
+  position: relative;
   @include carbon--breakpoint('lg') {
     display: none;
   }
@@ -28,10 +28,16 @@ header.header {
 
 .header :global(.bx--header__name) {
   @include carbon--type-style('body-short-02');
-  padding-left: $spacing-03;
-
   @include carbon--breakpoint('lg') {
     padding-left: $spacing-05;
+  }
+}
+
+.header :global(.bx--header__action--menu.bx--header__action--active) {
+  background-color: #171717;
+  border-right: 1px solid $inverse-02;
+  @include carbon--breakpoint('lg') {
+    display: none;
   }
 }
 
