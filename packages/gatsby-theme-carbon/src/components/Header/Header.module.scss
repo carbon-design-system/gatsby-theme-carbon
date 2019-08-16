@@ -54,7 +54,12 @@ header.header {
   font-weight: 600;
 }
 
-.header .switcher-button--open {
+.header .switcher-button--open:not(:focus) {
   border-left: 1px solid $inverse-02;
   border-bottom: 1px solid #171717;
+}
+
+.header .skip-to-content:focus {
+  border: 2px solid white;
+  margin: 0;
 }

@@ -1,29 +1,44 @@
 .nav {
-  color: $carbon--white-0;
+  color: $inverse-01;
   z-index: 10000;
   position: fixed;
   right: 0;
   top: 48px;
   height: 100%;
-  padding: $spacing-05 0;
   width: 16rem;
-  background-color: $carbon--gray-100;
-  border-left: 1px solid $carbon--gray-80;
+  background-color: $ui-05;
+  border-left: 1px solid $inverse-02;
   transform: translateX(16rem);
-  transition: transform $duration--fast-02 carbon--motion('exit');
+  overflow-y: hidden;
+  border-bottom: 1px solid transparent;
+  transition: all $duration--fast-02 carbon--motion('exit');
   @include carbon--breakpoint('lg') {
-    transform: translateX(0) scaleY(0);
-    z-index: 9000;
-    transform-origin: 0 -48px;
+    transform: translateX(0);
+    max-height: 0;
     height: auto;
-    border-bottom: 1px solid $carbon--gray-80;
+  }
+}
+
+.nav li {
+  &:first-of-type {
+    margin-top: $spacing-05;
+  }
+  &:last-of-type {
+    margin-bottom: $spacing-05;
   }
 }
 
 .open {
-  transform: translateX(0) scaleY(1);
-  transition: transform $duration--moderate-01 carbon--motion('entrance');
+  transform: translateX(0);
+  transition: all $duration--moderate-01 carbon--motion('entrance');
+  border-bottom: 1px solid $inverse-02;
   box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
+  @include carbon--breakpoint('lg') {
+    // https://css-tricks.com/using-css-transitions-auto-dimensions/
+    // Tied to the height of the app switcher. Allows for animating up to auto.
+    // Matching the height exactly is imperitive to keep the correct animation timing.
+    max-height: 458px;
+  }
 }
 
 .divider {
