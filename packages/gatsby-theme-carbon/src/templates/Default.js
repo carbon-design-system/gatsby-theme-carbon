@@ -1,10 +1,12 @@
 import React from 'react';
-import { WebsiteBackToTopBtn } from '@carbon/addons-website';
 import slugify from 'slugify';
 import { useStaticQuery, graphql } from 'gatsby';
+import { breakpoints } from '@carbon/elements';
+import useMedia from 'use-media';
 
 import { useScrollDirection } from '../util/hooks';
 
+import BackToTopBtn from '../components/BackToTopBtn';
 import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
 import EditLink from '../components/EditLink';
@@ -16,7 +18,8 @@ const Default = ({ pageContext, children, location }) => {
   const { frontmatter = {}, relativePagePath, titleType } = pageContext;
   const { tabs, title, theme, description, keywords } = frontmatter;
   const scrollDirection = useScrollDirection();
-  const shouldHideHeader = !!tabs && scrollDirection === 'down';
+  const isMobile = useMedia({ maxWidth: breakpoints.md.width });
+  const shouldHideHeader = isMobile && tabs && scrollDirection === 'down';
 
   // get the path prefix if it exists
   const {
@@ -69,7 +72,7 @@ const Default = ({ pageContext, children, location }) => {
         tabs={tabs}
         currentTab={currentTab}
       />
-      <WebsiteBackToTopBtn />
+      <BackToTopBtn />
     </Layout>
   );
 };

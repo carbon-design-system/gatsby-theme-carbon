@@ -1,0 +1,33 @@
+@import '~carbon-components/scss/globals/scss/helper-mixins';
+
+.button {
+  width: rem(48px);
+  height: rem(48px);
+  border-radius: rem(24px);
+  background: $carbon--gray-30;
+  border-color: transparent;
+  position: fixed;
+  bottom: rem(50px);
+  right: rem(30px);
+  cursor: pointer;
+  z-index: 9999;
+  padding-top: 0.325rem;
+}
+
+.button:hover {
+  background: $carbon--gray-90;
+  border-color: transparent;
+}
+
+.button:focus {
+  outline: none;
+  border: 2px solid $focus;
+}
+
+.button svg {
+  fill: $carbon--black-100;
+}
+
+.button:hover svg {
+  fill: $carbon--white-0;
+}

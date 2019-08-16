@@ -1,12 +1,6 @@
-import React from 'react';
-import ThemeProvider from './src/components/ThemeProvider';
-import { NavContextProvider } from './src/util/context/NavContext';
+import wrapRoot from './src/util/wrap-root-element';
 
-export const wrapRootElement = ({ element }) => (
-  <NavContextProvider>
-    <ThemeProvider>{element}</ThemeProvider>
-  </NavContextProvider>
-);
+export const wrapRootElement = wrapRoot;
 
 const getTargetOffset = hash => {
   const id = window.decodeURI(hash.replace(`#`, ``));
