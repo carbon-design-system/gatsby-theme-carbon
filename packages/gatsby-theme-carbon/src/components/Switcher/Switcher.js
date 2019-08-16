@@ -11,11 +11,9 @@ const Switcher = ({ children }) => {
       className={cx(nav, { [open]: switcherIsOpen })}
       aria-label="IBM Design ecosystem navigation"
       aria-expanded={switcherIsOpen}
-      id="switcher-navigation"
+      tabIndex="-1"
     >
-      <ul hidden={!switcherIsOpen} aria-labelledby="switcher-navigation">
-        {children}
-      </ul>
+      <ul>{children}</ul>
     </nav>
   );
 };
@@ -34,12 +32,14 @@ export const SwitcherLink = ({
 }) => {
   const href = disabled || !hrefProp ? undefined : hrefProp;
   const className = disabled ? linkDisabled : link;
+  const { switcherIsOpen } = useContext(NavContext);
 
   return (
     <li>
       <a
         aria-disabled={disabled}
         role="button"
+        tabIndex={switcherIsOpen ? 0 : '-1'}
         className={className}
         href={href}
         {...rest}
@@ -50,6 +50,8 @@ export const SwitcherLink = ({
   );
 };
 
+// https://css-tricks.com/using-css-transitions-auto-dimensions/
+// Note: if you change this, update the max-height in the switcher stylesheet
 const DefaultChildren = () => (
   <>
     <SwitcherLink href="https://ibm.com/design">IBM Design</SwitcherLink>
