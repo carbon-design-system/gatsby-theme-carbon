@@ -11,22 +11,22 @@ import {
 import { AppSwitcher20, Close20 } from '@carbon/icons-react';
 import cx from 'classnames';
 
-import { useScrollDirection } from '../../util/hooks';
-
 import GlobalSearch from '../GlobalSearch';
 import NavContext from '../../util/context/NavContext';
 import useMetadata from '../../util/hooks/useMetadata';
 
-import { hidden, header, icon } from './Header.module.scss';
+import {
+  hidden,
+  header,
+  switcherButtonOpen,
+  skipToContent,
+} from './Header.module.scss';
 
 const Header = ({ children, shouldHideHeader }) => {
   const { leftNavIsOpen, toggleNavState, switcherIsOpen } = useContext(
     NavContext
   );
-  const direction = useScrollDirection();
   const { isSearchEnabled } = useMetadata();
-
-  const isHidden = shouldHideHeader && direction === 'down';
 
   return (
     <>
@@ -34,10 +34,10 @@ const Header = ({ children, shouldHideHeader }) => {
         aria-label="Header"
         className={cx({
           [header]: true,
-          [hidden]: isHidden,
+          [hidden]: shouldHideHeader,
         })}
       >
-        <SkipToContent />
+        <SkipToContent className={skipToContent} />
         <HeaderMenuButton
           className="bx--header__action--menu"
           aria-label="Open menu"
@@ -54,7 +54,7 @@ const Header = ({ children, shouldHideHeader }) => {
           {isSearchEnabled && <GlobalSearch />}
           <HeaderGlobalAction
             className={cx({
-              [icon]: true,
+              [switcherButtonOpen]: switcherIsOpen,
             })}
             aria-label="Switch"
             onClick={() => {

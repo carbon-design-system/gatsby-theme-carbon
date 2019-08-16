@@ -23,7 +23,7 @@ const LeftNavResourceLinks = ({ links, shouldOpenNewTabs }) => {
           <SideNavLink
             key={i}
             style={{ marginTop: i === 0 ? '1rem' : 0 }}
-            renderIcon={LaunchIcon}
+            renderIcon={outbound ? LaunchIcon : undefined}
             // eslint-disable-next-line jsx-a11y/aria-proptypes
             aria-current=""
             to={href}
