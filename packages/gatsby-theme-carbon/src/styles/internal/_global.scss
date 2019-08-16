@@ -11,15 +11,7 @@ $feature-flags: (
 // Carbon globals/helpers
 @import '~carbon-components/scss/globals/grid/grid';
 @import '~carbon-components/scss/globals/scss/layout';
-
-// Carbon components
-@import '~carbon-components/scss/components/ui-shell/ui-shell';
-@import '~carbon-components/scss/components/tile/tile';
-@import '~carbon-components/scss/components/code-snippet/code-snippet';
-@import '~carbon-components/scss/components/copy-button/copy-button';
-@import '~carbon-components/scss/components/button/button';
-@import '~carbon-components/scss/components/tabs/tabs';
-@import '~carbon-components/scss/components/list/list';
+@import 'carbon-components';
 
 // Shell overrides until themeing is ready
 @import 'website-side-nav';
