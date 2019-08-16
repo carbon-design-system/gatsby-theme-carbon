@@ -148,7 +148,7 @@ function ImageGallery({ children }) {
                   </button>
                 </Column>
               </Row>
-              <Grid className={galleryGrid}>
+              <Grid className={cx('bx--grid--full-width', galleryGrid)}>
                 <Row className={galleryRow}>
                   <Column colLg={3} className={navButtonsContainer}>
                     {activeImageIndex - 1 >= 0 && (

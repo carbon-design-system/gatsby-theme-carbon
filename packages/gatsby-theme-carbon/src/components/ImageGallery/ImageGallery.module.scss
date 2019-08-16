@@ -28,13 +28,13 @@ $z-02: 2;
 }
 
 .gallery-row {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
   height: 100%;
-  width: 100%;
+  // width: 100%;
 }
 
 .nav-buttons-container {
@@ -53,20 +53,21 @@ $z-02: 2;
   cursor: pointer;
 }
 
-.left-nav svg {
-  position: absolute;
-  left: $spacing-09;
+.left-nav {
+  display: flex;
+  justify-content: flex-start;
 }
 
-.right-nav svg {
-  position: absolute;
-  right: 1rem;
+.right-nav {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .first-right-nav {
+  display: flex;
+  justify-content: flex-end;
   height: 100%;
   width: 100%;
-  right: 1rem;
   outline: none;
   background: none;
   border: none;
@@ -75,19 +76,12 @@ $z-02: 2;
   cursor: pointer;
 }
 
-.first-right-nav svg {
-  position: absolute;
-  right: $spacing-05;
-}
-
 .icon {
   fill: $text-04;
 }
 
 .close-button {
-  display: flex;
   position: absolute;
-  align-self: flex-end;
   right: 0;
   width: 14.5%;
   height: 4rem;
