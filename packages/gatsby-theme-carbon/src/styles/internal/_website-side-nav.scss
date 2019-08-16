@@ -1,3 +1,7 @@
+.#{$prefix}--side-nav {
+  border-right: 1px solid $carbon--gray-80;
+}
+
 // Bottom links
 .#{$prefix}--side-nav__divider {
   display: block;
