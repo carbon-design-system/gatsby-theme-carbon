@@ -1,9 +1,9 @@
 @import '~carbon-components/scss/globals/scss/layout';
 
 .header button {
-  svg {
-    margin-top: $spacing-02;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header.header {
@@ -17,21 +17,32 @@ header.header {
   top: -48px;
 }
 
-.header :global(.bx--header__action--menu) {
-  border-width: 2px;
-  display: block;
+.header :global(.bx--header__name) {
+  @include carbon--type-style('body-short-02');
+  @include carbon--breakpoint('lg') {
+    padding-left: $spacing-05;
+  }
+}
 
+.header :global(.bx--header__action--menu) {
+  border: none;
+  border-right: 3px solid transparent !important;
+  top: 0.5px;
+  position: relative;
+  &:focus {
+    border: 3px solid $inverse-01;
+    border-right: 3px solid $inverse-01 !important;
+  }
   @include carbon--breakpoint('lg') {
     display: none;
   }
 }
 
-.header :global(.bx--header__name) {
-  @include carbon--type-style('body-short-02');
-  padding-left: $spacing-03;
-
+.header :global(.bx--header__action--menu.bx--header__action--active) {
+  background-color: $ui-05;
+  border-right: 1px solid $inverse-02 !important;
   @include carbon--breakpoint('lg') {
-    padding-left: $spacing-05;
+    display: none;
   }
 }
 

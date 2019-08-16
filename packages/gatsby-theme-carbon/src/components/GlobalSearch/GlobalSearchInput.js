@@ -4,6 +4,7 @@ import React, { useState, useEffect, useContext, useRef } from 'react';
 import { Close20, Search20 } from '@carbon/icons-react';
 import NavContext from '../../util/context/NavContext';
 import { useOnClickOutside } from '../../util/hooks';
+import useSearch from '../../util/hooks/useSearch';
 
 const GlobalSearchInput = () => {
   const inputRef = useRef(null);
@@ -14,6 +15,8 @@ const GlobalSearchInput = () => {
   useEffect(() => {
     if (inputRef.current) inputRef.current.focus();
   });
+
+  useSearch();
 
   useOnClickOutside(searchRef, () => toggleNavState('searchIsOpen', 'close'));
 
