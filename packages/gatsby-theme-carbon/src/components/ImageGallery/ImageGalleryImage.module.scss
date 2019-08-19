@@ -2,9 +2,16 @@
   border: 0;
   background: none;
   padding: 0;
-  margin-bottom: $spacing-06;
   outline: none;
   width: 100%;
+}
+
+.image-button-wrapper::-moz-focus-inner {
+  border: 0;
+}
+
+.image-button-wrapper:focus {
+  outline: none;
 }
 
 .image-title {
