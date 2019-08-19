@@ -3,6 +3,7 @@
   position: relative;
   padding-top: $spacing-04;
   top: -$spacing-04;
+  width: 84%;
 }
 
 .aside:before {
@@ -19,7 +20,6 @@
   @include carbon--type-style('body-long-01');
   width: 100%;
   padding-right: 0;
-  outline: 1px dashed red;
 }
 
 // dark background

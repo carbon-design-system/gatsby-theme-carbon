@@ -4,8 +4,10 @@
 .paragraph {
   @include carbon--type-style('body-long-02');
   margin-bottom: $spacing-06;
-  padding-right: $spacing-07;
-  outline: 1px dotted blue;
+
+  @include carbon--breakpoint('md') {
+    padding-right: $spacing-07;
+  }
 }
 
 // Responsive by default
@@ -27,8 +29,10 @@
 // If paragraph is inside a user specified row then allow the grid code to set the width
 :global(.#{$prefix}--row) .paragraph {
   width: 100%;
-  padding-right: 1.5rem;
-  outline: 1px dotted green;
+
+  @include carbon--breakpoint('md') {
+    padding-right: $spacing-07;
+  }
 }
 
 //---------------------------------------
@@ -89,14 +93,19 @@
 // Blockquote
 //---------------------------------------
 .blockquote {
-  margin: $spacing-08 0 $spacing-08 $spacing-08;
+  margin: $spacing-08 0;
   color: $carbon--blue-60;
   font-style: italic;
+
+  @include carbon--breakpoint('md') {
+    margin-left: $spacing-08;
+  }
 }
 
 .blockquote .paragraph {
   @include carbon--type-style('expressive-heading-03', true);
   margin-bottom: 0;
+  width: 100%;
 }
 
 .blockquote .paragraph--responsive {
@@ -113,7 +122,11 @@
 
 // If quote is inside a user specified row then allow the grid code to set the width
 :global(.#{$prefix}--row) .blockquote .paragraph {
-  width: calc(100% - 3rem);
+  padding-right: 0;
+
+  @include carbon--breakpoint('md') {
+    width: 100%;
+  }
 }
 
 .blockquote cite {
