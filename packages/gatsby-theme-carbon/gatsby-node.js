@@ -25,6 +25,7 @@ exports.onCreatePage = ({ page, actions }, pluginOptions) => {
   const { titleType = 'page' } = pluginOptions;
   const { createPage, deletePage } = actions;
   const [relativePagePath] = page.componentPath.split('src/pages').splice('-1');
+  console.log(page);
   deletePage(page);
   createPage({
     ...page,
@@ -35,3 +36,11 @@ exports.onCreatePage = ({ page, actions }, pluginOptions) => {
     },
   });
 };
+
+// exports.sourceNodes = ({ getNodesByType, actions, getNode }) => {
+//   const mdxNodes = getNodesByType(`Mdx`);
+//   const siteNodes = getNodesByType(`SitePage`);
+//   const parents = mdxNodes.map(node => getNode(node.parent));
+//   console.log(parents[0]);
+//   console.log(mdxNodes[0]);
+// };

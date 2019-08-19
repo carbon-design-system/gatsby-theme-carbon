@@ -6,6 +6,7 @@ import Header from './Header';
 import Switcher from './Switcher';
 import Footer from './Footer';
 import Container from './Container';
+import Search from './Search';
 
 import '../styles/index.scss';
 
@@ -50,7 +51,9 @@ const Layout = ({
         is404Page={is404}
         theme={theme}
       />
+      <Search />
       <Container homepage={homepage} theme={theme}>
+        <Search />
         {children}
         <Footer />
       </Container>

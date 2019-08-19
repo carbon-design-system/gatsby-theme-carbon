@@ -7140,6 +7140,15 @@ gatsby-plugin-emotion@^4.0.7, gatsby-plugin-emotion@^4.1.0:
     "@babel/runtime" "^7.0.0"
     "@emotion/babel-preset-css-prop" "^10.0.5"
 
+gatsby-plugin-lunr@^1.5.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-lunr/-/gatsby-plugin-lunr-1.5.2.tgz#eaeba70b85294827e031070c9bad70a93226e509"
+  integrity sha512-L+W8Jb7io824oxBGP973/7N9uv5YUhWpjRdteWDfWzku2S3vzlunoKVz5h4kMXezWDZDV2g8YsfWFNor7Gg5QQ==
+  dependencies:
+    "@babel/runtime" "^7.4.3"
+    lunr "^2.3.6"
+    lunr-languages "^1.1.0"
+
 gatsby-plugin-manifest@^2.1.1:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.5.tgz#cfa3f5a5f02989e9a15a3b08b11548be45af11e8"
@@ -10235,6 +10244,16 @@ ltcdr@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/ltcdr/-/ltcdr-2.2.1.tgz#5ab87ad1d4c1dab8e8c08bbf037ee0c1902287cf"
   integrity sha1-Wrh60dTB2rjowIu/A37gwZAih88=
+
+lunr-languages@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/lunr-languages/-/lunr-languages-1.1.0.tgz#d4debe5cccc00aa373fac4051127a2a5ea0ce0ca"
+  integrity sha512-53pTQX8jkjZBWSPJa/+3UJyIPcGmeWWwqS4RRr5GxhRilqL9tv/Vuj7Vb1Nz3Dtz2HTK2Pdmrf3zevHS/ZycjQ==
+
+lunr@^2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/lunr/-/lunr-2.3.6.tgz#f278beee7ffd56ad86e6e478ce02ab2b98c78dd5"
+  integrity sha512-swStvEyDqQ85MGpABCMBclZcLI/pBIlu8FFDtmX197+oEgKloJ67QnB+Tidh0340HmLMs39c4GrkPY3cmkXp6Q==
 
 macos-release@^2.2.0:
   version "2.3.0"

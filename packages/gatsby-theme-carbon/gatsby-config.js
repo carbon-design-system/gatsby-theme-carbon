@@ -30,6 +30,38 @@ module.exports = themeOptions => {
       `gatsby-transformer-yaml`,
       `gatsby-plugin-catch-links`,
       {
+        resolve: 'gatsby-plugin-lunr',
+        options: {
+          languages: [{ name: 'en' }],
+          fields: [
+            { name: 'title', store: true, attributes: { boost: 20 } },
+            { name: 'path', store: true },
+            { name: 'description', store: true },
+            { name: 'content' },
+            { name: 'keywords', store: true },
+          ],
+          resolvers: {
+            SitePage: {
+              title: node =>
+                node.context.frontmatter ? node.context.frontmatter.title : '',
+              path: node => node.path,
+              description: node =>
+                node.context.frontmatter
+                  ? node.context.frontmatter.description
+                  : '',
+              keywords: node =>
+                node.context.frontmatter && node.context.frontmatter.keywords
+                  ? node.context.frontmatter.keywords.split(',')
+                  : '',
+            },
+            Mdx: {
+              content: node => node.rawBody,
+              title: node => (node.frontmatter ? node.frontmatter.title : ''),
+            },
+          },
+        },
+      },
+      {
         resolve: `gatsby-plugin-prefetch-google-fonts`,
         options: {
           fonts: [
