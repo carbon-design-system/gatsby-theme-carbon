@@ -47,25 +47,14 @@
 .h6,
 .list {
   width: 100%;
+
   @include carbon--breakpoint('md') {
     width: 75%;
   }
+
   @include carbon--breakpoint('lg') {
     width: 66.667%;
   }
-}
-
-:global(.bx--list--ordered).list,
-:global(.bx--list--unordered).list {
-  margin-bottom: $spacing-06;
-}
-
-.list-item {
-  @include carbon--type-style('body-long-02');
-  padding-right: 0;
-  margin: 0;
-  margin-bottom: $spacing-05;
-  width: 100%;
 }
 
 // responsive items in a list need to be full width
@@ -87,6 +76,22 @@
   @include carbon--breakpoint('md') {
     margin-right: 1.5rem;
   }
+}
+
+//---------------------------------------
+// List items / ol / ul / li
+//---------------------------------------
+
+:global(.bx--list--ordered).list,
+:global(.bx--list--unordered).list {
+  margin-bottom: $spacing-06;
+}
+
+.list-item {
+  @include carbon--type-style('body-long-02');
+  padding-right: 0;
+  margin: 0;
+  width: 100%;
 }
 
 //---------------------------------------

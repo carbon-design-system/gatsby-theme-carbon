@@ -6,13 +6,13 @@
     "now-build": "mdx-deck build deck.mdx"
   },
   "private": true,
-  "version": "1.8.2",
+  "version": "1.9.0",
   "description": "gatsby webinar presentation",
   "main": "deck.mdx",
   "license": "MIT",
   "dependencies": {
     "@mdx-deck/themes": "^3.0.6",
-    "gatsby-theme-carbon": "^1.8.2",
+    "gatsby-theme-carbon": "^1.9.0",
     "mdx-deck": "^3.0.7",
     "prism-react-renderer": "^0.1.7",
     "react": "^16.8.6"
