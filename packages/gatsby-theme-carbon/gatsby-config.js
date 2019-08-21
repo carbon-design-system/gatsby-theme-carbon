@@ -31,9 +31,6 @@ module.exports = themeOptions => {
       {
         resolve: 'gatsby-plugin-web-font-loader',
         options: {
-          google: {
-            families: ['IBM Plex Mono'],
-          },
           custom: {
             families: ['IBM Plex Sans VF'],
           },
