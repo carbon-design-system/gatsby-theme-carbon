@@ -13,10 +13,6 @@ header.header {
   z-index: z('floating');
 }
 
-.header.hidden {
-  top: -48px;
-}
-
 .header :global(.bx--header__name) {
   @include carbon--type-style('body-short-02');
   @include carbon--breakpoint('lg') {

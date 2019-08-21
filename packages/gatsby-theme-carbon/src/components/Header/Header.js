@@ -30,13 +30,7 @@ const Header = ({ children }) => {
 
   return (
     <>
-      <ShellHeader
-        aria-label="Header"
-        className={cx({
-          [header]: true,
-          [hidden]: false,
-        })}
-      >
+      <ShellHeader aria-label="Header" className={header}>
         <SkipToContent className={skipToContent} />
         <HeaderMenuButton
           className="bx--header__action--menu"
