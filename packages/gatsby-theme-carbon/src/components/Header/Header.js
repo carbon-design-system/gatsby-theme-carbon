@@ -22,7 +22,7 @@ import {
   skipToContent,
 } from './Header.module.scss';
 
-const Header = ({ children, shouldHideHeader }) => {
+const Header = ({ children }) => {
   const { leftNavIsOpen, toggleNavState, switcherIsOpen } = useContext(
     NavContext
   );
@@ -34,7 +34,7 @@ const Header = ({ children, shouldHideHeader }) => {
         aria-label="Header"
         className={cx({
           [header]: true,
-          [hidden]: shouldHideHeader,
+          [hidden]: false,
         })}
       >
         <SkipToContent className={skipToContent} />

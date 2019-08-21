@@ -50,10 +50,7 @@ const LeftNav = props => {
 
   // TODO: replace old addon website styles with sass modules, move to wrapper
   return (
-    <LeftNavWrapper
-      expanded={leftNavIsOpen}
-      shouldHideHeader={props.shouldHideHeader}
-    >
+    <LeftNavWrapper expanded={leftNavIsOpen}>
       <SideNav
         expanded
         defaultExpanded
