@@ -1,3 +1,8 @@
+.side-nav--dark :global(.bx--side-nav__link):focus,
+.side-nav--dark :global(.bx--side-nav__submenu):focus {
+  outline: 2px solid $carbon--white-0;
+}
+
 .current-item {
   background-color: #dcdcdc !important;
 }
