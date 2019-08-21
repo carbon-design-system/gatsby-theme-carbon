@@ -13,7 +13,6 @@ const Layout = ({
   children,
   homepage,
   theme,
-  shouldHideHeader,
   titleType,
   pageTitle,
   pageDescription,
@@ -42,14 +41,9 @@ const Layout = ({
         pageDescription={pageDescription}
         pageKeywords={pageKeywords}
       />
-      <Header shouldHideHeader={shouldHideHeader} />
+      <Header />
       <Switcher />
-      <LeftNav
-        shouldHideHeader={shouldHideHeader}
-        homepage={homepage}
-        is404Page={is404}
-        theme={theme}
-      />
+      <LeftNav homepage={homepage} is404Page={is404} theme={theme} />
       <Container homepage={homepage} theme={theme}>
         {children}
         <Footer />
