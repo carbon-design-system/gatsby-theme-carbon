@@ -2,6 +2,7 @@
 
 .page-header {
   --height: 20rem;
+  height: 20rem;
   height: var(--height);
   background: $carbon--black-100;
   color: $inverse-01;
