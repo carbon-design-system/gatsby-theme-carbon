@@ -29,14 +29,6 @@ module.exports = themeOptions => {
       `gatsby-transformer-yaml`,
       `gatsby-plugin-catch-links`,
       {
-        resolve: 'gatsby-plugin-web-font-loader',
-        options: {
-          custom: {
-            families: ['IBM Plex Sans VF'],
-          },
-        },
-      },
-      {
         resolve: `gatsby-source-filesystem`,
         name: `Nav`,
         options: {

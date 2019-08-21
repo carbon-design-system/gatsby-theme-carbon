@@ -41,7 +41,6 @@
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sass-resources": "^2.0.0",
     "gatsby-plugin-sharp": "^2.1.2",
-    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-copy-linked-files": "^2.0.13",
     "gatsby-remark-images": "^3.0.14",
     "gatsby-remark-responsive-iframe": "^2.1.1",
