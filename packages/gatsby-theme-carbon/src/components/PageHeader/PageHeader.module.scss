@@ -1,15 +1,19 @@
 @import '~carbon-components/scss/globals/scss/layout';
 
 .page-header {
-  background: $ui-05;
+  --height: 20rem;
+  height: var(--height);
+  background: $carbon--black-100;
   color: $inverse-01;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 17rem;
-  transition: top $duration--fast-02;
   border-bottom: 1px solid $inverse-02;
+}
+
+.with-tabs {
+  height: calc(var(--height) - 3rem);
 }
 
 .text {

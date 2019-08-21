@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { pageHeader, text } from './PageHeader.module.scss';
+import cx from 'classnames';
+import { pageHeader, withTabs, text } from './PageHeader.module.scss';
 
-const PageHeader = ({ title }) => (
-  <div className={pageHeader}>
+const PageHeader = ({ title, tabs = [] }) => (
+  <div className={cx(pageHeader, { [withTabs]: tabs.length })}>
     <div className="bx--grid">
       <div className="bx--row">
         <div className="bx--col-lg-12">
