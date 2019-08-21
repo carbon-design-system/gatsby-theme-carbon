@@ -16,7 +16,6 @@ import NavContext from '../../util/context/NavContext';
 import useMetadata from '../../util/hooks/useMetadata';
 
 import {
-  hidden,
   header,
   switcherButtonOpen,
   skipToContent,
