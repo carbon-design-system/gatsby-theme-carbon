@@ -32,6 +32,7 @@
     "classnames": "^2.2.6",
     "copy-to-clipboard": "^3.2.0",
     "emotion-theming": "^10.0.10",
+    "focus-trap-react": "^6.0.0",
     "gatsby-plugin-catch-links": "^2.0.15",
     "gatsby-plugin-emotion": "^4.0.7",
     "gatsby-plugin-manifest": "^2.1.1",
