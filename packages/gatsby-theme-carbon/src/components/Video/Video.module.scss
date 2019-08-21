@@ -11,9 +11,7 @@
   width: 100%;
 }
 
-button.video-button {
-  @include button-reset($width: false);
-
+div.video-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,23 +29,23 @@ button.video-button {
   transition: all $duration--moderate-01 motion(entrance, productive);
 }
 
-button.video-button:focus {
+div.video-button:focus {
   outline: 2px solid $focus;
   outline-offset: -2px;
 }
 
-button.video-button:hover {
+div.video-button:hover {
   background-color: $gray-90;
   opacity: 0.8;
 }
 
-button.video-button > svg {
+div.video-button > svg {
   fill: $white-0;
   margin-left: 4px;
   transition: all $duration--moderate-01 motion(entrance, productive);
 }
 
-button.video--is-playing > svg {
+div.video--is-playing > svg {
   margin-left: 0px;
 }
 
@@ -68,7 +66,7 @@ button.video--is-playing > svg {
   }
 }
 
-.video-container:not(:hover) button.video--is-playing,
-.video-container:not(:hover) button.video--is-playing > svg {
-  visibility: hidden;
+.video-container:not(:hover) div.video--is-playing,
+.video-container:not(:hover) div.video--is-playing > svg {
+  opacity: 0;
 }
