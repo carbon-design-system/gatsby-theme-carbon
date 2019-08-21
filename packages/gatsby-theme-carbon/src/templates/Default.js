@@ -45,9 +45,8 @@ const Default = ({ pageContext, children, location }) => {
       pageKeywords={keywords}
       titleType={titleType}
     >
-      <PageHeader title={title} label="label" tabs={tabs}>
-        {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}
-      </PageHeader>
+      <PageHeader title={title} label="label" tabs={tabs} />
+      {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}
       <Main padded>
         {children}
         <EditLink relativePagePath={relativePagePath} />

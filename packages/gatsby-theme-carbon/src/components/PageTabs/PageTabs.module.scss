@@ -1,7 +1,10 @@
 .tabs-container {
   margin: 0;
   width: 100%;
-  box-shadow: 0 -1px 0 rgba($ui-02, 0.25);
+  background: $ui-05;
+  position: sticky;
+  top: 3rem;
+  z-index: z('overlay');
 }
 
 .list {
