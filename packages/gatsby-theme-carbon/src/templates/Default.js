@@ -1,10 +1,6 @@
 import React from 'react';
 import slugify from 'slugify';
 import { useStaticQuery, graphql } from 'gatsby';
-import { breakpoints } from '@carbon/elements';
-import useMedia from 'use-media';
-
-import { useScrollDirection } from '../util/hooks';
 
 import BackToTopBtn from '../components/BackToTopBtn';
 import Layout from '../components/Layout';
@@ -17,9 +13,6 @@ import Main from '../components/Main';
 const Default = ({ pageContext, children, location }) => {
   const { frontmatter = {}, relativePagePath, titleType } = pageContext;
   const { tabs, title, theme, description, keywords } = frontmatter;
-  const scrollDirection = useScrollDirection();
-  const isMobile = useMedia({ maxWidth: breakpoints.md.width });
-  const shouldHideHeader = isMobile && tabs && scrollDirection === 'down';
 
   // get the path prefix if it exists
   const {
@@ -45,7 +38,6 @@ const Default = ({ pageContext, children, location }) => {
   const currentTab = getCurrentTab();
   return (
     <Layout
-      shouldHideHeader={shouldHideHeader}
       homepage={false}
       theme={theme}
       pageTitle={title}
@@ -53,14 +45,8 @@ const Default = ({ pageContext, children, location }) => {
       pageKeywords={keywords}
       titleType={titleType}
     >
-      <PageHeader
-        shouldHideHeader={shouldHideHeader}
-        title={title}
-        label="label"
-        tabs={tabs}
-      >
-        {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}
-      </PageHeader>
+      <PageHeader title={title} label="label" tabs={tabs} />
+      {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}
       <Main padded>
         {children}
         <EditLink relativePagePath={relativePagePath} />
