@@ -66,6 +66,8 @@ const Video = ({ vimeoId, title, ...props }) => {
   function onVimeoKeyDown(event) {
     const player = getVimeoPlayer();
 
+    event.preventDefault();
+
     if (event.key === 'Enter' || event.key === ' ') {
       if (isPlaying) {
         player
@@ -147,6 +149,8 @@ const Video = ({ vimeoId, title, ...props }) => {
   }
 
   function onKeyDown(event) {
+    event.preventDefault();
+
     if (event.key === ' ' || event.key === 'Enter') {
       if (isPlaying) {
         videoRef.current.pause();
