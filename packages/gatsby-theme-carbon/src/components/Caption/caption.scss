@@ -11,8 +11,8 @@ img + .#{$prefix}--caption {
 }
 
 // Caption after video
-[class^='Video-module--video'] + .#{$prefix}--caption {
-  margin-top: -$spacing-08;
+div[class^='Video-module--video'] + .#{$prefix}--caption {
+  margin-top: -4rem;
 }
 
 // Responsive by default
