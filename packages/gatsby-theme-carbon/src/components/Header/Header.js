@@ -16,13 +16,12 @@ import NavContext from '../../util/context/NavContext';
 import useMetadata from '../../util/hooks/useMetadata';
 
 import {
-  hidden,
   header,
   switcherButtonOpen,
   skipToContent,
 } from './Header.module.scss';
 
-const Header = ({ children, shouldHideHeader }) => {
+const Header = ({ children }) => {
   const { leftNavIsOpen, toggleNavState, switcherIsOpen } = useContext(
     NavContext
   );
@@ -30,13 +29,7 @@ const Header = ({ children, shouldHideHeader }) => {
 
   return (
     <>
-      <ShellHeader
-        aria-label="Header"
-        className={cx({
-          [header]: true,
-          [hidden]: shouldHideHeader,
-        })}
-      >
+      <ShellHeader aria-label="Header" className={header}>
         <SkipToContent className={skipToContent} />
         <HeaderMenuButton
           className="bx--header__action--menu"
