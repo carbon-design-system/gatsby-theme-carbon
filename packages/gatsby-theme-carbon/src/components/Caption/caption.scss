@@ -12,7 +12,7 @@ img + .#{$prefix}--caption {
 
 // Caption after video
 div[class^='Video-module--video'] + .#{$prefix}--caption {
-  margin-top: -4rem;
+  margin-top: -$layout-05;
 }
 
 // Responsive by default
