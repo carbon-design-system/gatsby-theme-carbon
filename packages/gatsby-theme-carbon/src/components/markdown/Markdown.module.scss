@@ -15,11 +15,6 @@
   margin-left: -$spacing-05;
   padding-left: $spacing-05;
 
-  // 6 col
-  @include carbon--breakpoint('md') {
-    width: 75%;
-  }
-
   // 8 col
   @include carbon--breakpoint('lg') {
     width: 66.667%;
