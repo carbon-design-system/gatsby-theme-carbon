@@ -1,18 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { Row } from '../Grid';
+import { Row, Column } from '../Grid';
 
-import { paragraph, paragraphResponsive } from './Markdown.module.scss';
+import { paragraph } from './Markdown.module.scss';
 
 export default class P extends React.Component {
   static propTypes = {
     children: PropTypes.node,
-
-    /**
-     * Set to full width
-     */
-    fullWidth: PropTypes.bool,
 
     /**
      * Specify a custom class
@@ -21,18 +16,19 @@ export default class P extends React.Component {
   };
 
   render() {
-    const { children, className, fullWidth, ...rest } = this.props;
+    const { children, className, ...rest } = this.props;
 
     const paragraphClasses = classnames(paragraph, {
       [className]: className,
-      [paragraphResponsive]: !fullWidth,
     });
 
     return (
       <Row>
-        <p className={paragraphClasses} {...rest}>
-          {children}
-        </p>
+        <Column colLg={8} colMd={6}>
+          <p className={paragraphClasses} {...rest}>
+            {children}
+          </p>
+        </Column>
       </Row>
     );
   }

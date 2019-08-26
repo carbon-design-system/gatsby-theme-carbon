@@ -1,0 +1,29 @@
+// Need to generate all of this with sass 😅
+
+.bx--col-lg-8 .bx--col-lg-8 {
+  @include carbon--breakpoint('lg') {
+    flex: 0 0 100%;
+    max-width: 100%; //8/8 = 100%;
+  }
+}
+
+.bx--col-md-5 .bx--col-md-6 {
+  @include carbon--breakpoint('md') {
+    flex: 0 0 100%;
+    max-width: 100%; //6/5 > 100%;
+  }
+}
+
+.bx--col-lg-3 .bx--col-lg-8 {
+  @include carbon--breakpoint('lg') {
+    flex: 0 0 100%;
+    max-width: 100%; //8/3 > 100%;
+  }
+}
+
+.bx--col-md-3 .bx--col-md-6 {
+  @include carbon--breakpoint('md') {
+    flex: 0 0 100%;
+    max-width: 100%; //8/3 > 100%;
+  }
+}

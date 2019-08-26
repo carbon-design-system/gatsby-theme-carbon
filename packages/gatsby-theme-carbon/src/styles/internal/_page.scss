@@ -159,6 +159,7 @@ img[src*='svg'] {
 }
 
 // Clears styles for nested grid components
+/*
 .container .#{$prefix}--row .#{$prefix}--row {
   margin: 0;
 }
@@ -168,3 +169,4 @@ img[src*='svg'] {
   max-width: 100%;
   flex: auto;
 }
+*/
