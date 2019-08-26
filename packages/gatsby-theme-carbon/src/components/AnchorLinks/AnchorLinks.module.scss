@@ -1,28 +1,12 @@
 .list {
-  margin-bottom: 0;
-  margin-top: $spacing-05;
   width: 100%;
-
   @include carbon--breakpoint('md') {
-    margin-bottom: $spacing-07;
     width: 75%;
   }
 
   @include carbon--breakpoint('lg') {
     width: 58.33%;
   }
-}
-
-.list + * {
-  margin-top: $spacing-11;
-}
-
-.list--small {
-  margin-top: $spacing-05;
-}
-
-.list--small + * {
-  margin-top: $spacing-10;
 }
 
 .link {

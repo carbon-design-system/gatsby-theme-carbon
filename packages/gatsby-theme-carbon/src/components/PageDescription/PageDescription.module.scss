@@ -1,7 +1,5 @@
 .page-description p {
   @include carbon--type-style('expressive-heading-03', true);
-  margin-bottom: $layout-03;
-
   // 6 col
   @include carbon--breakpoint('md') {
     width: 75%;
@@ -11,6 +9,10 @@
   @include carbon--breakpoint('lg') {
     width: 66.667%;
   }
+}
+
+.page-description p + p {
+  margin-top: var(--space);
 }
 
 .page-description code {

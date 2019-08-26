@@ -82,12 +82,6 @@ img {
   max-width: 100%;
 }
 
-.gatsby-resp-image-wrapper,
-img[src*='gif'],
-img[src*='svg'] {
-  margin-bottom: $spacing-06;
-}
-
 .gatsby-resp-image-wrapper {
   margin-left: 0 !important;
 }
@@ -105,10 +99,6 @@ img[src*='svg'] {
 .page-content > div > img[src*='svg'],
 .page-content > div > img[src*='gif'] {
   background: $ui-02;
-}
-
-.page-content iframe {
-  margin-bottom: rem(24px);
 }
 
 .bx--website-switcher {
