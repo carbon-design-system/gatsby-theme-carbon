@@ -1,1 +1,13 @@
 // This is where your application styles could go.
+
+p {
+  background: white;
+}
+
+.bx--row {
+  outline: 1px dotted blue;
+}
+
+div[class*='bx--col'] {
+  outline: 1px dotted red;
+}

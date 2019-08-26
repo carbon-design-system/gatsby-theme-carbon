@@ -12,7 +12,6 @@
 
 // Responsive by default
 .paragraph--responsive {
-  margin-left: -$spacing-05;
   padding-left: $spacing-05;
 
   // 6 col
@@ -26,12 +25,13 @@
   }
 }
 
-// If paragraph is inside a user specified row then allow the grid code to set the width
-:global(.#{$prefix}--row) .paragraph {
+// If paragraph is inside a user specified row then allow the grid code to set the width and padding
+:global(.#{$prefix}--row .#{$prefix}--row) .paragraph {
   width: 100%;
+  padding-left: 0;
 
   @include carbon--breakpoint('md') {
-    padding-right: $spacing-07;
+    padding-right: $spacing-05;
   }
 }
 
@@ -127,7 +127,7 @@
 
 // If quote is inside a user specified row then allow the grid code to set the width
 :global(.#{$prefix}--row) .blockquote .paragraph {
-  padding-right: 0;
+  padding-right: $spacing-07;
 
   @include carbon--breakpoint('md') {
     width: 100%;

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { Row } from '../Grid';
 
 import { paragraph, paragraphResponsive } from './Markdown.module.scss';
 
@@ -28,9 +29,11 @@ export default class P extends React.Component {
     });
 
     return (
-      <p className={paragraphClasses} {...rest}>
-        {children}
-      </p>
+      <Row>
+        <p className={paragraphClasses} {...rest}>
+          {children}
+        </p>
+      </Row>
     );
   }
 }
