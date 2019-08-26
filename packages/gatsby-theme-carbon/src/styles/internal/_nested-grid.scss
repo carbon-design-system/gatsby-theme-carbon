@@ -1,20 +1,30 @@
 // Need to generate all of this with sass 😅
 
-.bx--col-lg-8 .bx--col-lg-8 {
+// One level deep, divide nested column width by parent column width to get percentage
+// If parent column is larger, set to 100%
+
+.bx--col-lg-4 .bx--col-lg-3 {
   @include carbon--breakpoint('lg') {
-    flex: 0 0 100%;
-    max-width: 100%; //8/8 = 100%;
+    flex: 0 0 75%;
+    max-width: 75%; //3/4 = 75%;
   }
 }
 
-.bx--col-md-5 .bx--col-md-6 {
-  @include carbon--breakpoint('md') {
-    flex: 0 0 100%;
-    max-width: 100%; //6/5 > 100%;
+.bx--col-lg-8 .bx--col-lg-4 {
+  @include carbon--breakpoint('lg') {
+    flex: 0 0 50%;
+    max-width: 50%; //4/8 = 50%;
   }
 }
 
-.bx--col-lg-3 .bx--col-lg-8 {
+.bx--col-lg-1 .bx--col-lg-8,
+.bx--col-lg-2 .bx--col-lg-8,
+.bx--col-lg-3 .bx--col-lg-8,
+.bx--col-lg-4 .bx--col-lg-8,
+.bx--col-lg-5 .bx--col-lg-8,
+.bx--col-lg-6 .bx--col-lg-8,
+.bx--col-lg-7 .bx--col-lg-8,
+.bx--col-lg-8 .bx--col-lg-8 {
   @include carbon--breakpoint('lg') {
     flex: 0 0 100%;
     max-width: 100%; //8/3 > 100%;
@@ -25,5 +35,23 @@
   @include carbon--breakpoint('md') {
     flex: 0 0 100%;
     max-width: 100%; //8/3 > 100%;
+  }
+}
+
+.bx--col-md-5 .bx--col-md-6 {
+  @include carbon--breakpoint('md') {
+    flex: 0 0 100%;
+    max-width: 100%; //6/5 > 100%;
+  }
+}
+
+// Two levels deep (or more)
+// divide the column width of the innermost column by outtermost to get %
+// If larger than 1, set to 100%
+
+.bx--col-lg-4 .bx--col-lg-3 .bx--col-lg-2 {
+  @include carbon--breakpoint('lg') {
+    flex: 0 0 50%;
+    max-width: 50%; //4/2 = 50%;
   }
 }
