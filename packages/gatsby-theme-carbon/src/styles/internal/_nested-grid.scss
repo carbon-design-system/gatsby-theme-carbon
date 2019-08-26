@@ -1,7 +1,8 @@
 // Need to generate all of this with sass 😅
 // this is all based on a 12 column grid as fyi, but math would be the same for 16
 
-// One level deep, divide nested column width by parent column width to get percentage
+// Divide nested column width by parent column width to get percentage
+// this should work for nested columns, taking outtermost and innermost 🙏
 // If parent column is larger, set to 100%
 
 .bx--col-lg-1 .bx--col-lg-8,
@@ -79,3 +80,5 @@
     max-width: 100%; //6/5 > 100%;
   }
 }
+
+// would need mobile also etc
