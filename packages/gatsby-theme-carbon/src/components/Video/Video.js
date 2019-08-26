@@ -63,22 +63,53 @@ const Video = ({ vimeoId, title, ...props }) => {
       });
   }
 
+  function onVimeoKeyDown(event) {
+    const player = getVimeoPlayer();
+
+    event.preventDefault();
+
+    if (event.key === 'Enter' || event.key === ' ') {
+      if (isPlaying) {
+        player
+          .pause()
+          .then(() => {
+            setIsPlaying(false);
+          })
+          .catch(error => {
+            console.error(error);
+          });
+        return;
+      }
+      player
+        .play()
+        .then(() => {
+          setIsPlaying(true);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }
+  }
+
   if (vimeoId) {
     return (
       <div className={videoContainer}>
-        <button
+        <div
           className={buttonClassName}
-          type="button"
+          role="button"
           onClick={onVimeoClick}
+          onKeyDown={onVimeoKeyDown}
+          tabIndex="0"
         >
           {isPlaying ? <Pause32 /> : <Play32 />}
           <span className="bx--assistive-text">
             {isPlaying ? 'Pause' : 'Play'}
           </span>
-        </button>
+        </div>
         <div className={cx(video, vimeo)}>
           <div className="embedVideo-container">
             <iframe
+              tabIndex="-1"
               allow="autoplay"
               title={title}
               src={`https://player.vimeo.com/video/${vimeoId}`}
@@ -117,14 +148,40 @@ const Video = ({ vimeoId, title, ...props }) => {
     setIsPlaying(false);
   }
 
+  function onKeyDown(event) {
+    event.preventDefault();
+
+    if (event.key === ' ' || event.key === 'Enter') {
+      if (isPlaying) {
+        videoRef.current.pause();
+        setIsPlaying(false);
+        return;
+      }
+      return videoRef.current
+        .play()
+        .then(() => {
+          setIsPlaying(true);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+  }
+
   return (
     <div className={videoContainer}>
-      <button className={buttonClassName} type="button" onClick={onClick}>
+      <div
+        className={buttonClassName}
+        role="button"
+        onClick={onClick}
+        onKeyDown={onKeyDown}
+        tabIndex="0"
+      >
         {isPlaying ? <Pause32 /> : <Play32 />}
         <span className="bx--assistive-text">
           {isPlaying ? 'Pause' : 'Play'}
         </span>
-      </button>
+      </div>
       {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
       <video
         className={video}
