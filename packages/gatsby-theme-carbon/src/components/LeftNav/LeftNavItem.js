@@ -8,7 +8,7 @@ import {
   SideNavMenuItem,
 } from 'carbon-components-react/lib/components/UIShell';
 
-import { currentItem } from './LeftNav.module.scss';
+import styles, { currentItem } from './LeftNav.module.scss';
 
 import NavContext from '../../util/context/NavContext';
 import usePathprefix from '../../util/hooks/usePathprefix';
@@ -24,17 +24,11 @@ const LeftNavItem = props => {
         const pathname = pathPrefix
           ? location.pathname.replace(pathPrefix, '')
           : location.pathname;
-        const isActive = items.some(
-          item => pathname === item.path || pathname === `${item.path}/`
-        );
-        const isActiveWithin = items.some(item => {
-          if (item.path.split('/').length > 2) {
-            return pathname.includes(
-              item.path.slice(0, item.path.lastIndexOf('/'))
-            );
-          }
-          return isActive;
-        });
+          
+        const isActive = items.some(item => {
+          return item.path.replace(/\/$/, '') === location.pathname;
+        })
+
         if (items.length === 1) {
           return (
             <SideNavLink
@@ -52,8 +46,8 @@ const LeftNavItem = props => {
         return (
           <SideNavMenu
             icon={<span>dummy icon</span>}
-            isActive={isActiveWithin} // TODO similar categories
-            defaultExpanded={isActiveWithin}
+            isActive={isActive} // TODO similar categories
+            defaultExpanded={isActive}
             title={category}
           >
             <SubNavItems
@@ -73,19 +67,22 @@ const SubNavItems = ({ items, pathname, onClick }) =>
     const hasActiveTab =
       item.path.split('/').filter(Boolean).length > 2
         ? pathname.includes(item.path.slice(0, item.path.lastIndexOf('/')))
-        : pathname.includes(item.path);
+        : pathname.split('/').toString() === item.path.split('/').toString();
     return (
       <SideNavMenuItem
         to={`${item.path}`}
+        className={cx({
+          [styles.linkText__dark]: pathname === '/',
+        })}
         onClick={onClick}
         element={Link}
         isActive={hasActiveTab}
         key={i}
       >
         <span
-          style={{
-            color: hasActiveTab ? '#171717' : 'inherit',
-          }}
+          className={cx(styles.linkText, {
+            [styles.linkText__active]: hasActiveTab,
+          })}
         >
           {item.title}
         </span>
