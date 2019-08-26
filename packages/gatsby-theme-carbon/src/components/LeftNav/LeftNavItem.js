@@ -24,9 +24,9 @@ const LeftNavItem = props => {
         const pathname = pathPrefix
           ? location.pathname.replace(pathPrefix, '')
           : location.pathname;
-          
+
         const isActive = items.some(item => {
-          return item.path.replace(/\/$/, '') === location.pathname;
+          return item.path.replace(/\/$/, '') === pathname;
         })
 
         if (items.length === 1) {
