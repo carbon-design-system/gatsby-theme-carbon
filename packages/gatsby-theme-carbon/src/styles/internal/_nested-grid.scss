@@ -1,21 +1,8 @@
 // Need to generate all of this with sass 😅
+// this is all based on a 12 column grid as fyi, but math would be the same for 16
 
 // One level deep, divide nested column width by parent column width to get percentage
 // If parent column is larger, set to 100%
-
-.bx--col-lg-4 .bx--col-lg-3 {
-  @include carbon--breakpoint('lg') {
-    flex: 0 0 75%;
-    max-width: 75%; //3/4 = 75%;
-  }
-}
-
-.bx--col-lg-8 .bx--col-lg-4 {
-  @include carbon--breakpoint('lg') {
-    flex: 0 0 50%;
-    max-width: 50%; //4/8 = 50%;
-  }
-}
 
 .bx--col-lg-1 .bx--col-lg-8,
 .bx--col-lg-2 .bx--col-lg-8,
@@ -27,10 +14,58 @@
 .bx--col-lg-8 .bx--col-lg-8 {
   @include carbon--breakpoint('lg') {
     flex: 0 0 100%;
-    max-width: 100%; //8/3 > 100%;
+    max-width: 100%;
   }
 }
 
+.bx--col-lg-12 .bx--col-lg-9,
+.bx--col-lg-8 .bx--col-lg-6,
+.bx--col-lg-4 .bx--col-lg-3 {
+  @include carbon--breakpoint('lg') {
+    flex: 0 0 75%;
+    max-width: 75%; //3/4 = 75%;
+  }
+}
+
+.bx--col-lg-12 .bx--col-lg-2,
+.bx--col-lg-6 .bx--col-lg-1 {
+  @include carbon--breakpoint('lg') {
+    flex: 0 0 66.67%;
+    max-width: 66.67%; //4/8 = 50%;
+  }
+}
+
+.bx--col-lg-2 .bx--col-lg-1,
+.bx--col-lg-6 .bx--col-lg-3,
+.bx--col-lg-8 .bx--col-lg-4,
+.bx--col-lg-12 .bx--col-lg-4 {
+  @include carbon--breakpoint('lg') {
+    flex: 0 0 50%;
+    max-width: 50%; //4/8 = 50%;
+  }
+}
+
+.bx--col-lg-12 .bx--col-lg-4,
+.bx--col-lg-9 .bx--col-lg-3,
+.bx--col-lg-3 .bx--col-lg-1 {
+  @include carbon--breakpoint('lg') {
+    flex: 0 0 33.33%;
+    max-width: 33.33%; //4/8 = 50%;
+  }
+}
+
+.bx--col-lg-12 .bx--col-lg-3,
+.bx--col-lg-8 .bx--col-lg-2,
+.bx--col-lg-4 .bx--col-lg-1 {
+  @include carbon--breakpoint('lg') {
+    flex: 0 0 25%;
+    max-width: 25%; //4/8 = 50%;
+  }
+}
+
+// and so on down to 1/12 (or 1/16)
+
+// tablet examples
 .bx--col-md-3 .bx--col-md-6 {
   @include carbon--breakpoint('md') {
     flex: 0 0 100%;
@@ -42,16 +77,5 @@
   @include carbon--breakpoint('md') {
     flex: 0 0 100%;
     max-width: 100%; //6/5 > 100%;
-  }
-}
-
-// Two levels deep (or more)
-// divide the column width of the innermost column by outtermost to get %
-// If larger than 1, set to 100%
-
-.bx--col-lg-4 .bx--col-lg-3 .bx--col-lg-2 {
-  @include carbon--breakpoint('lg') {
-    flex: 0 0 50%;
-    max-width: 50%; //4/2 = 50%;
   }
 }
