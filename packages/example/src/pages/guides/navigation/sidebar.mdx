@@ -1,0 +1,34 @@
+---
+title: Navigation
+tabs: ['Sidebar', 'Tabs']
+---
+
+<PageDescription>
+
+One of the most important pieces of making a working site is to define your navigation items. This allows the theme to inform the SideNav component as well as the next/previous components at the bottom of each page.
+
+</PageDescription>
+
+## Yaml data
+
+Unfortunately, genenerating left nav contents purely from the pages directory has some fatal flaws. It makes it very difficult to establish the order of items or to hide items all together. In `src/data/nav-items.yaml`, you'll list your nav items in order.
+
+```yaml
+- title: Menu
+  pages:
+    - title: Page 1
+      path: /menu/Page-1
+    - title: Page 2
+      path: /menu/Page-2
+- title: Single Page
+  pages:
+    - path: /single-page
+```
+
+Some important things to note here:
+
+- You only need to link to the first tab if using page tabs
+- The `title` refers to the menu and item text, it's allowed to have spaces
+- The `path` refer to the relative path to the mdx file in your pages
+- You can make a `Page/index.mdx` file if you'd prefer to have assets in a folder.
+  The path would still just look like `/Page`

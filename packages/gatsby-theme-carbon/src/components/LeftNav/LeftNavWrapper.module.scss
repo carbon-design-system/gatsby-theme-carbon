@@ -1,0 +1,31 @@
+.leftNavWrapper {
+  transition: transform 0.15s cubic-bezier(0.2, 0.2, 0.38, 0.9), top 110ms;
+  width: 256px;
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  z-index: 9999;
+  scrollbar-width: none;
+  transform: translateX(-256px);
+
+  & :global(.bx--side-nav) {
+    box-shadow: none !important;
+  }
+
+  @include carbon--breakpoint('lg') {
+    transform: translateX(0px);
+  }
+}
+
+.leftNavWrapper :global(.bx--side-nav__navigation) {
+  padding-top: 0;
+  padding-bottom: 48px;
+}
+
+.expanded {
+  transform: translateX(0px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  @include carbon--breakpoint('lg') {
+    box-shadow: none;
+  }
+}

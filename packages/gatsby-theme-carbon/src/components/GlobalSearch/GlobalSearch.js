@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
 
-import Search20 from '@carbon/icons-react/es/search/20';
+import { Search20 } from '@carbon/icons-react';
 import { HeaderGlobalAction } from 'carbon-components-react/lib/components/UIShell';
 
 import GlobalSearchInput from './GlobalSearchInput';
 import NavContext from '../../util/context/NavContext';
-import useSearch from '../../util/hooks/useSearch';
 
 const GlobalSearch = () => {
   // This is a presentational component only. If you'd like to implement search
@@ -16,7 +15,6 @@ const GlobalSearch = () => {
   // https://www.algolia.com/
 
   const { searchIsOpen, toggleNavState } = useContext(NavContext);
-  useSearch();
 
   if (searchIsOpen) {
     return <GlobalSearchInput />;

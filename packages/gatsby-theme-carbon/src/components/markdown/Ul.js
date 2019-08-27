@@ -1,9 +1,9 @@
 import React from 'react';
-
-import { unordered } from './Markdown.module.scss';
+import cx from 'classnames';
+import { list } from './Markdown.module.scss';
 
 const Ul = ({ children, ...rest }) => (
-  <ul className={unordered} {...rest}>
+  <ul className={cx('bx--list--unordered', list)} {...rest}>
     {children}
   </ul>
 );

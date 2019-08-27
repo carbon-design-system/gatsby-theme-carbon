@@ -1,12 +1,18 @@
 const path = require('path');
-const colors = require('@carbon/themes');
+const { uiBackground, interactive01 } = require('@carbon/elements');
 const remarkSlug = require('remark-slug');
 
 module.exports = themeOptions => {
   const {
-    additionalFontWeights = [],
     isSearchEnabled = false,
     withWebp = false,
+    iconPath,
+    mdxExtensions = ['.mdx', '.md'],
+    imageQuality = 75,
+    repository = {
+      baseUrl: '',
+      subDirectory: '',
+    },
   } = themeOptions;
 
   return {
@@ -16,33 +22,12 @@ module.exports = themeOptions => {
       description:
         'Add a description by supplying it to siteMetadata in your gatsby-config.js file.',
       keywords: 'gatsby,theme,carbon,design',
+      repository,
     },
     plugins: [
       `gatsby-plugin-sharp`,
       `gatsby-transformer-yaml`,
       `gatsby-plugin-catch-links`,
-      {
-        resolve: `gatsby-plugin-prefetch-google-fonts`,
-        options: {
-          fonts: [
-            {
-              family: `IBM Plex Sans`,
-              variants: [
-                300,
-                '300i',
-                400,
-                '400i',
-                600,
-                '600i',
-                ...additionalFontWeights,
-              ],
-            },
-            {
-              family: `IBM Plex Mono`,
-            },
-          ],
-        },
-      },
       {
         resolve: `gatsby-source-filesystem`,
         name: `Nav`,
@@ -51,24 +36,25 @@ module.exports = themeOptions => {
         },
       },
       {
-        resolve: `gatsby-mdx`,
+        resolve: `gatsby-plugin-mdx`,
         options: {
-          extensions: ['.mdx', '.md'],
+          extensions: mdxExtensions,
           gatsbyRemarkPlugins: [
             { resolve: `gatsby-remark-unwrap-images` },
             { resolve: `gatsby-remark-smartypants` },
             {
               resolve: `gatsby-remark-images`,
               options: {
-                maxWidth: 1170,
+                maxWidth: 1152,
                 linkImagesToOriginal: false,
-                quality: 75,
+                quality: imageQuality,
                 withWebp,
               },
             },
             { resolve: `gatsby-remark-responsive-iframe` },
             { resolve: `gatsby-remark-copy-linked-files` },
           ],
+          plugins: ['gatsby-remark-images'],
           remarkPlugins: [remarkSlug],
           defaultLayouts: {
             default: require.resolve('./src/templates/Default.js'),
@@ -80,6 +66,12 @@ module.exports = themeOptions => {
         resolve: 'gatsby-plugin-sass',
         options: {
           includePaths: [path.resolve(__dirname, 'node_modules')],
+        },
+      },
+      {
+        resolve: `gatsby-plugin-sass-resources`,
+        options: {
+          resources: [require.resolve('./src/styles/internal/resources.scss')],
         },
       },
       `gatsby-plugin-emotion`,
@@ -99,21 +91,17 @@ module.exports = themeOptions => {
         },
       },
       {
-        resolve: 'gatsby-plugin-compile-es6-packages',
-        options: {
-          modules: ['gatsby-theme-carbon'],
-        },
-      },
-      {
         resolve: 'gatsby-plugin-manifest',
         options: {
           name: 'Carbon Design Gatsby Theme',
           short_name: 'Gatsby Theme Carbon',
           start_url: '/',
-          background_color: colors.uiBackground,
-          theme_color: colors.interactive01,
+          background_color: uiBackground,
+          theme_color: interactive01,
           display: 'browser',
-          icon: require.resolve('./src/images/favicon.png'),
+          icon: iconPath
+            ? path.resolve(iconPath)
+            : require.resolve('./src/images/favicon.png'),
         },
       },
       `gatsby-plugin-react-helmet`,

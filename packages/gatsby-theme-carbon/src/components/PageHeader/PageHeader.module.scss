@@ -1,30 +1,24 @@
-@import '~carbon-components/scss/globals/scss/vars';
-@import '~@carbon/elements/scss/type/type';
 @import '~carbon-components/scss/globals/scss/layout';
 
 .page-header {
+  --height: 20rem;
+  height: 20rem;
+  height: var(--height);
   background: $carbon--black-100;
   color: $inverse-01;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 20rem;
-  transition: top $duration--fast-02;
+  border-bottom: 1px solid $inverse-02;
+}
+
+.with-tabs {
+  height: calc(var(--height) - 3rem);
 }
 
 .text {
   @include carbon--type-style('display-01', true);
   margin-bottom: $spacing-07;
   margin-top: auto;
-}
-
-.page-header--sticky {
-  position: sticky;
-  z-index: z('header');
-  top: -14rem;
-}
-
-.page-header--sticky.page-header--shifted {
-  top: -17rem;
 }

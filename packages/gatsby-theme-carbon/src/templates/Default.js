@@ -1,22 +1,18 @@
 import React from 'react';
-import { WebsiteBackToTopBtn } from '@carbon/addons-website';
 import slugify from 'slugify';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { useScrollDirection } from '../util/hooks';
-
+import BackToTopBtn from '../components/BackToTopBtn';
 import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
-// import EditLink from '../components/EditLink';
+import EditLink from '../components/EditLink';
 import NextPrevious from '../components/NextPrevious';
 import PageTabs from '../components/PageTabs';
 import Main from '../components/Main';
 
 const Default = ({ pageContext, children, location }) => {
-  const { frontmatter = {} } = pageContext;
-  const { tabs, title } = frontmatter;
-  const scrollDirection = useScrollDirection();
-  const shouldHideHeader = !!tabs && scrollDirection === 'down';
+  const { frontmatter = {}, relativePagePath, titleType } = pageContext;
+  const { tabs, title, theme, description, keywords } = frontmatter;
 
   // get the path prefix if it exists
   const {
@@ -41,16 +37,20 @@ const Default = ({ pageContext, children, location }) => {
 
   const currentTab = getCurrentTab();
   return (
-    <Layout shouldHideHeader={shouldHideHeader} homepage={false}>
-      <PageHeader
-        shouldHideHeader={shouldHideHeader}
-        title={title}
-        label="label"
-        tabs={tabs}
-      >
-        {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}
-      </PageHeader>
-      <Main padded>{children}</Main>
+    <Layout
+      homepage={false}
+      theme={theme}
+      pageTitle={title}
+      pageDescription={description}
+      pageKeywords={keywords}
+      titleType={titleType}
+    >
+      <PageHeader title={title} label="label" tabs={tabs} />
+      {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}
+      <Main padded>
+        {children}
+        <EditLink relativePagePath={relativePagePath} />
+      </Main>
       <NextPrevious
         pageContext={pageContext}
         location={location}
@@ -58,7 +58,7 @@ const Default = ({ pageContext, children, location }) => {
         tabs={tabs}
         currentTab={currentTab}
       />
-      <WebsiteBackToTopBtn />
+      <BackToTopBtn />
     </Layout>
   );
 };

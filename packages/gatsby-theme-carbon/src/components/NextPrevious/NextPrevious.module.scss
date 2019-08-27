@@ -1,9 +1,6 @@
-@import '~carbon-components/scss/globals/scss/vars';
-@import '~@carbon/elements/scss/type/type';
-
 .wrapper {
   background: $carbon--gray-90;
-  color: $carbon--white-0;
+  color: $text-04;
 }
 
 .wrapper .link-container {
@@ -31,8 +28,11 @@
   text-decoration: none;
   width: 50%;
   transition: background $duration--fast-02 $carbon--standard-easing;
+
   &:hover {
+    color: $carbon--white-0;
     background: $carbon--gray-80;
+    text-decoration: none;
   }
 }
 

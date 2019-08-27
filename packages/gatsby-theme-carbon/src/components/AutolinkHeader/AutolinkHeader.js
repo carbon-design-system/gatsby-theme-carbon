@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from '@carbon/icons-react/lib/link/20';
+import { Link20 as Link } from '@carbon/icons-react';
 import cx from 'classnames';
 
 import { header, anchor } from './AutolinkHeader.module.scss';

@@ -1,7 +1,4 @@
-@import '~carbon-components/scss/globals/scss/vars';
-@import '~@carbon/elements/scss/type/type';
-
-nav.tab-container {
+div.tab-container {
   margin-left: -$spacing-05;
   min-height: 2.5rem;
   width: 100vw;
@@ -10,7 +7,7 @@ nav.tab-container {
   }
 }
 
-nav.tab-container .tab {
+div.tab-container .tab {
   margin-left: 0;
   background-color: $ui-background;
   padding-left: $spacing-05;
@@ -34,7 +31,13 @@ nav.tab-container .tab {
   }
 }
 
-nav.tab-container .tab a {
+// Active dropdown item
+div.tab-container div a {
+  font-weight: 600;
+  padding: 0;
+}
+
+div.tab-container .tab a {
   height: 3rem;
   padding-top: $spacing-05;
   transition: background-color $duration--fast-02;
@@ -42,11 +45,6 @@ nav.tab-container .tab a {
   border-bottom: 1px solid #d8d8d8 !important;
   margin-left: 0;
   background-color: transparent;
-
-  &:active {
-    padding-top: $spacing-05;
-    padding-left: 0;
-  }
 
   @include carbon--breakpoint('md') {
     padding-top: $spacing-04;
@@ -78,17 +76,11 @@ nav.tab-container .tab a {
 }
 
 // Dropdown container
-nav.tab-container div {
+div.tab-container div {
   background-color: $ui-background;
   height: 3rem;
   border-top: 3px solid $interactive-01;
   border-bottom: 1px solid #d8d8d8;
-}
-
-// Active dropdown item
-nav.tab-container div a {
-  font-weight: 600;
-  padding: 0;
 }
 
 .tab-contents {
@@ -101,4 +93,9 @@ nav.tab-container div a {
   @include carbon--breakpoint('md') {
     width: 100%;
   }
+}
+
+// dark background
+:global(.container--dark) .tab-contents {
+  color: $text-01;
 }

@@ -1,0 +1,32 @@
+.grid {
+  width: 100%;
+  max-width: 100%;
+}
+
+.row {
+  padding-top: $layout-05;
+  padding-bottom: $layout-05;
+  max-width: 74.25rem;
+}
+
+.firstColumn {
+  @include carbon--type-style('expressive-heading-03', true);
+  margin-bottom: $spacing-07;
+}
+
+.firstColumn p {
+  @include carbon--type-style('expressive-heading-03', true);
+}
+
+.secondColumn,
+.secondColumn p {
+  @include carbon--type-style('expressive-paragraph-01', true);
+}
+
+.grid a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

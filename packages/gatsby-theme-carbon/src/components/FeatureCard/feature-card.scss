@@ -12,10 +12,9 @@
       100% + 2rem
     ); //needed to make the row the same width as other rows with the negative margins
   }
-}
 
-.#{$prefix}--feature-card__column {
-  @include carbon--breakpoint('md') {
+  @include carbon--breakpoint('max') {
+    width: calc(100% + 1rem);
   }
 }
 

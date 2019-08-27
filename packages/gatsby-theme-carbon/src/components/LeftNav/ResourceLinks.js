@@ -1,7 +1,7 @@
 import React from 'react';
 import { SideNavLink } from 'carbon-components-react/lib/components/UIShell';
 import { Link } from 'gatsby';
-import LaunchIcon from '@carbon/icons-react/es/launch/16';
+import { Launch16 as LaunchIcon } from '@carbon/icons-react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 
@@ -23,7 +23,7 @@ const LeftNavResourceLinks = ({ links, shouldOpenNewTabs }) => {
           <SideNavLink
             key={i}
             style={{ marginTop: i === 0 ? '1rem' : 0 }}
-            icon={<LaunchIcon />}
+            renderIcon={outbound ? LaunchIcon : undefined}
             // eslint-disable-next-line jsx-a11y/aria-proptypes
             aria-current=""
             to={href}

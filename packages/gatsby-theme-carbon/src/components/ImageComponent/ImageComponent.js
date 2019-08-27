@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { settings } from 'carbon-components';
-import ZoomIn20 from '@carbon/icons-react/es/zoom--in/20';
+import { ZoomIn20 } from '@carbon/icons-react';
 
 const { prefix } = settings;
 

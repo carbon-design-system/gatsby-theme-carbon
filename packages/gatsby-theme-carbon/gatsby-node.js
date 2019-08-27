@@ -17,3 +17,21 @@ exports.onPreBootstrap = ({ store, reporter }) => {
     }
   });
 };
+
+// We need to provide the actual file that created a specific page to append links for EditLink.
+// We can't do page queries from MDX templates, so we'll add the page's relative path to context after it's created.
+// The context object **is** supplied to MDX templates through the pageContext prop.
+exports.onCreatePage = ({ page, actions }, pluginOptions) => {
+  const { titleType = 'page' } = pluginOptions;
+  const { createPage, deletePage } = actions;
+  const [relativePagePath] = page.componentPath.split('src/pages').splice('-1');
+  deletePage(page);
+  createPage({
+    ...page,
+    context: {
+      ...page.context,
+      relativePagePath,
+      titleType,
+    },
+  });
+};
