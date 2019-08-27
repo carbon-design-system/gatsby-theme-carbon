@@ -3,14 +3,13 @@
   z-index: 10000;
   position: fixed;
   right: 0;
-  top: 47px;
+  top: 48px;
   height: 100%;
   width: 16rem;
   background-color: $ui-05;
   border-left: 1px solid $inverse-02;
   transform: translateX(16rem);
   overflow-y: hidden;
-  border-bottom: 1px solid $inverse-02;
   transition: all $duration--fast-02 carbon--motion('exit');
   @include carbon--breakpoint('lg') {
     transform: translateX(0);
