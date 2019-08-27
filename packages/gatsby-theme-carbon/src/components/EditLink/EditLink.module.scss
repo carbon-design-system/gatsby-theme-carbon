@@ -1,0 +1,22 @@
+.link {
+  @include carbon--type-style('body-short-01');
+  transition: color $transition--base;
+  color: $text-02;
+
+  &:hover {
+    color: $text-01;
+  }
+}
+
+.row {
+  position: relative;
+  top: 9rem;
+}
+
+:global(.container--dark) .link {
+  color: $carbon--white-0;
+
+  &:hover {
+    color: $carbon--white-0;
+  }
+}

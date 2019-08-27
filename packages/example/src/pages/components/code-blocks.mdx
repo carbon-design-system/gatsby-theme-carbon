@@ -1,0 +1,52 @@
+---
+title: Code blocks
+---
+
+<PageDescription>
+
+When authoring markdown using the Carbon Gatsby theme, code blocks have some extra super powers you can take advantage of. We provide carbon-themed syntax highlighting as well as optional `path` and `src` features.
+
+</PageDescription>
+
+## Examples
+
+```markdown path=/directory/file.mdx src=https://gatsby-theme-carbon.now.sh
+### Path and src
+```
+
+```markdown path=/directory/file.mdx
+### Just path
+```
+
+```markdown src=https://gatsby-theme-carbon.now.sh
+### Just src
+```
+
+```markdown
+### No path or src
+```
+
+```markdown path=/directory/file.mdx src=https://gatsby-theme-carbon.now.sh
+### Path and src w/ overflow
+
+This example overflows to demonstrate the text fading out under the side bar. This example overflows to demonstrate the text fading out under the side bar.
+This example overflows to demonstrate the text fading out under the side bar. This example overflows to demonstrate the text fading out under the side bar.
+```
+
+## Code
+
+````
+```markdown path=/directory/file.mdx src=https://gatsby-theme-carbon.now.sh
+### Path and src
+
+This code snippet provides both a `path` and a `src`.
+```
+````
+
+### Props
+
+| property | propType | description                                                                                                                 |
+| -------- | -------- | --------------------------------------------------------------------------------------------------------------------------- |
+| language | string   | [Available languages.](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js) |
+| src      | string   | The full url of a relevant link (source)                                                                                    |
+| path     | string   | A string indicating the filename or path. Due to markdown limitations this can only be a single word                        |

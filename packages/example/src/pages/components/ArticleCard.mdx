@@ -21,7 +21,7 @@ The `<ArticleCard>` component should generally be used inside of a `<Row>` and `
       href="/"
       >
 
-![](/images/Article_05.png)
+![Dark article layout mockup](/images/Article_05.png)
 
   </ArticleCard>
 </Column>
@@ -33,7 +33,7 @@ The `<ArticleCard>` component should generally be used inside of a `<Row>` and `
       actionIcon="arrowRight"
       >
 
-![](/images/Article_05.png)
+![Dark article layout mockup](/images/Article_05.png)
 
   </ArticleCard>
 </Column>
@@ -44,7 +44,7 @@ The `<ArticleCard>` component should generally be used inside of a `<Row>` and `
       disabled
       >
 
-![](/images/Article_05.png)
+![Dark article layout mockup](/images/Article_05.png)
 
   </ArticleCard>
 </Column>
@@ -56,7 +56,7 @@ The `<ArticleCard>` component should generally be used inside of a `<Row>` and `
       actionIcon="download"
       >
 
-![](/images/Article_05.png)
+![Dark article layout mockup](/images/Article_05.png)
 
   </ArticleCard>
 </Column>
@@ -70,7 +70,7 @@ The `<ArticleCard>` component should generally be used inside of a `<Row>` and `
       actionIcon="email"
       >
 
-![](/images/Article_05.png)
+![Dark article layout mockup](/images/Article_05.png)
 
   </ArticleCard>
 </Column>
@@ -84,7 +84,7 @@ The `<ArticleCard>` component should generally be used inside of a `<Row>` and `
       disabled
       >
 
-![](/images/Article_05.png)
+![Dark article layout mockup](/images/Article_05.png)
 
   </ArticleCard>
 </Column>
@@ -92,10 +92,9 @@ The `<ArticleCard>` component should generally be used inside of a `<Row>` and `
 
 ## Code
 
-```
-
+```jsx path=components/ArticleCard/ArticleCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ArticleCard
 <Row>
-<Column colMd={4} colLg={4} noGutterMdLeft>
+  <Column colMd={4} colLg={4} noGutterMdLeft>
     <ArticleCard
       subTitle="subTitle"
       title="Title"
@@ -103,48 +102,40 @@ The `<ArticleCard>` component should generally be used inside of a `<Row>` and `
       date="April 29, 2019"
       readTime="Read time: 5 min"
       href="/"
-      >
-
-![](/images/Article_05.png)
-
-  </ArticleCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterMdLeft>
+    >
+      ![Dark article layout mockup](/images/Article_05.png)
+    </ArticleCard>
+  </Column>
+  <Column colMd={4} colLg={4} noGutterMdLeft>
     <ArticleCard
       title="Explore & Create"
       author="Josh Black"
       href="https://www.ibm.com"
       actionIcon="arrowRight"
-      >
-
-![](/images/Article_05.png)
-
-  </ArticleCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterMdLeft>
+    >
+      ![Dark article layout mockup](/images/Article_05.png)
+    </ArticleCard>
+  </Column>
+  <Column colMd={4} colLg={4} noGutterMdLeft>
     <ArticleCard
       title="Explore & Create a longer title example in this space"
       href="https://www.ibm.com"
       disabled
-      >
-
-![](/images/Article_05.png)
-
-  </ArticleCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterMdLeft>
+    >
+      ![Dark article layout mockup](/images/Article_05.png)
+    </ArticleCard>
+  </Column>
+  <Column colMd={4} colLg={4} noGutterMdLeft>
     <ArticleCard
       title="Explore & Create"
       color="dark"
       href="https://www.ibm.com"
       actionIcon="download"
-      >
-
-![](/images/Article_05.png)
-
-  </ArticleCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterMdLeft>
+    >
+      ![Dark article layout mockup](/images/Article_05.png)
+    </ArticleCard>
+  </Column>
+  <Column colMd={4} colLg={4} noGutterMdLeft>
     <ArticleCard
       title="Explore & Create"
       author="Josh Black"
@@ -152,13 +143,11 @@ The `<ArticleCard>` component should generally be used inside of a `<Row>` and `
       color="dark"
       href="https://www.ibm.com"
       actionIcon="email"
-      >
-
-![](/images/Article_05.png)
-
-  </ArticleCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterMdLeft>
+    >
+      ![Dark article layout mockup](/images/Article_05.png)
+    </ArticleCard>
+  </Column>
+  <Column colMd={4} colLg={4} noGutterMdLeft>
     <ArticleCard
       title="Explore & Create"
       author="Josh Black"
@@ -166,28 +155,25 @@ The `<ArticleCard>` component should generally be used inside of a `<Row>` and `
       readTime="Read time: 5 min"
       color="dark"
       disabled
-      >
-
-![](/images/Article_05.png)
-
-  </ArticleCard>
-</Column>
+    >
+      ![Dark article layout mockup](/images/Article_05.png)
+    </ArticleCard>
+  </Column>
 </Row>
 ```
 
 ## Props
 
-| property    | propType | required | default  | description                                                                                         |
-| ----------- | -------- | -------- | -------- | --------------------------------------------------------------------------------------------------- |
-| children    | node     |          |          | Use 32x32 image as child, will display in bottom left of card                                       |
-| href        | string   |          |          | Set url for card                                                                                    |
-| title       | string   |          |          | Card title                                                                                          |
-| subTitle    | string   |          |          | Card smaller sub title                                                                              |
-| author      | string   |          |          | Author of article                                                                                   |
-| date        | string   |          |          | Date article published                                                                              |
-| readTime    | string   |          |          | Read time of article                                                                                |
-| actionIcon  | string   |          | `launch` | Action icon, default is launch, options are `Launch`, `ArrowRight`, `Download`, `Disabled`, `Email` |
-| aspectRatio | string   |          | 2:1      | Set card aspect ratio, default is 2:1, options are 1:1, 16:9, 4:3                                   |
-| color       | string   |          | light    | Set to `dark` for dark background                                                                   |
-| disabled    | bool     |          | false    | Set for disabled card                                                                               |
-| className   | string   |          |          | Add custom class name                                                                               |
+| property   | propType | required | default  | description                                                                                         |
+| ---------- | -------- | -------- | -------- | --------------------------------------------------------------------------------------------------- |
+| children   | node     |          |          | Use 32x32 image as child, will display in bottom left of card                                       |
+| href       | string   |          |          | Set url for card                                                                                    |
+| title      | string   |          |          | Card title                                                                                          |
+| subTitle   | string   |          |          | Card smaller sub title                                                                              |
+| author     | string   |          |          | Author of article                                                                                   |
+| date       | string   |          |          | Date article published                                                                              |
+| readTime   | string   |          |          | Read time of article                                                                                |
+| actionIcon | string   |          | `launch` | Action icon, default is launch, options are `Launch`, `ArrowRight`, `Download`, `Disabled`, `Email` |
+| color      | string   |          | light    | Set to `dark` for dark background                                                                   |
+| disabled   | bool     |          | false    | Set for disabled card                                                                               |
+| className  | string   |          |          | Add custom class name                                                                               |

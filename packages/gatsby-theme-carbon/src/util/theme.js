@@ -1,6 +1,4 @@
-import { styles } from '@carbon/type';
-import { white } from '@carbon/themes';
-import { spacing, layout } from '@carbon/layout';
+import { styles, white, spacing, layout } from '@carbon/elements';
 
 const theme = {
   typeStyles: styles,

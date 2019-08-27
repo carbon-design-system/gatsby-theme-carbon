@@ -20,6 +20,7 @@
 }
 
 .#{$prefix}--example__content img {
+  display: block;
   margin-bottom: 0;
   width: 100%;
 }
@@ -107,6 +108,13 @@
 
 .#{$prefix}--example__caption {
   padding: $spacing-03 0 0 0;
+  @include carbon--breakpoint('sm') {
+    width: 100%;
+  }
+
+  @include carbon--breakpoint('md') {
+    width: 75%;
+  }
 }
 
 .#{$prefix}--example__title {
@@ -130,16 +138,6 @@
   padding-bottom: $spacing-06;
 }
 
-.#{$prefix}--example__caption {
-  @include carbon--breakpoint('sm') {
-    width: 100%;
-  }
-
-  @include carbon--breakpoint('md') {
-    width: 75%;
-  }
-}
-
 .#{$prefix}--col-lg-4 .#{$prefix}--example__caption {
   @include carbon--breakpoint('md') {
     width: 100%;
@@ -151,7 +149,7 @@
   margin-bottom: 0;
 }
 
-// Video
-.#{$prefix}--example [class^='Video-module--video'] {
+//Video
+.#{$prefix}--example [class^='Video-module--video-container'] {
   margin-bottom: 0;
 }

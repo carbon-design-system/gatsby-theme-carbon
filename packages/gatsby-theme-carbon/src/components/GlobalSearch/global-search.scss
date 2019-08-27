@@ -80,12 +80,8 @@
   .algolia-autocomplete .algolia-docsearch-suggestion--category-header {
     @include carbon--type-style('label-01');
     margin: 0 16px;
-    padding: 0 0 $spacing-xs;
+    padding: $spacing-xs 0;
     color: $text-02;
-  }
-
-  .algolia-autocomplete .algolia-docsearch-suggestion--category-header {
-    padding-top: $spacing-xs;
   }
 
   /* Category (eg. Contributing, Grid, Style) */

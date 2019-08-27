@@ -1,15 +1,41 @@
+- title: Getting started
+  pages:
+    - path: /getting-started
+- title: Demo
+  pages:
+    - path: /demo
+- title: Gallery
+  pages:
+    - path: /gallery
+- title: Contributions
+  pages:
+    - path: /contributions
+- title: Guides
+  pages:
+    - title: Configuration
+      path: /guides/configuration
+    - title: Shadowing
+      path: /guides/shadowing
+    - title: Styling
+      path: /guides/styling
+    - title: Navigation
+      path: /guides/navigation/sidebar
 - title: Components
   pages:
     - title: Markdown
       path: /components/markdown
-    - title: Demo
-      path: /components/demo
     - title: Grid
       path: /components/Grid
+    - title: Accordion
+      path: /components/Accordion
+    - title: ArtDirection
+      path: /components/ArtDirection
     - title: DoDontExample
       path: /components/DoDontExample
     - title: Caption
       path: /components/Caption
+    - title: Code blocks
+      path: /components/code-blocks
     - title: Aside
       path: /components/Aside
     - title: AnchorLinks
@@ -28,28 +54,5 @@
       path: /components/Tabs
     - title: Video
       path: /components/Video
-- title: Contributing
-  pages:
-    - title: Agreement
-      path: /contributing/agreement
-    - title: Governance
-      path: /contributing/governance
-    - title: Designers
-      path: /contributing/designers
-- title: Getting Started
-  pages:
-    - title: Developers
-      path: /getting-started/developers/react
-    - title: About Carbon
-      path: /getting-started/about-carbon
-    - title: Designers
-      path: /getting-started/designers
-- title: Top Level With Tabs
-  pages:
-    - path: /top-level-with-tabs/tab-one
-- title: Resources
-  pages:
-    - path: /resources
-- title: Designers
-  pages:
-    - path: /designers
+    - title: Image Gallery
+      path: /components/ImageGallery

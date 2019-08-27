@@ -5,12 +5,20 @@ import Meta from './Meta';
 import Header from './Header';
 import Switcher from './Switcher';
 import Footer from './Footer';
-import MDXProvider from './MDXProvider';
 import Container from './Container';
 
 import '../styles/index.scss';
 
-const Layout = ({ children, homepage, shouldHideHeader, ...rest }) => {
+const Layout = ({
+  children,
+  homepage,
+  theme,
+  titleType,
+  pageTitle,
+  pageDescription,
+  pageKeywords,
+  ...rest
+}) => {
   const is404 = children.key === null;
 
   useLayoutEffect(() => {
@@ -27,16 +35,17 @@ const Layout = ({ children, homepage, shouldHideHeader, ...rest }) => {
 
   return (
     <>
-      <Meta />
-      <Header shouldHideHeader={shouldHideHeader} />
-      <Switcher />
-      <LeftNav
-        shouldHideHeader={shouldHideHeader}
-        homepage={homepage}
-        is404Page={is404}
+      <Meta
+        titleType={titleType}
+        pageTitle={pageTitle}
+        pageDescription={pageDescription}
+        pageKeywords={pageKeywords}
       />
-      <Container homepage={homepage}>
-        <MDXProvider>{children}</MDXProvider>
+      <Header />
+      <Switcher />
+      <LeftNav homepage={homepage} is404Page={is404} theme={theme} />
+      <Container homepage={homepage} theme={theme}>
+        {children}
         <Footer />
       </Container>
     </>

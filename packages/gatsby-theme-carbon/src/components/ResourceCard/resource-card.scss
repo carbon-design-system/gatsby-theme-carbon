@@ -28,8 +28,20 @@
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-  width: 32px;
-  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.#{$prefix}--resource-card__icon--img .gatsby-resp-image-wrapper,
+.#{$prefix}--resource-card__icon--img img[src*='gif'],
+.#{$prefix}--resource-card__icon--img img[src*='svg'] {
+  margin-bottom: 0;
+}
+
+.#{$prefix}--resource-card__icon--img .gatsby-resp-image-wrapper {
+  position: static !important; //important needed to override inline style added by Gatsby
 }
 
 .#{$prefix}--resource-card__icon--action {
@@ -73,6 +85,11 @@
   .#{$prefix}--resource-card__icon--action
   svg {
   fill: $disabled-02;
+}
+
+.#{$prefix}--resource-card--disabled .#{$prefix}--resource-card__icon--img {
+  filter: grayscale(100%);
+  opacity: 0.5;
 }
 
 // Disabled dark

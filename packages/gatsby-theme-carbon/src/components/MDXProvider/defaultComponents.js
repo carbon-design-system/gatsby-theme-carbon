@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { P, H1, H2, H3, H4, H5, Ul, Ol, Blockquote } from '../markdown';
+import { P, H1, H2, H3, H4, H5, Ul, Ol, Li, Blockquote } from '../markdown';
 import PageTable from '../PageTable';
 import Code from '../Code';
 import PageDescription from '../PageDescription';
@@ -12,10 +12,14 @@ import ArticleCard from '../ArticleCard';
 import Aside from '../Aside';
 import FeatureCard from '../FeatureCard';
 import ImageCard from '../ImageCard';
+import ImageGallery from '../ImageGallery';
+import ImageGalleryImage from '../ImageGallery/ImageGalleryImage';
 import { Row, Column, Grid } from '../Grid';
 import { AnchorLink, AnchorLinks } from '../AnchorLinks';
 import { Tab, Tabs } from '../Tabs';
 import Link from '../Link';
+import { Accordion, AccordionItem } from '../Accordion';
+import ArtDirection from '../ArtDirection';
 
 const components = {
   wrapper: function Wrapper({ children, ...props }) {
@@ -29,11 +33,15 @@ const components = {
   p: P,
   ol: Ol,
   ul: Ul,
+  li: Li,
   blockquote: Blockquote,
-  pre: Code,
+  code: Code,
   table: PageTable,
   a: Link,
+  ArtDirection,
   PageDescription,
+  Accordion,
+  AccordionItem,
   Video,
   DoDontExample,
   Row,
@@ -45,6 +53,8 @@ const components = {
   Aside,
   FeatureCard,
   ImageCard,
+  ImageGallery,
+  ImageGalleryImage,
   AnchorLink,
   AnchorLinks,
   Tab,

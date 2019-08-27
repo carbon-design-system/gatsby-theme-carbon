@@ -1,5 +1,7 @@
 ---
 title: Markdown
+description: 'Carbon Gatsby theme markdown documentation'
+keywords: 'ibm,carbon,gatsby,mdx,markdown'
 ---
 
 <PageDescription>
@@ -18,8 +20,20 @@ For most pages, we recommend starting with a `PageDescription` followed by `Anch
   <AnchorLink>Images</AnchorLink>
   <AnchorLink>Code blocks</AnchorLink>
   <AnchorLink>Tables</AnchorLink>
-  <AnchorLink>Blockquotes</AnchorLink>
+  <AnchorLink>Blockquotes and citations</AnchorLink>
 </AnchorLinks>
+
+## MDX Frontmatter
+
+You can declare frontmatter in your `.mdx` files to provide specific metadata for the theme to use. The most important of which is the `title`. You can also provide a descriptions and keywords which will be added to the `head` of your document.
+
+```md
+---
+title: Markdown
+description: 'Carbon Gatsby theme markdown documentation'
+keywords: 'ibm,carbon,gatsby,mdx,markdown'
+---
+```
 
 ## Text decoration
 
@@ -30,9 +44,9 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 #### Code
 
-```
-Emphasis, aka italics, with *asterisks* or _underscores_.
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+```markdown https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/markdown
+Emphasis, aka italics, with _asterisks_ or _underscores_.
+Strong emphasis, aka bold, with **asterisks** or **underscores**.
 Combined emphasis with **asterisks and _underscores_**.
 Strikethrough uses two tildes. ~~Scratch this.~~
 ```
@@ -51,33 +65,67 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 #### Code
 
-```
+```markdown src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/markdown
 ## H2
+
 ### H3
+
 #### H4
+
 ##### H5
 ```
 
 ## Lists
 
-1. First ordered list item
-2. Another item
-   1. Nested items
-3. Actual numbers don't matter, just that it's a number
+**Unordered lists**
 
 - Unordered list can use asterisks
+- Or hyphens to create list items
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+- dolore magna aliqua. Pharetra massa massa ultricies mi quis. Adipiscing enim eu turpis egestas pretium aenean.
+- Massa eget egestas purus viverra accumsan in nisl nisi.
+- Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique.
+
+**Ordered lists**
+
+1. First ordered list item
+2. Item with a nested item
+   1. Nested list item
+3. In markdown, the actual numbers don't matter, just that it's a number
+4. In markdown, the actual numbers don't matter, just that it's a number
+
+**Nested lists**
+
+- Unordered list can use asterisks
+  - Nested list item
 - Or hyphens to create list items
 
 #### Code
 
-```
-1. First ordered list item
-2. Another item
-   1. Nested items
-3. Actual numbers don't matter, just that it's a number
+```markdown src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/markdown
+- Unordered list can use asterisks
 
-* Unordered list can use asterisks
-- Or hyphens to create list items
+* Or hyphens to create list items
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+- dolore magna aliqua. Pharetra massa massa ultricies mi quis. Adipiscing enim eu turpis egestas pretium aenean.
+- Massa eget egestas purus viverra accumsan in nisl nisi.
+- Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique.
+```
+
+```markdown src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/markdown
+1. First ordered list item
+2. Item with a nested item
+   1. Nested list item
+3. In markdown, the actual numbers don't matter, just that it's a number
+4. In markdown, the actual numbers don't matter, just that it's a number
+```
+
+```markdown src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/markdown
+1. First ordered list item
+1. Item with a nested item
+   1. Nested list item
+1. In markdown, the actual numbers don't matter, just that it's a number
 ```
 
 ## Links
@@ -94,7 +142,7 @@ example.com (but not on Github, for example).
 
 #### Code
 
-```
+```markdown src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/markdown
 [I'm a markdown link](https://www.carbondesignsystem.com)
 
 [I'm a markdown link with title](https://www.carbondesignsystem.com "Google's Homepage")
@@ -110,32 +158,40 @@ Some text to show that the reference links can follow later.
 
 ## Images
 
-![Alt text](../../images/blossom.jpg)
+![Alt text goes here](images/quantum.png)
 
 #### Code
 
-```
-![Alt text](../../images/blossom.jpg)
+```markdown src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/markdown
+![Alt text goes here](images/quantum.png)
 ```
 
-## Inline code and code blocks
+## Code blocks
+
+You can read in depth about syntax highlighting and advanced code snippet features on the [Code blocks](/components/code-blocks) page.
 
 Inline `code` has `back-ticks around` it.
 
-```
-Blocks of code have three back-ticks above and below
+```markdown Title
+Blocks of code have three back-ticks above and below.
+
+You can specify a language by placing it after the backticks.
+
+You can also supply a source code URL or title to go at the top of the code block
 ```
 
 #### Code
 
-````
+````markdown src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/markdown
 Inline `code` has `back-ticks around` it.
 
-\```
+```markdown Title
 Blocks have three back-ticks above and below.
 Pretend the backslashes aren't there.
-\```
+```
 ````
+
+You can view a list of included languages at the [react-prism-renderer repo](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js).
 
 ## Tables
 
@@ -157,41 +213,53 @@ raw Markdown line up prettily. You can also use inline Markdown.
 
 #### Code
 
-```
+```markdown src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/markdown
 Colons can be used to align columns.
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Tables        |      Are      |   Cool |
+| ------------- | :-----------: | -----: |
+| col 3 is      | right-aligned | \$1600 |
+| col 2 is      |   centered    |   \$12 |
+| zebra stripes |   are neat    |    \$1 |
 
 There must be at least 3 dashes separating each header cell.
 The outer pipes (|) are optional, and you don't need to make the
 raw Markdown line up prettily. You can also use inline Markdown.
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+| Markdown | Less      | Pretty     |
+| -------- | --------- | ---------- |
+| _Still_  | `renders` | **nicely** |
+| 1        | 2         | 3          |
 ```
 
 ## Blockquotes and citations
 
-It is more important than ever that we own our own ethos, make palpable our brand values, and incorporate an instantly identifiable IBMness in everything we do.
-
 > This is a Blockquote.
 > This line is part of the same quote.
 
-> <cite>– Allison</cite>
+> Blockquotes support basic markdown syntax,
+> like **bold** ~~strikethroughs~~ and [links.](#)
 
-It is more important than ever that we own our own ethos, make palpable our brand values, and incorporate an instantly identifiable IBMness in everything we do.
+> 1. As
+> 1. Well
+> 1. As
+> 1. Lists!
+
+> <cite>– Alison</cite>
 
 #### Code
 
-```
+```markdown path=components/markdown src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/markdown
 > This is a Blockquote.
 > This line is part of the same quote.
 
-> <cite>– Allison</cite>
+> Blockquotes support basic markdown syntax,
+> like **bold** ~~strikethroughs~~ and [links.](#)
+
+> 1. As
+> 1. Well
+> 1. As
+> 1. Lists!
+
+> <cite>– Alison</cite>
 ```

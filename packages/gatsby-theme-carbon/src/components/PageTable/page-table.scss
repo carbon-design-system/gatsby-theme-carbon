@@ -1,3 +1,7 @@
+.spacing-table td {
+  vertical-align: top;
+}
+
 .page-table,
 .component-docs table {
   margin-bottom: 1.5rem;
@@ -42,7 +46,7 @@
           min-width: rem(100px);
         }
 
-       @include carbon--breakpoint('xlg')  {
+        @include carbon--breakpoint('xlg') {
           min-width: rem(150px);
         }
       }
@@ -78,6 +82,12 @@
   overflow-x: auto;
 }
 
-.spacing-table td {
-  vertical-align: top;
+// dark background
+.container--dark .page-table thead th {
+  background: $carbon--gray-90;
+  color: $inverse-01;
+}
+
+.container--dark .page-table td {
+  color: $inverse-01;
 }

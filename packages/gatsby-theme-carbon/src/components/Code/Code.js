@@ -1,63 +1,68 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { CodeSnippet } from 'carbon-components-react';
+import Highlight, { defaultProps } from 'prism-react-renderer';
 
-/* import Prism from 'prismjs';
-import 'prismjs/components/prism-bash';
-import 'prismjs/components/prism-scss'; */
-import { CopyToClipboard } from 'react-copy-to-clipboard/lib/Component';
+import cx from 'classnames';
+
 import { Row } from '../Grid';
-import { settings } from 'carbon-components';
+import prismTheme from './prismTheme';
 
-const { prefix } = settings;
+import {
+  highlight,
+  container,
+  sideBarMinHeight,
+  row,
+} from './Code.module.scss';
 
-export default class Code extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
+import PathRow from './PathRow';
+import Sidebar from './Sidebar';
+
+const Code = ({ children, className: classNameProp = '', path, src }) => {
+  const language = classNameProp.replace(/language-/, '');
+
+  const removeTrailingEmptyLine = lines => {
+    const [lastLine] = lines.splice(-1);
+    if (lastLine[0].empty) {
+      return lines;
+    }
+    return [...lines, lastLine];
   };
 
-  state = {
-    copied: false,
-    multi: true,
-  };
+  return (
+    <Row className={row}>
+      <PathRow src={src} path={path}>
+        {children}
+      </PathRow>
+      <Highlight
+        {...defaultProps}
+        code={children}
+        language={language}
+        theme={prismTheme}
+      >
+        {({ className, style, tokens, getLineProps, getTokenProps }) => (
+          <div className={container}>
+            <pre
+              className={cx(highlight, {
+                [sideBarMinHeight]: !path && src,
+                [className]: className,
+              })}
+              style={style}
+            >
+              {removeTrailingEmptyLine(tokens).map((line, i) => (
+                <div {...getLineProps({ line, key: i })}>
+                  {line.map((token, key) => (
+                    <span {...getTokenProps({ token, key })} />
+                  ))}
+                </div>
+              ))}
+            </pre>
+            <Sidebar path={path} src={src}>
+              {children}
+            </Sidebar>
+          </div>
+        )}
+      </Highlight>
+    </Row>
+  );
+};
 
-  componentDidMount() {
-    //Prism.highlightAll();
-    if (this.codeRef) {
-      if (this.codeRef.clientHeight > 20) {
-        this.setState({ multi: true });
-      } else {
-        this.setState({ multi: false });
-      }
-    }
-  }
-
-  /*  componentDidUpdate() {
-    Prism.highlightAll();
-  } */
-
-  render() {
-    const { children } = this.props;
-    const type = this.state.multi ? 'multi' : 'single';
-
-    let textToCopy;
-    if (children.props.children) {
-      textToCopy = children.props.children.replace(/(\$ )+/g, '');
-    }
-
-    return (
-      <Row>
-        <div className={`${prefix}--snippet--website`}>
-          <CopyToClipboard
-            text={textToCopy}
-            onCopy={() => this.setState({ copied: true })}
-          >
-            <CodeSnippet type={type}>
-              <div ref={element => (this.codeRef = element)}>{children}</div>
-            </CodeSnippet>
-          </CopyToClipboard>
-        </div>
-      </Row>
-    );
-  }
-}
+export default Code;

@@ -1,0 +1,15 @@
+.overlay {
+  z-index: 8000; /* z('overlay') */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: $overlay-01;
+  transition: all 0.15s ease;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.visible {
+  pointer-events: auto;
+  opacity: 1;
+}

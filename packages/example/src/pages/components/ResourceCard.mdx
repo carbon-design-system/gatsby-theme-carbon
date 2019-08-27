@@ -4,7 +4,7 @@ title: ResourceCard
 
 <PageDescription>
 
-The `<ResourceCard>` component should generally be used inside of a `<Row>` and test `<Column>` with a `className="resource-card-group"` placed on the container row. This allows the correct border placement between a group of cards.
+The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<Row className="resource-card-group">`. This allows the correct border placement between a group of cards.
 
 </PageDescription>
 
@@ -20,7 +20,7 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
       href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
       >
 
-![](/images/github-icon.png)
+![IBM Rebus](/images/rebus.svg)
 
   </ResourceCard>
 </Column>
@@ -32,7 +32,7 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
       href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
       >
 
-![](/images/github-icon.png)
+![Github icon](/images/github-icon.png)
 
   </ResourceCard>
 </Column>
@@ -46,7 +46,7 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
       href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
       >
 
-![](/images/sketch-icon.png)
+![Sketch icon](/images/sketch-icon.png)
 
   </ResourceCard>
 </Column>
@@ -57,6 +57,8 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
       disabled
       href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
       >
+
+![Sketch icon](/images/sketch-icon.png)
 
   </ResourceCard>
 </Column>
@@ -64,71 +66,87 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
 
 ## Code
 
+#### Group
+
+```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
+<Row className="resource-card-group">
+  <Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Carbon Design System"
+      href="https://www.carbondesignsystem.com"
+    >
+      ![Github icon](/images/github-icon.png)
+    </ResourceCard>
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Carbon Design System"
+      href="https://www.carbondesignsystem.com"
+    >
+      ![Github icon](/images/github-icon.png)
+    </ResourceCard>
+  </Column>
+</Row>
+```
+
 #### With title
 
-```
+```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceCard
-      subTitle="With subtitle"
-      title="Title"
-      aspectRatio="2:1"
-      actionIcon="arrowRight"
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-      >
-
-![](/images/github-icon.png)
-
+  <ResourceCard
+    subTitle="With subtitle"
+    title="Title"
+    aspectRatio="2:1"
+    actionIcon="arrowRight"
+    href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  >
+    ![Github icon](/images/github-icon.png)
   </ResourceCard>
 </Column>
 ```
 
 #### Only subtitle
 
-```
+```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceCard
-      subTitle="Only subtitle"
-      actionIcon="download"
-      aspectRatio="2:1"
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-      >
-
-![](/images/github-icon.png)
-
+  <ResourceCard
+    subTitle="Only subtitle"
+    actionIcon="download"
+    aspectRatio="2:1"
+    href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  >
+    ![Github icon](/images/github-icon.png)
   </ResourceCard>
 </Column>
-
 ```
 
 #### Dark
 
-```
+```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceCard
-      subTitle="Alternate color"
-      title="Dark"
-      aspectRatio="2:1"
-      color="dark"
-      actionIcon="email"
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-      >
-
-![](/images/sketch-icon.png)
-
+  <ResourceCard
+    subTitle="Alternate color"
+    title="Dark"
+    aspectRatio="2:1"
+    color="dark"
+    actionIcon="email"
+    href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  >
+    ![Sketch icon](/images/sketch-icon.png)
   </ResourceCard>
 </Column>
 ```
 
 #### Disabled
 
-```
+```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
 <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceCard
-      title="Disabled card"
-      aspectRatio="2:1"
-      disabled
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-    />
+  <ResourceCard
+    title="Disabled card"
+    aspectRatio="2:1"
+    disabled
+    href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  />
 </Column>
 ```
 
@@ -140,7 +158,7 @@ The `<ResourceCard>` component should generally be used inside of a `<Row>` and 
 | href        | string   |          |          | Set url for card                                                                                    |
 | subTitle    | string   |          |          | Smaller title                                                                                       |
 | title       | string   |          |          | Large title                                                                                         |
-| actionIcon  | string   |          | `launch` | Action icon, default is launch, options are `Launch`, `ArrowRight`, `Download`, `Disabled`, `Email` |
+| actionIcon  | string   |          | `launch` | Action icon, default is launch, options are `launch`, `arrowRight`, `download`, `disabled`, `email` |
 | aspectRatio | string   |          | 2:1      | Set card aspect ratio, default is 2:1, options are 1:1, 16:9, 4:3                                   |
 | color       | string   |          | light    | Set to `dark` for dark background                                                                   |
 | disabled    | bool     |          | false    | Set for disabled card                                                                               |

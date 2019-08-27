@@ -1,0 +1,297 @@
+.#{$prefix}--side-nav {
+  border-right: 1px solid $carbon--gray-80;
+}
+
+// Bottom links
+.#{$prefix}--side-nav__divider {
+  display: block;
+  margin: rem(64px) 1rem 0;
+  border-style: solid;
+  border-bottom: none;
+  border-color: $carbon--gray-80;
+}
+
+.#{$prefix}--side-nav--website--light .#{$prefix}--side-nav__divider {
+  border-color: $ui-03;
+}
+
+.#{$prefix}--side-nav--website .#{$prefix}--side-nav__item {
+  &:nth-last-child(2) {
+    .#{$prefix}--side-nav--website-link {
+      margin-top: $spacing-03;
+    }
+  }
+
+  &:nth-last-child(2),
+  &:nth-last-child(1) {
+    .#{$prefix}--side-nav--website-link {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    .#{$prefix}--side-nav__link-text {
+      padding-left: 0;
+    }
+
+    .#{$prefix}--side-nav--website-link > .#{$prefix}--side-nav__icon {
+      display: block;
+      flex: 0;
+    }
+  }
+}
+
+//===================
+// SIDE NAV overrides
+//===================
+
+.#{$prefix}--side-nav.#{$prefix}--side-nav--website--light
+  .#{$prefix}--side-nav__item.#{$prefix}--side-nav__item--active
+  .#{$prefix}--side-nav__submenu[aria-haspopup='true'] {
+  color: $text-01;
+
+  .#{$prefix}--side-nav__icon svg {
+    fill: $icon-01;
+  }
+}
+
+.#{$prefix}--side-nav.#{$prefix}--side-nav--website--light
+  .#{$prefix}--side-nav__item.#{$prefix}--side-nav__item--active
+  .#{$prefix}--side-nav__submenu[aria-haspopup='true'][aria-expanded='false'] {
+  background-color: $ui-03;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    background-color: $brand-01;
+  }
+}
+
+.#{$prefix}--side-nav.#{$prefix}--side-nav--website--light {
+  background-color: $ui-02;
+  border-right: none;
+}
+
+.#{$prefix}--side-nav__navigation {
+  padding-top: $spacing-05;
+  background-color: $ui-05;
+}
+
+.#{$prefix}--side-nav--website--light .#{$prefix}--side-nav__navigation {
+  background-color: $ui-02;
+}
+
+.#{$prefix}--side-nav--website .#{$prefix}--side-nav__icon > svg {
+  fill: $active-01;
+}
+
+.#{$prefix}--side-nav--website--light .#{$prefix}--side-nav__icon > svg {
+  fill: $text-02;
+}
+
+.#{$prefix}--side-nav .#{$prefix}--side-nav__submenu[aria-haspopup='true'],
+.#{$prefix}--side-nav__item > a.#{$prefix}--side-nav__link {
+  @include carbon--type-style('heading-01');
+  color: $active-01;
+}
+
+.#{$prefix}--side-nav
+  a.#{$prefix}--side-nav__link
+  > .#{$prefix}--side-nav__link-text {
+  color: $active-01;
+}
+
+.#{$prefix}--side-nav.#{$prefix}--side-nav--website--light
+  .#{$prefix}--side-nav__item
+  .#{$prefix}--side-nav__submenu[aria-haspopup='true'],
+.#{$prefix}--side-nav--website--light
+  .#{$prefix}--side-nav__item
+  > a.#{$prefix}--side-nav__link,
+.#{$prefix}--side-nav.#{$prefix}--side-nav--website--light
+  a.#{$prefix}--side-nav__link
+  > .#{$prefix}--side-nav__link-text {
+  color: $text-02;
+}
+
+.#{$prefix}--side-nav
+  a.#{$prefix}--side-nav__link:hover
+  > .#{$prefix}--side-nav__link-text,
+.#{$prefix}--side-nav
+  a.#{$prefix}--side-nav__link[aria-current='page']
+  > .#{$prefix}--side-nav__link-text {
+  color: $ui-01;
+}
+
+.#{$prefix}--side-nav.#{$prefix}--side-nav--website--light
+  a.#{$prefix}--side-nav__link:hover
+  > .#{$prefix}--side-nav__link-text,
+.#{$prefix}--side-nav.#{$prefix}--side-nav--website--light
+  a.#{$prefix}--side-nav__link[aria-current='page']
+  > .#{$prefix}--side-nav__link-text {
+  color: $text-01;
+}
+
+.#{$prefix}--side-nav__item:not(.#{$prefix}--side-nav__item--active):hover {
+  background-color: $ui-05;
+}
+
+.#{$prefix}--side-nav--website--light
+  .#{$prefix}--side-nav__item:not(.#{$prefix}--side-nav__item--active):hover {
+  background-color: $ui-02;
+}
+
+.#{$prefix}--side-nav__item:not(.#{$prefix}--side-nav__item--active):hover
+  > .#{$prefix}--side-nav__submenu,
+.#{$prefix}--side-nav__menu[role='menu']
+  a.#{$prefix}--side-nav__link[role='menuitem']:not(.#{$prefix}--side-nav__link--current):not([aria-current='page']):hover,
+.#{$prefix}--side-nav__item:not(.#{$prefix}--side-nav__item--active):hover
+  > .#{$prefix}--side-nav__link {
+  background-color: #353535;
+  color: $ui-01;
+
+  .#{$prefix}--side-nav__link-text {
+    color: $ui-01;
+  }
+
+  .#{$prefix}--side-nav__icon svg {
+    fill: $ui-01;
+  }
+}
+
+.#{$prefix}--side-nav--website--light
+  .#{$prefix}--side-nav__item:not(.#{$prefix}--side-nav__item--active):hover
+  > .#{$prefix}--side-nav__submenu,
+.#{$prefix}--side-nav--website--light
+  .#{$prefix}--side-nav__menu[role='menu']
+  a.#{$prefix}--side-nav__link[role='menuitem']:not(.#{$prefix}--side-nav__link--current):not([aria-current='page']):hover,
+.#{$prefix}--side-nav--website--light
+  .#{$prefix}--side-nav__item:not(.#{$prefix}--side-nav__item--active):hover
+  > .#{$prefix}--side-nav__link {
+  background-color: #e5e5e5;
+  color: $text-01;
+
+  .#{$prefix}--side-nav__link-text {
+    color: $text-01;
+  }
+
+  .#{$prefix}--side-nav__icon svg {
+    fill: $text-01;
+  }
+}
+
+.#{$prefix}--side-nav
+  .#{$prefix}--side-nav__item
+  .#{$prefix}--side-nav__submenu[aria-expanded='true'] {
+  background-color: $ui-05;
+  color: $active-01;
+
+  &:hover {
+    background-color: #353535;
+    color: $ui-01;
+
+    .#{$prefix}--side-nav__icon svg {
+      fill: $ui-01;
+    }
+  }
+
+  .#{$prefix}--side-nav__icon svg {
+    fill: $active-01;
+  }
+}
+
+.#{$prefix}--side-nav.#{$prefix}--side-nav--website--light
+  .#{$prefix}--side-nav__item
+  .#{$prefix}--side-nav__submenu[aria-expanded='true'] {
+  background-color: $ui-02;
+  color: $text-02;
+
+  &:hover {
+    background-color: #e5e5e5;
+    color: $text-01;
+
+    .#{$prefix}--side-nav__icon svg {
+      fill: $text-01;
+    }
+  }
+
+  .#{$prefix}--side-nav__icon svg {
+    fill: $text-02;
+  }
+}
+
+.#{$prefix}--side-nav a.#{$prefix}--side-nav__link[aria-current='page'],
+.#{$prefix}--side-nav__menu[role='menu'] a.#{$prefix}--side-nav__link--current,
+.#{$prefix}--side-nav__menu[role='menu']
+  a.#{$prefix}--side-nav__link[aria-current='page'] {
+  background-color: $carbon--gray-80;
+}
+
+.#{$prefix}--side-nav.#{$prefix}--side-nav--website--light
+  a.#{$prefix}--side-nav__link[aria-current='page'],
+.#{$prefix}--side-nav--website--light
+  .#{$prefix}--side-nav__menu[role='menu']
+  a.#{$prefix}--side-nav__link--current,
+.#{$prefix}--side-nav--website--light
+  .#{$prefix}--side-nav__menu[role='menu']
+  a.#{$prefix}--side-nav__link[aria-current='page'] {
+  background-color: $ui-03;
+}
+
+.#{$prefix}--side-nav a.#{$prefix}--side-nav__link,
+.#{$prefix}--side-nav__submenu[aria-haspopup='true'] {
+  min-height: 2rem;
+  height: 2rem;
+}
+
+.#{$prefix}--side-nav .#{$prefix}--side-nav__icon,
+.#{$prefix}--side-nav .#{$prefix}--side-nav__icon svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.#{$prefix}--side-nav__submenu > .#{$prefix}--side-nav__icon,
+a.#{$prefix}--side-nav__link > .#{$prefix}--side-nav__icon {
+  margin-right: 0;
+}
+
+.#{$prefix}--side-nav.#{$prefix}--side-nav--website + div::before {
+  content: '';
+  visibility: hidden;
+  opacity: 0;
+  will-change: opacity;
+  transition: $transition--expansion opacity $carbon--standard-easing,
+    $transition--expansion visibility $carbon--standard-easing;
+  background: $overlay-01;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+}
+
+.#{$prefix}--side-nav.#{$prefix}--side-nav--website:not(.side-nav__closed) {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  & + div {
+    position: fixed;
+  }
+
+  & + div::before {
+    opacity: 1;
+    visibility: initial;
+  }
+
+  @include carbon--breakpoint('lg') {
+    & + div {
+      position: inherit;
+    }
+
+    & + div::before {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}

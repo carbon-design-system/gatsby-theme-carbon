@@ -1,21 +1,56 @@
-@import '~carbon-components/scss/globals/scss/vars';
-@import '~@carbon/elements/scss/type/type';
-
 .list {
   margin-bottom: 0;
   margin-top: $spacing-05;
   width: 100%;
+
   @include carbon--breakpoint('md') {
     margin-bottom: $spacing-07;
     width: 75%;
   }
+
   @include carbon--breakpoint('lg') {
     width: 58.33%;
   }
 }
 
+.list + * {
+  margin-top: $spacing-11;
+}
+
 .list--small {
   margin-top: $spacing-05;
+}
+
+.list--small + * {
+  margin-top: $spacing-10;
+}
+
+.link {
+  @include carbon--type-style('expressive-heading-03', true);
+  position: relative;
+  display: inline-block;
+  transition: color $transition--base;
+  color: $carbon--gray-100;
+  text-decoration: none;
+  margin-bottom: $spacing-03;
+  margin-left: $spacing-06;
+
+  &:hover {
+    color: $interactive-01;
+
+    &::before {
+      color: $interactive-01;
+    }
+  }
+
+  &:before {
+    content: '\21B3'; //"↳"
+    position: absolute;
+    left: -$spacing-06;
+    color: $interactive-02;
+    transition: color $transition--base;
+    cursor: pointer;
+  }
 }
 
 .list--small .link {
@@ -37,37 +72,26 @@
   }
 }
 
-.link {
-  @include carbon--type-style('expressive-heading-03', true);
-  position: relative;
-  display: inline-block;
-  transition: color $transition--base;
-  color: $interactive-02;
-  text-decoration: none;
-  margin-bottom: $spacing-02;
-  margin-left: $spacing-06;
-
-  &:hover {
-    color: $interactive-01;
-
-    &::before {
-      color: $interactive-01;
-    }
-  }
-
-  &:before {
-    content: '\21B3'; //"↳"
-    position: absolute;
-    left: -$spacing-06;
-    color: $interactive-02;
-    transition: color $transition--base;
-    cursor: pointer;
-  }
-}
-
 // Multiple Columns
 .multiple-columns {
   @include carbon--breakpoint('md') {
     column-count: 2;
+  }
+}
+
+// dark background
+:global(.container--dark) .link {
+  color: $carbon--white-0;
+
+  &:before {
+    color: $carbon--white-0;
+  }
+
+  &:hover {
+    color: $carbon--blue-40;
+
+    &::before {
+      color: $carbon--blue-40;
+    }
   }
 }

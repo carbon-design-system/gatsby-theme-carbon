@@ -18,7 +18,7 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       href="/"
       >
 
-![](/images/square.png)
+![Square](/images/square.png)
 
   </ImageCard>
   <ImageCard
@@ -31,7 +31,7 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       subTitle="Light subtitle"
       >
 
-![](./images/light-dark.jpg)
+![Light dark](./images/light-dark.jpg)
 
   </ImageCard>
 </Column>
@@ -46,7 +46,7 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       subTitleColor="light"
       >
 
-![](./images/plane.jpg)
+![Plane image](./images/plane.jpg)
 
   </ImageCard>
 </Column>
@@ -57,7 +57,7 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       hoverColor="dark"
       >
 
-![](/images/color-grid.svg)
+![color pallete array](/images/color-grid.svg)
 
   </ImageCard>
       <ImageCard
@@ -66,7 +66,7 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       href="/"
       >
 
-![](/images/square.png)
+![Square](/images/square.png)
 
   </ImageCard>
 </Column>
@@ -74,69 +74,46 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
 
 ## Code
 
-```
-
-<Row>
+```jsx path=components/ImageCard/ImageCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ImageCard
+<Row className="image-card-group">
   <Column colMd={4} colLg={4} noGutterSm>
+    <ImageCard title="Title" subTitle="Subtitle" href="/">
+      ![Square](/images/square.png)
+    </ImageCard>
     <ImageCard
-      title="Title"
-      subTitle="Subtitle"
-      href="/"
-      >
-
-![](/images/square.png)
-
-  </ImageCard>
-  <ImageCard
-      title="Title"
+      title="Dark title"
+      titleColor="dark"
       aspectRatio="1:1"
       href="/"
       actionIcon="arrowRight"
-      subTitleColor="dark"
-      subTitle="subTitle"
-      >
-
-![](/images/color-grid.svg)
-
-  </ImageCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
+      subTitleColor="light"
+      subTitle="Light subtitle"
+    >
+      ![Light dark](./images/light-dark.jpg)
+    </ImageCard>
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
     <ImageCard
       title="Title"
       subTitle="Subtitle"
       aspectRatio="1:2"
       href="/"
       actionIcon="download"
-      titleColor="dark"
-      subTitleColor="dark"
-      >
-
-![](/images/featured.png)
-
-  </ImageCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
-    <ImageCard
-      aspectRatio="1:1"
-      href="/"
-      hoverColor="dark"
-      >
-
-![](/images/color-grid.svg)
-
-  </ImageCard>
-      <ImageCard
-      disabled
-      aspectRatio="1:1"
-      href="/"
-      >
-
-![](/images/square.png)
-
-  </ImageCard>
-</Column>
+      titleColor="light"
+      subTitleColor="light"
+    >
+      ![Plane image](./images/plane.jpg)
+    </ImageCard>
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <ImageCard aspectRatio="1:1" href="/" hoverColor="dark">
+      ![color pallete array](/images/color-grid.svg)
+    </ImageCard>
+    <ImageCard disabled aspectRatio="1:1" href="/">
+      ![Square](/images/square.png)
+    </ImageCard>
+  </Column>
 </Row>
-
 ```
 
 ## Props

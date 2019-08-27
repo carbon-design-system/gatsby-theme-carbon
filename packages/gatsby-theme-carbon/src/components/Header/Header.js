@@ -8,37 +8,29 @@ import {
   HeaderGlobalBar,
   HeaderGlobalAction,
 } from 'carbon-components-react/lib/components/UIShell';
-import AppSwitcher20 from '@carbon/icons-react/es/app-switcher/20';
-import Close20 from '@carbon/icons-react/es/close/20';
+import { AppSwitcher20, Close20 } from '@carbon/icons-react';
 import cx from 'classnames';
-
-import { useScrollDirection } from '../../util/hooks';
 
 import GlobalSearch from '../GlobalSearch';
 import NavContext from '../../util/context/NavContext';
 import useMetadata from '../../util/hooks/useMetadata';
 
-import { hidden, header, icon } from './Header.module.scss';
+import {
+  header,
+  switcherButtonOpen,
+  skipToContent,
+} from './Header.module.scss';
 
-const Header = ({ children, shouldHideHeader }) => {
+const Header = ({ children }) => {
   const { leftNavIsOpen, toggleNavState, switcherIsOpen } = useContext(
     NavContext
   );
-  const direction = useScrollDirection();
   const { isSearchEnabled } = useMetadata();
-
-  const isHidden = shouldHideHeader && direction === 'down';
 
   return (
     <>
-      <ShellHeader
-        aria-label="Header"
-        className={cx({
-          [header]: true,
-          [hidden]: isHidden,
-        })}
-      >
-        <SkipToContent />
+      <ShellHeader aria-label="Header" className={header}>
+        <SkipToContent className={skipToContent} />
         <HeaderMenuButton
           className="bx--header__action--menu"
           aria-label="Open menu"
@@ -55,7 +47,7 @@ const Header = ({ children, shouldHideHeader }) => {
           {isSearchEnabled && <GlobalSearch />}
           <HeaderGlobalAction
             className={cx({
-              [icon]: true,
+              [switcherButtonOpen]: switcherIsOpen,
             })}
             aria-label="Switch"
             onClick={() => {
