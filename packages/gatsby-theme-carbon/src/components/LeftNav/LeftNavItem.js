@@ -25,9 +25,12 @@ const LeftNavItem = props => {
           ? location.pathname.replace(pathPrefix, '')
           : location.pathname;
 
-        const isActive = items.some(item => {
-          return item.path.replace(/\/$/, '') === pathname;
-        })
+        const isActive = items.some(item =>
+          pathname.split('/').length > 2
+            ? item.path.slice(0, item.path.lastIndexOf('/')) ===
+              pathname.slice(0, pathname.lastIndexOf('/'))
+            : item.path.replace(/\/$/, '') === pathname
+        );
 
         if (items.length === 1) {
           return (
