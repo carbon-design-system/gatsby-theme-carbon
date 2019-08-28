@@ -10,7 +10,6 @@
   border-left: 1px solid $inverse-02;
   transform: translateX(16rem);
   overflow-y: hidden;
-  border-bottom: 1px solid transparent;
   transition: all $duration--fast-02 carbon--motion('exit');
   @include carbon--breakpoint('lg') {
     transform: translateX(0);
