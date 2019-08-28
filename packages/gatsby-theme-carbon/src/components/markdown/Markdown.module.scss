@@ -1,18 +1,20 @@
 //---------------------------------------
 // P
 //---------------------------------------
+.paragraph-row {
+  margin-bottom: $spacing-06;
+}
+
 .paragraph {
   @include carbon--type-style('body-long-02');
-  margin-bottom: $spacing-06;
 
   @include carbon--breakpoint('md') {
-    padding-right: $spacing-07;
+    padding-right: $spacing-05;
   }
 }
 
 // Responsive by default
 .paragraph--responsive {
-  margin-left: -$spacing-05;
   padding-left: $spacing-05;
 
   // 8 col
@@ -21,12 +23,13 @@
   }
 }
 
-// If paragraph is inside a user specified row then allow the grid code to set the width
-:global(.#{$prefix}--row) .paragraph {
+// If paragraph is inside a user specified row then allow the grid code to set the width and padding
+:global(.#{$prefix}--row .#{$prefix}--row) .paragraph {
   width: 100%;
+  padding-left: 0;
 
   @include carbon--breakpoint('md') {
-    padding-right: $spacing-07;
+    padding-right: 0;
   }
 }
 
@@ -113,8 +116,6 @@
 
 // If quote is inside a user specified row then allow the grid code to set the width
 :global(.#{$prefix}--row) .blockquote .paragraph {
-  padding-right: 0;
-
   @include carbon--breakpoint('md') {
     width: 100%;
   }
