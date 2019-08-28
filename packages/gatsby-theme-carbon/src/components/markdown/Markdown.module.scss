@@ -14,11 +14,6 @@
 .paragraph--responsive {
   padding-left: $spacing-05;
 
-  // 6 col
-  @include carbon--breakpoint('md') {
-    width: 75%;
-  }
-
   // 8 col
   @include carbon--breakpoint('lg') {
     width: 66.667%;
@@ -47,10 +42,6 @@
 .h6,
 .list {
   width: 100%;
-
-  @include carbon--breakpoint('md') {
-    width: 75%;
-  }
 
   @include carbon--breakpoint('lg') {
     width: 66.667%;
@@ -114,11 +105,6 @@
 }
 
 .blockquote .paragraph--responsive {
-  // 6 col
-  @include carbon--breakpoint('md') {
-    width: calc(75% - 3rem);
-  }
-
   // 8 col
   @include carbon--breakpoint('lg') {
     width: calc(66.667% - 3rem);
