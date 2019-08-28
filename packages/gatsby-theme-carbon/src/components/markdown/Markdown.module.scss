@@ -6,7 +6,7 @@
   margin-bottom: $spacing-06;
 
   @include carbon--breakpoint('md') {
-    padding-right: $spacing-07;
+    padding-right: $spacing-05;
   }
 }
 
@@ -31,7 +31,7 @@
   padding-left: 0;
 
   @include carbon--breakpoint('md') {
-    padding-right: $spacing-05;
+    padding-right: 0;
   }
 }
 
@@ -127,8 +127,6 @@
 
 // If quote is inside a user specified row then allow the grid code to set the width
 :global(.#{$prefix}--row) .blockquote .paragraph {
-  padding-right: $spacing-07;
-
   @include carbon--breakpoint('md') {
     width: 100%;
   }
