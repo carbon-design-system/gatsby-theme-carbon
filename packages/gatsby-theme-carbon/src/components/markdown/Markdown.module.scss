@@ -1,9 +1,12 @@
 //---------------------------------------
 // P
 //---------------------------------------
+.paragraph-row {
+  margin-bottom: $spacing-06;
+}
+
 .paragraph {
   @include carbon--type-style('body-long-02');
-  margin-bottom: $spacing-06;
 
   @include carbon--breakpoint('md') {
     padding-right: $spacing-05;
