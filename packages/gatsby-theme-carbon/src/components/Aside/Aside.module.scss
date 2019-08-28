@@ -3,6 +3,10 @@
   position: relative;
   padding-top: $spacing-04;
   top: -$spacing-04;
+
+  @include carbon--breakpoint('lg') {
+    padding-right: 26%; //spacing values came from IDL site design
+  }
 }
 
 .aside:before {
@@ -17,8 +21,8 @@
 
 :global(.#{$prefix}--row) .aside p {
   @include carbon--type-style('body-long-01');
-  width: 85%;
-  padding-right: $spacing-05;
+  width: 100%;
+  padding-right: 0;
 }
 
 // dark background

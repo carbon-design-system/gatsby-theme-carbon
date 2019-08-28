@@ -30,12 +30,15 @@
 }
 
 .#{$prefix}--article-card__info {
-  @include carbon--type-style('caption-01');
   position: absolute;
   bottom: 1rem;
   left: 1rem;
   padding: 0;
   color: $text-02;
+}
+
+.#{$prefix}--article-card__info p {
+  @include carbon--type-style('caption-01');
 }
 
 .#{$prefix}--article-card__img .gatsby-resp-image-wrapper {

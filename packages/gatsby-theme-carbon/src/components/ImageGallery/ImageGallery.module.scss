@@ -1,0 +1,162 @@
+$z-01: 1;
+$z-02: 2;
+
+.add-no-scroll {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.in-dialog-gallery-container {
+  position: fixed;
+  margin: 0;
+  z-index: 10000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+}
+
+.gallery-grid {
+  height: 100%;
+  width: 100%;
+}
+
+.gallery-row {
+  height: 100%;
+}
+
+.nav-buttons-container {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-buttons {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: $z-01;
+  cursor: pointer;
+}
+
+.left-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.right-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.first-right-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: $z-01;
+  cursor: pointer;
+}
+
+.icon {
+  fill: $text-04;
+}
+
+.close-button {
+  position: absolute;
+  right: 0;
+  width: 14.5%;
+  height: 4rem;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: $z-02;
+  outline: none;
+  cursor: pointer;
+}
+
+.close-button svg {
+  position: absolute;
+  top: $spacing-09;
+  right: $spacing-07;
+}
+
+.nav-buttons:focus svg {
+  outline: 2px solid $focus;
+  outline-offset: -2px;
+}
+
+.close-button:focus svg {
+  outline: 2px solid $focus;
+  outline-offset: -2px;
+}
+
+.in-dialog-gallery-container,
+.gallery-container {
+  @include carbon--breakpoint('md') {
+    :global(.bx--col-lg-2) {
+      flex: 0 0 16.66666667%;
+      max-width: 16.66666667%;
+    }
+
+    :global(.bx--col-lg-3) {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    :global(.bx--col-lg-4) {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%;
+    }
+
+    :global(.bx--col-lg-5) {
+      flex: 0 0 41.66666667%;
+      max-width: 41.66666667%;
+    }
+
+    :global(.bx--col-lg-6) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    :global(.bx--col-lg-7) {
+      flex: 0 0 58.33333%;
+      max-width: 58.33333%;
+    }
+
+    :global(.bx--col-lg-8) {
+      flex: 0 0 66.66667%;
+      max-width: 66.66667%;
+    }
+
+    :global(.bx--col-lg-9) {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    :global(.bx--col-lg-10) {
+      flex: 0 0 83.33333%;
+      max-width: 83.33333%;
+    }
+
+    :global(.bx--col-lg-11) {
+      flex: 0 0 91.66666667%;
+      max-width: 91.66666667%;
+    }
+  }
+}

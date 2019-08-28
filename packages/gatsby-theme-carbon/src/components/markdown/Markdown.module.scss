@@ -1,21 +1,21 @@
 //---------------------------------------
 // P
 //---------------------------------------
+.paragraph-row {
+  margin-bottom: $spacing-06;
+}
+
 .paragraph {
   @include carbon--type-style('body-long-02');
-  margin-bottom: $spacing-06;
-  padding-right: $spacing-07;
+
+  @include carbon--breakpoint('md') {
+    padding-right: $spacing-05;
+  }
 }
 
 // Responsive by default
 .paragraph--responsive {
-  margin-left: -$spacing-05;
   padding-left: $spacing-05;
-
-  // 6 col
-  @include carbon--breakpoint('md') {
-    width: 75%;
-  }
 
   // 8 col
   @include carbon--breakpoint('lg') {
@@ -23,9 +23,14 @@
   }
 }
 
-// If paragraph is inside a user specified row then allow the grid code to set the width
-:global(.#{$prefix}--row) .paragraph {
-  width: calc(100% - 1rem);
+// If paragraph is inside a user specified row then allow the grid code to set the width and padding
+:global(.#{$prefix}--row .#{$prefix}--row) .paragraph {
+  width: 100%;
+  padding-left: 0;
+
+  @include carbon--breakpoint('md') {
+    padding-right: 0;
+  }
 }
 
 //---------------------------------------
@@ -40,10 +45,6 @@
 .h6,
 .list {
   width: 100%;
-
-  @include carbon--breakpoint('md') {
-    width: 75%;
-  }
 
   @include carbon--breakpoint('lg') {
     width: 66.667%;
@@ -91,22 +92,22 @@
 // Blockquote
 //---------------------------------------
 .blockquote {
-  margin: $spacing-08 0 $spacing-08 $spacing-08;
+  margin: $spacing-08 0;
   color: $carbon--blue-60;
   font-style: italic;
+
+  @include carbon--breakpoint('md') {
+    margin-left: $spacing-08;
+  }
 }
 
 .blockquote .paragraph {
   @include carbon--type-style('expressive-heading-03', true);
   margin-bottom: 0;
+  width: 100%;
 }
 
 .blockquote .paragraph--responsive {
-  // 6 col
-  @include carbon--breakpoint('md') {
-    width: calc(75% - 3rem);
-  }
-
   // 8 col
   @include carbon--breakpoint('lg') {
     width: calc(66.667% - 3rem);
@@ -115,7 +116,9 @@
 
 // If quote is inside a user specified row then allow the grid code to set the width
 :global(.#{$prefix}--row) .blockquote .paragraph {
-  width: calc(100% - 3rem);
+  @include carbon--breakpoint('md') {
+    width: 100%;
+  }
 }
 
 .blockquote cite {

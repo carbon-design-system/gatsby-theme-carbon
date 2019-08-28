@@ -14,7 +14,12 @@
   margin-bottom: $spacing-07;
 }
 
-.secondColumn {
+.firstColumn p {
+  @include carbon--type-style('expressive-heading-03', true);
+}
+
+.secondColumn,
+.secondColumn p {
   @include carbon--type-style('expressive-paragraph-01', true);
 }
 

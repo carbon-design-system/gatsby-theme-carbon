@@ -4,7 +4,6 @@ const remarkSlug = require('remark-slug');
 
 module.exports = themeOptions => {
   const {
-    additionalFontWeights = [],
     isSearchEnabled = false,
     withWebp = false,
     iconPath,
@@ -59,28 +58,6 @@ module.exports = themeOptions => {
               title: node => (node.frontmatter ? node.frontmatter.title : ''),
             },
           },
-        },
-      },
-      {
-        resolve: `gatsby-plugin-prefetch-google-fonts`,
-        options: {
-          fonts: [
-            {
-              family: `IBM Plex Sans`,
-              variants: [
-                300,
-                '300i',
-                400,
-                '400i',
-                600,
-                '600i',
-                ...additionalFontWeights,
-              ],
-            },
-            {
-              family: `IBM Plex Mono`,
-            },
-          ],
         },
       },
       {
