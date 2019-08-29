@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Player from '@vimeo/player';
+import { withPrefix } from 'gatsby';
 import {
   video,
   videoButton,
@@ -11,7 +12,7 @@ import {
   videoIsPlaying,
 } from './Video.module.scss';
 
-const Video = ({ vimeoId, title, ...props }) => {
+const Video = ({ vimeoId, title, src, ...props }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
   const iframeRef = useRef(null);
@@ -189,6 +190,7 @@ const Video = ({ vimeoId, title, ...props }) => {
         ref={videoRef}
         controls
         onEnded={onEnded}
+        src={withPrefix(src)}
         {...props}
       />
     </div>
