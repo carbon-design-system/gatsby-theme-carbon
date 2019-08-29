@@ -26,7 +26,7 @@ const search = _throttle(queryString => {
     const searchResults = lunrIndex.index
       .search(`${queryString}*`)
       .slice(0, MAX_RESULT_LIST_SIZE);
-    return searchResults.map(({ ref, ...rest }) => lunrIndex.store[ref]);
+    return searchResults.map(({ ref }) => lunrIndex.store[ref]);
   }
 }, 150);
 
