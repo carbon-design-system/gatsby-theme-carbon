@@ -42,18 +42,22 @@ module.exports = themeOptions => {
           resolvers: {
             SitePage: {
               title: node =>
-                node.context.frontmatter ? node.context.frontmatter.title : '',
+                node.context && node.context.frontmatter
+                  ? node.context.frontmatter.title
+                  : '',
               path: node => node.path,
               description: node =>
-                node.context.frontmatter
+                node.context && node.context.frontmatter
                   ? node.context.frontmatter.description
                   : '',
               keywords: node =>
-                node.context.frontmatter && node.context.frontmatter.keywords
+                node.context &&
+                node.context.frontmatter &&
+                node.context.frontmatter.keywords
                   ? node.context.frontmatter.keywords.split(',')
                   : '',
               content: node =>
-                node.context.MdxNode
+                node.context && node.context.MdxNode
                   ? node.context.MdxNode.internal.content
                   : '',
             },
