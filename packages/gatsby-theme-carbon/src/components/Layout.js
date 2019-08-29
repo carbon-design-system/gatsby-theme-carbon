@@ -6,7 +6,6 @@ import Header from './Header';
 import Switcher from './Switcher';
 import Footer from './Footer';
 import Container from './Container';
-import Search from './Search';
 
 import '../styles/index.scss';
 
@@ -46,7 +45,6 @@ const Layout = ({
       <Switcher />
       <LeftNav homepage={homepage} is404Page={is404} theme={theme} />
       <Container homepage={homepage} theme={theme}>
-        <Search />
         {children}
         <Footer />
       </Container>

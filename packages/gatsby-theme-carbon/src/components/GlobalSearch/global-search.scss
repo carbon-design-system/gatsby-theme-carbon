@@ -26,11 +26,23 @@
   .#{$prefix}--search-close {
     width: rem(48px);
     height: 100%;
-
+    border: none;
+    border-left: 2px solid $carbon--white-0;
+    transition: all $duration--fast-01 motion(standard, productive);
     &:hover {
       background: $hover-secondary;
+      border: 2px solid $carbon--white-0;
+      border-bottom: 1px solid $carbon--white-0;
+    }
+    &:focus {
+      outline: none;
       border: 2px solid $carbon--white-0 !important;
-      border-left: 0px !important;
+    }
+    &:active {
+      outline: none;
+    }
+    &::before {
+      display: none;
     }
   }
 

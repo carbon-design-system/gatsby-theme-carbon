@@ -34,10 +34,10 @@ module.exports = themeOptions => {
           languages: [{ name: 'en' }],
           fields: [
             { name: 'title', store: true, attributes: { boost: 20 } },
+            { name: 'keywords', attributes: { boost: 5 } },
             { name: 'path', store: true },
             { name: 'description', store: true },
             { name: 'content' },
-            { name: 'keywords', store: true },
           ],
           resolvers: {
             SitePage: {
