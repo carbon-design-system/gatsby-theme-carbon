@@ -54,7 +54,7 @@ const GlobalSearchInput = () => {
       role="search"
     >
       <Search20
-        description="Search Maginfier"
+        description="Search Magnifier"
         className="bx--search-magnifier"
       />
       <label htmlFor="search-input" id="search-label" className="bx--label">
