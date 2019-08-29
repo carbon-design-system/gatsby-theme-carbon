@@ -9,16 +9,27 @@ import useSearch from '../../util/hooks/useSearch';
 const GlobalSearchInput = () => {
   const inputRef = useRef(null);
   const searchRef = useRef(null);
-  const [input, setInput] = useState('');
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState([]);
   const { toggleNavState } = useContext(NavContext);
 
   useEffect(() => {
     if (inputRef.current) inputRef.current.focus();
   });
 
-  useSearch();
-
   useOnClickOutside(searchRef, () => toggleNavState('searchIsOpen', 'close'));
+
+  useEffect(() => {
+    if (query && window.__LUNR__) {
+      const lunrIndex = window.__LUNR__.en;
+      const searchResults = lunrIndex.index.search(`${query}*`);
+      setResults(
+        searchResults.map(({ ref }) => console.log(ref) || lunrIndex.store[ref])
+      );
+    } else {
+      setResults([]);
+    }
+  }, [query]);
 
   return (
     <div
@@ -40,16 +51,23 @@ const GlobalSearchInput = () => {
         className="bx--search-input"
         id="doc-search"
         placeholder="Search by element, component, or token, etc"
-        value={input}
-        onChange={evt => setInput(evt.target.value)}
+        value={query}
+        onChange={evt => setQuery(evt.target.value)}
       />
+      <ul>
+        {results.map(page => (
+          <li key={page.path}>
+            <a href={page.path}>{page.title}</a>
+          </li>
+        ))}
+      </ul>
       <button
         className="bx--search-close"
         title="Clear search input"
         type="button"
         aria-label="Clear search input"
         onClick={() => {
-          setInput('');
+          setQuery('');
           toggleNavState('searchIsOpen', 'close');
         }}
       >
