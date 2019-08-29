@@ -12,7 +12,7 @@ import {
   videoIsPlaying,
 } from './Video.module.scss';
 
-const Video = ({ vimeoId, title, src, ...props }) => {
+const Video = ({ vimeoId, title, src, poster, ...props }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
   const iframeRef = useRef(null);
@@ -191,6 +191,7 @@ const Video = ({ vimeoId, title, src, ...props }) => {
         controls
         onEnded={onEnded}
         src={withPrefix(src)}
+        poster={withPrefix(poster)}
         {...props}
       />
     </div>
