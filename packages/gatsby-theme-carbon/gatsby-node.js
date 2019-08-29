@@ -32,7 +32,6 @@ exports.onCreatePage = (
 
   const { titleType = 'page' } = pluginOptions;
   const { createPage, deletePage } = actions;
-  // console.log(getNodesByType('Mdx'));
   const [relativePagePath] = page.componentPath.split('src/pages').splice('-1');
   deletePage(page);
   createPage({
