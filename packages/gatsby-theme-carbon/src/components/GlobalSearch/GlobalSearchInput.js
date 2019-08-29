@@ -72,7 +72,7 @@ const GlobalSearchInput = () => {
           type="text"
           aria-autocomplete="list"
           aria-controls="search-listbox"
-          ariac-activedescendant
+          aria-activedescendant
           className={`bx--search-input ${input}`}
           id="search-input"
           placeholder="Search by element, component, or token, etc"
