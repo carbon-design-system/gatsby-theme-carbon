@@ -44,7 +44,12 @@ const GlobalSearchInput = () => {
   useOnClickOutside(searchRef, () => toggleNavState('searchIsOpen', 'close'));
 
   useEffect(() => {
-    setResults(query ? search(query) : []);
+    if (query) {
+      const searchResults = search(query) || [];
+      setResults(searchResults);
+    } else {
+      setResults([]);
+    }
   }, [query]);
 
   return (
@@ -72,7 +77,6 @@ const GlobalSearchInput = () => {
           type="text"
           aria-autocomplete="list"
           aria-controls="search-listbox"
-          aria-activedescendant
           className={`bx--search-input ${input}`}
           id="search-input"
           placeholder="Search by element, component, or token, etc"
