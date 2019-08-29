@@ -52,10 +52,10 @@ module.exports = themeOptions => {
                 node.context.frontmatter && node.context.frontmatter.keywords
                   ? node.context.frontmatter.keywords.split(',')
                   : '',
-            },
-            Mdx: {
-              content: node => node.rawBody,
-              title: node => (node.frontmatter ? node.frontmatter.title : ''),
+              content: node =>
+                node.context.MdxNode
+                  ? node.context.MdxNode.internal.content
+                  : '',
             },
           },
         },
