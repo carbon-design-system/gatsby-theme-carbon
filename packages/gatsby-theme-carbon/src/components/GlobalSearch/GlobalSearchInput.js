@@ -63,23 +63,22 @@ const GlobalSearchInput = () => {
         className="bx--search-magnifier"
       />
       <label htmlFor="search-input" id="search-label" className="bx--label">
-        Search by element, component, or token, etc
+        Search
       </label>
       <div
         role="combobox"
+        aria-owns="search-menu"
+        aria-haspopup="menu"
         aria-expanded={searchIsOpen}
-        aria-owns="search-listbox"
-        aria-haspopup="listbox"
-        id="search-combobox"
       >
         <input
           ref={inputRef}
           type="text"
           aria-autocomplete="list"
-          aria-controls="search-listbox"
+          aria-controls="search-menu"
           className={`bx--search-input ${input}`}
           id="search-input"
-          placeholder="Search by element, component, or token, etc"
+          placeholder="Search"
           value={query}
           onChange={evt => setQuery(evt.target.value)}
         />
@@ -87,6 +86,7 @@ const GlobalSearchInput = () => {
       <button
         className="bx--search-close"
         type="button"
+        aria-label="Clear search"
         onClick={() => {
           setQuery('');
           toggleNavState('searchIsOpen', 'close');
@@ -96,16 +96,16 @@ const GlobalSearchInput = () => {
       </button>
       <ul
         aria-labelledby="search-label"
-        role="listbox"
-        id="search-listbox"
+        role="menu"
+        id="search-menu"
         className={list}
       >
         {results.map(page => (
-          <li key={page.path}>
-            <Link className={link} to={page.path}>
+          <li role="none" key={page.path}>
+            <Link role="menuitem" className={link} to={page.path}>
               {`${page.title} – `}
               <span className={description}>
-                {page.description.toLowerCase()}
+                {page.description && page.description.toLowerCase()}
               </span>
             </Link>
           </li>
