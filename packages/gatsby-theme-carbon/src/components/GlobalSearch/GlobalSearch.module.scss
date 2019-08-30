@@ -15,15 +15,7 @@
   background-color: $ui-05;
   border: 1px solid $inverse-02;
   border-top: none;
-}
-
-.list li {
-  &:first-of-type {
-    margin-top: $spacing-05;
-  }
-  &:last-of-type {
-    margin-bottom: $spacing-05;
-  }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .description {
