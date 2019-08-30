@@ -37,6 +37,7 @@
     // Tied to the height of the app switcher. Allows for animating up to auto.
     // Matching the height exactly is imperitive to keep the correct animation timing.
     max-height: 458px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   }
 }
 
