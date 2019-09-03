@@ -1,9 +1,4 @@
-import React, {
-  useLayoutEffect,
-  useEffect,
-  createContext,
-  useContext,
-} from 'react';
+import React, { useEffect, createContext, useContext } from 'react';
 import { Link } from 'gatsby';
 import cx from 'classnames';
 import { list, link, description, active } from './GlobalSearch.module.scss';
@@ -14,7 +9,7 @@ const Menu = ({ results, onKeyDown }) => {
   const { optionsRef } = useContext(MenuContext);
 
   // clear the options list every render so it will always be fresh
-  useLayoutEffect(() => {
+  useEffect(() => {
     optionsRef.current = [];
     return () => (optionsRef.current = []);
   });

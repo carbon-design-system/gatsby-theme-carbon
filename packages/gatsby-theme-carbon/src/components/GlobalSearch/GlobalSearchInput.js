@@ -3,14 +3,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/role-has-required-aria-props */
 
-import React, {
-  useState,
-  useEffect,
-  useLayoutEffect,
-  useContext,
-  useRef,
-  useMemo,
-} from 'react';
+import React, { useState, useEffect, useContext, useRef, useMemo } from 'react';
 import { Close20, Search20 } from '@carbon/icons-react';
 import { throttle as _throttle } from 'lodash';
 import { navigate } from 'gatsby';
@@ -46,7 +39,7 @@ const GlobalSearchInput = () => {
   const [results, setResults] = useState([]);
   const { toggleNavState, searchIsOpen } = useContext(NavContext);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (inputRef.current) inputRef.current.focus();
   }, []);
 
