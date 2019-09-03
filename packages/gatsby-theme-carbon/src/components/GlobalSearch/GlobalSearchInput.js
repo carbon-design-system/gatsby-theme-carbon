@@ -3,20 +3,23 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/role-has-required-aria-props */
 
-import React, { useState, useEffect, useContext, useRef } from 'react';
-import { Link } from 'gatsby';
+import React, {
+  useState,
+  useEffect,
+  useLayoutEffect,
+  useContext,
+  useRef,
+  useMemo,
+} from 'react';
 import { Close20, Search20 } from '@carbon/icons-react';
 import { throttle as _throttle } from 'lodash';
+import { navigate } from 'gatsby';
 import NavContext from '../../util/context/NavContext';
 import { useOnClickOutside } from '../../util/hooks';
 
-import {
-  list,
-  container,
-  input,
-  link,
-  description,
-} from './GlobalSearch.module.scss';
+import { container, input } from './GlobalSearch.module.scss';
+
+import Menu, { MenuContext } from './Menu';
 
 const MAX_RESULT_LIST_SIZE = 8;
 
@@ -30,16 +33,22 @@ const search = _throttle(queryString => {
   }
 }, 150);
 
+// TODO pass magnifying ref for escape/close? keep focus within outline for input,
 const GlobalSearchInput = () => {
+  const optionsRef = useRef([]);
+  const [focusedItem, setFocusedItem] = useState(0);
+  const value = useMemo(() => ({ optionsRef, focusedItem, setFocusedItem }), [
+    focusedItem,
+  ]);
   const inputRef = useRef(null);
   const searchRef = useRef(null);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
   const { toggleNavState, searchIsOpen } = useContext(NavContext);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (inputRef.current) inputRef.current.focus();
-  });
+  }, []);
 
   useOnClickOutside(searchRef, () => toggleNavState('searchIsOpen', 'close'));
 
@@ -50,68 +59,96 @@ const GlobalSearchInput = () => {
     } else {
       setResults([]);
     }
+    return () => {
+      setResults([]);
+    };
   }, [query]);
 
-  return (
-    <div
-      ref={searchRef}
-      className={`bx--search bx--search--lg bx--search--dark ${container}`}
-      role="search"
-    >
-      <Search20
-        description="Search Magnifier"
-        className="bx--search-magnifier"
-      />
-      <label htmlFor="search-input" id="search-label" className="bx--label">
-        Search
-      </label>
-      <div
-        role="combobox"
-        aria-owns="search-menu"
-        aria-haspopup="menu"
-        aria-expanded={searchIsOpen}
-      >
-        <input
-          ref={inputRef}
-          type="text"
-          aria-autocomplete="list"
-          aria-controls="search-menu"
-          className={`bx--search-input ${input}`}
-          id="search-input"
-          placeholder="Search"
-          value={query}
-          onChange={evt => setQuery(evt.target.value)}
-        />
-      </div>
-      <button
-        className="bx--search-close"
-        type="button"
-        aria-label="Clear search"
-        onClick={() => {
-          setQuery('');
+  const onKeyDown = e => {
+    switch (e.key) {
+      case 'ArrowDown': {
+        e.preventDefault();
+        setFocusedItem((focusedItem + 1) % results.length);
+        break;
+      }
+      case 'ArrowUp': {
+        e.preventDefault();
+        if (focusedItem - 1 < 0) {
+          setFocusedItem(results.length - 1);
+        } else {
+          setFocusedItem(focusedItem - 1);
+        }
+        break;
+      }
+      case 'Escape': {
+        e.preventDefault();
+        if (query === '') {
           toggleNavState('searchIsOpen', 'close');
-        }}
+        } else {
+          setQuery('');
+          inputRef.current.focus();
+        }
+        break;
+      }
+      case 'Enter': {
+        e.preventDefault();
+        if (results[focusedItem]) {
+          navigate(results[focusedItem].path);
+        }
+        break;
+      }
+      default:
+    }
+  };
+
+  return (
+    <MenuContext.Provider value={value}>
+      <div
+        ref={searchRef}
+        className={`bx--search bx--search--lg bx--search--dark ${container}`}
+        role="search"
       >
-        <Close20 description="Search Clear" className="bx--search-clear" />
-      </button>
-      <ul
-        aria-labelledby="search-label"
-        role="menu"
-        id="search-menu"
-        className={list}
-      >
-        {results.map(page => (
-          <li role="none" key={page.path}>
-            <Link role="menuitem" className={link} to={page.path}>
-              {`${page.title} – `}
-              <span className={description}>
-                {page.description && page.description.toLowerCase()}
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+        <Search20
+          description="Search Magnifier"
+          className="bx--search-magnifier"
+        />
+        <label htmlFor="search-input" id="search-label" className="bx--label">
+          Search
+        </label>
+        <div
+          role="combobox"
+          aria-owns="search-menu"
+          aria-haspopup="menu"
+          aria-expanded={searchIsOpen}
+        >
+          <input
+            ref={inputRef}
+            type="text"
+            aria-autocomplete="list"
+            aria-controls="search-menu"
+            aria-activedescendant={`menu-item-${focusedItem}`}
+            className={`bx--search-input ${input}`}
+            id="search-input"
+            placeholder="Search"
+            value={query}
+            onKeyDown={onKeyDown}
+            onChange={evt => setQuery(evt.target.value)}
+          />
+        </div>
+        <button
+          className="bx--search-close"
+          type="button"
+          aria-label="Clear search"
+          onClick={() => {
+            setQuery('');
+            toggleNavState('searchIsOpen', 'close');
+          }}
+        >
+          <Close20 description="Search Clear" className="bx--search-clear" />
+        </button>
+        <Menu onKeyDown={onKeyDown} results={results} />
+      </div>
+    </MenuContext.Provider>
   );
 };
 

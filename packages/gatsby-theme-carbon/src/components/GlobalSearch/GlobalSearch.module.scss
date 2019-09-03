@@ -42,12 +42,13 @@
       color: $carbon--gray-10;
     }
   }
+}
 
-  &:focus {
-    outline: 2px solid $carbon--white-0;
-    outline-offset: -2px;
-    .description {
-      color: $carbon--gray-10;
-    }
+.link.active {
+  background: #353535;
+  color: $carbon--gray-10;
+  outline: 0;
+  .description {
+    color: $carbon--gray-10;
   }
 }
