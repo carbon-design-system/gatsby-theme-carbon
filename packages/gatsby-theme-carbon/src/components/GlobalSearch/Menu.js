@@ -13,6 +13,7 @@ export const MenuContext = createContext();
 const Menu = ({ results, onKeyDown }) => {
   const { optionsRef } = useContext(MenuContext);
 
+  // clear the options list every render so it will always be fresh
   useLayoutEffect(() => {
     optionsRef.current = [];
     return () => (optionsRef.current = []);
