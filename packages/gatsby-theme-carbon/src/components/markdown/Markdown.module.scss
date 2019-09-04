@@ -64,8 +64,7 @@
 
 // Fix bleed when code snippets are used in a list
 .list-item > pre {
-  margin-left: -1rem;
-  margin-right: -1.5rem;
+  margin-left: 1rem;
   margin-top: $spacing-05;
   @include carbon--breakpoint('md') {
     margin-right: 1.5rem;
