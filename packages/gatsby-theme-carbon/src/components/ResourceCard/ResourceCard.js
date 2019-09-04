@@ -87,6 +87,7 @@ export default class ResourceCard extends React.Component {
       [className]: className,
       [`${prefix}--resource-card--disabled`]: disabled,
       [`${prefix}--resource-card--dark`]: color === 'dark',
+      [`${prefix}--resource-card--blue`]: color === 'blue',
     });
 
     const aspectRatioClassNames = classnames([`${prefix}--aspect-ratio`], {
