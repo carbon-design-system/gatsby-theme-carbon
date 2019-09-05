@@ -128,3 +128,22 @@
   svg {
   fill: $carbon--gray-70; //$disabled-02 for gray 90
 }
+
+// Disabled blue
+.#{$prefix}--resource-card--disabled.#{$prefix}--resource-card--blue
+  .#{$prefix}--tile:hover {
+  background: $carbon--blue-60;
+}
+
+.#{$prefix}--resource-card--disabled.#{$prefix}--resource-card--blue
+  .#{$prefix}--resource-card__title,
+.#{$prefix}--resource-card--disabled.#{$prefix}--resource-card--blue
+  .#{$prefix}--resource-card__subtitle {
+  color: $carbon--gray-30;
+}
+
+.#{$prefix}--resource-card--disabled.#{$prefix}--resource-card--blue
+  .#{$prefix}--resource-card__icon--action
+  svg {
+  fill: $carbon--gray-30;
+}
