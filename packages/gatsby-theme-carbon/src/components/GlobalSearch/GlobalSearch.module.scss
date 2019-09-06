@@ -34,6 +34,8 @@
   color: $inverse-01;
   background: transparent;
   border: none;
+  outline: none;
+  width: 100%;
   @include carbon--type-style('body-short-02');
 }
 
