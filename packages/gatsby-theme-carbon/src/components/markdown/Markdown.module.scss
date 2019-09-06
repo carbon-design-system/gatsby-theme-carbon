@@ -81,7 +81,8 @@
   margin-bottom: $spacing-06;
 }
 
-.list-item {
+:global(.bx--list--ordered) .list-item,
+:global(.bx--list--unordered) .list-item {
   @include carbon--type-style('body-long-02');
   padding-right: 0;
   width: 100%;
