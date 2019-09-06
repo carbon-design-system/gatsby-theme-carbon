@@ -1,14 +1,54 @@
+@import '~carbon-components/scss/globals/scss/helper-mixins';
+
 .container {
   position: relative;
+  display: flex;
+  width: 28rem;
+  height: 3rem;
+  background: $inverse-02;
+  color: $inverse-01;
+  transition: all $duration--fast-02 $carbon--standard-easing;
 }
 
-.container input.input {
-  height: 3rem;
+.container.inputFocusWithin {
+  outline: 2px solid $inverse-01;
+  outline-offset: -2px;
+}
+
+.container.hidden {
+  width: 3rem;
+  background: $ui-05;
+}
+
+.container svg {
+  fill: $inverse-01;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-grow: 1;
+  border-bottom: 1px solid $inverse-02;
+}
+
+.input {
+  color: $inverse-01;
+  background: transparent;
+  border: none;
+  @include carbon--type-style('body-short-02');
+}
+
+.input.hidden {
+  width: 0;
+}
+
+.label {
+  @include hidden;
 }
 
 .list {
   position: absolute;
   z-index: z('floating');
+  padding: $spacing-05 0;
   left: 0;
   right: 0;
   top: 3rem;
@@ -16,6 +56,11 @@
   border: 1px solid $inverse-02;
   border-top: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.list.hidden {
+  border: none;
+  padding: 0;
 }
 
 .description {
@@ -42,6 +87,24 @@
       color: $carbon--gray-10;
     }
   }
+}
+
+.searchButton {
+  width: 3rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  &:focus {
+    border: 2px solid $inverse-01;
+  }
+}
+
+.searchButton.hidden {
+  @include hidden;
 }
 
 .link.active {

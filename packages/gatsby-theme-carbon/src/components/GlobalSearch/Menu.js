@@ -1,7 +1,13 @@
 import React, { useEffect, createContext, useContext } from 'react';
 import { Link } from 'gatsby';
 import cx from 'classnames';
-import { list, link, description, active } from './GlobalSearch.module.scss';
+import {
+  list,
+  link,
+  description,
+  active,
+  hidden,
+} from './GlobalSearch.module.scss';
 
 export const MenuContext = createContext();
 
@@ -20,7 +26,9 @@ const Menu = ({ results, onKeyDown }) => {
         aria-labelledby="search-label"
         role="menu"
         id="search-menu"
-        className={list}
+        className={cx(list, {
+          [hidden]: results.length === 0,
+        })}
       >
         {results.map((page, index) => (
           <MenuItem
