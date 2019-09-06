@@ -1,6 +1,7 @@
 const path = require('path');
 const { uiBackground, interactive01 } = require('@carbon/elements');
 const remarkSlug = require('remark-slug');
+const defaultLunrOptions = require('./config/lunr-options');
 
 module.exports = themeOptions => {
   const {
@@ -9,6 +10,7 @@ module.exports = themeOptions => {
     iconPath,
     mdxExtensions = ['.mdx', '.md'],
     imageQuality = 75,
+    lunrOptions = defaultLunrOptions,
     repository = {
       baseUrl: '',
       subDirectory: '',
@@ -30,39 +32,7 @@ module.exports = themeOptions => {
       `gatsby-plugin-catch-links`,
       {
         resolve: 'gatsby-plugin-lunr',
-        options: {
-          languages: [{ name: 'en' }],
-          fields: [
-            { name: 'title', store: true, attributes: { boost: 20 } },
-            { name: 'keywords', attributes: { boost: 5 } },
-            { name: 'path', store: true },
-            { name: 'description', store: true },
-            { name: 'content' },
-          ],
-          resolvers: {
-            SitePage: {
-              title: node =>
-                node.context && node.context.frontmatter
-                  ? node.context.frontmatter.title
-                  : '',
-              path: node => node.path,
-              description: node =>
-                node.context && node.context.frontmatter
-                  ? node.context.frontmatter.description
-                  : '',
-              keywords: node =>
-                node.context &&
-                node.context.frontmatter &&
-                node.context.frontmatter.keywords
-                  ? node.context.frontmatter.keywords.split(',')
-                  : '',
-              content: node =>
-                node.context && node.context.MdxNode
-                  ? node.context.MdxNode.internal.content
-                  : '',
-            },
-          },
-        },
+        options: lunrOptions,
       },
       {
         resolve: `gatsby-source-filesystem`,
