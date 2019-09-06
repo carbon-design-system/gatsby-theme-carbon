@@ -13,18 +13,12 @@ header.header {
   z-index: z('floating');
 }
 
-.header :global(.bx--header__name) {
-  @include carbon--type-style('body-short-02');
-  @include carbon--breakpoint('lg') {
-    padding-left: $spacing-05;
-  }
-}
-
 .header :global(.bx--header__action--menu) {
   border: none;
   border-right: 3px solid transparent !important;
   top: 0.5px;
   position: relative;
+  flex-shrink: 0;
   &:focus {
     border: 3px solid $inverse-01;
     border-right: 3px solid $inverse-01 !important;
@@ -46,7 +40,7 @@ header.header {
   box-shadow: none;
 }
 
-.header :global(.bx--header__name) span {
+.headerName span {
   font-weight: 600;
 }
 
@@ -58,4 +52,30 @@ header.header {
 .header .skip-to-content:focus {
   border: 2px solid $carbon--white-0;
   margin: 0;
+}
+
+.headerName {
+  @include carbon--type-style('body-short-02');
+  transition: opacity $duration--fast-02 $carbon--standard-easing;
+  color: $inverse-01;
+  text-decoration: none;
+  position: absolute;
+  left: 3rem;
+  white-space: nowrap;
+  padding: 0 $spacing-05;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  &:focus {
+    outline: 2px solid $inverse-01;
+    outline-offset: -2px;
+  }
+
+  @include carbon--breakpoint('lg') {
+    left: 0;
+  }
+}
+
+.headerButton {
+  flex-shrink: 0;
 }

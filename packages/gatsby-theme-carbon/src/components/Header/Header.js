@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 import {
   Header as ShellHeader,
   HeaderMenuButton,
-  HeaderName,
   SkipToContent,
   HeaderGlobalBar,
   HeaderGlobalAction,
@@ -19,12 +18,18 @@ import {
   header,
   switcherButtonOpen,
   skipToContent,
+  headerName,
+  collapsed,
+  headerButton,
 } from './Header.module.scss';
 
 const Header = ({ children }) => {
-  const { leftNavIsOpen, toggleNavState, switcherIsOpen } = useContext(
-    NavContext
-  );
+  const {
+    leftNavIsOpen,
+    toggleNavState,
+    switcherIsOpen,
+    searchIsOpen,
+  } = useContext(NavContext);
   const { isSearchEnabled } = useMetadata();
 
   return (
@@ -32,7 +37,7 @@ const Header = ({ children }) => {
       <ShellHeader aria-label="Header" className={header}>
         <SkipToContent className={skipToContent} />
         <HeaderMenuButton
-          className="bx--header__action--menu"
+          className={cx('bx--header__action--menu', headerButton)}
           aria-label="Open menu"
           onClick={() => {
             toggleNavState('leftNavIsOpen');
@@ -40,13 +45,18 @@ const Header = ({ children }) => {
           }}
           isActive={leftNavIsOpen}
         />
-        <HeaderName prefix="" to="/" element={Link}>
+        <Link
+          className={cx(headerName, {
+            [collapsed]: searchIsOpen,
+          })}
+          to="/"
+        >
           {children}
-        </HeaderName>
+        </Link>
         <HeaderGlobalBar>
           {isSearchEnabled && <GlobalSearch />}
           <HeaderGlobalAction
-            className={cx({
+            className={cx(headerButton, {
               [switcherButtonOpen]: switcherIsOpen,
             })}
             aria-label="Switch"
