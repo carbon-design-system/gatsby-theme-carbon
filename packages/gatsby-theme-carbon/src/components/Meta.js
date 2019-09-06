@@ -14,6 +14,8 @@ const Meta = ({ pageTitle, pageDescription, pageKeywords, titleType }) => {
         return title;
       case 'append':
         return `${title}${pageTitle ? ` – ${pageTitle}` : ''}`;
+      case 'prepend':
+        return `${pageTitle}${pageTitle ? ` – ${title}` : ''}`;
       default:
         return null;
     }
