@@ -84,8 +84,12 @@
 .list-item {
   @include carbon--type-style('body-long-02');
   padding-right: 0;
-  margin: 0;
   width: 100%;
+  padding-left: $spacing-05;
+}
+
+:global(.container--dark) :global(.bx--list__item) {
+  color: $carbon--white-0;
 }
 
 //---------------------------------------
@@ -169,11 +173,4 @@
   // h5 and h6 intentionally mimic one another
   margin-top: $spacing-04;
   @include carbon--type-style('heading-01');
-}
-
-//---------------------------------------
-// Lists
-//---------------------------------------
-:global(.container--dark) :global(.bx--list__item) {
-  color: $carbon--white-0;
 }
