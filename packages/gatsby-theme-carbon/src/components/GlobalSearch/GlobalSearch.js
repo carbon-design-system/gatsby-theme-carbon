@@ -118,7 +118,7 @@ const GlobalSearchInput = () => {
         ref={containerRef}
         className={cx(container, {
           [hidden]: !searchIsOpen,
-          [inputFocusWithin]: document.activeElement === inputRef.current,
+          [inputFocusWithin]: inputIsFocused,
         })}
         role="search"
       >
