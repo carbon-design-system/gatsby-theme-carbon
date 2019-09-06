@@ -98,13 +98,22 @@
   background: transparent;
   border: none;
   padding: 0;
+  &:hover {
+    cursor: pointer;
+    background: $hover-secondary;
+  }
   &:focus {
-    border: 2px solid $inverse-01;
+    outline: 2px solid $inverse-01;
+    outline-offset: -2px;
   }
 }
 
 .searchButton.hidden {
   @include hidden;
+}
+
+.searchButton.inactive {
+  pointer-events: none;
 }
 
 .link.active {

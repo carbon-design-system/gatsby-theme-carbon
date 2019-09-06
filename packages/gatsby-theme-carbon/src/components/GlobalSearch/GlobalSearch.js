@@ -19,6 +19,7 @@ import {
   inputWrapper,
   inputFocusWithin,
   hidden,
+  inactive,
 } from './GlobalSearch.module.scss';
 
 import Menu, { MenuContext } from './Menu';
@@ -133,7 +134,9 @@ const GlobalSearchInput = () => {
         >
           <button
             tabIndex={searchIsOpen ? '-1' : '0'}
-            className={searchButton}
+            className={cx(searchButton, {
+              [inactive]: searchIsOpen,
+            })}
             ref={openButtonRef}
             type="button"
             aria-label="Open search"
