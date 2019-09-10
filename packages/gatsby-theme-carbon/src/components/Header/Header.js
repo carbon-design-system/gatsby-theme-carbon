@@ -21,6 +21,7 @@ import {
   headerName,
   collapsed,
   headerButton,
+  switcherButton,
 } from './Header.module.scss';
 
 const Header = ({ children }) => {
@@ -56,7 +57,7 @@ const Header = ({ children }) => {
         <HeaderGlobalBar>
           {isSearchEnabled && <GlobalSearch />}
           <HeaderGlobalAction
-            className={cx(headerButton, {
+            className={cx(headerButton, switcherButton, {
               [switcherButtonOpen]: switcherIsOpen,
             })}
             aria-label="Switch"
