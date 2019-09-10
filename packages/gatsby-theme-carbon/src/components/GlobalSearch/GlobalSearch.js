@@ -173,18 +173,18 @@ const GlobalSearchInput = () => {
             onKeyDown={onKeyDown}
             onChange={evt => setQuery(evt.target.value)}
           />
+          <button
+            tabIndex={searchIsOpen ? '0' : '-1'}
+            className={cx(searchButton, {
+              [hidden]: !searchIsOpen,
+            })}
+            type="button"
+            aria-label="Clear search"
+            onClick={clearAndClose}
+          >
+            <Close20 description="Clear search" />
+          </button>
         </div>
-        <button
-          tabIndex={searchIsOpen ? '0' : '-1'}
-          className={cx(searchButton, {
-            [hidden]: !searchIsOpen,
-          })}
-          type="button"
-          aria-label="Clear search"
-          onClick={clearAndClose}
-        >
-          <Close20 description="Clear search" />
-        </button>
         <Menu onKeyDown={onKeyDown} results={results} />
       </div>
     </MenuContext.Provider>

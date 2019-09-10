@@ -9,7 +9,8 @@
   height: 3rem;
   background: $inverse-02;
   color: $inverse-01;
-  transition: all $duration--fast-02 $carbon--standard-easing;
+  transition: max-width $duration--fast-02 $carbon--standard-easing,
+    background $duration--fast-02 $carbon--standard-easing;
 }
 
 .container.inputFocusWithin {
@@ -110,6 +111,9 @@
   border: none;
   padding: 0;
   flex-shrink: 0;
+  opacity: 1;
+  transition: background $duration--fast-02 $carbon--standard-easing,
+    opacity $duration--fast-02 $carbon--standard-easing;
   &:hover {
     cursor: pointer;
     background: $hover-secondary;
@@ -121,7 +125,7 @@
 }
 
 .searchButton.hidden {
-  @include hidden;
+  opacity: 0;
 }
 
 .searchButton.inactive {
