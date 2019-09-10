@@ -5,7 +5,7 @@ const defaultLunrOptions = require('./config/lunr-options');
 
 module.exports = themeOptions => {
   const {
-    isSearchEnabled = false,
+    isSearchEnabled = true,
     withWebp = false,
     iconPath,
     mdxExtensions = ['.mdx', '.md'],
