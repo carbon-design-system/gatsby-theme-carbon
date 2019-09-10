@@ -116,8 +116,7 @@
     cursor: pointer;
     background-color: $hover-secondary;
   }
-  &:focus,
-  &:active {
+  &:focus {
     // shell header button's don't present focus on mobile
     outline: 2px solid $inverse-01;
     outline-offset: -2px;
