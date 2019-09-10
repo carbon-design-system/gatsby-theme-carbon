@@ -3,7 +3,14 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/role-has-required-aria-props */
 
-import React, { useState, useEffect, useContext, useRef, useMemo } from 'react';
+import React, {
+  useState,
+  useEffect,
+  useContext,
+  useRef,
+  useMemo,
+  useCallback,
+} from 'react';
 import { Close20, Search20 } from '@carbon/icons-react';
 import { throttle as _throttle } from 'lodash';
 import { navigate } from 'gatsby';
@@ -40,17 +47,31 @@ const search = _throttle(queryString => {
 const GlobalSearchInput = () => {
   const optionsRef = useRef([]);
   const [focusedItem, setFocusedItem] = useState(0);
-  const value = useMemo(() => ({ optionsRef, focusedItem, setFocusedItem }), [
-    focusedItem,
-  ]);
   const inputRef = useRef(null);
   const containerRef = useRef(null);
   const openButtonRef = useRef(null);
   const [inputIsFocused, setInputIsFocused] = useState(false);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
-  const [isManagingFocus, setIsManagingFocus] = useState(false);
-  const { toggleNavState, searchIsOpen } = useContext(NavContext);
+  const {
+    toggleNavState,
+    searchIsOpen,
+    isManagingFocus,
+    setIsManagingFocus,
+  } = useContext(NavContext);
+
+  const clearAndClose = useCallback(() => {
+    setQuery('');
+    toggleNavState('searchIsOpen', 'close');
+    if (openButtonRef.current && isManagingFocus) {
+      openButtonRef.current.focus();
+    }
+  }, [isManagingFocus, toggleNavState]);
+
+  const value = useMemo(
+    () => ({ optionsRef, focusedItem, setFocusedItem, clearAndClose }),
+    [clearAndClose, focusedItem]
+  );
 
   useEffect(() => {
     if (inputRef.current && searchIsOpen) {
@@ -76,23 +97,17 @@ const GlobalSearchInput = () => {
     };
   }, [query]);
 
-  const clearAndClose = () => {
-    setQuery('');
-    toggleNavState('searchIsOpen', 'close');
-    if (openButtonRef.current && isManagingFocus) {
-      openButtonRef.current.focus();
-    }
-  };
-
   const onKeyDown = e => {
     switch (e.key) {
       case 'ArrowDown': {
         e.preventDefault();
+        setIsManagingFocus(true);
         setFocusedItem((focusedItem + 1) % results.length);
         break;
       }
       case 'ArrowUp': {
         e.preventDefault();
+        setIsManagingFocus(true);
         if (focusedItem - 1 < 0) {
           setFocusedItem(results.length - 1);
         } else {
@@ -149,8 +164,6 @@ const GlobalSearchInput = () => {
             ref={openButtonRef}
             type="button"
             aria-label="Open search"
-            onFocus={() => setIsManagingFocus(false)}
-            onBlur={() => setIsManagingFocus(true)}
             onClick={() => {
               toggleNavState('searchIsOpen', 'open');
               toggleNavState('switcherIsOpen', 'close');
@@ -159,6 +172,7 @@ const GlobalSearchInput = () => {
             <Search20 description="Open search" />
           </button>
           <input
+            autoComplete="off"
             tabIndex={searchIsOpen ? '0' : '-1'}
             onBlur={() => setInputIsFocused(false)}
             onFocus={() => setInputIsFocused(true)}

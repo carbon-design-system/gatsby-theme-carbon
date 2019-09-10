@@ -45,7 +45,7 @@ const Menu = ({ results, onKeyDown }) => {
 };
 
 const MenuItem = ({ page, index, onKeyDown, id }) => {
-  const { optionsRef, focusedItem } = useContext(MenuContext);
+  const { optionsRef, focusedItem, clearAndClose } = useContext(MenuContext);
 
   useEffect(() => {
     optionsRef.current.push(page.path);
@@ -58,6 +58,7 @@ const MenuItem = ({ page, index, onKeyDown, id }) => {
   return (
     <li role="none" key={page.path}>
       <Link
+        onClick={clearAndClose}
         onKeyDown={onKeyDown}
         tabIndex="-1"
         id={id}
