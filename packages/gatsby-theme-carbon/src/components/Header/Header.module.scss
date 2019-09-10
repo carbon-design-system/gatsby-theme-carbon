@@ -73,14 +73,15 @@ header.header {
 
 .header-button {
   flex-shrink: 0;
+  transition: background-color $duration--fast-02 $carbon--standard-easing;
 }
 
 // Switcher button, extra specificity to override Carbon styles
-
-.header-button.switcher-button {
-  background: $ui-05;
+.header .header-button.switcher-button {
+  background-color: $ui-05;
   position: relative;
   border: none;
+  border-color: $ui-05;
   border-top: 1px solid $ui-05;
   border-bottom: 1px solid $inverse-02;
   &:focus {
@@ -88,10 +89,19 @@ header.header {
     outline: 2px solid $inverse-01;
     outline-offset: -2px;
   }
+  &:active {
+    background-color: #3d3d3d;
+    border-left: 1px solid $ui-05;
+    border-right: 1px solid $ui-05;
+  }
 }
 
 .header-button.switcher-button.switcher-button--open {
   border-bottom: 1px solid $ui-05;
+  background-color: $ui-05;
+  &:active {
+    border-left: 1px solid $inverse-02;
+  }
 }
 
 .header-button.switcher-button--open:not(:focus) {
