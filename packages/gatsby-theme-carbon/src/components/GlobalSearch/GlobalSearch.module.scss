@@ -41,11 +41,9 @@
   border: none;
   outline: none;
   width: 100%;
-  padding-top: $spacing-03; // iOS input alignment
+  height: 3rem;
+  padding: 0;
   transition: opacity $duration--fast-02 $carbon--standard-easing;
-  @include carbon--breakpoint('md') {
-    padding-top: 0;
-  }
 }
 
 .input.hidden {
@@ -118,12 +116,11 @@
     cursor: pointer;
     background-color: $hover-secondary;
   }
-  &:focus {
+  &:focus,
+  &:active {
     // shell header button's don't present focus on mobile
-    @include carbon--breakpoint('md') {
-      outline: 2px solid $inverse-01;
-      outline-offset: -2px;
-    }
+    outline: 2px solid $inverse-01;
+    outline-offset: -2px;
   }
 }
 
