@@ -7,7 +7,6 @@
 }
 
 header.header {
-  transition: top $duration--fast-02;
   background-color: $ui-05;
   border-bottom: 1px solid $inverse-02;
   z-index: z('floating');
@@ -15,13 +14,12 @@ header.header {
 
 .header :global(.bx--header__action--menu) {
   border: none;
-  border-right: 2px solid transparent !important;
   top: 0.5px;
   position: relative;
   flex-shrink: 0;
   &:focus {
-    border: 2px solid $inverse-01;
-    border-right: 2px solid $inverse-01 !important;
+    outline: 2px solid $inverse-01;
+    outline-offset: -2px;
   }
   @include carbon--breakpoint('lg') {
     display: none;
@@ -30,7 +28,7 @@ header.header {
 
 .header :global(.bx--header__action--menu.bx--header__action--active) {
   background-color: $ui-05;
-  border-right: 1px solid $inverse-02 !important;
+  border-right: 1px solid $inverse-02;
   @include carbon--breakpoint('lg') {
     display: none;
   }
@@ -72,23 +70,26 @@ header.header {
   }
 }
 
-.header-button {
+.header .header-button {
   flex-shrink: 0;
   transition: background-color $duration--fast-02 $carbon--standard-easing;
 }
 
 // Switcher button, extra specificity to override Carbon styles
+// Hex values used pending shell theming
 .header .header-button.switcher-button {
   background-color: $ui-05;
   position: relative;
   border: none;
   border-color: $ui-05;
-  border-top: 1px solid $ui-05;
   border-bottom: 1px solid $inverse-02;
   &:focus {
     border-color: $inverse-02;
     outline: 2px solid $inverse-01;
     outline-offset: -2px;
+  }
+  &:hover {
+    background-color: #353535;
   }
   &:active {
     background-color: #3d3d3d;
@@ -98,14 +99,11 @@ header.header {
 }
 
 .header-button.switcher-button.switcher-button--open {
+  border: 1px solid transparent;
+  border-left: 1px solid $inverse-02;
   border-bottom: 1px solid $ui-05;
   background-color: $ui-05;
   &:active {
     border-left: 1px solid $inverse-02;
   }
-}
-
-.header-button.switcher-button--open:not(:focus) {
-  border: 1px solid $ui-05;
-  border-left: 1px solid $inverse-02;
 }

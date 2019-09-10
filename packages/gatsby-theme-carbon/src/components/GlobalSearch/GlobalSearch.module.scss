@@ -112,9 +112,13 @@
   opacity: 1;
   transition: background-color $duration--fast-02 $carbon--standard-easing,
     opacity $duration--fast-02 $carbon--standard-easing;
+  // Hex values used pending shell theming
   &:hover {
     cursor: pointer;
-    background-color: $hover-secondary;
+    background-color: #353535;
+  }
+  &:active {
+    background-color: #3d3d3d;
   }
   &:focus {
     // shell header button's don't present focus on mobile
