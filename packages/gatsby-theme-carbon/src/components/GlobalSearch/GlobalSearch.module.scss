@@ -138,6 +138,12 @@
   }
 }
 
+.search-button--close {
+  &:hover {
+    background-color: #4c4c4c;
+  }
+}
+
 .link.active {
   background-color: #353535;
   color: $carbon--gray-10;

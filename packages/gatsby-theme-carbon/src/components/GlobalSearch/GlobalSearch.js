@@ -23,6 +23,7 @@ import {
   input,
   label,
   searchButton,
+  searchButtonClose,
   inputWrapper,
   inputFocusWithin,
   hidden,
@@ -192,7 +193,7 @@ const GlobalSearchInput = () => {
           />
           <button
             tabIndex={searchIsOpen ? '0' : '-1'}
-            className={cx(searchButton, {
+            className={cx(searchButton, searchButtonClose, {
               [hidden]: !searchIsOpen,
             })}
             type="button"
