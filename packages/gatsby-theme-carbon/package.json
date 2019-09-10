@@ -35,6 +35,7 @@
     "focus-trap-react": "^6.0.0",
     "gatsby-plugin-catch-links": "^2.0.15",
     "gatsby-plugin-emotion": "^4.0.7",
+    "gatsby-plugin-lunr": "^1.5.2",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-mdx": "^1.0.11",
     "gatsby-plugin-react-helmet": "^3.0.12",
