@@ -49,6 +49,7 @@ const GlobalSearchInput = () => {
   const [inputIsFocused, setInputIsFocused] = useState(false);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
+  const [isManagingFocus, setIsManagingFocus] = useState(false);
   const { toggleNavState, searchIsOpen } = useContext(NavContext);
 
   useEffect(() => {
@@ -78,7 +79,7 @@ const GlobalSearchInput = () => {
   const clearAndClose = () => {
     setQuery('');
     toggleNavState('searchIsOpen', 'close');
-    if (openButtonRef.current) {
+    if (openButtonRef.current && isManagingFocus) {
       openButtonRef.current.focus();
     }
   };
@@ -148,6 +149,8 @@ const GlobalSearchInput = () => {
             ref={openButtonRef}
             type="button"
             aria-label="Open search"
+            onFocus={() => setIsManagingFocus(false)}
+            onBlur={() => setIsManagingFocus(true)}
             onClick={() => {
               toggleNavState('searchIsOpen', 'open');
               toggleNavState('switcherIsOpen', 'close');
