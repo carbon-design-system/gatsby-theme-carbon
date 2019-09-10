@@ -20,6 +20,9 @@ const Menu = ({ results, onKeyDown }) => {
     return () => (optionsRef.current = []);
   });
 
+  // Results must at least have a title to show up in the list
+  const filteredResults = results.filter(result => result.title);
+
   return (
     <>
       <ul
@@ -30,7 +33,7 @@ const Menu = ({ results, onKeyDown }) => {
           [hidden]: results.length === 0,
         })}
       >
-        {results.map((page, index) => (
+        {filteredResults.map((page, index) => (
           <MenuItem
             id={`menu-item-${index}`}
             onKeyDown={onKeyDown}
