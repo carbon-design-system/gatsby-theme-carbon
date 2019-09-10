@@ -75,6 +75,14 @@ const GlobalSearchInput = () => {
     };
   }, [query]);
 
+  const clearAndClose = () => {
+    setQuery('');
+    toggleNavState('searchIsOpen', 'close');
+    if (openButtonRef.current) {
+      openButtonRef.current.focus();
+    }
+  };
+
   const onKeyDown = e => {
     switch (e.key) {
       case 'ArrowDown': {
@@ -94,7 +102,7 @@ const GlobalSearchInput = () => {
       case 'Escape': {
         e.preventDefault();
         if (query === '') {
-          toggleNavState('searchIsOpen', 'close');
+          clearAndClose();
         } else {
           setQuery('');
           inputRef.current.focus();
@@ -173,13 +181,7 @@ const GlobalSearchInput = () => {
           })}
           type="button"
           aria-label="Clear search"
-          onClick={() => {
-            setQuery('');
-            toggleNavState('searchIsOpen', 'close');
-            if (openButtonRef.current) {
-              openButtonRef.current.focus();
-            }
-          }}
+          onClick={clearAndClose}
         >
           <Close20 description="Clear search" />
         </button>
