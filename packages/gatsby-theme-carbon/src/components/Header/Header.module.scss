@@ -15,13 +15,13 @@ header.header {
 
 .header :global(.bx--header__action--menu) {
   border: none;
-  border-right: 3px solid transparent !important;
+  border-right: 2px solid transparent !important;
   top: 0.5px;
   position: relative;
   flex-shrink: 0;
   &:focus {
-    border: 3px solid $inverse-01;
-    border-right: 3px solid $inverse-01 !important;
+    border: 2px solid $inverse-01;
+    border-right: 2px solid $inverse-01 !important;
   }
   @include carbon--breakpoint('lg') {
     display: none;
