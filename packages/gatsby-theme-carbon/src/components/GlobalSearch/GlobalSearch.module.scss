@@ -73,8 +73,13 @@
   padding: 0;
 }
 
+.tab {
+  text-transform: capitalize;
+}
+
 .description {
   @include carbon--type-style('caption-01');
+  text-transform: lowercase;
   color: $carbon--gray-30;
 }
 
