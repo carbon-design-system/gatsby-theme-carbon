@@ -122,6 +122,7 @@ const GlobalSearchInput = () => {
           clearAndClose();
         } else {
           setQuery('');
+          setIsManagingFocus(true);
           inputRef.current.focus();
         }
         break;
