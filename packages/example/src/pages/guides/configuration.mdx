@@ -1,5 +1,6 @@
 ---
 title: Configuration
+description: Guide for configuring the theme's various settings
 ---
 
 <PageDescription>
@@ -115,33 +116,24 @@ module.exports = {
 
 ## Global search
 
-The GlobalSearch component is disabled by default. If you'd like to implement search functionality, you'll need to follow these two steps:
+Site-wide search is provided by the theme. The only requirement for a page to show up in the results is for it to have `title` set in the [frontmatter](/components/markdown#mdx-frontmatter).
+To render more helpful search results (and improve SEO), you'll want to make sure your pages have `description` set in the frontmatter as well.
 
-1. set the isSearchEnabled theme option to true
+Global search is enabled by default. To disable it, set the `isSearchEnabled` option to false.
 
 ```js
   plugins: [
     {
       resolve: 'gatsby-theme-carbon',
       options: {
-        isSearchEnabled: true
+        isSearchEnabled: false
       },
     },
   ],
 ```
 
-2. Shadow the example search implementation at `/src/util/hooks/useSearch.js`
-
-```jsx
-import { useEffect } from 'react';
-const useAlgoliaSearch = () => {
-  // ...
-};
-
-export default useAlgoliaSearch;
-```
-
-The example `useSearch` hook demonstrates implementing search with [Algolia](https://www.algolia.com/). Algolia is free for open source libraries. You can shadow this hook and replace it with your Algolia credentials or a library of your choosing.
+Under the hood, we use [Lunr](https://lunrjs.com/) to create our search index. If necessary, you tweak the search scoring algorithm and source nodes.
+To do so, provide your own [resolvers object](https://www.gatsbyjs.org/packages/gatsby-plugin-lunr/#getting-started) to the `lunrOptions` theme option.
 
 ## Edit on GitHub link
 
@@ -165,11 +157,12 @@ To add a link to the bottom of each page that points to the current page source 
 
 - `additionalFontWeights` – add support for additional Plex font weights. Don't forget to specify italics for the additional weights if needed.
 - `mdxExtensions` – change the file extensions processed by `gatsby-mdx` (default ['.mdx', '.md'])
-- `titleType` – pick between three formats for the `<title>` element for your site. Here are the three options using this page as an example:
+- `titleType` – pick between four formats for the `<title>` element for your site. Here are the four options using this page as an example:
 
   - `page`: "Configuration" (default)
   - `site`: "Gatsby Theme Carbon"
   - `append`: "Gatsby Theme Carbon – Configuration"
+  - `prepend`: "Configuration - Gatsby Theme Carbon"
 
 ```js
 plugins: [
