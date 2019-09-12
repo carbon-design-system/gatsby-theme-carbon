@@ -25,7 +25,6 @@ const Video = ({ vimeoId, title, src, poster, ...props }) => {
         <div className={cx(video, vimeo)}>
           <div className="embedVideo-container">
             <iframe
-              tabIndex="-1"
               allow="autoplay"
               title={title}
               src={`https://player.vimeo.com/video/${vimeoId}`}
@@ -65,9 +64,8 @@ const Video = ({ vimeoId, title, src, poster, ...props }) => {
   }
 
   function onKeyDown(event) {
-    event.preventDefault();
-
     if (event.key === ' ' || event.key === 'Enter') {
+      event.preventDefault();
       if (isPlaying) {
         videoRef.current.pause();
         setIsPlaying(false);
