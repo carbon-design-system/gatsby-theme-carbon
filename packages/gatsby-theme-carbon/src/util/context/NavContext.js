@@ -1,9 +1,10 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useState } from 'react';
 
 const NavContext = React.createContext({
   leftNavIsOpen: false,
   searchIsOpen: false,
   switcherIsOpen: false,
+  isManagingFocus: false,
 });
 
 const reducer = (state, action) => {
@@ -30,18 +31,18 @@ export const NavContextProvider = ({ children }) => {
     dispatch({ nav, type });
   };
 
-  return (
-    <NavContext.Provider
-      value={{
-        leftNavIsOpen,
-        searchIsOpen,
-        switcherIsOpen,
-        toggleNavState,
-      }}
-    >
-      {children}
-    </NavContext.Provider>
-  );
+  const [isManagingFocus, setIsManagingFocus] = useState(false);
+
+  const value = {
+    leftNavIsOpen,
+    searchIsOpen,
+    switcherIsOpen,
+    toggleNavState,
+    isManagingFocus,
+    setIsManagingFocus,
+  };
+
+  return <NavContext.Provider value={value}>{children}</NavContext.Provider>;
 };
 
 export default NavContext;
