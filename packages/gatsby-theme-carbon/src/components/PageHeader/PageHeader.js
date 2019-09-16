@@ -21,7 +21,7 @@ PageHeader.propTypes = {
   /**
    * Specify the title for the page
    */
-  title: PropTypes.string,
+  title: PropTypes.node,
 };
 
 export default PageHeader;
