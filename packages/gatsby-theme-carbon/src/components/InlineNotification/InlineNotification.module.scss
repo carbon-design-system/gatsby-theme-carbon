@@ -1,0 +1,25 @@
+.notification {
+  max-width: 100%;
+  box-shadow: none;
+  border: 1px solid $inverse-support-04;
+}
+
+:global(.bx--inline-notification--low-contrast.bx--inline-notification--error).notification {
+  border-color: $inverse-support-01;
+}
+
+:global(.bx--inline-notification--low-contrast.bx--inline-notification--success).notification {
+  border-color: $inverse-support-02;
+}
+
+:global(.bx--inline-notification--low-contrast.bx--inline-notification--warning).notification {
+  border-color: $inverse-support-03;
+}
+
+.notification :global(.bx--inline-notification__subtitle p) {
+  @include carbon--type-style('body-short-01');
+}
+
+.notification :global(.bx--inline-notification__subtitle .bx--row) {
+  margin: 0;
+}
