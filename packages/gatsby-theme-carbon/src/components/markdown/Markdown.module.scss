@@ -11,6 +11,10 @@
   @include carbon--breakpoint('md') {
     padding-right: $spacing-05;
   }
+
+  @include carbon--breakpoint-down('sm') {
+    padding-right: $spacing-05;
+  }
 }
 
 // Responsive by default
@@ -20,6 +24,10 @@
   // 8 col
   @include carbon--breakpoint('lg') {
     width: 66.667%;
+  }
+
+  @include carbon--breakpoint-down('sm') {
+    padding-right: $spacing-05;
   }
 }
 
