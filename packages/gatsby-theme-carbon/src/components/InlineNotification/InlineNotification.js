@@ -26,7 +26,7 @@ export default class InlineNotification extends React.Component {
 
     return (
       <Row>
-        <Column noGutterSm colLg={8} className={notifcationClasses}>
+        <Column colLg={8} className={notifcationClasses}>
           <CarbonInlineNotification
             lowContrast
             hideCloseButton
