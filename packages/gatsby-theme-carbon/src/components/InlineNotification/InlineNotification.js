@@ -31,7 +31,6 @@ export default class InlineNotification extends React.Component {
             lowContrast
             hideCloseButton
             kind={kind}
-            title=""
             subtitle={children}
           />
         </Column>
