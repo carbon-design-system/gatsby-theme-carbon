@@ -3,7 +3,10 @@
   position: relative;
   padding-top: $spacing-04;
   top: -$spacing-04;
-  padding-right: 26%; //spacing values came from IDL site design
+
+  @include carbon--breakpoint('lg') {
+    padding-right: 26%; //spacing values came from IDL site design
+  }
 }
 
 .aside:before {

@@ -1,14 +1,16 @@
 const path = require('path');
 const { uiBackground, interactive01 } = require('@carbon/elements');
 const remarkSlug = require('remark-slug');
+const defaultLunrOptions = require('./config/lunr-options');
 
 module.exports = themeOptions => {
   const {
-    isSearchEnabled = false,
+    isSearchEnabled = true,
     withWebp = false,
     iconPath,
     mdxExtensions = ['.mdx', '.md'],
     imageQuality = 75,
+    lunrOptions = defaultLunrOptions,
     repository = {
       baseUrl: '',
       subDirectory: '',
@@ -28,6 +30,10 @@ module.exports = themeOptions => {
       `gatsby-plugin-sharp`,
       `gatsby-transformer-yaml`,
       `gatsby-plugin-catch-links`,
+      {
+        resolve: 'gatsby-plugin-lunr',
+        options: lunrOptions,
+      },
       {
         resolve: `gatsby-source-filesystem`,
         name: `Nav`,
