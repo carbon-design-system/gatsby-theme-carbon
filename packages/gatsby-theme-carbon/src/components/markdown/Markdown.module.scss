@@ -67,7 +67,7 @@
   margin-left: 1rem;
   margin-top: $spacing-05;
   @include carbon--breakpoint('md') {
-    margin-right: 1.5rem;
+    margin-right: -$spacing-05;
   }
 }
 
