@@ -28,7 +28,8 @@ export default class PageTabs extends React.Component {
     const pageTabs = tabs.map(tab => {
       const slugifiedTab = slugify(tab, { lower: true });
       const selected = slugifiedTab === currentTab;
-      const href = slug.replace(currentTab, slugifiedTab);
+      const lastWordRegex = new RegExp(`${currentTab}$`);
+      const href = slug.replace(lastWordRegex, slugifiedTab);
       return (
         <li key={tab} className={cx({ [selectedItem]: selected }, listItem)}>
           <Link className={link} to={`${href}`}>
