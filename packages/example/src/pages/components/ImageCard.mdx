@@ -75,12 +75,21 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
 
 ## Code
 
+<InlineNotification>
+
+**Note:** Images will not render if there is any extra whitespace in the lines above/below or before the image. 
+We reccomend using an editor where you can show whitespace to help.
+
+</InlineNotification>
+
 ```jsx path=components/ImageCard/ImageCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ImageCard
 <Row className="image-card-group">
   <Column colMd={4} colLg={4} noGutterSm>
     <ImageCard title="Title" subTitle="Subtitle" href="/">
-      ![Square](/images/square.png)
+
+![Square](/images/square.png)
     </ImageCard>
+
     <ImageCard
       title="Dark title"
       titleColor="dark"
@@ -90,7 +99,9 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       subTitleColor="light"
       subTitle="Light subtitle"
     >
-      ![Light dark](./images/light-dark.jpg)
+
+![Light dark](./images/light-dark.jpg)
+
     </ImageCard>
   </Column>
   <Column colMd={4} colLg={4} noGutterSm>
@@ -103,15 +114,21 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       titleColor="light"
       subTitleColor="light"
     >
-      ![Plane image](./images/plane.jpg)
+
+![Plane image](./images/plane.jpg)
+
     </ImageCard>
   </Column>
   <Column colMd={4} colLg={4} noGutterSm>
     <ImageCard aspectRatio="1:1" href="/" hoverColor="dark">
-      ![color pallete array](/images/color-grid.svg)
+
+![color pallete array](/images/color-grid.svg)
+
     </ImageCard>
     <ImageCard disabled aspectRatio="1:1" href="/">
-      ![Square](/images/square.png)
+
+![Square](/images/square.png)
+
     </ImageCard>
   </Column>
 </Row>

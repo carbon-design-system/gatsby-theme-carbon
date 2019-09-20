@@ -37,6 +37,13 @@ The `<FeatureCard>` component takes the same props as the `<ResourceCard>` compo
 
 ## Code
 
+<InlineNotification>
+
+**Note:** Images will not render if there is any extra whitespace in the lines above/below or before the image. 
+We reccomend using an editor where you can show whitespace to help.
+
+</InlineNotification>
+
 ```jsx path=components/FeatureCard/FeatureCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/FeatureCard
 <FeatureCard
   subTitle="With subtitle"
@@ -46,7 +53,9 @@ The `<FeatureCard>` component takes the same props as the `<ResourceCard>` compo
   disabled
   color="dark"
 >
-  ![demo image](/images/large-image.png)
+
+![demo image](/images/large-image.png)
+
 </FeatureCard>
 ```
 
