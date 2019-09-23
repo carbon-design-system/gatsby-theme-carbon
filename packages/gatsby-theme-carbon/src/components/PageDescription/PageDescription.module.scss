@@ -1,9 +1,5 @@
 .page-description p {
   @include carbon--type-style('expressive-heading-03', true);
-  // 6 col
-  @include carbon--breakpoint('md') {
-    width: 75%;
-  }
 
   // 8 col
   @include carbon--breakpoint('lg') {

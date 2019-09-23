@@ -10,7 +10,6 @@
   border-left: 1px solid $inverse-02;
   transform: translateX(16rem);
   overflow-y: hidden;
-  border-bottom: 1px solid transparent;
   transition: all $duration--fast-02 carbon--motion('exit');
   @include carbon--breakpoint('lg') {
     transform: translateX(0);
@@ -38,6 +37,7 @@
     // Tied to the height of the app switcher. Allows for animating up to auto.
     // Matching the height exactly is imperitive to keep the correct animation timing.
     max-height: 458px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); // header__menu shadow
   }
 }
 
@@ -67,7 +67,7 @@
   }
 
   &:focus {
-    outline: 2px solid $focus;
+    outline: 2px solid $inverse-01;
     outline-offset: -2px;
   }
 }

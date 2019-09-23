@@ -9,6 +9,7 @@
 }
 
 .main > * + * {
+  margin-top: 1.5rem;
   margin-top: var(--space);
 }
 

@@ -150,7 +150,8 @@ img {
 
 // Clears styles for nested grid components
 .container .#{$prefix}--row .#{$prefix}--row {
-  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .container .#{$prefix}--row .#{$prefix}--row > div {

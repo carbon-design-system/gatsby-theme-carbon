@@ -1,36 +1,43 @@
 //---------------------------------------
 // P
 //---------------------------------------
+.paragraph-row {
+  margin-bottom: $spacing-06;
+}
+
 .paragraph {
   @include carbon--type-style('body-long-02');
 
   @include carbon--breakpoint('md') {
-    padding-right: $spacing-07;
+    padding-right: $spacing-05;
+  }
+
+  @include carbon--breakpoint-down('sm') {
+    padding-right: $spacing-05;
   }
 }
 
 // Responsive by default
 .paragraph--responsive {
-  margin-left: -$spacing-05;
   padding-left: $spacing-05;
-
-  // 6 col
-  @include carbon--breakpoint('md') {
-    width: 75%;
-  }
 
   // 8 col
   @include carbon--breakpoint('lg') {
     width: 66.667%;
   }
+
+  @include carbon--breakpoint-down('sm') {
+    padding-right: $spacing-05;
+  }
 }
 
-// If paragraph is inside a user specified row then allow the grid code to set the width
-:global(.#{$prefix}--row) .paragraph {
+// If paragraph is inside a user specified row then allow the grid code to set the width and padding
+:global(.#{$prefix}--row .#{$prefix}--row) .paragraph {
   width: 100%;
+  padding-left: 0;
 
   @include carbon--breakpoint('md') {
-    padding-right: $spacing-07;
+    padding-right: 0;
   }
 }
 
@@ -46,10 +53,6 @@
 .h6,
 .list {
   width: 100%;
-
-  @include carbon--breakpoint('md') {
-    width: 75%;
-  }
 
   @include carbon--breakpoint('lg') {
     width: 66.667%;
@@ -81,11 +84,21 @@
 // List items / ol / ul / li
 //---------------------------------------
 
-.list-item {
+:global(.bx--list--ordered).list,
+:global(.bx--list--unordered).list {
+  margin-bottom: $spacing-06;
+}
+
+:global(.bx--list--ordered) .list-item,
+:global(.bx--list--unordered) .list-item {
   @include carbon--type-style('body-long-02');
   padding-right: 0;
-  margin: 0;
   width: 100%;
+  padding-left: $spacing-05;
+}
+
+:global(.container--dark) :global(.bx--list__item) {
+  color: $carbon--white-0;
 }
 
 //---------------------------------------
@@ -108,11 +121,6 @@
 }
 
 .blockquote .paragraph--responsive {
-  // 6 col
-  @include carbon--breakpoint('md') {
-    width: calc(75% - 3rem);
-  }
-
   // 8 col
   @include carbon--breakpoint('lg') {
     width: calc(66.667% - 3rem);
@@ -121,8 +129,6 @@
 
 // If quote is inside a user specified row then allow the grid code to set the width
 :global(.#{$prefix}--row) .blockquote .paragraph {
-  padding-right: 0;
-
   @include carbon--breakpoint('md') {
     width: 100%;
   }
@@ -175,11 +181,4 @@
 .h6 {
   --space: 0;
   @include carbon--type-style('heading-01');
-}
-
-//---------------------------------------
-// Lists
-//---------------------------------------
-:global(.container--dark) :global(.bx--list__item) {
-  color: $carbon--white-0;
 }

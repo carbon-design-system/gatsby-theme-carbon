@@ -1,19 +1,20 @@
 ---
 title: Aside
+description: Usage instructions for the Aside component
 ---
 
 <PageDescription>
 
 The `<Aside>` component is a wrapper component that adds styling to make the text display smaller than the default body text; using `body-long-01` and adds the correct top border styles.
 
-It should only be used within a `<Column>` component with specific parameters. `<Column colMd={2} colLg={3} offsetMd={1} noGutterSm>`
+It should only be used within a `<Column>` component with specific parameters. `<Column colMd={2} colLg={3} offsetMd={1} offsetLg={1}>`
 
 </PageDescription>
 
 ## Example
 
 <Row>
-<Column colMd={5} colLg={7}>
+<Column colMd={5} colLg={8}>
 
 It is more important than ever that we own our own ethos, make palpable our brand values, and incorporate an instantly identifiable IBMness in everything we do.
 
@@ -24,7 +25,7 @@ It is more important than ever that we own our own ethos, make palpable our bran
 Aesthetic is defined as the philosophical theory or set of principles governing outward appearance or actions.
 
 </Column>
-<Column colMd={2} colLg={3} offsetMd={1} noGutterSm>
+<Column colMd={2} colLg={3} offsetMd={1} offsetLg={1}>
 <Aside>
 
 **Good design is always good design.**
@@ -39,11 +40,9 @@ What we borrow from our own design history is not a mid-century aesthetic in sty
 ## Code
 
 ```jsx path=components/Aside/Aside.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/Aside
-<Column colMd={2} colLg={3} offsetMd={1} noGutterSm>
+<Column colMd={2} colLg={3} offsetMd={1} offsetLg={1}>
   <Aside>
-    **Good design is always good design.**
-
-    What we borrow from our own design
+    **Good design is always good design.** What we borrow from our own design
     history is not a mid-century aesthetic in stylistic terms, but the modernist
     attitudes and approach used at the time.
   </Aside>

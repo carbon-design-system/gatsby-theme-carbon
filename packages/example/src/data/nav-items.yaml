@@ -24,6 +24,8 @@
   pages:
     - title: Markdown
       path: /components/markdown
+    - title: MDX
+      path: /components/MDX
     - title: Grid
       path: /components/Grid
     - title: Accordion
@@ -54,5 +56,7 @@
       path: /components/Tabs
     - title: Video
       path: /components/Video
-    - title: Image Gallery
+    - title: ImageGallery
       path: /components/ImageGallery
+    - title: InlineNotification
+      path: /components/InlineNotification
