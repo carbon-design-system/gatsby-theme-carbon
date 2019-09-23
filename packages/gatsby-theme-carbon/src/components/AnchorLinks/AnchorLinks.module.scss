@@ -9,6 +9,10 @@
   }
 }
 
+.list + * {
+  --space: 80px;
+}
+
 .link {
   @include carbon--type-style('expressive-heading-03', true);
   position: relative;

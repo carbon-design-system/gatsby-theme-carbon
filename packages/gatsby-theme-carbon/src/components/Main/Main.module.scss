@@ -9,7 +9,7 @@
 }
 
 .main > * + * {
-  margin-top: 1.5rem;
+  margin-top: 1.5rem; // IE fallback
   margin-top: var(--space);
 }
 
