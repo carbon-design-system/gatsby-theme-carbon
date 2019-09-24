@@ -14,7 +14,7 @@ const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
       site {
         siteMetadata {
           repository {
-            baseUrl
+            url
             subDirectory
           }
         }
@@ -22,11 +22,14 @@ const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
     }
   `);
 
-  const { baseUrl, subDirectory } = repositoryProp || repository;
+  // prefer `url` over deprecated `baseUrl` property
+  const { url = '', subDirectory = '' } = repositoryProp
+    ? { url: repositoryProp.url || repositoryProp.baseUrl, ...repositoryProp }
+    : repository;
 
-  const href = `${baseUrl}/tree/master${subDirectory}/src/pages${relativePagePath}`;
+  const href = `${url}/tree/master${subDirectory}/src/pages${relativePagePath}`;
 
-  return baseUrl ? (
+  return url ? (
     <div className={`bx--row ${row}`}>
       <div className="bx--col">
         <a className={link} href={href}>
@@ -39,7 +42,9 @@ const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
 
 EditLink.propTypes = {
   repository: PropTypes.shape({
+    // `baseUrl` is deprecated; use `url` instead
     baseUrl: PropTypes.string,
+    url: PropTypes.string,
     subDirectory: PropTypes.string,
   }),
   relativePagePath: PropTypes.string,

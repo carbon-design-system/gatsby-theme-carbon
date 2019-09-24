@@ -4,7 +4,7 @@ const remarkSlug = require('remark-slug');
 const defaultLunrOptions = require('./config/lunr-options');
 
 module.exports = themeOptions => {
-  const {
+  let {
     isSearchEnabled = true,
     withWebp = false,
     iconPath,
@@ -12,10 +12,13 @@ module.exports = themeOptions => {
     imageQuality = 75,
     lunrOptions = defaultLunrOptions,
     repository = {
-      baseUrl: '',
+      url: '',
       subDirectory: '',
     },
   } = themeOptions;
+
+  // backwards compatibility for deprecated `baseUrl`
+  repository = { url: repository.url || repository.baseUrl, ...repository };
 
   return {
     siteMetadata: {
