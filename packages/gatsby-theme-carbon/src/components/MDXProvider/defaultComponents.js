@@ -14,6 +14,7 @@ import FeatureCard from '../FeatureCard';
 import ImageCard from '../ImageCard';
 import ImageGallery from '../ImageGallery';
 import ImageGalleryImage from '../ImageGallery/ImageGalleryImage';
+import InlineNotification from '../InlineNotification';
 import { Row, Column, Grid } from '../Grid';
 import { AnchorLink, AnchorLinks } from '../AnchorLinks';
 import { Tab, Tabs } from '../Tabs';
@@ -59,6 +60,7 @@ const components = {
   AnchorLinks,
   Tab,
   Tabs,
+  InlineNotification,
 };
 
 export default components;
