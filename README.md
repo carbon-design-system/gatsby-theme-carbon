@@ -6,6 +6,7 @@ Get started using with the Gatsby Carbon theme which includes all configuration 
 
 ## Resources
 
+- [Contribution guidelines](.github/CONTRIBUTING.md)
 - [Getting Started](https://gatsby-theme-carbon.now.sh/getting-started)
 - [Guides](https://gatsby-theme-carbon.now.sh/guides/configuration)
 - [Components](https://gatsby-theme-carbon.now.sh/components/markdown)

@@ -10,7 +10,7 @@ import NextPrevious from '../components/NextPrevious';
 import PageTabs from '../components/PageTabs';
 import Main from '../components/Main';
 
-const Default = ({ pageContext, children, location }) => {
+const Default = ({ pageContext, children, location, Title }) => {
   const { frontmatter = {}, relativePagePath, titleType } = pageContext;
   const { tabs, title, theme, description, keywords } = frontmatter;
 
@@ -45,7 +45,7 @@ const Default = ({ pageContext, children, location }) => {
       pageKeywords={keywords}
       titleType={titleType}
     >
-      <PageHeader title={title} label="label" tabs={tabs} />
+      <PageHeader title={Title ? <Title /> : title} label="label" tabs={tabs} />
       {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}
       <Main padded>
         {children}

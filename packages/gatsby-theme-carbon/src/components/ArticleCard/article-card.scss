@@ -66,7 +66,8 @@
   background: $carbon--gray-80; //$hover-ui for gray 90 theme
 }
 
-.#{$prefix}--article-card--dark .#{$prefix}--article-card__title {
+.#{$prefix}--article-card--dark .#{$prefix}--article-card__title,
+.#{$prefix}--article-card--dark .#{$prefix}--article-card__subtitle {
   color: $text-04;
 }
 
@@ -89,6 +90,7 @@
 }
 
 .#{$prefix}--article-card--disabled .#{$prefix}--article-card__title,
+.#{$prefix}--article-card--disabled .#{$prefix}--article-card__subtitle,
 .#{$prefix}--article-card--disabled .#{$prefix}--article-card__info {
   color: $disabled-03;
 }
@@ -107,6 +109,8 @@
 
 .#{$prefix}--article-card--disabled.#{$prefix}--article-card--dark
   .#{$prefix}--article-card__title,
+.#{$prefix}--article-card--disabled.#{$prefix}--article-card--dark
+  .#{$prefix}--article-card__subtitle,
 .#{$prefix}--article-card--disabled.#{$prefix}--article-card--dark
   .#{$prefix}--article-card__info {
   color: $carbon--gray-50; //$disabled-03 for gray 90

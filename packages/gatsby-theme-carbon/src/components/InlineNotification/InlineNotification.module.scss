@@ -1,0 +1,33 @@
+.notification :global(.bx--inline-notification) {
+  max-width: 100%;
+  box-shadow: none;
+  border-right: 1px solid $carbon--blue-30;
+  border-top: 1px solid $carbon--blue-30;
+  border-bottom: 1px solid $carbon--blue-30;
+}
+
+.notification :global(.bx--inline-notification--error) {
+  border-top-color: $carbon--red-30;
+  border-bottom-color: $carbon--red-30;
+  border-right-color: $carbon--red-30;
+}
+
+.notification :global(.bx--inline-notification--success) {
+  border-top-color: $carbon--green-30;
+  border-bottom-color: $carbon--green-30;
+  border-right-color: $carbon--green-30;
+}
+
+.notification :global(.bx--inline-notification--warning) {
+  border-top-color: $inverse-support-03;
+  border-bottom-color: $inverse-support-03;
+  border-right-color: $inverse-support-03;
+}
+
+.notification :global(.bx--inline-notification__subtitle p) {
+  @include carbon--type-style('body-short-01');
+}
+
+.notification :global(.bx--inline-notification__subtitle .bx--row) {
+  margin: 0;
+}
