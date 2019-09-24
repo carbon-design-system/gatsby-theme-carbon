@@ -24,7 +24,9 @@ const LeftNavItem = props => {
         const pathname = pathPrefix
           ? location.pathname.replace(pathPrefix, '')
           : location.pathname;
-
+// If item a dropdown, ignore the last path segment to account for tabbed
+// items, which won't show up in the items array. For non-dropdowns,
+// just check for exact path match while removing trailing slash.
         const isActive = items.some(item =>
           pathname.split('/').length > 2
             ? item.path.slice(0, item.path.lastIndexOf('/')) ===
