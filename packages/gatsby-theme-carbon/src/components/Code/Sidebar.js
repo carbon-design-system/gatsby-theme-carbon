@@ -3,6 +3,7 @@ import { CopyButton } from 'carbon-components-react';
 import { Launch16 } from '@carbon/icons-react';
 import copy from 'copy-to-clipboard';
 import cx from 'classnames';
+import linesToCopy from './lines-to-copy';
 import { button, sidebar, copyButton } from './Code.module.scss';
 
 // If there is a src url, but no path name, both icons appear in the sidebar.
@@ -10,7 +11,7 @@ import { button, sidebar, copyButton } from './Code.module.scss';
 // so we don't put it in the side bar.
 //
 // We'll still render the sidebar regardless of the path since we want the text fade.
-const Sidebar = ({ src, path, children }) => {
+const Sidebar = ({ src, path, copyLineStart, copyLineLength, children }) => {
   const shouldShowSrcLink = !path && src;
   const shouldShowCopyButton = !path || src;
   return (
@@ -19,7 +20,7 @@ const Sidebar = ({ src, path, children }) => {
         <CopyButton
           className={cx(button, copyButton)}
           onClick={() => {
-            copy(children);
+            copy(linesToCopy(children, copyLineStart, copyLineLength));
           }}
         />
       )}

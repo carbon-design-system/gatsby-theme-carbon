@@ -16,7 +16,14 @@ import {
 import PathRow from './PathRow';
 import Sidebar from './Sidebar';
 
-const Code = ({ children, className: classNameProp = '', path, src }) => {
+const Code = ({
+  children,
+  className: classNameProp = '',
+  path,
+  src,
+  copyLineStart,
+  copyLineLength,
+}) => {
   const language = classNameProp.replace(/language-/, '');
 
   const removeTrailingEmptyLine = lines => {
@@ -29,7 +36,12 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
 
   return (
     <Row className={row}>
-      <PathRow src={src} path={path}>
+      <PathRow
+        src={src}
+        path={path}
+        copyLineStart={copyLineStart}
+        copyLineLength={copyLineLength}
+      >
         {children}
       </PathRow>
       <Highlight
@@ -55,7 +67,12 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
                 </div>
               ))}
             </pre>
-            <Sidebar path={path} src={src}>
+            <Sidebar
+              path={path}
+              src={src}
+              copyLineStart={copyLineStart}
+              copyLineLength={copyLineLength}
+            >
               {children}
             </Sidebar>
           </div>
