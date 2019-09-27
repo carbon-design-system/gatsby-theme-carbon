@@ -14,6 +14,7 @@ module.exports = themeOptions => {
     repository = {
       baseUrl: '',
       subDirectory: '',
+      branch: 'master',
     },
   } = themeOptions;
 
