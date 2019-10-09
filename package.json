@@ -63,5 +63,6 @@
       "stylelint --fix",
       "git add"
     ]
-  }
+  },
+  "dependencies": {}
 }

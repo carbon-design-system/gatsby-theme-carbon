@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
+import Moment from 'react-moment';
 
-import { link, row } from './EditLink.module.scss';
+import { link, row, text } from './EditLink.module.scss';
 
 const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
   const {
@@ -32,6 +33,9 @@ const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
         <a className={link} href={href}>
           Edit this page on GitHub
         </a>
+        <p className={text}>
+          Last updated on <Moment format="LL" />
+        </p>
       </div>
     </div>
   ) : null;
