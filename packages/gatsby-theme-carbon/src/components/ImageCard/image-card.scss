@@ -6,13 +6,13 @@
 
   &::after {
     position: absolute;
-    top: rem(2px);
-    left: rem(2px);
+    top: rem(3px);
+    left: rem(3px);
     content: '';
-    width: calc(100% - 0.25rem);
-    height: calc(100% - 0.25rem);
+    width: calc(100% - 7px);
+    height: calc(100% - 7px);
     background: none;
-    outline: 2px solid transparent;
+    outline: 3px solid transparent;
     transition: outline motion(standard, productive) $duration--fast-01;
   }
 }
@@ -22,13 +22,13 @@
 
   &::after {
     position: absolute;
-    top: rem(2px);
-    left: rem(2px);
+    top: rem(3px);
+    left: rem(3px);
     content: '';
-    width: calc(100% - 0.25rem);
-    height: calc(100% - 0.25rem);
+    width: calc(100% - 7px);
+    height: calc(100% - 7px);
     background: none;
-    outline: 2px solid $focus;
+    outline: 3px solid $focus;
     transition: outline motion(standard, productive) $duration--fast-01;
   }
 }
