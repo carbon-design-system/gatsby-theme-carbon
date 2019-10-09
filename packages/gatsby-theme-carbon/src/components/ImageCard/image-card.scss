@@ -3,11 +3,34 @@
   padding: $spacing-05 25% $spacing-05 $spacing-05;
   position: relative;
   text-decoration: none;
+
+  &::after {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    content: '';
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: none;
+    outline: 2px solid transparent;
+    transition: outline motion(standard, productive) $duration--fast-01;
+  }
 }
 
 .#{$prefix}--image-card .#{$prefix}--tile:focus {
   outline: none;
-  //need to fix/add focus state
+
+  &::after {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    content: '';
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: none;
+    outline: 2px solid $focus;
+    transition: outline motion(standard, productive) $duration--fast-01;
+  }
 }
 
 .#{$prefix}--image-card__title {
