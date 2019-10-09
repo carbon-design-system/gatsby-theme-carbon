@@ -6,11 +6,11 @@
 
   &::after {
     position: absolute;
-    top: 2px;
-    left: 2px;
+    top: rem(2px);
+    left: rem(2px);
     content: '';
-    width: calc(100% - 4px);
-    height: calc(100% - 4px);
+    width: calc(100% - rem(4px));
+    height: calc(100% - rem(4px));
     background: none;
     outline: 2px solid transparent;
     transition: outline motion(standard, productive) $duration--fast-01;
@@ -22,11 +22,11 @@
 
   &::after {
     position: absolute;
-    top: 2px;
-    left: 2px;
+    top: rem(2px);
+    left: rem(2px);
     content: '';
-    width: calc(100% - 4px);
-    height: calc(100% - 4px);
+    width: calc(100% - rem(4px));
+    height: calc(100% - rem(4px));
     background: none;
     outline: 2px solid $focus;
     transition: outline motion(standard, productive) $duration--fast-01;
