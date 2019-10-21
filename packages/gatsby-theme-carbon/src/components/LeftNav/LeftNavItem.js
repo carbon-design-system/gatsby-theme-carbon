@@ -24,17 +24,16 @@ const LeftNavItem = props => {
         const pathname = pathPrefix
           ? location.pathname.replace(pathPrefix, '')
           : location.pathname;
-        const isActive = items.some(
-          item => pathname === item.path || pathname === `${item.path}/`
+        // If item a dropdown, ignore the last path segment to account for tabbed
+        // items, which won't show up in the items array. For non-dropdowns,
+        // just check for exact path match while removing trailing slash.
+        const isActive = items.some(item =>
+          pathname.split('/').length > 2
+            ? item.path.slice(0, item.path.lastIndexOf('/')) ===
+              pathname.slice(0, pathname.lastIndexOf('/'))
+            : item.path.replace(/\/$/, '') === pathname
         );
-        const isActiveWithin = items.some(item => {
-          if (item.path.split('/').length > 2) {
-            return pathname.includes(
-              item.path.slice(0, item.path.lastIndexOf('/'))
-            );
-          }
-          return isActive;
-        });
+
         if (items.length === 1) {
           return (
             <SideNavLink
@@ -52,8 +51,8 @@ const LeftNavItem = props => {
         return (
           <SideNavMenu
             icon={<span>dummy icon</span>}
-            isActive={isActiveWithin} // TODO similar categories
-            defaultExpanded={isActiveWithin}
+            isActive={isActive} // TODO similar categories
+            defaultExpanded={isActive}
             title={category}
           >
             <SubNavItems

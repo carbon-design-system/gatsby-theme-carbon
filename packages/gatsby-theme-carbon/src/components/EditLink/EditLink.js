@@ -16,15 +16,16 @@ const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
           repository {
             baseUrl
             subDirectory
+            branch
           }
         }
       }
     }
   `);
 
-  const { baseUrl, subDirectory } = repositoryProp || repository;
+  const { baseUrl, subDirectory, branch } = repositoryProp || repository;
 
-  const href = `${baseUrl}/tree/master${subDirectory}/src/pages${relativePagePath}`;
+  const href = `${baseUrl}/tree/${branch}${subDirectory}/src/pages${relativePagePath}`;
 
   return baseUrl ? (
     <div className={`bx--row ${row}`}>
@@ -41,6 +42,7 @@ EditLink.propTypes = {
   repository: PropTypes.shape({
     baseUrl: PropTypes.string,
     subDirectory: PropTypes.string,
+    branch: PropTypes.string,
   }),
   relativePagePath: PropTypes.string,
 };
