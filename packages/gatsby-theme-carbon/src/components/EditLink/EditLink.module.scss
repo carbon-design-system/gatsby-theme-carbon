@@ -1,7 +1,7 @@
 .link {
   @include carbon--type-style('body-short-01');
   transition: color $transition--base;
-  color: $text-02;
+  color: $carbon--gray-100;
 
   &:hover {
     color: $text-01;
@@ -14,8 +14,8 @@
 }
 
 .text {
-  @include carbon--type-style('body-short-01');
-  padding-top: 1rem;
+  @include carbon--type-style('body-long-01');
+  color: $carbon--gray-70;
 }
 
 :global(.container--dark) .link {
