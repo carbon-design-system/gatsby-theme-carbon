@@ -25,7 +25,7 @@ const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
 
   const { baseUrl, subDirectory, branch } = repositoryProp || repository;
 
-  const href = `${baseUrl}/tree/${branch}${subDirectory}/src/pages${relativePagePath}`;
+  const href = `${baseUrl}/edit/${branch}${subDirectory}/src/pages${relativePagePath}`;
 
   return baseUrl ? (
     <div className={`bx--row ${row}`}>
