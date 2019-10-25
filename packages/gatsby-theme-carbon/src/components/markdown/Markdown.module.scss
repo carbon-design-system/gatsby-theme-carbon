@@ -21,13 +21,18 @@
 .paragraph--responsive {
   padding-left: $spacing-05;
 
-  // 8 col
-  @include carbon--breakpoint('lg') {
-    width: 66.667%;
-  }
-
   @include carbon--breakpoint-down('sm') {
     padding-right: $spacing-05;
+  }
+
+  // 8 col
+  @include carbon--breakpoint('md') {
+    width: 75%;
+  }
+
+  // 16 col
+  @include carbon--breakpoint('lg') {
+    width: 66.667%;
   }
 }
 
@@ -72,11 +77,10 @@
 
 // Fix bleed when code snippets are used in a list
 .list-item > pre {
-  margin-left: -1rem;
-  margin-right: -1.5rem;
+  margin-left: 1rem;
   margin-top: $spacing-05;
   @include carbon--breakpoint('md') {
-    margin-right: 1.5rem;
+    margin-right: -$spacing-05;
   }
 }
 

@@ -137,7 +137,7 @@ To do so, provide your own [resolvers object](https://www.gatsbyjs.org/packages/
 
 ## Edit on GitHub link
 
-To add a link to the bottom of each page that points to the current page source in GitHub, provide an `repository` object to `siteMetadata` in your `gatsby-config.js` file. You can provide a `url`, and if needed, the `subDirectory` where your site source lives.
+To add a link to the bottom of each page that points to the current page source in GitHub, provide a `repository` object to `siteMetadata` in your `gatsby-config.js` file. You can provide a `url`, and if needed, the `subDirectory` and `branch` where your site source lives.
 
 ```js
   plugins: [
@@ -147,6 +147,7 @@ To add a link to the bottom of each page that points to the current page source 
         repository: {
           url: 'https://github.com/carbon-design-system/gatsby-theme-carbon',
           subDirectory: '/packages/example',
+          branch: 'master',
         },
       },
     },

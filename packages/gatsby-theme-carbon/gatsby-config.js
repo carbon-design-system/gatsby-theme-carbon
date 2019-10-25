@@ -4,17 +4,20 @@ const remarkSlug = require('remark-slug');
 const defaultLunrOptions = require('./config/lunr-options');
 
 module.exports = themeOptions => {
-  let {
+  const repositoryDefault = {
+    url: '',
+    subDirectory: '',
+    branch: 'master',
+  };
+
+  const {
     isSearchEnabled = true,
     withWebp = false,
     iconPath,
     mdxExtensions = ['.mdx', '.md'],
     imageQuality = 75,
     lunrOptions = defaultLunrOptions,
-    repository = {
-      url: '',
-      subDirectory: '',
-    },
+    repository,
   } = themeOptions;
 
   // backwards compatibility for deprecated `baseUrl`
@@ -27,7 +30,7 @@ module.exports = themeOptions => {
       description:
         'Add a description by supplying it to siteMetadata in your gatsby-config.js file.',
       keywords: 'gatsby,theme,carbon,design',
-      repository,
+      repository: { ...repositoryDefault, ...repository },
     },
     plugins: [
       `gatsby-plugin-sharp`,

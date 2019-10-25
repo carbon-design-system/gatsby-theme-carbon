@@ -16,6 +16,7 @@ const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
           repository {
             url
             subDirectory
+            branch
           }
         }
       }
@@ -23,11 +24,12 @@ const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
   `);
 
   // prefer `url` over deprecated `baseUrl` property
-  const { url = '', subDirectory = '' } = repositoryProp
+
+  const { url, subDirectory, branch } = repositoryProp
     ? { url: repositoryProp.url || repositoryProp.baseUrl, ...repositoryProp }
     : repository;
 
-  const href = `${url}/tree/master${subDirectory}/src/pages${relativePagePath}`;
+  const href = `${url}/edit/${branch}${subDirectory}/src/pages${relativePagePath}`;
 
   return url ? (
     <div className={`bx--row ${row}`}>
@@ -46,6 +48,7 @@ EditLink.propTypes = {
     baseUrl: PropTypes.string,
     url: PropTypes.string,
     subDirectory: PropTypes.string,
+    branch: PropTypes.string,
   }),
   relativePagePath: PropTypes.string,
 };
