@@ -21,13 +21,18 @@
 .paragraph--responsive {
   padding-left: $spacing-05;
 
-  // 8 col
-  @include carbon--breakpoint('lg') {
-    width: 66.667%;
-  }
-
   @include carbon--breakpoint-down('sm') {
     padding-right: $spacing-05;
+  }
+
+  // 8 col
+  @include carbon--breakpoint('md') {
+    width: 75%;
+  }
+
+  // 16 col
+  @include carbon--breakpoint('lg') {
+    width: 66.667%;
   }
 }
 
