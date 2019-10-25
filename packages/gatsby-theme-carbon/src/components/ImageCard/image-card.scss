@@ -3,11 +3,26 @@
   padding: $spacing-05 25% $spacing-05 $spacing-05;
   position: relative;
   text-decoration: none;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: calc(100% - 1px); // 1px to offset negative `left` positioning
+    height: calc(100% - 1px); // 1px to offset negative `top` positioning
+    outline: 3px solid transparent;
+    outline-offset: -3px;
+    transition: outline motion(standard, productive) $duration--fast-01;
+  }
 }
 
 .#{$prefix}--image-card .#{$prefix}--tile:focus {
   outline: none;
-  //need to fix/add focus state
+
+  &::after {
+    outline: 3px solid $focus;
+  }
 }
 
 .#{$prefix}--image-card__title {
