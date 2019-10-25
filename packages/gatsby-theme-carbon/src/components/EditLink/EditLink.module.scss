@@ -1,7 +1,7 @@
 .link {
   @include carbon--type-style('body-short-01');
   transition: color $transition--base;
-  color: $carbon--gray-100;
+  color: $text-01;
 
   &:hover {
     color: $text-01;
