@@ -1,0 +1,33 @@
+---
+title: MediumPosts
+description: Guide for pulling Medium posts through their RSS feed using a Gatsby plugin.
+---
+
+<PageDescription>
+
+Using a Gatsby plugin, this component automatically builds three `ArticleCards` populated with the most recent Medium posts at build time.
+
+</PageDescription>
+
+<InlineNotification>
+
+It is recommended that the preview images from Medium all follow a common aspect ratio, such as 16:9, in order to maintain similar height between the posts.
+
+</InlineNotification>
+
+## Example
+
+<MediumPosts color="dark" posts={3} />
+
+## Code
+
+```jsx path=components/MediumPosts/MediumPosts.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/MediumPosts
+<MediumPosts color="dark" posts={3} />
+```
+
+## Props
+
+| property | propType | required | default | description                                                                                   |
+| -------- | -------- | -------- | ------- | --------------------------------------------------------------------------------------------- |
+| color    | string   |          | `light` | Sets the card for the correct color theme, default is `light`, options are `light` and `dark` |
+| posts    | number   |          | `3`     | Sets the number of posts pulled from Medium, default is `3`, maximum is `10`.                 |
