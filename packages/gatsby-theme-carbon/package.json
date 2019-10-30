@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-carbon",
-  "version": "1.15.2",
+  "version": "1.15.3",
   "main": "index.js",
   "author": "vpicone <vp@vincepic.one> (@vpicone)",
   "repository": {
@@ -61,5 +61,6 @@
     "slugify": "^1.3.4",
     "smooth-scroll": "^16.0.3",
     "use-media": "^1.4.0"
-  }
+  },
+  "gitHead": "a50eea99e0b0cce27832395d74c5942cee9221d0"
 }
