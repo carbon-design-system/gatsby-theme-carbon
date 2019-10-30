@@ -48,7 +48,11 @@ const MediumPosts = ({ color, posts }) => {
               color={color}
               date={latestPost.date}
             >
-              <img alt={latestPost.title} src={latestPost.thumbnail} />
+              <img
+                alt={latestPost.title}
+                src={latestPost.thumbnail}
+                className="medium-image-container"
+              />
             </ArticleCard>
           </Column>
         ))}

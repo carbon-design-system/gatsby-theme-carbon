@@ -35,3 +35,23 @@
     letter-spacing: 0;
   }
 }
+
+// Images pulled from the Medium RSS feed are different sizes and aspect ratios. This will make the cards different sizes. The class below fixes that issue.
+
+.medium-image-container {
+  object-fit: cover;
+  width: 100%;
+
+  @include carbon--breakpoint('sm') {
+    height: 325px;
+  }
+  @include carbon--breakpoint('md') {
+    height: 300px;
+  }
+  @include carbon--breakpoint('lg') {
+    height: 175px;
+  }
+  @include carbon--breakpoint('xlg') {
+    height: 225px;
+  }
+}
