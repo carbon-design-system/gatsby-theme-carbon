@@ -81,15 +81,6 @@
   }
 }
 
-//---------------------------------------
-// List items / ol / ul / li
-//---------------------------------------
-
-:global(.bx--list--ordered).list,
-:global(.bx--list--unordered).list {
-  margin-bottom: $spacing-06;
-}
-
 :global(.bx--list--ordered) .list-item,
 :global(.bx--list--unordered) .list-item {
   @include carbon--type-style('body-long-02');
