@@ -13,10 +13,6 @@
   margin-top: var(--space);
 }
 
-:global([class*='--col']) {
-  margin-top: 1.5rem; // IE fallback
-}
-
 .padded {
   min-height: calc(100vh - 40rem);
   padding-top: 80px;
