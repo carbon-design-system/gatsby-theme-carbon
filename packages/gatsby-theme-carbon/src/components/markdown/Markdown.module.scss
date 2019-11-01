@@ -174,11 +174,8 @@
 }
 
 .h4 {
+  margin-top: $spacing-07;
   @include carbon--type-style('heading-02');
-}
-
-.h4 + * {
-  --space: 0;
 }
 
 .h5,
