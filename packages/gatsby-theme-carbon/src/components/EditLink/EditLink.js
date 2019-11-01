@@ -10,6 +10,7 @@ const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
     site: {
       siteMetadata: { repository },
     },
+    file,
   } = useStaticQuery(graphql`
     query REPOSITORY_QUERY {
       site {
@@ -21,12 +22,19 @@ const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
           }
         }
       }
+      file {
+        modifiedTime(formatString: "MMMM Do, YYYY")
+        name
+      }
     }
   `);
 
   const { baseUrl, subDirectory, branch } = repositoryProp || repository;
 
   const href = `${baseUrl}/edit/${branch}${subDirectory}/src/pages${relativePagePath}`;
+
+  console.log(file.modifiedTime);
+  console.log(file.name);
 
   return baseUrl ? (
     <div className={`bx--row ${row}`}>
