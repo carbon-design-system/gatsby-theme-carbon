@@ -1,9 +1,6 @@
 //---------------------------------------
 // P
 //---------------------------------------
-.paragraph-row {
-  margin-bottom: $spacing-06;
-}
 
 .paragraph {
   @include carbon--type-style('body-long-02');
