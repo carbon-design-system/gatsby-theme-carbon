@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-carbon",
-  "version": "1.15.2",
+  "version": "1.15.3",
   "main": "index.js",
   "author": "vpicone <vp@vincepic.one> (@vpicone)",
   "repository": {
@@ -27,8 +27,8 @@
     "@mdx-js/react": "^1.0.20",
     "@reach/router": "^1.2.1",
     "@vimeo/player": "^2.9.1",
-    "carbon-components": "^10.7.2",
-    "carbon-components-react": "^7.7.2",
+    "carbon-components": "^10.7.3",
+    "carbon-components-react": "^7.7.3",
     "classnames": "^2.2.6",
     "copy-to-clipboard": "^3.2.0",
     "emotion-theming": "^10.0.10",
