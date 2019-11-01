@@ -1,5 +1,20 @@
 .main {
   padding-bottom: 80px;
+  --space: 1.5rem;
+}
+
+.main > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.main > * + * {
+  margin-top: 1.5rem; // IE fallback
+  margin-top: var(--space);
+}
+
+:global([class*='--col']) {
+  margin-top: 1.5rem; // IE fallback
 }
 
 .padded {
