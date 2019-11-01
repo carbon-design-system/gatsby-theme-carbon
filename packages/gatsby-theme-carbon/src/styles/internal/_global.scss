@@ -6,6 +6,7 @@ $prefix: 'bx';
 $feature-flags: (
   ui-shell: true,
   grid-columns-16: false,
+  emit-css-custom-properties: true,
 );
 
 // Carbon globals/helpers
