@@ -1,5 +1,8 @@
 $prefix: 'bx';
 
+// Disable feature flag warning
+$did-warn-diverged-feature-flags: true;
+
 //---------------------------------------
 // Carbon Components
 //---------------------------------------
