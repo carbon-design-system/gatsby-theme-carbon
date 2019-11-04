@@ -22,11 +22,3 @@
 .secondColumn p {
   @include carbon--type-style('expressive-paragraph-01', true);
 }
-
-.grid a {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
