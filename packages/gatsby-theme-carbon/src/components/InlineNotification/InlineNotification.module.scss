@@ -1,6 +1,9 @@
 .notification :global(.bx--inline-notification) {
+  margin: 0;
   max-width: 100%;
   box-shadow: none;
+  margin-bottom: 0;
+  margin-top: 0;
   border-right: 1px solid $carbon--blue-30;
   border-top: 1px solid $carbon--blue-30;
   border-bottom: 1px solid $carbon--blue-30;
