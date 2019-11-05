@@ -1,9 +1,6 @@
 //---------------------------------------
 // P
 //---------------------------------------
-.paragraph-row {
-  margin-bottom: $spacing-06;
-}
 
 .paragraph {
   @include carbon--type-style('body-long-02');
@@ -84,15 +81,6 @@
   }
 }
 
-//---------------------------------------
-// List items / ol / ul / li
-//---------------------------------------
-
-:global(.bx--list--ordered).list,
-:global(.bx--list--unordered).list {
-  margin-bottom: $spacing-06;
-}
-
 :global(.bx--list--ordered) .list-item,
 :global(.bx--list--unordered) .list-item {
   @include carbon--type-style('body-long-02');
@@ -160,30 +148,26 @@
 
 .h1 {
   margin-top: $spacing-12;
-  margin-bottom: $spacing-05;
   @include carbon--type-style('expressive-heading-05', true);
 }
 
 .h2 {
   margin-top: $spacing-11;
-  margin-bottom: $spacing-05;
   @include carbon--type-style('expressive-heading-04', true);
 }
 
 .h3 {
   margin-top: $spacing-10;
-  margin-bottom: $spacing-05;
   @include carbon--type-style('expressive-heading-03', true);
 }
 
 .h4 {
-  margin-top: $spacing-04;
+  margin-top: $spacing-07;
   @include carbon--type-style('heading-02');
 }
 
 .h5,
 .h6 {
-  // h5 and h6 intentionally mimic one another
-  margin-top: $spacing-04;
+  --space: 0;
   @include carbon--type-style('heading-01');
 }
