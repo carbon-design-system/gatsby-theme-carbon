@@ -10,7 +10,7 @@ const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
     site: {
       siteMetadata: { repository },
     },
-    file,
+    allMdx,
   } = useStaticQuery(graphql`
     query REPOSITORY_QUERY {
       site {
@@ -22,9 +22,19 @@ const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
           }
         }
       }
-      file {
-        modifiedTime(formatString: "MMMM Do, YYYY")
-        name
+      allMdx {
+        edges {
+          node {
+            parent {
+              ... on File {
+                mtime(formatString: "MMMM Do, YYYY")
+              }
+            }
+            frontmatter {
+              title
+            }
+          }
+        }
       }
     }
   `);
@@ -33,8 +43,7 @@ const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
 
   const href = `${baseUrl}/edit/${branch}${subDirectory}/src/pages${relativePagePath}`;
 
-  console.log(file.modifiedTime);
-  console.log(file.name);
+  console.log(allMdx);
 
   return baseUrl ? (
     <div className={`bx--row ${row}`}>
