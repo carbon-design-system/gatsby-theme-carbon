@@ -13,6 +13,11 @@
   margin-top: var(--space);
 }
 
+[class*='--col'] > * + * {
+  margin-top: 1.5rem;
+  margin-top: var(--space);
+}
+
 .padded {
   min-height: calc(100vh - 40rem);
   padding-top: 80px;
