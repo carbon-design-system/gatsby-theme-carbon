@@ -9,6 +9,7 @@
 
 .accordion :global(.bx--accordion__title) {
   @include carbon--type-style('heading-02');
+  padding-right: 4rem;
 }
 
 .accordion :global(.bx--accordion__content) p {
