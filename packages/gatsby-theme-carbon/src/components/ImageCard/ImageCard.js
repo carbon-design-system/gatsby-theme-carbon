@@ -101,8 +101,6 @@ export default class ImageCard extends React.Component {
     let isLink;
     if (href !== undefined) {
       isLink = href.charAt(0) === '/';
-    } else {
-      isLink = false;
     }
 
     const ImageCardClassNames = classnames([`${prefix}--image-card`], {
@@ -120,7 +118,7 @@ export default class ImageCard extends React.Component {
     });
 
     const carbonTileclassNames = classnames([`${prefix}--tile`], {
-      [`${prefix}--tile--clickable`]: isLink,
+      [`${prefix}--tile--clickable`]: href !== undefined,
     });
 
     const titleClassNames = classnames([`${prefix}--image-card__title`], {
@@ -161,7 +159,7 @@ export default class ImageCard extends React.Component {
     );
 
     let cardContainer;
-    if (disabled === true || isLink === false) {
+    if (disabled === true || href === undefined) {
       cardContainer = <div className={carbonTileclassNames}>{cardContent}</div>;
     } else if (isLink === true) {
       cardContainer = (
