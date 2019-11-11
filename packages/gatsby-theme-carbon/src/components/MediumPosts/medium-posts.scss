@@ -43,15 +43,15 @@
   width: 100%;
 
   @include carbon--breakpoint('sm') {
-    height: 320px;
+    height: 315px;
   }
   @include carbon--breakpoint('md') {
-    height: 295px;
+    height: 290px;
   }
   @include carbon--breakpoint('lg') {
-    height: 170px;
+    height: 165px;
   }
   @include carbon--breakpoint('xlg') {
-    height: 220px;
+    height: 215px;
   }
 }
