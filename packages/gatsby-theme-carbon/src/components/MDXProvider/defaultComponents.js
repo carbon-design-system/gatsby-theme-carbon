@@ -21,6 +21,7 @@ import { Tab, Tabs } from '../Tabs';
 import Link from '../Link';
 import { Accordion, AccordionItem } from '../Accordion';
 import ArtDirection from '../ArtDirection';
+import MediumPosts from '../MediumPosts';
 
 const components = {
   wrapper: function Wrapper({ children, ...props }) {
@@ -61,6 +62,7 @@ const components = {
   Tab,
   Tabs,
   InlineNotification,
+  MediumPosts,
 };
 
 export default components;
