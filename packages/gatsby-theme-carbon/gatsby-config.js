@@ -18,6 +18,7 @@ module.exports = themeOptions => {
     imageQuality = 75,
     lunrOptions = defaultLunrOptions,
     repository,
+    mediumAccount = 'carbondesign',
   } = themeOptions;
 
   return {
@@ -114,6 +115,13 @@ module.exports = themeOptions => {
         },
       },
       `gatsby-plugin-react-helmet`,
+      {
+        resolve: 'gatsby-source-medium-feed',
+        options: {
+          userName: mediumAccount, // Medium user name
+          name: 'MediumFeed', // GraphQL query AllMediumFeed
+        },
+      },
     ],
   };
 };
