@@ -95,7 +95,6 @@ export default class FeatureCard extends React.Component {
               title={title}
               subTitle={subTitle}
               aspectRatio="2:1"
-              href={href}
               actionIcon={actionIcon}
               color={color}
               disabled={disabled}
