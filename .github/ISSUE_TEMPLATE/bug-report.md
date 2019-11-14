@@ -2,7 +2,7 @@
 name: "Bug report \U0001F41B"
 about: Create a report to help us improve
 title: ''
-projects: "carbon-design-system/27"
+projects: "https://github.com/orgs/carbon-design-system/projects/27"
 labels: 'type: bug 🐛'
 assignees: ''
 ---
