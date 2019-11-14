@@ -2,7 +2,7 @@
 name: "Bug report \U0001F41B"
 about: Create a report to help us improve
 title: ''
-projects: carbon-design-system/27
+projects: "carbon-design-system/27"
 labels: 'type: bug 🐛'
 assignees: ''
 ---
