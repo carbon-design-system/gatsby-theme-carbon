@@ -3,8 +3,13 @@ import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Column, Row } from '../Grid';
 import ArticleCard from '../ArticleCard';
+import {
+  aspectRatioContainer,
+  typeSize,
+  gutter,
+} from './MediumPosts.module.scss';
 
-const MediumPosts = ({ color, posts }) => {
+const MediumPosts = ({ postLimit = 3, cardProps, ...rest }) => {
   const data = useStaticQuery(graphql`
     query {
       allMediumFeed(sort: { fields: date, order: DESC }, limit: 10) {
@@ -24,34 +29,28 @@ const MediumPosts = ({ color, posts }) => {
 
   const allPosts = data.allMediumFeed.edges.map(({ node }) => node);
 
-  const defaultProps = {
-    defaultPosts: 3,
-  };
-
-  const latestPosts = allPosts.slice(0, posts || defaultProps.defaultPosts);
-
   return (
     <>
-      <Row>
-        {latestPosts.map(latestPost => (
+      <Row {...rest}>
+        {allPosts.slice(0, postLimit).map(latestPost => (
           <Column
             colSm={4}
             colMd={4}
             colLg={4}
             noGutterMdLeft
-            className="medium-posts-article-gutter medium-posts-type-size"
+            className={(typeSize, gutter)}
           >
             <ArticleCard
               title={latestPost.title}
               author={latestPost.author}
               href={latestPost.link}
-              color={color}
               date={latestPost.date}
+              {...cardProps}
             >
               <img
                 alt={latestPost.title}
                 src={latestPost.thumbnail}
-                className="medium-image-container"
+                className={aspectRatioContainer}
               />
             </ArticleCard>
           </Column>
@@ -63,7 +62,7 @@ const MediumPosts = ({ color, posts }) => {
 
 MediumPosts.propTypes = {
   color: PropTypes.string,
-  posts: PropTypes.number,
+  postLimit: PropTypes.number,
 };
 
 export default MediumPosts;
