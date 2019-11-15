@@ -1,18 +1,7 @@
 .#{$prefix}--caption {
   @include carbon--type-style('body-short-01');
   padding-top: $spacing-03;
-  margin-bottom: $spacing-06;
-}
-
-// Caption after images
-.gatsby-resp-image-wrapper + .#{$prefix}--caption,
-img + .#{$prefix}--caption {
-  margin-top: -$spacing-06;
-}
-
-// Caption after video
-div[class^='Video-module--video'] + .#{$prefix}--caption {
-  margin-top: -$layout-05;
+  --space: 0;
 }
 
 // Responsive by default

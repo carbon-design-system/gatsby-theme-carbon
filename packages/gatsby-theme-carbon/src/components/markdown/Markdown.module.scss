@@ -1,9 +1,6 @@
 //---------------------------------------
 // P
 //---------------------------------------
-.paragraph-row {
-  margin-bottom: $spacing-06;
-}
 
 .paragraph {
   @include carbon--type-style('body-long-02');
@@ -21,13 +18,18 @@
 .paragraph--responsive {
   padding-left: $spacing-05;
 
-  // 8 col
-  @include carbon--breakpoint('lg') {
-    width: 66.667%;
-  }
-
   @include carbon--breakpoint-down('sm') {
     padding-right: $spacing-05;
+  }
+
+  // 8 col
+  @include carbon--breakpoint('md') {
+    width: 75%;
+  }
+
+  // 16 col
+  @include carbon--breakpoint('lg') {
+    width: 66.667%;
   }
 }
 
@@ -72,21 +74,11 @@
 
 // Fix bleed when code snippets are used in a list
 .list-item > pre {
-  margin-left: -1rem;
-  margin-right: -1.5rem;
+  margin-left: 1rem;
   margin-top: $spacing-05;
   @include carbon--breakpoint('md') {
-    margin-right: 1.5rem;
+    margin-right: -$spacing-05;
   }
-}
-
-//---------------------------------------
-// List items / ol / ul / li
-//---------------------------------------
-
-:global(.bx--list--ordered).list,
-:global(.bx--list--unordered).list {
-  margin-bottom: $spacing-06;
 }
 
 :global(.bx--list--ordered) .list-item,
@@ -157,30 +149,26 @@
 
 .h1 {
   margin-top: $spacing-12;
-  margin-bottom: $spacing-05;
   @include carbon--type-style('expressive-heading-05', true);
 }
 
 .h2 {
   margin-top: $spacing-11;
-  margin-bottom: $spacing-05;
   @include carbon--type-style('expressive-heading-04', true);
 }
 
 .h3 {
   margin-top: $spacing-10;
-  margin-bottom: $spacing-05;
   @include carbon--type-style('expressive-heading-03', true);
 }
 
 .h4 {
-  margin-top: $spacing-04;
+  margin-top: $spacing-07;
   @include carbon--type-style('heading-02');
 }
 
 .h5,
 .h6 {
-  // h5 and h6 intentionally mimic one another
-  margin-top: $spacing-04;
+  --space: 0;
   @include carbon--type-style('heading-01');
 }

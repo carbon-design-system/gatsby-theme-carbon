@@ -17,6 +17,7 @@ Gatsby themes allow you to override configuration from the theme by defining the
   <AnchorLink>Image compression</AnchorLink>
   <AnchorLink>Global search</AnchorLink>
   <AnchorLink>Edit on Github link</AnchorLink>
+  <AnchorLink>Medium</AnchorLink>
   <AnchorLink>Other options</AnchorLink>
 </AnchorLinks>
 
@@ -137,7 +138,7 @@ To do so, provide your own [resolvers object](https://www.gatsbyjs.org/packages/
 
 ## Edit on GitHub link
 
-To add a link to the bottom of each page that points to the current page source in GitHub, provide an `repository` object to `siteMetadata` in your `gatsby-config.js` file. You can provide a `baseUrl`, and if needed, the `subDirectory` where your site source lives.
+To add a link to the bottom of each page that points to the current page source in GitHub, provide a `repository` object to `siteMetadata` in your `gatsby-config.js` file. You can provide a `baseUrl`, and if needed, the `subDirectory` and `branch` where your site source lives.
 
 ```js
   plugins: [
@@ -147,10 +148,27 @@ To add a link to the bottom of each page that points to the current page source 
         repository: {
           baseUrl: 'https://github.com/carbon-design-system/gatsby-theme-carbon',
           subDirectory: '/packages/example',
+          branch: 'master',
         },
       },
     },
   ],
+```
+
+## Medium
+
+Automatically grab posts from Medium's RSS feed and populate `ArticleCards`. Enable `gatsby-source-medium-feed` by shadowing this plugin and providing a `userName`. For guidance on how to use this plugin checkout [MediumPosts](/components/MediumPosts).
+
+```js
+plugins: [
+  {
+    resolve: 'gatsby-source-medium-feed',
+    options: {
+      userName: '@...', // Medium user name or publication
+      name: 'MediumFeed', // GraphQL query AllMediumFeed
+    },
+  },
+];
 ```
 
 ## Other options

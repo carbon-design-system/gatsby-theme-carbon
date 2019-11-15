@@ -95,6 +95,11 @@ div.tab-container div {
   }
 }
 
+.tab-container + .tab-contents,
+.tab-contents + .tab-contents {
+  margin-top: 0;
+}
+
 // dark background
 :global(.container--dark) .tab-contents {
   color: $text-01;

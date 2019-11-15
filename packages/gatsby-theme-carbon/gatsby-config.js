@@ -4,6 +4,12 @@ const remarkSlug = require('remark-slug');
 const defaultLunrOptions = require('./config/lunr-options');
 
 module.exports = themeOptions => {
+  const repositoryDefault = {
+    baseUrl: '',
+    subDirectory: '',
+    branch: 'master',
+  };
+
   const {
     isSearchEnabled = true,
     withWebp = false,
@@ -11,10 +17,8 @@ module.exports = themeOptions => {
     mdxExtensions = ['.mdx', '.md'],
     imageQuality = 75,
     lunrOptions = defaultLunrOptions,
-    repository = {
-      baseUrl: '',
-      subDirectory: '',
-    },
+    repository,
+    mediumAccount = 'carbondesign',
   } = themeOptions;
 
   return {
@@ -24,7 +28,7 @@ module.exports = themeOptions => {
       description:
         'Add a description by supplying it to siteMetadata in your gatsby-config.js file.',
       keywords: 'gatsby,theme,carbon,design',
-      repository,
+      repository: { ...repositoryDefault, ...repository },
     },
     plugins: [
       `gatsby-plugin-sharp`,
@@ -111,6 +115,13 @@ module.exports = themeOptions => {
         },
       },
       `gatsby-plugin-react-helmet`,
+      {
+        resolve: 'gatsby-source-medium-feed',
+        options: {
+          userName: mediumAccount, // Medium user name
+          name: 'MediumFeed', // GraphQL query AllMediumFeed
+        },
+      },
     ],
   };
 };

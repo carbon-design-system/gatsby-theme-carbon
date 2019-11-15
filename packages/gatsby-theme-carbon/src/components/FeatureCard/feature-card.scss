@@ -1,6 +1,5 @@
 .#{$prefix}--feature-card {
   position: relative;
-  margin-bottom: $spacing-05;
 }
 
 .#{$prefix}--feature-card__row {
@@ -72,7 +71,6 @@
 
 // overrides for larger breakpoints
 .#{$prefix}--feature-card .gatsby-resp-image-wrapper {
-  margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
 }

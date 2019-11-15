@@ -1,11 +1,15 @@
 $prefix: 'bx';
 
+// Disable feature flag warning
+$did-warn-diverged-feature-flags: true;
+
 //---------------------------------------
 // Carbon Components
 //---------------------------------------
 $feature-flags: (
   ui-shell: true,
   grid-columns-16: false,
+  enable-css-custom-properties: true,
 );
 
 // Carbon globals/helpers

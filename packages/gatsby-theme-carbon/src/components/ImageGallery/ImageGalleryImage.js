@@ -5,6 +5,7 @@ import {
   imageButtonWrapper,
   imageTitle,
   imageInDialog,
+  figure,
 } from './ImageGalleryImage.module.scss';
 
 function ImageGalleryImage({
@@ -26,7 +27,7 @@ function ImageGalleryImage({
 
   return (
     <Column colLg={col}>
-      <figure role="group" aria-label={alt}>
+      <figure className={figure} role="group" aria-label={alt}>
         <button className={imageButtonWrapper} type="button" {...rest}>
           {children}
         </button>
