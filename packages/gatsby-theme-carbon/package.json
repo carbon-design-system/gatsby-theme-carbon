@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-carbon",
-  "version": "1.15.3",
+  "version": "1.16.3",
   "main": "index.js",
   "author": "vpicone <vp@vincepic.one> (@vpicone)",
   "repository": {
@@ -48,6 +48,7 @@
     "gatsby-remark-smartypants": "^2.0.9",
     "gatsby-remark-unwrap-images": "^1.0.1",
     "gatsby-source-filesystem": "^2.0.37",
+    "gatsby-source-medium-feed": "^1.0.6",
     "gatsby-transformer-yaml": "^2.1.12",
     "lodash": "^4.17.11",
     "mkdirp": "^0.5.1",
