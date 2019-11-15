@@ -11,7 +11,12 @@ import PageTabs from '../components/PageTabs';
 import Main from '../components/Main';
 
 const Default = ({ pageContext, children, location, Title }) => {
-  const { frontmatter = {}, relativePagePath, titleType } = pageContext;
+  const {
+    frontmatter = {},
+    relativePagePath,
+    titleType,
+    MdxNode,
+  } = pageContext;
   const { tabs, title, theme, description, keywords } = frontmatter;
 
   // get the path prefix if it exists
@@ -49,7 +54,10 @@ const Default = ({ pageContext, children, location, Title }) => {
       {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}
       <Main padded>
         {children}
-        <EditLink relativePagePath={relativePagePath} />
+        <EditLink
+          relativePagePath={relativePagePath}
+          fileAbsolutePath={MdxNode.fileAbsolutePath}
+        />
       </Main>
       <NextPrevious
         pageContext={pageContext}
