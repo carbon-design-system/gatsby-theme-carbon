@@ -1,14 +1,8 @@
-const removeStemmerPlugin = lunr => builder => {
-  builder.pipeline.remove(lunr.stemmer);
-  builder.searchPipeline.remove(lunr.stemmer);
-};
-
 module.exports = {
   languages: [
     {
       name: 'en',
       filterNodes: node => node.context && node.context.MdxNode,
-      plugins: [removeStemmerPlugin],
     },
   ],
   fields: [

@@ -50,6 +50,8 @@
       path: /components/InlineNotification
     - title: Markdown
       path: /components/markdown
+    - title: MediumPosts
+      path: /components/MediumPosts
     - title: MDX
       path: /components/MDX
     - title: PageDescription
