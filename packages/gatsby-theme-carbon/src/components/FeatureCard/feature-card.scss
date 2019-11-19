@@ -37,9 +37,9 @@
 .#{$prefix}--feature-card__link:focus {
   outline: none;
 
-  .gatsby-resp-image-wrapper {
-    // No outline offset, because it will not show.
+  .#{$prefix}--feature-background > * {
     outline: 2px solid $focus;
+    outline-offset: 2px;
   }
 }
 
