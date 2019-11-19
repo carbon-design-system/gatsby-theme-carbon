@@ -9,6 +9,21 @@ Using a Gatsby plugin, this component automatically builds three `ArticleCards` 
 
 </PageDescription>
 
+## Setup
+
+To update the source account for this component, pass in a `mediumAccount` to your theme options in `gatsby-config.js`.
+
+```js
+plugins: [
+  {
+    resolve: 'gatsby-theme-carbon',
+    options: {
+      mediumAccount: 'carbondesign',
+    },
+  },
+];
+```
+
 ## Example
 
 <MediumPosts color="dark" posts={3} />
