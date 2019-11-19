@@ -76,7 +76,9 @@ export default class FeatureCard extends React.Component {
             <div
               className={`${prefix}--feature-card__img ${prefix}--aspect-ratio--1x1`}
             >
-              <div className={`${prefix}--aspect-ratio--object`}>
+              <div
+                className={`${prefix}--aspect-ratio--object ${prefix}--feature-background`}
+              >
                 {children}
               </div>
             </div>
@@ -95,7 +97,6 @@ export default class FeatureCard extends React.Component {
               title={title}
               subTitle={subTitle}
               aspectRatio="2:1"
-              href={href}
               actionIcon={actionIcon}
               color={color}
               disabled={disabled}
