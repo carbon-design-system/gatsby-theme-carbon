@@ -52,36 +52,47 @@ export const SwitcherLink = ({
 
 // https://css-tricks.com/using-css-transitions-auto-dimensions/
 // Note: if you change this, update the max-height in the switcher stylesheet
-const DefaultChildren = () => (
-  <>
-    <SwitcherLink href="https://ibm.com/design">IBM Design</SwitcherLink>
-    <SwitcherLink href="https://ibm.com/design/language">
-      IBM Design Language
-    </SwitcherLink>
-    <SwitcherLink href="https://ibm.com/brand">IBM Brand Center</SwitcherLink>
-    <SwitcherDivider>Design disciplines</SwitcherDivider>
-    <SwitcherLink href="https://www.carbondesignsystem.com/">
-      Product
-    </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/standards/web/">
-      Digital
-    </SwitcherLink>
-    <SwitcherLink disabled>Events</SwitcherLink>
-    <SwitcherDivider>Design practices</SwitcherDivider>
-    <SwitcherLink href="https://www.ibm.com/design/thinking/">
-      Enterprise Design Thinking
-    </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/design/research/">
-      IBM Design Research
-    </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/design/ai">
-      IBM Design for AI
-    </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/services/ibmix/">
-      IBM iX
-    </SwitcherLink>
-  </>
-);
+const DefaultChildren = () => {
+  const eventLaunch = new Date('December 2, 2019');
+  const today = new Date();
+
+  const eventProps =
+    today >= eventLaunch
+      ? { href: 'https://www.ibm.com/design/events/' }
+      : { disabled: true };
+
+  return (
+    <>
+      <SwitcherLink href="https://ibm.com/design">IBM Design</SwitcherLink>
+      <SwitcherLink href="https://ibm.com/design/language">
+        IBM Design Language
+      </SwitcherLink>
+      <SwitcherLink href="https://ibm.com/brand">IBM Brand Center</SwitcherLink>
+      <SwitcherDivider>Design disciplines</SwitcherDivider>
+      <SwitcherLink href="https://www.carbondesignsystem.com/">
+        Product
+      </SwitcherLink>
+      <SwitcherLink href="https://www.ibm.com/standards/web/">
+        Digital
+      </SwitcherLink>
+      <SwitcherLink {...eventProps}>Events</SwitcherLink>
+      <SwitcherLink disabled>Workplace</SwitcherLink>
+      <SwitcherDivider>Design practices</SwitcherDivider>
+      <SwitcherLink href="https://www.ibm.com/design/thinking/">
+        Enterprise Design Thinking
+      </SwitcherLink>
+      <SwitcherLink href="https://www.ibm.com/design/research/">
+        IBM Design Research
+      </SwitcherLink>
+      <SwitcherLink href="https://www.ibm.com/design/ai">
+        IBM Design for AI
+      </SwitcherLink>
+      <SwitcherLink href="https://www.ibm.com/services/ibmix/">
+        IBM iX
+      </SwitcherLink>
+    </>
+  );
+};
 
 Switcher.defaultProps = {
   children: <DefaultChildren />,
