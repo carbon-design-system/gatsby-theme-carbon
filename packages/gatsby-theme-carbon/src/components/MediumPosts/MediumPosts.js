@@ -26,34 +26,32 @@ const MediumPosts = ({ postLimit = 3, cardProps, ...rest }) => {
   const allPosts = data.allMediumFeed.edges.map(({ node }) => node);
 
   return (
-    <>
-      <Row {...rest}>
-        {allPosts.slice(0, postLimit).map(latestPost => (
-          <Column
-            colSm={4}
-            colMd={4}
-            colLg={4}
-            noGutterMdLeft
-            className={cardContainer}
+    <Row {...rest}>
+      {allPosts.slice(0, postLimit).map(latestPost => (
+        <Column
+          colSm={4}
+          colMd={4}
+          colLg={4}
+          noGutterMdLeft
+          className={cardContainer}
+        >
+          <ArticleCard
+            title={latestPost.title}
+            author={latestPost.author}
+            href={latestPost.link}
+            date={latestPost.date}
+            color="dark"
+            {...cardProps}
           >
-            <ArticleCard
-              title={latestPost.title}
-              author={latestPost.author}
-              href={latestPost.link}
-              date={latestPost.date}
-              color="dark"
-              {...cardProps}
-            >
-              <img
-                alt={latestPost.title}
-                src={latestPost.thumbnail}
-                className={image}
-              />
-            </ArticleCard>
-          </Column>
-        ))}
-      </Row>
-    </>
+            <img
+              alt={latestPost.title}
+              src={latestPost.thumbnail}
+              className={image}
+            />
+          </ArticleCard>
+        </Column>
+      ))}
+    </Row>
   );
 };
 
