@@ -3,8 +3,9 @@ import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Column, Row } from '../Grid';
 import ArticleCard from '../ArticleCard';
+import { image, cardContainer } from './MediumPosts.module.scss';
 
-const MediumPosts = ({ color, posts }) => {
+const MediumPosts = ({ postLimit = 3, cardProps, ...rest }) => {
   const data = useStaticQuery(graphql`
     query {
       allMediumFeed(sort: { fields: date, order: DESC }, limit: 10) {
@@ -24,46 +25,39 @@ const MediumPosts = ({ color, posts }) => {
 
   const allPosts = data.allMediumFeed.edges.map(({ node }) => node);
 
-  const defaultProps = {
-    defaultPosts: 3,
-  };
-
-  const latestPosts = allPosts.slice(0, posts || defaultProps.defaultPosts);
-
   return (
-    <>
-      <Row>
-        {latestPosts.map(latestPost => (
-          <Column
-            colSm={4}
-            colMd={4}
-            colLg={4}
-            noGutterMdLeft
-            className="medium-posts-article-gutter medium-posts-type-size"
+    <Row {...rest}>
+      {allPosts.slice(0, postLimit).map(latestPost => (
+        <Column
+          colSm={4}
+          colMd={4}
+          colLg={4}
+          noGutterMdLeft
+          className={cardContainer}
+        >
+          <ArticleCard
+            title={latestPost.title}
+            author={latestPost.author}
+            href={latestPost.link}
+            date={latestPost.date}
+            color="dark"
+            {...cardProps}
           >
-            <ArticleCard
-              title={latestPost.title}
-              author={latestPost.author}
-              href={latestPost.link}
-              color={color}
-              date={latestPost.date}
-            >
-              <img
-                alt={latestPost.title}
-                src={latestPost.thumbnail}
-                className="medium-image-container"
-              />
-            </ArticleCard>
-          </Column>
-        ))}
-      </Row>
-    </>
+            <img
+              alt={latestPost.title}
+              src={latestPost.thumbnail}
+              className={image}
+            />
+          </ArticleCard>
+        </Column>
+      ))}
+    </Row>
   );
 };
 
 MediumPosts.propTypes = {
-  color: PropTypes.string,
-  posts: PropTypes.number,
+  cardProps: PropTypes.object,
+  postLimit: PropTypes.number,
 };
 
 export default MediumPosts;
