@@ -38,7 +38,8 @@
   outline: none;
 
   .gatsby-resp-image-wrapper {
-    @include focus-outline;
+    // No outline offset, because it will not show.
+    outline: 2px solid $focus;
   }
 }
 
