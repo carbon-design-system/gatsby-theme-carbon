@@ -24,6 +24,7 @@ const Homepage = ({
       pageKeywords={keywords}
       titleType={titleType}
       homepage
+      theme="dark"
     >
       {Banner}
       {FirstCallout}

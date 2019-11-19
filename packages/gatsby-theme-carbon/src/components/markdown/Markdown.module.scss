@@ -89,8 +89,7 @@
   padding-left: $spacing-05;
 }
 
-:global(.container--dark) :global(.bx--list__item),
-:global(.container--homepage) :global(.bx--list__item) {
+:global(.container--dark) :global(.bx--list__item) {
   color: $carbon--white-0;
 }
 
