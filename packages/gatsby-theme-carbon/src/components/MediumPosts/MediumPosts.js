@@ -3,11 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Column, Row } from '../Grid';
 import ArticleCard from '../ArticleCard';
-import {
-  aspectRatioContainer,
-  typeSize,
-  gutter,
-} from './MediumPosts.module.scss';
+import { image, cardContainer } from './MediumPosts.module.scss';
 
 const MediumPosts = ({ postLimit = 3, cardProps, ...rest }) => {
   const data = useStaticQuery(graphql`
@@ -38,19 +34,20 @@ const MediumPosts = ({ postLimit = 3, cardProps, ...rest }) => {
             colMd={4}
             colLg={4}
             noGutterMdLeft
-            className={(typeSize, gutter)}
+            className={cardContainer}
           >
             <ArticleCard
               title={latestPost.title}
               author={latestPost.author}
               href={latestPost.link}
               date={latestPost.date}
+              color="dark"
               {...cardProps}
             >
               <img
                 alt={latestPost.title}
                 src={latestPost.thumbnail}
-                className={aspectRatioContainer}
+                className={image}
               />
             </ArticleCard>
           </Column>

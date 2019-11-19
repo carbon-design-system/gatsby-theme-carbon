@@ -1,5 +1,5 @@
 // Fixes the gutter of the article cards on the homepage
-.gutter {
+.card-container {
   padding-right: 0;
   padding-left: 0;
   @include carbon--breakpoint('md') {
@@ -10,7 +10,7 @@
 
 // Fixs the breaking type
 
-.type-size h4 {
+.card-container h4 {
   @include carbon--breakpoint('sm') {
     @include carbon--type-style('productive-heading-03');
   }
@@ -38,7 +38,7 @@
 
 // Images pulled from the Medium RSS feed are different sizes and aspect ratios. This will make the cards different sizes. The class below fixes that issue.
 
-.aspect-ratio-container {
+.image {
   object-fit: cover;
   width: 100%;
 
