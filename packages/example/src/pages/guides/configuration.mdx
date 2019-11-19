@@ -157,15 +157,14 @@ To add a link to the bottom of each page that points to the current page source 
 
 ## Medium
 
-Automatically grab posts from Medium's RSS feed and populate `ArticleCards`. Enable `gatsby-source-medium-feed` by shadowing this plugin and providing a `userName`. For guidance on how to use this plugin checkout [MediumPosts](/components/MediumPosts).
+In order to change the source account for the [`MediumPosts`](/components/MediumPosts) component, provide an account with the `mediumAccount` option.
 
 ```js
 plugins: [
   {
-    resolve: 'gatsby-source-medium-feed',
+    resolve: 'gatsby-theme-carbon',
     options: {
-      userName: '@...', // Medium user name or publication
-      name: 'MediumFeed', // GraphQL query AllMediumFeed
+      mediumAccount: 'carbondesign',
     },
   },
 ];
@@ -174,7 +173,8 @@ plugins: [
 ## Other options
 
 - `additionalFontWeights` – add support for additional Plex font weights. Don't forget to specify italics for the additional weights if needed.
-- `mdxExtensions` – change the file extensions processed by `gatsby-mdx` (default ['.mdx', '.md'])
+- `mdxExtensions` – change the file extensions processed by `gatsby-mdx` (default ['.mdx', '.md']).
+- `mediumAccount` - changes the source account for the [MediumPosts](/components/MediumPosts) component.
 - `titleType` – pick between four formats for the `<title>` element for your site. Here are the four options using this page as an example:
 
   - `page`: "Configuration" (default)
