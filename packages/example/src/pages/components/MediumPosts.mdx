@@ -26,17 +26,17 @@ plugins: [
 
 ## Example
 
-<MediumPosts color="dark" posts={3} />
+<MediumPosts postLimit={3} />
 
 ## Code
 
 ```jsx path=components/MediumPosts/MediumPosts.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/MediumPosts
-<MediumPosts color="dark" posts={3} />
+<MediumPosts postLimit={3} />
 ```
 
 ## Props
 
-| property | propType | required | default | description                                                                                   |
-| -------- | -------- | -------- | ------- | --------------------------------------------------------------------------------------------- |
-| color    | string   |          | `light` | Sets the card for the correct color theme, default is `light`, options are `light` and `dark` |
-| posts    | number   |          | `3`     | Sets the number of posts pulled from Medium, default is `3`, maximum is `10`.                 |
+| property  | propType | required | default             | description                                                                              |
+| --------- | -------- | -------- | ------------------- | ---------------------------------------------------------------------------------------- |
+| cardProps | object   |          | `{{color: 'dark'}}` | These props are passed through to the internal [`ArticleCard`](/components/ArticleCard). |
+| postLimit | number   |          | `3`                 | Sets the number of posts pulled from Medium, default is `3`, maximum is `10`.            |
