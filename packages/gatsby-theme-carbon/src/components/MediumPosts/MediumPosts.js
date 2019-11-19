@@ -56,7 +56,7 @@ const MediumPosts = ({ postLimit = 3, cardProps, ...rest }) => {
 };
 
 MediumPosts.propTypes = {
-  color: PropTypes.string,
+  cardProps: PropTypes.object,
   postLimit: PropTypes.number,
 };
 
