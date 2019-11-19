@@ -15,10 +15,12 @@
     padding-left: calc(
       25% + 2rem
     ); //2rem to account for 2rem left padding default on grid
+    padding-right: 2rem;
   }
 
   @include carbon--breakpoint('max') {
     padding-left: 400px;
+    padding-right: 2rem;
   }
 }
 

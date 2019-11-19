@@ -36,11 +36,15 @@ const MAX_RESULT_LIST_SIZE = 8;
 
 const search = _throttle(queryString => {
   if (window.__LUNR__) {
-    const lunrIndex = window.__LUNR__.en;
-    const searchResults = lunrIndex.index
-      .search(`${queryString}*`)
-      .slice(0, MAX_RESULT_LIST_SIZE);
-    return searchResults.map(({ ref }) => lunrIndex.store[ref]);
+    try {
+      const lunrIndex = window.__LUNR__.en;
+      const searchResults = lunrIndex.index
+        .search(`${queryString}*`)
+        .slice(0, MAX_RESULT_LIST_SIZE);
+      return searchResults.map(({ ref }) => lunrIndex.store[ref]);
+    } catch {
+      console.error(`Lunr is having issues querying for '${queryString}'`);
+    }
   }
 }, 150);
 
