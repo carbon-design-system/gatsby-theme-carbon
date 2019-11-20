@@ -56,9 +56,10 @@ const DefaultChildren = () => {
   const eventLaunch = new Date('December 2, 2019');
   const today = new Date();
 
+  // TODO: remove after 12/2/2019 launch
   const eventProps =
     today >= eventLaunch
-      ? { href: 'https://www.ibm.com/design/events/' }
+      ? { href: 'https://www.ibm.com/design/event/' }
       : { disabled: true };
 
   return (
@@ -75,7 +76,7 @@ const DefaultChildren = () => {
       <SwitcherLink href="https://www.ibm.com/standards/web/">
         Digital
       </SwitcherLink>
-      <SwitcherLink {...eventProps}>Events</SwitcherLink>
+      <SwitcherLink {...eventProps}>Event</SwitcherLink>
       <SwitcherLink disabled>Workplace</SwitcherLink>
       <SwitcherDivider>Design practices</SwitcherDivider>
       <SwitcherLink href="https://www.ibm.com/design/thinking/">
