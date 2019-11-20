@@ -93,6 +93,26 @@
   color: $carbon--white-0;
 }
 
+//spacing for content within list item
+.list-item > * + :global(.bx--row),
+.list-item > * + :global(.gatsby-resp-image-wrapper),
+.list-item > * + pre {
+  margin-bottom: 1.5rem;
+}
+
+//second child in li needs top margin to separate it from li text
+.list-item > :global(.bx--row):nth-child(2),
+.list-item > :global(.gatsby-resp-image-wrapper):nth-child(2),
+.list-item > pre:nth-child(2) {
+  // 24px (1.5rem) - 8px of margin-bottom from paragraph above it (see line 72)
+  margin-top: $spacing-05;
+}
+
+// any sibling following a nested list needs top margin to separate it from list
+:global(.bx--list--nested) + * {
+  margin-top: 1.5rem;
+}
+
 //---------------------------------------
 // Blockquote
 //---------------------------------------
@@ -140,6 +160,11 @@
 :global(.container--dark) .blockquote,
 :global(.container--dark) .blockquote .list-item {
   color: $carbon--blue-40;
+}
+
+.list-item > * + :global(.bx--row) .paragraph {
+  // remove margin bottom bc the parent row is already receiving margin (line 77)
+  margin-bottom: 0;
 }
 
 //---------------------------------------
