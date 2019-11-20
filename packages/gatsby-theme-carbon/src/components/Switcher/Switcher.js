@@ -56,6 +56,7 @@ const DefaultChildren = () => {
   const eventLaunch = new Date('December 2, 2019');
   const today = new Date();
 
+  // TODO: remove after 12/2/2019 launch
   const eventProps =
     today >= eventLaunch
       ? { href: 'https://www.ibm.com/design/event/' }
