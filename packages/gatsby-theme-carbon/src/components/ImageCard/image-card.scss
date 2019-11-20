@@ -1,3 +1,8 @@
+[class*='--col'] > .#{$prefix}--image-card + .#{$prefix}--image-card {
+  //overrides global vertical spacing
+  --space: 0;
+}
+
 .#{$prefix}--image-card .#{$prefix}--tile {
   height: 100%;
   padding: $spacing-05 25% $spacing-05 $spacing-05;
