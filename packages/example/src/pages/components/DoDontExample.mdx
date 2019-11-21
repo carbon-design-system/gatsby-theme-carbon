@@ -5,7 +5,7 @@ description: Usage instructions for the DoDontExample component
 
 <PageDescription>
 
-The `<DoDontExample>` component will generally need to be placed inside `<Row>` and `<Column>` components to align them to the grid at the correct size.
+The `<DoDontExample>` component will generally need to be placed inside `<DoDontExampleRow>` and `<Column>` components to align them to the grid at the correct size.
 
 </PageDescription>
 
@@ -42,6 +42,44 @@ The `<DoDontExample>` component will generally need to be placed inside `<Row>` 
 </Column>
 </Row>
 
+<div>
+
+#### Cluster of examples
+
+<DoDontExampleRow>
+<Column colMd={4} colLg={4}>
+<DoDontExample type="do">
+
+![Alt text](./images/light-theme.png)
+
+</DoDontExample>
+</Column>
+<Column colMd={4} colLg={4}>
+<DoDontExample type="dont">
+
+![Alt text](./images/light-theme.png)
+
+</DoDontExample>
+</Column>
+</DoDontExampleRow>
+<DoDontExampleRow>
+<Column colMd={4} colLg={4}>
+<DoDontExample type="do">
+
+![Alt text](./images/light-theme.png)
+
+</DoDontExample>
+</Column>
+<Column colMd={4} colLg={4}>
+<DoDontExample type="dont">
+
+![Alt text](./images/light-theme.png)
+
+</DoDontExample>
+</Column>
+</DoDontExampleRow>
+</div>
+
 ## Code
 
 #### Image
@@ -71,6 +109,43 @@ The `<DoDontExample>` component will generally need to be placed inside `<Row>` 
 <DoDontExample type="do" caption="Caption" captionTitle="Caption title">
   <Video vimeoId="310583077" />
 </DoDontExample>
+```
+
+#### Cluster of examples
+
+```jsx path=components/DoDontExample/DoDontExampleRow.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/DoDontExample
+<DoDontExampleRow>
+  <Column colMd={4} colLg={4}>
+    <DoDontExample type="do">
+
+    ![Alt text](./images/light-theme.png)
+
+    </DoDontExample>
+  </Column>
+  <Column colMd={4} colLg={4}>
+    <DoDontExample type="dont">
+
+    ![Alt text](./images/light-theme.png)
+
+    </DoDontExample>
+  </Column>
+</DoDontExampleRow>
+<DoDontExampleRow>
+  <Column colMd={4} colLg={4}>
+    <DoDontExample type="do">
+
+    ![Alt text](./images/light-theme.png)
+
+    </DoDontExample>
+  </Column>
+  <Column colMd={4} colLg={4}>
+    <DoDontExample type="dont">
+
+    ![Alt text](./images/light-theme.png)
+
+    </DoDontExample>
+  </Column>
+</DoDontExampleRow>
 ```
 
 ## Props

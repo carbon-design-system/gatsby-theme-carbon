@@ -6,6 +6,7 @@ import Code from '../Code';
 import PageDescription from '../PageDescription';
 import Video from '../Video';
 import DoDontExample from '../DoDontExample';
+import DoDontExampleRow from '../DoDontExample/DoDontExampleRow';
 import Caption from '../Caption';
 import ResourceCard from '../ResourceCard';
 import ArticleCard from '../ArticleCard';
@@ -46,6 +47,7 @@ const components = {
   AccordionItem,
   Video,
   DoDontExample,
+  DoDontExampleRow,
   Row,
   Column,
   Grid,
