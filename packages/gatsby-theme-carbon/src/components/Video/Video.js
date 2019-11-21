@@ -11,8 +11,8 @@ import {
   videoIsPlaying,
 } from './Video.module.scss';
 
-const Video = ({ vimeoId, title, src, poster, ...props }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+const Video = ({ autoPlay, vimeoId, title, src, poster, ...props }) => {
+  const [isPlaying, setIsPlaying] = useState(autoPlay);
   const videoRef = useRef(null);
   const iframeRef = useRef(null);
   const buttonClassName = cx(videoButton, {
@@ -98,6 +98,7 @@ const Video = ({ vimeoId, title, src, poster, ...props }) => {
       </div>
       {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
       <video
+        autoPlay={autoPlay}
         className={video}
         type="video/mp4"
         ref={videoRef}
@@ -111,6 +112,7 @@ const Video = ({ vimeoId, title, src, poster, ...props }) => {
 };
 
 Video.propTypes = {
+  autoPlay: PropTypes.bool,
   vimeoId: PropTypes.string,
   children: PropTypes.element,
   src: PropTypes.string,
@@ -138,6 +140,10 @@ Video.propTypes = {
       );
     }
   },
+};
+
+Video.defaultProps = {
+  autoPlay: false,
 };
 
 export default Video;
