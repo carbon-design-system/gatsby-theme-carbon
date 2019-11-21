@@ -61,15 +61,15 @@
   }
 }
 
+//spacing exception for nested list items
+:global(.bx--list--nested) {
+  --space: 0;
+}
+
 // responsive items in a list need to be full width
 .list-item .paragraph,
 .list-item :global(.bx--row) {
   width: 100%;
-}
-
-// If a paragraph is the last item in a list don't push next list item down
-.list-item .paragraph {
-  margin-bottom: $spacing-03;
 }
 
 // Fix bleed when code snippets are used in a list
@@ -94,23 +94,12 @@
 }
 
 //spacing for content within list item
-.list-item > * + :global(.bx--row),
-.list-item > * + :global(.gatsby-resp-image-wrapper),
-.list-item > * + pre {
-  margin-bottom: 1.5rem;
-}
+.list-item > * + * {
+  margin-top: var(--space);
 
-//second child in li needs top margin to separate it from li text
-.list-item > :global(.bx--row):nth-child(2),
-.list-item > :global(.gatsby-resp-image-wrapper):nth-child(2),
-.list-item > pre:nth-child(2) {
-  // 24px (1.5rem) - 8px of margin-bottom from paragraph above it (see line 72)
-  margin-top: $spacing-05;
-}
-
-// any sibling following a nested list needs top margin to separate it from list
-:global(.bx--list--nested) + * {
-  margin-top: 1.5rem;
+  &:last-child {
+    margin-bottom: var(--space);
+  }
 }
 
 //---------------------------------------
@@ -161,12 +150,6 @@
 :global(.container--dark) .blockquote .list-item {
   color: $carbon--blue-40;
 }
-
-.list-item > * + :global(.bx--row) .paragraph {
-  // remove margin bottom bc the parent row is already receiving margin (line 77)
-  margin-bottom: 0;
-}
-
 //---------------------------------------
 // Headings
 //---------------------------------------
