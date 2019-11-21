@@ -1,4 +1,4 @@
-[class*='--col'] > .#{$prefix}--image-card + .#{$prefix}--image-card {
+.#{$prefix}--image-card {
   //overrides global vertical spacing
   --space: 0;
 }
