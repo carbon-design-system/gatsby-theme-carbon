@@ -106,7 +106,7 @@
 }
 
 .#{$prefix}--example__caption {
-  padding: $spacing-03 0 0 0;
+  padding: $spacing-05 0 0 0;
   @include carbon--breakpoint('sm') {
     width: 100%;
   }
