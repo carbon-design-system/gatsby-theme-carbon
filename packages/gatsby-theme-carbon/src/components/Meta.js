@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { useMetadata } from '../util/hooks';
 
 const Meta = ({ pageTitle, pageDescription, pageKeywords, titleType }) => {
-  const { title, description, keywords } = useMetadata();
+  const { title, description, keywords, lang } = useMetadata();
 
   const getPageTitle = () => {
     switch (titleType) {
@@ -34,7 +34,9 @@ const Meta = ({ pageTitle, pageDescription, pageKeywords, titleType }) => {
           content: pageKeywords || keywords,
         },
       ]}
-    />
+    >
+      <html lang={lang || 'en'} />
+    </Helmet>
   );
 };
 
