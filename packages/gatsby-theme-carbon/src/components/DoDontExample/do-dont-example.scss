@@ -78,7 +78,7 @@
 }
 
 .#{$prefix}--example--incorrect .#{$prefix}--example-card::before {
-  background: $carbon--magenta-50;
+  background: $carbon--red-60;
 }
 
 .#{$prefix}--example__icon {
@@ -96,7 +96,7 @@
 }
 
 .#{$prefix}--example__icon--incorrect {
-  fill: $carbon--magenta-50;
+  fill: $carbon--red-60;
 }
 
 .#{$prefix}--example__icon path[dataIconPath='inner-path'],
@@ -106,7 +106,7 @@
 }
 
 .#{$prefix}--example__caption {
-  padding: $spacing-03 0 0 0;
+  padding: $spacing-05 0 0 0;
   @include carbon--breakpoint('sm') {
     width: 100%;
   }
