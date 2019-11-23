@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
 import classnames from 'classnames';
-import { useStaticQuery, graphql } from 'gatsby';
-
 import {
   SideNav,
   SideNavItems,
 } from 'carbon-components-react/lib/components/UIShell';
+import { useNavItems } from './LeftNavItemProvider';
 
 import NavContext from '../../util/context/NavContext';
 import LeftNavItem from './LeftNavItem';
@@ -23,25 +22,7 @@ const LeftNav = props => {
     toggleNavState('leftNavIsOpen', 'open');
   }
 
-  const {
-    allNavItemsYaml: { edges },
-  } = useStaticQuery(graphql`
-    query LEFT_NAV_QUERY {
-      allNavItemsYaml {
-        edges {
-          node {
-            title
-            pages {
-              title
-              path
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  const navItems = edges.map(({ node }) => node);
+  const navItems = useNavItems();
 
   const renderNavItems = () =>
     navItems.map((item, i) => (
