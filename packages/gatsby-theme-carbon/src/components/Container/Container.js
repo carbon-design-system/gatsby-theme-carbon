@@ -48,9 +48,9 @@ const Container = ({ children, homepage, theme }) => {
         role="presentation"
         tabIndex="-1"
       />
-      <div aria-hidden={overlayVisible} className={containerClassNames}>
+      <main aria-hidden={overlayVisible} className={containerClassNames}>
         {children}
-      </div>
+      </main>
     </>
   );
 };
