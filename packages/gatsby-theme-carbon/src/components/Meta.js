@@ -35,7 +35,7 @@ const Meta = ({ pageTitle, pageDescription, pageKeywords, titleType }) => {
         },
       ]}
     >
-      <html lang={lang || 'en'} />
+      <html lang={lang} />
     </Helmet>
   );
 };
