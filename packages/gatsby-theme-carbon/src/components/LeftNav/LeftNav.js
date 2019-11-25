@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import classnames from 'classnames';
+import { useNavItems } from './LeftNavItemProvider';
+
 import {
   SideNav,
   SideNavItems,
 } from 'carbon-components-react/lib/components/UIShell';
-import { useNavItems } from './LeftNavItemProvider';
 
 import NavContext from '../../util/context/NavContext';
 import LeftNavItem from './LeftNavItem';
