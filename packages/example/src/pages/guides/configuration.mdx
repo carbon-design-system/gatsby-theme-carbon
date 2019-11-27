@@ -193,3 +193,39 @@ plugins: [
     },
   ],
 ```
+
+## Additional remark plugins and override existing remark plugin configuration
+
+- `gatsbyRemarkPlugins` - An array containing gatsby remark plugin configurations to be added/overridden.
+
+```js
+ plugins: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        repository: {
+          baseUrl: 'https://github.com/carbon-design-system/gatsby-theme-carbon',
+          subDirectory: '/packages/example',
+          branch: 'master',
+        },
+      },
+      gatsbyRemarkPlugins: [
+        {
+          resolve: 'gatsby-remark-mermaid',
+          options: {
+            language: 'mermaid',
+            theme: 'dark',
+            viewport: {
+              width: 200,
+              height: 200,
+            },
+            mermaidOptions: {
+              themeCSS: '.node rect { fill: cornflowerblue; }',
+            },
+          },
+        },
+      ],
+    },
+  ],
+
+```

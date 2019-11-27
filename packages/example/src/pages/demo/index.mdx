@@ -118,3 +118,33 @@ Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pin
 ## Videos
 
 <Video title="Eyes" vimeoId="310583077" />
+
+## Remark plugins
+
+Remark plugins are useful extensions for instance when adding code blocks inside markdown (and mdx) files.
+It is possible to bring additional remark plugins into the theme configuration. Here is a demonstration of an example.
+See [configuration](/guides/configuration#additional-remark-plugins-and-override-existing-remark-plugin-configuration) guide for further details.
+
+### Mermaid
+
+Gatsby remark mermaid [plugin](https://www.gatsbyjs.org/packages/gatsby-remark-mermaid/) is an example of benefiting from additional remark plugins.
+
+#### Markdown source
+
+````markdown
+```mermaid
+graph LR
+install[Install Plugin]
+install --> configure[Configure Plugin]
+configure --> draw[Draw Fancy Diagrams]
+```
+````
+
+#### HTML/SVG result
+
+```mermaid
+graph LR
+install[Install Plugin]
+install --> configure[Configure Plugin]
+configure --> draw[Draw Fancy Diagrams]
+```

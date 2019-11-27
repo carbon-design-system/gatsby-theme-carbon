@@ -19,6 +19,7 @@ module.exports = themeOptions => {
     lunrOptions = defaultLunrOptions,
     repository,
     mediumAccount = 'carbondesign',
+    gatsbyRemarkPlugins,
   } = themeOptions;
 
   return {
@@ -50,19 +51,22 @@ module.exports = themeOptions => {
         options: {
           extensions: mdxExtensions,
           gatsbyRemarkPlugins: [
-            { resolve: `gatsby-remark-unwrap-images` },
-            { resolve: `gatsby-remark-smartypants` },
-            {
-              resolve: `gatsby-remark-images`,
-              options: {
-                maxWidth: 1152,
-                linkImagesToOriginal: false,
-                quality: imageQuality,
-                withWebp,
+            ...[
+              { resolve: `gatsby-remark-unwrap-images` },
+              { resolve: `gatsby-remark-smartypants` },
+              {
+                resolve: `gatsby-remark-images`,
+                options: {
+                  maxWidth: 1152,
+                  linkImagesToOriginal: false,
+                  quality: imageQuality,
+                  withWebp,
+                },
               },
-            },
-            { resolve: `gatsby-remark-responsive-iframe` },
-            { resolve: `gatsby-remark-copy-linked-files` },
+              { resolve: `gatsby-remark-responsive-iframe` },
+              { resolve: `gatsby-remark-copy-linked-files` },
+            ],
+            ...(gatsbyRemarkPlugins || []),
           ],
           plugins: ['gatsby-remark-images'],
           remarkPlugins: [remarkSlug],
