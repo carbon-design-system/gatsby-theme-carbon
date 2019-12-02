@@ -44,3 +44,23 @@ exports.onCreatePage = (
     },
   });
 };
+
+// In the case where none of the nav items have child pages, an error occurs in the left nav
+// that prevents the site from working because of the missing "title" field. Previous solutions
+// were providing at least 1 nested page, but that resulted in the bottom navigation to that page
+// reading "Resources: Resources" (as an example). By overriding the type definitions for
+// NavItemsYaml we can allow the title to be nullable, which fixes this issue.
+exports.sourceNodes = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type NavItemsYamlPage {
+      title: String
+      path: String!
+    }
+    type NavItemsYaml implements Node {
+      title: String!
+      pages: [NavItemsYamlPage]!
+    }
+  `;
+  createTypes(typeDefs);
+};
