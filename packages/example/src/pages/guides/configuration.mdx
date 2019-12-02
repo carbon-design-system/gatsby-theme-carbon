@@ -198,6 +198,21 @@ plugins: [
 
 - `gatsbyRemarkPlugins` - An array containing gatsby remark plugin configurations to be added/overridden.
 
+### Example [Gatsby Remark Mermaid plugin](https://www.gatsbyjs.org/packages/gatsby-remark-mermaid/)
+
+For the below markdown snippet:
+
+````
+```mermaid
+graph LR
+install[Install Plugin]
+install --> configure[Configure Plugin]
+configure --> draw[Draw Fancy Diagrams]
+```
+````
+
+to turn into an image one should add the following configuration to her/his own project:
+
 ```js
  plugins: [
     {
@@ -208,23 +223,23 @@ plugins: [
           subDirectory: '/packages/example',
           branch: 'master',
         },
-      },
-      gatsbyRemarkPlugins: [
-        {
-          resolve: 'gatsby-remark-mermaid',
-          options: {
-            language: 'mermaid',
-            theme: 'dark',
-            viewport: {
-              width: 200,
-              height: 200,
-            },
-            mermaidOptions: {
-              themeCSS: '.node rect { fill: cornflowerblue; }',
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-mermaid',
+            options: {
+              language: 'mermaid',
+              theme: 'dark',
+              viewport: {
+                width: 200,
+                height: 200,
+              },
+              mermaidOptions: {
+                themeCSS: '.node rect { fill: cornflowerblue; }',
+              },
             },
           },
-        },
-      ],
+        ],
+      },
     },
   ],
 
