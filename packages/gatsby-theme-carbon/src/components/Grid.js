@@ -76,7 +76,7 @@ export const Column = ({
     [`${prefix}--col-md-${colMd}`]: colMd,
     [`${prefix}--col-lg-${colLg}`]: colLg,
     [`${prefix}--col-xl-${colXl}`]: colXl,
-    [`${prefix}--col-lg-${colMax}`]: colMax,
+    [`${prefix}--col-max-${colMax}`]: colMax,
     [className]: className,
   });
 

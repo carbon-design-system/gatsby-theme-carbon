@@ -32,7 +32,7 @@ const Sidebar = ({ src, path, children }) => {
           href={src}
           style={{ zIndex: 200 }}
         >
-          <Launch16 />
+          <Launch16 alt="View source" />
         </a>
       )}
     </div>
