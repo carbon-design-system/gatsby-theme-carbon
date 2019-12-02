@@ -3,7 +3,6 @@ module.exports = {
     title: 'Gatsby Theme Carbon',
     description: 'A Gatsby theme for the carbon design system',
     keywords: 'gatsby,theme,carbon',
-    lang: 'en',
   },
   pathPrefix: `/gtc`,
   plugins: [
