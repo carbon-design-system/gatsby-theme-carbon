@@ -25,7 +25,13 @@ export default class Aside extends React.Component {
   };
 
   render() {
-    const { ariaLabel, ariaLabelledBy, children, className } = this.props;
+    const {
+      ariaLabel,
+      ariaLabelledBy,
+      children,
+      className,
+      ...rest
+    } = this.props;
 
     const captionClasses = classnames(aside, {
       [className]: className,
@@ -36,14 +42,10 @@ export default class Aside extends React.Component {
       'aria-labelledby': ariaLabelledBy,
     };
 
-    if (ariaLabel || ariaLabelledBy) {
-      return (
-        <aside className={captionClasses} {...accessibilityLabel}>
-          {children}
-        </aside>
-      );
-    }
-
-    return <div className={captionClasses}>{children}</div>;
+    return (
+      <aside className={captionClasses} {...accessibilityLabel} {...rest}>
+        {children}
+      </aside>
+    );
   }
 }
