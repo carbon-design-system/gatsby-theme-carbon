@@ -33,3 +33,25 @@ Some important things to note here:
 - The `path` refer to the relative path to the mdx file in your pages
 - You can make a `Page/index.mdx` file if you'd prefer to have assets in a folder.
   The path would still just look like `/Page`
+
+## Customizing
+
+The nav item list can be customized using Gatsby theme [shadowing](../shadowing).
+Simply provide your own implementation of `src/components/LeftNav/LeftNavItemProvider.js` which can augment or replace the nav items read from `src/data/nav-items.yaml`.
+
+```javascript
+// src/gatsby-theme-carbon/components/LeftNav/LeftNavItemProvider.js
+import { useNavItems as themeUseNavItems } from 'gatsby-theme-carbon/src/components/LeftNav/LeftNavItemProvider';
+
+// add nav items
+export function useNavItems() {
+  const navItems = themeUseNavItems();
+  return navItems.concat({
+    title: 'Additional Nav Item',
+    pages: [
+      { path: '/page1', title: 'New Page 1' },
+      { path: '/page2', title: 'New Page 2' },
+    ],
+  });
+}
+```
