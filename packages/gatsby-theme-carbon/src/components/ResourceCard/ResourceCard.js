@@ -102,8 +102,12 @@ export default class ResourceCard extends React.Component {
 
     const cardContent = (
       <>
-        <h5 className={`${prefix}--resource-card__subtitle`}>{subTitle}</h5>
-        <h4 className={`${prefix}--resource-card__title`}>{title}</h4>
+        {subTitle && (
+          <h5 className={`${prefix}--resource-card__subtitle`}>{subTitle}</h5>
+        )}
+        {title && (
+          <h4 className={`${prefix}--resource-card__title`}>{title}</h4>
+        )}
         <div className={`${prefix}--resource-card__icon--img`}>{children}</div>
         <div className={`${prefix}--resource-card__icon--action`}>
           {actionIcon === 'launch' && !disabled ? (
