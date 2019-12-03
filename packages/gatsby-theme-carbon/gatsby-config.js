@@ -19,7 +19,24 @@ module.exports = themeOptions => {
     lunrOptions = defaultLunrOptions,
     repository,
     mediumAccount = 'carbondesign',
+    gatsbyRemarkPlugins = [],
   } = themeOptions;
+
+  const defaultRemarkPlugins = [
+    { resolve: `gatsby-remark-unwrap-images` },
+    { resolve: `gatsby-remark-smartypants` },
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        maxWidth: 1152,
+        linkImagesToOriginal: false,
+        quality: imageQuality,
+        withWebp,
+      },
+    },
+    { resolve: `gatsby-remark-responsive-iframe` },
+    { resolve: `gatsby-remark-copy-linked-files` },
+  ];
 
   return {
     siteMetadata: {
@@ -51,19 +68,8 @@ module.exports = themeOptions => {
         options: {
           extensions: mdxExtensions,
           gatsbyRemarkPlugins: [
-            { resolve: `gatsby-remark-unwrap-images` },
-            { resolve: `gatsby-remark-smartypants` },
-            {
-              resolve: `gatsby-remark-images`,
-              options: {
-                maxWidth: 1152,
-                linkImagesToOriginal: false,
-                quality: imageQuality,
-                withWebp,
-              },
-            },
-            { resolve: `gatsby-remark-responsive-iframe` },
-            { resolve: `gatsby-remark-copy-linked-files` },
+            ...defaultRemarkPlugins,
+            ...gatsbyRemarkPlugins,
           ],
           plugins: ['gatsby-remark-images'],
           remarkPlugins: [remarkSlug],
