@@ -8,7 +8,7 @@
   margin-top: rem(48px);
 }
 
-.#{$prefix}--grid {
+.container .#{$prefix}--grid {
   margin: 0;
 
   @include carbon--breakpoint('lg') {
@@ -24,7 +24,7 @@
   }
 }
 
-.#{$prefix}--col-no-gutter {
+.container .#{$prefix}--col-no-gutter {
   padding: 0;
 }
 
@@ -115,48 +115,48 @@ img {
 // Grid style updates/overrides, moved over from deprecated addons pacakge
 
 // No gutter class names
-.#{$prefix}--no-gutter-lg {
+.container .#{$prefix}--no-gutter-lg {
   @include carbon--breakpoint('lg') {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-.#{$prefix}--no-gutter-md {
+.container .#{$prefix}--no-gutter-md {
   @include carbon--breakpoint('md') {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-.#{$prefix}--no-gutter-sm {
+.container .#{$prefix}--no-gutter-sm {
   padding-left: 0;
   padding-right: 0;
 }
 
-.#{$prefix}--no-gutter-lg--left {
+.container .#{$prefix}--no-gutter-lg--left {
   @include carbon--breakpoint('lg') {
     padding-left: 0;
   }
 }
 
-.#{$prefix}--no-gutter-md--left {
+.container .#{$prefix}--no-gutter-md--left {
   @include carbon--breakpoint('md') {
     padding-left: 0;
   }
 }
 
-.#{$prefix}--no-gutter-sm--left {
+.container .#{$prefix}--no-gutter-sm--left {
   padding-left: 0;
 }
 
 // Clears styles for nested grid components
-.#{$prefix}--row .#{$prefix}--row {
+.container .#{$prefix}--row .#{$prefix}--row {
   margin-left: 0;
   margin-right: 0;
 }
 
-.#{$prefix}--row .#{$prefix}--row > div {
+.container .#{$prefix}--row .#{$prefix}--row > div {
   margin: 0;
   max-width: 100%;
   flex: auto;
