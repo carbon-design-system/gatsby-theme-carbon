@@ -11,39 +11,17 @@ export default class Aside extends React.Component {
      * Specify a custom class
      */
     className: PropTypes.string,
-
-    /**
-     * Specify an `aria-label` value to provide a label to the inner aside element.
-     */
-    ariaLabel: PropTypes.string,
-
-    /**
-     * Specify an `aria-labelledby` value that references the id of an existing
-     * element to serve as a label for the inner aside element.
-     */
-    ariaLabelledBy: PropTypes.string,
   };
 
   render() {
-    const {
-      ariaLabel,
-      ariaLabelledBy,
-      children,
-      className,
-      ...rest
-    } = this.props;
+    const { children, className, ...rest } = this.props;
 
     const captionClasses = classnames(aside, {
       [className]: className,
     });
 
-    const accessibilityLabel = {
-      'aria-label': ariaLabel,
-      'aria-labelledby': ariaLabelledBy,
-    };
-
     return (
-      <aside className={captionClasses} {...accessibilityLabel} {...rest}>
+      <aside className={captionClasses} {...rest}>
         {children}
       </aside>
     );
