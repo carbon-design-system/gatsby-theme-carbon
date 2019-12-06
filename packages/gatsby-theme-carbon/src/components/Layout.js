@@ -8,6 +8,7 @@ import Footer from './Footer';
 import Container from './Container';
 
 import '../styles/index.scss';
+import MDXProvider from './MDXProvider';
 
 const Layout = ({
   children,
@@ -34,7 +35,7 @@ const Layout = ({
   }, []);
 
   return (
-    <>
+    <MDXProvider>
       <Meta
         titleType={titleType}
         pageTitle={pageTitle}
@@ -48,7 +49,7 @@ const Layout = ({
         {children}
         <Footer />
       </Container>
-    </>
+    </MDXProvider>
   );
 };
 
