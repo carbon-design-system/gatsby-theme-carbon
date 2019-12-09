@@ -161,3 +161,8 @@ img {
   max-width: 100%;
   flex: auto;
 }
+
+// TODO: remove when fix is released. See https://github.com/carbon-design-system/carbon/issues/4804
+.bx--inline-notification--low-contrast:before {
+  pointer-events: none !important;
+}
