@@ -71,7 +71,7 @@ const SubNavItems = ({ items, pathname, onClick }) =>
   items.map((item, i) => {
     const hasActiveTab =
       item.path.split('/').filter(Boolean).length > 2
-        ? pathname.includes(item.path.slice(0, item.path.lastIndexOf('/')))
+        ? item.path === pathname
         : pathname.split('/').toString() === item.path.split('/').toString();
     return (
       <SideNavMenuItem
