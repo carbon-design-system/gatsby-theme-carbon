@@ -24,14 +24,15 @@ const Layout = ({
 
   useLayoutEffect(() => {
     // eslint-disable-next-line global-require
-    require('smooth-scroll')('a[href*="#"]', {
+    const scroll = require('smooth-scroll')('a[href*="#"]', {
       speed: 400,
       durationMin: 250,
       durationMax: 700,
       easing: 'easeInOutCubic',
       clip: true,
-      offset: tabs ? -112 : -64,
+      offset: tabs ? 112 : 64,
     });
+    return scroll.destroy;
   }, [tabs]);
 
   return (
