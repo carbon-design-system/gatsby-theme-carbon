@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React from 'react';
 
 import LeftNav from './LeftNav';
 import Meta from './Meta';
@@ -6,6 +6,7 @@ import Header from './Header';
 import Switcher from './Switcher';
 import Footer from './Footer';
 import Container from './Container';
+import useHashLink from '../util/hooks/useHashLink';
 
 import '../styles/index.scss';
 
@@ -17,21 +18,10 @@ const Layout = ({
   pageTitle,
   pageDescription,
   pageKeywords,
-  ...rest
+  hasTabs,
 }) => {
   const is404 = children.key === null;
-
-  useLayoutEffect(() => {
-    // eslint-disable-next-line global-require
-    require('smooth-scroll')('a[href*="#"]', {
-      speed: 400,
-      durationMin: 250,
-      durationMax: 700,
-      easing: 'easeInOutCubic',
-      clip: true,
-      offset: 48,
-    });
-  }, []);
+  useHashLink(hasTabs);
 
   return (
     <>

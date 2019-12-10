@@ -38,6 +38,7 @@ const Default = ({ pageContext, children, location, Title }) => {
   const currentTab = getCurrentTab();
   return (
     <Layout
+      hasTabs={!!tabs}
       homepage={false}
       theme={theme}
       pageTitle={title}
