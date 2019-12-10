@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React, { useLayoutEffect } from 'react';
 
 import LeftNav from './LeftNav';
@@ -17,7 +18,7 @@ const Layout = ({
   pageTitle,
   pageDescription,
   pageKeywords,
-  ...rest
+  tabs,
 }) => {
   const is404 = children.key === null;
 
@@ -29,9 +30,9 @@ const Layout = ({
       durationMax: 700,
       easing: 'easeInOutCubic',
       clip: true,
-      offset: 48,
+      offset: tabs ? -112 : -64,
     });
-  }, []);
+  }, [tabs]);
 
   return (
     <>
