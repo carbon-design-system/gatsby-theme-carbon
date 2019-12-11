@@ -6,7 +6,7 @@ import {
   SkipToContent,
   HeaderGlobalBar,
   HeaderGlobalAction,
-} from 'carbon-components-react/lib/components/UIShell';
+} from 'carbon-components-react';
 import { AppSwitcher20, Close20 } from '@carbon/icons-react';
 import cx from 'classnames';
 
