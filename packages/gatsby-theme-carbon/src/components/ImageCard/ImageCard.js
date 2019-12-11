@@ -96,6 +96,7 @@ export default class ImageCard extends React.Component {
       aspectRatio,
       actionIcon,
       className,
+      ...rest
     } = this.props;
 
     let isLink;
@@ -181,7 +182,7 @@ export default class ImageCard extends React.Component {
     }
 
     return (
-      <div className={ImageCardClassNames}>
+      <div className={ImageCardClassNames} {...rest}>
         <div className={aspectRatioClassNames}>
           <div className={`${prefix}--aspect-ratio--object`}>
             {cardContainer}
