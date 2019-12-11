@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React, { useLayoutEffect } from 'react';
 
 import LeftNav from './LeftNav';
@@ -17,21 +18,22 @@ const Layout = ({
   pageTitle,
   pageDescription,
   pageKeywords,
-  ...rest
+  tabs,
 }) => {
   const is404 = children.key === null;
 
   useLayoutEffect(() => {
     // eslint-disable-next-line global-require
-    require('smooth-scroll')('a[href*="#"]', {
+    const scroll = require('smooth-scroll')('a[href*="#"]', {
       speed: 400,
       durationMin: 250,
       durationMax: 700,
       easing: 'easeInOutCubic',
       clip: true,
-      offset: 48,
+      offset: tabs ? 112 : 64,
     });
-  }, []);
+    return scroll.destroy;
+  }, [tabs]);
 
   return (
     <>
