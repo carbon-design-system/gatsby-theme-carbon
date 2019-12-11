@@ -36,7 +36,7 @@ const Header = ({ children }) => {
   return (
     <>
       <ShellHeader aria-label="Header" className={header}>
-        <SkipToContent className={skipToContent} />
+        <SkipToContent href="#main-content" className={skipToContent} />
         <HeaderMenuButton
           className={cx('bx--header__action--menu', headerButton)}
           aria-label="Open menu"
