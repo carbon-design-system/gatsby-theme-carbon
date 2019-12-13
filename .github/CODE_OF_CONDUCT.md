@@ -10,7 +10,7 @@ This is a place to ask questions, work through any challenges, and share ideas a
 
 ### General
 
-Communication through any of Carbon's channels (GitHub, emails, Twitter, Slack) must be constructive and never resort to personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.
+Communication through any of Carbon’s channels (GitHub, emails, Twitter, Slack) must be constructive and never resort to personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.
 
 We promise to extend courtesy and respect to everyone involved in this project, regardless of gender, gender identity, sexual orientation, disability, age, race, ethnicity, religion, or level of experience. We expect anyone contributing to Carbon to do the same.
 
@@ -21,7 +21,7 @@ If you are subjected to or witness unacceptable behavior, or have any other conc
 ### Slack
 
 1. Please, no `@here` or `@channel` unless it is a bug that is **breaking production code.** We have communities in many different time zones, and we would hate to disrupt someone not at the office.
-2. There's no need to notify the Carbon team that you have made an issue in Carbon's GitHub repositories. We check these several times a day, so we promise we'll address your issue as soon as we can.
+2. There’s no need to notify the Carbon team that you have made an issue in Carbon’s GitHub repositories. We check these several times a day, so we promise we’ll address your issue as soon as we can.
 3. Reserve direct messages for sensitive discussions, such as privacy, legal, or HR reasons. Otherwise, we encourage posting in public channels so people with the same questions can benefit.
 4. If you have a pressing bug fix, it is best to make a PR directly to get your issues addressed.
 5. `#carbon-gatsby-theme`: This channel is for questions about the Carbon Gatsby theme only. It is not the place to ask general coding questions. Instead, use a dev community like [StackOverflow](https://stackoverflow.com/).
