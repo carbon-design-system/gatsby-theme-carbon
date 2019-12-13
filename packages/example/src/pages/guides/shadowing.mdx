@@ -11,17 +11,17 @@ In the world of Gatsby themes, [component shadowing](https://www.gatsbyjs.org/bl
 
 ## Caveats
 
-If you completely shadow a file you won't get future updates to that individual file. These are some golden rules to make sure you stay as close to the theme as possible and not forgo future updates.
+If you completely shadow a file you won’t get future updates to that individual file. These are some golden rules to make sure you stay as close to the theme as possible and not forgo future updates.
 
-1. Open a [quick issue](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/new) in the gatsby-theme-carbon repo to make sure we're not working on your change.
+1. Open a [quick issue](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/new) in the gatsby-theme-carbon repo to make sure we’re not working on your change.
 
-1. Shadow as few files as you can to achieve your goal. If you can shadow just a single file, that's ideal.
+1. Shadow as few files as you can to achieve your goal. If you can shadow just a single file, that’s ideal.
 
 1. If you do end up shadowing a component, please tell us! We might use it to inform future development.
 
 ## Shadowing basics
 
-In order to shadow a component in the theme, all you need to do is place a file in the `src/gatsby-theme-carbon` in your project. The file should have the same name as the file you're shadowing.
+In order to shadow a component in the theme, all you need to do is place a file in the `src/gatsby-theme-carbon` in your project. The file should have the same name as the file you’re shadowing.
 
 In order to place your own title in the Header component:
 
@@ -30,9 +30,9 @@ In order to place your own title in the Header component:
 
 1. Import the component you wish to shadow by providing the full url pointing at the component within the theme
 
-1. Your component will **receive the same props** as the one you're shadowing. You'll can log those props to see if you'll need any of them
+1. Your component will **receive the same props** as the one you’re shadowing. You’ll can log those props to see if you’ll need any of them
 
-1. Regardless, you should _ALWAYS_ spread the extra props into the original component, this allows the core component to function as needed. Even if it doesn't receive any props now, it might in the future.
+1. Regardless, you should _ALWAYS_ spread the extra props into the original component, this allows the core component to function as needed. Even if it doesn’t receive any props now, it might in the future.
 
 1. Provide your new, custom component as the default export
 
@@ -49,9 +49,9 @@ const CustomHeader = props => (
 export default CustomHeader;
 ```
 
-## Components you'll need to shadow
+## Components you’ll need to shadow
 
-We've already provided pre-shadowed, dummy components however these are the ones you'll definitely need to shadow.
+We’ve already provided pre-shadowed, dummy components however these are the ones you’ll definitely need to shadow.
 
 | Component     | Path                                                                                                                                                                                                                  | Description                                                                        |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
