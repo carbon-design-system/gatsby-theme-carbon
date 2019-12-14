@@ -22,11 +22,11 @@
   height: 2.5rem;
   text-align: left;
   min-width: 0;
-  border: none !important;
   align-items: center;
   padding: $spacing-03 $spacing-05;
   transition: background-color $duration--fast-02;
-  outline: none !important;
+  border: none;
+  margin: 0;
 
   &::-moz-focus-inner {
     border: 0;
