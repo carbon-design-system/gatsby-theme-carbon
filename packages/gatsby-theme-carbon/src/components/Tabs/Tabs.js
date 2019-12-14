@@ -6,6 +6,7 @@ import React, {
   useCallback,
 } from 'react';
 import { useId } from '../../util/hooks/useId';
+import styles from './Tabs.module.scss';
 
 function elementIsNullOrString(child) {
   return !child || typeof child.type === 'string';
@@ -46,6 +47,7 @@ export const Tab = ({ _id, label, active, index, tab, children }) => {
     return (
       <li role="presentation">
         <button
+          className={styles.tab}
           ref={buttonRef}
           onKeyDown={onKeyDown}
           onClick={() => setActiveTab(index)}
@@ -64,6 +66,7 @@ export const Tab = ({ _id, label, active, index, tab, children }) => {
 
   return (
     <section
+      className={styles.panel}
       hidden={!active}
       role="tabpanel"
       id={`${_id}--panel`}
@@ -81,7 +84,7 @@ export const Tabs = props => {
 
   return (
     <TabContext.Provider value={{ setActiveTab, tabList }}>
-      <ul style={{ display: 'flex' }} role="tablist">
+      <ul className={styles.tabList} role="tablist">
         {React.Children.map(props.children, (child, index) => {
           if (elementIsNullOrString(child)) return child;
           return React.cloneElement(child, {

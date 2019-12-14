@@ -1,106 +1,57 @@
-div.tab-container {
-  margin-left: -$spacing-05;
-  min-height: 2.5rem;
-  width: 100vw;
-  @include carbon--breakpoint('md') {
-    width: 100%;
-  }
+.tab-list {
+  display: flex;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  scrollbar-width: none;
 }
 
-div.tab-container .tab {
-  margin-left: 0;
-  background-color: $ui-background;
-  padding-left: $spacing-05;
-  padding-right: $spacing-05;
-  height: 3rem;
-  transition: background-color $duration--fast-02;
+.tab-list li:focus-within {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+  z-index: 1000;
+}
 
-  &:last-of-type {
-    border-right: none;
+.tab-list li:not([aria-selected='true']):not(:last-child) {
+  border-right: 1px solid $ui-01;
+}
+
+.tab {
+  @include carbon--type-style('body-short-01');
+  display: inline-block;
+  background-color: $ui-background;
+  height: 2.5rem;
+  text-align: left;
+  min-width: 0;
+  border: none !important;
+  align-items: center;
+  padding: $spacing-03 $spacing-05;
+  transition: background-color $duration--fast-02;
+  outline: none !important;
+
+  &::-moz-focus-inner {
+    border: 0;
   }
 
   &:hover {
-    background: $hover-selected-ui;
+    background-color: $hover-ui;
   }
 
   @include carbon--breakpoint('md') {
-    border-right: 1px solid $active-ui;
-    height: 2.5rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-// Active dropdown item
-div.tab-container div a {
-  font-weight: 600;
-  padding: 0;
-}
-
-div.tab-container .tab a {
-  height: 3rem;
-  padding-top: $spacing-05;
-  transition: background-color $duration--fast-02;
-  color: $text-01;
-  border-bottom: 1px solid #d8d8d8 !important;
-  margin-left: 0;
-  background-color: transparent;
-
-  @include carbon--breakpoint('md') {
-    padding-top: $spacing-04;
-    height: 2.5rem;
-    background-color: $selected-ui;
     min-width: 10rem;
-    border-bottom: none !important;
-
-    &:hover {
-      background: $hover-selected-ui;
-    }
-
-    &[aria-selected='true'] {
-      background-color: $ui-background;
-      padding-top: 9px;
-      padding-left: $spacing-05;
-      border-top: 3px solid $interactive-01 !important;
-    }
-
-    &:active:not([aria-selected='true']) {
-      padding-top: $spacing-04;
-      padding-left: $spacing-05;
-    }
   }
 }
 
-.tab-container .tab:last-of-type a {
-  border-bottom: none !important;
+.tab[aria-selected='true'] {
+  background-color: $ui-05;
+  color: $inverse-01;
 }
 
-// Dropdown container
-div.tab-container div {
-  background-color: $ui-background;
-  height: 3rem;
-  border-top: 3px solid $interactive-01;
-  border-bottom: 1px solid #d8d8d8;
-}
-
-.tab-contents {
+.panel {
+  color: $text-01;
+  --space: 0;
   padding: $spacing-06;
-  padding-top: $spacing-09;
   background: $ui-background;
   margin-left: -$spacing-05;
+  margin-right: -$spacing-05;
   margin-bottom: $spacing-08;
-  width: 100vw;
-  @include carbon--breakpoint('md') {
-    width: 100%;
-  }
-}
-
-.tab-container + .tab-contents,
-.tab-contents + .tab-contents {
-  margin-top: 0;
-}
-
-// dark background
-:global(.container--dark) .tab-contents {
-  color: $text-01;
 }
