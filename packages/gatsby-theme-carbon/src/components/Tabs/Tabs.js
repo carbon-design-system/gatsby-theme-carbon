@@ -1,26 +1,107 @@
-import React from 'react';
-import {
-  Tabs as CarbonTabs,
-  Tab as CarbonTab,
-  TabContent,
-} from 'carbon-components-react';
-import { tabContainer, tab, tabContents } from './Tabs.module.scss';
+import React, {
+  useContext,
+  createContext,
+  useState,
+  useRef,
+  useCallback,
+} from 'react';
+import { useId } from '../../util/hooks/useId';
 
-export const Tab = props => <CarbonTab className={tab} {...props}></CarbonTab>;
+function elementIsNullOrString(child) {
+  return !child || typeof child.type === 'string';
+}
 
-// Memoized for performance durring window resizing. The cloneElement implementation and
-// subsequent memoization are necessary due to the following issue:
-// https://github.com/carbon-design-system/carbon/issues/339
-export const Tabs = React.memo(function Tabs(props) {
+const TabContext = createContext({});
+
+export const Tab = ({ _id, label, active, index, tab, children }) => {
+  const { setActiveTab, tabList } = useContext(TabContext);
+  const buttonRef = useCallback(ref => tabList.push(ref), [tabList]);
+
+  const onKeyDown = e => {
+    let nextButton;
+    switch (e.which) {
+      case 35: // end
+        e.preventDefault();
+        tabList[tabList.length - 1].focus();
+        break;
+      case 36: // home
+        e.preventDefault();
+        tabList[0].focus();
+        break;
+      case 37: // left
+        e.preventDefault();
+        nextButton = tabList[index - 1] || tabList[tabList.length - 1];
+        nextButton.focus();
+        break;
+      case 39: // right
+        e.preventDefault();
+        nextButton = tabList[index + 1] || tabList[0];
+        nextButton.focus();
+        break;
+      default:
+    }
+  };
+
+  if (tab) {
+    return (
+      <li role="presentation">
+        <button
+          ref={buttonRef}
+          onKeyDown={onKeyDown}
+          onClick={() => setActiveTab(index)}
+          onFocus={() => setActiveTab(index)}
+          type="button"
+          role="tab"
+          id={`${_id}--tab`}
+          tabIndex={!active ? '-1' : '0'}
+          aria-selected={active || undefined}
+        >
+          {label}
+        </button>
+      </li>
+    );
+  }
+
   return (
-    <CarbonTabs className={tabContainer} tabContentClassName={tabContents}>
-      {React.Children.map(props.children, child =>
-        React.cloneElement(child, {
-          renderContent: TabContent,
-        })
-      )}
-    </CarbonTabs>
+    <section
+      hidden={!active}
+      role="tabpanel"
+      id={`${_id}--panel`}
+      aria-labelledby={`${_id}--tab`}
+    >
+      {children}
+    </section>
   );
-});
+};
+
+export const Tabs = props => {
+  const { current: tabList } = useRef([]);
+  const [activeTab, setActiveTab] = useState(0);
+  const id = useId('tabs');
+
+  return (
+    <TabContext.Provider value={{ setActiveTab, tabList }}>
+      <ul style={{ display: 'flex' }} role="tablist">
+        {React.Children.map(props.children, (child, index) => {
+          if (elementIsNullOrString(child)) return child;
+          return React.cloneElement(child, {
+            _id: `${id}__${index}`,
+            active: activeTab === index,
+            index,
+            tab: true,
+          });
+        })}
+      </ul>
+      {React.Children.map(props.children, (child, index) => {
+        if (elementIsNullOrString(child)) return child;
+        return React.cloneElement(child, {
+          _id: `${id}__${index}`,
+          active: activeTab === index,
+          index,
+        });
+      })}
+    </TabContext.Provider>
+  );
+};
 
 Tabs.displayName = 'Tabs';
