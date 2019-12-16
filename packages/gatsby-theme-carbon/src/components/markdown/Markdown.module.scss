@@ -110,7 +110,6 @@
 .blockquote {
   margin: $spacing-08 0;
   color: $carbon--blue-60;
-  font-style: italic;
 
   @include carbon--breakpoint('md') {
     margin-left: $spacing-08;
@@ -139,6 +138,7 @@
 
 .blockquote cite {
   @include carbon--type-style('body-long-01');
+  font-style: italic;
   display: block;
   margin-top: $spacing-02;
 }
