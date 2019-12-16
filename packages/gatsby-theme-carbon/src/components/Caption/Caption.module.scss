@@ -1,6 +1,6 @@
 .caption {
   @include carbon--type-style('body-short-01');
-  --space: 0;
+  --space: #{$spacing-05};
 }
 
 // Responsive by default
