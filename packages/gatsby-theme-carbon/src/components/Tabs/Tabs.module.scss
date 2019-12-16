@@ -3,20 +3,15 @@
   margin-left: -1rem;
   margin-right: -1rem;
   scrollbar-width: none;
-}
-
-.tab-list li:focus-within {
-  outline: 2px solid blue;
-  outline-offset: 2px;
-  z-index: 1000;
-}
-
-.tab-list li:not([aria-selected='true']):not(:last-child) {
-  border-right: 1px solid $ui-01;
+  overflow-x: auto;
+  @include carbon--breakpoint('md') {
+    overflow: visible;
+  }
 }
 
 .tab {
   @include carbon--type-style('body-short-01');
+  position: relative;
   display: inline-block;
   background-color: $ui-background;
   height: 2.5rem;
@@ -24,12 +19,20 @@
   min-width: 0;
   align-items: center;
   padding: $spacing-03 $spacing-05;
-  transition: background-color $duration--fast-02;
+  white-space: nowrap;
+  transition: all $duration--fast-02;
   border: none;
   margin: 0;
+  border-right: 1px solid $ui-01;
 
   &::-moz-focus-inner {
     border: 0;
+  }
+
+  &:focus {
+    outline: 2px solid $focus;
+    outline-offset: 2px;
+    z-index: 1; // allows overflow to be above subsequent tab
   }
 
   &:hover {
@@ -44,6 +47,7 @@
 .tab[aria-selected='true'] {
   background-color: $ui-05;
   color: $inverse-01;
+  border-right: none;
 }
 
 .panel {
