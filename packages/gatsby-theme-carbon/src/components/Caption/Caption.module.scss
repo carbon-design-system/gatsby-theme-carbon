@@ -1,11 +1,11 @@
-.#{$prefix}--caption {
+.caption {
   @include carbon--type-style('body-short-01');
   padding-top: $spacing-05;
   --space: 0;
 }
 
 // Responsive by default
-.#{$prefix}--caption--responsive {
+.caption-responsive {
   // 6/8 columns
   @include carbon--breakpoint('md') {
     width: 75%;
@@ -18,6 +18,6 @@
 }
 
 // If caption is inside a user specified row then allow the grid code to set the width
-.#{$prefix}--row .#{$prefix}--caption {
+:global(.#{$prefix}--row) .caption {
   width: 100%;
 }
