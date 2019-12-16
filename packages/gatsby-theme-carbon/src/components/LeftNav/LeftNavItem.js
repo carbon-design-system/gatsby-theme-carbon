@@ -6,7 +6,7 @@ import {
   SideNavLink,
   SideNavMenu,
   SideNavMenuItem,
-} from 'carbon-components-react/lib/components/UIShell';
+} from 'carbon-components-react';
 
 import styles, { currentItem } from './LeftNav.module.scss';
 

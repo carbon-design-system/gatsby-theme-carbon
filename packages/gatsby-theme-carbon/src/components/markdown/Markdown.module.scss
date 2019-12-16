@@ -4,30 +4,22 @@
 
 .paragraph {
   @include carbon--type-style('body-long-02');
+  padding-left: $spacing-05;
+  padding-right: $spacing-05;
 
   @include carbon--breakpoint('md') {
-    padding-right: $spacing-05;
-  }
-
-  @include carbon--breakpoint-down('sm') {
-    padding-right: $spacing-05;
+    padding-right: $spacing-07;
   }
 }
 
 // Responsive by default
 .paragraph--responsive {
-  padding-left: $spacing-05;
-
-  @include carbon--breakpoint-down('sm') {
-    padding-right: $spacing-05;
-  }
-
   // 8 col
   @include carbon--breakpoint('md') {
     width: 75%;
   }
 
-  // 16 col
+  // 8 col
   @include carbon--breakpoint('lg') {
     width: 66.667%;
   }
@@ -55,6 +47,11 @@
 .h6,
 .list {
   width: 100%;
+  padding-right: $spacing-05;
+
+  @include carbon--breakpoint('md') {
+    padding-right: $spacing-07;
+  }
 
   @include carbon--breakpoint('lg') {
     width: 66.667%;
@@ -90,7 +87,8 @@
   @include carbon--type-style('body-long-02');
   padding-right: 0;
   width: 100%;
-  padding-left: $spacing-05;
+  margin-left: $spacing-05;
+  padding-left: $spacing-02;
 }
 
 :global(.container--dark) :global(.bx--list__item) {

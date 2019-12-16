@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import React from 'react';
 
 import { P, H1, H2, H3, H4, H5, Ul, Ol, Li, Blockquote } from '../markdown';
@@ -36,6 +37,8 @@ const components = {
   ol: Ol,
   ul: Ul,
   li: Li,
+  'li.ul': props => <Ul nested {...props} />,
+  'li.ol': props => <Ol nested {...props} />,
   blockquote: Blockquote,
   code: Code,
   table: PageTable,

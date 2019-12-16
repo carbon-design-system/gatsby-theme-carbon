@@ -6,7 +6,7 @@ labels: 'type: a11y'
 assignees: ''
 ---
 
-<!-- Feel free to remove sections that aren't relevant.
+<!-- Feel free to remove sections that aren’t relevant.
 
 ## Title line template: [Title]: Brief description
 

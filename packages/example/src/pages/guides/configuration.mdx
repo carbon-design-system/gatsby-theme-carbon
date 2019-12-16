@@ -1,11 +1,11 @@
 ---
 title: Configuration
-description: Guide for configuring the theme's various settings
+description: Guide for configuring the theme’s various settings
 ---
 
 <PageDescription>
 
-Gatsby themes allow you to override configuration from the theme by defining the same property in your `gatsby-config.js` at the root of your project. You can see the default configuration provided by the theme's [`gatsby-config.js`](https://github.com/carbon-design-system/gatsby-theme-carbon/blob/master/packages/gatsby-theme-carbon/gatsby-config.js) file.
+Gatsby themes allow you to override configuration from the theme by defining the same property in your `gatsby-config.js` at the root of your project. You can see the default configuration provided by the theme’s [`gatsby-config.js`](https://github.com/carbon-design-system/gatsby-theme-carbon/blob/master/packages/gatsby-theme-carbon/gatsby-config.js) file.
 
 </PageDescription>
 
@@ -41,7 +41,7 @@ module.exports = {
 
 ## Manifest
 
-One of the first configurations should be to override the default manifest options, you can do this in `gatsby-config.js`. Any options you don't set, will be provided by the theme. See the example project.
+One of the first configurations should be to override the default manifest options, you can do this in `gatsby-config.js`. Any options you don’t set, will be provided by the theme. See the example project.
 
 ```js
 siteMetadata: {
@@ -65,7 +65,7 @@ siteMetadata: {
 
 ## Favicon
 
-If you need to override the default favicon, you can do so by passing a relative path to the icon. It's recommended to provide a 512 x 512 version.
+If you need to override the default favicon, you can do so by passing a relative path to the icon. It’s recommended to provide a 512 x 512 version.
 
 **IMPORTANT:** For best results, if you’re providing an icon for generation it should be…
 
@@ -86,7 +86,7 @@ plugins: [
 
 ## Additional font weights
 
-If needed, you can add support for additional Plex font weights. Don't forget to specify italics for the additional weights if needed.
+If needed, you can add support for additional Plex font weights. Don’t forget to specify italics for the additional weights if needed.
 
 ```js
 plugins: [
@@ -121,7 +121,7 @@ module.exports = {
 ## Global search
 
 Site-wide search is provided by the theme. The only requirement for a page to show up in the results is for it to have `title` set in the [frontmatter](/components/MDX#frontmatter).
-To render more helpful search results (and improve SEO), you'll want to make sure your pages have `description` set in the frontmatter as well.
+To render more helpful search results (and improve SEO), you’ll want to make sure your pages have `description` set in the frontmatter as well.
 
 Global search is enabled by default. To disable it, set the `isSearchEnabled` option to false.
 
@@ -175,7 +175,7 @@ plugins: [
 
 ## Other options
 
-- `additionalFontWeights` – add support for additional Plex font weights. Don't forget to specify italics for the additional weights if needed.
+- `additionalFontWeights` – add support for additional Plex font weights. Don’t forget to specify italics for the additional weights if needed.
 - `mdxExtensions` – change the file extensions processed by `gatsby-mdx` (default ['.mdx', '.md']).
 - `titleType` – pick between four formats for the `<title>` element for your site. Here are the four options using this page as an example:
 

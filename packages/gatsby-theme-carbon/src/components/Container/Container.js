@@ -34,7 +34,7 @@ const Container = ({ children, homepage, theme }) => {
   })();
 
   const containerClassNames = classnames({
-    container: theme !== 'dark' || !homepage,
+    container: true,
     'container--homepage': homepage,
     'container--dark': theme === 'dark',
   });
@@ -48,7 +48,11 @@ const Container = ({ children, homepage, theme }) => {
         role="presentation"
         tabIndex="-1"
       />
-      <main aria-hidden={overlayVisible} className={containerClassNames}>
+      <main
+        id="main-content"
+        aria-hidden={overlayVisible}
+        className={containerClassNames}
+      >
         {children}
       </main>
     </>

@@ -34,7 +34,7 @@ This should not be a full list of functionality; the Carbon team will work with 
 
 Do you want this work within a specific time period? Is it related to an upcoming release?
 
-_NB: The Carbon team will try to work with your timeline, but it's not guaranteed. The earlier you make a request in advance of a desired delivery date, the better!_
+_NB: The Carbon team will try to work with your timeline, but it’s not guaranteed. The earlier you make a request in advance of a desired delivery date, the better!_
 
 ### Available extra resources
 
