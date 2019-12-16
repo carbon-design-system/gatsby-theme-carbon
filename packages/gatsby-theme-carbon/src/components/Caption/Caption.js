@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { settings } from 'carbon-components';
-
-const { prefix } = settings;
+import { caption, captionResponsive } from './Caption.module.scss';
 
 export default class Caption extends React.Component {
   static propTypes = {
@@ -23,9 +21,9 @@ export default class Caption extends React.Component {
   render() {
     const { children, className, fullWidth } = this.props;
 
-    const captionClasses = classnames([`${prefix}--caption`], {
+    const captionClasses = classnames(caption, {
       [className]: className,
-      [`${prefix}--caption--responsive`]: !fullWidth,
+      [captionResponsive]: !fullWidth,
     });
 
     return <p className={captionClasses}>{children}</p>;
