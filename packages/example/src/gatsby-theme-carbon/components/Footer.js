@@ -1,8 +1,12 @@
 import React from 'react';
 import Footer from 'gatsby-theme-carbon/src/components/Footer';
 
-const Content = () => (
+const Content = ({ buildTime }) => (
   <>
+    <p>
+      The <code>Content</code> component receives a <code>buildTime</code> prop
+      that to display your site's build time: {buildTime}
+    </p>
     <p>
       By importing the <strong>Footer</strong> component from
       gatsby-theme-carbon, we can supply our own props.
