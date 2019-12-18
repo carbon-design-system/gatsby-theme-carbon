@@ -94,24 +94,6 @@ export const Tabs = props => {
             tab: true,
           });
         })}
-        {React.Children.map(props.children, (child, index) => {
-          if (elementIsNullOrString(child)) return child;
-          return React.cloneElement(child, {
-            _id: `${id}__${index}`,
-            active: activeTab === index,
-            index,
-            tab: true,
-          });
-        })}
-        {React.Children.map(props.children, (child, index) => {
-          if (elementIsNullOrString(child)) return child;
-          return React.cloneElement(child, {
-            _id: `${id}__${index}`,
-            active: activeTab === index,
-            index,
-            tab: true,
-          });
-        })}
       </ul>
       {React.Children.map(props.children, (child, index) => {
         if (elementIsNullOrString(child)) return child;

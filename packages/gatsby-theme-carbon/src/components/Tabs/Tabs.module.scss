@@ -9,12 +9,22 @@
   }
 }
 
+.panel {
+  color: $text-01;
+  --space: 0;
+  padding: $spacing-06;
+  background: $ui-background;
+  margin-left: -$spacing-05;
+  margin-right: -$spacing-05;
+  margin-bottom: $spacing-08;
+}
+
 .tab {
   @include carbon--type-style('body-short-01');
   position: relative;
   display: inline-block;
   background-color: $ui-background;
-  height: 2.5rem;
+  height: 3rem;
   text-align: left;
   min-width: 0;
   align-items: center;
@@ -38,24 +48,10 @@
   &:hover {
     background-color: $hover-ui;
   }
-
-  @include carbon--breakpoint('md') {
-    min-width: 10rem;
-  }
 }
 
 .tab[aria-selected='true'] {
   background-color: $ui-05;
   color: $inverse-01;
   border-right: none;
-}
-
-.panel {
-  color: $text-01;
-  --space: 0;
-  padding: $spacing-06;
-  background: $ui-background;
-  margin-left: -$spacing-05;
-  margin-right: -$spacing-05;
-  margin-bottom: $spacing-08;
 }
