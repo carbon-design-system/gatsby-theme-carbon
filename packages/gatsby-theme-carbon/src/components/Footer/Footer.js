@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
 import { Row, Grid, Column } from '../Grid';
 import {
   footer,
@@ -12,6 +13,13 @@ import {
 
 const Footer = ({ Content, links, Logo }) => {
   const { firstCol, secondCol } = links;
+  const { site } = useStaticQuery(graphql`
+    query BUILD_TIME_QUERY {
+      site {
+        buildTime(formatString: "DD MMMM YYYY")
+      }
+    }
+  `);
   return (
     <footer className={footer}>
       <Grid className={grid}>
@@ -47,7 +55,7 @@ const Footer = ({ Content, links, Logo }) => {
             colSm={3}
             offsetLg={2}
           >
-            <Content />
+            <Content buildTime={site.buildTime} />
           </Column>
         </Row>
         <Row>
