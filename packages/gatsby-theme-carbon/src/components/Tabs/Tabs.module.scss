@@ -24,6 +24,7 @@
 
 .tab {
   @include carbon--type-style('body-short-01');
+  cursor: pointer;
   position: relative;
   display: inline-block;
   background-color: $ui-background;
