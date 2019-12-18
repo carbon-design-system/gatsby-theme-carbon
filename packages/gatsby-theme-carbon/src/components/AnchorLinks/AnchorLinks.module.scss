@@ -1,11 +1,8 @@
 .list {
   width: 100%;
-  @include carbon--breakpoint('md') {
-    width: 75%;
-  }
 
   @include carbon--breakpoint('lg') {
-    width: 58.33%;
+    width: 66.67%;
   }
 }
 
