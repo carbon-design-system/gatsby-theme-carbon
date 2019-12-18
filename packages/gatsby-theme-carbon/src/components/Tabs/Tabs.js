@@ -5,6 +5,9 @@ import React, {
   useRef,
   useCallback,
 } from 'react';
+import { Dropdown } from 'carbon-components-react';
+import { useMedia } from 'use-media';
+import { breakpoints } from '@carbon/elements';
 import { useId } from '../../util/hooks/useId';
 import styles from './Tabs.module.scss';
 
@@ -13,6 +16,43 @@ function elementIsNullOrString(child) {
 }
 
 const TabContext = createContext({});
+
+const Select = ({ children, _id }) => {
+  const { setActiveTab } = useContext(TabContext);
+  const items = React.Children.map(children, (child, index) => ({
+    label: child.props.label,
+    index,
+  }));
+  return (
+    <div style={{ marginLeft: '-1rem', marginRight: '-1rem' }}>
+      <Dropdown
+        onChange={({ selectedItem }) => setActiveTab(selectedItem.index)}
+        initialSelectedItem={items[0]}
+        light
+        label="tab selection"
+        items={items}
+        id={_id}
+      ></Dropdown>
+    </div>
+  );
+};
+
+const TabList = ({ children, _id }) => {
+  const { activeTab } = useContext(TabContext);
+  return (
+    <ul className={styles.tabList} role="tablist">
+      {React.Children.map(children, (child, index) => {
+        if (elementIsNullOrString(child)) return child;
+        return React.cloneElement(child, {
+          _id: `${_id}__${index}`,
+          active: activeTab === index,
+          index,
+          tab: true,
+        });
+      })}
+    </ul>
+  );
+};
 
 export const Tab = ({ _id, label, active, index, tab, children }) => {
   const { setActiveTab, tabList } = useContext(TabContext);
@@ -80,21 +120,16 @@ export const Tab = ({ _id, label, active, index, tab, children }) => {
 export const Tabs = props => {
   const { current: tabList } = useRef([]);
   const [activeTab, setActiveTab] = useState(0);
+  const isMobile = useMedia({ maxWidth: breakpoints.md.width });
   const id = useId('tabs');
 
   return (
-    <TabContext.Provider value={{ setActiveTab, tabList }}>
-      <ul className={styles.tabList} role="tablist">
-        {React.Children.map(props.children, (child, index) => {
-          if (elementIsNullOrString(child)) return child;
-          return React.cloneElement(child, {
-            _id: `${id}__${index}`,
-            active: activeTab === index,
-            index,
-            tab: true,
-          });
-        })}
-      </ul>
+    <TabContext.Provider value={{ setActiveTab, activeTab, tabList }}>
+      {isMobile ? (
+        <Select _id={id}>{props.children}</Select>
+      ) : (
+        <TabList _id={id}>{props.children}</TabList>
+      )}
       {React.Children.map(props.children, (child, index) => {
         if (elementIsNullOrString(child)) return child;
         return React.cloneElement(child, {

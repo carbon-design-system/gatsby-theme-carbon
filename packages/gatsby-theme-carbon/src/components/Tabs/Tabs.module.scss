@@ -1,7 +1,9 @@
 .tab-list {
   display: flex;
+  max-width: min-content;
   margin-left: -1rem;
   margin-right: -1rem;
+  border-bottom: 1px solid $ui-03;
   scrollbar-width: none;
   overflow-x: auto;
   @include carbon--breakpoint('md') {
@@ -33,7 +35,7 @@
   transition: all $duration--fast-02;
   border: none;
   margin: 0;
-  border-right: 1px solid $ui-01;
+  border-right: 1px solid $ui-03;
 
   &::-moz-focus-inner {
     border: 0;
@@ -53,5 +55,9 @@
 .tab[aria-selected='true'] {
   background-color: $ui-05;
   color: $inverse-01;
+  border-right: none;
+}
+
+.tab-list li:last-of-type .tab {
   border-right: none;
 }
