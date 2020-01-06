@@ -62,3 +62,23 @@
 .tab-list li:last-of-type .tab {
   border-right: none;
 }
+
+// workaround for https://github.com/carbon-design-system/carbon/pull/4928
+:global {
+  .#{$prefix}--list-box__menu {
+    max-height: 10rem;
+    overflow-x: hidden;
+  }
+
+  .#{$prefix}--list-box__menu-item,
+  .#{$prefix}--list-box__menu-item__option,
+  .#{$prefix}--dropdown {
+    height: 3rem !important;
+  }
+
+  .#{$prefix}--list-box__menu-item__option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+}

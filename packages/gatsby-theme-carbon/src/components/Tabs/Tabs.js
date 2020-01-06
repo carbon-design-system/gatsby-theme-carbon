@@ -26,6 +26,7 @@ const Select = ({ children, _id }) => {
   return (
     <div style={{ marginLeft: '-1rem', marginRight: '-1rem' }}>
       <Dropdown
+        size="xl"
         onChange={({ selectedItem }) => setActiveTab(selectedItem.index)}
         initialSelectedItem={items[0]}
         light
