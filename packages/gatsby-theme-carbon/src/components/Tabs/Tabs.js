@@ -2,6 +2,7 @@ import React, {
   useContext,
   createContext,
   useState,
+  useEffect,
   useRef,
   useCallback,
 } from 'react';
@@ -119,13 +120,18 @@ export const Tab = ({ _id, label, active, index, tab, children }) => {
 };
 
 export const Tabs = props => {
-  const { current: tabList } = useRef([]);
+  const tabList = useRef([]);
   const [activeTab, setActiveTab] = useState(0);
   const isMobile = useMedia({ maxWidth: breakpoints.md.width });
   const id = useId('tabs');
 
+  // clear tablist when unmounted (switching between Select and TabList)
+  useEffect(() => () => (tabList.current = []));
+
   return (
-    <TabContext.Provider value={{ setActiveTab, activeTab, tabList }}>
+    <TabContext.Provider
+      value={{ setActiveTab, activeTab, tabList: tabList.current }}
+    >
       {isMobile ? (
         <Select _id={id}>{props.children}</Select>
       ) : (

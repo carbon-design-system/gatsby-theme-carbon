@@ -34,7 +34,9 @@
   align-items: center;
   padding: $spacing-03 $spacing-05;
   white-space: nowrap;
-  transition: all $duration--fast-02;
+  outline-color: transparent;
+  transition: color $duration--fast-02, background-color $duration--fast-02,
+    border-color $duration--fast-02, outline-color $duration--fast-02;
   border: none;
   margin: 0;
   border-right: 1px solid $ui-03;
@@ -44,8 +46,9 @@
   }
 
   &:focus {
-    outline: 2px solid $focus;
-    outline-offset: 2px;
+    outline: 1px solid white;
+    border-right: 1px solid black;
+    outline-offset: -4px;
     z-index: 1; // allows overflow to be above subsequent tab
   }
 
