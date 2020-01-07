@@ -14,12 +14,16 @@ export default class Aside extends React.Component {
   };
 
   render() {
-    const { children, className } = this.props;
+    const { children, className, ...rest } = this.props;
 
     const captionClasses = classnames(aside, {
       [className]: className,
     });
 
-    return <aside className={captionClasses}>{children}</aside>;
+    return (
+      <aside className={captionClasses} {...rest}>
+        {children}
+      </aside>
+    );
   }
 }

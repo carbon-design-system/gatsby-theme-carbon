@@ -12,7 +12,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
       if (hash !== '') {
         var element = document.getElementById(hash)
         if (element) {
-          var offset = element.offsetTop
+          var offset = element.offsetTop - 24;
           // Wait for the browser to finish rendering before scrolling.
           setTimeout((function() {
             window.scrollTo(0, offset)

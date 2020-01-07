@@ -22,7 +22,7 @@ You can request a new feature by submitting an issue to this repo. Proposed feat
 
 ## Doc fixes
 
-If you want to help improve the docs, it's a good idea to let others know what you're working on to minimize duplication of effort. Comment on an issue to let others know what you're working on, or create a new issue if your work doesn't fit within the scope of any of the existing doc fix projects.
+If you want to help improve the docs, it’s a good idea to let others know what you’re working on to minimize duplication of effort. Comment on an issue to let others know what you’re working on, or create a new issue if your work doesn’t fit within the scope of any of the existing doc fix projects.
 
 **Please see the submission guidelines below**.
 
@@ -61,11 +61,11 @@ If you want to help improve the docs, it's a good idea to let others know what y
 
 Before you submit your issue, search the repository. Maybe your question was already answered.
 
-If your issue appears to be a bug, and hasn't been reported, open a new issue. Help us to maximize the effort we can spend fixing issues and adding new features, by not reporting duplicate issues.
+If your issue appears to be a bug, and hasn’t been reported, open a new issue. Help us to maximize the effort we can spend fixing issues and adding new features, by not reporting duplicate issues.
 
 ### Submitting a pull request
 
-1. Search this repository for an open or closed pull request that relates to your submission. You don't want to duplicate effort.
+1. Search this repository for an open or closed pull request that relates to your submission. You don’t want to duplicate effort.
 
 2. Pull the latest master branch from `upstream`:
 
@@ -107,4 +107,4 @@ If your issue appears to be a bug, and hasn't been reported, open a new issue. H
 
     Once all revisions to your pull request are complete, a maintainer will squash and merge your commits for you.
 
-**That's it! Thank you for your contribution!**
+**That’s it! Thank you for your contribution!**

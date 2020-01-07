@@ -2,12 +2,12 @@
 name: "Bug report \U0001F41B"
 about: Create a report to help us improve
 title: ''
-projects: "carbon-design-system/27"
+projects: 'carbon-design-system/27'
 labels: 'type: bug 🐛'
 assignees: ''
 ---
 
-<!-- Feel free to remove sections that aren't relevant.
+<!-- Feel free to remove sections that aren’t relevant.
 
 ## Title line template: [Title]: Brief description
 
@@ -15,7 +15,7 @@ assignees: ''
 
 ## Detailed description
 
-> Describe in detail the issue you're having.
+> Describe in detail the issue you’re having.
 
 > What did you expect to happen? What happened instead? What would you like to see changed?
 

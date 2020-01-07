@@ -4,30 +4,22 @@
 
 .paragraph {
   @include carbon--type-style('body-long-02');
+  padding-left: $spacing-05;
+  padding-right: $spacing-05;
 
   @include carbon--breakpoint('md') {
-    padding-right: $spacing-05;
-  }
-
-  @include carbon--breakpoint-down('sm') {
-    padding-right: $spacing-05;
+    padding-right: $spacing-07;
   }
 }
 
 // Responsive by default
 .paragraph--responsive {
-  padding-left: $spacing-05;
-
-  @include carbon--breakpoint-down('sm') {
-    padding-right: $spacing-05;
-  }
-
   // 8 col
   @include carbon--breakpoint('md') {
     width: 75%;
   }
 
-  // 16 col
+  // 8 col
   @include carbon--breakpoint('lg') {
     width: 66.667%;
   }
@@ -55,6 +47,11 @@
 .h6,
 .list {
   width: 100%;
+  padding-right: $spacing-05;
+
+  @include carbon--breakpoint('md') {
+    padding-right: $spacing-07;
+  }
 
   @include carbon--breakpoint('lg') {
     width: 66.667%;
@@ -90,7 +87,8 @@
   @include carbon--type-style('body-long-02');
   padding-right: 0;
   width: 100%;
-  padding-left: $spacing-05;
+  margin-left: $spacing-05;
+  padding-left: $spacing-02;
 }
 
 :global(.container--dark) :global(.bx--list__item) {
@@ -112,7 +110,6 @@
 .blockquote {
   margin: $spacing-08 0;
   color: $carbon--blue-60;
-  font-style: italic;
 
   @include carbon--breakpoint('md') {
     margin-left: $spacing-08;
@@ -120,9 +117,24 @@
 }
 
 .blockquote .paragraph {
+  position: relative;
   @include carbon--type-style('expressive-heading-03', true);
   margin-bottom: 0;
   width: 100%;
+}
+
+.blockquote .paragraph::before {
+  content: '“';
+  @include carbon--type-style('expressive-heading-03', true);
+  @include carbon--breakpoint('md') {
+    left: 0.2em;
+    position: absolute;
+  }
+}
+
+.blockquote .paragraph::after {
+  content: '”';
+  @include carbon--type-style('expressive-heading-03', true);
 }
 
 .blockquote .paragraph--responsive {

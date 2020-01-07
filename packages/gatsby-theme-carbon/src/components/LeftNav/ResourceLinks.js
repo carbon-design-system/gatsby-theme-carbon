@@ -1,5 +1,5 @@
 import React from 'react';
-import { SideNavLink } from 'carbon-components-react/lib/components/UIShell';
+import { SideNavLink } from 'carbon-components-react';
 import { Link } from 'gatsby';
 import { Launch16 as LaunchIcon } from '@carbon/icons-react';
 import cx from 'classnames';

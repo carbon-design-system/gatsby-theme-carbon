@@ -6,7 +6,7 @@ import {
   SkipToContent,
   HeaderGlobalBar,
   HeaderGlobalAction,
-} from 'carbon-components-react/lib/components/UIShell';
+} from 'carbon-components-react';
 import { AppSwitcher20, Close20 } from '@carbon/icons-react';
 import cx from 'classnames';
 
@@ -36,7 +36,7 @@ const Header = ({ children }) => {
   return (
     <>
       <ShellHeader aria-label="Header" className={header}>
-        <SkipToContent className={skipToContent} />
+        <SkipToContent href="#main-content" className={skipToContent} />
         <HeaderMenuButton
           className={cx('bx--header__action--menu', headerButton)}
           aria-label="Open menu"

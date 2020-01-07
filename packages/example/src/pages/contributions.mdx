@@ -5,7 +5,7 @@ description: Instructions for developing and contributing to the theme
 
 <PageDescription>
 
-Use this guide to contribute to the theme. We'll show you how to get the development environment set up as quickly as possible so you can start contributing.
+Use this guide to contribute to the theme. We’ll show you how to get the development environment set up as quickly as possible so you can start contributing.
 
 </PageDescription>
 
@@ -23,7 +23,7 @@ Use this guide to contribute to the theme. We'll show you how to get the develop
 
 1. Go to [gatsby-theme-carbon](https://github.com/carbon-design-system/gatsby-theme-carbon) and click the `Fork` button in the top-right corner.
 
-1. After it's finished, click on the `Clone or Download` button and copy the contents.
+1. After it’s finished, click on the `Clone or Download` button and copy the contents.
 
 1. In your terminal, clone the repo into your directory of choice
 
@@ -32,7 +32,7 @@ Use this guide to contribute to the theme. We'll show you how to get the develop
    cd gatsby-theme-carbon
    ```
 
-1. When you clone your forked repo the `origin` is set to your fork by default. You'll want to add a remote that points to the upstream repo.
+1. When you clone your forked repo the `origin` is set to your fork by default. You’ll want to add a remote that points to the upstream repo.
 
    ```sh
    git remote add upstream git@github.com:carbon-design-system/gatsby-theme-carbon.git
@@ -46,9 +46,9 @@ Use this guide to contribute to the theme. We'll show you how to get the develop
 
 ## Development
 
-We use [yarn](https://yarnpkg.com/lang/en/docs/install/) and yarn workspaces to develop the Carbon Gatsby theme. This allows us to have a development environment that's closely linked to the theme with minimal setup. Run `yarn install` to install all of the projects dependencies.
+We use [yarn](https://yarnpkg.com/lang/en/docs/install/) and yarn workspaces to develop the Carbon Gatsby theme. This allows us to have a development environment that’s closely linked to the theme with minimal setup. Run `yarn install` to install all of the projects dependencies.
 
-This project has two packages: the actual theme package (`gatsby-theme-carbon`) and the `example` package. The example package emulates a project which uses the theme. Its only dependencies are Gatsby, React, and the adjacent theme package. The `example` package also serves as the theme's documentation and [website](https://gatsby-theme-carbon.now.sh); it's deployed on every merge to master.
+This project has two packages: the actual theme package (`gatsby-theme-carbon`) and the `example` package. The example package emulates a project which uses the theme. Its only dependencies are Gatsby, React, and the adjacent theme package. The `example` package also serves as the theme’s documentation and [website](https://gatsby-theme-carbon.now.sh); it’s deployed on every merge to master.
 
 New theme development will happen in the theme package while documentation and testing of that change will occur through changes in the example directory.
 
@@ -62,7 +62,7 @@ New theme development will happen in the theme package while documentation and t
 
 ## Work in a branch
 
-You should always start a new project by pulling upstream changes into master and then creating a new branch. This workflow ensures you don't accidentally commit anything to your master branch and get stuck when trying to open a pull request.
+You should always start a new project by pulling upstream changes into master and then creating a new branch. This workflow ensures you don’t accidentally commit anything to your master branch and get stuck when trying to open a pull request.
 
 ```sh
 git checkout master
@@ -70,13 +70,13 @@ git pull upstream master
 git checkout -b my-branch-name
 ```
 
-When you're ready to open a pull request, push to your origin remote.
+When you’re ready to open a pull request, push to your origin remote.
 
 ```sh
 git push origin my-branch-name
 ```
 
-You'll get a message in your terminal with a URL to open up a pull request in the upstream repository. Navigate to that URL and be sure to give a detailed summary of your pull request in the title and body section of the form.
+You’ll get a message in your terminal with a URL to open up a pull request in the upstream repository. Navigate to that URL and be sure to give a detailed summary of your pull request in the title and body section of the form.
 
 ## Sass and CSS Modules
 
@@ -86,7 +86,7 @@ You should colocate your stylesheet with the component(s) that import it. If the
 
 ### CSS Modules
 
-You don't need to prefix your classes as CSS Modules will generate unique class names for you. Import the class from the `.scss` file.
+You don’t need to prefix your classes as CSS Modules will generate unique class names for you. Import the class from the `.scss` file.
 
 ```scss path=TreeView.module.scss
 .treeView {
@@ -100,7 +100,7 @@ import { treeView } from './style.css';
 const TreeView = props => <div className={treeView} />;
 ```
 
-For conditionally applying class names, use the `classname` library. Note how we're using a [computed property name](https://tylermcginnis.com/computed-property-names/) for the property being based to `cx`. That's because the className isn't literally `"long"` it's a value generated by CSS Modules and placed in the `long` variable.
+For conditionally applying class names, use the `classname` library. Note how we’re using a [computed property name](https://tylermcginnis.com/computed-property-names/) for the property being based to `cx`. That’s because the className isn’t literally `"long"` it’s a value generated by CSS Modules and placed in the `long` variable.
 
 ```jsx path=TreeView.js
 import cx from 'classname';
@@ -124,7 +124,7 @@ If you need to target a global class not processed by CSS Modules, you can do so
 
 ## VS Code
 
-To get linting error feedback while writing javascript and SCSS in VS Code, install the [stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint) and [ESlint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extensions. We use ESLint's Prettier rules to format and lint all of our JavaScript in one pass. To get your code to format properly on save, add the following to a `.vscode/settings.json` in the root of your project
+To get linting error feedback while writing javascript and SCSS in VS Code, install the [stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint) and [ESlint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extensions. We use ESLint’s Prettier rules to format and lint all of our JavaScript in one pass. To get your code to format properly on save, add the following to a `.vscode/settings.json` in the root of your project
 
 ```json path=.vscode/settings.json
 {
@@ -180,7 +180,7 @@ To lint the entire project and get errors in your `Problems` tray, you can add t
 
 ## Test pages
 
-If you want to add examples of what you are working on or see changes you've made, you can add an MDX file to `packages/src/pages/test` that will be visible at `(your-server-name)/test/(added-file)` during development. If you do add a page to the `/test` directory, update the below list with the file you added and its purpose to be included with your pull request.
+If you want to add examples of what you are working on or see changes you’ve made, you can add an MDX file to `packages/src/pages/test` that will be visible at `(your-server-name)/test/(added-file)` during development. If you do add a page to the `/test` directory, update the below list with the file you added and its purpose to be included with your pull request.
 
 - [`Spacing audit`](/test/spacing-audit): use this page to test spacing around components when combined in common patterns.
 

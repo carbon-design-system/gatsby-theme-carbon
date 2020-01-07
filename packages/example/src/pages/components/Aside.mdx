@@ -11,6 +11,12 @@ It should only be used within a `<Column>` component with specific parameters. `
 
 </PageDescription>
 
+<InlineNotification kind="warning">
+
+**Warning:** If you use more than one `<Aside>` component on a single page, you need to provide an accessibility label so that someone using assistive technology can quickly understand the purpose of the landmark. See [Mozilla Developer Network’s documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role#Labeling_landmarks) for more information. Props for accessibility labels are described in the [Props section](#props) below.
+
+</InlineNotification>
+
 ## Example
 
 <Row>
@@ -26,7 +32,7 @@ Aesthetic is defined as the philosophical theory or set of principles governing 
 
 </Column>
 <Column colMd={2} colLg={3} offsetMd={1} offsetLg={1}>
-<Aside>
+<Aside aria-label="Example aside">
 
 **Good design is always good design.**
 
@@ -51,7 +57,9 @@ What we borrow from our own design history is not a mid-century aesthetic in sty
 
 ### Props
 
-| property  | propType | required | default | description           |
-| --------- | -------- | -------- | ------- | --------------------- |
-| children  | node     |          |         |                       |
-| className | string   |          |         | Add custom class name |
+| property        | propType | required | default | description                                                                                                                       |
+| --------------- | -------- | -------- | ------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| aria-label      | string   |          |         | Specify an `aria-label` value to provide a label to the inner aside element.                                                      |
+| aria-labelledBy | string   |          |         | Specify an `aria-labelledby` value that references the id of an existing element to serve as a label for the inner aside element. |
+| children        | node     |          |         |                                                                                                                                   |
+| className       | string   |          |         | Add custom class name                                                                                                             |

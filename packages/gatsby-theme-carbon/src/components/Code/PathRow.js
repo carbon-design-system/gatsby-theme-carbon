@@ -22,7 +22,7 @@ const PathRow = ({ src, path, children }) => {
           href={src}
           style={{ position: 'relative', zIndex: 200 }}
         >
-          <Launch16 />
+          <Launch16 alt="View source" />
         </a>
       ) : (
         <CopyButton
