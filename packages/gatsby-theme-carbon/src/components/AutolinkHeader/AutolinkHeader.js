@@ -20,7 +20,7 @@ const AutolinkHeader = ({ is: Component, className, ...props }) => {
   const id = `${slugify(string, { lower: true })}`;
 
   return (
-    <Component id={id} className={cx(header, className)} {...props}>
+    <Component className={cx(header, className)} {...props} id={id}>
       <Anchor id={id} string={string} />
       {props.children}
     </Component>
