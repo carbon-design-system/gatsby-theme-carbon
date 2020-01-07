@@ -1,106 +1,87 @@
-div.tab-container {
-  margin-left: -$spacing-05;
-  min-height: 2.5rem;
-  width: 100vw;
+.tab-list {
+  display: flex;
+  max-width: min-content;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  border-bottom: 1px solid $ui-03;
+  scrollbar-width: none;
+  overflow-x: auto;
   @include carbon--breakpoint('md') {
-    width: 100%;
+    overflow: visible;
   }
 }
 
-div.tab-container .tab {
-  margin-left: 0;
-  background-color: $ui-background;
-  padding-left: $spacing-05;
-  padding-right: $spacing-05;
-  height: 3rem;
-  transition: background-color $duration--fast-02;
+.panel {
+  --space: 0;
+  color: $text-01;
+  background: $ui-background;
+  margin-left: -$spacing-05;
+  margin-right: -$spacing-05;
 
-  &:last-of-type {
-    border-right: none;
+  padding: $spacing-05;
+  padding-bottom: $spacing-08;
+}
+
+.tab {
+  @include carbon--type-style('body-short-01');
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background-color: $ui-background;
+  height: 3rem;
+  text-align: left;
+  min-width: 0;
+  align-items: center;
+  padding: $spacing-03 $spacing-05;
+  white-space: nowrap;
+  outline-color: transparent;
+  transition: color $duration--fast-02, background-color $duration--fast-02,
+    border-color $duration--fast-02, outline-color $duration--fast-02;
+  border: none;
+  margin: 0;
+  border-right: 1px solid $ui-03;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &:focus {
+    outline: 1px solid white;
+    border-right: 1px solid black;
+    outline-offset: -4px;
+    z-index: 1; // allows overflow to be above subsequent tab
   }
 
   &:hover {
-    background: $hover-selected-ui;
-  }
-
-  @include carbon--breakpoint('md') {
-    border-right: 1px solid $active-ui;
-    height: 2.5rem;
-    padding-left: 0;
-    padding-right: 0;
+    background-color: $hover-ui;
   }
 }
 
-// Active dropdown item
-div.tab-container div a {
-  font-weight: 600;
-  padding: 0;
+.tab[aria-selected='true'] {
+  background-color: $ui-05;
+  color: $inverse-01;
 }
 
-div.tab-container .tab a {
-  height: 3rem;
-  padding-top: $spacing-05;
-  transition: background-color $duration--fast-02;
-  color: $text-01;
-  border-bottom: 1px solid #d8d8d8 !important;
-  margin-left: 0;
-  background-color: transparent;
+.tab-list li:last-of-type .tab {
+  border-right: none;
+}
 
-  @include carbon--breakpoint('md') {
-    padding-top: $spacing-04;
-    height: 2.5rem;
-    background-color: $selected-ui;
-    min-width: 10rem;
-    border-bottom: none !important;
-
-    &:hover {
-      background: $hover-selected-ui;
-    }
-
-    &[aria-selected='true'] {
-      background-color: $ui-background;
-      padding-top: 9px;
-      padding-left: $spacing-05;
-      border-top: 3px solid $interactive-01 !important;
-    }
-
-    &:active:not([aria-selected='true']) {
-      padding-top: $spacing-04;
-      padding-left: $spacing-05;
-    }
+// workaround for https://github.com/carbon-design-system/carbon/pull/4928
+:global {
+  .#{$prefix}--list-box__menu {
+    max-height: 10rem;
+    overflow-x: hidden;
   }
-}
 
-.tab-container .tab:last-of-type a {
-  border-bottom: none !important;
-}
+  .#{$prefix}--list-box__menu-item,
+  .#{$prefix}--list-box__menu-item__option,
+  .#{$prefix}--dropdown {
+    height: 3rem;
+  }
 
-// Dropdown container
-div.tab-container div {
-  background-color: $ui-background;
-  height: 3rem;
-  border-top: 3px solid $interactive-01;
-  border-bottom: 1px solid #d8d8d8;
-}
-
-.tab-contents {
-  padding: $spacing-06;
-  padding-top: $spacing-09;
-  background: $ui-background;
-  margin-left: -$spacing-05;
-  margin-bottom: $spacing-08;
-  width: 100vw;
-  @include carbon--breakpoint('md') {
+  .#{$prefix}--list-box__menu-item__option {
     width: 100%;
+    display: flex;
+    align-items: center;
   }
-}
-
-.tab-container + .tab-contents,
-.tab-contents + .tab-contents {
-  margin-top: 0;
-}
-
-// dark background
-:global(.container--dark) .tab-contents {
-  color: $text-01;
 }
