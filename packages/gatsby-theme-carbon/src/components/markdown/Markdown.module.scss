@@ -194,3 +194,12 @@
   --space: 0;
   @include carbon--type-style('heading-01');
 }
+
+//---------------------------------------
+// Images
+//---------------------------------------
+
+//needed for proper spacing for image with caption
+img {
+  display: block;
+}
