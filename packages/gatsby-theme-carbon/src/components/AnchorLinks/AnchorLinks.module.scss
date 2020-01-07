@@ -1,5 +1,6 @@
 .list {
   width: 100%;
+  margin-top: $spacing-07;
 
   @include carbon--breakpoint('lg') {
     width: 66.67%;
