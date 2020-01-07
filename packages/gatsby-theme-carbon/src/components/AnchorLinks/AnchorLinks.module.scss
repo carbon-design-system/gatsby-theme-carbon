@@ -7,6 +7,11 @@
   }
 }
 
+h4 + *.list,
+.main > * + *.list {
+  --space: 32px; //overrides global vertical spacing
+}
+
 .list + * {
   margin-top: 80px;
 }
