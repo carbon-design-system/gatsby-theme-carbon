@@ -37,7 +37,7 @@ body {
 }
 
 // prevents jank while page hydrates
-.body--preload {
+.body--preload * {
   transition: none !important;
 }
 
