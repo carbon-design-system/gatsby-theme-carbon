@@ -50,16 +50,12 @@
   }
 }
 
-.footer p {
-  @include carbon--type-style('body-short-01');
-  padding-bottom: $spacing-05;
-}
-
 .content a {
   text-decoration: underline;
+  color: $carbon--gray-10;
 }
 
-.footer a {
+.listItem a {
   @include carbon--type-style('body-long-01');
   color: $carbon--gray-10 !important; //needed to get the color correct on the homepage, we are setting all homepage links to a light blue in the homepage sass file.
   text-decoration: none;
@@ -76,6 +72,11 @@
     color: $carbon--gray-10;
     text-decoration: underline;
   }
+}
+
+.footer p {
+  @include carbon--type-style('body-short-01');
+  padding-bottom: $spacing-05;
 }
 
 .footer p:last-child {
