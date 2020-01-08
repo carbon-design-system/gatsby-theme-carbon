@@ -5,7 +5,12 @@ import { version } from './package.json';
 
 export const wrapRootElement = wrapRoot;
 
-export const onRenderBody = ({ setHeadComponents }) => {
+export const onRenderBody = ({ setHeadComponents, setBodyAttributes }) => {
+  // prevents jank while page hydrates, removed on page load
+  setBodyAttributes({
+    class: 'body--preload',
+  });
+
   const script = `
     document.addEventListener("DOMContentLoaded", function(event) {
       var hash = window.decodeURI(location.hash.replace('#', ''))

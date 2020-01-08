@@ -36,6 +36,11 @@ body {
   background: $ui-05;
 }
 
+// prevents jank while page hydrates
+.body--preload {
+  transition: none !important;
+}
+
 //---------------------------------------
 // CSS reset overrides
 //---------------------------------------
