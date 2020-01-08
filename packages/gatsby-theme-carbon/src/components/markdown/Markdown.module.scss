@@ -110,7 +110,9 @@
 .blockquote {
   margin: $spacing-08 0;
   color: $carbon--blue-60;
-
+  margin-left: $spacing-05;
+  padding-left: 1ch;
+  text-indent: -1ch;
   @include carbon--breakpoint('md') {
     margin-left: $spacing-08;
   }
@@ -126,10 +128,6 @@
 .blockquote .paragraph::before {
   content: '“';
   @include carbon--type-style('expressive-heading-03', true);
-  @include carbon--breakpoint('md') {
-    left: 0.2em;
-    position: absolute;
-  }
 }
 
 .blockquote .paragraph::after {
@@ -155,6 +153,7 @@
   @include carbon--type-style('body-long-01');
   display: block;
   margin-top: $spacing-02;
+  text-indent: 0;
 }
 
 .blockquote .list-item {
