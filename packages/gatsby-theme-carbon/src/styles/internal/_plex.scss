@@ -3,7 +3,7 @@
 // roman
 @font-face {
   font-family: 'IBM Plex Sans VF';
-  unicode-range: 'U+0020-00FF, U+2191-21c6';
+  unicode-range: U+0020-00FF, U+2191-21c6;
   font-display: swap;
   src: url('https://scripts.carbon-design-system.now.sh/IBMPlexSansLatin-VF.woff2')
       format('woff2-variations'),
@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: 'IBM Plex Sans VF';
-  unicode-range: 'U+0100-024F';
+  unicode-range: U+0100-024F;
   font-display: swap;
   src: url('https://scripts.carbon-design-system.now.sh/IBMPlexSansLatinExt-VF.woff2')
       format('woff2-variations'),
@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: 'IBM Plex Sans VF';
-  unicode-range: 'U+0370-03FF';
+  unicode-range: U+0370-03FF;
   font-display: swap;
   src: url('https://scripts.carbon-design-system.now.sh/IBMPlexSansVietnamese-VF.woff2')
       format('woff2-variations'),
@@ -38,7 +38,7 @@
 }
 @font-face {
   font-family: 'IBM Plex Sans VF';
-  unicode-range: 'U+0400-04FF';
+  unicode-range: U+0400-04FF;
   font-display: swap;
   src: url('https://scripts.carbon-design-system.now.sh/IBMPlexSansGreek-VF.woff2')
       format('woff2-variations'),
@@ -50,7 +50,7 @@
 
 @font-face {
   font-family: 'IBM Plex Sans VF';
-  unicode-range: 'U+0500-052F';
+  unicode-range: U+0500-052F;
   font-display: swap;
   src: url('https://scripts.carbon-design-system.now.sh/IBMPlexSansCyr-VF.woff2')
       format('woff2-variations'),
@@ -62,7 +62,7 @@
 
 @font-face {
   font-family: 'IBM Plex Sans VF';
-  unicode-range: 'U+2191-21c6';
+  unicode-range: U+2191-21c6;
   font-display: swap;
   src: url('https://scripts.carbon-design-system.now.sh/IBMPlexSansCyrExt-VF.woff2')
       format('woff2-variations'),
@@ -75,7 +75,7 @@
 // italic
 @font-face {
   font-family: 'IBM Plex Sans VF';
-  unicode-range: 'U+0020-00FF';
+  unicode-range: U+0020-00FF;
   font-display: swap;
   src: url('https://scripts.carbon-design-system.now.sh/IBMPlexSansLatin-Italic-VF.woff2')
       format('woff2-variations'),
@@ -87,7 +87,7 @@
 
 @font-face {
   font-family: 'IBM Plex Sans VF';
-  unicode-range: 'U+0100-024F';
+  unicode-range: U+0100-024F;
   font-display: swap;
   src: url('https://scripts.carbon-design-system.now.sh/IBMPlexSansLatinExt-Italic-VF.woff2')
       format('woff2-variations'),
@@ -99,7 +99,7 @@
 
 @font-face {
   font-family: 'IBM Plex Sans VF';
-  unicode-range: 'U+0370-03FF';
+  unicode-range: U+0370-03FF;
   font-display: swap;
   src: url('https://scripts.carbon-design-system.now.sh/IBMPlexSansVietnamese-Italic-VF.woff2')
       format('woff2-variations'),
@@ -110,7 +110,7 @@
 }
 @font-face {
   font-family: 'IBM Plex Sans VF';
-  unicode-range: 'U+0400-04FF';
+  unicode-range: U+0400-04FF;
   font-display: swap;
   src: url('https://scripts.carbon-design-system.now.sh/IBMPlexSansGreek-Italic-VF.woff2')
       format('woff2-variations'),
@@ -122,7 +122,7 @@
 
 @font-face {
   font-family: 'IBM Plex Sans VF';
-  unicode-range: 'U+0500-052F';
+  unicode-range: U+0500-052F;
   font-display: swap;
   src: url('https://scripts.carbon-design-system.now.sh/IBMPlexSansCyr-Italic-VF.woff2')
       format('woff2-variations'),
@@ -134,7 +134,7 @@
 
 @font-face {
   font-family: 'IBM Plex Sans VF';
-  unicode-range: 'U+2191-21c6';
+  unicode-range: U+2191-21c6;
   font-display: swap;
   src: url('https://scripts.carbon-design-system.now.sh/IBMPlexSansCyrExt-Italic-VF.woff2')
       format('woff2-variations'),
