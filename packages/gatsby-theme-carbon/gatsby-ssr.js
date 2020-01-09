@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable react/no-danger */
 import React from 'react';
 import wrapRoot from './src/util/wrap-root-element';
@@ -33,7 +34,7 @@ export const onRenderBody = ({ setHeadComponents, setBodyAttributes }) => {
       href="https://scripts.carbon-design-system.now.sh/IBMPlexSansLatin-VF.woff2"
       as="font"
       type="font/woff2"
-      crossOrigin
+      crossorigin
     />,
     <script
       key="scroll-loader-script"
