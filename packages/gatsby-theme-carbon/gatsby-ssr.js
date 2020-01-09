@@ -30,11 +30,17 @@ export const onRenderBody = ({ setHeadComponents, setBodyAttributes }) => {
 
   return setHeadComponents([
     <link
+      key="sans"
       rel="preload"
       href="https://scripts.carbon-design-system.now.sh/IBMPlexSansLatin-VF.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
+    />,
+    <link
+      key="mono"
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap"
+      rel="stylesheet"
     />,
     <script
       key="scroll-loader-script"
