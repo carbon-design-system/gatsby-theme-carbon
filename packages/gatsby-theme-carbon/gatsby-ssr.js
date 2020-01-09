@@ -34,7 +34,7 @@ export const onRenderBody = ({ setHeadComponents, setBodyAttributes }) => {
       href="https://scripts.carbon-design-system.now.sh/IBMPlexSansLatin-VF.woff2"
       as="font"
       type="font/woff2"
-      crossorigin
+      crossOrigin="anonymous"
     />,
     <script
       key="scroll-loader-script"
