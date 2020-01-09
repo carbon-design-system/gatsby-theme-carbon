@@ -69,7 +69,10 @@ const DefaultChildren = () => {
         IBM Design Language
       </SwitcherLink>
       <SwitcherLink href="https://ibm.com/brand">IBM Brand Center</SwitcherLink>
-      <SwitcherDivider>Design disciplines</SwitcherDivider>
+      <SwitcherLink href="https://www.ibm.com/services/ibmix/">
+        IBM iX
+      </SwitcherLink>
+      <SwitcherDivider>Disciplines resources</SwitcherDivider>
       <SwitcherLink href="https://www.carbondesignsystem.com/">
         Product
       </SwitcherLink>
@@ -87,9 +90,6 @@ const DefaultChildren = () => {
       </SwitcherLink>
       <SwitcherLink href="https://www.ibm.com/design/ai">
         IBM Design for AI
-      </SwitcherLink>
-      <SwitcherLink href="https://www.ibm.com/services/ibmix/">
-        IBM iX
       </SwitcherLink>
     </>
   );
