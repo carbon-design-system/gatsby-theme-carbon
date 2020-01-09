@@ -3,7 +3,7 @@
 // roman
 @font-face {
   font-family: 'IBM Plex Sans VF';
-  unicode-range: 'U+0020-00FF,U2191-21c6';
+  unicode-range: 'U+0020-00FF, U+2191-21c6';
   font-display: swap;
   src: url('https://scripts.carbon-design-system.now.sh/IBMPlexSansLatin-VF.woff2')
       format('woff2-variations'),
@@ -62,7 +62,7 @@
 
 @font-face {
   font-family: 'IBM Plex Sans VF';
-  unicode-range: 'U2191-21c6';
+  unicode-range: 'U+2191-21c6';
   font-display: swap;
   src: url('https://scripts.carbon-design-system.now.sh/IBMPlexSansCyrExt-VF.woff2')
       format('woff2-variations'),
@@ -134,7 +134,7 @@
 
 @font-face {
   font-family: 'IBM Plex Sans VF';
-  unicode-range: 'U2191-21c6';
+  unicode-range: 'U+2191-21c6';
   font-display: swap;
   src: url('https://scripts.carbon-design-system.now.sh/IBMPlexSansCyrExt-Italic-VF.woff2')
       format('woff2-variations'),
