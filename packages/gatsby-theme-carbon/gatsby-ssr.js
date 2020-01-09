@@ -37,11 +37,6 @@ export const onRenderBody = ({ setHeadComponents, setBodyAttributes }) => {
       type="font/woff2"
       crossOrigin="anonymous"
     />,
-    <link
-      key="mono"
-      href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap"
-      rel="stylesheet"
-    />,
     <script
       key="scroll-loader-script"
       dangerouslySetInnerHTML={{ __html: script }}

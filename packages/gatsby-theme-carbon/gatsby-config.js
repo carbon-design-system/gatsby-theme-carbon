@@ -1,6 +1,5 @@
 const path = require('path');
 const { uiBackground, interactive01 } = require('@carbon/elements');
-const remarkSlug = require('remark-slug');
 const defaultLunrOptions = require('./config/lunr-options');
 
 module.exports = themeOptions => {
