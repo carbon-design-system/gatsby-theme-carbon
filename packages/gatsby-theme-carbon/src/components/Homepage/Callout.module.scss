@@ -3,6 +3,11 @@
   max-width: 100%;
 }
 
+.grid a {
+  color: currentColor;
+  text-decoration-thickness: 1px;
+}
+
 .row {
   padding-top: $layout-05;
   padding-bottom: $layout-05;
