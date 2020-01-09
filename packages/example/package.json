@@ -4,7 +4,7 @@
   "version": "1.18.2",
   "license": "Apache 2.0",
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -H 0.0.0.0",
     "develop:clean": "yarn clean && yarn develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
