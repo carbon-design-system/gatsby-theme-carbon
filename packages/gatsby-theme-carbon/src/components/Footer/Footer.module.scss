@@ -50,12 +50,12 @@
   }
 }
 
-.content a {
+.footer .content a {
   text-decoration: underline;
   color: $carbon--gray-10;
 }
 
-.listItem a {
+.footer .listItem a {
   @include carbon--type-style('body-long-01');
   color: $carbon--gray-10 !important; //needed to get the color correct on the homepage, we are setting all homepage links to a light blue in the homepage sass file.
   text-decoration: none;
