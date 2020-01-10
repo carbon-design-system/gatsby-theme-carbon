@@ -2,7 +2,17 @@
 // Row
 //---------------------------------------
 .do-dont-row + .do-dont-row {
+  margin-top: 0;
+  @include carbon--breakpoint('md') {
+    margin-top: 2rem;
+  }
+}
+
+.do-dont-row [class*='--col'] {
   margin-top: 2rem;
+  @include carbon--breakpoint('md') {
+    margin-top: 0;
+  }
 }
 
 //---------------------------------------
@@ -40,7 +50,7 @@
   padding-bottom: $spacing-06;
 }
 
-:global(.#{$prefix}--col-lg-4) .example-caption {
+[class*='--col'] .example-caption {
   @include carbon--breakpoint('md') {
     width: 100%;
   }
