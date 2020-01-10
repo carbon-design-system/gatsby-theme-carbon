@@ -1,0 +1,180 @@
+//---------------------------------------
+// Row
+//---------------------------------------
+.do-dont-row + .do-dont-row {
+  margin-top: 2rem;
+}
+
+//---------------------------------------
+// Caption and title
+//---------------------------------------
+.example-caption {
+  padding: $spacing-05 0 0 0;
+  @include carbon--breakpoint('sm') {
+    width: 100%;
+  }
+
+  @include carbon--breakpoint('md') {
+    width: 75%;
+  }
+}
+
+.example-title {
+  @include carbon--type-style('body-short-01');
+  font-weight: 600;
+  margin: 0;
+
+  @media (orientation: landscape) {
+    padding: 0 25% 0 0;
+  }
+
+  @include carbon--breakpoint('md') {
+    padding: 0 25% 0 0;
+  }
+}
+
+.example-description {
+  @include carbon--type-style('body-short-01');
+  margin: 0;
+  padding: 0;
+  padding-bottom: $spacing-06;
+}
+
+:global(.#{$prefix}--col-lg-4) .example-caption {
+  @include carbon--breakpoint('md') {
+    width: 100%;
+  }
+}
+
+//---------------------------------------
+// Icons
+//---------------------------------------
+.example-icon {
+  display: block;
+  position: absolute;
+  left: calc(1rem - 1px);
+  top: calc(1rem - 1px);
+  z-index: 10;
+  width: 24px;
+  height: 24px;
+}
+
+.example-icon-correct {
+  fill: $carbon--green-50;
+}
+
+.example-icon-incorrect {
+  fill: $carbon--red-60;
+}
+
+.example-icon path[dataIconPath='inner-path'],
+.example-icon path[data-icon-path='inner-path'] {
+  fill: $carbon--white-0;
+  opacity: 1;
+}
+
+//---------------------------------------
+// Example
+//---------------------------------------
+.example {
+  width: 100%;
+}
+
+//---------------------------------------
+// Example card
+//---------------------------------------
+.example-card {
+  background: $carbon--white-0;
+  width: 100%;
+  position: relative;
+}
+
+.example-dark .example-card {
+  background: $carbon--gray-90;
+  color: $carbon--white-0;
+}
+
+.example-square .example-card {
+  padding-top: 100%;
+}
+
+.example-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 100%;
+  height: 3px;
+  z-index: 1;
+}
+
+.example-correct .example-card::before {
+  background: $carbon--green-50;
+}
+
+.example-incorrect .example-card::before {
+  background: $carbon--red-60;
+}
+
+//---------------------------------------
+// Example content
+//---------------------------------------
+.example-content {
+  font-size: 1.25rem;
+  font-weight: 300;
+  width: 100%;
+}
+
+.example-text {
+  padding: 10%;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.example .example-card-content {
+  position: relative;
+}
+
+.example-square .example-card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//---------------------------------------
+// Images
+//---------------------------------------
+.example-content .gatsby-resp-image-link {
+  width: 100%;
+}
+
+.example-content img {
+  display: block;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.example-image {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.example span.gatsby-resp-image-wrapper {
+  max-width: 100% !important; // marked !important to overcome inline styles inserted by gatsby.
+  margin-bottom: 0;
+}
+
+//---------------------------------------
+// Video
+//---------------------------------------
+.example [class^='Video-module--video-container'] {
+  margin-bottom: 0;
+}
