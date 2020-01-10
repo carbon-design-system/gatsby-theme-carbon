@@ -1,0 +1,123 @@
+---
+title: DoDontRow
+description: Usage instructions for the DoDontRow, Do and Dont components
+---
+
+<PageDescription>
+
+The `<DoDontRow>` component is a custom row used alongside the `<Do>` and `<Dont>` components, which now include built in columns.
+
+</PageDescription>
+
+## Example
+
+<DoDontRow>
+
+<Do aspectRatio="1:1" colLg='4' colMd='4'>
+
+![Alt text](./images/light-theme.png)
+
+</Do>
+
+<Dont aspectRatio="1:1" colLg="4" colMd="4">
+
+![Alt text](./images/light-theme.png)
+
+</Dont>
+
+</DoDontRow>
+
+<DoDontRow>
+
+<Do aspectRatio="1:1" text="This is some text" colLg="4" colMd="4" />
+
+<Dont
+  aspectRatio="1:1"
+  text="This is some text"
+  color="dark"
+  colLg="4"
+  colMd="4"
+/>
+
+</DoDontRow>
+
+<DoDontRow>
+
+<Do
+  text="This is some text"
+  color="dark"
+  captionTitle="Caption title"
+  caption="Caption"
+  colLg="8"
+/>
+
+</DoDontRow>
+
+<DoDontRow>
+
+<Do colLg='8' captionTitle="Caption title" caption="Caption">
+
+<Video title="Video example" vimeoId="310583077" />
+
+</Do>
+
+</DoDontRow>
+
+## Code
+
+### Image
+
+```jsx path=components/DoDontRow/DoDontRow.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/DoDontRow
+<DoDontRow>
+  <Do aspectRatio="1:1" colLg="4" colMd="4">
+    ![Alt text](./images/light-theme.png)
+  </Do>
+  <Dont aspectRatio="1:1" colLg="4" colMd="4">
+    ![Alt text](./images/light-theme.png)
+  </Dont>
+</DoDontRow>
+```
+
+### Text
+
+```jsx path=components/DoDontRow/DoDontRow.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/DoDontRow
+<DoDontRow>
+  <Do text="This is some text" aspectRatio="1:1" colLg="4" colMd="4"/>
+  <Dont text="This is some text" color="dark" aspectRatio="1:1" colLg="4" colMd="4"/>
+</DoDontRow>
+<DoDontRow>
+  <Do text="This is some text" captionTitle="Caption title" caption="Caption" aspectRatio="1:1" colLg="8"/>
+</DoDontRow>
+```
+
+### Video
+
+```jsx path=components/DoDontRow/DoDontRow.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/DoDontRow
+<DoDontRow>
+  <Do captionTitle="Caption title" caption="Caption" colLg="8">
+    <Video title="Video example" vimeoId="310583077" />
+  </Do>
+</DoDontRow>
+```
+
+## Props
+
+### DoDontRow
+
+| property | propType | required | default | description                                                 |
+| -------- | -------- | -------- | ------- | ----------------------------------------------------------- |
+| children | node     |          |         | child node, expects a markdown image or `<Video>` component |
+
+### Do & Dont
+
+| property     | propType | required | default | description                                                                                                                                                                                                                                        |
+| ------------ | -------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| children     | node     |          |         | child node, expects a markdown image or `<Video>` component                                                                                                                                                                                        |
+| text         | string   |          |         | text to display inside the component instead of an image or video                                                                                                                                                                                  |
+| caption      | string   |          |         | caption                                                                                                                                                                                                                                            |
+| captionTitle | string   |          |         | caption title                                                                                                                                                                                                                                      |
+| color        | string   |          | light   | set to `dark` for dark background card                                                                                                                                                                                                             |
+| aspectRatio  | string   |          |         | set to `1:1` to force square example <br/>_(We welcome [contributions](https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/DoDontExample) to add additional aspect ratio options)_ |
+| colSm        | number   |          |         | specify the column width at small breakpoint                                                                                                                                                                                                       |
+| colMd        | number   |          |         | specify the column width at medium breakpoint                                                                                                                                                                                                      |
+| colLg        | number   |          |         | specify the column width at large breakpoint                                                                                                                                                                                                       |
