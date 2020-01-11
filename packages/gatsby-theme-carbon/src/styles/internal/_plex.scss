@@ -1,11 +1,11 @@
 // roman
 @font-face {
   font-family: 'IBM Plex Sans VF';
-  unicode-range: U+0020-00FF, U+2191-21c6;
+  unicode-range: U+0020-00FF, U+2190-21c6;
   font-display: swap;
-  src: url('https://fonts.carbon-design-system.now.sh/IBMPlexSansLatin-VF.woff2')
+  src: url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansLatin-VF.woff2')
       format('woff2-variations'),
-    url('https://fonts.carbon-design-system.now.sh/IBMPlexSansLatin-VF.woff2')
+    url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansLatin-VF.woff2')
       format('woff2');
   font-weight: 100 900;
   font-style: normal;
@@ -15,9 +15,9 @@
   font-family: 'IBM Plex Sans VF';
   unicode-range: U+0100-024F;
   font-display: swap;
-  src: url('https://fonts.carbon-design-system.now.sh/IBMPlexSansLatinExt-VF.woff2')
+  src: url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansLatinExt-VF.woff2')
       format('woff2-variations'),
-    url('https://fonts.carbon-design-system.now.sh/IBMPlexSansLatinExt-VF.woff2')
+    url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansLatinExt-VF.woff2')
       format('woff2');
   font-weight: 100 900;
   font-style: normal;
@@ -27,9 +27,9 @@
   font-family: 'IBM Plex Sans VF';
   unicode-range: U+0370-03FF;
   font-display: swap;
-  src: url('https://fonts.carbon-design-system.now.sh/IBMPlexSansGreek-VF.woff2')
+  src: url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansGreek-VF.woff2')
       format('woff2-variations'),
-    url('https://fonts.carbon-design-system.now.sh/IBMPlexSansGreek-VF.woff2')
+    url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansGreek-VF.woff2')
       format('woff2');
   font-weight: 100 900;
   font-style: normal;
@@ -39,9 +39,9 @@
   font-family: 'IBM Plex Sans VF';
   unicode-range: U+0400-04FF;
   font-display: swap;
-  src: url('https://fonts.carbon-design-system.now.sh/IBMPlexSansCyr-VF.woff2')
+  src: url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansCyr-VF.woff2')
       format('woff2-variations'),
-    url('https://fonts.carbon-design-system.now.sh/IBMPlexSansCyr-VF.woff2')
+    url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansCyr-VF.woff2')
       format('woff2');
   font-weight: 100 900;
   font-style: normal;
@@ -51,9 +51,9 @@
   font-family: 'IBM Plex Sans VF';
   unicode-range: U+0500-052F;
   font-display: swap;
-  src: url('https://fonts.carbon-design-system.now.sh/IBMPlexSansCyrExt-VF.woff2')
+  src: url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansCyrExt-VF.woff2')
       format('woff2-variations'),
-    url('https://fonts.carbon-design-system.now.sh/IBMPlexSansCyrExt-VF.woff2')
+    url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansCyrExt-VF.woff2')
       format('woff2');
   font-weight: 100 900;
   font-style: normal;
@@ -64,9 +64,9 @@
   font-family: 'IBM Plex Sans VF';
   unicode-range: U+0020-00FF;
   font-display: swap;
-  src: url('https://fonts.carbon-design-system.now.sh/IBMPlexSansLatin-Italic-VF.woff2')
+  src: url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansLatin-Italic-VF.woff2')
       format('woff2-variations'),
-    url('https://fonts.carbon-design-system.now.sh/IBMPlexSansLatin-Italic-VF.woff2')
+    url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansLatin-Italic-VF.woff2')
       format('woff2');
   font-weight: 100 900;
   font-style: italic;
@@ -76,9 +76,9 @@
   font-family: 'IBM Plex Sans VF';
   unicode-range: U+0100-024F;
   font-display: swap;
-  src: url('https://fonts.carbon-design-system.now.sh/IBMPlexSansLatinExt-Italic-VF.woff2')
+  src: url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansLatinExt-Italic-VF.woff2')
       format('woff2-variations'),
-    url('https://fonts.carbon-design-system.now.sh/IBMPlexSansLatinExt-Italic-VF.woff2')
+    url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansLatinExt-Italic-VF.woff2')
       format('woff2');
   font-weight: 100 900;
   font-style: italic;
@@ -88,9 +88,9 @@
   font-family: 'IBM Plex Sans VF';
   unicode-range: U+0370-03FF;
   font-display: swap;
-  src: url('https://fonts.carbon-design-system.now.sh/IBMPlexSansGreek-Italic-VF.woff2')
+  src: url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansGreek-Italic-VF.woff2')
       format('woff2-variations'),
-    url('https://fonts.carbon-design-system.now.sh/IBMPlexSansGreek-Italic-VF.woff2')
+    url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansGreek-Italic-VF.woff2')
       format('woff2');
   font-weight: 100 900;
   font-style: italic;
@@ -100,9 +100,9 @@
   font-family: 'IBM Plex Sans VF';
   unicode-range: U+0400-04FF;
   font-display: swap;
-  src: url('https://fonts.carbon-design-system.now.sh/IBMPlexSansCyr-Italic-VF.woff2')
+  src: url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansCyr-Italic-VF.woff2')
       format('woff2-variations'),
-    url('https://fonts.carbon-design-system.now.sh/IBMPlexSansCyr-Italic-VF.woff2')
+    url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansCyr-Italic-VF.woff2')
       format('woff2');
   font-weight: 100 900;
   font-style: italic;
@@ -112,9 +112,9 @@
   font-family: 'IBM Plex Sans VF';
   unicode-range: U+0500-052F;
   font-display: swap;
-  src: url('https://fonts.carbon-design-system.now.sh/IBMPlexSansCyrExt-Italic-VF.woff2')
+  src: url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansCyrExt-Italic-VF.woff2')
       format('woff2-variations'),
-    url('https://fonts.carbon-design-system.now.sh/IBMPlexSansCyrExt-Italic-VF.woff2')
+    url('https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansCyrExt-Italic-VF.woff2')
       format('woff2');
   font-weight: 100 900;
   font-style: italic;
@@ -126,7 +126,7 @@
   font-style: normal;
   font-weight: 400;
   src: local('IBM Plex Mono'), local('IBMPlexMono'),
-    url('https://fonts.carbon-design-system.now.sh/mono/IBMPlexMono-Regular-Latin1.woff2')
+    url('https://gatsby-theme-carbon.now.sh/fonts/mono/IBMPlexMono-Regular-Latin1.woff2')
       format('woff2');
   unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00A3, U+00A4-00FF, U+0131,
     U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E,
@@ -139,7 +139,7 @@
   font-style: normal;
   font-weight: 400;
   src: local('IBM Plex Mono'), local('IBMPlexMono'),
-    url('https://fonts.carbon-design-system.now.sh/mono/IBMPlexMono-Regular-Latin2.woff2')
+    url('https://gatsby-theme-carbon.now.sh/fonts/mono/IBMPlexMono-Regular-Latin2.woff2')
       format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF,
     U+2C60-2C7F, U+A720-A7FF, U+FB01-FB02;
@@ -150,7 +150,7 @@
   font-style: normal;
   font-weight: 400;
   src: local('IBM Plex Mono'), local('IBMPlexMono'),
-    url('https://fonts.carbon-design-system.now.sh/mono/IBMPlexMono-Regular-Latin3.woff2')
+    url('https://gatsby-theme-carbon.now.sh/fonts/mono/IBMPlexMono-Regular-Latin3.woff2')
       format('woff2');
   unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
 }
@@ -160,7 +160,7 @@
   font-style: normal;
   font-weight: 400;
   src: local('IBM Plex Mono'), local('IBMPlexMono'),
-    url('https://fonts.carbon-design-system.now.sh/mono/IBMPlexMono-Regular-Pi.woff2')
+    url('https://gatsby-theme-carbon.now.sh/fonts/mono/IBMPlexMono-Regular-Pi.woff2')
       format('woff2');
   unicode-range: U+0E3F, U+2032-2033, U+2070, U+2075-2079, U+2080-2081, U+2083,
     U+2085-2089, U+2113, U+2116, U+2126, U+212E, U+2150-2151, U+2153-215E,
@@ -175,7 +175,7 @@
   font-style: normal;
   font-weight: 400;
   src: local('IBM Plex Mono'), local('IBMPlexMono'),
-    url('https://fonts.carbon-design-system.now.sh/mono/IBMPlexMono-Regular-Cyrillic.woff2')
+    url('https://gatsby-theme-carbon.now.sh/fonts/mono/IBMPlexMono-Regular-Cyrillic.woff2')
       format('woff2');
   unicode-range: U+0400-045F, U+0472-0473, U+0490-049D, U+04A0-04A5, U+04AA-04AB,
     U+04AE-04B3, U+04B6-04BB, U+04C0-04C2, U+04CF-04D9, U+04DC-04DF, U+04E2-04E9,

@@ -3,7 +3,7 @@ LATINEXT="U+0100-024F"
 GREEK="U+0370-03FF"
 CYR="U+0400-04FF"
 CYREXT="U+0500-052F"
-ARROWS="U2191-21c6"
+ARROWS="U2190-21c6"
 
 pyftsubset src/IBMPlexSans-Italic-VF.ttf --unicodes=$LATIN --flavor="woff2" --output-file=IBMPlexSansLatin-Italic-VF.woff2;
 pyftsubset src/IBMPlexSans-Italic-VF.ttf --unicodes=$LATINEXT --flavor="woff2" --output-file=IBMPlexSansLatinExt-Italic-VF.woff2;
