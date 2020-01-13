@@ -10,6 +10,10 @@
       "config": {
         "distDir": "packages/example/public"
       }
+    },
+    {
+      "src": "fonts/**/*.{woff2,ttf}",
+      "use": "@now/static"
     }
   ]
 }
