@@ -6,7 +6,8 @@
 .wrapper .link-container {
   display: flex;
   height: 8rem;
-  max-width: 99rem;
+  max-width: 98rem;
+  width: 99%;
 
   @include carbon--breakpoint('md') {
     padding: 0 1rem;
