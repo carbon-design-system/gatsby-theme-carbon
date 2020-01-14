@@ -1,10 +1,10 @@
 {
   "name": "example",
   "private": true,
-  "version": "1.18.2",
+  "version": "1.19.0",
   "license": "Apache 2.0",
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -H 0.0.0.0",
     "develop:clean": "yarn clean && yarn develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "gatsby": "^2.4.2",
-    "gatsby-theme-carbon": "^1.18.2",
+    "gatsby-theme-carbon": "^1.19.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }

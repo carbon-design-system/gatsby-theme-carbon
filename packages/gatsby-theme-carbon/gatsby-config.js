@@ -1,6 +1,5 @@
 const path = require('path');
 const { uiBackground, interactive01 } = require('@carbon/elements');
-const remarkSlug = require('remark-slug');
 const defaultLunrOptions = require('./config/lunr-options');
 
 module.exports = themeOptions => {
@@ -72,7 +71,6 @@ module.exports = themeOptions => {
             ...gatsbyRemarkPlugins,
           ],
           plugins: ['gatsby-remark-images'],
-          remarkPlugins: [remarkSlug],
           defaultLayouts: {
             default: require.resolve('./src/templates/Default.js'),
             home: require.resolve('./src/templates/Homepage.js'),

@@ -1,5 +1,6 @@
 .list {
   width: 100%;
+  --space: 32px;
 
   @include carbon--breakpoint('lg') {
     width: 66.67%;

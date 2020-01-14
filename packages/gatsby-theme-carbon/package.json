@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-carbon",
-  "version": "1.18.2",
+  "version": "1.19.0",
   "main": "index.js",
   "author": "vpicone <vp@vincepic.one> (@vpicone)",
   "repository": {
@@ -19,16 +19,16 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "@carbon/elements": "^10.5.1",
-    "@carbon/icons-react": "^10.5.0",
+    "@carbon/elements": "^10.9.1",
+    "@carbon/icons-react": "^10.8.0",
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.11",
     "@mdx-js/mdx": "^1.0.20",
     "@mdx-js/react": "^1.0.20",
     "@reach/router": "^1.2.1",
     "@vimeo/player": "^2.9.1",
-    "carbon-components": "^10.9.0",
-    "carbon-components-react": "^7.9.0",
+    "carbon-components": "^10.9.1",
+    "carbon-components-react": "^7.9.1",
     "classnames": "^2.2.6",
     "copy-to-clipboard": "^3.2.0",
     "emotion-theming": "^10.0.10",

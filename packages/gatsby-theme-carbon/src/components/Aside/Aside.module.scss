@@ -3,6 +3,11 @@
   position: relative;
   padding-top: $spacing-04;
   top: -$spacing-04;
+  display: none;
+
+  @include carbon--breakpoint('md') {
+    display: block;
+  }
 
   @include carbon--breakpoint('lg') {
     padding-right: 26%; //spacing values came from IDL site design

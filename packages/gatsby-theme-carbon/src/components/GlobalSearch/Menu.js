@@ -1,3 +1,7 @@
+// Gatsby doesn't include the recommended exceptions to this rule
+/* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
+// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-noninteractive-element-to-interactive-role.md#rule-details
+
 import React, { useEffect, createContext, useContext } from 'react';
 import { Link } from 'gatsby';
 import cx from 'classnames';
@@ -42,26 +46,24 @@ const Menu = ({ results, onKeyDown }) => {
   });
 
   return (
-    <>
-      <ul
-        aria-labelledby="search-label"
-        role="menu"
-        id="search-menu"
-        className={cx(list, {
-          [hidden]: results.length === 0,
-        })}
-      >
-        {resultsWithTabAdded.map((page, index) => (
-          <MenuItem
-            id={`menu-item-${index}`}
-            onKeyDown={onKeyDown}
-            key={page.path}
-            index={index}
-            page={page}
-          />
-        ))}
-      </ul>
-    </>
+    <ul
+      aria-labelledby="search-label"
+      role="menu"
+      id="search-menu"
+      className={cx(list, {
+        [hidden]: results.length === 0,
+      })}
+    >
+      {resultsWithTabAdded.map((page, index) => (
+        <MenuItem
+          id={`menu-item-${index}`}
+          onKeyDown={onKeyDown}
+          key={page.path}
+          index={index}
+          page={page}
+        />
+      ))}
+    </ul>
   );
 };
 
