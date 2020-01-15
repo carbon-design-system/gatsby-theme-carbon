@@ -17,7 +17,7 @@ module.exports = themeOptions => {
     imageQuality = 75,
     lunrOptions = defaultLunrOptions,
     repository,
-    pngCompressionSpeed = 10,
+    pngCompressionSpeed = 4,
     mediumAccount = 'carbondesign',
     gatsbyRemarkPlugins = [],
   } = themeOptions;
