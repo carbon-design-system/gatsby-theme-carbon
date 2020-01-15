@@ -1,11 +1,11 @@
 ---
 title: DoDontRow
-description: Usage instructions for the DoDontRow, Do and Dont components
+description: Usage instructions for the DoDontRow and DoDont components
 ---
 
 <PageDescription>
 
-The `<DoDontRow>` component is a custom row used alongside the `<Do>` and `<Dont>` components, which now include built in columns.
+The `<DoDontRow>` component is a custom row used alongside the `<DoDont>` component, which now include built in columns.
 
 </PageDescription>
 
@@ -13,37 +13,31 @@ The `<DoDontRow>` component is a custom row used alongside the `<Do>` and `<Dont
 
 <DoDontRow>
 
-<Do aspectRatio="1:1" colLg='4' colMd='4'>
+<DoDont aspectRatio="1:1">
 
 ![Alt text](./images/light-theme.png)
 
-</Do>
+</DoDont>
 
-<Dont aspectRatio="1:1" colLg="4" colMd="4">
+<DoDont aspectRatio="1:1" type="dont">
 
 ![Alt text](./images/light-theme.png)
 
-</Dont>
+</DoDont>
 
 </DoDontRow>
 
 <DoDontRow>
 
-<Do aspectRatio="1:1" text="This is some text" colLg="4" colMd="4" />
+<DoDont aspectRatio="1:1" text="This is some text" />
 
-<Dont
-  aspectRatio="1:1"
-  text="This is some text"
-  color="dark"
-  colLg="4"
-  colMd="4"
-/>
+<DoDont type="dont" aspectRatio="1:1" text="This is some text" color="dark" />
 
 </DoDontRow>
 
 <DoDontRow>
 
-<Do
+<DoDont
   text="This is some text"
   color="dark"
   captionTitle="Caption title"
@@ -55,11 +49,11 @@ The `<DoDontRow>` component is a custom row used alongside the `<Do>` and `<Dont
 
 <DoDontRow>
 
-<Do colLg='8' captionTitle="Caption title" caption="Caption">
+<DoDont colLg='8' captionTitle="Caption title" caption="Caption">
 
 <Video title="Video example" vimeoId="310583077" />
 
-</Do>
+</DoDont>
 
 </DoDontRow>
 
@@ -69,12 +63,10 @@ The `<DoDontRow>` component is a custom row used alongside the `<Do>` and `<Dont
 
 ```jsx path=components/DoDontRow/DoDontRow.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/DoDontRow
 <DoDontRow>
-  <Do aspectRatio="1:1" colLg="4" colMd="4">
+  <DoDont aspectRatio="1:1">![Alt text](./images/light-theme.png)</DoDont>
+  <DoDont type="dont" aspectRatio="1:1">
     ![Alt text](./images/light-theme.png)
-  </Do>
-  <Dont aspectRatio="1:1" colLg="4" colMd="4">
-    ![Alt text](./images/light-theme.png)
-  </Dont>
+  </DoDont>
 </DoDontRow>
 ```
 
@@ -82,11 +74,11 @@ The `<DoDontRow>` component is a custom row used alongside the `<Do>` and `<Dont
 
 ```jsx path=components/DoDontRow/DoDontRow.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/DoDontRow
 <DoDontRow>
-  <Do text="This is some text" aspectRatio="1:1" colLg="4" colMd="4"/>
-  <Dont text="This is some text" color="dark" aspectRatio="1:1" colLg="4" colMd="4"/>
+  <DoDont text="This is some text" aspectRatio="1:1" />
+  <DoDont type='dont' text="This is some text" color="dark" aspectRatio="1:1"/>
 </DoDontRow>
 <DoDontRow>
-  <Do text="This is some text" captionTitle="Caption title" caption="Caption" aspectRatio="1:1" colLg="8"/>
+  <DoDont text="This is some text" captionTitle="Caption title" caption="Caption" aspectRatio="1:1" colLg="8"/>
 </DoDontRow>
 ```
 
@@ -94,9 +86,9 @@ The `<DoDontRow>` component is a custom row used alongside the `<Do>` and `<Dont
 
 ```jsx path=components/DoDontRow/DoDontRow.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/DoDontRow
 <DoDontRow>
-  <Do captionTitle="Caption title" caption="Caption" colLg="8">
+  <DoDont captionTitle="Caption title" caption="Caption" colLg="8">
     <Video title="Video example" vimeoId="310583077" />
-  </Do>
+  </DoDont>
 </DoDontRow>
 ```
 
@@ -106,18 +98,17 @@ The `<DoDontRow>` component is a custom row used alongside the `<Do>` and `<Dont
 
 | property | propType | required | default | description                                                 |
 | -------- | -------- | -------- | ------- | ----------------------------------------------------------- |
-| children | node     |          |         | child node, expects a markdown image or `<Video>` component |
+| children | node     | yes      |         | child node, expects a markdown image or `<Video>` component |
 
 ### Do & Dont
 
-| property     | propType | required | default | description                                                                                                                                                                                                                                        |
-| ------------ | -------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| children     | node     |          |         | child node, expects a markdown image or `<Video>` component                                                                                                                                                                                        |
-| text         | string   |          |         | text to display inside the component instead of an image or video                                                                                                                                                                                  |
-| caption      | string   |          |         | caption                                                                                                                                                                                                                                            |
-| captionTitle | string   |          |         | caption title                                                                                                                                                                                                                                      |
-| color        | string   |          | light   | set to `dark` for dark background card                                                                                                                                                                                                             |
-| aspectRatio  | string   |          |         | set to `1:1` to force square example <br/>_(We welcome [contributions](https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/DoDontExample) to add additional aspect ratio options)_ |
-| colSm        | number   |          |         | specify the column width at small breakpoint                                                                                                                                                                                                       |
-| colMd        | number   |          |         | specify the column width at medium breakpoint                                                                                                                                                                                                      |
-| colLg        | number   |          |         | specify the column width at large breakpoint                                                                                                                                                                                                       |
+| property      | propType | required | default            | description                                                                                                                                                                                                                                        |
+| ------------- | -------- | -------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| children      | node     |          |                    | child node, expects a markdown image or `<Video>` component                                                                                                                                                                                        |
+| text          | string   |          |                    | text to display inside the component instead of an image or video                                                                                                                                                                                  |
+| caption       | string   |          |                    | caption                                                                                                                                                                                                                                            |
+| captionTitle  | string   |          |                    | caption title                                                                                                                                                                                                                                      |
+| color         | string   |          | light              | set to `dark` for dark background card                                                                                                                                                                                                             |
+| aspectRatio   | string   |          |                    | set to `1:1` to force square example <br/>_(We welcome [contributions](https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/DoDontExample) to add additional aspect ratio options)_ |
+| type          | string   |          | `do`               | specify the type of example with `do` or `dont`                                                                                                                                                                                                    |
+| ...columProps | number   |          | `colMd=4, colLg=4` | specify column props                                                                                                                                                                                                                               |
