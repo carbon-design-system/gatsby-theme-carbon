@@ -10,6 +10,10 @@ export const onClientEntry = () => {
   });
 };
 
+export const onServiceWorkerUpdateReady = () => {
+  window.dispatchEvent(new Event('serviceWorkerUpdateReady'));
+};
+
 const getTargetOffset = hash => {
   const id = window.decodeURI(hash.replace(`#`, ``));
   if (id !== ``) {

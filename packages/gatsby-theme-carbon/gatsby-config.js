@@ -127,6 +127,7 @@ module.exports = themeOptions => {
           name: 'MediumFeed', // GraphQL query AllMediumFeed
         },
       },
+      'gatsby-plugin-offline',
     ],
   };
 };

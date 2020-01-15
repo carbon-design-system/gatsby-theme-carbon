@@ -107,11 +107,6 @@ img {
   z-index: z('floating');
 }
 
-// ie 11 hidden fix
-[hidden] {
-  display: none;
-}
-
 // Grid style updates/overrides, moved over from deprecated addons pacakge
 
 // No gutter class names

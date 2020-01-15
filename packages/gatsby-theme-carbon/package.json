@@ -38,6 +38,7 @@
     "gatsby-plugin-lunr": "^1.5.2",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-mdx": "^1.0.11",
+    "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sass-resources": "^2.0.0",

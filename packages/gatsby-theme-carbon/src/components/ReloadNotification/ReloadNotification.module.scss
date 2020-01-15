@@ -1,0 +1,22 @@
+.toast {
+  position: fixed;
+  right: 0;
+  top: 3.5rem;
+  z-index: z('floating');
+  transition: transform $duration--moderate-01 motion(entrance, productive);
+  opacity: 1;
+}
+
+.toast[hidden] {
+  opacity: 0;
+  transform: translateX(20rem);
+}
+
+.toast :global(.bx--toast-notification__subtitle) {
+  margin-bottom: 0;
+}
+
+.action-container {
+  display: flex;
+  justify-content: flex-end;
+}

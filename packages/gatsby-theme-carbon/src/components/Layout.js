@@ -7,6 +7,7 @@ import Header from './Header';
 import Switcher from './Switcher';
 import Footer from './Footer';
 import Container from './Container';
+import ReloadNotification from './ReloadNotification';
 
 import '../styles/index.scss';
 
@@ -50,6 +51,7 @@ const Layout = ({
         {children}
         <Footer />
       </Container>
+      <ReloadNotification />
     </>
   );
 };
