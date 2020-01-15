@@ -2,9 +2,9 @@
 // Row
 //---------------------------------------
 .do-dont-row + .do-dont-row {
-  margin-top: 0;
+  --space: 0;
   @include carbon--breakpoint('md') {
-    margin-top: 2rem;
+    --space: 2rem;
   }
 }
 
@@ -18,7 +18,7 @@
 //---------------------------------------
 // Caption and title
 //---------------------------------------
-.example-caption {
+.caption {
   padding: $spacing-05 0 0 0;
   @include carbon--breakpoint('sm') {
     width: 100%;
@@ -29,7 +29,7 @@
   }
 }
 
-.example-title {
+.title {
   @include carbon--type-style('body-short-01');
   font-weight: 600;
   margin: 0;
@@ -43,14 +43,14 @@
   }
 }
 
-.example-description {
+.description {
   @include carbon--type-style('body-short-01');
   margin: 0;
   padding: 0;
   padding-bottom: $spacing-06;
 }
 
-[class*='--col'] .example-caption {
+[class*='--col'] .caption {
   @include carbon--breakpoint('md') {
     width: 100%;
   }
@@ -59,7 +59,7 @@
 //---------------------------------------
 // Icons
 //---------------------------------------
-.example-icon {
+.icon {
   display: block;
   position: absolute;
   left: calc(1rem - 1px);
@@ -69,16 +69,16 @@
   height: 24px;
 }
 
-.example-icon-correct {
+.icon-correct {
   fill: $carbon--green-50;
 }
 
-.example-icon-incorrect {
+.icon-incorrect {
   fill: $carbon--red-60;
 }
 
-.example-icon path[dataIconPath='inner-path'],
-.example-icon path[data-icon-path='inner-path'] {
+.icon path[dataIconPath='inner-path'],
+.icon path[data-icon-path='inner-path'] {
   fill: $carbon--white-0;
   opacity: 1;
 }
@@ -93,22 +93,22 @@
 //---------------------------------------
 // Example card
 //---------------------------------------
-.example-card {
+.card {
   background: $carbon--white-0;
   width: 100%;
   position: relative;
 }
 
-.example-dark .example-card {
+.dark .card {
   background: $carbon--gray-90;
   color: $carbon--white-0;
 }
 
-.example-square .example-card {
+.square .card {
   padding-top: 100%;
 }
 
-.example-card::before {
+.card::before {
   content: '';
   position: absolute;
   left: 0;
@@ -118,35 +118,35 @@
   z-index: 1;
 }
 
-.example-correct .example-card::before {
+.correct .card::before {
   background: $carbon--green-50;
 }
 
-.example-incorrect .example-card::before {
+.incorrect .card::before {
   background: $carbon--red-60;
 }
 
 //---------------------------------------
 // Example content
 //---------------------------------------
-.example-content {
+.content {
   font-size: 1.25rem;
   font-weight: 300;
   width: 100%;
 }
 
-.example-text {
+.text {
   padding: 10%;
   font-weight: 300;
   font-size: 1.5rem;
   line-height: 1.25;
 }
 
-.example .example-card-content {
+.example .card-content {
   position: relative;
 }
 
-.example-square .example-card-content {
+.square .card-content {
   position: absolute;
   top: 0;
   left: 0;
@@ -160,24 +160,24 @@
 //---------------------------------------
 // Images
 //---------------------------------------
-.example-content .gatsby-resp-image-link {
+.content :global(.gatsby-resp-image-link) {
   width: 100%;
 }
 
-.example-content img {
+.content img {
   display: block;
   margin-bottom: 0;
   width: 100%;
 }
 
-.example-image {
+.image {
   display: block;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-.example span.gatsby-resp-image-wrapper {
+.example span:global(.gatsby-resp-image-wrapper) {
   max-width: 100% !important; // marked !important to overcome inline styles inserted by gatsby.
   margin-bottom: 0;
 }
