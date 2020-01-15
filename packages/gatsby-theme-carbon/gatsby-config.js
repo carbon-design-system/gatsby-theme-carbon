@@ -17,6 +17,7 @@ module.exports = themeOptions => {
     imageQuality = 75,
     lunrOptions = defaultLunrOptions,
     repository,
+    pngCompressionSpeed = 10,
     mediumAccount = 'carbondesign',
     gatsbyRemarkPlugins = [],
   } = themeOptions;
@@ -31,6 +32,7 @@ module.exports = themeOptions => {
         linkImagesToOriginal: false,
         quality: imageQuality,
         withWebp,
+        pngCompressionSpeed,
       },
     },
     { resolve: `gatsby-remark-responsive-iframe` },
@@ -70,7 +72,6 @@ module.exports = themeOptions => {
             ...defaultRemarkPlugins,
             ...gatsbyRemarkPlugins,
           ],
-          plugins: ['gatsby-remark-images'],
           defaultLayouts: {
             default: require.resolve('./src/templates/Default.js'),
             home: require.resolve('./src/templates/Homepage.js'),
