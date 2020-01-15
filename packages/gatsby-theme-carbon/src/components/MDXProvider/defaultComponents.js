@@ -7,8 +7,7 @@ import Code from '../Code';
 import PageDescription from '../PageDescription';
 import Video from '../Video';
 import DoDontExample from '../DoDontExample';
-import Do from '../DoDontRow/Do';
-import Dont from '../DoDontRow/Dont';
+import DoDont from '../DoDontRow/DoDont';
 import DoDontRow from '../DoDontRow/DoDontRow';
 import Caption from '../Caption';
 import ResourceCard from '../ResourceCard';
@@ -52,8 +51,7 @@ const components = {
   AccordionItem,
   Video,
   DoDontExample,
-  Do,
-  Dont,
+  DoDont,
   DoDontRow,
   Row,
   Column,
