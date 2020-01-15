@@ -5,7 +5,7 @@ import { doDontRow } from './DoDontRow.module.scss';
 
 export default class DoDontRow extends React.Component {
   static propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
   };
 
   render() {
