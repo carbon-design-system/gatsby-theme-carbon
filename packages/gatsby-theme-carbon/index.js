@@ -13,8 +13,6 @@ export { default as FeatureCard } from './src/components/FeatureCard';
 export { default as FourOhFour } from './src/components/FourOhFour';
 export { default as ImageCard } from './src/components/ImageCard';
 export { Tabs, Tab } from './src/components/Tabs';
-export {
-  default as InlineNotification,
-} from './src/components/InlineNotification';
+export { default as InlineNotification } from './src/components/InlineNotification';
 // Homepage Template Components
 export { HomepageCallout, HomepageBanner } from './src/components/Homepage';
