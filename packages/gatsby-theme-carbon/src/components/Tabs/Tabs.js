@@ -1,3 +1,7 @@
+// Gatsby doesn't include the recommended exceptions to this rule
+/* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
+// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-noninteractive-element-to-interactive-role.md#rule-details
+
 import React, {
   useContext,
   createContext,
