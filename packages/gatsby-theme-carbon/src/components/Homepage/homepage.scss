@@ -4,9 +4,22 @@
   color: $carbon--white-0;
 }
 
-.container--dark a,
-.container--homepage a {
+.container--dark a.#{$prefix}--link,
+.container--dark a.#{$prefix}--link:hover,
+.container--dark a.#{$prefix}--link:active,
+.container--dark a.#{$prefix}--link:active:visited,
+.container--dark a.#{$prefix}--link:active:visited:hover,
+.container--homepage a.#{$prefix}--link,
+.container--homepage a.#{$prefix}--link:hover,
+.container--homepage a.#{$prefix}--link:active,
+.container--homepage a.#{$prefix}--link:active:visited,
+.container--homepage a.#{$prefix}--link:active:visited:hover {
   color: $carbon--blue-40;
+}
+
+.container--dark a:focus,
+.container--homepage a:focus {
+  outline-color: $carbon--blue-40;
 }
 
 // Homepage image header area
