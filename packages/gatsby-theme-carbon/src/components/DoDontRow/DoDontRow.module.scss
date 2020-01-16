@@ -177,7 +177,7 @@
   padding: 0;
 }
 
-.example span:global(.gatsby-resp-image-wrapper) {
+.example :global(span.gatsby-resp-image-wrapper) {
   max-width: 100% !important; // marked !important to overcome inline styles inserted by gatsby.
   margin-bottom: 0;
 }
