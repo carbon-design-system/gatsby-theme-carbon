@@ -1,6 +1,5 @@
 const path = require('path');
 const { uiBackground, interactive01 } = require('@carbon/elements');
-const remarkSlug = require('remark-slug');
 const defaultLunrOptions = require('./config/lunr-options');
 
 module.exports = themeOptions => {
@@ -18,6 +17,7 @@ module.exports = themeOptions => {
     imageQuality = 75,
     lunrOptions = defaultLunrOptions,
     repository,
+    pngCompressionSpeed = 4, // default for gatsby-plugin-sharp
     mediumAccount = 'carbondesign',
     gatsbyRemarkPlugins = [],
   } = themeOptions;
@@ -32,6 +32,7 @@ module.exports = themeOptions => {
         linkImagesToOriginal: false,
         quality: imageQuality,
         withWebp,
+        pngCompressionSpeed,
       },
     },
     { resolve: `gatsby-remark-responsive-iframe` },
@@ -71,8 +72,6 @@ module.exports = themeOptions => {
             ...defaultRemarkPlugins,
             ...gatsbyRemarkPlugins,
           ],
-          plugins: ['gatsby-remark-images'],
-          remarkPlugins: [remarkSlug],
           defaultLayouts: {
             default: require.resolve('./src/templates/Default.js'),
             home: require.resolve('./src/templates/Homepage.js'),
