@@ -60,5 +60,7 @@
       path: /components/ResourceCard
     - title: Tabs
       path: /components/Tabs
+    - title: Title
+      path: /components/Title
     - title: Video
       path: /components/Video

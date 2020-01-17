@@ -1,0 +1,7 @@
+.title {
+  display: inline-block;
+}
+
+.title + * {
+  --space: #{$spacing-05};
+}
