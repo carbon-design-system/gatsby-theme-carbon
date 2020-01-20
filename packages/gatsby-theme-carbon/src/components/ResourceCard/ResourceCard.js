@@ -76,6 +76,7 @@ export default class ResourceCard extends React.Component {
       aspectRatio,
       actionIcon,
       className,
+      ...rest
     } = this.props;
 
     let isLink;
@@ -134,7 +135,7 @@ export default class ResourceCard extends React.Component {
       cardContainer = <div className={carbonTileclassNames}>{cardContent}</div>;
     } else if (isLink === true) {
       cardContainer = (
-        <Link to={href} className={carbonTileclassNames}>
+        <Link to={href} className={carbonTileclassNames} {...rest}>
           {cardContent}
         </Link>
       );
@@ -145,6 +146,7 @@ export default class ResourceCard extends React.Component {
           rel="noopener noreferrer"
           href={href}
           className={carbonTileclassNames}
+          {...rest}
         >
           {cardContent}
         </a>

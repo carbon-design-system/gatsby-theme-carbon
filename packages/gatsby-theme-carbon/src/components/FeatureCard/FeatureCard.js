@@ -41,6 +41,11 @@ export default class FeatureCard extends React.Component {
      * Specify a custom class
      */
     className: PropTypes.string,
+
+    /**
+     * Pass through props to resource card
+     */
+    resourceCardProps: PropTypes.object,
   };
 
   static defaultProps = {
@@ -58,6 +63,7 @@ export default class FeatureCard extends React.Component {
       disabled,
       actionIcon,
       className,
+      ...resourceCardProps
     } = this.props;
 
     let isLink;
@@ -100,6 +106,7 @@ export default class FeatureCard extends React.Component {
               actionIcon={actionIcon}
               color={color}
               disabled={disabled}
+              {...resourceCardProps}
             />
           </Column>
         </Row>

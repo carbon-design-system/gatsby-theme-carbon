@@ -25,6 +25,7 @@ import Link from '../Link';
 import { Accordion, AccordionItem } from '../Accordion';
 import ArtDirection from '../ArtDirection';
 import MediumPosts from '../MediumPosts';
+import Title from '../Title';
 
 const components = {
   wrapper: function Wrapper({ children, ...props }) {
@@ -70,6 +71,7 @@ const components = {
   Tabs,
   InlineNotification,
   MediumPosts,
+  Title,
 };
 
 export default components;
