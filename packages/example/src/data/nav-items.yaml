@@ -40,6 +40,8 @@
       path: /components/DoDontExample
     - title: FeatureCard
       path: /components/FeatureCard
+    - title: GifPlayer
+      path: /components/GifPlayer
     - title: Grid
       path: /components/Grid
     - title: ImageCard
