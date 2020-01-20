@@ -17,11 +17,6 @@ layout.
 
 </PageDescription>
 
-<AnchorLinks>
-  <AnchorLink>Frontmatter</AnchorLink>
-  <AnchorLink>Custom title</AnchorLink>
-</AnchorLinks>
-
 ## Frontmatter
 
 You can declare frontmatter in your `.mdx` files to provide specific metadata for the theme to use.
@@ -34,6 +29,13 @@ description: Usage instructions for the Markdown component
 keywords: 'ibm,carbon,gatsby,mdx,markdown'
 ---
 ```
+
+
+## Smart quotes
+
+The theme has a remark for processing straight quotes, into 'smart' quotes (''). However, this plugin isn't able to process text used in custom MDX components. 
+When using quotes in custom components, content authors should manually use ["smart quotes"](https://www.figma.com/design-systems/) to adhere to the IBM Design Language content guidelines.
+
 
 ## Custom title
 

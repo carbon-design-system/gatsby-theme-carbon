@@ -71,6 +71,11 @@ export default class ImageCard extends React.Component {
      * Set hover to lighten or darken the image, default is light, options are light or dark
      */
     hoverColor: PropTypes.string,
+
+    /**
+     * Props to pass through to link component
+     */
+    linkProps: PropTypes.object,
   };
 
   static defaultProps = {
