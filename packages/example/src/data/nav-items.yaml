@@ -38,6 +38,8 @@
       path: /components/code-blocks
     - title: DoDontExample
       path: /components/DoDontExample
+    - title: DoDontRow
+      path: /components/DoDontRow
     - title: FeatureCard
       path: /components/FeatureCard
     - title: GifPlayer
