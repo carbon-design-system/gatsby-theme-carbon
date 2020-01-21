@@ -18,7 +18,7 @@ const Play = ({ hovering }) =>
 const ToggleIcon = ({ paused, hovering }) =>
   paused ? <Play hovering={hovering} /> : <Pause hovering={hovering} />;
 
-const GifPlayer = ({ children, color, className }) => {
+const GifPlayer = ({ children, color, className, isInDialog }) => {
   const [paused, setPaused] = useState(false);
   const [hovering, setHovering] = useState(false);
 
@@ -34,13 +34,32 @@ const GifPlayer = ({ children, color, className }) => {
   const containerClassNames = classnames({
     [styles.container]: true,
     [className]: className,
+    [styles.gifInDialog]: isInDialog,
+  });
+
+  const staticImageClassNames = classnames({
+    [styles.imgHidden]: true,
+    [styles.imgDisplayed]: paused,
+  });
+
+  const gifClassNames = classnames({
+    [styles.gifDisplayed]: true,
+    [styles.gifHidden]: paused,
   });
 
   const childrenArray = React.Children.toArray(children);
 
   return (
     <div className={containerClassNames}>
-      {paused ? childrenArray[1] : childrenArray[0]}
+      <div className={gifClassNames} aria-hidden={paused ? 'true' : false}>
+        {childrenArray[0]}
+      </div>
+      <div
+        className={staticImageClassNames}
+        aria-hidden={paused ? false : 'true'}
+      >
+        {childrenArray[1]}
+      </div>
       <button
         type="button"
         aria-label="play pause toggle"
@@ -56,13 +75,27 @@ const GifPlayer = ({ children, color, className }) => {
 };
 
 GifPlayer.propTypes = {
+  /**
+   * Specify if icon color should be "dark" or "light"
+   */
   color: PropTypes.string,
+  /**
+   * Specify optional className
+   */
   className: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  /**
+   * Only pass in the 2 images to be rendered, first must be gif, second must be static image
+   */
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
+  /**
+   * Specify if the gifPlayer is inside the expanded ImageGallery (see ImageGallery.js)
+   */
+  isInDialog: PropTypes.bool,
 };
 
 GifPlayer.defaultProps = {
   color: 'light',
+  isInDialog: false,
 };
 
 export default GifPlayer;
