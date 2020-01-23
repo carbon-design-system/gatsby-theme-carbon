@@ -9,7 +9,7 @@
   },
   "license": "Apache 2.0",
   "peerDependencies": {
-    "gatsby": "^2.4.2",
+    "gatsby": "^2.19.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
