@@ -62,7 +62,7 @@ const GifPlayer = ({ children, color, className, isInDialog }) => {
       </div>
       <button
         type="button"
-        aria-label="play pause toggle"
+        aria-label="animation play pause toggle"
         className={controlsClassNames}
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}
