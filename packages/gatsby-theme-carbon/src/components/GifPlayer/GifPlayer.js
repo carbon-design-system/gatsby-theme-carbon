@@ -61,6 +61,7 @@ const GifPlayer = ({ children, color, className, isInDialog }) => {
         {childrenArray[1]}
       </div>
       <button
+      aria-pressed={paused ? 'true' : 'false'}
         type="button"
         aria-label="animation play pause toggle"
         className={controlsClassNames}
