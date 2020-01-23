@@ -49,6 +49,10 @@ const GifPlayer = ({ children, color, className, isInDialog }) => {
 
   const childrenArray = React.Children.toArray(children);
 
+  const labelText = paused
+    ? 'Toggleable animation paused'
+    : 'Toggleable animation playing';
+
   return (
     <div className={containerClassNames}>
       <div className={gifClassNames} aria-hidden={paused ? 'true' : false}>
@@ -61,9 +65,9 @@ const GifPlayer = ({ children, color, className, isInDialog }) => {
         {childrenArray[1]}
       </div>
       <button
-      aria-pressed={paused ? 'true' : 'false'}
+        aria-pressed={paused ? 'true' : 'false'}
         type="button"
-        aria-label="animation play pause toggle"
+        aria-label={labelText}
         className={controlsClassNames}
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}
