@@ -21,6 +21,7 @@
 
 .firstColumn p {
   @include carbon--type-style('expressive-heading-03', true);
+  margin-top: $spacing-02;
 }
 
 .secondColumn,
