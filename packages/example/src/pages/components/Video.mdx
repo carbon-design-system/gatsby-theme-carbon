@@ -18,7 +18,7 @@ The `<Video>` component can render a Vimeo player or a html video player.
 <Title>Video</Title>
 
 <Video src="/videos/hero-video.mp4" poster="/images/poster.png">
-  <track default src="/videos/vtt/hero-video.vtt" srcLang="en" />
+  <track kind="captions" default src="/videos/vtt/hero-video.vtt" srcLang="en" />
 </Video>
 
 ## Code
@@ -33,7 +33,7 @@ The `<Video>` component can render a Vimeo player or a html video player.
 
 ```jsx path=components/Video/Video.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/Video
 <Video src="/videos/hero-video.mp4" poster="/images/poster.png">
-  <track default src="/videos/vtt/hero-video.vtt" srcLang="en" />
+  <track kind="captions" default src="/videos/vtt/hero-video.vtt" srcLang="en" />
 </Video>
 ```
 
