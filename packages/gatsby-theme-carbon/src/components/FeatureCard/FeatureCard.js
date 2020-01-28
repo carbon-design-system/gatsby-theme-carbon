@@ -126,9 +126,8 @@ export default class FeatureCard extends React.Component {
       cardContainer = (
         <a
           className={`${prefix}--feature-card__link`}
-          target="_blank"
-          rel="noopener noreferrer"
           href={href}
+          {...resourceCardProps}
         >
           {cardContent}
         </a>
