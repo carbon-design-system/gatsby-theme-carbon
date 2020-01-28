@@ -162,9 +162,17 @@ function ImageGallery({ children }) {
                     )}
                   </Column>
                   <Column colLg={6}>
-                    {React.cloneElement(childrenAsArray[activeImageIndex], {
-                      isInDialog: true,
-                    })}
+                    {childrenAsArray[activeImageIndex].props.children.props
+                      .mdxType === 'GifPlayer'
+                      ? React.cloneElement(
+                          childrenAsArray[activeImageIndex].props.children,
+                          {
+                            isInDialog: true,
+                          }
+                        )
+                      : React.cloneElement(childrenAsArray[activeImageIndex], {
+                          isInDialog: true,
+                        })}
                   </Column>
                   <Column colLg={3} className={navButtonsContainer}>
                     {activeImageIndex + 1 < childrenAsArray.length && (
