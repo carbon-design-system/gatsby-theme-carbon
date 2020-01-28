@@ -23,6 +23,7 @@ import { AnchorLink, AnchorLinks } from '../AnchorLinks';
 import { Tab, Tabs } from '../Tabs';
 import Link from '../Link';
 import { Accordion, AccordionItem } from '../Accordion';
+import GifPlayer from '../GifPlayer';
 import ArtDirection from '../ArtDirection';
 import MediumPosts from '../MediumPosts';
 import Title from '../Title';
@@ -56,6 +57,7 @@ const components = {
   DoDontRow,
   Row,
   Column,
+  GifPlayer,
   Grid,
   Caption,
   ResourceCard,
