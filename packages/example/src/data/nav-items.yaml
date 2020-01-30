@@ -44,6 +44,8 @@
       path: /components/DoDontRow
     - title: FeatureCard
       path: /components/FeatureCard
+    - title: GifPlayer
+      path: /components/GifPlayer
     - title: Grid
       path: /components/Grid
     - title: ImageCard
