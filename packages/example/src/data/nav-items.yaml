@@ -14,6 +14,8 @@
   pages:
     - title: Configuration
       path: /guides/configuration
+    - title: Authoring MDX
+      path: /guides/MDX
     - title: Shadowing
       path: /guides/shadowing
     - title: Styling
@@ -54,8 +56,6 @@
       path: /components/markdown
     - title: MediumPosts
       path: /components/MediumPosts
-    - title: MDX
-      path: /components/MDX
     - title: PageDescription
       path: /components/PageDescription
     - title: ResourceCard
