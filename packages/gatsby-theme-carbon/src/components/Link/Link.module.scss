@@ -6,6 +6,10 @@
     color: $carbon--blue-80;
   }
 
+  &:visited {
+    color: $link-01;
+  }
+
   &:active {
     color: $text-01;
   }
