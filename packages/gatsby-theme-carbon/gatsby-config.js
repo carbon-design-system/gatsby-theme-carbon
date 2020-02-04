@@ -54,6 +54,12 @@ module.exports = themeOptions => {
       `gatsby-transformer-yaml`,
       `gatsby-plugin-catch-links`,
       {
+        resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+        options: {
+          disable: !process.env.ANALYZE,
+        },
+      },
+      {
         resolve: 'gatsby-plugin-lunr',
         options: lunrOptions,
       },
