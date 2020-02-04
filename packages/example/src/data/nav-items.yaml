@@ -22,7 +22,7 @@
       path: /guides/styling
     - title: Navigation
       path: /guides/navigation/sidebar
-    - title: Navigation
+    - title: npm scripts
       path: /guides/npm-scripts
 - title: Components
   pages:
