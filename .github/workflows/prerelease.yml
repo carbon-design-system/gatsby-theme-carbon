@@ -1,20 +1,20 @@
-on:
-  push:
-    branches:
-      - master
-jobs:
-  build:
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-          registry-url: 'https://registry.npmjs.org'
-      - name: Install lerna
-        run: npm i -g lerna
-      - name: Publish pre-release
-        run: lerna publish --canary --yes --dist-tag next
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}
+# on:
+#   push:
+#     branches:
+#       - master
+# jobs:
+#   build:
+#     runs-on: macos-latest
+#     steps:
+#       - uses: actions/checkout@master
+#       - name: Use Node.js 12.x
+#         uses: actions/setup-node@v1
+#         with:
+#           node-version: 12.x
+#           registry-url: 'https://registry.npmjs.org'
+#       - name: Install lerna
+#         run: npm i -g lerna
+#       - name: Publish pre-release
+#         run: lerna publish --canary --yes --dist-tag next
+#         env:
+#           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}
