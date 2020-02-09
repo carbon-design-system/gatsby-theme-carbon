@@ -1,4 +1,3 @@
-name: Pre-release
 on:
   push:
     branches:
