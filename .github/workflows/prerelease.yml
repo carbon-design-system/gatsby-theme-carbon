@@ -15,6 +15,6 @@ jobs:
       - name: Install lerna
         run: npm i -g lerna
       - name: Publish pre-release
-        run: cd packages/gatsby-theme-carbon && lerna publish --canary minor --dist-tag next --yes
+        run: lerna publish --canary --yes --dist-tag next
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}
