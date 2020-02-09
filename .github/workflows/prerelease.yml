@@ -13,6 +13,6 @@ jobs:
           node-version: 12.x
           registry-url: 'https://registry.npmjs.org'
       - name: Publish pre-release
-        run: cd packages/gatsby-theme-carbon && npm version preminor && npm publish --dist-tag next
+        run: cd packages/gatsby-theme-carbon && npm version preminor && npm publish --tag next
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}
