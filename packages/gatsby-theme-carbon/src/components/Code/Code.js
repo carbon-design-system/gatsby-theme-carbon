@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import { ChevronDown16, ChevronUp16 } from '@carbon/icons-react';
 
@@ -13,7 +13,9 @@ import PathRow from './PathRow';
 import Sidebar from './Sidebar';
 
 const Code = ({ children, className: classNameProp = '', path, src }) => {
+  const [hasMoreThanNineLines, setHasMoreThanNineLines] = useState(false);
   const [shouldShowMore, setShouldShowMore] = useState(false);
+  const preRef = useRef();
 
   const language = classNameProp.replace(/language-/, '');
 
@@ -28,9 +30,14 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
   const getLines = lines => {
     const withoutTrailingEmpty = removeTrailingEmptyLine(lines);
 
+    if (withoutTrailingEmpty.length > 9) {
+      setHasMoreThanNineLines(true);
+    }
+
     if (shouldShowMore) {
       return withoutTrailingEmpty;
     }
+
     return withoutTrailingEmpty.slice(0, 9);
   };
 
@@ -48,6 +55,7 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <div className={styles.container}>
             <pre
+              ref={preRef}
               className={cx(styles.highlight, {
                 [styles.sideBarMinHeight]: !path && src,
                 [className]: className,
@@ -68,25 +76,30 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
           </div>
         )}
       </Highlight>
-      <div className={styles.showMoreRow}>
-        <button
-          className={styles.showMoreButton}
-          onClick={() => setShouldShowMore(!shouldShowMore)}
-          type="button"
-        >
-          {shouldShowMore ? (
-            <>
-              <span>Show less</span>
-              <ChevronUp16 />
-            </>
-          ) : (
-            <>
-              <span>Show more</span>
-              <ChevronDown16 />
-            </>
-          )}
-        </button>
-      </div>
+      {hasMoreThanNineLines && (
+        <div className={styles.showMoreRow}>
+          <button
+            className={styles.showMoreButton}
+            onClick={() => {
+              setShouldShowMore(!shouldShowMore);
+              console.log(preRef.current.scrollHeight);
+            }}
+            type="button"
+          >
+            {shouldShowMore ? (
+              <>
+                <span>Show less</span>
+                <ChevronUp16 />
+              </>
+            ) : (
+              <>
+                <span>Show more</span>
+                <ChevronDown16 />
+              </>
+            )}
+          </button>
+        </div>
+      )}
     </Row>
   );
 };
