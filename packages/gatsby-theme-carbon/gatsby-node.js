@@ -50,17 +50,39 @@ exports.onCreatePage = (
 // were providing at least 1 nested page, but that resulted in the bottom navigation to that page
 // reading "Resources: Resources" (as an example). By overriding the type definitions for
 // NavItemsYaml we can allow the title to be nullable, which fixes this issue.
-exports.sourceNodes = ({ actions }) => {
+
+// Create medium feed schema incase the plugin isn't used or you're on an ✈️
+exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions;
-  const typeDefs = `
-    type NavItemsYamlPage {
-      title: String
-      path: String!
-    }
-    type NavItemsYaml implements Node {
-      title: String!
-      pages: [NavItemsYamlPage]!
-    }
-  `;
+
+  const typeDefs = [
+    `
+  type NavItemsYamlPage {
+    title: String
+    path: String!
+  }
+  type NavItemsYaml implements Node {
+    title: String!
+    pages: [NavItemsYamlPage]!
+  }`,
+    schema.buildObjectType({
+      name: 'MediumFeed',
+      interfaces: ['Node'],
+      fields: {
+        author: 'String',
+        slug: 'String',
+        thumbnail: 'String',
+        title: 'String',
+        link: 'String',
+        date: {
+          type: 'Date',
+          extensions: {
+            dateformat: {},
+          },
+        },
+      },
+    }),
+  ];
+
   createTypes(typeDefs);
 };
