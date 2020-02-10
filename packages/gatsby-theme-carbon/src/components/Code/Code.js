@@ -1,22 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
+import { ChevronDown16, ChevronUp16 } from '@carbon/icons-react';
 
 import cx from 'classnames';
 
 import { Row } from '../Grid';
 import prismTheme from './prismTheme';
 
-import {
-  highlight,
-  container,
-  sideBarMinHeight,
-  row,
-} from './Code.module.scss';
+import styles from './Code.module.scss';
 
 import PathRow from './PathRow';
 import Sidebar from './Sidebar';
 
 const Code = ({ children, className: classNameProp = '', path, src }) => {
+  const [shouldShowMore, setShouldShowMore] = useState(false);
+
   const language = classNameProp.replace(/language-/, '');
 
   const removeTrailingEmptyLine = lines => {
@@ -27,8 +25,17 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
     return [...lines, lastLine];
   };
 
+  const getLines = lines => {
+    const withoutTrailingEmpty = removeTrailingEmptyLine(lines);
+
+    if (shouldShowMore) {
+      return withoutTrailingEmpty;
+    }
+    return withoutTrailingEmpty.slice(0, 9);
+  };
+
   return (
-    <Row className={row}>
+    <Row className={styles.row}>
       <PathRow src={src} path={path}>
         {children}
       </PathRow>
@@ -39,15 +46,15 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
         theme={prismTheme}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <div className={container}>
+          <div className={styles.container}>
             <pre
-              className={cx(highlight, {
-                [sideBarMinHeight]: !path && src,
+              className={cx(styles.highlight, {
+                [styles.sideBarMinHeight]: !path && src,
                 [className]: className,
               })}
               style={style}
             >
-              {removeTrailingEmptyLine(tokens).map((line, i) => (
+              {getLines(tokens).map((line, i) => (
                 <div {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (
                     <span {...getTokenProps({ token, key })} />
@@ -61,6 +68,25 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
           </div>
         )}
       </Highlight>
+      <div className={styles.showMoreRow}>
+        <button
+          className={styles.showMoreButton}
+          onClick={() => setShouldShowMore(!shouldShowMore)}
+          type="button"
+        >
+          {shouldShowMore ? (
+            <>
+              <span>Show less</span>
+              <ChevronUp16 />
+            </>
+          ) : (
+            <>
+              <span>Show more</span>
+              <ChevronDown16 />
+            </>
+          )}
+        </button>
+      </div>
     </Row>
   );
 };
