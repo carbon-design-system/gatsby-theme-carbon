@@ -18,9 +18,21 @@ module.exports = themeOptions => {
     lunrOptions = defaultLunrOptions,
     repository,
     pngCompressionSpeed = 4, // default for gatsby-plugin-sharp
-    mediumAccount = 'carbondesign',
+    mediumAccount = '',
     gatsbyRemarkPlugins = [],
   } = themeOptions;
+
+  const optionalPlugins = [];
+
+  if (mediumAccount) {
+    optionalPlugins.push({
+      resolve: 'gatsby-source-medium-feed',
+      options: {
+        userName: mediumAccount, // Medium user name
+        name: 'MediumFeed', // GraphQL query AllMediumFeed
+      },
+    });
+  }
 
   const defaultRemarkPlugins = [
     { resolve: `gatsby-remark-unwrap-images` },
@@ -121,13 +133,6 @@ module.exports = themeOptions => {
         },
       },
       `gatsby-plugin-react-helmet`,
-      {
-        resolve: 'gatsby-source-medium-feed',
-        options: {
-          userName: mediumAccount, // Medium user name
-          name: 'MediumFeed', // GraphQL query AllMediumFeed
-        },
-      },
-    ],
+    ].concat(optionalPlugins),
   };
 };
