@@ -20,13 +20,13 @@ export default class InlineNotification extends React.Component {
   render() {
     const { children, className, kind } = this.props;
 
-    const notifcationClasses = classnames(notification, {
+    const notificationClasses = classnames(notification, {
       [className]: className,
     });
 
     return (
       <Row>
-        <Column colLg={8} className={notifcationClasses}>
+        <Column colLg={8} colMd={6} className={notificationClasses}>
           <CarbonInlineNotification
             lowContrast
             hideCloseButton
