@@ -51,7 +51,7 @@
     "gatsby-source-filesystem": "^2.0.37",
     "gatsby-source-medium-feed": "^1.0.6",
     "gatsby-transformer-yaml": "^2.1.12",
-    "lodash": "^4.17.11",
+    "lodash.throttle": "^4.1.1",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.11.0",
     "prism-react-renderer": "^0.1.7",
