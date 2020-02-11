@@ -1,0 +1,18 @@
+# on:
+#   push:
+#     branches:
+#       - master
+# jobs:
+#   prepublish:
+#     runs-on: macos-latest
+#     steps:
+#       - uses: actions/checkout@master
+#       - name: Use Node.js 12.x
+#         uses: actions/setup-node@v1
+#         with:
+#           node-version: 12.x
+#           registry-url: 'https://registry.npmjs.org'
+#       - name: Publish pre-release
+#         run: cd packages/gatsby-theme-carbon && npm version preminor && npm publish --tag next
+#         env:
+#           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}
