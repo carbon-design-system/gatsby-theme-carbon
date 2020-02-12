@@ -12,7 +12,7 @@ import React, {
   useCallback,
 } from 'react';
 import { Close20, Search20 } from '@carbon/icons-react';
-import { throttle as _throttle } from 'lodash';
+import _throttle from 'lodash.throttle';
 import { navigate } from 'gatsby';
 import cx from 'classnames';
 import NavContext from '../../util/context/NavContext';
