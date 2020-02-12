@@ -22,6 +22,8 @@
       path: /guides/styling
     - title: Navigation
       path: /guides/navigation/sidebar
+    - title: npm scripts
+      path: /guides/npm-scripts
 - title: Components
   pages:
     - title: Accordion
