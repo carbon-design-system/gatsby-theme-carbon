@@ -75,25 +75,23 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
         )}
       </Highlight>
       {hasMoreThanNineLines && (
-        <div className={styles.showMoreRow}>
-          <button
-            className={styles.showMoreButton}
-            onClick={() => setShouldShowMore(!shouldShowMore)}
-            type="button"
-          >
-            {shouldShowMore ? (
-              <>
-                <span>Show less</span>
-                <ChevronUp16 />
-              </>
-            ) : (
-              <>
-                <span>Show more</span>
-                <ChevronDown16 />
-              </>
-            )}
-          </button>
-        </div>
+        <button
+          className={styles.showMoreButton}
+          onClick={() => setShouldShowMore(!shouldShowMore)}
+          type="button"
+        >
+          {shouldShowMore ? (
+            <>
+              <span>Show less</span>
+              <ChevronUp16 />
+            </>
+          ) : (
+            <>
+              <span>Show more</span>
+              <ChevronDown16 />
+            </>
+          )}
+        </button>
       )}
     </Row>
   );

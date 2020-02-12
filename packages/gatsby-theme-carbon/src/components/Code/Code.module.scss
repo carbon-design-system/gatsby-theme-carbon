@@ -25,6 +25,7 @@
 }
 
 .row {
+  position: relative;
   font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
     'Bitstream Vera Sans Mono', Courier, monospace;
   color: $inverse-01;
@@ -86,31 +87,28 @@
   border-bottom: 1px solid $inverse-02;
 }
 
-.show-more-row {
-  composes: path-row;
-  display: flex;
-  justify-content: flex-end;
-  border-top: 1px solid $inverse-02;
-}
-
 .show-more-button {
-  @include carbon--type-style('body-short-01');
+  @include carbon--type-style('body-long-01');
   font-family: 'IBM Plex Sans VF', sans-serif;
-  background: transparent;
+  position: absolute;
+  right: $spacing-03;
+  bottom: $spacing-03;
+  background: $ui-05;
   border: none;
   color: white;
   cursor: pointer;
   padding: $spacing-03;
+  padding-left: $spacing-05;
   display: inline-flex;
   align-items: center;
+  transition: background-color $duration--fast-02;
+  &:hover {
+    background-color: $inverse-02;
+  }
 }
 
 .show-more-button span {
   margin-right: $spacing-03;
-}
-
-.show-more-button:hover {
-  text-decoration: underline;
 }
 
 .sidebar {
