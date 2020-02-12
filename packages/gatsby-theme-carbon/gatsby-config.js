@@ -63,6 +63,7 @@ module.exports = themeOptions => {
     },
     plugins: [
       `gatsby-plugin-sharp`,
+      `gatsby-remark-images`, // included twice per https://www.gatsbyjs.org/docs/mdx/plugins/#gatsby-remark-plugins
       `gatsby-transformer-yaml`,
       `gatsby-plugin-catch-links`,
       {
@@ -78,6 +79,7 @@ module.exports = themeOptions => {
       },
       {
         resolve: `gatsby-plugin-mdx`,
+        plugins: {},
         options: {
           extensions: mdxExtensions,
           gatsbyRemarkPlugins: [
