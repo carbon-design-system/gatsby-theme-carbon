@@ -17,6 +17,7 @@
     "dev:clean": "yarn workspace example develop:clean",
     "build": "yarn workspace example build",
     "build:clean": "yarn workspace example build:clean",
+    "build:analyze": "ANALYZE=true yarn workspace example build",
     "serve": "yarn build && yarn workspace example serve",
     "test:prefix": "yarn workspace example test:prefix",
     "now-build": "yarn workspace example build",
