@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { throttle as _throttle } from 'lodash';
+import _throttle from 'lodash.throttle';
 
 const getWindowSize = () => {
   if (typeof window !== 'undefined') {

@@ -18,20 +18,16 @@ const LeftNavItem = props => {
   const { toggleNavState } = useContext(NavContext);
   const closeLeftNav = () => toggleNavState('leftNavIsOpen', 'close');
   const pathPrefix = usePathprefix();
+
   return (
     <Location>
       {({ location }) => {
         const pathname = pathPrefix
           ? location.pathname.replace(pathPrefix, '')
           : location.pathname;
-        // If item a dropdown, ignore the last path segment to account for tabbed
-        // items, which won't show up in the items array. For non-dropdowns,
-        // just check for exact path match while removing trailing slash.
-        const isActive = items.some(item =>
-          pathname.split('/').length > 2
-            ? item.path.slice(0, item.path.lastIndexOf('/')) ===
-              pathname.slice(0, pathname.lastIndexOf('/'))
-            : item.path.replace(/\/$/, '') === pathname
+
+        const isActive = items.some(
+          item => item.path.split('/')[1] === pathname.split('/')[1]
         );
 
         if (items.length === 1) {
@@ -70,9 +66,10 @@ const LeftNavItem = props => {
 const SubNavItems = ({ items, pathname, onClick }) =>
   items.map((item, i) => {
     const hasActiveTab =
-      item.path.split('/').filter(Boolean).length > 2
-        ? pathname.includes(item.path.slice(0, item.path.lastIndexOf('/')))
-        : pathname.split('/').toString() === item.path.split('/').toString();
+      item.path.split('/') > 3
+        ? item.path.split('/')[3] === pathname.split('/')[3]
+        : item.path.split('/')[2] === pathname.split('/')[2];
+
     return (
       <SideNavMenuItem
         to={`${item.path}`}

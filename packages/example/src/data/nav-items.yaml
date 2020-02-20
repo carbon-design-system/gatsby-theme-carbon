@@ -14,12 +14,16 @@
   pages:
     - title: Configuration
       path: /guides/configuration
+    - title: Authoring MDX
+      path: /guides/MDX
     - title: Shadowing
       path: /guides/shadowing
     - title: Styling
       path: /guides/styling
     - title: Navigation
       path: /guides/navigation/sidebar
+    - title: npm scripts
+      path: /guides/npm-scripts
 - title: Components
   pages:
     - title: Accordion
@@ -42,6 +46,8 @@
       path: /components/DoDontRow
     - title: FeatureCard
       path: /components/FeatureCard
+    - title: GifPlayer
+      path: /components/GifPlayer
     - title: Grid
       path: /components/Grid
     - title: ImageCard
@@ -54,8 +60,6 @@
       path: /components/markdown
     - title: MediumPosts
       path: /components/MediumPosts
-    - title: MDX
-      path: /components/MDX
     - title: PageDescription
       path: /components/PageDescription
     - title: ResourceCard
