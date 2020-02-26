@@ -166,3 +166,21 @@ img {
 .bx--inline-notification--low-contrast:before {
   pointer-events: none !important;
 }
+
+//---------------------------------------
+// Not-nested bullet alignment
+//---------------------------------------
+
+.bx--list--unordered,
+.bx--list--ordered {
+  margin-left: 1rem;
+}
+
+//---------------------------------------
+// Nested bullet alignment
+//---------------------------------------
+
+.bx--list--nested .bx--list--unordered,
+.bx--list--ordered {
+  margin-left: 0.5rem;
+}

@@ -19,7 +19,7 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "@carbon/elements": "^10.9.1",
+    "@carbon/elements": "^10.9.3",
     "@carbon/icons-react": "^10.8.0",
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.11",
