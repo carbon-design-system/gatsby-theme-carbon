@@ -4096,10 +4096,10 @@ caniuse-lite@^1.0.30000999:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001019.tgz#857e3fccaad2b2feb3f1f6d8a8f62d747ea648e1"
   integrity sha512-6ljkLtF1KM5fQ+5ZN0wuyVvvebJxgJPTmScOMaFuQN2QuOzvRJnWSKfzQskQU5IOU4Gap3zasYPIinzwUjoj/g==
 
-carbon-components-react@^7.10.0-rc.2:
-  version "7.10.0-rc.2"
-  resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.10.0-rc.2.tgz#d7881855b023dc7f7a15483f38ecab38f3fbd8ea"
-  integrity sha512-Et+7kMR5JHlXIjFAd8zEVAJQRnDH+6w3ugthnuWYzxd3SRzrcsww8hDzjgV7hN8lC+rhOkhgwwsHSAzvBRUbZw==
+carbon-components-react@^7.10.0-rc.4:
+  version "7.10.0-rc.4"
+  resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.10.0-rc.4.tgz#97f144749df9e72fd8a9972bb23a17ebad75a963"
+  integrity sha512-gLscEg+SiqB7h2cJuIuTxBMBh0blHQAlzghYpFycJmXAoPm8wGeKCG9Be2TD3p8TNUUPFAJn5E58RRFKPgHFtQ==
   dependencies:
     "@carbon/icons-react" "^10.9.0-rc.2"
     classnames "2.2.6"
@@ -4114,10 +4114,10 @@ carbon-components-react@^7.10.0-rc.2:
     warning "^3.0.0"
     window-or-global "^1.0.1"
 
-carbon-components@^10.10.0-rc.2:
-  version "10.10.0-rc.2"
-  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.10.0-rc.2.tgz#7a049c043a3b7ef2db8a9cd3d5db341a4976b494"
-  integrity sha512-KTj8drCex+lTy1Q6tY1NbANdBAiSuvtYrSSUsU3XHiEV1Mgwy0EMA4s9dQzF+0OWZHua3O12oYHLJkPmqnpuog==
+carbon-components@^10.10.0-rc.4:
+  version "10.10.0-rc.4"
+  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.10.0-rc.4.tgz#e3f5ff70dc0c47a78a08f8f6c5ce2e07c489b965"
+  integrity sha512-dY0zVrevOrvg/gZD8BqTMlBAsUJ00OleEDvYP1y3dRv23zPSU0DtINzX2jBpDUc6uFoa+Ib4bcGb1MGfiHjj1Q==
   dependencies:
     carbon-icons "^7.0.7"
     flatpickr "4.6.1"
