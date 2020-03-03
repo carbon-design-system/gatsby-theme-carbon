@@ -87,8 +87,14 @@
   border-bottom: 1px solid $inverse-02;
 }
 
+.path {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .show-more-button {
-  @include carbon--type-style('body-long-01');
+  @include carbon--type-style('body-short-01');
   font-family: 'IBM Plex Sans VF', sans-serif;
   position: absolute;
   right: $spacing-03;
@@ -135,6 +141,7 @@
   width: 32px;
   height: 32px;
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   background: transparent;
