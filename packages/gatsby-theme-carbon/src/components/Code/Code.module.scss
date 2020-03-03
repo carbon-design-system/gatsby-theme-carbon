@@ -18,6 +18,10 @@
     color: $text-01;
   }
 
+  td > code {
+    font-size: 12px;
+  }
+
   // Add's additional length for scrolling under sidebar
   .token:last-of-type {
     margin-right: 64px;
