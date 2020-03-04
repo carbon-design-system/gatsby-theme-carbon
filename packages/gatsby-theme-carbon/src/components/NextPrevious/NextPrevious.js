@@ -144,12 +144,10 @@ const NextPreviousContainer = props => {
       };
     }
 
-    return currentTitle === 'Home'
-      ? {}
-      : {
-          to: '/',
-          name: 'Home',
-        };
+    return {
+      to: '/',
+      name: 'Home',
+    };
   };
 
   const getNextItem = () => {
@@ -189,7 +187,11 @@ const NextPreviousContainer = props => {
   }
 
   return (
-    <NextPrevious previousItem={getPreviousItem()} nextItem={getNextItem()} />
+    <NextPrevious
+      isHomepage
+      previousItem={getPreviousItem()}
+      nextItem={getNextItem()}
+    />
   );
 };
 
