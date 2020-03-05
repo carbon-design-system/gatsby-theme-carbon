@@ -19,7 +19,5 @@ jobs:
         run: yarn install --pure-lockfile
       - name: Publish
         env:
-          NPM_TOKEN: ${{ secrets.NPM_PUBLISH }}
-        run: |
-          echo "//registry.npmjs.org/:_authToken=$NPM_PUBLISH" >> .npmrc
-          yarn run prerelease
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: yarn run prerelease
