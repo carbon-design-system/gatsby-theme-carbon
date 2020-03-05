@@ -14,15 +14,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
+      - name: Install dependencies
+        run: yarn install --pure-lockfile
       - name: Publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_PUBLISH }}
         run: |
           echo "//registry.npmjs.org/:_authToken=$NPM_PUBLISH" >> .npmrc
-<<<<<<< Updated upstream:.github/workflows/pre-release.yml
-          npx lerna publish --canary --dist-tag next --no-push --no-git-tag-version --yes
-||||||| merged common ancestors:.github/workflows/pre-release.yml
-          yarn lerna publish --canary --dist-tag next --no-push --no-git-tag-version --yes
-=======
           yarn run prerelease
->>>>>>> Stashed changes:.github/workflows/prerelease.yml
