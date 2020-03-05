@@ -29,7 +29,7 @@ module.exports = themeOptions => {
       resolve: 'gatsby-source-medium-feed',
       options: {
         userName: mediumAccount, // Medium user name
-        name: 'MediumFeed', // GraphQL query AllMediumFeed
+        name: 'MediumFeed',
       },
     });
   }
