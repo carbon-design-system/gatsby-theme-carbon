@@ -87,8 +87,14 @@
   border-bottom: 1px solid $inverse-02;
 }
 
+.path {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .show-more-button {
-  @include carbon--type-style('body-long-01');
+  @include carbon--type-style('body-short-01');
   font-family: 'IBM Plex Sans VF', sans-serif;
   position: absolute;
   right: $spacing-03;
@@ -100,7 +106,6 @@
   padding: $spacing-03;
   padding-left: $spacing-05;
   display: inline-flex;
-  align-items: center;
   transition: background-color $duration--fast-02;
   &:hover {
     background-color: $inverse-02;
@@ -135,6 +140,7 @@
   width: 32px;
   height: 32px;
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   background: transparent;
