@@ -30,7 +30,7 @@ const Homepage = ({
       {FirstCallout}
       <Main>{children}</Main>
       {SecondCallout}
-      <NextPrevious location={location} pageContext={pageContext} />
+      <NextPrevious isHomepage location={location} pageContext={pageContext} />
       <BackToTopBtn />
     </Layout>
   );
