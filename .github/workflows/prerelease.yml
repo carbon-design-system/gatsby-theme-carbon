@@ -1,4 +1,4 @@
-name: pre-release
+name: prerelease
 
 on:
   push:
@@ -21,4 +21,4 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_PUBLISH }}
         run: |
           echo "//registry.npmjs.org/:_authToken=$NPM_PUBLISH" >> .npmrc
-          yarn lerna publish --canary --dist-tag next --no-push --no-git-tag-version --yes
+          yarn run prerelease
