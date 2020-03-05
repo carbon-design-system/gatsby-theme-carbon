@@ -146,8 +146,8 @@
 
 .#{$prefix}--side-nav__item:not(.#{$prefix}--side-nav__item--active):hover
   > .#{$prefix}--side-nav__submenu,
-.#{$prefix}--side-nav__menu[role='menu']
-  a.#{$prefix}--side-nav__link[role='menuitem']:not(.#{$prefix}--side-nav__link--current):not([aria-current='page']):hover,
+.#{$prefix}--side-nav__menu
+  a.#{$prefix}--side-nav__link:not(.#{$prefix}--side-nav__link--current):not([aria-current='page']):hover,
 .#{$prefix}--side-nav__item:not(.#{$prefix}--side-nav__item--active):hover
   > .#{$prefix}--side-nav__link {
   background-color: #353535;
@@ -166,8 +166,8 @@
   .#{$prefix}--side-nav__item:not(.#{$prefix}--side-nav__item--active):hover
   > .#{$prefix}--side-nav__submenu,
 .#{$prefix}--side-nav--website--light
-  .#{$prefix}--side-nav__menu[role='menu']
-  a.#{$prefix}--side-nav__link[role='menuitem']:not(.#{$prefix}--side-nav__link--current):not([aria-current='page']):hover,
+  .#{$prefix}--side-nav__menu
+  a.#{$prefix}--side-nav__link:not(.#{$prefix}--side-nav__link--current):not([aria-current='page']):hover,
 .#{$prefix}--side-nav--website--light
   .#{$prefix}--side-nav__item:not(.#{$prefix}--side-nav__item--active):hover
   > .#{$prefix}--side-nav__link {
@@ -224,19 +224,18 @@
 }
 
 .#{$prefix}--side-nav a.#{$prefix}--side-nav__link[aria-current='page'],
-.#{$prefix}--side-nav__menu[role='menu'] a.#{$prefix}--side-nav__link--current,
-.#{$prefix}--side-nav__menu[role='menu']
-  a.#{$prefix}--side-nav__link[aria-current='page'] {
+.#{$prefix}--side-nav__menu a.#{$prefix}--side-nav__link--current,
+.#{$prefix}--side-nav__menu a.#{$prefix}--side-nav__link[aria-current='page'] {
   background-color: $carbon--gray-80;
 }
 
 .#{$prefix}--side-nav.#{$prefix}--side-nav--website--light
   a.#{$prefix}--side-nav__link[aria-current='page'],
 .#{$prefix}--side-nav--website--light
-  .#{$prefix}--side-nav__menu[role='menu']
+  .#{$prefix}--side-nav__menu
   a.#{$prefix}--side-nav__link--current,
 .#{$prefix}--side-nav--website--light
-  .#{$prefix}--side-nav__menu[role='menu']
+  .#{$prefix}--side-nav__menu
   a.#{$prefix}--side-nav__link[aria-current='page'] {
   background-color: $ui-03;
 }

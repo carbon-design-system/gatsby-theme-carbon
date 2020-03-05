@@ -23,7 +23,8 @@
     "now-build": "yarn workspace example build",
     "format": "prettier --write \"**/*.{scss,css,js,md}\"",
     "lint:js": "eslint . --fix",
-    "lint:scss": "stylelint \"packages/**/*.scss\" --fix"
+    "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
+    "release": "lerna version --conventional-commits --create-release github --git-remote upstream"
   },
   "eslintIgnore": [
     "**/node_modules/",
