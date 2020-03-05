@@ -102,6 +102,7 @@ const NextPreviousContainer = props => {
   const {
     tabs,
     location,
+    isHomepage,
     pageContext = {
       frontmatter: 'Home',
     },
@@ -188,7 +189,7 @@ const NextPreviousContainer = props => {
 
   return (
     <NextPrevious
-      isHomepage
+      isHomepage={isHomepage}
       previousItem={getPreviousItem()}
       nextItem={getNextItem()}
     />
