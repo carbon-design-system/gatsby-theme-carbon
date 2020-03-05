@@ -7,9 +7,10 @@ on:
 
 jobs:
   release:
-    runs-on: macOS-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
+      - run: git fetch --prune --unshallow
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
