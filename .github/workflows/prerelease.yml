@@ -1,0 +1,25 @@
+name: prerelease
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: git fetch --prune --unshallow
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: Install dependencies
+        run: yarn install --pure-lockfile
+      - name: Publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_PUBLISH }}
+        run: |
+          echo "//registry.npmjs.org/:_authToken=$NPM_PUBLISH" >> .npmrc
+          yarn run prerelease
