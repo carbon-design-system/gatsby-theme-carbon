@@ -3,7 +3,7 @@ import { CopyButton } from 'carbon-components-react';
 import { Launch16 } from '@carbon/icons-react';
 import copy from 'copy-to-clipboard';
 import cx from 'classnames';
-import { pathRow, button, copyButton } from './Code.module.scss';
+import styles from './Code.module.scss';
 
 // If no path is given, don't render. We'll use the Sidebar for buttons
 // If a src url is given, the src Icon will display in this row, otherwise
@@ -11,14 +11,14 @@ import { pathRow, button, copyButton } from './Code.module.scss';
 const PathRow = ({ src, path, children }) => {
   if (!path) return null;
   return (
-    <div className={pathRow}>
-      <span>{path}</span>
+    <div className={styles.pathRow}>
+      <span className={styles.path}>{path}</span>
       {src ? (
         <a
           target="_blank"
           rel="noopener noreferrer"
           title="View source"
-          className={button}
+          className={styles.button}
           href={src}
           style={{ position: 'relative', zIndex: 200 }}
         >
@@ -26,7 +26,7 @@ const PathRow = ({ src, path, children }) => {
         </a>
       ) : (
         <CopyButton
-          className={cx(button, copyButton)}
+          className={cx(styles.button, styles.copyButton)}
           onClick={() => {
             copy(children);
           }}
