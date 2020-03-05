@@ -15,9 +15,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: Install dependencies
-        run: yarn install --pure-lockfile
       - name: Publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: yarn run prerelease
+        run: npx lerna publish --canary minor --dist-tag next --no-push --no-git-tag-version --yes
