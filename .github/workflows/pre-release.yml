@@ -14,11 +14,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: Install dependencies
-        run: yarn
       - name: Publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_PUBLISH }}
         run: |
           echo "//registry.npmjs.org/:_authToken=$NPM_PUBLISH" >> .npmrc
-          yarn lerna publish --canary --dist-tag next --no-push --no-git-tag-version --yes
+          npx lerna publish --canary --dist-tag next --no-push --no-git-tag-version --yes
