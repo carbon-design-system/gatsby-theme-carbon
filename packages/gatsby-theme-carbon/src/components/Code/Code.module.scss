@@ -11,11 +11,15 @@
     position: relative;
     display: inline;
     padding: 0 0.5em;
-    font-size: 0.75em;
+    font-size: 0.875rem;
     bottom: 0.0625em;
     border-radius: 4px;
     background-color: $ui-03;
     color: $text-01;
+  }
+
+  td > code {
+    font-size: 0.75rem;
   }
 
   // Add's additional length for scrolling under sidebar
