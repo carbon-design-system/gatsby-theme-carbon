@@ -3974,7 +3974,7 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30001020, can
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001031.tgz#76f1bdd39e19567b855302f65102d9a8aaad5930"
   integrity sha512-DpAP5a1NGRLgYfaNCaXIRyGARi+3tJA2quZXNNA1Du26VyVkqvy2tznNu5ANyN1Y5aX44QDotZSVSUSi2uMGjg==
 
-carbon-components-react@^7.9.2:
+carbon-components-react@^7.10.1:
   version "7.10.1"
   resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.10.1.tgz#8f29cca3fea91f022ab66484800458680d5336e4"
   integrity sha512-mTwnOqKFrAS/on7nae8GRbYUQGhM+KAgMbZrLNtGUjRlan0BgEW057tjJrkzfEUH4f+ZDNbMJ2mxUfyQX72EGQ==
@@ -3992,7 +3992,7 @@ carbon-components-react@^7.9.2:
     warning "^3.0.0"
     window-or-global "^1.0.1"
 
-carbon-components@^10.9.2:
+carbon-components@^10.10.1:
   version "10.10.1"
   resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.10.1.tgz#db8bb3703123db402238283ab315aa23d5ab69a4"
   integrity sha512-qbZsbdz6cUD/cgiS3ww71pUWC3WzWOJMrEsfwLh/XItdJAs5P+Ax9HouMLrlM1ia1e9fW8xdUsqeMveuYIxk9w==
