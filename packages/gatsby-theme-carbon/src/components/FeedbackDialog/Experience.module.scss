@@ -38,8 +38,11 @@
   margin: 0;
 }
 
-.selected {
+.selected input {
   outline: 1px solid var(--cds-ui-05);
+  &:focus {
+    outline: 2px solid var(--cds-ui-05);
+  }
 }
 
 .selected svg,
