@@ -13,6 +13,6 @@
   z-index: z('floating');
 }
 
-.container button {
+.container > button {
   margin-top: $spacing-03;
 }

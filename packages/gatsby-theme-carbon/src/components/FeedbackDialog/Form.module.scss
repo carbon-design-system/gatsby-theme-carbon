@@ -1,14 +1,19 @@
+.dialog {
+  box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
+  width: 320px;
+}
+
 .form-container {
   padding: $spacing-05;
+  padding-bottom: $spacing-08;
   background-color: var(--cds-ui-background);
   color: var(--cds-text-02);
-  width: 320px;
+  width: 100%;
 }
 
 .form-container h2 {
   @include carbon--type-style('productive-heading-01');
   padding-bottom: $spacing-03;
-  margin-bottom: $spacing-05;
   border-bottom: 1px solid var(--cds-ui-03);
 }
 
@@ -18,10 +23,23 @@
 }
 
 .form-container legend {
-  margin-bottom: $spacing-03;
+  margin-top: $spacing-05;
 }
 
 .form-container form {
   display: flex;
   flex-direction: column;
+}
+
+.buttonRow {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 4rem;
+}
+
+.buttonRow button {
+  // width: 50%;
+  flex-grow: 1;
+  align-items: flex-start;
 }

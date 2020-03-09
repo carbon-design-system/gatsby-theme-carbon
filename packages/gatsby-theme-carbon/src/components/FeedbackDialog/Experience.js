@@ -24,7 +24,7 @@ const Experience = () => {
 
   return (
     <fieldset onChange={onExperienceChange}>
-      <legend>Rate your experience</legend>
+      <legend>Rate your experience:</legend>
       <div className={styles.experienceContainer}>
         <label
           className={cx(styles.experience, {
@@ -32,7 +32,12 @@ const Experience = () => {
           })}
           htmlFor={NEGATIVE}
         >
-          <input type="radio" id={NEGATIVE} name="feedback-form-experience" />
+          <input
+            type="radio"
+            id={NEGATIVE}
+            name="feedback-form-experience"
+            value="Negative"
+          />
           <span>Negative</span>
           {selected === NEGATIVE ? (
             <FaceDissatisfiedFilled32 />
@@ -47,7 +52,12 @@ const Experience = () => {
           })}
           htmlFor={NEUTRAL}
         >
-          <input type="radio" id={NEUTRAL} name="feedback-form-experience" />
+          <input
+            type="radio"
+            id={NEUTRAL}
+            name="feedback-form-experience"
+            value="Neutral"
+          />
           <span>Neutral</span>
           {selected === NEUTRAL ? <FaceNeutralFilled32 /> : <FaceNeutral32 />}
         </label>
@@ -58,7 +68,12 @@ const Experience = () => {
           })}
           htmlFor={POSITIVE}
         >
-          <input type="radio" id={POSITIVE} name="feedback-form-experience" />
+          <input
+            type="radio"
+            id={POSITIVE}
+            name="feedback-form-experience"
+            value="Positive"
+          />
           <span>Positive</span>
           {selected === POSITIVE ? (
             <FaceSatisfiedFilled32 />

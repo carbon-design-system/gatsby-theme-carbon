@@ -3,10 +3,10 @@ import LaunchButton from './LaunchButton';
 import Form from './Form';
 
 const FeedbackDialog = () => {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
   return (
     <>
-      <Form hidden={!visible} />
+      <Form setVisible={setVisible} hidden={!visible} />
       <LaunchButton onClick={() => setVisible(!visible)} />
     </>
   );

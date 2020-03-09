@@ -1,0 +1,16 @@
+.commentContainer {
+  margin-top: $spacing-05;
+}
+
+.commentContainer textarea {
+  @include carbon--type-style('body-long-01');
+  resize: none;
+  scrollbar-width: thin;
+  margin-top: $spacing-03;
+  width: 100%;
+  padding: $spacing-03;
+  border: none;
+  color: var(--cds-text-01);
+  background: var(--cds-ui-01);
+  max-height: 116px;
+}
