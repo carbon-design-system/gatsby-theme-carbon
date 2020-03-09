@@ -1,16 +1,31 @@
 .commentContainer {
   margin-top: $spacing-05;
+  position: relative;
 }
 
 .commentContainer textarea {
   @include carbon--type-style('body-long-01');
   resize: none;
-  scrollbar-width: thin;
   margin-top: $spacing-03;
+  margin-bottom: 0;
   width: 100%;
   padding: $spacing-03;
   border: none;
   color: var(--cds-text-01);
   background: var(--cds-ui-01);
-  max-height: 116px;
+}
+
+.commentContainer .fadeout {
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  transition: opacity $duration--fast-02 motion(standard, productive);
+  opacity: 0;
+  width: calc(100% - 1rem);
+  background: linear-gradient(transparent, var(--cds-ui-01));
+  height: 3rem;
+}
+
+.commentContainer textarea:not(:focus) + .fadeout {
+  opacity: 1;
 }
