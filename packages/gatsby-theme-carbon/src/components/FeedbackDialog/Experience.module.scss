@@ -1,0 +1,52 @@
+.experience-container {
+  display: flex;
+  background: var(--cds-ui-01);
+}
+
+.experience {
+  display: flex;
+  transition: all $duration--fast-02 motion(standard, productive);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 96px;
+  width: 100%;
+  border-right: 1px solid var(--cds-ui-background);
+
+  &:last-of-type {
+    border-right: none;
+  }
+}
+
+.experience svg {
+  fill: var(--cds-icon-02);
+}
+
+.experience span {
+  position: absolute;
+  top: $spacing-03;
+  left: $spacing-03;
+}
+
+.experience input {
+  position: absolute;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  appearance: none;
+  margin: 0;
+}
+
+.selected {
+  outline: 1px solid var(--cds-ui-05);
+}
+
+.selected svg,
+.experience:hover svg {
+  fill: var(--cds-icon-01);
+}
+
+.selected,
+.experience:hover {
+  color: var(--cds-icon-01);
+}

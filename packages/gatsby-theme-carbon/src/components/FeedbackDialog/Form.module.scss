@@ -1,0 +1,27 @@
+.form-container {
+  padding: $spacing-05;
+  background-color: var(--cds-ui-background);
+  color: var(--cds-text-02);
+  width: 320px;
+}
+
+.form-container h2 {
+  @include carbon--type-style('productive-heading-01');
+  padding-bottom: $spacing-03;
+  margin-bottom: $spacing-05;
+  border-bottom: 1px solid var(--cds-ui-03);
+}
+
+.form-container label,
+.form-container legend {
+  @include carbon--type-style('label-01');
+}
+
+.form-container legend {
+  margin-bottom: $spacing-03;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}

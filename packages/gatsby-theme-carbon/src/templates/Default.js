@@ -2,7 +2,7 @@ import React from 'react';
 import slugify from 'slugify';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import BackToTopBtn from '../components/BackToTopBtn';
+import Utils from '../components/Utils';
 import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
 import EditLink from '../components/EditLink';
@@ -64,7 +64,7 @@ const Default = ({ pageContext, children, location, Title }) => {
         tabs={tabs}
         currentTab={currentTab}
       />
-      <BackToTopBtn />
+      <Utils />
     </Layout>
   );
 };
