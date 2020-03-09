@@ -33,9 +33,6 @@ const Form = ({ visible, setVisible, launchButtonRef }) => {
     if (visible && experienceRef.current) {
       experienceRef.current.focus();
     }
-    if (!visible && launchButtonRef.current) {
-      launchButtonRef.current.focus();
-    }
   }, [visible]);
 
   return (
