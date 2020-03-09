@@ -14,5 +14,9 @@
 }
 
 .container > button {
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
   margin-top: $spacing-03;
 }

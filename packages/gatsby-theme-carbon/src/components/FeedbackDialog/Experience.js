@@ -15,8 +15,8 @@ const NEGATIVE = 'feedback-form-negative';
 const NEUTRAL = 'feedback-form-neutral';
 const POSITIVE = 'feedback-form-positive';
 
-const Experience = () => {
-  const [selected, setSelected] = useState();
+const Experience = React.forwardRef(function Experience(props, ref) {
+  const [selected, setSelected] = useState(NEUTRAL);
 
   const onExperienceChange = e => {
     setSelected(e.target.id);
@@ -33,8 +33,10 @@ const Experience = () => {
           htmlFor={NEGATIVE}
         >
           <input
+            ref={selected === NEGATIVE ? ref : undefined}
             type="radio"
             id={NEGATIVE}
+            checked={selected === NEGATIVE}
             name="feedback-form-experience"
             value="Negative"
           />
@@ -53,8 +55,10 @@ const Experience = () => {
           htmlFor={NEUTRAL}
         >
           <input
+            ref={selected === NEUTRAL ? ref : undefined}
             type="radio"
             id={NEUTRAL}
+            checked={selected === NEUTRAL}
             name="feedback-form-experience"
             value="Neutral"
           />
@@ -69,8 +73,10 @@ const Experience = () => {
           htmlFor={POSITIVE}
         >
           <input
+            ref={selected === POSITIVE ? ref : undefined}
             type="radio"
             id={POSITIVE}
+            checked={selected === POSITIVE}
             name="feedback-form-experience"
             value="Positive"
           />
@@ -84,6 +90,6 @@ const Experience = () => {
       </div>
     </fieldset>
   );
-};
+});
 
 export default Experience;
