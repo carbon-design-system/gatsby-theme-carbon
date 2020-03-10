@@ -22,7 +22,7 @@
   @include carbon--type-style('label-01');
 }
 
-.form-container fieldset {
+.form-container form > * {
   margin-top: $spacing-05;
 }
 
@@ -42,4 +42,6 @@
   padding-top: 1rem;
   padding-bottom: 2rem;
   flex-grow: 1;
+  line-height: 1;
+  border-width: 2px;
 }

@@ -1,31 +1,18 @@
-.commentContainer {
-  margin-top: $spacing-05;
+.container {
   position: relative;
 }
 
-.commentContainer textarea {
-  @include carbon--type-style('body-long-01');
-  resize: none;
-  margin-top: $spacing-03;
-  margin-bottom: 0;
-  width: 100%;
-  padding: $spacing-03;
-  border: none;
-  color: var(--cds-text-01);
-  background: var(--cds-ui-01);
-}
-
-.commentContainer .fadeout {
+.fadeout {
   pointer-events: none;
   position: absolute;
-  bottom: 0;
+  bottom: $spacing-03;
   transition: opacity $duration--fast-02 motion(standard, productive);
-  opacity: 0;
+  opacity: 1;
   width: calc(100% - 1rem);
   background: linear-gradient(transparent, var(--cds-ui-01));
   height: 3rem;
 }
 
-.commentContainer textarea:not(:focus) + .fadeout {
-  opacity: 1;
+.container:focus-within .fadeout {
+  opacity: 0;
 }

@@ -22,11 +22,11 @@ const Form = ({ visible, setVisible, launchButtonRef }) => {
 
   const onSubmit = () => {
     const form = new FormData(formRef.current);
-    const data = {
-      experience: form.get('feedback-form-experience'),
-      comment: form.get('feedback-form-comment'),
-      path: window.location.href,
-    };
+    // const data = {
+    //   experience: form.get('feedback-form-experience'),
+    //   comment: form.get('feedback-form-comment'),
+    //   path: window.location.href,
+    // };
 
     // fetch('http://localhost:34567/.netlify/functions/survey', {
     //   method: 'POST',
