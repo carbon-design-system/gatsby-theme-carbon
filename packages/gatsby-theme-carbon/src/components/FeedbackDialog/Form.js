@@ -21,11 +21,22 @@ const Form = ({ visible, setVisible, launchButtonRef }) => {
   });
 
   const onSubmit = () => {
-    const data = new FormData(formRef.current);
+    const form = new FormData(formRef.current);
+    const data = {
+      experience: form.get('feedback-form-experience'),
+      comment: form.get('feedback-form-comment'),
+      path: window.location.href,
+    };
+
+    // fetch('http://localhost:34567/.netlify/functions/survey', {
+    //   method: 'POST',
+    //   body: JSON.stringify(data),
+    // });
+
     alert(`
-    experience: ${data.get('feedback-form-experience')}
-    comment: ${data.get('feedback-form-comment')}
-    path: ${window.location}
+    experience: ${form.get('feedback-form-experience')}
+    comment: ${form.get('feedback-form-comment')}
+    path: ${window.location.href}
     `);
   };
 
@@ -49,10 +60,16 @@ const Form = ({ visible, setVisible, launchButtonRef }) => {
         </form>
       </div>
       <div className={styles.buttonRow}>
-        <Button onClick={() => setVisible(false)} kind="secondary">
+        <Button
+          className={styles.button}
+          onClick={() => setVisible(false)}
+          kind="secondary"
+        >
           Cancel
         </Button>
-        <Button onClick={onSubmit}>Submit</Button>
+        <Button className={styles.button} onClick={onSubmit}>
+          Submit
+        </Button>
       </div>
     </div>
   );
