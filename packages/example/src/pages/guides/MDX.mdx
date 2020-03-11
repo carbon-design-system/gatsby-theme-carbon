@@ -20,13 +20,17 @@ layout.
 ## Frontmatter
 
 You can declare frontmatter in your `.mdx` files to provide specific metadata for the theme to use.
-The most important of which is the `title`. You can also provide a description and keywords which will be added to the `head` of your document.
+- `title`: Main page title: search results and SEO
+- `description`: SEO and search results
+- `keywords`: just SEO (optional)
+- `hiddenFromSearch`: if true, page will be excluded from search
 
 ```md
 ---
 title: Markdown
 description: Usage instructions for the Markdown component
 keywords: 'ibm,carbon,gatsby,mdx,markdown'
+hiddenFromSearch: true
 ---
 ```
 
