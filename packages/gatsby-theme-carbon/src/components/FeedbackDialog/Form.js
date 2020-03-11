@@ -59,7 +59,7 @@ const Form = ({ visible, setVisible, launchButtonRef }) => {
       unmountOnExit
       onEnter={() => experienceRef.current.focus()}
       onExited={() => launchButtonRef.current.focus()}
-      timeout={240}
+      timeout={110}
     >
       <div ref={wrapperRef} className={styles.dialog}>
         <div
