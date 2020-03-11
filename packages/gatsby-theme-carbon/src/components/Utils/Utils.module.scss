@@ -3,7 +3,10 @@
     $theme: $carbon--theme--g90,
     $emit-custom-properties: true
   );
-
+  transition: opacity $duration--fast-02 motion(standard, productive),
+    visibility $duration--fast-02;
+  opacity: 1;
+  visibility: visible;
   position: fixed;
   bottom: $spacing-09;
   right: $spacing-07;
@@ -19,4 +22,11 @@
   }
 
   margin-top: $spacing-03;
+}
+
+.container.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $duration--fast-02 motion(standard, productive),
+    visibility $duration--fast-02;
 }

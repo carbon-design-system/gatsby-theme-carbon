@@ -10,6 +10,7 @@ const LaunchButton = React.forwardRef(function LaunchButton({ onClick }, ref) {
       aria-haspopup
       className={styles.button}
       onClick={onClick}
+      aria-label="This launches a modal form to give website feedback."
     >
       <ChatBot20 />
     </button>
