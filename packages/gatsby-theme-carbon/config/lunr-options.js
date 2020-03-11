@@ -2,7 +2,11 @@ module.exports = {
   languages: [
     {
       name: 'en',
-      filterNodes: node => node.context && node.context.MdxNode,
+      filterNodes: node =>
+        // Lunr let's you filter non-mdx nodes. We only want to filter MDX nodes that aren't hiddenFromSearch
+        node.context &&
+        node.context.MdxNode &&
+        !node.context.frontmatter.hiddenFromSearch,
     },
   ],
   fields: [

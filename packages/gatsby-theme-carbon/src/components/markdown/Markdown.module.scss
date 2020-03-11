@@ -67,6 +67,10 @@
   --space: 0;
 }
 
+:global(.bx--list--ordered:not(.bx--list--nested)) {
+  margin-left: 1ch;
+}
+
 // responsive items in a list need to be full width
 .list-item .paragraph,
 .list-item :global(.bx--row) {
