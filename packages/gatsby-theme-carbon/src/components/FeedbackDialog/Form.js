@@ -1,5 +1,6 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Button } from 'carbon-components-react';
+import { CSSTransition } from 'react-transition-group';
 
 import { useOnClickOutside } from '../../util/hooks';
 
@@ -7,6 +8,17 @@ import Experience from './Experience';
 import Comment from './Comment';
 
 import styles from './Form.module.scss';
+
+const { enter, enterActive, enterDone, exit, exitActive, exitDone } = styles;
+
+const classNames = {
+  enter,
+  enterActive,
+  enterDone,
+  exit,
+  exitActive,
+  exitDone,
+};
 
 const Form = ({ visible, setVisible, launchButtonRef }) => {
   const formRef = useRef();
@@ -40,38 +52,41 @@ const Form = ({ visible, setVisible, launchButtonRef }) => {
     `);
   };
 
-  useEffect(() => {
-    if (visible && experienceRef.current) {
-      experienceRef.current.focus();
-    }
-  }, [visible]);
-
   return (
-    <div ref={wrapperRef} className={styles.dialog} hidden={!visible}>
-      <div
-        className={styles.formContainer}
-        role="dialog"
-        aria-labelledby="feedback-dialog-label"
-      >
-        <h2 id="feedback-dialog-label">Was this page helpful to you?</h2>
-        <form ref={formRef}>
-          <Experience ref={experienceRef} />
-          <Comment />
-        </form>
-      </div>
-      <div className={styles.buttonRow}>
-        <Button
-          className={styles.button}
-          onClick={() => setVisible(false)}
-          kind="secondary"
+    <CSSTransition
+      in={visible}
+      classNames={classNames}
+      unmountOnExit
+      onEnter={() => experienceRef.current.focus()}
+      onExited={() => launchButtonRef.current.focus()}
+      timeout={240}
+    >
+      <div ref={wrapperRef} className={styles.dialog}>
+        <div
+          className={styles.formContainer}
+          role="dialog"
+          aria-labelledby="feedback-dialog-label"
         >
-          Cancel
-        </Button>
-        <Button className={styles.button} onClick={onSubmit}>
-          Submit
-        </Button>
+          <h2 id="feedback-dialog-label">Was this page helpful to you?</h2>
+          <form ref={formRef}>
+            <Experience ref={experienceRef} />
+            <Comment />
+          </form>
+        </div>
+        <div className={styles.buttonRow}>
+          <Button
+            className={styles.button}
+            onClick={() => setVisible(false)}
+            kind="secondary"
+          >
+            Cancel
+          </Button>
+          <Button className={styles.button} onClick={onSubmit}>
+            Submit
+          </Button>
+        </div>
       </div>
-    </div>
+    </CSSTransition>
   );
 };
 
