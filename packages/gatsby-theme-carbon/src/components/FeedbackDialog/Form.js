@@ -40,12 +40,13 @@ const Form = ({ visible, setVisible, launchButtonRef }) => {
       path: window.location.href,
     };
 
-    fetch('https://carbon-website.netlify.com/.netlify/functions/survey', {
-      method: 'POST',
-      mode: 'no-cors',
-      credentials: 'include',
-      body: JSON.stringify(data),
-    });
+    // fetch('https://carbon-website.netlify.com/.netlify/functions/survey', {
+    //   method: 'POST',
+    //   mode: 'no-cors',
+    //   credentials: 'include',
+    //   body: JSON.stringify(data),
+    // });
+    console.log(data);
 
     setVisible(false);
   };

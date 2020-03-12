@@ -2,7 +2,16 @@
   position: relative;
 }
 
+.textarea {
+  @include carbon--type-style('body-short-02');
+  @include carbon--breakpoint('md') {
+    @include carbon--type-style('body-short-01');
+  }
+}
+
 .fadeout {
+  // safari hate's zambonis
+  display: none;
   pointer-events: none;
   position: absolute;
   bottom: $spacing-03;
@@ -11,8 +20,11 @@
   width: calc(100% - 1rem);
   background: linear-gradient(transparent, var(--cds-ui-01));
   height: 3rem;
+  @include carbon--breakpoint('lg') {
+    display: block;
+  }
 }
 
-.container:focus-within .fadeout {
+.focused {
   opacity: 0;
 }
