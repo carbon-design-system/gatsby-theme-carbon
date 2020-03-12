@@ -15,6 +15,7 @@ const FeedbackDialog = () => {
       />
       <LaunchButton
         ref={launchButtonRef}
+        visible={visible}
         onClick={() => setVisible(!visible)}
       />
     </>

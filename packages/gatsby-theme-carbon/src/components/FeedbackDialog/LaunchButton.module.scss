@@ -3,7 +3,7 @@
   height: $spacing-09;
   border-radius: 50%;
   border-color: transparent;
-  background: var(--cds-ui-background);
+  background: var(--cds-ui-03);
   transition: all $transition--base;
 
   cursor: pointer;
@@ -12,7 +12,7 @@
 }
 
 .button:hover {
-  background: #4c4c4c; // g90 hover ui
+  background: var(--cds-active-01); // g90 hover ui
   border-color: transparent;
 }
 
