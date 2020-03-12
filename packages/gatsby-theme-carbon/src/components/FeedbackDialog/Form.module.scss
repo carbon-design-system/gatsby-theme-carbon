@@ -9,7 +9,7 @@
   transition-property: opacity, transform;
   transition-duration: $duration--moderate-02;
   @include carbon--breakpoint('md') {
-    transition-duration: $duration--moderate-01;
+    transition-duration: $duration--fast-02;
   }
 }
 
