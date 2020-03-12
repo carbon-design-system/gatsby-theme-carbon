@@ -40,12 +40,13 @@ const Form = ({ visible, setVisible, launchButtonRef }) => {
       path: window.location.href,
     };
 
-    // fetch('https://carbon-website.netlify.com/.netlify/functions/survey', {
+    // fetch('URL', {
     //   method: 'POST',
     //   mode: 'no-cors',
     //   credentials: 'include',
     //   body: JSON.stringify(data),
     // });
+
     console.log(data);
 
     setVisible(false);
@@ -58,7 +59,9 @@ const Form = ({ visible, setVisible, launchButtonRef }) => {
       unmountOnExit
       onEnter={() => experienceRef.current.focus()}
       onExited={() => launchButtonRef.current.focus()}
-      timeout={110}
+      addEndListener={(node, done) => {
+        node.addEventListener('transitionend', done, false);
+      }}
     >
       <div ref={wrapperRef} className={styles.dialog}>
         <div

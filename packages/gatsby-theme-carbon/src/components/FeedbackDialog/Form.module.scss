@@ -2,26 +2,33 @@
   box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
   width: 320px;
   transform-origin: 100% bottom;
-}
-
-.exitActive {
-  animation: comeIn $duration--fast-02 motion(exit, productive);
-  animation-direction: reverse;
-}
-
-.enterActive {
-  animation: comeIn $duration--fast-02 motion(entrance, productive);
-}
-
-@keyframes comeIn {
-  0% {
-    transform: translate3d(6px, 6px, 0px) scale(0.9);
-    opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: $duration--moderate-02;
+  @include carbon--breakpoint('md') {
+    transition-duration: $duration--moderate-01;
   }
-  100% {
-    transform: translate3d(0px, 0px, 0px) scale(1);
-    opacity: 1;
-  }
+}
+
+.enter {
+  opacity: 0.01;
+  transform: scale(0.8);
+  transition-timing-function: motion(entrance, productive);
+}
+
+.enter.enterActive {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.exit {
+  opacity: 1;
+  transform: scale(1);
+  transition-timing-function: motion(entrance, productive);
+}
+
+.exit.exitActive {
+  opacity: 0.01;
+  transform: scale(0.8);
 }
 
 .form-container {
