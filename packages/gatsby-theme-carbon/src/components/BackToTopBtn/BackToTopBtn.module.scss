@@ -4,7 +4,10 @@
   border-radius: 50%;
   background: $carbon--gray-30;
   border-color: transparent;
-  transition: all $transition--base;
+  position: fixed;
+  bottom: $spacing-09;
+  right: $spacing-07;
+  transition: all $duration--fast-02;
 
   cursor: pointer;
   z-index: 9999;

@@ -7,13 +7,6 @@
     visibility $duration--fast-02;
   opacity: 1;
   visibility: visible;
-  position: fixed;
-  bottom: $spacing-09;
-  right: $spacing-07;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  z-index: z('floating');
 }
 
 .container > button {

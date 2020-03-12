@@ -1,6 +1,10 @@
 .dialog {
   box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
   width: 320px;
+  position: fixed;
+  right: 2rem;
+  bottom: 10rem;
+  z-index: z('floating');
   transform-origin: 100% bottom;
   transition-property: opacity, transform;
   transition-duration: $duration--moderate-02;

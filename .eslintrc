@@ -4,7 +4,7 @@
     "react/prop-types": 0,
     "react/destructuring-assignment": 0,
     "react/no-access-state-in-setstate": 0,
-    "react/jsx-props-no-spreading": 1,
+    "react/jsx-props-no-spreading": 0,
     "no-useless-escape": 0,
     "arrow-body-style": 0
   }

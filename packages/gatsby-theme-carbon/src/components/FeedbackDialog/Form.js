@@ -20,7 +20,12 @@ const classNames = {
   exitDone,
 };
 
-const Form = ({ visible, setVisible, launchButtonRef }) => {
+const Form = ({
+  visible,
+  setVisible,
+  launchButtonRef,
+  onSubmit: submitHandler,
+}) => {
   const formRef = useRef();
   const wrapperRef = useRef();
   const experienceRef = useRef();
@@ -40,14 +45,9 @@ const Form = ({ visible, setVisible, launchButtonRef }) => {
       path: window.location.href,
     };
 
-    // fetch('URL', {
-    //   method: 'POST',
-    //   mode: 'no-cors',
-    //   credentials: 'include',
-    //   body: JSON.stringify(data),
-    // });
-
-    console.log(data);
+    if (submitHandler) {
+      submitHandler(data);
+    }
 
     setVisible(false);
   };

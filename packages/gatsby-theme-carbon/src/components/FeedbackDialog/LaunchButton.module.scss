@@ -4,11 +4,15 @@
   border-radius: 50%;
   border-color: transparent;
   background: var(--cds-ui-03);
-  transition: all $transition--base;
+  transition: all $duration--fast-02;
+  z-index: z('floating');
+  padding-top: 0.325rem;
 
   cursor: pointer;
-  z-index: 9999;
-  padding-top: 0.325rem;
+
+  position: fixed;
+  bottom: calc(6rem + 8px);
+  right: $spacing-07;
 }
 
 .button:hover {
