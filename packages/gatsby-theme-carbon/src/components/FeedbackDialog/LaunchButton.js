@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { FaceWink20, FaceWinkFilled20 } from '@carbon/icons-react';
 import styles from './LaunchButton.module.scss';
 
 const LaunchButton = React.forwardRef(function LaunchButton(
-  { onClick, visible },
+  { onClick, icon: Icon, filledIcon: FilledIcon },
   ref
 ) {
   const [hovering, setHovering] = useState(false);
@@ -21,7 +20,7 @@ const LaunchButton = React.forwardRef(function LaunchButton(
       onClick={onClick}
       aria-label="This launches a modal form to give website feedback."
     >
-      {hovering ? <FaceWinkFilled20 /> : <FaceWink20 />}
+      {hovering ? <FilledIcon /> : <Icon />}
     </button>
   );
 });

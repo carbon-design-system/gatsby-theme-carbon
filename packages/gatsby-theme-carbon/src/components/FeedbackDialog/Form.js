@@ -29,6 +29,7 @@ const Form = ({
   const formRef = useRef();
   const wrapperRef = useRef();
   const experienceRef = useRef();
+  const previouslyFocusedElement = useRef();
 
   useOnClickOutside(wrapperRef, e => {
     // let button determine visibility
@@ -57,8 +58,14 @@ const Form = ({
       in={visible}
       classNames={classNames}
       unmountOnExit
-      onEnter={() => experienceRef.current.focus()}
-      onExited={() => launchButtonRef.current.focus()}
+      mountOnEnter
+      onEnter={() => {
+        previouslyFocusedElement.current = document.activeElement;
+        experienceRef.current.focus();
+      }}
+      onExited={() => {
+        previouslyFocusedElement.current.focus();
+      }}
       addEndListener={(node, done) => {
         node.addEventListener('transitionend', done, false);
       }}
