@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { FaceWink20, FaceWinkFilled20 } from '@carbon/icons-react';
 
 import LaunchButton from './LaunchButton';

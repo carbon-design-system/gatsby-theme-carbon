@@ -11,7 +11,7 @@ const Checkmark = () => {
         fill="white"
         stroke="#0f62fe"
         strokeMiterlimit="10"
-        strokeWidth="2.1"
+        strokeWidth="2.5"
       />
     </svg>
   );
