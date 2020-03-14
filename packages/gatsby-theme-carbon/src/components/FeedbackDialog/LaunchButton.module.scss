@@ -3,7 +3,7 @@
   height: $spacing-09;
   border-radius: 50%;
   border-color: transparent;
-  background: var(--cds-ui-03);
+  background: var(--cds-interactive-02);
   transition: all $duration--fast-02;
   z-index: z('modal');
   padding-top: 0.325rem;
@@ -16,8 +16,11 @@
 }
 
 .button:hover {
-  background: var(--cds-active-01); // g90 hover ui
-  border-color: transparent;
+  background: #606060; // gray-60 hover
+}
+
+.button.selected:hover {
+  background: var(--cds-interactive-02);
 }
 
 .button:focus {
@@ -27,9 +30,5 @@
 }
 
 .button svg {
-  fill: var(--cds-icon-02);
-}
-
-.button:hover svg {
-  fill: var(--cds-icon-01);
+  fill: var(--cds-icon-03);
 }
