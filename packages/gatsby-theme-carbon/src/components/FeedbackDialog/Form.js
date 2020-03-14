@@ -1,8 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button } from 'carbon-components-react';
 import { CSSTransition } from 'react-transition-group';
 
-import { useOnClickOutside } from '../../util/hooks';
+import Checkmark from './Checkmark';
 
 import Experience from './Experience';
 import Comment from './Comment';
@@ -20,23 +20,17 @@ const classNames = {
   exitDone,
 };
 
-const Form = ({
-  visible,
-  setVisible,
-  launchButtonRef,
-  onSubmit: submitHandler,
-}) => {
+const Form = ({ visible, setVisible, onSubmit: submitHandler }) => {
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const formRef = useRef();
-  const wrapperRef = useRef();
   const experienceRef = useRef();
   const previouslyFocusedElement = useRef();
 
-  useOnClickOutside(wrapperRef, e => {
-    // let button determine visibility
-    if (!launchButtonRef.current.contains(e.target)) {
-      setVisible(false);
-    }
-  });
+  const resetForm = () => {
+    setFormSubmitted(false);
+    formRef.current['feedback-form-comment'].value = '';
+    formRef.current['feedback-form-experience'].value = 'Neutral';
+  };
 
   const onSubmit = () => {
     const form = new FormData(formRef.current);
@@ -50,7 +44,12 @@ const Form = ({
       submitHandler(data);
     }
 
-    setVisible(false);
+    setFormSubmitted(true);
+
+    setTimeout(() => {
+      setVisible(false);
+      resetForm();
+    }, 800);
   };
 
   return (
@@ -70,7 +69,7 @@ const Form = ({
         node.addEventListener('transitionend', done, false);
       }}
     >
-      <div ref={wrapperRef} className={styles.dialog}>
+      <div className={styles.dialog}>
         <div
           className={styles.formContainer}
           role="dialog"
@@ -92,6 +91,7 @@ const Form = ({
           </Button>
           <Button className={styles.button} onClick={onSubmit}>
             Submit
+            {formSubmitted && <Checkmark />}
           </Button>
         </div>
       </div>

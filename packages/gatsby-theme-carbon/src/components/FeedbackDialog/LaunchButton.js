@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import styles from './LaunchButton.module.scss';
 
-const LaunchButton = React.forwardRef(function LaunchButton(
-  { onClick, icon: Icon, filledIcon: FilledIcon },
-  ref
-) {
+function LaunchButton({ onClick, icon: Icon, filledIcon: FilledIcon }) {
   const [hovering, setHovering] = useState(false);
 
   // TODO: hover && visible for both background change and inversion effects?
@@ -13,7 +10,6 @@ const LaunchButton = React.forwardRef(function LaunchButton(
     <button
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
-      ref={ref}
       type="button"
       aria-haspopup
       className={styles.button}
@@ -23,6 +19,6 @@ const LaunchButton = React.forwardRef(function LaunchButton(
       {hovering ? <FilledIcon /> : <Icon />}
     </button>
   );
-});
+}
 
 export default LaunchButton;

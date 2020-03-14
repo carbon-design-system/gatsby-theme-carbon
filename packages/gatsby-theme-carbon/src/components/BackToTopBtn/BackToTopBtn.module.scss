@@ -10,7 +10,7 @@
   transition: all $duration--fast-02;
 
   cursor: pointer;
-  z-index: 9999;
+  z-index: z('modal');
   padding-top: 0.325rem;
 }
 

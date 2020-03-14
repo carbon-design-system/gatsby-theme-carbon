@@ -7,18 +7,11 @@ import Form from './Form';
 
 const FeedbackDialog = ({ onSubmit }) => {
   const [visible, setVisible] = useState(false);
-  const launchButtonRef = useRef();
 
   return onSubmit ? (
     <>
-      <Form
-        onSubmit={onSubmit}
-        launchButtonRef={launchButtonRef}
-        setVisible={setVisible}
-        visible={visible}
-      />
+      <Form onSubmit={onSubmit} setVisible={setVisible} visible={visible} />
       <LaunchButton
-        ref={launchButtonRef}
         visible={visible}
         icon={FaceWink20}
         filledIcon={FaceWinkFilled20}

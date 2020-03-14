@@ -1,14 +1,17 @@
 .dialog {
   box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
-  width: 320px;
   position: fixed;
-  right: 2rem;
-  bottom: 10rem;
+  bottom: 0px;
+  width: 100vw;
   z-index: z('floating');
-  transform-origin: 100% bottom;
+  transform-origin: 100% 50%;
   transition-property: opacity, transform;
   transition-duration: $duration--moderate-02;
   @include carbon--breakpoint('md') {
+    transform-origin: 100% bottom;
+    width: 320px;
+    right: 2rem;
+    bottom: 10rem;
     transition-duration: $duration--fast-02;
   }
 }
@@ -71,6 +74,7 @@
 
 .button {
   height: 4rem;
+  position: relative;
   padding-top: 1rem;
   padding-bottom: 2rem;
   flex-grow: 1;
