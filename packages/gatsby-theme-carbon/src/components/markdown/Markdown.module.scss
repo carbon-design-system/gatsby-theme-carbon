@@ -46,10 +46,10 @@
 .h5,
 .h6,
 .list {
-  width: 100%;
   padding-right: $spacing-05;
 
   @include carbon--breakpoint('md') {
+    width: 100%;
     padding-right: $spacing-07;
   }
 

@@ -1,0 +1,25 @@
+.container {
+  @include carbon--theme(
+    $theme: $carbon--theme--g90,
+    $emit-custom-properties: true
+  );
+  transition-duration: $duration--fast-02;
+  transition-timing-function: motion(standard, productive);
+  transition-property: opacity;
+  opacity: 1;
+  visibility: visible;
+}
+
+.container > button {
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  margin-top: $spacing-03;
+}
+
+.container.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility;
+}

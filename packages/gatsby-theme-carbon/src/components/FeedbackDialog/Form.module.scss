@@ -1,0 +1,83 @@
+.dialog {
+  box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  z-index: z('floating');
+  transform-origin: 100% 50%;
+  transition-property: opacity, transform;
+  transition-duration: $duration--moderate-02;
+  @include carbon--breakpoint('md') {
+    transform-origin: 100% bottom;
+    width: 320px;
+    right: 2rem;
+    bottom: 10rem;
+    transition-duration: $duration--fast-02;
+  }
+}
+
+.enter {
+  opacity: 0.01;
+  transform: scale(0.8);
+  transition-timing-function: motion(entrance, productive);
+}
+
+.enter.enterActive {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.exit {
+  opacity: 1;
+  transform: scale(1);
+  transition-timing-function: motion(entrance, productive);
+}
+
+.exit.exitActive {
+  opacity: 0.01;
+  transform: scale(0.8);
+}
+
+.form-container {
+  padding: $spacing-05;
+  padding-bottom: $spacing-08;
+  background-color: var(--cds-ui-background);
+  color: var(--cds-text-02);
+  width: 100%;
+}
+
+.form-container h2 {
+  @include carbon--type-style('productive-heading-01');
+  padding-bottom: $spacing-03;
+  border-bottom: 1px solid var(--cds-ui-03);
+}
+
+.form-container label,
+.form-container legend {
+  @include carbon--type-style('label-01');
+}
+
+.form-container form > * {
+  margin-top: $spacing-05;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonRow {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.button {
+  height: 4rem;
+  position: relative;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  width: 50%;
+  line-height: 1;
+  border-width: 2px;
+}
