@@ -135,7 +135,7 @@ module.exports = themeOptions => {
           display: 'browser',
           icon: iconPath
             ? path.resolve(iconPath)
-            : require.resolve('./src/images/favicon.png'),
+            : require.resolve('./src/images/favicon.svg'),
         },
       },
       `gatsby-plugin-react-helmet`,
