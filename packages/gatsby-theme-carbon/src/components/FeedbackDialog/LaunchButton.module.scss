@@ -16,7 +16,7 @@
 }
 
 .button:hover {
-  background: $carbon--black-100; // gray-60 hover
+  background: var(--cds-inverse-01); // gray-60 hover
 }
 
 .button.selected:hover {

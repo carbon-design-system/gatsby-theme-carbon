@@ -15,7 +15,7 @@
 }
 
 .button:hover {
-  background: $carbon--gray-90;
+  background: var(--cds-inverse-01);
   border-color: transparent;
 }
 
