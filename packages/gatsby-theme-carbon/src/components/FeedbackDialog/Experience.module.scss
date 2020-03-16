@@ -44,6 +44,7 @@
   margin: 0;
   &:checked {
     outline: 1px solid var(--cds-ui-05);
+    z-index: 1;
   }
   &:focus {
     outline: 2px solid var(--cds-ui-05);

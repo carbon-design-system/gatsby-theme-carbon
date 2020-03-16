@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Button } from 'carbon-components-react';
 import { CSSTransition } from 'react-transition-group';
 
@@ -50,6 +50,18 @@ const Form = ({ visible, setVisible, onSubmit: submitHandler }) => {
       setVisible(false);
     }, 1200);
   };
+
+  useEffect(() => {
+    const onKeyDown = e => {
+      if (e.code === 'Escape') {
+        setVisible(false);
+      }
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [setVisible]);
 
   return (
     <CSSTransition
