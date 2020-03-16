@@ -14,6 +14,11 @@
   max-width: 74.25rem;
 }
 
+.row code {
+  font-size: 0.75em;
+  line-height: 1.25;
+}
+
 .firstColumn {
   @include carbon--type-style('expressive-heading-03', true);
   margin-bottom: $spacing-07;
