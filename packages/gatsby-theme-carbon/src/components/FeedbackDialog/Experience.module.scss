@@ -17,6 +17,10 @@
   &:last-of-type {
     border-right: none;
   }
+
+  &:hover {
+    background: var(--cds-hover-ui);
+  }
 }
 
 .experience svg {
