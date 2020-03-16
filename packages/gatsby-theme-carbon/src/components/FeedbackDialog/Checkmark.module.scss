@@ -1,14 +1,14 @@
 .svg {
   position: absolute;
-  right: $spacing-05;
-  top: 13px;
-  padding: 1px;
+  right: 10px;
+  top: 10px;
+  padding: 2px;
 }
 
 .path {
-  stroke-dasharray: 40px;
-  stroke-dashoffset: 40px;
-  animation: drawStroke 1s forwards;
+  stroke-dasharray: 30px;
+  stroke-dashoffset: 30px;
+  animation: drawStroke 1200ms forwards;
 }
 
 @keyframes drawStroke {

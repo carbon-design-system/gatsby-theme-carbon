@@ -48,8 +48,7 @@ const Form = ({ visible, setVisible, onSubmit: submitHandler }) => {
 
     setTimeout(() => {
       setVisible(false);
-      resetForm();
-    }, 800);
+    }, 1200);
   };
 
   return (
@@ -64,6 +63,7 @@ const Form = ({ visible, setVisible, onSubmit: submitHandler }) => {
       }}
       onExited={() => {
         previouslyFocusedElement.current.focus();
+        resetForm();
       }}
       addEndListener={(node, done) => {
         node.addEventListener('transitionend', done, false);
@@ -90,7 +90,7 @@ const Form = ({ visible, setVisible, onSubmit: submitHandler }) => {
             Cancel
           </Button>
           <Button className={styles.button} onClick={onSubmit}>
-            Submit
+            {formSubmitted ? 'Thanks!' : 'Submit'}
             {formSubmitted && <Checkmark />}
           </Button>
         </div>

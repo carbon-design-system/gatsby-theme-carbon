@@ -3,7 +3,7 @@ import styles from './Checkmark.module.scss';
 
 const Checkmark = () => {
   return (
-    <svg className={styles.svg} width="16" viewBox="0 0 28 28">
+    <svg className={styles.svg} width="20" viewBox="0 0 28 28">
       <circle r="14" cx="14" cy="14" fill="#fff" />
       <polyline
         className={styles.path}
