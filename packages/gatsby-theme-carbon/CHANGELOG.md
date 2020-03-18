@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.22.0...v1.22.1) (2020-03-18)
+
+
+### Bug Fixes
+
+* change icon name ([#788](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/788)) ([1d09c34](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/1d09c3404730125326b00bac907cb0ddf21afb0c))
+
+
+
+
+
 # [1.22.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.21.2...v1.22.0) (2020-03-18)
 
 
