@@ -5,7 +5,7 @@ import styles from './LaunchButton.module.scss';
 function LaunchButton({
   onClick,
   visible,
-  icon: Icon,
+  icon: RegularIcon,
   filledIcon: FilledIcon,
 }) {
   const classNames = cx(styles.button, {
@@ -20,7 +20,7 @@ function LaunchButton({
       onClick={onClick}
       aria-label="This launches a modal form to give website feedback."
     >
-      {visible ? <FilledIcon /> : <Icon />}
+      {visible ? <FilledIcon /> : <RegularIcon />}
     </button>
   );
 }
