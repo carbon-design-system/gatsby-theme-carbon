@@ -25,7 +25,7 @@
     "lint:js": "eslint . --fix",
     "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
     "prerelease": "lerna publish --canary minor --dist-tag next --no-push --no-git-tag-version --yes",
-    "release": "lerna version --conventional-commits --create-release github --git-remote upstream"
+    "release": "lerna publish --conventional-commits --create-release github --git-remote upstream"
   },
   "eslintIgnore": [
     "**/node_modules/",
