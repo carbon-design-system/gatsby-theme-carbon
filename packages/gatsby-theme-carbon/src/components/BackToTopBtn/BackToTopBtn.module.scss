@@ -7,15 +7,15 @@
   position: fixed;
   bottom: $spacing-09;
   right: $spacing-07;
-  transition: all $transition--base;
+  transition: all $duration--fast-02;
 
   cursor: pointer;
-  z-index: 9999;
+  z-index: z('modal');
   padding-top: 0.325rem;
 }
 
 .button:hover {
-  background: $carbon--gray-90;
+  background: var(--cds-inverse-01);
   border-color: transparent;
 }
 

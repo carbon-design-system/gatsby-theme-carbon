@@ -1,0 +1,18 @@
+.svg {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 2px;
+}
+
+.path {
+  stroke-dasharray: 30px;
+  stroke-dashoffset: 30px;
+  animation: drawStroke 1200ms forwards;
+}
+
+@keyframes drawStroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

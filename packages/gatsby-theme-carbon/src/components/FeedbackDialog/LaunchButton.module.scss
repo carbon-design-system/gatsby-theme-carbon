@@ -1,0 +1,34 @@
+.button {
+  width: $spacing-09;
+  height: $spacing-09;
+  border-radius: 50%;
+  border-color: transparent;
+  background: var(--cds-interactive-02);
+  transition: all $duration--fast-02;
+  z-index: z('modal');
+  padding-top: 0.325rem;
+
+  cursor: pointer;
+
+  position: fixed;
+  bottom: calc(6rem + 8px);
+  right: $spacing-07;
+}
+
+.button:hover {
+  background: var(--cds-inverse-01); // gray-60 hover
+}
+
+.button.selected:hover {
+  background: var(--cds-interactive-02);
+}
+
+.button:focus {
+  outline: none;
+  border: 2px solid var(--cds-inverse-focus-ui);
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+.button svg {
+  fill: var(--cds-icon-03);
+}
