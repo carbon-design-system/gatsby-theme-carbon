@@ -15,10 +15,10 @@
     "serve:prefix": "gatsby serve --prefix-paths",
     "test:prefix": "yarn build:prefix && yarn serve:prefix"
   },
-  "dependencies": {
-    "gatsby": "^2.19.0",
+  "devDependencies": {
+    "gatsby": "^2.20.4",
     "gatsby-theme-carbon": "^1.22.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
