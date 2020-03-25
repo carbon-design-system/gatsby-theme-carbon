@@ -13,19 +13,11 @@ import {
 } from './PageTabs.module.scss';
 
 export default class PageTabs extends React.Component {
-  static propTypes = {
-    tabs: PropTypes.array,
-    slug: PropTypes.string,
-  };
-
   render() {
     const { tabs, slug } = this.props;
-    const currentTab = slug
-      .split('/')
-      .filter(Boolean)
-      .slice(-1)[0];
+    const currentTab = slug.split('/').filter(Boolean).slice(-1)[0];
 
-    const pageTabs = tabs.map(tab => {
+    const pageTabs = tabs.map((tab) => {
       const slugifiedTab = slugify(tab, { lower: true });
       const selected = slugifiedTab === currentTab;
       const currentTabRegex = new RegExp(`${currentTab}(?!-)`);
@@ -54,3 +46,8 @@ export default class PageTabs extends React.Component {
     );
   }
 }
+
+PageTabs.propTypes = {
+  tabs: PropTypes.array,
+  slug: PropTypes.string,
+};

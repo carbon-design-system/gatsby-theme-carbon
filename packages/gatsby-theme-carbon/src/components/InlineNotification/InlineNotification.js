@@ -7,16 +7,6 @@ import { Row, Column } from '../Grid';
 import { notification } from './InlineNotification.module.scss';
 
 export default class InlineNotification extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string,
-    kind: PropTypes.oneOf(['error', 'info', 'success', 'warning']),
-  };
-
-  static defaultProps = {
-    kind: 'info',
-  };
-
   render() {
     const { children, className, kind } = this.props;
 
@@ -39,3 +29,13 @@ export default class InlineNotification extends React.Component {
     );
   }
 }
+
+InlineNotification.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  kind: PropTypes.oneOf(['error', 'info', 'success', 'warning']),
+};
+
+InlineNotification.defaultProps = {
+  kind: 'info',
+};

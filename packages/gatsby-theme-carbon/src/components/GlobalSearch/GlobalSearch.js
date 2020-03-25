@@ -34,7 +34,7 @@ import Menu, { MenuContext } from './Menu';
 
 const MAX_RESULT_LIST_SIZE = 8;
 
-const search = _throttle(queryString => {
+const search = _throttle((queryString) => {
   if (window.__LUNR__) {
     try {
       const lunrIndex = window.__LUNR__.en;
@@ -102,7 +102,7 @@ const GlobalSearchInput = () => {
     };
   }, [query]);
 
-  const onKeyDown = e => {
+  const onKeyDown = (e) => {
     switch (e.key) {
       case 'ArrowDown': {
         e.preventDefault();
@@ -194,7 +194,7 @@ const GlobalSearchInput = () => {
             placeholder="Search"
             value={query}
             onKeyDown={onKeyDown}
-            onChange={evt => setQuery(evt.target.value)}
+            onChange={(evt) => setQuery(evt.target.value)}
           />
           <button
             tabIndex={searchIsOpen ? '0' : '-1'}

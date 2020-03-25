@@ -14,79 +14,6 @@ import { settings } from 'carbon-components';
 const { prefix } = settings;
 
 export default class ImageCard extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
-
-    /**
-     * Set url for card
-     */
-    href: PropTypes.string,
-
-    /**
-     * Smaller heading
-     */
-    subTitle: PropTypes.string,
-
-    /**
-     * Large heading
-     */
-    title: PropTypes.string,
-
-    /**
-     * Action icon, default is launch, options are Launch, ArrowRight, Download, Error
-     */
-    actionIcon: PropTypes.string,
-
-    /**
-     * Set card aspect ratio, default is 1:1, options are 1:1, 16:9, 4:3, 2:1, 1:2
-     */
-    aspectRatio: PropTypes.string,
-
-    /**
-     * Use for disabled card
-     */
-    disabled: PropTypes.bool,
-
-    /**
-     * Specify a custom class
-     */
-    className: PropTypes.string,
-
-    /**
-     * Set title text color, default is light, options are light or dark
-     */
-    titleColor: PropTypes.string,
-
-    /**
-     * Set sub title text color, default is light, options are light or dark
-     */
-    subTitleColor: PropTypes.string,
-
-    /**
-     * Set icon color, default is light, options are light or dark
-     */
-    iconColor: PropTypes.string,
-
-    /**
-     * Set hover to lighten or darken the image, default is light, options are light or dark
-     */
-    hoverColor: PropTypes.string,
-
-    /**
-     * Props to pass through to link component
-     */
-    linkProps: PropTypes.object,
-  };
-
-  static defaultProps = {
-    disabled: false,
-    aspectRatio: '1:1',
-    titleColor: 'light',
-    subTitleColor: 'light',
-    iconColor: 'light',
-    hoverColor: 'light',
-  };
-
   render() {
     const {
       children,
@@ -197,3 +124,76 @@ export default class ImageCard extends React.Component {
     );
   }
 }
+
+ImageCard.propTypes = {
+  children: PropTypes.node,
+
+  /**
+   * Set url for card
+   */
+  href: PropTypes.string,
+
+  /**
+   * Smaller heading
+   */
+  subTitle: PropTypes.string,
+
+  /**
+   * Large heading
+   */
+  title: PropTypes.string,
+
+  /**
+   * Action icon, default is launch, options are Launch, ArrowRight, Download, Error
+   */
+  actionIcon: PropTypes.string,
+
+  /**
+   * Set card aspect ratio, default is 1:1, options are 1:1, 16:9, 4:3, 2:1, 1:2
+   */
+  aspectRatio: PropTypes.string,
+
+  /**
+   * Use for disabled card
+   */
+  disabled: PropTypes.bool,
+
+  /**
+   * Specify a custom class
+   */
+  className: PropTypes.string,
+
+  /**
+   * Set title text color, default is light, options are light or dark
+   */
+  titleColor: PropTypes.string,
+
+  /**
+   * Set sub title text color, default is light, options are light or dark
+   */
+  subTitleColor: PropTypes.string,
+
+  /**
+   * Set icon color, default is light, options are light or dark
+   */
+  iconColor: PropTypes.string,
+
+  /**
+   * Set hover to lighten or darken the image, default is light, options are light or dark
+   */
+  hoverColor: PropTypes.string,
+
+  /**
+   * Props to pass through to link component
+   */
+  linkProps: PropTypes.object,
+};
+
+ImageCard.defaultProps = {
+  disabled: false,
+  aspectRatio: '1:1',
+  titleColor: 'light',
+  subTitleColor: 'light',
+  iconColor: 'light',
+  hoverColor: 'light',
+};

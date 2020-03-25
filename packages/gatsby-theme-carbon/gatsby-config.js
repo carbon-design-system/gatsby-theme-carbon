@@ -2,7 +2,7 @@ const path = require('path');
 const { uiBackground, interactive01 } = require('@carbon/elements');
 const defaultLunrOptions = require('./config/lunr-options');
 
-module.exports = themeOptions => {
+module.exports = (themeOptions) => {
   const repositoryDefault = {
     baseUrl: '',
     subDirectory: '',

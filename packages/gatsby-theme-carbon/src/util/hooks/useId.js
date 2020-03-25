@@ -5,7 +5,7 @@ let globalIndex = 0;
 // eslint-disable-next-line no-plusplus
 const genId = () => ++globalIndex;
 
-export const useId = label => {
+export const useId = (label) => {
   /*
    * If this instance isn't part of the initial render, we don't have to do the
    * double render/patch-up dance. We can just generate the ID and return it.

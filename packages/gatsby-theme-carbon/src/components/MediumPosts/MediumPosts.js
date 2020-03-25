@@ -27,7 +27,7 @@ const MediumPosts = ({ postLimit = 3, cardProps, ...rest }) => {
 
   return (
     <Row {...rest}>
-      {allPosts.slice(0, postLimit).map(latestPost => (
+      {allPosts.slice(0, postLimit).map((latestPost) => (
         <Column
           colSm={4}
           colMd={4}

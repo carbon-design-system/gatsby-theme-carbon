@@ -7,22 +7,6 @@ import { settings } from 'carbon-components';
 const { prefix } = settings;
 
 export default class DoDontExample extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
-    /** title for the caption (optional) */
-    caption: PropTypes.string,
-    /** description for the card caption (optional) */
-    captionTitle: PropTypes.string,
-    /** text displayed in the example card */
-    text: PropTypes.string,
-    /** 1:1 to force square example */
-    aspectRatio: PropTypes.string,
-    /** set to "dark" for dark background card */
-    color: PropTypes.string,
-    /** set to "do" to show green check, otherwise shows pink X */
-    type: PropTypes.string,
-  };
-
   renderCaption = (caption, captionTitle) => {
     if (caption || captionTitle) {
       return (
@@ -85,3 +69,19 @@ export default class DoDontExample extends React.Component {
     );
   }
 }
+
+DoDontExample.propTypes = {
+  children: PropTypes.node,
+  /** title for the caption (optional) */
+  caption: PropTypes.string,
+  /** description for the card caption (optional) */
+  captionTitle: PropTypes.string,
+  /** text displayed in the example card */
+  text: PropTypes.string,
+  /** 1:1 to force square example */
+  aspectRatio: PropTypes.string,
+  /** set to "dark" for dark background card */
+  color: PropTypes.string,
+  /** set to "do" to show green check, otherwise shows pink X */
+  type: PropTypes.string,
+};

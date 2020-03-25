@@ -7,7 +7,7 @@ import styles from './Comment.module.scss';
 
 const Comment = () => {
   const [focused, setFocused] = useState(false);
-  const handleBlur = e => {
+  const handleBlur = (e) => {
     e.target.scrollTop = 0;
     setFocused(false);
   };

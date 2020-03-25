@@ -38,7 +38,7 @@ const Select = ({ children, _id }) => {
         label="tab selection"
         items={items}
         id={_id}
-      ></Dropdown>
+      />
     </div>
   );
 };
@@ -62,9 +62,9 @@ const TabList = ({ children, _id }) => {
 
 export const Tab = ({ _id, label, active, index, tab, children }) => {
   const { setActiveTab, tabList } = useContext(TabContext);
-  const buttonRef = useCallback(ref => tabList.push(ref), [tabList]);
+  const buttonRef = useCallback((ref) => tabList.push(ref), [tabList]);
 
-  const onKeyDown = e => {
+  const onKeyDown = (e) => {
     let nextButton;
     switch (e.which) {
       case 35: // end
@@ -123,7 +123,7 @@ export const Tab = ({ _id, label, active, index, tab, children }) => {
   );
 };
 
-export const Tabs = props => {
+export const Tabs = (props) => {
   const tabList = useRef([]);
   const [activeTab, setActiveTab] = useState(0);
   const isMobile = useMedia({ maxWidth: breakpoints.md.width });

@@ -52,7 +52,7 @@ const Form = ({ visible, setVisible, onSubmit: submitHandler }) => {
   };
 
   useEffect(() => {
-    const onKeyDown = e => {
+    const onKeyDown = (e) => {
       if (e.code === 'Escape') {
         setVisible(false);
       }
