@@ -29,7 +29,9 @@
   },
   "eslintIgnore": [
     "**/node_modules/",
-    "**/public/"
+    "**/public/",
+    "**/.cache/",
+    "**/build/"
   ],
   "devDependencies": {
     "babel-eslint": "^10.1.0",
