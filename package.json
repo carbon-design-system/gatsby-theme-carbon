@@ -61,16 +61,13 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ],
     "*.{css,scss,json,html,yaml}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "*.{css,scss}": [
-      "stylelint --fix",
-      "git add"
+      "stylelint --fix"
     ]
   }
 }
