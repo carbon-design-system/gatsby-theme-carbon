@@ -26,12 +26,12 @@ const Menu = ({ results, onKeyDown }) => {
   });
 
   // Results must at least have a title to show up in the list
-  const filteredResults = results.filter(result => result.title);
+  const filteredResults = results.filter((result) => result.title);
 
   // In the event two pages have the same title, we need to add a tab to distinguish them in the results list
-  const resultsWithTabAdded = filteredResults.map(result => {
+  const resultsWithTabAdded = filteredResults.map((result) => {
     const matchingResults = filteredResults.filter(
-      otherResult => otherResult.title === result.title
+      (otherResult) => otherResult.title === result.title
     );
     if (matchingResults.length > 1) {
       return {

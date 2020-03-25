@@ -33,10 +33,8 @@ const Default = ({ pageContext, children, location, Title }) => {
   const getCurrentTab = () => {
     if (!tabs) return '';
     return (
-      slug
-        .split('/')
-        .filter(Boolean)
-        .slice(-1)[0] || slugify(tabs[0], { lower: true })
+      slug.split('/').filter(Boolean).slice(-1)[0] ||
+      slugify(tabs[0], { lower: true })
     );
   };
 

@@ -10,7 +10,7 @@ import LeftNavResourceLinks from './ResourceLinks';
 import LeftNavWrapper from './LeftNavWrapper';
 import { sideNavDark } from './LeftNav.module.scss';
 
-const LeftNav = props => {
+const LeftNav = (props) => {
   const { leftNavIsOpen } = useContext(NavContext);
 
   const navItems = useNavItems();

@@ -18,7 +18,7 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
 
   const language = classNameProp.replace(/language-/, '');
 
-  const removeTrailingEmptyLine = lines => {
+  const removeTrailingEmptyLine = (lines) => {
     const [lastLine] = lines.splice(-1);
     if (lastLine[0].empty) {
       return lines;
@@ -26,7 +26,7 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
     return [...lines, lastLine];
   };
 
-  const getLines = lines => {
+  const getLines = (lines) => {
     const withoutTrailingEmpty = removeTrailingEmptyLine(lines);
 
     if (withoutTrailingEmpty.length > 9) {

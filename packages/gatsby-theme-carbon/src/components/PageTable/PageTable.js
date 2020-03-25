@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 export default class PageTable extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
-  };
-
   render() {
     const { children } = this.props;
     let gridSize;
@@ -32,3 +28,7 @@ export default class PageTable extends React.Component {
     );
   }
 }
+
+PageTable.propTypes = {
+  children: PropTypes.node,
+};

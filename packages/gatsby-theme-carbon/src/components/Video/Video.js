@@ -54,7 +54,7 @@ const Video = ({ autoPlay, vimeoId, title, src, poster, ...props }) => {
       .then(() => {
         setIsPlaying(true);
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
   }
@@ -76,7 +76,7 @@ const Video = ({ autoPlay, vimeoId, title, src, poster, ...props }) => {
         .then(() => {
           setIsPlaying(true);
         })
-        .catch(error => {
+        .catch((error) => {
           console.log(error);
         });
     }
@@ -118,7 +118,7 @@ Video.propTypes = {
   src: PropTypes.string,
   title: PropTypes.string,
   poster: PropTypes.string,
-  videoSourceValidator: props => {
+  videoSourceValidator: (props) => {
     if (!props.vimeoId && !props.src) {
       return new Error(
         `The Video component requires either a 'vimeoId' Or a 'src' prop`

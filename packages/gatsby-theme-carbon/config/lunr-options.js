@@ -2,7 +2,7 @@ module.exports = {
   languages: [
     {
       name: 'en',
-      filterNodes: node =>
+      filterNodes: (node) =>
         // Lunr let's you filter non-mdx nodes. We only want to filter MDX nodes that aren't hiddenFromSearch
         node.context &&
         node.context.MdxNode &&
@@ -18,11 +18,11 @@ module.exports = {
   ],
   resolvers: {
     SitePage: {
-      path: node => node.path,
-      title: node => node.context.frontmatter.title,
-      description: node => node.context.frontmatter.description,
-      keywords: node => node.context.frontmatter.keywords,
-      content: node => node.context.MdxNode.internal.content,
+      path: (node) => node.path,
+      title: (node) => node.context.frontmatter.title,
+      description: (node) => node.context.frontmatter.description,
+      keywords: (node) => node.context.frontmatter.keywords,
+      content: (node) => node.context.MdxNode.internal.content,
     },
   },
 };

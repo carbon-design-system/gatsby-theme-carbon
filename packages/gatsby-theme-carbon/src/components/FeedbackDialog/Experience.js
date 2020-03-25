@@ -18,7 +18,7 @@ const POSITIVE = 'feedback-form-positive';
 const Experience = React.forwardRef(function Experience(props, ref) {
   const [selected, setSelected] = useState(NEUTRAL);
 
-  const onExperienceChange = e => {
+  const onExperienceChange = (e) => {
     setSelected(e.target.id);
   };
 

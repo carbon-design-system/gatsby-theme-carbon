@@ -2,7 +2,7 @@ import React from 'react';
 import ThemeFeedbackDialog from 'gatsby-theme-carbon/src/components/FeedbackDialog/FeedbackDialog';
 
 const FeedbackDialog = ({ props }) => {
-  const onSubmit = data => {
+  const onSubmit = (data) => {
     console.log({ ...data });
   };
 
