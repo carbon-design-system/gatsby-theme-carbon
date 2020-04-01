@@ -6,7 +6,7 @@
   border-bottom: 1px solid $ui-03;
   scrollbar-width: none;
   overflow-x: auto;
-  @include carbon--breakpoint('md') {
+  @include carbon--breakpoint("md") {
     overflow: visible;
   }
 }
@@ -23,7 +23,7 @@
 }
 
 .tab {
-  @include carbon--type-style('body-short-01');
+  @include carbon--type-style("body-short-01");
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -57,7 +57,7 @@
   }
 }
 
-.tab[aria-selected='true'] {
+.tab[aria-selected="true"] {
   background-color: $ui-05;
   color: $inverse-01;
 }
