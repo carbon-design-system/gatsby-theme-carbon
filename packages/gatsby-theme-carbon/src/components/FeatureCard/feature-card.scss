@@ -3,7 +3,7 @@
 }
 
 .#{$prefix}--feature-card__row {
-  @include carbon--breakpoint('md') {
+  @include carbon--breakpoint("md") {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -12,7 +12,7 @@
     ); //needed to make the row the same width as other rows with the negative margins
   }
 
-  @include carbon--breakpoint('max') {
+  @include carbon--breakpoint("max") {
     width: calc(100% + 1rem);
   }
 }
@@ -45,18 +45,18 @@
 
 // Display image at square aspect ratio only on mobile
 .#{$prefix}--feature-card__img.#{$prefix}--aspect-ratio--1x1 {
-  @include carbon--breakpoint('md') {
+  @include carbon--breakpoint("md") {
     padding-bottom: 0;
   }
 }
 
 .#{$prefix}--feature-card__img .#{$prefix}--aspect-ratio--object {
-  @include carbon--breakpoint('md') {
+  @include carbon--breakpoint("md") {
     position: static;
   }
 }
 
-@include carbon--breakpoint('sm') {
+@include carbon--breakpoint("sm") {
   .#{$prefix}--feature-card .gatsby-resp-image-wrapper {
     position: relative;
     display: block;

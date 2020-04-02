@@ -21,7 +21,7 @@
     "serve": "yarn build && yarn workspace example serve",
     "test:prefix": "yarn workspace example test:prefix",
     "now-build": "yarn workspace example build",
-    "format": "prettier --write \"**/*.{scss,css,js,md}\"",
+    "format": "prettier --write \"**/*.{css,scss,json,html,yaml}\"",
     "lint:js": "eslint . --fix",
     "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
     "prerelease": "lerna publish --canary minor --dist-tag next --no-push --no-git-tag-version --yes",

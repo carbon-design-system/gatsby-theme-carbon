@@ -10,8 +10,8 @@
   border-left: 1px solid $inverse-02;
   transform: translateX(16rem);
   overflow-y: hidden;
-  transition: all $duration--fast-02 carbon--motion('exit');
-  @include carbon--breakpoint('lg') {
+  transition: all $duration--fast-02 carbon--motion("exit");
+  @include carbon--breakpoint("lg") {
     transform: translateX(0);
     max-height: 0;
     height: auto;
@@ -29,10 +29,10 @@
 
 .open {
   transform: translateX(0);
-  transition: all $duration--moderate-01 carbon--motion('entrance');
+  transition: all $duration--moderate-01 carbon--motion("entrance");
   border-bottom: 1px solid $inverse-02;
   box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
-  @include carbon--breakpoint('lg') {
+  @include carbon--breakpoint("lg") {
     // https://css-tricks.com/using-css-transitions-auto-dimensions/
     // Tied to the height of the app switcher. Allows for animating up to auto.
     // Matching the height exactly is imperitive to keep the correct animation timing.
@@ -50,13 +50,13 @@
 }
 
 .divider span {
-  @include carbon--type-style('caption-01');
+  @include carbon--type-style("caption-01");
   color: $carbon--gray-30;
 }
 
 .link {
   padding: 6px 1rem;
-  @include carbon--type-style('heading-01');
+  @include carbon--type-style("heading-01");
   display: block;
   text-decoration: none;
   color: $carbon--gray-30;
@@ -74,7 +74,7 @@
 
 .link--disabled {
   padding: 6px $spacing-05;
-  @include carbon--type-style('heading-01');
+  @include carbon--type-style("heading-01");
   display: block;
   color: $carbon--gray-60;
 }
