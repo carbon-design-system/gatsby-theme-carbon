@@ -19,7 +19,7 @@
 }
 
 .image-title {
-  @include carbon--type-style('productive-heading-02');
+  @include carbon--type-style("productive-heading-02");
   position: absolute;
   display: block;
   width: 100%;

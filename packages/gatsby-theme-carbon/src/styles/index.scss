@@ -1,24 +1,24 @@
 // Base global
-@import './internal/global';
+@import "./internal/global";
 
 // Global stylesheet to inject global dependencies via shadowing
-@import 'global';
+@import "global";
 
 //---------------------------------------
 // Page styles
 //---------------------------------------
 
-@import './internal/page';
+@import "./internal/page";
 
-@import '../components/Homepage/homepage.scss';
-@import '../components/PageTable/page-table.scss';
-@import '../components/DoDontExample/do-dont-example.scss';
-@import '../components/ResourceCard/resource-card.scss';
-@import '../components/ResourceCard/resource-card-group.scss';
-@import '../components/ArticleCard/article-card.scss';
-@import '../components/FeatureCard/feature-card.scss';
-@import '../components/ImageCard/image-card.scss';
-@import '../components/ImageCard/aspect-ratio.scss';
+@import "../components/Homepage/homepage.scss";
+@import "../components/PageTable/page-table.scss";
+@import "../components/DoDontExample/do-dont-example.scss";
+@import "../components/ResourceCard/resource-card.scss";
+@import "../components/ResourceCard/resource-card-group.scss";
+@import "../components/ArticleCard/article-card.scss";
+@import "../components/FeatureCard/feature-card.scss";
+@import "../components/ImageCard/image-card.scss";
+@import "../components/ImageCard/aspect-ratio.scss";
 
 //---------------------------------------
 // Included last to ensure that class
