@@ -143,7 +143,7 @@ To do so, provide your own [resolvers object](https://www.gatsbyjs.org/packages/
 
 To add a link to the bottom of each page that points to the current page source in GitHub, provide a `repository` object to `siteMetadata` in your `gatsby-config.js` file. You can provide a `baseUrl`, and if needed, the `subDirectory` and `branch` where your site source lives.
 
-To remove the link, remove the section that begins `options` through to its' closing brackets. If after deleting, your options object is empty, delete that as well.
+To disable the `Edit in Github` link, remove the `repository` option. If the options object is now empty, delete it all together.
 
 ```js
   plugins: [
