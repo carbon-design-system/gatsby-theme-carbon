@@ -28,9 +28,9 @@ function ImageGalleryImage({
   return (
     <Column colLg={col}>
       <figure className={figure} role="group" aria-label={alt}>
-        <button className={imageButtonWrapper} type="button" {...rest}>
-          {children}
-        </button>
+        {/* <button className={imageButtonWrapper} type="button" {...rest}> */}
+        {children}
+        {/* </button> */}
       </figure>
     </Column>
   );

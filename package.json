@@ -18,7 +18,7 @@
     "build": "yarn workspace example build",
     "build:clean": "yarn workspace example build:clean",
     "build:analyze": "ANALYZE=true yarn workspace example build",
-    "serve": "yarn build && yarn workspace example serve",
+    "serve": "yarn build && yarn workspace example serve -H 0.0.0.0",
     "test:prefix": "yarn workspace example test:prefix",
     "now-build": "yarn workspace example build",
     "format": "prettier --write \"**/*.{scss,css,js,md}\"",
