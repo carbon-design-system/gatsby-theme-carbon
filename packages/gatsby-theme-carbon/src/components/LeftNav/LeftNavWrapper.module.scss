@@ -12,7 +12,7 @@
     box-shadow: none !important;
   }
 
-  @include carbon--breakpoint('lg') {
+  @include carbon--breakpoint("lg") {
     transform: translateX(0px);
   }
 }
@@ -25,7 +25,7 @@
 .expanded {
   transform: translateX(0px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  @include carbon--breakpoint('lg') {
+  @include carbon--breakpoint("lg") {
     box-shadow: none;
   }
 }
