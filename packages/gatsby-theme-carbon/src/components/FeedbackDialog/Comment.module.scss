@@ -1,0 +1,27 @@
+.container {
+  position: relative;
+}
+
+.textarea {
+  resize: none;
+  @include carbon--type-style("body-short-02");
+  @include carbon--breakpoint("md") {
+    @include carbon--type-style("body-short-01");
+  }
+}
+
+.fadeout {
+  pointer-events: none;
+  position: absolute;
+  bottom: 1px;
+  left: $spacing-03;
+  right: $spacing-05;
+  transition: opacity $duration--fast-02 motion(standard, productive);
+  opacity: 1;
+  background: linear-gradient(rgba(57, 57, 57, 0), rgba(57, 57, 57, 1));
+  height: 3rem;
+}
+
+.focused {
+  opacity: 0;
+}

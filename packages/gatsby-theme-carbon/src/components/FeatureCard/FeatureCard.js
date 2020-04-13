@@ -9,50 +9,6 @@ import ResourceCard from '../ResourceCard';
 const { prefix } = settings;
 
 export default class FeatureCard extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
-
-    /**
-     * Set url for card
-     */
-    href: PropTypes.string,
-
-    /**
-     * Smaller heading
-     */
-    subTitle: PropTypes.string,
-
-    /**
-     * Large heading
-     */
-    title: PropTypes.string,
-
-    /**
-     * Action icon, default is launch, options are Launch, ArrowRight, Download, Error
-     */
-    actionIcon: PropTypes.string,
-
-    /**
-     * Use for disabled card
-     */
-    disabled: PropTypes.bool,
-
-    /**
-     * Specify a custom class
-     */
-    className: PropTypes.string,
-
-    /**
-     * Pass through props to resource card
-     */
-    resourceCardProps: PropTypes.object,
-  };
-
-  static defaultProps = {
-    disabled: false,
-    actionIcon: 'launch',
-  };
-
   render() {
     const {
       children,
@@ -137,3 +93,47 @@ export default class FeatureCard extends React.Component {
     return <div className={FeatureCardClassNames}>{cardContainer}</div>;
   }
 }
+
+FeatureCard.propTypes = {
+  children: PropTypes.node,
+
+  /**
+   * Set url for card
+   */
+  href: PropTypes.string,
+
+  /**
+   * Smaller heading
+   */
+  subTitle: PropTypes.string,
+
+  /**
+   * Large heading
+   */
+  title: PropTypes.string,
+
+  /**
+   * Action icon, default is launch, options are Launch, ArrowRight, Download, Error
+   */
+  actionIcon: PropTypes.string,
+
+  /**
+   * Use for disabled card
+   */
+  disabled: PropTypes.bool,
+
+  /**
+   * Specify a custom class
+   */
+  className: PropTypes.string,
+
+  /**
+   * Pass through props to resource card
+   */
+  resourceCardProps: PropTypes.object,
+};
+
+FeatureCard.defaultProps = {
+  disabled: false,
+  actionIcon: 'launch',
+};

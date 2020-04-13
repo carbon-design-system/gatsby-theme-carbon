@@ -12,13 +12,13 @@
 }
 
 .#{$prefix}--resource-card__title {
-  @include carbon--type-style('productive-heading-03');
+  @include carbon--type-style("productive-heading-03");
   text-decoration: none;
   color: $text-01;
 }
 
 .#{$prefix}--resource-card__subtitle {
-  @include carbon--type-style('heading-01');
+  @include carbon--type-style("heading-01");
   font-weight: 400;
   text-decoration: none;
   color: $text-01;
@@ -35,8 +35,8 @@
 }
 
 .#{$prefix}--resource-card__icon--img .gatsby-resp-image-wrapper,
-.#{$prefix}--resource-card__icon--img img[src*='gif'],
-.#{$prefix}--resource-card__icon--img img[src*='svg'] {
+.#{$prefix}--resource-card__icon--img img[src*="gif"],
+.#{$prefix}--resource-card__icon--img img[src*="svg"] {
   margin-bottom: 0;
 }
 

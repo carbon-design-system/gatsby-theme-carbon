@@ -21,36 +21,38 @@
     "serve": "yarn build && yarn workspace example serve",
     "test:prefix": "yarn workspace example test:prefix",
     "now-build": "yarn workspace example build",
-    "format": "prettier --write \"**/*.{scss,css,js,md}\"",
+    "format": "prettier --write \"**/*.{css,scss,json,html,yaml}\"",
     "lint:js": "eslint . --fix",
-    "lint:scss": "stylelint \"packages/**/*.scss\" --fix"
+    "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
+    "prerelease": "lerna publish --canary minor --dist-tag next --no-push --no-git-tag-version --yes",
+    "release": "lerna publish --conventional-commits --create-release github --git-remote upstream"
   },
   "eslintIgnore": [
     "**/node_modules/",
-    "**/public/"
+    "**/public/",
+    "**/.cache/",
+    "**/build/"
   ],
   "devDependencies": {
-    "babel-eslint": "^9.0.0",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^4.2.0",
-    "eslint-config-react-app": "^5.0.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.1",
     "eslint-config-wesbos": "0.0.19",
-    "eslint-plugin-flowtype": "^4.3.0",
-    "eslint-plugin-html": "^5.0.3",
+    "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.13.0",
-    "eslint-plugin-react-hooks": "^1.3.0",
-    "husky": "^3.0.0",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "husky": "^4.2.3",
     "lerna": "^3.16.2",
-    "lint-staged": "^9.2.0",
-    "prettier": "^1.17.0",
-    "stylelint": "^10.1.0",
-    "stylelint-config-recommended-scss": "^3.3.0",
-    "stylelint-scss": "^3.9.1",
-    "yarn": "^1.15.2"
+    "lint-staged": "^10.0.9",
+    "prettier": "^2.0.2",
+    "stylelint": "^13.2.1",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-scss": "^3.16.0",
+    "yarn": "^1.22.4"
   },
   "husky": {
     "hooks": {
@@ -59,16 +61,13 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ],
     "*.{css,scss,json,html,yaml}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "*.{css,scss}": [
-      "stylelint --fix",
-      "git add"
+      "stylelint --fix"
     ]
   }
 }

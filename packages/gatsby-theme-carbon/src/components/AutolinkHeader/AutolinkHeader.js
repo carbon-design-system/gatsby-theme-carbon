@@ -14,7 +14,7 @@ const Anchor = ({ id, string }) => (
 const AutolinkHeader = ({ is: Component, className, ...props }) => {
   const string = React.Children.map(
     props.children,
-    child => (child.props ? child.props.children : child) // handle bold/italic words
+    (child) => (child.props ? child.props.children : child) // handle bold/italic words
   ).join('');
 
   const id = `${slugify(string, { lower: true })}`;

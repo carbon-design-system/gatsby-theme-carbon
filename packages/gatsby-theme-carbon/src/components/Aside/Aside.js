@@ -4,15 +4,6 @@ import classnames from 'classnames';
 import { aside } from './Aside.module.scss';
 
 export default class Aside extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
-
-    /**
-     * Specify a custom class
-     */
-    className: PropTypes.string,
-  };
-
   render() {
     const { children, className, ...rest } = this.props;
 
@@ -27,3 +18,12 @@ export default class Aside extends React.Component {
     );
   }
 }
+
+Aside.propTypes = {
+  children: PropTypes.node,
+
+  /**
+   * Specify a custom class
+   */
+  className: PropTypes.string,
+};

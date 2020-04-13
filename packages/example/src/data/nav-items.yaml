@@ -46,6 +46,8 @@
       path: /components/DoDontRow
     - title: FeatureCard
       path: /components/FeatureCard
+    - title: FeedbackDialog
+      path: /components/FeedbackDialog
     - title: GifPlayer
       path: /components/GifPlayer
     - title: Grid

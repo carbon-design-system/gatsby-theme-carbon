@@ -14,66 +14,6 @@ import { settings } from 'carbon-components';
 const { prefix } = settings;
 
 export default class ArticleCard extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
-
-    /**
-     * Set url for card
-     */
-    href: PropTypes.string,
-
-    /**
-     * Title
-     */
-    title: PropTypes.string,
-
-    /**
-     * sub title
-     */
-    subTitle: PropTypes.string,
-
-    /**
-     * Author
-     */
-    author: PropTypes.string,
-
-    /**
-     * date
-     */
-    date: PropTypes.string,
-
-    /**
-     * Reat time of article
-     */
-    readTime: PropTypes.string,
-
-    /**
-     * Action icon, default is blank, options are Launch, ArrowRight, Download
-     */
-    actionIcon: PropTypes.string,
-
-    /**
-     * set to "dark" for dark background card
-     */
-    color: PropTypes.string,
-
-    /**
-     * Use for disabled card
-     */
-    disabled: PropTypes.bool,
-
-    /**
-     * Specify a custom class
-     */
-    className: PropTypes.string,
-  };
-
-  static defaultProps = {
-    color: 'light',
-    disabled: false,
-    actionIcon: '',
-  };
-
   render() {
     const {
       children,
@@ -187,3 +127,63 @@ export default class ArticleCard extends React.Component {
     return <div className={ArticleCardClassNames}>{cardContainer}</div>;
   }
 }
+
+ArticleCard.propTypes = {
+  children: PropTypes.node,
+
+  /**
+   * Set url for card
+   */
+  href: PropTypes.string,
+
+  /**
+   * Title
+   */
+  title: PropTypes.string,
+
+  /**
+   * sub title
+   */
+  subTitle: PropTypes.string,
+
+  /**
+   * Author
+   */
+  author: PropTypes.string,
+
+  /**
+   * date
+   */
+  date: PropTypes.string,
+
+  /**
+   * Reat time of article
+   */
+  readTime: PropTypes.string,
+
+  /**
+   * Action icon, default is blank, options are Launch, ArrowRight, Download
+   */
+  actionIcon: PropTypes.string,
+
+  /**
+   * set to "dark" for dark background card
+   */
+  color: PropTypes.string,
+
+  /**
+   * Use for disabled card
+   */
+  disabled: PropTypes.bool,
+
+  /**
+   * Specify a custom class
+   */
+  className: PropTypes.string,
+};
+
+ArticleCard.defaultProps = {
+  color: 'light',
+  disabled: false,
+  actionIcon: '',
+};

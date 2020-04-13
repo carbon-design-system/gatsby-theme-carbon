@@ -1,0 +1,34 @@
+name: prerelease
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: git fetch --prune --unshallow
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: node_modules Cache
+        uses: actions/cache@v1
+        with:
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install
+        run: yarn install --pure-lockfile
+      - name: Publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
+          yarn lerna publish --canary minor --dist-tag next --no-push --no-git-tag-version --yes

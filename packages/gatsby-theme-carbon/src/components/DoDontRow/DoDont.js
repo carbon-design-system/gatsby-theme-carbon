@@ -6,22 +6,6 @@ import { Column } from '../Grid';
 import styles from './DoDontRow.module.scss';
 
 export default class DoDont extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
-    /** title for the caption (optional) */
-    caption: PropTypes.string,
-    /** description for the card caption (optional) */
-    captionTitle: PropTypes.string,
-    /** text displayed in the example card */
-    text: PropTypes.string,
-    /** 1:1 to force square example */
-    aspectRatio: PropTypes.string,
-    /** set to "dark" for dark background card */
-    color: PropTypes.string,
-    /** set to "do" for do, and "dont" for dont */
-    type: PropTypes.string,
-  };
-
   renderCaption = (caption, captionTitle) => {
     if (caption || captionTitle) {
       return (
@@ -84,4 +68,20 @@ export default class DoDont extends React.Component {
 
 DoDont.defaultProps = {
   type: 'do',
+};
+
+DoDont.propTypes = {
+  children: PropTypes.node,
+  /** title for the caption (optional) */
+  caption: PropTypes.string,
+  /** description for the card caption (optional) */
+  captionTitle: PropTypes.string,
+  /** text displayed in the example card */
+  text: PropTypes.string,
+  /** 1:1 to force square example */
+  aspectRatio: PropTypes.string,
+  /** set to "dark" for dark background card */
+  color: PropTypes.string,
+  /** set to "do" for do, and "dont" for dont */
+  type: PropTypes.string,
 };

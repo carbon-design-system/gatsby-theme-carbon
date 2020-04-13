@@ -2,7 +2,7 @@ const path = require('path');
 const { uiBackground, interactive01 } = require('@carbon/elements');
 const defaultLunrOptions = require('./config/lunr-options');
 
-module.exports = themeOptions => {
+module.exports = (themeOptions) => {
   const repositoryDefault = {
     baseUrl: '',
     subDirectory: '',
@@ -29,7 +29,7 @@ module.exports = themeOptions => {
       resolve: 'gatsby-source-medium-feed',
       options: {
         userName: mediumAccount, // Medium user name
-        name: 'MediumFeed', // GraphQL query AllMediumFeed
+        name: 'MediumFeed',
       },
     });
   }
@@ -135,7 +135,7 @@ module.exports = themeOptions => {
           display: 'browser',
           icon: iconPath
             ? path.resolve(iconPath)
-            : require.resolve('./src/images/favicon.png'),
+            : require.resolve('./src/images/favicon.svg'),
         },
       },
       `gatsby-plugin-react-helmet`,

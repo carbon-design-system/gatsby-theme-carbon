@@ -5,11 +5,11 @@ import { Grid, Column, Row } from '../Grid';
 import { grid, row, firstColumn, secondColumn } from './Callout.module.scss';
 
 const StyledGrid = styled(Grid)`
-  background-color: ${props =>
+  background-color: ${(props) =>
     props.theme.colors[props.backgroundColor] ||
     props.backgroundColor ||
     props.theme.colors.interactive02};
-  color: ${props =>
+  color: ${(props) =>
     props.theme.colors[props.color] ||
     props.color ||
     props.theme.colors.inverse01}};

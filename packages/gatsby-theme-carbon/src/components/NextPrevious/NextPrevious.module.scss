@@ -3,57 +3,41 @@
   color: $text-04;
 }
 
-.wrapper .link-container {
-  display: flex;
-  height: 8rem;
+.grid {
   max-width: 99rem;
-
-  @include carbon--breakpoint('md') {
-    padding: 0 1rem;
-  }
-
-  @include carbon--breakpoint('lg') {
-    padding: 0;
-    padding-left: 25%;
-  }
-
-  @include carbon--breakpoint('max') {
-    padding-left: calc(400px - 2rem);
-  }
 }
 
-.link-container .link {
-  color: $carbon--white-0;
-  padding: 1rem;
-  text-decoration: none;
-  width: 50%;
+.link-container {
+  height: 8rem;
+}
+
+.link {
+  padding: 0;
   transition: background $duration--fast-02 $carbon--standard-easing;
 
   &:hover {
     color: $carbon--white-0;
     background: $carbon--gray-80;
-    text-decoration: none;
   }
 }
 
-.first-link {
-  margin-right: auto;
-}
-
-.second-link {
-  margin-left: auto;
+.link a {
+  padding: 1rem;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  color: $carbon--white-0;
 }
 
 .direction {
-  @include carbon--type-style('body-short-01');
+  @include carbon--type-style("body-short-01");
 }
 
 .name {
-  @include carbon--type-style('expressive-heading-03', true);
+  @include carbon--type-style("expressive-heading-03", true);
   padding-bottom: $spacing-05;
-  max-width: 17rem;
 }
 
-.home {
-  color: $inverse-01;
+.isHomepage {
+  visibility: hidden;
 }

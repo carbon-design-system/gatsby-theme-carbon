@@ -29,7 +29,7 @@ const useNavigationList = () => {
 
   return [
     edges.flatMap(({ node }) =>
-      node.pages.map(page => ({
+      node.pages.map((page) => ({
         ...page,
         category: node.title,
       }))
@@ -48,12 +48,12 @@ const getTabItems = ({ tabs, location }) => {
     };
   }
 
-  const tabItems = tabs.map(title => {
+  const tabItems = tabs.map((title) => {
     const slug = slugify(title, {
       lower: true,
     });
     const currentTab =
-      currentPage.filter(item => item === slug).toString() === slug;
+      currentPage.filter((item) => item === slug).toString() === slug;
     return {
       title,
       slug,
@@ -61,7 +61,7 @@ const getTabItems = ({ tabs, location }) => {
     };
   });
 
-  const currentTabIndex = tabItems.findIndex(tab => tab.currentTab);
+  const currentTabIndex = tabItems.findIndex((tab) => tab.currentTab);
   return {
     prevTabItem: tabItems[currentTabIndex - 1],
     nextTabItem: tabItems[currentTabIndex + 1],
@@ -76,7 +76,7 @@ const useNavigationItems = ({ tabs, location }) => {
     ? unPrefixedPathname.replace(/\/[^/]*\/?$/, '') // removes the last url segment
     : unPrefixedPathname.replace(/\/$/, ''); // removes the last syalash
 
-  const navIndex = navigationList.findIndex(item =>
+  const navIndex = navigationList.findIndex((item) =>
     item.path.includes(currentNavigationItem)
   );
 
@@ -87,7 +87,7 @@ const useNavigationItems = ({ tabs, location }) => {
   };
 };
 
-const getTitle = pageContext => {
+const getTitle = (pageContext) => {
   if (!pageContext.frontmatter.title) {
     return 'Home';
   }
@@ -98,10 +98,11 @@ const getTitle = pageContext => {
 
 const getName = (category, title) => `${category}${title ? `: ${title}` : ''}`;
 
-const NextPreviousContainer = props => {
+const NextPreviousContainer = (props) => {
   const {
     tabs,
     location,
+    isHomepage,
     pageContext = {
       frontmatter: 'Home',
     },
@@ -144,12 +145,10 @@ const NextPreviousContainer = props => {
       };
     }
 
-    return currentTitle === 'Home'
-      ? {}
-      : {
-          to: '/',
-          name: 'Home',
-        };
+    return {
+      to: '/',
+      name: 'Home',
+    };
   };
 
   const getNextItem = () => {
@@ -189,7 +188,11 @@ const NextPreviousContainer = props => {
   }
 
   return (
-    <NextPrevious previousItem={getPreviousItem()} nextItem={getNextItem()} />
+    <NextPrevious
+      isHomepage={isHomepage}
+      previousItem={getPreviousItem()}
+      nextItem={getNextItem()}
+    />
   );
 };
 

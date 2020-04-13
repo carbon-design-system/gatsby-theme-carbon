@@ -13,7 +13,7 @@ import styles, { currentItem } from './LeftNav.module.scss';
 import NavContext from '../../util/context/NavContext';
 import usePathprefix from '../../util/hooks/usePathprefix';
 
-const LeftNavItem = props => {
+const LeftNavItem = (props) => {
   const { items, category } = props;
   const { toggleNavState } = useContext(NavContext);
   const closeLeftNav = () => toggleNavState('leftNavIsOpen', 'close');
@@ -27,7 +27,7 @@ const LeftNavItem = props => {
           : location.pathname;
 
         const isActive = items.some(
-          item => item.path.split('/')[1] === pathname.split('/')[1]
+          (item) => item.path.split('/')[1] === pathname.split('/')[1]
         );
 
         if (items.length === 1) {

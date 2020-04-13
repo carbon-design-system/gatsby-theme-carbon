@@ -1,21 +1,25 @@
 :global {
   code {
-    font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
-      'Bitstream Vera Sans Mono', Courier, monospace;
+    font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
+      "Bitstream Vera Sans Mono", Courier, monospace;
   }
 
   p > code,
   li > code,
   td > code {
-    @include carbon--type-style('code-01');
+    @include carbon--type-style("code-01");
     position: relative;
     display: inline;
     padding: 0 0.5em;
-    font-size: 0.75em;
+    font-size: 0.875em;
     bottom: 0.0625em;
     border-radius: 4px;
     background-color: $ui-03;
     color: $text-01;
+  }
+
+  td > code {
+    font-size: 0.75rem;
   }
 
   // Add's additional length for scrolling under sidebar
@@ -26,12 +30,12 @@
 
 .row {
   position: relative;
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
-    'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", Courier, monospace;
   color: $inverse-01;
-  @include carbon--type-style('code-02');
+  @include carbon--type-style("code-02");
   width: calc(100% + 2rem);
-  @include carbon--breakpoint('lg') {
+  @include carbon--breakpoint("lg") {
     width: calc(67% + 1rem);
   }
 }
@@ -71,7 +75,7 @@
   }
   &::before,
   &::after {
-    z-index: z('floating');
+    z-index: z("floating");
   }
 }
 
@@ -87,9 +91,15 @@
   border-bottom: 1px solid $inverse-02;
 }
 
+.path {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .show-more-button {
-  @include carbon--type-style('body-long-01');
-  font-family: 'IBM Plex Sans VF', sans-serif;
+  @include carbon--type-style("body-short-01");
+  font-family: "IBM Plex Sans VF", sans-serif;
   position: absolute;
   right: $spacing-03;
   bottom: $spacing-03;
@@ -100,7 +110,6 @@
   padding: $spacing-03;
   padding-left: $spacing-05;
   display: inline-flex;
-  align-items: center;
   transition: background-color $duration--fast-02;
   &:hover {
     background-color: $inverse-02;
@@ -135,6 +144,7 @@
   width: 32px;
   height: 32px;
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   background: transparent;

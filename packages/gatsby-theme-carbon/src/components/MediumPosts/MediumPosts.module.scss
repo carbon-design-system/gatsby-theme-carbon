@@ -2,7 +2,7 @@
 .card-container {
   padding-right: 0;
   padding-left: 0;
-  @include carbon--breakpoint('md') {
+  @include carbon--breakpoint("md") {
     padding-right: 1rem;
     padding-left: 1rem;
   }
@@ -11,24 +11,24 @@
 // Fixs the breaking type
 
 .card-container h4 {
-  @include carbon--breakpoint('sm') {
-    @include carbon--type-style('productive-heading-03');
+  @include carbon--breakpoint("sm") {
+    @include carbon--type-style("productive-heading-03");
   }
 
-  @include carbon--breakpoint('md') {
+  @include carbon--breakpoint("md") {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.2rem;
     letter-spacing: 0;
   }
 
-  @include carbon--breakpoint('lg') {
+  @include carbon--breakpoint("lg") {
     font-size: 0.75rem;
     font-weight: 400;
     line-height: 1rem;
     letter-spacing: 0;
   }
-  @include carbon--breakpoint('xlg') {
+  @include carbon--breakpoint("xlg") {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.375rem;
@@ -42,16 +42,16 @@
   object-fit: cover;
   width: 100%;
 
-  @include carbon--breakpoint('sm') {
+  @include carbon--breakpoint("sm") {
     height: 315px;
   }
-  @include carbon--breakpoint('md') {
+  @include carbon--breakpoint("md") {
     height: 290px;
   }
-  @include carbon--breakpoint('lg') {
+  @include carbon--breakpoint("lg") {
     height: 165px;
   }
-  @include carbon--breakpoint('xlg') {
+  @include carbon--breakpoint("xlg") {
     height: 215px;
   }
 }
