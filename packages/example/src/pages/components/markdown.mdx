@@ -128,7 +128,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 [I’m a markdown link](https://www.carbondesignsystem.com)
 
-[I’m a markdown link with title](https://www.carbondesignsystem.com 'Carbon’s Homepage')
+[I’m a markdown link with title](https://www.carbondesignsystem.com "Carbon’s Homepage")
 
 URLs and URLs in angle brackets will automatically get turned into links.
 http://www.example.com or <http://www.example.com> and sometimes
@@ -139,7 +139,7 @@ example.com (but not on Github, for example).
 ```markdown src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/markdown
 [I’m a markdown link](https://www.carbondesignsystem.com)
 
-[I’m a markdown link with title](https://www.carbondesignsystem.com 'Google’s Homepage')
+[I’m a markdown link with title](https://www.carbondesignsystem.com "Google’s Homepage")
 
 [I’m a local link](/components/demo)
 
@@ -244,4 +244,18 @@ raw Markdown line up prettily. You can also use inline Markdown.
 > relevant content, or content without meaningful form.
 >
 > <cite>– Paul Rand</cite>
+```
+
+## Comments
+
+Comments can be added that will not display on the page, but will be visible in the markdown source.
+
+<!-- Comments like this are visible in code, but are not visible on the page -->
+
+### Code
+
+```markdown src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/markdown
+Comments can be added that will not display on the page, but will be visible in the markdown source.
+
+<!-- Comments like this are visible in code, but are not visible on the page -->
 ```
