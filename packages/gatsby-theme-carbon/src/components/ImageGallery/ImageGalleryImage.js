@@ -35,7 +35,7 @@ function ImageGalleryImage({
           role="button"
           onKeyDown={(e) => {
             if (e.key === 'Enter') {
-              onClick();
+              onClick(e);
             }
           }}
           onClick={onClick}

@@ -15,6 +15,10 @@
     opacity: 1;
   }
 
+  &:focus {
+    outline: 2px solid $focus;
+  }
+
   svg {
     fill: $interactive-01;
   }
