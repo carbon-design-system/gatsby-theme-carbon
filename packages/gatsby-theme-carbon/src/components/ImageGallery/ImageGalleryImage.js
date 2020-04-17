@@ -14,7 +14,8 @@ function ImageGalleryImage({
   col,
   isInDialog = false,
   children,
-  ...rest
+  className,
+  onClick,
 }) {
   if (isInDialog) {
     return (
@@ -26,11 +27,21 @@ function ImageGalleryImage({
   }
 
   return (
-    <Column colLg={col}>
+    <Column colLg={col} className={className}>
       <figure className={figure} role="group" aria-label={alt}>
-        {/* <button className={imageButtonWrapper} type="button" {...rest}> */}
-        {children}
-        {/* </button> */}
+        <div
+          className={imageButtonWrapper}
+          tabIndex={0}
+          role="button"
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              onClick();
+            }
+          }}
+          onClick={onClick}
+        >
+          {children}
+        </div>
       </figure>
     </Column>
   );
