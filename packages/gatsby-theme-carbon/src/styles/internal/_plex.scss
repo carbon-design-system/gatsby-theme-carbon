@@ -1,7 +1,11 @@
-// roman
+// LATIN="U+0020-00FF"
+// LATINEXT="U+0100-1EF9"
+// PUNCTUATION="U+2000-FB02"
+
+// Roman
 @font-face {
   font-family: "IBM Plex Sans VF";
-  unicode-range: U+0020-00FF, U+2190-21c6, U+2000-206F;
+  unicode-range: U+0020-00FF;
   font-display: swap;
   src: url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansLatin-VF.woff2")
       format("woff2-variations"),
@@ -13,7 +17,7 @@
 
 @font-face {
   font-family: "IBM Plex Sans VF";
-  unicode-range: U+0100-024F;
+  unicode-range: U+0100-1EF9;
   font-display: swap;
   src: url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansLatinExt-VF.woff2")
       format("woff2-variations"),
@@ -25,41 +29,17 @@
 
 @font-face {
   font-family: "IBM Plex Sans VF";
-  unicode-range: U+0370-03FF;
+  unicode-range: U+2000-FB02;
   font-display: swap;
-  src: url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansGreek-VF.woff2")
+  src: url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansLatinOther-VF.woff2")
       format("woff2-variations"),
-    url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansGreek-VF.woff2")
+    url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansLatinOther-VF.woff2")
       format("woff2");
   font-weight: 100 900;
   font-style: normal;
 }
 
-@font-face {
-  font-family: "IBM Plex Sans VF";
-  unicode-range: U+0400-04FF;
-  font-display: swap;
-  src: url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansCyr-VF.woff2")
-      format("woff2-variations"),
-    url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansCyr-VF.woff2")
-      format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "IBM Plex Sans VF";
-  unicode-range: U+0500-052F;
-  font-display: swap;
-  src: url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansCyrExt-VF.woff2")
-      format("woff2-variations"),
-    url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansCyrExt-VF.woff2")
-      format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-}
-
-// italic
+// Italic
 @font-face {
   font-family: "IBM Plex Sans VF";
   unicode-range: U+0020-00FF;
@@ -74,7 +54,7 @@
 
 @font-face {
   font-family: "IBM Plex Sans VF";
-  unicode-range: U+0100-024F;
+  unicode-range: U+0100-1EF9;
   font-display: swap;
   src: url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansLatinExt-Italic-VF.woff2")
       format("woff2-variations"),
@@ -86,35 +66,11 @@
 
 @font-face {
   font-family: "IBM Plex Sans VF";
-  unicode-range: U+0370-03FF;
+  unicode-range: U+2000-FB02;
   font-display: swap;
-  src: url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansGreek-Italic-VF.woff2")
+  src: url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansLatinOther-Italic-VF.woff2")
       format("woff2-variations"),
-    url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansGreek-Italic-VF.woff2")
-      format("woff2");
-  font-weight: 100 900;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "IBM Plex Sans VF";
-  unicode-range: U+0400-04FF;
-  font-display: swap;
-  src: url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansCyr-Italic-VF.woff2")
-      format("woff2-variations"),
-    url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansCyr-Italic-VF.woff2")
-      format("woff2");
-  font-weight: 100 900;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "IBM Plex Sans VF";
-  unicode-range: U+0500-052F;
-  font-display: swap;
-  src: url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansCyrExt-Italic-VF.woff2")
-      format("woff2-variations"),
-    url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansCyrExt-Italic-VF.woff2")
+    url("https://gatsby-theme-carbon.now.sh/fonts/IBMPlexSansLatinOther-Italic-VF.woff2")
       format("woff2");
   font-weight: 100 900;
   font-style: italic;
