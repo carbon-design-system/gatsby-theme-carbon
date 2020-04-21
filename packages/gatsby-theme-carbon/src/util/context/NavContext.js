@@ -5,6 +5,7 @@ const NavContext = React.createContext({
   searchIsOpen: false,
   switcherIsOpen: false,
   isManagingFocus: false,
+  scrollOffset: 0,
 });
 
 const reducer = (state, action) => {
@@ -13,22 +14,29 @@ const reducer = (state, action) => {
       return { ...state, [action.nav]: true };
     case 'close':
       return { ...state, [action.nav]: false };
+    case 'update-nav-scroll':
+      return { scrollOffset: action.payload };
     default:
       return { ...state, [action.nav]: !state[action.nav] };
   }
 };
 export const NavContextProvider = ({ children }) => {
   const [
-    { leftNavIsOpen, searchIsOpen, switcherIsOpen },
+    { leftNavIsOpen, searchIsOpen, switcherIsOpen, scrollOffset },
     dispatch,
   ] = useReducer(reducer, {
     leftNavIsOpen: false,
     searchIsOpen: false,
     switcherIsOpen: false,
+    scrollOffset: 0,
   });
 
   const toggleNavState = (nav, type) => {
     dispatch({ nav, type });
+  };
+
+  const updateNavScrollOffset = (payload, type) => {
+    dispatch({ payload, type });
   };
 
   const [isManagingFocus, setIsManagingFocus] = useState(false);
@@ -40,6 +48,8 @@ export const NavContextProvider = ({ children }) => {
     toggleNavState,
     isManagingFocus,
     setIsManagingFocus,
+    scrollOffset,
+    updateNavScrollOffset,
   };
 
   return <NavContext.Provider value={value}>{children}</NavContext.Provider>;
