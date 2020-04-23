@@ -91,9 +91,7 @@ module.exports = (themeOptions) => {
             ...defaultRemarkPlugins,
             ...gatsbyRemarkPlugins,
           ],
-          remarkPlugins: [
-            ...remarkPlugins,
-          ],
+          remarkPlugins,
           defaultLayouts: {
             default: require.resolve('./src/templates/Default.js'),
             home: require.resolve('./src/templates/Homepage.js'),

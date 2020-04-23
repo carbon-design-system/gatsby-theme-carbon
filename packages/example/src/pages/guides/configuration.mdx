@@ -205,6 +205,8 @@ plugins: [
 - `gatsbyRemarkPlugins` - An array containing gatsby remark plugin configurations to be added/overridden.
 - `remarkPlugins` - An array containing [remark plugin configurations](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/#remark-plugins) to be added.
 
+The `gatsbyRemarkPlugins` option is compatible with all gatsby-remark-* plugins, for example `gatsby-remark-mermaid`. If a gatsby remark plugin does not work, you can try calling the (underlying) remark plugin directly using the `remarkPlugins` option.
+
 ### Example [Gatsby Remark Mermaid plugin](https://www.gatsbyjs.org/packages/gatsby-remark-mermaid/)
 
 For the below markdown snippet:
@@ -274,7 +276,7 @@ For the below markdown snippet:
 +-------+-----------------+
 ```
 
-to turn into the table it describes one should add the following configuration to her/his own project:
+After installing the `remark-grid-tables` plugin, add it to the `remarkPlugins` array in the theme options.
 
 ```js
  plugins: [
