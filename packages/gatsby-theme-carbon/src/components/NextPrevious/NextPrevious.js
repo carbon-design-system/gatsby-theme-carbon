@@ -38,9 +38,7 @@ const useNavigationList = () => {
   ];
 };
 
-const getTabItems = ({ tabs, location }) => {
-  const { pathname } = location;
-  const currentPage = pathname.split('/');
+const getTabItems = ({ tabs, hrefSegments }) => {
   if (!tabs) {
     return {
       prevTabItem: null,
@@ -53,7 +51,7 @@ const getTabItems = ({ tabs, location }) => {
       lower: true,
     });
     const currentTab =
-      currentPage.filter((item) => item === slug).toString() === slug;
+      hrefSegments.filter((item) => item === slug).toString() === slug;
     return {
       title,
       slug,
@@ -116,7 +114,7 @@ const NextPreviousContainer = (props) => {
 
   const { prevTabItem, nextTabItem } = getTabItems({
     currentTitle,
-    location,
+    hrefSegments,
     tabs,
   });
 
