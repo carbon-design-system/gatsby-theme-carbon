@@ -110,3 +110,34 @@
   svg {
   fill: $carbon--gray-70; //$disabled-02 for gray 90
 }
+
+// Mini resource card
+
+.#{$prefix}--resource-card__mini {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background: $ui-background;
+  height: $layout-05;
+}
+
+.#{$prefix}--resource-card__mini:hover {
+  background: $hover-ui;
+}
+
+.#{$prefix}--resource-card__mini-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-right: $spacing-05;
+  padding-left: $spacing-05;
+}
+
+.#{$prefix}--resource-card__mini-title {
+  @include carbon--type-style("body-short-02");
+}
+
+.#{$prefix}--resource-card__mini-icon--img {
+  width: 20px;
+  height: 20px;
+}

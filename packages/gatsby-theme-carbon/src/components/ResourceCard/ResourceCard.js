@@ -13,100 +13,120 @@ import { settings } from 'carbon-components';
 
 const { prefix } = settings;
 
-export default class ResourceCard extends React.Component {
-  render() {
-    const {
-      children,
-      href,
-      subTitle,
-      title,
-      color,
-      disabled,
-      aspectRatio,
-      actionIcon,
-      className,
-      ...rest
-    } = this.props;
+const ResourceCard = ({
+  children,
+  href,
+  subTitle,
+  title,
+  color = 'light',
+  disabled = false,
+  aspectRatio = '2:1',
+  actionIcon = 'launch',
+  className,
+  type = 'regular',
+  ...rest
+}) => {
+  let isLink;
+  if (href !== undefined) {
+    isLink = href.charAt(0) === '/';
+  }
 
-    let isLink;
-    if (href !== undefined) {
-      isLink = href.charAt(0) === '/';
-    }
+  const ResourceCardClassNames = classnames([`${prefix}--resource-card`], {
+    [className]: className,
+    [`${prefix}--resource-card--disabled`]: disabled,
+    [`${prefix}--resource-card--dark`]: color === 'dark',
+  });
 
-    const ResourceCardClassNames = classnames([`${prefix}--resource-card`], {
-      [className]: className,
-      [`${prefix}--resource-card--disabled`]: disabled,
-      [`${prefix}--resource-card--dark`]: color === 'dark',
-    });
+  const aspectRatioClassNames = classnames([`${prefix}--aspect-ratio`], {
+    [`${prefix}--aspect-ratio--2x1`]: aspectRatio === '2:1',
+    [`${prefix}--aspect-ratio--1x1`]: aspectRatio === '1:1',
+    [`${prefix}--aspect-ratio--16x9`]: aspectRatio === '16:9',
+    [`${prefix}--aspect-ratio--4x3`]: aspectRatio === '4:3',
+  });
 
-    const aspectRatioClassNames = classnames([`${prefix}--aspect-ratio`], {
-      [`${prefix}--aspect-ratio--2x1`]: aspectRatio === '2:1',
-      [`${prefix}--aspect-ratio--1x1`]: aspectRatio === '1:1',
-      [`${prefix}--aspect-ratio--16x9`]: aspectRatio === '16:9',
-      [`${prefix}--aspect-ratio--4x3`]: aspectRatio === '4:3',
-    });
+  const carbonTileclassNames = classnames([`${prefix}--tile`], {
+    [`${prefix}--tile--clickable`]: href !== undefined,
+  });
 
-    const carbonTileclassNames = classnames([`${prefix}--tile`], {
-      [`${prefix}--tile--clickable`]: href !== undefined,
-    });
-
-    const cardContent = (
-      <>
-        {subTitle && (
-          <h5 className={`${prefix}--resource-card__subtitle`}>{subTitle}</h5>
-        )}
-        {title && (
-          <h4 className={`${prefix}--resource-card__title`}>{title}</h4>
-        )}
-        <div className={`${prefix}--resource-card__icon--img`}>{children}</div>
-        <div className={`${prefix}--resource-card__icon--action`}>
-          {actionIcon === 'launch' && !disabled ? (
-            <Launch20 aria-label="Open resource" />
-          ) : null}
-          {actionIcon === 'arrowRight' && !disabled ? (
-            <ArrowRight20 aria-label="Open resource" />
-          ) : null}
-          {actionIcon === 'download' && !disabled ? (
-            <Download20 aria-label="Download" />
-          ) : null}
-          {actionIcon === 'email' && !disabled ? (
-            <Email20 aria-label="Email" />
-          ) : null}
-          {actionIcon === 'disabled' || disabled === true ? (
-            <Error20 aria-label="disabled" />
-          ) : null}
-        </div>
-      </>
-    );
-
-    let cardContainer;
-    if (disabled === true || href === undefined) {
-      cardContainer = <div className={carbonTileclassNames}>{cardContent}</div>;
-    } else if (isLink === true) {
-      cardContainer = (
-        <Link to={href} className={carbonTileclassNames} {...rest}>
-          {cardContent}
-        </Link>
-      );
-    } else {
-      cardContainer = (
-        <a href={href} className={carbonTileclassNames} {...rest}>
-          {cardContent}
-        </a>
-      );
-    }
-
-    return (
-      <div className={ResourceCardClassNames}>
-        <div className={aspectRatioClassNames}>
-          <div className={`${prefix}--aspect-ratio--object`}>
-            {cardContainer}
+  const cardContent = (
+    <>
+      {type === 'mini' ? (
+        <div className={`${prefix}--resource-card__mini`}>
+          <div className={`${prefix}--resource-card__mini-content-wrapper`}>
+            <div className={`${prefix}--resource-card__mini-title`}>
+              {title}
+            </div>
+            <div className={`${prefix}--resource-card__mini-icon--img`}>
+              {children}
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <>
+          {subTitle && (
+            <h5 className={`${prefix}--resource-card__subtitle`}>{subTitle}</h5>
+          )}
+          {title && (
+            <h4 className={`${prefix}--resource-card__title`}>{title}</h4>
+          )}
+          <div className={`${prefix}--resource-card__icon--img`}>
+            {children}
+          </div>
+          <div className={`${prefix}--resource-card__icon--action`}>
+            {actionIcon === 'launch' && !disabled ? (
+              <Launch20 aria-label="Open resource" />
+            ) : null}
+            {actionIcon === 'arrowRight' && !disabled ? (
+              <ArrowRight20 aria-label="Open resource" />
+            ) : null}
+            {actionIcon === 'download' && !disabled ? (
+              <Download20 aria-label="Download" />
+            ) : null}
+            {actionIcon === 'email' && !disabled ? (
+              <Email20 aria-label="Email" />
+            ) : null}
+            {actionIcon === 'disabled' || disabled === true ? (
+              <Error20 aria-label="disabled" />
+            ) : null}
+          </div>
+        </>
+      )}
+    </>
+  );
+
+  let cardContainer;
+  if (disabled === true || href === undefined) {
+    cardContainer = <div className={carbonTileclassNames}>{cardContent}</div>;
+  } else if (isLink === true) {
+    cardContainer = (
+      <Link to={href} className={carbonTileclassNames} {...rest}>
+        {cardContent}
+      </Link>
+    );
+  } else {
+    cardContainer = (
+      <a href={href} className={carbonTileclassNames} {...rest}>
+        {cardContent}
+      </a>
     );
   }
-}
+
+  return (
+    <>
+      {type === 'mini' ? (
+        <>{cardContainer}</>
+      ) : (
+        <div {...rest} className={ResourceCardClassNames}>
+          <div className={aspectRatioClassNames}>
+            <div className={`${prefix}--aspect-ratio--object`}>
+              {cardContainer}
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
 
 ResourceCard.propTypes = {
   children: PropTypes.node,
@@ -150,11 +170,11 @@ ResourceCard.propTypes = {
    * Specify a custom class
    */
   className: PropTypes.string,
+
+  /**
+   * Specify mini card vs regular card
+   */
+  type: PropTypes.string,
 };
 
-ResourceCard.defaultProps = {
-  color: 'light',
-  disabled: false,
-  aspectRatio: '2:1',
-  actionIcon: 'launch',
-};
+export default ResourceCard;
