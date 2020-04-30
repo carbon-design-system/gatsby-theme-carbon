@@ -56,9 +56,29 @@ const ResourceCard = ({
             <div className={`${prefix}--resource-card__mini-title`}>
               {title}
             </div>
-            <div className={`${prefix}--resource-card__mini-icon--img`}>
-              {children}
-            </div>
+            {children === undefined ? (
+              <div>
+                {actionIcon === 'launch' && !disabled ? (
+                  <Launch20 aria-label="Open resource" />
+                ) : null}
+                {actionIcon === 'arrowRight' && !disabled ? (
+                  <ArrowRight20 aria-label="Open resource" />
+                ) : null}
+                {actionIcon === 'download' && !disabled ? (
+                  <Download20 aria-label="Download" />
+                ) : null}
+                {actionIcon === 'email' && !disabled ? (
+                  <Email20 aria-label="Email" />
+                ) : null}
+                {actionIcon === 'disabled' || disabled === true ? (
+                  <Error20 aria-label="disabled" />
+                ) : null}
+              </div>
+            ) : (
+              <div className={`${prefix}--resource-card__mini-icon--img`}>
+                {children}
+              </div>
+            )}
           </div>
         </div>
       ) : (
