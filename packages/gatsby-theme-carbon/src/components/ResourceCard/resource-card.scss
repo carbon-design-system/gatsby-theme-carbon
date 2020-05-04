@@ -129,12 +129,13 @@
 .#{$prefix}--resource-card__mini-content-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-right: $spacing-05;
   padding-left: $spacing-05;
 }
 
 .#{$prefix}--resource-card__mini-title {
-  @include carbon--type-style("body-short-02");
+  @include carbon--type-style("body-long-02");
 }
 
 .#{$prefix}--resource-card__mini-icon--img {

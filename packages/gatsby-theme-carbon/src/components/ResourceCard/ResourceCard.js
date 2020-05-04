@@ -57,7 +57,7 @@ const ResourceCard = ({
               {title}
             </div>
             {children === undefined ? (
-              <div>
+              <div style={{ height: '20px' }}>
                 {actionIcon === 'launch' && !disabled ? (
                   <Launch20 aria-label="Open resource" />
                 ) : null}

@@ -13,49 +13,6 @@ The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<R
 
 <Row className="resource-card-group">
 <Column colMd={4} colLg={4} noGutterSm>
-<ResourceCard
-  type="mini"
-  subTitle="With subtitle"
-  title="nuts"
-  aspectRatio="2:1"
-  actionIcon="arrowRight"
-  href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-  >
-
-</ResourceCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
-<ResourceCard
-  type="mini"
-  subTitle="With subtitle"
-  title="This is my Title2"
-  aspectRatio="2:1"
-  actionIcon="arrowRight"
-  href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-  >
-
-![Sketch icon](/images/sketch-icon.png)
-
-</ResourceCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
-<ResourceCard
-  type="mini"
-  subTitle="With subtitle"
-  title="This is my Title3"
-  aspectRatio="2:1"
-  actionIcon="arrowRight"
-  href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-  >
-
-![Sketch icon](/images/sketch-icon.png)
-
-</ResourceCard>
-</Column>
-</Row>
-
-<Row className="resource-card-group">
-<Column colMd={4} colLg={4} noGutterSm>
     <ResourceCard
       subTitle="With subtitle"
       title="Title"
@@ -105,6 +62,61 @@ The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<R
 ![Sketch icon](/images/sketch-icon.png)
 
   </ResourceCard>
+</Column>
+</Row>
+
+<Title>Mini</Title>
+
+<Row className="resource-card-group">
+<Column colMd={4} colLg={4} noGutterSm>
+<ResourceCard
+  type="mini"
+  title="26 characters in a title"
+  actionIcon="arrowRight"
+  href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  >
+
+</ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+<ResourceCard
+  type="mini"
+  title="Bring your own icon"
+  href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  >
+
+![Sketch icon](/images/sketch-icon.png)
+
+</ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+<ResourceCard
+  type="mini"
+  title="Or use actionIcons"
+  actionIcon="launch"
+  href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  >
+
+</ResourceCard>
+</Column>
+</Row>
+
+<Row>
+<Column colLg={8}>
+
+When you have the mini resource card sitting aside the main content, be sure to add the `noGutterSmYesGutterLg` property to the `<Column>`.
+
+</Column>
+<Column colMd={4} colLg={4} noGutterSmYesGutterLg>
+<ResourceCard
+  type="mini"
+  title="By itself"
+  href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  >
+
+![Sketch icon](/images/sketch-icon.png)
+
+</ResourceCard>
 </Column>
 </Row>
 
@@ -194,6 +206,61 @@ The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<R
 </Column>
 ```
 
+<Title>Mini</Title>
+
+```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
+<Row className="resource-card-group">
+  <Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      type="mini"
+      title="26 characters in a title"
+      actionIcon="arrowRight"
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+    ></ResourceCard>
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      type="mini"
+      title="Bring your own icon"
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+    >
+      ![Sketch icon](/images/sketch-icon.png)
+    </ResourceCard>
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      type="mini"
+      title="Or use actionIcons"
+      actionIcon="launch"
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+    ></ResourceCard>
+  </Column>
+</Row>
+```
+
+<Title>Mini aside</Title>
+
+```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
+<Row>
+<Column colLg={8}>
+
+When you have the mini resource card sitting aside the main content, be sure to add the `noGutterSmYesGutterLg` property to the `<Column>`.
+
+</Column>
+<Column colMd={4} colLg={4} noGutterSmYesGutterLg>
+<ResourceCard
+  type="mini"
+  title="By itself"
+  href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  >
+
+![Sketch icon](/images/sketch-icon.png)
+
+</ResourceCard>
+</Column>
+</Row>
+```
+
 ### Props
 
 | property    | propType | required | default  | description                                                                                         |
@@ -207,3 +274,4 @@ The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<R
 | color       | string   |          | light    | Set to `dark` for dark background                                                                   |
 | disabled    | bool     |          | false    | Set for disabled card                                                                               |
 | className   | string   |          |          | Add custom class name                                                                               |
+| type        | string   |          |          | Set to `mini` to turn enable the mini resource card                                                 |
