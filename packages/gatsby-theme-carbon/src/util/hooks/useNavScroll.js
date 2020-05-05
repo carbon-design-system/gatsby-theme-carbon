@@ -5,13 +5,12 @@ const useNavScroll = (sideNavRef) => {
   const { updateNavScrollOffset } = useContext(NavContext);
 
   useEffect(() => {
-    // const sideNav = document.querySelector('ul.bx--side-nav__items');
     const sideNav = sideNavRef.current.querySelector('ul.sidenav-list');
 
     return () => {
       updateNavScrollOffset(sideNav.scrollTop, 'update-nav-scroll');
     };
-  }, []);
+  }, []); // empty array throws lint warning, but without it the sidenav scroll starts glitching
 };
 
 export default useNavScroll;
