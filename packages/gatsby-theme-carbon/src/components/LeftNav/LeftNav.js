@@ -13,15 +13,15 @@ import { sideNavDark } from './LeftNav.module.scss';
 import { useNavScroll } from '../../util/hooks';
 
 const LeftNav = (props) => {
-  const { leftNavIsOpen, scrollOffset } = useContext(NavContext);
+  const { leftNavIsOpen, leftNavScrollOffset } = useContext(NavContext);
   const sideNavRef = useRef();
 
   useNavScroll(sideNavRef);
 
   useEffect(() => {
     const sideNav = sideNavRef.current.querySelector('ul.sidenav-list');
-    sideNav.scrollTop = scrollOffset;
-  }, [sideNavRef, scrollOffset]);
+    sideNav.scrollTop = leftNavScrollOffset;
+  }, [sideNavRef, leftNavScrollOffset]);
 
   const navItems = useNavItems();
 

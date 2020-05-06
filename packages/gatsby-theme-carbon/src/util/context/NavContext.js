@@ -5,7 +5,7 @@ const NavContext = React.createContext({
   searchIsOpen: false,
   switcherIsOpen: false,
   isManagingFocus: false,
-  scrollOffset: 0,
+  leftNavScrollOffset: 0,
 });
 
 const reducer = (state, action) => {
@@ -15,20 +15,20 @@ const reducer = (state, action) => {
     case 'close':
       return { ...state, [action.nav]: false };
     case 'update-nav-scroll':
-      return { scrollOffset: action.payload };
+      return { leftNavScrollOffset: action.payload };
     default:
       return { ...state, [action.nav]: !state[action.nav] };
   }
 };
 export const NavContextProvider = ({ children }) => {
   const [
-    { leftNavIsOpen, searchIsOpen, switcherIsOpen, scrollOffset },
+    { leftNavIsOpen, searchIsOpen, switcherIsOpen, leftNavScrollOffset },
     dispatch,
   ] = useReducer(reducer, {
     leftNavIsOpen: false,
     searchIsOpen: false,
     switcherIsOpen: false,
-    scrollOffset: 0,
+    leftNavScrollOffset: 0,
   });
 
   const toggleNavState = (nav, type) => {
@@ -48,7 +48,7 @@ export const NavContextProvider = ({ children }) => {
     toggleNavState,
     isManagingFocus,
     setIsManagingFocus,
-    scrollOffset,
+    leftNavScrollOffset,
     updateNavScrollOffset,
   };
 

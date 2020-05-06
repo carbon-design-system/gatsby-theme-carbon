@@ -10,7 +10,8 @@ const useNavScroll = (sideNavRef) => {
     return () => {
       updateNavScrollOffset(sideNav.scrollTop, 'update-nav-scroll');
     };
-  }, []); // empty array throws lint warning, but without it the sidenav scroll starts glitching
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  // empty array throws lint warning, but without it the sidenav scroll starts glitching
 };
 
 export default useNavScroll;
