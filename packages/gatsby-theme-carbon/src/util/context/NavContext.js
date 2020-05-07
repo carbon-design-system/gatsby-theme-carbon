@@ -14,8 +14,6 @@ const reducer = (state, action) => {
       return { ...state, [action.nav]: true };
     case 'close':
       return { ...state, [action.nav]: false };
-    case 'update-nav-scroll':
-      return { leftNavScrollOffset: action.payload };
     default:
       return { ...state, [action.nav]: !state[action.nav] };
   }
@@ -28,8 +26,9 @@ export const NavContextProvider = ({ children }) => {
     leftNavIsOpen: false,
     searchIsOpen: false,
     switcherIsOpen: false,
-    leftNavScrollOffset: 0,
   });
+
+  const [leftNavScrollTop, setLeftNavScrollTop] = useState(0);
 
   const toggleNavState = (nav, type) => {
     dispatch({ nav, type });
@@ -50,6 +49,8 @@ export const NavContextProvider = ({ children }) => {
     setIsManagingFocus,
     leftNavScrollOffset,
     updateNavScrollOffset,
+    leftNavScrollTop,
+    setLeftNavScrollTop,
   };
 
   return <NavContext.Provider value={value}>{children}</NavContext.Provider>;

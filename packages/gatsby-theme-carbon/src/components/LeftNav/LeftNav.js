@@ -10,18 +10,33 @@ import LeftNavResourceLinks from './ResourceLinks';
 import LeftNavWrapper from './LeftNavWrapper';
 import { sideNavDark } from './LeftNav.module.scss';
 
-import { useNavScroll } from '../../util/hooks';
-
 const LeftNav = (props) => {
-  const { leftNavIsOpen, leftNavScrollOffset } = useContext(NavContext);
-  const sideNavRef = useRef();
+  const { leftNavIsOpen, leftNavScrollTop, setLeftNavScrollTop } = useContext(
+    NavContext
+  );
 
-  useNavScroll(sideNavRef);
+  const sideNavRef = useRef();
+  const sideNavListRef = useRef();
 
   useEffect(() => {
-    const sideNav = sideNavRef.current.querySelector('ul.sidenav-list');
-    sideNav.scrollTop = leftNavScrollOffset;
-  }, [sideNavRef, leftNavScrollOffset]);
+    sideNavListRef.current = sideNavRef.current.querySelector('.sidenav-list');
+  }, []);
+
+  useEffect(() => {
+    sideNavListRef.current.addEventListener('scroll', (e) => {
+      setLeftNavScrollTop(e.target.scrollTop);
+    });
+  }, [setLeftNavScrollTop]);
+
+  useEffect(() => {
+    if (
+      leftNavScrollTop >= 0 &&
+      sideNavListRef.current &&
+      sideNavListRef.current.scrollTop !== leftNavScrollTop
+    ) {
+      sideNavListRef.current.scrollTop = leftNavScrollTop;
+    }
+  }, [leftNavScrollTop]);
 
   const navItems = useNavItems();
 
