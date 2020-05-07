@@ -29,11 +29,7 @@ const LeftNav = (props) => {
   }, [setLeftNavScrollTop]);
 
   useEffect(() => {
-    if (
-      leftNavScrollTop >= 0 &&
-      sideNavListRef.current &&
-      sideNavListRef.current.scrollTop !== leftNavScrollTop
-    ) {
+    if (leftNavScrollTop >= 0 && !sideNavListRef?.current.scrollTop) {
       sideNavListRef.current.scrollTop = leftNavScrollTop;
     }
   }, [leftNavScrollTop]);
