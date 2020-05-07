@@ -1,0 +1,5 @@
+a.bx--header__name {
+  @include breakpoint("lg") {
+    margin-left: 1rem;
+  }
+}

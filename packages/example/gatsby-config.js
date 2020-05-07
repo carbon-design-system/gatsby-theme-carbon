@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Theme Carbon',
+    title: 'Gatsby Theme TESTING',
     description: 'A Gatsby theme for the carbon design system',
     keywords: 'gatsby,theme,carbon',
   },

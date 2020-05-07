@@ -10,65 +10,65 @@
 - title: Contributions
   pages:
     - path: /contributions
-- title: Guides
-  pages:
-    - title: Configuration
-      path: /guides/configuration
-    - title: Authoring MDX
-      path: /guides/MDX
-    - title: Shadowing
-      path: /guides/shadowing
-    - title: Styling
-      path: /guides/styling
-    - title: Navigation
-      path: /guides/navigation/sidebar
-    - title: npm scripts
-      path: /guides/npm-scripts
-- title: Components
-  pages:
-    - title: Accordion
-      path: /components/Accordion
-    - title: AnchorLinks
-      path: /components/AnchorLinks
-    - title: ArtDirection
-      path: /components/ArtDirection
-    - title: ArticleCard
-      path: /components/ArticleCard
-    - title: Aside
-      path: /components/Aside
-    - title: Caption
-      path: /components/Caption
-    - title: Code blocks
-      path: /components/code-blocks
-    - title: DoDontExample
-      path: /components/DoDontExample
-    - title: DoDontRow
-      path: /components/DoDontRow
-    - title: FeatureCard
-      path: /components/FeatureCard
-    - title: FeedbackDialog
-      path: /components/FeedbackDialog
-    - title: GifPlayer
-      path: /components/GifPlayer
-    - title: Grid
-      path: /components/Grid
-    - title: ImageCard
-      path: /components/ImageCard
-    - title: ImageGallery
-      path: /components/ImageGallery
-    - title: InlineNotification
-      path: /components/InlineNotification
-    - title: Markdown
-      path: /components/markdown
-    - title: MediumPosts
-      path: /components/MediumPosts
-    - title: PageDescription
-      path: /components/PageDescription
-    - title: ResourceCard
-      path: /components/ResourceCard
-    - title: Tabs
-      path: /components/Tabs
-    - title: Title
-      path: /components/Title
-    - title: Video
-      path: /components/Video
+# - title: Guides
+#   pages:
+#     - title: Configuration
+#       path: /guides/configuration
+#     - title: Authoring MDX
+#       path: /guides/MDX
+#     - title: Shadowing
+#       path: /guides/shadowing
+#     - title: Styling
+#       path: /guides/styling
+#     - title: Navigation
+#       path: /guides/navigation/sidebar
+#     - title: npm scripts
+#       path: /guides/npm-scripts
+# - title: Components
+#   pages:
+#     - title: Accordion
+#       path: /components/Accordion
+#     - title: AnchorLinks
+#       path: /components/AnchorLinks
+#     - title: ArtDirection
+#       path: /components/ArtDirection
+#     - title: ArticleCard
+#       path: /components/ArticleCard
+#     - title: Aside
+#       path: /components/Aside
+#     - title: Caption
+#       path: /components/Caption
+#     - title: Code blocks
+#       path: /components/code-blocks
+#     - title: DoDontExample
+#       path: /components/DoDontExample
+#     - title: DoDontRow
+#       path: /components/DoDontRow
+#     - title: FeatureCard
+#       path: /components/FeatureCard
+#     - title: FeedbackDialog
+#       path: /components/FeedbackDialog
+#     - title: GifPlayer
+#       path: /components/GifPlayer
+#     - title: Grid
+#       path: /components/Grid
+#     - title: ImageCard
+#       path: /components/ImageCard
+#     - title: ImageGallery
+#       path: /components/ImageGallery
+#     - title: InlineNotification
+#       path: /components/InlineNotification
+#     - title: Markdown
+#       path: /components/markdown
+#     - title: MediumPosts
+#       path: /components/MediumPosts
+#     - title: PageDescription
+#       path: /components/PageDescription
+#     - title: ResourceCard
+#       path: /components/ResourceCard
+#     - title: Tabs
+#       path: /components/Tabs
+#     - title: Title
+#       path: /components/Title
+#     - title: Video
+#       path: /components/Video

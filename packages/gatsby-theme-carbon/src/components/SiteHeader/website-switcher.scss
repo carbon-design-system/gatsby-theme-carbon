@@ -1,0 +1,105 @@
+//temporary file until we can update to theme
+
+.bx--header__action--switcher {
+  border: rem(2px) solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bx--website-switcher {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: rem(256px);
+  background-color: $ibm-colors--gray-100;
+  height: 100%;
+  z-index: 1000;
+  transform: translate(16rem);
+  will-change: transform;
+  transition: transform 0.11s cubic-bezier(0.2, 0, 1, 0.9);
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-left: 1px solid $ibm-colors--gray-80;
+}
+
+.bx--header ~ .bx--website-switcher {
+  top: 3rem;
+}
+
+.bx--website-switcher--expanded {
+  transform: translate(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bx--website-switcher-list__item:first-child,
+.bx--website-switcher-list__item:nth-last-child(4) {
+  margin-top: 1rem;
+}
+
+.bx--website-switcher-list__item:nth-child(3),
+.bx--website-switcher-list__item:nth-last-child(5) {
+  position: relative;
+  margin-bottom: 3.95rem;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3.45rem;
+    width: rem(222px);
+    margin-left: 1rem;
+    border-top: 1px solid $ibm-colors--gray-70;
+  }
+}
+
+.bx--website-switcher-list__item:nth-child(4),
+.bx--website-switcher-list__item:nth-child(8) {
+  position: relative;
+
+  &::before {
+    content: "Design disciplines";
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 0.32px;
+    color: #bebebe;
+    position: absolute;
+    margin-left: 1rem;
+    top: -1.8rem;
+  }
+}
+
+.bx--website-switcher-list__item:nth-child(8)::before {
+  content: "Design practices";
+}
+
+.bx--website-switcher-list__item:nth-last-child(5) {
+  margin-top: 0;
+}
+
+.bx--website-switcher-list__item-link {
+  @include type-style("heading-01");
+  display: block;
+  text-decoration: none;
+  padding: rem(6px) 1rem;
+  color: $ibm-colors--gray-30;
+
+  &:hover {
+    background: #353535;
+    color: $ibm-colors--gray-10;
+  }
+
+  &:focus {
+    outline: 2px solid $shell-side-nav-accent-01;
+    outline-offset: -2px;
+  }
+}
+
+.bx--website-switcher-list__item:nth-child(7)
+  .bx--website-switcher-list__item-link {
+  color: #6f6f6f;
+  cursor: default;
+  background: transparent;
+  outline: none;
+}

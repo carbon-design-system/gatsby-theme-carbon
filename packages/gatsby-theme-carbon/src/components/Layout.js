@@ -1,9 +1,10 @@
 /* eslint-disable import/no-unresolved */
 import React, { useLayoutEffect } from 'react';
 
-import LeftNav from './LeftNav';
+// import LeftNav from './LeftNav';
 import Meta from './Meta';
-import Header from './Header';
+import SiteHeader from './SiteHeader';
+// import Header from './Header';
 import Switcher from './Switcher';
 import Footer from './Footer';
 import Container from './Container';
@@ -43,9 +44,10 @@ const Layout = ({
         pageDescription={pageDescription}
         pageKeywords={pageKeywords}
       />
-      <Header />
+      <SiteHeader />
+      {/* <Header /> */}
       <Switcher />
-      <LeftNav homepage={homepage} is404Page={is404} theme={theme} />
+      {/* <LeftNav homepage={homepage} is404Page={is404} theme={theme} /> */}
       <Container homepage={homepage} theme={theme}>
         {children}
         <Footer />
