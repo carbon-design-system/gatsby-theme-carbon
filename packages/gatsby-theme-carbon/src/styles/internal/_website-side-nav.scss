@@ -150,7 +150,7 @@
   a.#{$prefix}--side-nav__link:not(.#{$prefix}--side-nav__link--current):not([aria-current="page"]):hover,
 .#{$prefix}--side-nav__item:not(.#{$prefix}--side-nav__item--active):hover
   > .#{$prefix}--side-nav__link {
-  background-color: #eed026;
+  background-color: #353535;
   color: $ui-01;
 
   .#{$prefix}--side-nav__link-text {

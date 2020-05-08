@@ -7,13 +7,13 @@ import {
   HeaderNavigation,
   HeaderMenuButton,
 } from 'carbon-components-react/lib/components/UIShell';
-import SiteHeaderItem from './SiteHeaderItem';
+import HeaderNavItem from './HeaderNavItem';
 
 // import LeftNavResourceLinks from '../LeftNav/ResourceLinks';
 
 import { useNavItems } from '../LeftNav/LeftNavItemProvider';
 
-const SiteHeader = ({ isNavExpanded, onToggleNav }) => {
+const HeaderNav = ({ isNavExpanded, onToggleNav }) => {
   const navItems = useNavItems();
 
   return (
@@ -28,7 +28,7 @@ const SiteHeader = ({ isNavExpanded, onToggleNav }) => {
       </HeaderName>
       <HeaderNavigation aria-label="IBM [Platform]">
         {navItems.map((item, i) => (
-          <SiteHeaderItem items={item.pages} category={item.title} key={i} />
+          <HeaderNavItem items={item.pages} category={item.title} key={i} />
         ))}
         {/* <LeftNavResourceLinks /> */}
       </HeaderNavigation>
@@ -36,7 +36,7 @@ const SiteHeader = ({ isNavExpanded, onToggleNav }) => {
   );
 };
 
-SiteHeader.propTypes = {
+HeaderNav.propTypes = {
   /**
    * Specify whether the side navigation is expanded or collapsed
    */
@@ -60,4 +60,4 @@ SiteHeader.propTypes = {
   // onToggleSwitcher: PropTypes.func.isRequired,
 };
 
-export default SiteHeader;
+export default HeaderNav;

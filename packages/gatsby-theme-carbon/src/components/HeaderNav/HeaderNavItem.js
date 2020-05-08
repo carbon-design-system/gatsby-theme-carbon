@@ -3,18 +3,17 @@ import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { Location } from '@reach/router';
 import cx from 'classnames';
-import { SideNavLink } from 'carbon-components-react';
 
 import {
   HeaderMenu,
   HeaderMenuItem,
 } from 'carbon-components-react/lib/components/UIShell';
-import styles, { currentItem } from './SiteHeader.module.scss';
+import styles, { currentItem } from './HeaderNav.module.scss';
 
 import NavContext from '../../util/context/NavContext';
 import usePathprefix from '../../util/hooks/usePathprefix';
 
-const SiteHeaderItem = (props) => {
+const HeaderNavItem = (props) => {
   const { items, category } = props;
   const { toggleNavState } = useContext(NavContext);
   const closeLeftNav = () => toggleNavState('leftNavIsOpen', 'close');
@@ -51,6 +50,7 @@ const SiteHeaderItem = (props) => {
             isActive={isActive} // TODO similar categories
             defaultExpanded={isActive}
             title={category}
+            menuLinkName={category}
           >
             <TabItems
               onClick={closeLeftNav}
@@ -90,10 +90,9 @@ const TabItems = ({ items, pathname, onClick }) =>
           })}
         >
           {item.title}
-          {console.log(item.title)}
         </span>
       </HeaderMenuItem>
     );
   });
 
-export default SiteHeaderItem;
+export default HeaderNavItem;

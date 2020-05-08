@@ -1,11 +1,6 @@
 - title: Get started
   pages:
-    - title: About Carbon
-      path: /get-started/about-carbon
-    - title: Design
-      path: /get-started/design/sketch
-    - title: Develop
-      path: /get-started/develop/react
+    - path: /getting-started
 - title: Demo
   pages:
     - path: /demo
@@ -15,12 +10,12 @@
 - title: Contributions
   pages:
     - path: /contributions
-# - title: Guides
-#   pages:
-#     - title: Configuration
-#       path: /guides/configuration
-#     - title: Authoring MDX
-#       path: /guides/MDX
+- title: Guides
+  pages:
+    - title: Configuration
+      path: /guides/configuration
+    - title: Authoring MDX
+      path: /guides/MDX
 #     - title: Shadowing
 #       path: /guides/shadowing
 #     - title: Styling

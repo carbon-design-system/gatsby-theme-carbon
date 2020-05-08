@@ -1,9 +1,9 @@
 /* eslint-disable import/no-unresolved */
 import React, { useLayoutEffect } from 'react';
 
-// import LeftNav from './LeftNav';
 import Meta from './Meta';
-import SiteHeader from './SiteHeader';
+import HeaderNav from './HeaderNav';
+// import LeftNav from './LeftNav';
 // import Header from './Header';
 import Switcher from './Switcher';
 import Footer from './Footer';
@@ -44,7 +44,7 @@ const Layout = ({
         pageDescription={pageDescription}
         pageKeywords={pageKeywords}
       />
-      <SiteHeader homepage={homepage} is404Page={is404} theme={theme} />
+      <HeaderNav homepage={homepage} is404Page={is404} theme={theme} />
       {/* <Header /> */}
       <Switcher />
       {/* <LeftNav homepage={homepage} is404Page={is404} theme={theme} /> */}
