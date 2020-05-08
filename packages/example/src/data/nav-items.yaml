@@ -1,6 +1,11 @@
-- title: Getting started
+- title: Get started
   pages:
-    - path: /getting-started
+    - title: About Carbon
+      path: /get-started/about-carbon
+    - title: Design
+      path: /get-started/design/sketch
+    - title: Develop
+      path: /get-started/develop/react
 - title: Demo
   pages:
     - path: /demo
