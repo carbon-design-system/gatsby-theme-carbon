@@ -44,7 +44,7 @@ const Layout = ({
         pageDescription={pageDescription}
         pageKeywords={pageKeywords}
       />
-      <SiteHeader />
+      <SiteHeader homepage={homepage} is404Page={is404} theme={theme} />
       {/* <Header /> */}
       <Switcher />
       {/* <LeftNav homepage={homepage} is404Page={is404} theme={theme} /> */}

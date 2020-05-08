@@ -9,7 +9,7 @@ import {
 } from 'carbon-components-react/lib/components/UIShell';
 import SiteHeaderItem from './SiteHeaderItem';
 
-import LeftNavResourceLinks from '../LeftNav/ResourceLinks';
+// import LeftNavResourceLinks from '../LeftNav/ResourceLinks';
 
 import { useNavItems } from '../LeftNav/LeftNavItemProvider';
 
@@ -30,7 +30,7 @@ const SiteHeader = ({ isNavExpanded, onToggleNav }) => {
         {navItems.map((item, i) => (
           <SiteHeaderItem items={item.pages} category={item.title} key={i} />
         ))}
-        <LeftNavResourceLinks />
+        {/* <LeftNavResourceLinks /> */}
       </HeaderNavigation>
     </Header>
   );

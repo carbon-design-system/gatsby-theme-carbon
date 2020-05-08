@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+
 import { Link } from 'gatsby';
 import { Location } from '@reach/router';
 import cx from 'classnames';
@@ -32,7 +33,7 @@ const SiteHeaderItem = (props) => {
 
         if (items.length === 1) {
           return (
-            <SideNavLink
+            <HeaderMenuItem
               onClick={closeLeftNav}
               icon={<span>dummy icon</span>}
               element={Link}
@@ -41,7 +42,7 @@ const SiteHeaderItem = (props) => {
               to={`${items[0].path}`}
             >
               {category}
-            </SideNavLink>
+            </HeaderMenuItem>
           );
         }
         return (
@@ -51,12 +52,11 @@ const SiteHeaderItem = (props) => {
             defaultExpanded={isActive}
             title={category}
           >
-            <SubNavItems
+            <TabItems
               onClick={closeLeftNav}
               items={items}
               pathname={pathname}
             />
-            {console.log(items)}
           </HeaderMenu>
         );
       }}
@@ -64,8 +64,9 @@ const SiteHeaderItem = (props) => {
   );
 };
 
-const SubNavItems = ({ items, pathname, onClick }) =>
+const TabItems = ({ items, pathname, onClick }) =>
   items.map((item, i) => {
+    console.log(item);
     const hasActiveTab =
       item.path.split('/') > 3
         ? item.path.split('/')[3] === pathname.split('/')[3]
@@ -82,12 +83,14 @@ const SubNavItems = ({ items, pathname, onClick }) =>
         isActive={hasActiveTab}
         key={i}
       >
+        {console.log('link', item.path)}
         <span
           className={cx(styles.linkText, {
             [styles.linkText__active]: hasActiveTab,
           })}
         >
           {item.title}
+          {console.log(item.title)}
         </span>
       </HeaderMenuItem>
     );
