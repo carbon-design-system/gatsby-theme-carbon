@@ -41,6 +41,10 @@ body {
   transition: none !important;
 }
 
+::-moz-focus-inner {
+  border: 0;
+}
+
 //---------------------------------------
 // CSS reset overrides
 //---------------------------------------
