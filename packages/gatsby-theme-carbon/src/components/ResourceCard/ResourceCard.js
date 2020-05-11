@@ -37,83 +37,64 @@ const ResourceCard = ({
     [`${prefix}--resource-card--dark`]: color === 'dark',
   });
 
-  const aspectRatioClassNames = classnames([`${prefix}--aspect-ratio`], {
-    [`${prefix}--aspect-ratio--2x1`]: aspectRatio === '2:1',
-    [`${prefix}--aspect-ratio--1x1`]: aspectRatio === '1:1',
-    [`${prefix}--aspect-ratio--16x9`]: aspectRatio === '16:9',
-    [`${prefix}--aspect-ratio--4x3`]: aspectRatio === '4:3',
-  });
+  // Finds a ":" in the aspectRatio prop and turns it into an "x" so the class is rendered correctly
+  const swapColonForX = aspectRatio.replace(/:/g, 'x');
+
+  const aspectRatioClassNames = classnames(
+    `${prefix}--aspect-ratio`,
+    `${prefix}--aspect-ratio--${swapColonForX}`
+  );
 
   const carbonTileclassNames = classnames([`${prefix}--tile`], {
     [`${prefix}--tile--clickable`]: href !== undefined,
   });
 
-  const cardContent = (
+  const icons = (
     <>
-      {type === 'mini' ? (
-        <div className={`${prefix}--resource-card__mini`}>
-          <div className={`${prefix}--resource-card__mini-content-wrapper`}>
-            <div className={`${prefix}--resource-card__mini-title`}>
-              {title}
-            </div>
-            {children === undefined ? (
-              <div style={{ height: '20px' }}>
-                {actionIcon === 'launch' && !disabled ? (
-                  <Launch20 aria-label="Open resource" />
-                ) : null}
-                {actionIcon === 'arrowRight' && !disabled ? (
-                  <ArrowRight20 aria-label="Open resource" />
-                ) : null}
-                {actionIcon === 'download' && !disabled ? (
-                  <Download20 aria-label="Download" />
-                ) : null}
-                {actionIcon === 'email' && !disabled ? (
-                  <Email20 aria-label="Email" />
-                ) : null}
-                {actionIcon === 'disabled' || disabled === true ? (
-                  <Error20 aria-label="disabled" />
-                ) : null}
-              </div>
-            ) : (
-              <div className={`${prefix}--resource-card__mini-icon--img`}>
-                {children}
-              </div>
-            )}
-          </div>
-        </div>
-      ) : (
-        <>
-          {subTitle && (
-            <h5 className={`${prefix}--resource-card__subtitle`}>{subTitle}</h5>
-          )}
-          {title && (
-            <h4 className={`${prefix}--resource-card__title`}>{title}</h4>
-          )}
-          <div className={`${prefix}--resource-card__icon--img`}>
-            {children}
-          </div>
-          <div className={`${prefix}--resource-card__icon--action`}>
-            {actionIcon === 'launch' && !disabled ? (
-              <Launch20 aria-label="Open resource" />
-            ) : null}
-            {actionIcon === 'arrowRight' && !disabled ? (
-              <ArrowRight20 aria-label="Open resource" />
-            ) : null}
-            {actionIcon === 'download' && !disabled ? (
-              <Download20 aria-label="Download" />
-            ) : null}
-            {actionIcon === 'email' && !disabled ? (
-              <Email20 aria-label="Email" />
-            ) : null}
-            {actionIcon === 'disabled' || disabled === true ? (
-              <Error20 aria-label="disabled" />
-            ) : null}
-          </div>
-        </>
-      )}
+      {actionIcon === 'launch' && !disabled ? (
+        <Launch20 aria-label="Open resource" />
+      ) : null}
+      {actionIcon === 'arrowRight' && !disabled ? (
+        <ArrowRight20 aria-label="Open resource" />
+      ) : null}
+      {actionIcon === 'download' && !disabled ? (
+        <Download20 aria-label="Download" />
+      ) : null}
+      {actionIcon === 'email' && !disabled ? (
+        <Email20 aria-label="Email" />
+      ) : null}
+      {actionIcon === 'disabled' || disabled === true ? (
+        <Error20 aria-label="disabled" />
+      ) : null}
     </>
   );
 
+  const cardContent =
+    type === 'mini' ? (
+      <div className={`${prefix}--resource-card__mini`}>
+        <div className={`${prefix}--resource-card__mini-content-wrapper`}>
+          <div className={`${prefix}--resource-card__mini-title`}>{title}</div>
+          {children === undefined ? (
+            <div style={{ height: '20px' }}>{icons}</div>
+          ) : (
+            <div className={`${prefix}--resource-card__mini-icon--img`}>
+              {children}
+            </div>
+          )}
+        </div>
+      </div>
+    ) : (
+      <>
+        {subTitle && (
+          <h5 className={`${prefix}--resource-card__subtitle`}>{subTitle}</h5>
+        )}
+        {title && (
+          <h4 className={`${prefix}--resource-card__title`}>{title}</h4>
+        )}
+        <div className={`${prefix}--resource-card__icon--img`}>{children}</div>
+        <div className={`${prefix}--resource-card__icon--action`}>{icons}</div>
+      </>
+    );
   let cardContainer;
   if (disabled === true || href === undefined) {
     cardContainer = <div className={carbonTileclassNames}>{cardContent}</div>;
@@ -131,20 +112,14 @@ const ResourceCard = ({
     );
   }
 
-  return (
-    <>
-      {type === 'mini' ? (
-        <>{cardContainer}</>
-      ) : (
-        <div {...rest} className={ResourceCardClassNames}>
-          <div className={aspectRatioClassNames}>
-            <div className={`${prefix}--aspect-ratio--object`}>
-              {cardContainer}
-            </div>
-          </div>
-        </div>
-      )}
-    </>
+  return type === 'mini' ? (
+    cardContainer
+  ) : (
+    <div {...rest} className={ResourceCardClassNames}>
+      <div className={aspectRatioClassNames}>
+        <div className={`${prefix}--aspect-ratio--object`}>{cardContainer}</div>
+      </div>
+    </div>
   );
 };
 
