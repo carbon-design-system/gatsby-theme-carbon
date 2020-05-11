@@ -44,9 +44,9 @@
 }
 
 // Display image at square aspect ratio only on mobile
-.#{$prefix}--feature-card__img.#{$prefix}--aspect-ratio--1x1 {
+.#{$prefix}--feature-card__img.#{$prefix}--aspect-ratio--1x1::before {
   @include carbon--breakpoint("md") {
-    padding-bottom: 0;
+    padding-top: 0;
   }
 }
 
