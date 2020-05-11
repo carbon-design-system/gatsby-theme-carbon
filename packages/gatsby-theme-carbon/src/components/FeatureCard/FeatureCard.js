@@ -36,7 +36,7 @@ export default class FeatureCard extends React.Component {
         <Row>
           <Column noGutterMdLeft>
             <div
-              className={`${prefix}--feature-card__img ${prefix}--aspect-ratio--1x1`}
+              className={`${prefix}--aspect-ratio ${prefix}--feature-card__img ${prefix}--aspect-ratio--1x1`}
             >
               <div
                 className={`${prefix}--aspect-ratio--object ${prefix}--feature-background`}
