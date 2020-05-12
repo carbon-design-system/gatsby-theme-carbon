@@ -19,7 +19,7 @@ export default class AnchorLinks extends React.Component {
 
     return (
       <ul className={classNames}>
-        {children.map((link, i) => (
+        {React.Children.map(children, (link, i) => (
           <li key={i} className={item}>
             {link}
           </li>
