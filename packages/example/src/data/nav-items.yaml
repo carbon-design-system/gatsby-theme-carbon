@@ -12,8 +12,6 @@
     - path: /contributions
 - title: Guides
   pages:
-    - title: Accordion
-      path: /guides/Accordion
     - title: Configuration
       path: /guides/configuration
     - title: Authoring MDX
