@@ -34,10 +34,6 @@ export const NavContextProvider = ({ children }) => {
     dispatch({ nav, type });
   };
 
-  const updateNavScrollOffset = (payload, type) => {
-    dispatch({ payload, type });
-  };
-
   const [isManagingFocus, setIsManagingFocus] = useState(false);
 
   const value = {
@@ -48,7 +44,6 @@ export const NavContextProvider = ({ children }) => {
     isManagingFocus,
     setIsManagingFocus,
     leftNavScrollOffset,
-    updateNavScrollOffset,
     leftNavScrollTop,
     setLeftNavScrollTop,
   };
