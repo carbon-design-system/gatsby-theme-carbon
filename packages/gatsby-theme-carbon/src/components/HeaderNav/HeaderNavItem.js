@@ -66,7 +66,6 @@ const HeaderNavItem = (props) => {
 
 const TabItems = ({ items, pathname, onClick }) =>
   items.map((item, i) => {
-    console.log(item);
     const hasActiveTab =
       item.path.split('/') > 3
         ? item.path.split('/')[3] === pathname.split('/')[3]
@@ -83,7 +82,6 @@ const TabItems = ({ items, pathname, onClick }) =>
         isActive={hasActiveTab}
         key={i}
       >
-        {console.log('link', item.path)}
         <span
           className={cx(styles.linkText, {
             [styles.linkText__active]: hasActiveTab,

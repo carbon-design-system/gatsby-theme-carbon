@@ -36,7 +36,6 @@ const LeftNav = (props) => {
             <LeftNavItem items={item.pages} category={item.title} key={i} />
           ))}
           <LeftNavResourceLinks />
-          {console.log('what is this:', navItems)}
         </SideNavItems>
       </SideNav>
     </LeftNavWrapper>

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import {
   Header,
@@ -8,8 +7,6 @@ import {
   HeaderMenuButton,
 } from 'carbon-components-react/lib/components/UIShell';
 import HeaderNavItem from './HeaderNavItem';
-
-// import LeftNavResourceLinks from '../LeftNav/ResourceLinks';
 
 import { useNavItems } from '../LeftNav/LeftNavItemProvider';
 
@@ -23,41 +20,16 @@ const HeaderNav = ({ isNavExpanded, onToggleNav }) => {
         onClick={onToggleNav}
         isActive={isNavExpanded}
       />
-      <HeaderName href="#" prefix="IBM">
-        [Platform]
+      <HeaderName href="#" prefix="Carbon">
+        Design System
       </HeaderName>
-      <HeaderNavigation aria-label="IBM [Platform]">
+      <HeaderNavigation aria-label="Carbon Design System">
         {navItems.map((item, i) => (
           <HeaderNavItem items={item.pages} category={item.title} key={i} />
         ))}
-        {/* <LeftNavResourceLinks /> */}
       </HeaderNavigation>
     </Header>
   );
-};
-
-HeaderNav.propTypes = {
-  /**
-   * Specify whether the side navigation is expanded or collapsed
-   */
-  isNavExpanded: PropTypes.bool.isRequired,
-
-  // /**
-  //  * Specify whether the switcher is expanded or collapsed
-  //  */
-  // isSwitcherExpanded: PropTypes.bool.isRequired,
-
-  // /**
-  //  * Provide a function that is called when the toggle button is interacted
-  //  * with. Useful for controlling the expansion state of the side navigation.
-  //  */
-  // onToggleNavNav: PropTypes.func.isRequired,
-
-  // /**
-  //  * Provide a function that is called when the toggle button is interacted
-  //  * with. Useful for controlling the expansion state of the switcher.
-  //  */
-  // onToggleSwitcher: PropTypes.func.isRequired,
 };
 
 export default HeaderNav;
