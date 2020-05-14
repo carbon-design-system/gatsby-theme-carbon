@@ -42,7 +42,8 @@ const Video = ({ autoPlay, vimeoId, title, src, poster, ...props }) => {
     );
   }
 
-  function onClick() {
+  function onClick(e) {
+    e.stopPropagation();
     if (isPlaying) {
       videoRef.current.pause();
       setIsPlaying(false);
