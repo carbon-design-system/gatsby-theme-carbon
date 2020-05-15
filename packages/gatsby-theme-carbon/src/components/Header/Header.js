@@ -10,6 +10,7 @@ import {
 import { AppSwitcher20, Close20 } from '@carbon/icons-react';
 import cx from 'classnames';
 
+import HeaderNav from '../HeaderNav/HeaderNav';
 import GlobalSearch from '../GlobalSearch';
 import NavContext from '../../util/context/NavContext';
 import useMetadata from '../../util/hooks/useMetadata';
@@ -24,7 +25,7 @@ import {
   switcherButton,
 } from './Header.module.scss';
 
-const Header = ({ children }) => {
+const Header = ({ children, hasHeaderNavigation }) => {
   const {
     leftNavIsOpen,
     toggleNavState,
@@ -54,6 +55,7 @@ const Header = ({ children }) => {
         >
           {children}
         </Link>
+        {hasHeaderNavigation && <HeaderNav />}
         <HeaderGlobalBar>
           {isSearchEnabled && <GlobalSearch />}
           <HeaderGlobalAction

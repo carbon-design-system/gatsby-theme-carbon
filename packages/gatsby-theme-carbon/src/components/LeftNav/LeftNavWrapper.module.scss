@@ -12,8 +12,26 @@
     box-shadow: none !important;
   }
 
-  @include carbon--breakpoint('lg') {
-    transform: translateX(0px);
+  @include carbon--breakpoint("lg") {
+    transform: translateX(
+      0px
+    ); // when this is in desktop view and doesn't have header navigation
+  }
+}
+
+.leftNavWrapper.hasHeaderNavStyles {
+  @include carbon--breakpoint("md") {
+    transform: translateX(
+      -256px
+    ); //when this has header navigation in desktop view
+  }
+}
+
+.hasHeaderNavStyles.expanded {
+  @include carbon--breakpoint("lg") {
+    transform: translateX(
+      -256px
+    ); // when this has header navigation and expanded in desktop view
   }
 }
 
@@ -23,9 +41,12 @@
 }
 
 .expanded {
-  transform: translateX(0px);
+  transform: translateX(
+    0px
+  ); //when this is in mobile view and expanded (for both header and non header)
+
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  @include carbon--breakpoint('lg') {
+  @include carbon--breakpoint("lg") {
     box-shadow: none;
   }
 }

@@ -48,6 +48,7 @@ const Default = ({ pageContext, children, location, Title }) => {
       pageDescription={description}
       pageKeywords={keywords}
       titleType={titleType}
+      hasHeaderNavigation
     >
       <PageHeader title={Title ? <Title /> : title} label="label" tabs={tabs} />
       {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}

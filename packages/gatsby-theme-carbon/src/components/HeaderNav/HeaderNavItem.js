@@ -8,7 +8,7 @@ import {
   HeaderMenu,
   HeaderMenuItem,
 } from 'carbon-components-react/lib/components/UIShell';
-import styles, { currentItem } from './HeaderNav.module.scss';
+import styles from '../Header/Header.module.scss';
 
 import NavContext from '../../util/context/NavContext';
 import usePathprefix from '../../util/hooks/usePathprefix';
@@ -36,7 +36,6 @@ const HeaderNavItem = (props) => {
               onClick={closeLeftNav}
               icon={<span>dummy icon</span>}
               element={Link}
-              className={cx({ [currentItem]: isActive })}
               isActive={isActive}
               to={`${items[0].path}`}
             >

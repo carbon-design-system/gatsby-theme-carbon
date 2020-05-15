@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import classnames from 'classnames';
 import { SideNav, SideNavItems } from 'carbon-components-react';
-import { useNavItems } from './LeftNavItemProvider';
+import { useNavItems } from '../../util/NavItems';
 
 import NavContext from '../../util/context/NavContext';
 import LeftNavItem from './LeftNavItem';
@@ -17,10 +17,14 @@ const LeftNav = (props) => {
 
   // TODO: replace old addon website styles with sass modules, move to wrapper
   return (
-    <LeftNavWrapper expanded={leftNavIsOpen}>
+    <LeftNavWrapper
+      expanded={leftNavIsOpen}
+      hasHeaderNavigation={props.hasHeaderNavigation}
+    >
       <SideNav
-        expanded
-        defaultExpanded
+        expanded={props.hasHeaderNavigation ? leftNavIsOpen : true}
+        defaultExpanded={!props.hasHeaderNavigation}
+        isPersistent={!props.hasHeaderNavigation}
         aria-label="Side navigation"
         className={classnames({
           [sideNavDark]: props.theme === 'dark' || props.homepage,

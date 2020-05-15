@@ -25,6 +25,7 @@ const Homepage = ({
       titleType={titleType}
       homepage
       theme="dark"
+      hasHeaderNavigation
     >
       {Banner}
       {FirstCallout}
