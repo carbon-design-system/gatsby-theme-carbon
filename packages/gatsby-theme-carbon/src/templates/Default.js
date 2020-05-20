@@ -39,6 +39,8 @@ const Default = ({ pageContext, children, location, Title }) => {
   };
 
   const currentTab = getCurrentTab();
+
+  // Update hasHeaderNavigation prop in the Layout component to true to render HeaderNav.
   return (
     <Layout
       tabs={tabs}
@@ -48,7 +50,7 @@ const Default = ({ pageContext, children, location, Title }) => {
       pageDescription={description}
       pageKeywords={keywords}
       titleType={titleType}
-      hasHeaderNavigation
+      hasHeaderNavigation={false}
     >
       <PageHeader title={Title ? <Title /> : title} label="label" tabs={tabs} />
       {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}

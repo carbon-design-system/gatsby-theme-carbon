@@ -20,7 +20,7 @@
 }
 
 .leftNavWrapper.hasHeaderNavStyles {
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint("lg") {
     transform: translateX(
       -256px
     ); //when this has header navigation in desktop view

@@ -13,7 +13,7 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "yarn workspace example develop -H 0.0.0.0",
+    "dev": "yarn workspace example develop",
     "dev:clean": "yarn workspace example develop:clean",
     "build": "yarn workspace example build",
     "build:clean": "yarn workspace example build:clean",
