@@ -31,21 +31,18 @@ const ResourceCard = ({
     isLink = href.charAt(0) === '/';
   }
 
-  const ResourceCardClassNames = classnames([`${prefix}--resource-card`], {
+  const ResourceCardClassNames = classnames(`${prefix}--resource-card`, {
     [className]: className,
     [`${prefix}--resource-card--disabled`]: disabled,
     [`${prefix}--resource-card--dark`]: color === 'dark',
   });
 
-  // Finds a ":" in the aspectRatio prop and turns it into an "x" so the class is rendered correctly
-  const swapColonForX = aspectRatio.replace(/:/g, 'x');
-
   const aspectRatioClassNames = classnames(
     `${prefix}--aspect-ratio`,
-    `${prefix}--aspect-ratio--${swapColonForX}`
+    `${prefix}--aspect-ratio--${aspectRatio.replace(':', 'x')}`
   );
 
-  const carbonTileclassNames = classnames([`${prefix}--tile`], {
+  const carbonTileclassNames = classnames(`${prefix}--tile`, {
     [`${prefix}--tile--clickable`]: href !== undefined,
   });
 
