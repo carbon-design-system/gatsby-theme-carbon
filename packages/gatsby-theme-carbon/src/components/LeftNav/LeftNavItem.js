@@ -16,7 +16,9 @@ import usePathprefix from '../../util/hooks/usePathprefix';
 const LeftNavItem = (props) => {
   const { items, category } = props;
   const { toggleNavState } = useContext(NavContext);
-  const closeLeftNav = () => toggleNavState('leftNavIsOpen', 'close');
+  const closeLeftNav = () => {
+    toggleNavState('leftNavIsOpen', 'close');
+  };
   const pathPrefix = usePathprefix();
 
   return (
@@ -66,10 +68,8 @@ const LeftNavItem = (props) => {
 const SubNavItems = ({ items, pathname, onClick }) =>
   items.map((item, i) => {
     const hasActiveTab =
-      item.path.split('/') > 3
-        ? item.path.split('/')[3] === pathname.split('/')[3]
-        : item.path.split('/')[2] === pathname.split('/')[2];
-
+      `${item.path.split('/')[1]}/${item.path.split('/')[2]}` ===
+      `${pathname.split('/')[1]}/${pathname.split('/')[2]}`;
     return (
       <SideNavMenuItem
         to={`${item.path}`}
