@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 import { SideNav, SideNavItems } from 'carbon-components-react';
 import { useNavItems } from './LeftNavItemProvider';
@@ -11,7 +11,28 @@ import LeftNavWrapper from './LeftNavWrapper';
 import { sideNavDark } from './LeftNav.module.scss';
 
 const LeftNav = (props) => {
-  const { leftNavIsOpen } = useContext(NavContext);
+  const { leftNavIsOpen, leftNavScrollTop, setLeftNavScrollTop } = useContext(
+    NavContext
+  );
+
+  const sideNavRef = useRef();
+  const sideNavListRef = useRef();
+
+  useEffect(() => {
+    sideNavListRef.current = sideNavRef.current.querySelector('.sidenav-list');
+  }, []);
+
+  useEffect(() => {
+    sideNavListRef.current.addEventListener('scroll', (e) => {
+      setLeftNavScrollTop(e.target.scrollTop);
+    });
+  }, [setLeftNavScrollTop]);
+
+  useEffect(() => {
+    if (leftNavScrollTop >= 0 && !sideNavListRef?.current.scrollTop) {
+      sideNavListRef.current.scrollTop = leftNavScrollTop;
+    }
+  }, [leftNavScrollTop]);
 
   const navItems = useNavItems();
 
@@ -19,6 +40,7 @@ const LeftNav = (props) => {
   return (
     <LeftNavWrapper expanded={leftNavIsOpen}>
       <SideNav
+        ref={sideNavRef}
         expanded
         defaultExpanded
         aria-label="Side navigation"
@@ -31,7 +53,7 @@ const LeftNav = (props) => {
             props.theme !== 'dark' && !props.homepage,
         })}
       >
-        <SideNavItems>
+        <SideNavItems className="sidenav-list">
           {navItems.map((item, i) => (
             <LeftNavItem items={item.pages} category={item.title} key={i} />
           ))}
