@@ -18,7 +18,7 @@ const Homepage = ({
 }) => {
   const { frontmatter = {}, titleType } = pageContext;
   const { title, description, keywords } = frontmatter;
-  const { hasHeaderNavigation } = useMetadata();
+  const { navigationStyle } = useMetadata();
 
   return (
     <Layout
@@ -28,7 +28,7 @@ const Homepage = ({
       titleType={titleType}
       homepage
       theme="dark"
-      hasHeaderNavigation={hasHeaderNavigation}
+      hasHeaderNavigation={navigationStyle}
     >
       {Banner}
       {FirstCallout}

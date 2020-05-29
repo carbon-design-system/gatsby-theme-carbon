@@ -32,7 +32,7 @@ const Header = ({ children }) => {
     switcherIsOpen,
     searchIsOpen,
   } = useContext(NavContext);
-  const { isSearchEnabled, hasHeaderNavigation } = useMetadata();
+  const { isSearchEnabled, navigationStyle } = useMetadata();
 
   return (
     <ShellHeader aria-label="Header" className={header}>
@@ -54,7 +54,7 @@ const Header = ({ children }) => {
       >
         {children}
       </Link>
-      {hasHeaderNavigation && <HeaderNav />}
+      {navigationStyle && <HeaderNav />}
       <HeaderGlobalBar>
         {isSearchEnabled && <GlobalSearch />}
         <HeaderGlobalAction

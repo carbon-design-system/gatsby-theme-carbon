@@ -14,7 +14,7 @@ import useMetadata from '../util/hooks/useMetadata';
 const Default = ({ pageContext, children, location, Title }) => {
   const { frontmatter = {}, relativePagePath, titleType } = pageContext;
   const { tabs, title, theme, description, keywords } = frontmatter;
-  const { hasHeaderNavigation } = useMetadata();
+  const { navigationStyle } = useMetadata();
 
   // get the path prefix if it exists
   const {
@@ -52,7 +52,7 @@ const Default = ({ pageContext, children, location, Title }) => {
       pageDescription={description}
       pageKeywords={keywords}
       titleType={titleType}
-      hasHeaderNavigation={hasHeaderNavigation}
+      hasHeaderNavigation={navigationStyle}
     >
       <PageHeader title={Title ? <Title /> : title} label="label" tabs={tabs} />
       {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}

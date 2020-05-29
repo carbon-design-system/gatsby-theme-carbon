@@ -11,7 +11,7 @@ module.exports = (themeOptions) => {
 
   const {
     isSearchEnabled = true,
-    hasHeaderNavigation = true,
+    navigationStyle = 'header',
     withWebp = false,
     iconPath,
     mdxExtensions = ['.mdx', '.md'],
@@ -56,7 +56,7 @@ module.exports = (themeOptions) => {
   return {
     siteMetadata: {
       isSearchEnabled,
-      hasHeaderNavigation,
+      navigationStyle,
       title: 'Gatsby Theme Carbon',
       description:
         'Add a description by supplying it to siteMetadata in your gatsby-config.js file.',
