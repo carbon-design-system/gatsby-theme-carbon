@@ -3,11 +3,11 @@
   position: fixed;
   bottom: 0px;
   width: 100vw;
-  z-index: z('floating');
+  z-index: z("floating");
   transform-origin: 100% 50%;
   transition-property: opacity, transform;
   transition-duration: $duration--moderate-02;
-  @include carbon--breakpoint('md') {
+  @include carbon--breakpoint("md") {
     transform-origin: 100% bottom;
     width: 320px;
     right: 2rem;
@@ -47,14 +47,14 @@
 }
 
 .form-container h2 {
-  @include carbon--type-style('productive-heading-01');
+  @include carbon--type-style("productive-heading-01");
   padding-bottom: $spacing-03;
   border-bottom: 1px solid var(--cds-ui-03);
 }
 
 .form-container label,
 .form-container legend {
-  @include carbon--type-style('label-01');
+  @include carbon--type-style("label-01");
 }
 
 .form-container form > * {
@@ -78,6 +78,7 @@
   padding-top: 1rem;
   padding-bottom: 2rem;
   width: 50%;
+  max-width: 50%;
   line-height: 1;
   border-width: 2px;
 }
