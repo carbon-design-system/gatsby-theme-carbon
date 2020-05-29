@@ -9,10 +9,12 @@ import {
 } from 'carbon-components-react';
 import { AppSwitcher20, Close20 } from '@carbon/icons-react';
 import cx from 'classnames';
+
 import HeaderNav from '../HeaderNav/HeaderNav';
 import GlobalSearch from '../GlobalSearch';
 import NavContext from '../../util/context/NavContext';
 import useMetadata from '../../util/hooks/useMetadata';
+
 import {
   header,
   switcherButtonOpen,
@@ -31,6 +33,7 @@ const Header = ({ children }) => {
     searchIsOpen,
   } = useContext(NavContext);
   const { isSearchEnabled, hasHeaderNavigation } = useMetadata();
+
   return (
     <ShellHeader aria-label="Header" className={header}>
       <SkipToContent href="#main-content" className={skipToContent} />
@@ -71,12 +74,15 @@ const Header = ({ children }) => {
     </ShellHeader>
   );
 };
+
 const DefaultHeaderText = () => (
   <>
     Carbon&nbsp;<span>Design System</span>
   </>
 );
+
 Header.defaultProps = {
   children: <DefaultHeaderText />,
 };
+
 export default Header;
