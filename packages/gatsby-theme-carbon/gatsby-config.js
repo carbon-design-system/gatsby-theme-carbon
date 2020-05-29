@@ -21,6 +21,7 @@ module.exports = (themeOptions) => {
     pngCompressionSpeed = 4, // default for gatsby-plugin-sharp
     mediumAccount = '',
     gatsbyRemarkPlugins = [],
+    remarkPlugins = [],
   } = themeOptions;
 
   const optionalPlugins = [];
@@ -92,6 +93,7 @@ module.exports = (themeOptions) => {
             ...defaultRemarkPlugins,
             ...gatsbyRemarkPlugins,
           ],
+          remarkPlugins,
           defaultLayouts: {
             default: require.resolve('./src/templates/Default.js'),
             home: require.resolve('./src/templates/Homepage.js'),

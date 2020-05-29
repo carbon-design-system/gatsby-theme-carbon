@@ -75,7 +75,8 @@ function ImageGallery({ children }) {
 
   // Opens gallery if the breakpoint isn't mobile
   function openGalleryForImage(index) {
-    return () => {
+    return (e) => {
+      e.preventDefault();
       if (!isMobile) {
         setIsGalleryOpen(true);
         updateActiveImageIndex(index);
