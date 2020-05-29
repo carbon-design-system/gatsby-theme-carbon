@@ -16,6 +16,7 @@ Gatsby themes allow you to override configuration from the theme by defining the
   <AnchorLink>Additional font weights</AnchorLink>
   <AnchorLink>Image compression</AnchorLink>
   <AnchorLink>Global search</AnchorLink>
+  <AnchorLink>Header nav</AnchorLink>
   <AnchorLink>Edit on Github link</AnchorLink>
   <AnchorLink>Medium</AnchorLink>
   <AnchorLink>Other options</AnchorLink>
@@ -138,6 +139,25 @@ Global search is enabled by default. To disable it, set the `isSearchEnabled` op
 
 Under the hood, we use [Lunr](https://lunrjs.com/) to create our search index. If necessary, you tweak the search scoring algorithm and source nodes.
 To do so, provide your own [resolvers object](https://www.gatsbyjs.org/packages/gatsby-plugin-lunr/#getting-started) to the `lunrOptions` theme option.
+
+## Header nav
+
+The default header for the theme is the left nav sidebar. However, we have added a configuration option that allows you to switch from the default left nav to a header nav.
+
+We recommend using a header nav for sites that might not have many pages or tabs. If in the future, the content on your site evolves and you feel the left nav is better suited, you can always change it back.
+
+To enable the header nav, set `hasHeaderNavigation` option to true.
+
+```js
+  plugins: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        hasHeaderNavigation: true
+      },
+    },
+  ],
+```
 
 ## Edit on GitHub link
 

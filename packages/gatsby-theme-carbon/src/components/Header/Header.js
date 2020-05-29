@@ -25,14 +25,14 @@ import {
   switcherButton,
 } from './Header.module.scss';
 
-const Header = ({ children, hasHeaderNavigation }) => {
+const Header = ({ children }) => {
   const {
     leftNavIsOpen,
     toggleNavState,
     switcherIsOpen,
     searchIsOpen,
   } = useContext(NavContext);
-  const { isSearchEnabled } = useMetadata();
+  const { isSearchEnabled, hasHeaderNavigation } = useMetadata();
 
   return (
     <>

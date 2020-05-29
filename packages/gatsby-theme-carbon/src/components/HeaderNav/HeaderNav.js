@@ -9,13 +9,11 @@ const HeaderNav = () => {
   const navItems = useNavItems();
 
   return (
-    <>
-      <HeaderNavigation aria-label="Carbon Design System">
-        {navItems.map((item, i) => (
-          <HeaderNavItem items={item.pages} category={item.title} key={i} />
-        ))}
-      </HeaderNavigation>
-    </>
+    <HeaderNavigation aria-label="Carbon Design System">
+      {navItems.map((item, i) => (
+        <HeaderNavItem items={item.pages} category={item.title} key={i} />
+      ))}
+    </HeaderNavigation>
   );
 };
 

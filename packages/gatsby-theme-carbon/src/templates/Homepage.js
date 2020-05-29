@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import { HomepageBanner, HomepageCallout } from '../components/Homepage';
 import Carbon from '../images/carbon.jpg';
 import Main from '../components/Main';
+import useMetadata from '../util/hooks/useMetadata';
 
 import BackToTopBtn from '../components/BackToTopBtn';
 import NextPrevious from '../components/NextPrevious';
@@ -17,6 +18,8 @@ const Homepage = ({
 }) => {
   const { frontmatter = {}, titleType } = pageContext;
   const { title, description, keywords } = frontmatter;
+  const { hasHeaderNavigation } = useMetadata();
+
   return (
     <Layout
       pageTitle={title}
@@ -25,7 +28,7 @@ const Homepage = ({
       titleType={titleType}
       homepage
       theme="dark"
-      hasHeaderNavigation
+      hasHeaderNavigation={hasHeaderNavigation}
     >
       {Banner}
       {FirstCallout}
