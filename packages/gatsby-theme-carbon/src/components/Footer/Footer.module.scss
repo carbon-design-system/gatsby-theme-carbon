@@ -59,7 +59,6 @@
   @include carbon--type-style("body-long-01");
   color: $carbon--gray-10 !important; //needed to get the color correct on the homepage, we are setting all homepage links to a light blue in the homepage sass file.
   text-decoration: none;
-  outline: none;
   transition: $duration--fast-01 motion(standard, productive);
 
   &:hover {
