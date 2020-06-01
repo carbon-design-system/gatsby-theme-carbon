@@ -10,6 +10,7 @@ import {
   Email20,
 } from '@carbon/icons-react';
 import { settings } from 'carbon-components';
+import styles from './ResourceCard.module.scss';
 
 const { prefix } = settings;
 
@@ -35,6 +36,7 @@ const ResourceCard = ({
     [className]: className,
     [`${prefix}--resource-card--disabled`]: disabled,
     [`${prefix}--resource-card--dark`]: color === 'dark',
+    [`${prefix}--resource-card--mini`]: type === 'mini',
   });
 
   const aspectRatioClassNames = classnames(
@@ -83,7 +85,9 @@ const ResourceCard = ({
     ) : (
       <>
         {subTitle && (
-          <h5 className={`${prefix}--resource-card__subtitle`}>{subTitle}</h5>
+          <h5 className={(`${prefix}--resource-card__subtitle`, styles.wtf)}>
+            {subTitle}
+          </h5>
         )}
         {title && (
           <h4 className={`${prefix}--resource-card__title`}>{title}</h4>
