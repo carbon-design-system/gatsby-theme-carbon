@@ -69,6 +69,9 @@ const DefaultChildren = () => {
         IBM Design Language
       </SwitcherLink>
       <SwitcherLink href="https://ibm.com/brand">IBM Brand Center</SwitcherLink>
+      <SwitcherLink href="https://www.ibm.com/able/">
+        IBM Accessibility
+      </SwitcherLink>
       <SwitcherDivider>Design disciplines</SwitcherDivider>
       <SwitcherLink href="https://www.carbondesignsystem.com/">
         Product
