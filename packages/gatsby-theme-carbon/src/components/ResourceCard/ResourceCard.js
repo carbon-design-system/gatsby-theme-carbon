@@ -1,3 +1,5 @@
+/* eslint-disable no-nested-ternary */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
@@ -102,17 +104,15 @@ const ResourceCard = ({
           )
         : null}
       {type === 'mini' ? (
-        <>
-          {children === undefined ? (
-            <div className={`${prefix}--resource-card__mini-icon--action`}>
-              {icons}
-            </div>
-          ) : (
-            <div className={`${prefix}--resource-card__mini-icon--img`}>
-              {children}
-            </div>
-          )}
-        </>
+        children === undefined ? (
+          <div className={`${prefix}--resource-card__mini-icon--action`}>
+            {icons}
+          </div>
+        ) : (
+          <div className={`${prefix}--resource-card__mini-icon--img`}>
+            {children}
+          </div>
+        )
       ) : null}
     </>
   );
