@@ -11,7 +11,7 @@ module.exports = (themeOptions) => {
 
   const {
     isSearchEnabled = true,
-    navigationStyle = 'header',
+    navigationStyle = '',
     withWebp = false,
     iconPath,
     mdxExtensions = ['.mdx', '.md'],

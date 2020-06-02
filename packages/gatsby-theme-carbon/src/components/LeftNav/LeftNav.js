@@ -40,14 +40,14 @@ const LeftNav = (props) => {
   return (
     <LeftNavWrapper
       expanded={leftNavIsOpen}
-      hasHeaderNavigation={props.hasHeaderNavigation}
+      useHeaderNavigation={props.useHeaderNavigation}
     >
       <SideNav
         ref={sideNavRef}
         aria-label="Side navigation"
-        expanded={props.hasHeaderNavigation ? leftNavIsOpen : true}
-        defaultExpanded={!props.hasHeaderNavigation}
-        isPersistent={!props.hasHeaderNavigation}
+        expanded={props.useHeaderNavigation ? leftNavIsOpen : true}
+        defaultExpanded={!props.useHeaderNavigation}
+        isPersistent={!props.useHeaderNavigation}
         className={classnames({
           [sideNavDark]: props.theme === 'dark' || props.homepage,
           'bx--side-nav--website': true,

@@ -19,14 +19,14 @@
 }
 
 // HeaderNavigation default style in desktop view (hide LeftNav).
-.leftNavWrapper.hasHeaderNavStyles {
+.leftNavWrapper.useHeaderNavStyles {
   @include carbon--breakpoint("lg") {
     transform: translateX(-256px);
   }
 }
 
 // Transition expanded LeftNav in mobile back to HeaderNavigation in dektop view.
-.hasHeaderNavStyles.expanded {
+.useHeaderNavStyles.expanded {
   @include carbon--breakpoint("lg") {
     transform: translateX(-256px);
   }

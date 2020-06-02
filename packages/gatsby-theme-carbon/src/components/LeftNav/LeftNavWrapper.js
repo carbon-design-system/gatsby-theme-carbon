@@ -3,13 +3,13 @@ import cx from 'classnames';
 
 import {
   leftNavWrapper,
-  hasHeaderNavStyles,
+  useHeaderNavStyles,
   expanded as expandedStyles,
 } from './LeftNavWrapper.module.scss';
 
-const LeftNavWrapper = ({ hasHeaderNavigation, expanded, ...rest }) => {
+const LeftNavWrapper = ({ useHeaderNavigation, expanded, ...rest }) => {
   const className = cx(leftNavWrapper, {
-    [hasHeaderNavStyles]: hasHeaderNavigation,
+    [useHeaderNavStyles]: useHeaderNavigation,
     [expandedStyles]: expanded,
   });
   return <div className={className} {...rest} />;
