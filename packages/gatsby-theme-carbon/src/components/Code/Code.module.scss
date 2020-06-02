@@ -154,6 +154,7 @@
   align-items: center;
   background: transparent;
   transition: background $duration--fast-02;
+  outline-offset: -2px;
   z-index: 1000;
   &:hover {
     background-color: $inverse-02;
