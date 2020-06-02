@@ -38,13 +38,17 @@
   z-index: 1;
 }
 
+.#{$prefix}--image-card__title--has-subtitle {
+  margin-top: 1rem;
+}
+
 .#{$prefix}--image-card__subtitle {
   @include carbon--type-style("heading-01");
   font-weight: 400;
   text-decoration: none;
   color: $text-04;
   position: absolute;
-  bottom: 1rem;
+  top: 1rem;
   left: 1rem;
   z-index: 1;
 }

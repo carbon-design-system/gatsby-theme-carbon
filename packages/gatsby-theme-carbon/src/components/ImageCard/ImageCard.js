@@ -56,6 +56,7 @@ export default class ImageCard extends React.Component {
 
     const titleClassNames = classnames([`${prefix}--image-card__title`], {
       [`${prefix}--image-card__title--dark`]: titleColor === 'dark',
+      [`${prefix}--image-card__title--has-subtitle`]: subTitle,
     });
 
     const subTitleClassNames = classnames([`${prefix}--image-card__subtitle`], {
