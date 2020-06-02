@@ -40,7 +40,8 @@
   margin-bottom: 0;
 }
 
-.#{$prefix}--resource-card__icon--img .gatsby-resp-image-wrapper {
+.#{$prefix}--resource-card__icon--img .gatsby-resp-image-wrapper,
+.#{$prefix}--resource-card__mini-icon--img .gatsby-resp-image-wrapper {
   position: static !important; //important needed to override inline style added by Gatsby
 }
 
@@ -50,6 +51,35 @@
   right: 1rem;
   width: 20px;
   height: 20px;
+}
+
+// Mini
+
+.#{$prefix}--resource-card__mini-title {
+  @include carbon--type-style("body-long-02");
+}
+
+.#{$prefix}--resource-card__mini-icon--img {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1rem;
+  min-width: 20px;
+  min-height: 20px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.#{$prefix}--resource-card__mini-icon--action {
+  position: absolute;
+  bottom: 1.3rem;
+  right: 1rem;
+  width: 20px;
+  height: 20px;
+}
+
+.#{$prefix}--resource-card--mini .#{$prefix}--tile {
+  height: $layout-05;
+  padding: 1.3rem 25% $spacing-03 $spacing-05;
 }
 
 // Dark
@@ -109,36 +139,4 @@
   .#{$prefix}--resource-card__icon--action
   svg {
   fill: $carbon--gray-70; //$disabled-02 for gray 90
-}
-
-// Mini resource card
-
-.#{$prefix}--resource-card__mini {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  background: $ui-background;
-  height: $layout-05;
-}
-
-.#{$prefix}--resource-card__mini:hover {
-  background: $hover-ui;
-}
-
-.#{$prefix}--resource-card__mini-content-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: $spacing-05;
-  padding-left: $spacing-05;
-}
-
-.#{$prefix}--resource-card__mini-title {
-  @include carbon--type-style("body-long-02");
-}
-
-.#{$prefix}--resource-card__mini-icon--img {
-  width: 20px;
-  height: 20px;
 }

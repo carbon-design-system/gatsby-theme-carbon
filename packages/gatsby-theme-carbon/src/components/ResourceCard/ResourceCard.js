@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Link } from 'gatsby';
 import {
-  Launch20,
-  Download20,
   ArrowRight20,
+  Calendar20,
+  Download20,
   Error20,
   Email20,
+  Launch20,
 } from '@carbon/icons-react';
 import { settings } from 'carbon-components';
-import styles from './ResourceCard.module.scss';
 
 const { prefix } = settings;
 
@@ -24,7 +24,7 @@ const ResourceCard = ({
   aspectRatio = '2:1',
   actionIcon = 'launch',
   className,
-  type = 'regular',
+  type = 'default',
   ...rest
 }) => {
   let isLink;
@@ -32,6 +32,7 @@ const ResourceCard = ({
     isLink = href.charAt(0) === '/';
   }
 
+  // This represents the variant of Resource Card: default, disabled, dark, and mini.
   const ResourceCardClassNames = classnames(`${prefix}--resource-card`, {
     [className]: className,
     [`${prefix}--resource-card--disabled`]: disabled,
@@ -39,15 +40,12 @@ const ResourceCard = ({
     [`${prefix}--resource-card--mini`]: type === 'mini',
   });
 
-  const aspectRatioClassNames = classnames(
-    `${prefix}--aspect-ratio`,
-    `${prefix}--aspect-ratio--${aspectRatio.replace(':', 'x')}`
-  );
-
+  // This gives the Resource Card it's properties for handling links
   const carbonTileclassNames = classnames(`${prefix}--tile`, {
     [`${prefix}--tile--clickable`]: href !== undefined,
   });
 
+  // These are all the icons available to the resource card.
   const icons = (
     <>
       {actionIcon === 'launch' && !disabled ? (
@@ -62,40 +60,75 @@ const ResourceCard = ({
       {actionIcon === 'email' && !disabled ? (
         <Email20 aria-label="Email" />
       ) : null}
+      {actionIcon === 'calendar' && !disabled ? (
+        <Calendar20 aria-label="Calendar" />
+      ) : null}
       {actionIcon === 'disabled' || disabled === true ? (
         <Error20 aria-label="disabled" />
       ) : null}
     </>
   );
 
-  const cardContent =
-    type === 'mini' ? (
-      <div className={`${prefix}--resource-card__mini`}>
-        <div className={`${prefix}--resource-card__mini-content-wrapper`}>
-          <div className={`${prefix}--resource-card__mini-title`}>{title}</div>
+  // This determines the size of the title prop. productive-heading-03 for default and body-long-02 for Mini.
+  const titleSize = (
+    <>
+      {type === 'default'
+        ? title && (
+            <h4 className={`${prefix}--resource-card__title`}>{title}</h4>
+          )
+        : null}
+      {type === 'mini'
+        ? title && (
+            <h4 className={`${prefix}--resource-card__mini-title`}>{title}</h4>
+          )
+        : null}
+    </>
+  );
+
+  // This determines how and where the icons and image (children) are placed on the page.
+  const iconsAndImages = (
+    <>
+      {type === 'default'
+        ? icons &&
+          children && (
+            <>
+              <div className={`${prefix}--resource-card__icon--img`}>
+                {children}
+              </div>
+              <div className={`${prefix}--resource-card__icon--action`}>
+                {icons}
+              </div>
+            </>
+          )
+        : null}
+      {type === 'mini' ? (
+        <>
           {children === undefined ? (
-            <div style={{ height: '20px' }}>{icons}</div>
+            <div className={`${prefix}--resource-card__mini-icon--action`}>
+              {icons}
+            </div>
           ) : (
             <div className={`${prefix}--resource-card__mini-icon--img`}>
               {children}
             </div>
           )}
-        </div>
-      </div>
-    ) : (
-      <>
-        {subTitle && (
-          <h5 className={(`${prefix}--resource-card__subtitle`, styles.wtf)}>
-            {subTitle}
-          </h5>
-        )}
-        {title && (
-          <h4 className={`${prefix}--resource-card__title`}>{title}</h4>
-        )}
-        <div className={`${prefix}--resource-card__icon--img`}>{children}</div>
-        <div className={`${prefix}--resource-card__icon--action`}>{icons}</div>
-      </>
-    );
+        </>
+      ) : null}
+    </>
+  );
+
+  // This holds the subtitle, title, icons and images.
+  const cardContent = (
+    <>
+      {subTitle && (
+        <h5 className={`${prefix}--resource-card__subtitle`}>{subTitle}</h5>
+      )}
+      {titleSize}
+      {iconsAndImages}
+    </>
+  );
+
+  // This determines if the link that is supplied is staying internal to the site or if it's leaving the site.
   let cardContainer;
   if (disabled === true || href === undefined) {
     cardContainer = <div className={carbonTileclassNames}>{cardContent}</div>;
@@ -113,13 +146,36 @@ const ResourceCard = ({
     );
   }
 
-  return type === 'mini' ? (
-    cardContainer
-  ) : (
-    <div {...rest} className={ResourceCardClassNames}>
-      <div className={aspectRatioClassNames}>
+  // This determines, based whether the card is default or mini, whether or not it gets the aspect-ratio-object class and associated div.
+  const aspectRatioObjectType = (
+    <>
+      {type === 'default' ? (
         <div className={`${prefix}--aspect-ratio--object`}>{cardContainer}</div>
-      </div>
+      ) : null}
+      {type === 'mini' ? cardContainer : null}
+    </>
+  );
+
+  // This determines, based whether the card is default or mini, whether or not it gets the aspect-ratio and aspect-ratio-X:X classes and associated div.
+  const aspectRatioClassNames = (
+    <>
+      {type === 'default' ? (
+        <div
+          className={`${prefix}--aspect-ratio ${prefix}--aspect-ratio--${aspectRatio.replace(
+            ':',
+            'x'
+          )}`}
+        >
+          {aspectRatioObjectType}
+        </div>
+      ) : null}
+      {type === 'mini' ? aspectRatioObjectType : null}
+    </>
+  );
+
+  return (
+    <div {...rest} className={ResourceCardClassNames}>
+      {aspectRatioClassNames}
     </div>
   );
 };
@@ -168,7 +224,7 @@ ResourceCard.propTypes = {
   className: PropTypes.string,
 
   /**
-   * Specify mini card vs regular card
+   * Specify mini card vs default card
    */
   type: PropTypes.string,
 };
