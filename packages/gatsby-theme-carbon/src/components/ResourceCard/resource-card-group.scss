@@ -7,8 +7,7 @@
 }
 
 // set border between cards
-.resource-card-group .#{$prefix}--resource-card,
-.resource-card-group .#{$prefix}--resource-card__mini {
+.resource-card-group .#{$prefix}--resource-card {
   border-top: 1px solid $carbon--gray-20;
 }
 
@@ -18,10 +17,7 @@
 
 .resource-card-group
   .#{$prefix}--col-lg-4:nth-child(2)
-  .#{$prefix}--resource-card,
-.resource-card-group
-  .#{$prefix}--col-lg-4:nth-child(2)
-  .#{$prefix}--resource-card__mini {
+  .#{$prefix}--resource-card {
   @include carbon--breakpoint("md") {
     border-top: 0px solid transparent;
   }
@@ -29,19 +25,13 @@
 
 .resource-card-group
   .#{$prefix}--col-lg-4:first-child
-  .#{$prefix}--resource-card,
-.resource-card-group
-  .#{$prefix}--col-lg-4:first-child
-  .#{$prefix}--resource-card__mini {
+  .#{$prefix}--resource-card {
   border-top: 0px solid transparent;
 }
 
 .resource-card-group
   .#{$prefix}--col-lg-4:nth-child(odd)
-  .#{$prefix}--resource-card,
-.resource-card-group
-  .#{$prefix}--col-lg-4:nth-child(odd)
-  .#{$prefix}--resource-card__mini {
+  .#{$prefix}--resource-card {
   @include carbon--breakpoint("md") {
     border-left: 1px solid transparent;
   }
@@ -49,10 +39,7 @@
 
 .resource-card-group
   .#{$prefix}--col-lg-4:nth-child(even)
-  .#{$prefix}--resource-card,
-.resource-card-group
-  .#{$prefix}--col-lg-4:nth-child(even)
-  .#{$prefix}--resource-card__mini {
+  .#{$prefix}--resource-card {
   @include carbon--breakpoint("md") {
     border-left: 1px solid $carbon--gray-20;
   }
