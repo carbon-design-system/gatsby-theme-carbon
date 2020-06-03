@@ -6,8 +6,6 @@ import { nav, open, divider, link, linkDisabled } from './Switcher.module.scss';
 const Switcher = ({ children }) => {
   const { switcherIsOpen } = useContext(NavContext);
 
-  // ---------------------------
-  // automated max height
   const listRef = useRef(null);
   const [height, setHeight] = useState(null);
 
@@ -25,7 +23,6 @@ const Switcher = ({ children }) => {
       maxHeight: !isLg && isOpen ? '100%' : `${height}px`,
     }),
   };
-  // ---------------------------
 
   return (
     <nav
