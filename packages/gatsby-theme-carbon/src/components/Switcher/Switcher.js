@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useEffect, useState } from 'react';
 import cx from 'classnames';
 import NavContext from '../../util/context/NavContext';
 import { nav, open, divider, link, linkDisabled } from './Switcher.module.scss';
@@ -6,14 +6,36 @@ import { nav, open, divider, link, linkDisabled } from './Switcher.module.scss';
 const Switcher = ({ children }) => {
   const { switcherIsOpen } = useContext(NavContext);
 
+  // ---------------------------
+  // automated max height
+  const listRef = useRef(null);
+  const [height, setHeight] = useState(null);
+
+  // calculate and update height
+  useEffect(() => {
+    switcherIsOpen
+      ? setHeight(listRef.current.offsetHeight + 40)
+      : setHeight(0);
+  }, [listRef, switcherIsOpen]);
+
+  const lgBreakpoint = window.matchMedia('(min-width: 1056px)'); // returns true if screen width matches media query
+  const styles = {
+    container: (isLg, isOpen) => ({
+      /* eslint no-unused-expressions: [2, { allowShortCircuit: true, allowTernary: true }] */
+      maxHeight: !isLg && isOpen ? '100%' : `${height}px`,
+    }),
+  };
+  // ---------------------------
+
   return (
     <nav
       className={cx(nav, { [open]: switcherIsOpen })}
       aria-label="IBM Design ecosystem navigation"
       aria-expanded={switcherIsOpen}
       tabIndex="-1"
+      style={styles.container(lgBreakpoint.matches, switcherIsOpen)}
     >
-      <ul>{children}</ul>
+      <ul ref={listRef}>{children}</ul>
     </nav>
   );
 };
@@ -33,13 +55,14 @@ export const SwitcherLink = ({
   const href = disabled || !hrefProp ? undefined : hrefProp;
   const className = disabled ? linkDisabled : link;
   const { switcherIsOpen } = useContext(NavContext);
+  const openTabIndex = disabled ? '-1' : 0;
 
   return (
     <li>
       <a
         aria-disabled={disabled}
         role="button"
-        tabIndex={switcherIsOpen ? 0 : '-1'}
+        tabIndex={switcherIsOpen ? openTabIndex : '-1'}
         className={className}
         href={href}
         {...rest}

@@ -50,6 +50,9 @@ const Container = ({ children, homepage, theme }) => {
       />
       <main
         id="main-content"
+        role="presentation"
+        onClick={closeNavs}
+        onKeyPress={closeNavs}
         aria-hidden={overlayVisible}
         className={containerClassNames}
       >
