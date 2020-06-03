@@ -50,8 +50,7 @@ const Container = ({ children, homepage, theme }) => {
       />
       <main
         id="main-content"
-        role="presentation"
-        onClick={closeNavs}
+        role="presentation" // needed for jsx-a11y/no-noninteractive-element-interactions
         onKeyPress={closeNavs}
         aria-hidden={overlayVisible}
         className={containerClassNames}
