@@ -134,13 +134,6 @@ img {
   padding-right: 0;
 }
 
-.container .#{$prefix}--gutter-lg {
-  @include carbon--breakpoint("lg") {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
 .container .#{$prefix}--no-gutter-lg--left {
   @include carbon--breakpoint("lg") {
     padding-left: 0;
@@ -155,6 +148,15 @@ img {
 
 .container .#{$prefix}--no-gutter-sm--left {
   padding-left: 0;
+}
+
+// Brings the gutters back at a given breakpoint
+
+.container .#{$prefix}--gutter-lg {
+  @include carbon--breakpoint("lg") {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 // Clears styles for nested grid components

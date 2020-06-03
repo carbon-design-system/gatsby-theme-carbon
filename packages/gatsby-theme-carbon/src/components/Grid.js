@@ -49,12 +49,12 @@ export const Column = ({
   noGutterLg,
   noGutterXl,
   noGutterMax,
-  gutterLg,
   noGutterSmLeft,
   noGutterMdLeft,
   noGutterLgLeft,
   noGutterXlLeft,
   noGutterMaxLeft,
+  gutterLg,
   className,
 }) => {
   const colClasses = classnames({
@@ -63,7 +63,6 @@ export const Column = ({
     [`${prefix}--no-gutter-lg`]: noGutterLg,
     [`${prefix}--no-gutter-xl`]: noGutterXl,
     [`${prefix}--no-gutter-max`]: noGutterMax,
-    [`${prefix}--gutter-lg`]: gutterLg,
     [`${prefix}--no-gutter-sm--left`]: noGutterSmLeft,
     [`${prefix}--no-gutter-md--left`]: noGutterMdLeft,
     [`${prefix}--no-gutter-lg--left`]: noGutterLgLeft,
@@ -79,6 +78,7 @@ export const Column = ({
     [`${prefix}--col-lg-${colLg}`]: colLg,
     [`${prefix}--col-xl-${colXl}`]: colXl,
     [`${prefix}--col-max-${colMax}`]: colMax,
+    [`${prefix}--gutter-lg`]: gutterLg,
     [className]: className,
   });
 
