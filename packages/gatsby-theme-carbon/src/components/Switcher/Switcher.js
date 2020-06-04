@@ -1,5 +1,6 @@
 import React, { useContext, useRef, useEffect, useState } from 'react';
 import cx from 'classnames';
+import useMedia from 'use-media';
 import NavContext from '../../util/context/NavContext';
 import { nav, open, divider, link, linkDisabled } from './Switcher.module.scss';
 
@@ -16,12 +17,10 @@ const Switcher = ({ children }) => {
       : setHeight(0);
   }, [listRef, switcherIsOpen]);
 
-  const lgBreakpoint = window.matchMedia('(min-width: 1056px)'); // returns true if screen width matches media query
+  const lgBreakpoint = useMedia('min-width: 1056px');
   const styles = {
-    container: (isLg, isOpen) => ({
-      /* eslint no-unused-expressions: [2, { allowShortCircuit: true, allowTernary: true }] */
-      maxHeight: !isLg && isOpen ? '100%' : `${height}px`,
-    }),
+    /* eslint no-unused-expressions: [2, { allowShortCircuit: true, allowTernary: true }] */
+    maxHeight: !lgBreakpoint && switcherIsOpen ? '100%' : `${height}px`,
   };
 
   return (
@@ -30,7 +29,7 @@ const Switcher = ({ children }) => {
       aria-label="IBM Design ecosystem navigation"
       aria-expanded={switcherIsOpen}
       tabIndex="-1"
-      style={styles.container(lgBreakpoint.matches, switcherIsOpen)}
+      style={styles}
     >
       <ul ref={listRef}>{children}</ul>
     </nav>
