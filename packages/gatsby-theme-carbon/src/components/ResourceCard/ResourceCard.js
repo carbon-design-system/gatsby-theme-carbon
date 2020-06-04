@@ -72,20 +72,10 @@ const ResourceCard = ({
   );
 
   // This determines the size of the title prop. productive-heading-03 for default and body-long-02 for Mini.
-  const titleSize = (
-    <>
-      {type === 'default'
-        ? title && (
-            <h4 className={`${prefix}--resource-card__title`}>{title}</h4>
-          )
-        : null}
-      {type === 'mini'
-        ? title && (
-            <h4 className={`${prefix}--resource-card__mini-title`}>{title}</h4>
-          )
-        : null}
-    </>
-  );
+  const titleClassNames = classnames({
+    [`${prefix}--resource-card__title`]: type === 'default',
+    [`${prefix}--resource-card__mini-title`]: type === 'mini',
+  });
 
   // This determines how and where the icons and image (children) are placed on the page.
   const iconsAndImages = (
@@ -123,7 +113,7 @@ const ResourceCard = ({
       {subTitle && (
         <h5 className={`${prefix}--resource-card__subtitle`}>{subTitle}</h5>
       )}
-      {titleSize}
+      {title && <h4 className={titleClassNames}>{title}</h4>}
       {iconsAndImages}
     </>
   );
