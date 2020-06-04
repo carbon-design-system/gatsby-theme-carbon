@@ -55,7 +55,6 @@ const Container = ({ children, homepage, theme }) => {
         id="main-content"
         aria-hidden={overlayVisible}
         className={containerClassNames}
-        useHeaderNavigation={navigationStyle}
       >
         {children}
       </main>
