@@ -140,6 +140,9 @@ Video.propTypes = {
         `You can't specify children/tracks for vimeo videos. You can control the captions from the Vimeo control panel`
       );
     }
+    if (props.src && !props.poster) {
+      return new Error('You must supply a poster when using src');
+    }
   },
 };
 
