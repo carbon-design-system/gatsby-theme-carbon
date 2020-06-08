@@ -112,7 +112,7 @@ const ResourceCard = ({
     </>
   );
 
-  // This determines if the link that is supplied is staying internal to the site or if it's leaving the site.
+  // This determines if the tile has a link or not. If not, it disables the card. If it has a link, then it will determine whether the link that is supplied is staying internal to the site or if it's leaving the site.
   let cardContainer;
   if (disabled === true || href === undefined) {
     cardContainer = <div className={carbonTileclassNames}>{cardContent}</div>;
