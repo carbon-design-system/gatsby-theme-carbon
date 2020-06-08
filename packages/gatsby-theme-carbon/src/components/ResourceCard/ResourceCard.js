@@ -78,34 +78,30 @@ const ResourceCard = ({
   });
 
   // This determines how and where the icons and image (children) are placed on the page.
-  const iconsAndImages = (
-    <>
-      {type === 'default'
-        ? icons &&
-          children && (
-            <>
-              <div className={`${prefix}--resource-card__icon--img`}>
-                {children}
-              </div>
-              <div className={`${prefix}--resource-card__icon--action`}>
-                {icons}
-              </div>
-            </>
-          )
-        : null}
-      {type === 'mini' ? (
-        children === undefined ? (
-          <div className={`${prefix}--resource-card__mini-icon--action`}>
-            {icons}
-          </div>
-        ) : (
-          <div className={`${prefix}--resource-card__mini-icon--img`}>
-            {children}
-          </div>
-        )
-      ) : null}
-    </>
-  );
+  let iconsAndImages;
+
+  if (type === 'default') {
+    iconsAndImages = (
+      <>
+        <div className={`${prefix}--resource-card__icon--img`}>{children}</div>
+        <div className={`${prefix}--resource-card__icon--action`}>{icons}</div>
+      </>
+    );
+  } else if (type === 'mini') {
+    if (children === undefined) {
+      iconsAndImages = (
+        <div className={`${prefix}--resource-card__mini-icon--action`}>
+          {icons}
+        </div>
+      );
+    } else {
+      iconsAndImages = (
+        <div className={`${prefix}--resource-card__mini-icon--img`}>
+          {children}
+        </div>
+      );
+    }
+  }
 
   // This holds the subtitle, title, icons and images.
   const cardContent = (
