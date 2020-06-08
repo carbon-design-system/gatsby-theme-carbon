@@ -56,6 +56,7 @@ header.header {
   transition: opacity $duration--fast-02 $carbon--standard-easing;
   color: $inverse-01;
   text-decoration: none;
+  position: absolute;
   left: 3rem;
   white-space: nowrap;
   padding: 0 $spacing-05;
