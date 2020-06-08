@@ -130,32 +130,21 @@ const ResourceCard = ({
     );
   }
 
-  // This determines, based whether the card is default or mini, whether or not it gets the aspect-ratio-object class and associated div.
-  const aspectRatioObjectType = (
-    <>
-      {type === 'default' ? (
+  // This determines, based whether the card is default or not, whether or not it gets the aspect-ratio, aspect-ration--object, and aspect-ratio-X:X classes and associated divs.
+  const aspectRatioClassNames =
+    type === 'default' ? (
+      <div
+        className={`${prefix}--aspect-ratio ${prefix}--aspect-ratio--${aspectRatio.replace(
+          ':',
+          'x'
+        )}`}
+      >
         <div className={`${prefix}--aspect-ratio--object`}>{cardContainer}</div>
-      ) : null}
-      {type === 'mini' ? cardContainer : null}
-    </>
-  );
-
-  // This determines, based whether the card is default or mini, whether or not it gets the aspect-ratio and aspect-ratio-X:X classes and associated div.
-  const aspectRatioClassNames = (
-    <>
-      {type === 'default' ? (
-        <div
-          className={`${prefix}--aspect-ratio ${prefix}--aspect-ratio--${aspectRatio.replace(
-            ':',
-            'x'
-          )}`}
-        >
-          {aspectRatioObjectType}
-        </div>
-      ) : null}
-      {type === 'mini' ? aspectRatioObjectType : null}
-    </>
-  );
+      </div>
+    ) : (
+      // This skips supplying the aspect ratio divs and just passes the cardContainer right on through.
+      cardContainer
+    );
 
   return (
     <div {...rest} className={ResourceCardClassNames}>
