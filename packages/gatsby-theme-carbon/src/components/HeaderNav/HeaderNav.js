@@ -10,8 +10,8 @@ const HeaderNav = () => {
 
   return (
     <HeaderNavigation aria-label="Carbon Design System">
-      {navItems.map((item, i) => (
-        <HeaderNavItem items={item.pages} category={item.title} key={i} />
+      {navItems.map(({pages, title}) => (
+        <HeaderNavItem items={pages} category={title} key={title} />
       ))}
     </HeaderNavigation>
   );
