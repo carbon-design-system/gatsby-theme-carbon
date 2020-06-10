@@ -9,6 +9,7 @@ import LeftNavResourceLinks from './ResourceLinks';
 
 import LeftNavWrapper from './LeftNavWrapper';
 import { sideNavDark } from './LeftNav.module.scss';
+import useMetadata from '../../util/hooks/useMetadata';
 
 const LeftNav = (props) => {
   const { leftNavIsOpen, leftNavScrollTop, setLeftNavScrollTop } = useContext(
@@ -35,19 +36,20 @@ const LeftNav = (props) => {
   }, [leftNavScrollTop]);
 
   const navItems = useNavItems();
+  const { navigationStyle } = useMetadata();
 
   // TODO: replace old addon website styles with sass modules, move to wrapper
   return (
     <LeftNavWrapper
       expanded={leftNavIsOpen}
-      useHeaderNavigation={props.useHeaderNavigation}
+      useHeaderNavigation={navigationStyle}
     >
       <SideNav
         ref={sideNavRef}
         aria-label="Side navigation"
-        expanded={props.useHeaderNavigation ? leftNavIsOpen : true}
-        defaultExpanded={!props.useHeaderNavigation}
-        isPersistent={!props.useHeaderNavigation}
+        expanded={navigationStyle ? leftNavIsOpen : true}
+        defaultExpanded={!navigationStyle}
+        isPersistent={!navigationStyle}
         className={classnames({
           [sideNavDark]: props.theme === 'dark' || props.homepage,
           'bx--side-nav--website': true,

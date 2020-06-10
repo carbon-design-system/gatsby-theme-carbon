@@ -7,7 +7,6 @@ import Header from './Header';
 import Switcher from './Switcher';
 import Footer from './Footer';
 import Container from './Container';
-import useMetadata from '../util/hooks/useMetadata';
 
 import '../styles/index.scss';
 
@@ -22,7 +21,6 @@ const Layout = ({
   tabs,
 }) => {
   const is404 = children.key === null;
-  const { navigationStyle } = useMetadata();
 
   useLayoutEffect(() => {
     // eslint-disable-next-line global-require
@@ -45,14 +43,9 @@ const Layout = ({
         pageDescription={pageDescription}
         pageKeywords={pageKeywords}
       />
-      <Header useHeaderNavigation={navigationStyle} />
+      <Header />
       <Switcher />
-      <LeftNav
-        useHeaderNavigation={navigationStyle}
-        homepage={homepage}
-        is404Page={is404}
-        theme={theme}
-      />
+      <LeftNav homepage={homepage} is404Page={is404} theme={theme} />
       <Container homepage={homepage} theme={theme}>
         {children}
         <Footer />
