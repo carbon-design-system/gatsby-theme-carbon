@@ -56,7 +56,6 @@ export default class ImageCard extends React.Component {
 
     const titleClassNames = classnames([`${prefix}--image-card__title`], {
       [`${prefix}--image-card__title--dark`]: titleColor === 'dark',
-      [`${prefix}--image-card__title--has-subtitle`]: subTitle,
     });
 
     const subTitleClassNames = classnames([`${prefix}--image-card__subtitle`], {
@@ -69,8 +68,8 @@ export default class ImageCard extends React.Component {
 
     const cardContent = (
       <>
-        {title ? <h4 className={titleClassNames}>{title}</h4> : null}
         {subTitle ? <h5 className={subTitleClassNames}>{subTitle}</h5> : null}
+        {title ? <h4 className={titleClassNames}>{title}</h4> : null}
         <div className={iconClassNames}>
           {actionIcon === 'launch' && !disabled ? (
             <Launch20 aria-label="Open resource" />
