@@ -27,6 +27,7 @@
   display: block;
   height: 100%;
   color: $carbon--white-0;
+  outline-offset: -2px; //needed for focus state to be visible
 }
 
 .direction {
