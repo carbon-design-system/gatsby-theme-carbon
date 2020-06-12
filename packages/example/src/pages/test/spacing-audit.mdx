@@ -25,6 +25,7 @@ This is a demo page to see variations on components before/after headings.
   <AnchorLink>Paragraph and Tables</AnchorLink>
   <AnchorLink>Paragraph and Tabs</AnchorLink>
   <AnchorLink>Paragraph and Code</AnchorLink>
+  <AnchorLink>Code and Nested Lists</AnchorLink>
 </AnchorLinks>
 
 ## Headers and Paragraphs
@@ -352,7 +353,7 @@ I’m a paragraph above an image. Lorem ipsum dolor sit amet, consectetur adipis
 
 I’m a paragraph below an image. Lorem ipsum dolor sit amet, consectetur adipiscers elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
 
-## Paragraph and List
+## Paragraph and Lists
 
 I’m a paragraph above a list. Lorem ipsum dolor sit amet, consectetur adipiscers elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
 
@@ -467,3 +468,57 @@ Column two
 ```
 
 I’m a paragraph below code. Lorem ipsum dolor sit amet, consectetur adipiscers elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+
+## Code & Nested Lists
+
+<Title>Ordered List</Title>
+
+1. Fist ordered list item
+2. Item with a nested code block. Perspiciatis cupiditate eveniet reprehenderit. Dolores eum dolor at officia qui libero adipisci. Consequuntur culpa qui laudantium iure reiciendis mollitia est eveniet illum. Sunt ut et. Quia earum dolore dolor.
+
+   ```jsx path=components/Accordion/Accordion.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/Accordion
+   <Accordion>
+     <AccordionItem title="Title 1">Content Section</AccordionItem>
+     <AccordionItem title="Title 2">Content Section</AccordionItem>
+     <AccordionItem title="Title 3">Content Section</AccordionItem>
+   </Accordion>
+   ```
+
+3. Third ordered list item
+4. Item with nested list. Consequuntur et excepturi aperiam labore accusamus. Fuga itaque ut molestiae quia minus voluptatem iste officiis enim. Reprehenderit et aperiam. Rerum molestiae delectus iusto provident sint cupiditate.
+
+   1. Nested list item with code blcok. Consequuntur et excepturi aperiam labore accusamus. Fuga itaque ut molestiae quia minus voluptatem iste officiis enim. Reprehenderit et aperiam. Rerum molestiae delectus iusto provident sint cupiditate.
+
+      ```jsx path=components/Accordion/Accordion.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/Accordion
+      <Accordion>
+        <AccordionItem title="Title 1">Content Section</AccordionItem>
+        <AccordionItem title="Title 2">Content Section</AccordionItem>
+        <AccordionItem title="Title 3">Content Section</AccordionItem>
+      </Accordion>
+      ```
+
+<Title>Unordered List</Title>
+
+- Unorderd list item
+- Item with a nested code block. Perspiciatis cupiditate eveniet reprehenderit. Dolores eum dolor at officia qui libero adipisci. Consequuntur culpa qui laudantium iure reiciendis mollitia est eveniet illum. Sunt ut et. Quia earum dolore dolor.
+
+  ```jsx path=components/Accordion/Accordion.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/Accordion
+  <Accordion>
+    <AccordionItem title="Title 1">Content Section</AccordionItem>
+    <AccordionItem title="Title 2">Content Section</AccordionItem>
+    <AccordionItem title="Title 3">Content Section</AccordionItem>
+  </Accordion>
+  ```
+
+- Unorderd list item
+- Item with nested list. Consequuntur et excepturi aperiam labore accusamus. Fuga itaque ut molestiae quia minus voluptatem iste officiis enim. Reprehenderit et aperiam. Rerum molestiae delectus iusto provident sint cupiditate.
+
+  - Nested list item with code blcok. Consequuntur et excepturi aperiam labore accusamus. Fuga itaque ut molestiae quia minus voluptatem iste officiis enim. Reprehenderit et aperiam. Rerum molestiae delectus iusto provident sint cupiditate.
+
+    ```jsx path=components/Accordion/Accordion.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/Accordion
+    <Accordion>
+      <AccordionItem title="Title 1">Content Section</AccordionItem>
+      <AccordionItem title="Title 2">Content Section</AccordionItem>
+      <AccordionItem title="Title 3">Content Section</AccordionItem>
+    </Accordion>
+    ```

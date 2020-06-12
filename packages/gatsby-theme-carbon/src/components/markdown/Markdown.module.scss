@@ -65,6 +65,7 @@
 //spacing exception for nested list items
 :global(.bx--list--nested) {
   --space: 0;
+  width: 100%;
 }
 
 :global(.bx--list--ordered:not(.bx--list--nested)) {
