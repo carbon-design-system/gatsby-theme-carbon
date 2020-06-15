@@ -19,7 +19,7 @@
 }
 
 // HeaderNavigation default style in desktop view (hide LeftNav).
-.leftNavWrapper.useHeaderNavStyles {
+.useHeaderNavStyles.leftNavWrapper {
   @include carbon--breakpoint("lg") {
     transform: translateX(-256px);
   }
