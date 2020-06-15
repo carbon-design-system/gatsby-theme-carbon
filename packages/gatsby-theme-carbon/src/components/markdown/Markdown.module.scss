@@ -87,6 +87,11 @@
   }
 }
 
+ul :global(.bx--list--ordered),
+ul :global(.bx--list--unordered) {
+  width: 100%;
+}
+
 :global(.bx--list--ordered) .list-item,
 :global(.bx--list--unordered) .list-item {
   @include carbon--type-style("body-long-02");
