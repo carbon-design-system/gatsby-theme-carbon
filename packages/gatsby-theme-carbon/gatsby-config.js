@@ -10,8 +10,6 @@ module.exports = (themeOptions) => {
   };
 
   const {
-    isSearchEnabled = true,
-    navigationStyle = '',
     withWebp = false,
     iconPath,
     mdxExtensions = ['.mdx', '.md'],
