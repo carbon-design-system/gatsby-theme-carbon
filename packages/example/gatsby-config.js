@@ -21,7 +21,7 @@ module.exports = {
       resolve: 'gatsby-theme-carbon',
       options: {
         isSearchEnabled: true,
-        navigationStyle: 'header',
+        navigationStyle: '',
         mediumAccount: 'carbondesign',
         repository: {
           baseUrl:
