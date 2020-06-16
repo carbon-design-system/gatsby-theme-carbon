@@ -21,6 +21,7 @@ module.exports = (themeOptions) => {
     mediumAccount = '',
     gatsbyRemarkPlugins = [],
     remarkPlugins = [],
+    gatsbyPluginSharpOptions = {},
   } = themeOptions;
 
   const optionalPlugins = [];
@@ -46,6 +47,7 @@ module.exports = (themeOptions) => {
         quality: imageQuality,
         withWebp,
         pngCompressionSpeed,
+        ...gatsbyPluginSharpOptions,
       },
     },
     { resolve: `gatsby-remark-responsive-iframe` },
