@@ -10,7 +10,7 @@ module.exports = (themeOptions) => {
   };
 
   const {
-    isSearchEnabled = true,	
+    isSearchEnabled = true,
     navigationStyle = '',
     withWebp = false,
     iconPath,

@@ -40,10 +40,7 @@ const LeftNav = (props) => {
 
   // TODO: replace old addon website styles with sass modules, move to wrapper
   return (
-    <LeftNavWrapper
-      expanded={leftNavIsOpen}
-      useHeaderNavigation={navigationStyle}
-    >
+    <LeftNavWrapper expanded={leftNavIsOpen}>
       <SideNav
         ref={sideNavRef}
         aria-label="Side navigation"

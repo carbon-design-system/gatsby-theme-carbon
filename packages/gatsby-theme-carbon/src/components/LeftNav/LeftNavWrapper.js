@@ -7,9 +7,12 @@ import {
   expanded as expandedStyles,
 } from './LeftNavWrapper.module.scss';
 
-const LeftNavWrapper = ({ useHeaderNavigation, expanded, ...rest }) => {
+import useMetadata from '../../util/hooks/useMetadata';
+
+const LeftNavWrapper = ({ expanded, ...rest }) => {
+  const { navigationStyle } = useMetadata();
   const className = cx(leftNavWrapper, {
-    [useHeaderNavStyles]: useHeaderNavigation,
+    [useHeaderNavStyles]: navigationStyle,
     [expandedStyles]: expanded,
   });
   return <div className={className} {...rest} />;
