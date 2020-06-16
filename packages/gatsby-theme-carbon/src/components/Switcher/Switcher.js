@@ -5,23 +5,21 @@ import NavContext from '../../util/context/NavContext';
 import { nav, open, divider, link, linkDisabled } from './Switcher.module.scss';
 
 const Switcher = ({ children }) => {
+  const lgBreakpoint = useMedia('min-width: 1056px');
   const { switcherIsOpen } = useContext(NavContext);
-
   const listRef = useRef(null);
   const [height, setHeight] = useState(null);
 
   // calculate and update height
   useEffect(() => {
-    switcherIsOpen
-      ? setHeight(listRef.current.offsetHeight + 40)
-      : setHeight(0);
+    if (switcherIsOpen) {
+      setHeight(listRef.current.offsetHeight + 40);
+    } else {
+      setHeight(0);
+    }
   }, [listRef, switcherIsOpen]);
 
-  const lgBreakpoint = useMedia('min-width: 1056px');
-  const styles = {
-    /* eslint no-unused-expressions: [2, { allowShortCircuit: true, allowTernary: true }] */
-    maxHeight: !lgBreakpoint && switcherIsOpen ? '100%' : `${height}px`,
-  };
+  const maxHeight = !lgBreakpoint && switcherIsOpen ? '100%' : `${height}px`;
 
   return (
     <nav
@@ -29,7 +27,7 @@ const Switcher = ({ children }) => {
       aria-label="IBM Design ecosystem navigation"
       aria-expanded={switcherIsOpen}
       tabIndex="-1"
-      style={styles}
+      style={{ maxHeight }}
     >
       <ul ref={listRef}>{children}</ul>
     </nav>
