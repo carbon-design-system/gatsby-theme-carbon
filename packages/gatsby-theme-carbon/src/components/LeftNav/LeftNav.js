@@ -12,9 +12,12 @@ import { sideNavDark } from './LeftNav.module.scss';
 import useMetadata from '../../util/hooks/useMetadata';
 
 const LeftNav = (props) => {
-  const { leftNavIsOpen, leftNavScrollTop, setLeftNavScrollTop } = useContext(
-    NavContext
-  );
+  const {
+    leftNavIsOpen,
+    leftNavScrollTop,
+    setLeftNavScrollTop,
+    toggleNavState,
+  } = useContext(NavContext);
 
   const sideNavRef = useRef();
   const sideNavListRef = useRef();
@@ -38,9 +41,17 @@ const LeftNav = (props) => {
   const navItems = useNavItems();
   const { navigationStyle } = useMetadata();
 
+  const closeSwitcher = () => {
+    toggleNavState('switcherIsOpen', 'close');
+  };
+
   // TODO: replace old addon website styles with sass modules, move to wrapper
   return (
-    <LeftNavWrapper expanded={leftNavIsOpen}>
+    <LeftNavWrapper
+      expanded={leftNavIsOpen}
+      onClick={closeSwitcher}
+      onKeyPress={closeSwitcher}
+    >
       <SideNav
         ref={sideNavRef}
         aria-label="Side navigation"
