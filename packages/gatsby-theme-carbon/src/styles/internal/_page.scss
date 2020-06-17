@@ -150,6 +150,13 @@ img {
   padding-left: 0;
 }
 
+.container .#{$prefix}--gutter-lg {
+  @include carbon--breakpoint("lg") {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 // Clears styles for nested grid components
 .container .#{$prefix}--row .#{$prefix}--row {
   margin-left: 0;
@@ -165,4 +172,14 @@ img {
 // TODO: remove when fix is released. See https://github.com/carbon-design-system/carbon/issues/4804
 .bx--inline-notification--low-contrast:before {
   pointer-events: none !important;
+}
+
+.container .#{$prefix}--margin-sm--top {
+  margin-top: 24px;
+}
+
+.container .#{$prefix}--no-margin-lg--top {
+  @include carbon--breakpoint("lg") {
+    margin-top: 0;
+  }
 }

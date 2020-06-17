@@ -39,13 +39,6 @@ export default class ResourceCard extends React.Component {
       [`${prefix}--resource-card--dark`]: color === 'dark',
     });
 
-    const aspectRatioClassNames = classnames([`${prefix}--aspect-ratio`], {
-      [`${prefix}--aspect-ratio--2x1`]: aspectRatio === '2:1',
-      [`${prefix}--aspect-ratio--1x1`]: aspectRatio === '1:1',
-      [`${prefix}--aspect-ratio--16x9`]: aspectRatio === '16:9',
-      [`${prefix}--aspect-ratio--4x3`]: aspectRatio === '4:3',
-    });
-
     const carbonTileclassNames = classnames([`${prefix}--tile`], {
       [`${prefix}--tile--clickable`]: href !== undefined,
     });
@@ -98,7 +91,12 @@ export default class ResourceCard extends React.Component {
 
     return (
       <div className={ResourceCardClassNames}>
-        <div className={aspectRatioClassNames}>
+        <div
+          className={classnames(
+            `${prefix}--aspect-ratio`,
+            `${prefix}--aspect-ratio--${aspectRatio.replace(':', 'x')}`
+          )}
+        >
           <div className={`${prefix}--aspect-ratio--object`}>
             {cardContainer}
           </div>

@@ -54,6 +54,9 @@ export const Column = ({
   noGutterLgLeft,
   noGutterXlLeft,
   noGutterMaxLeft,
+  gutterLg,
+  marginSmTop,
+  noMarginLgTop,
   className,
 }) => {
   const colClasses = classnames({
@@ -77,6 +80,9 @@ export const Column = ({
     [`${prefix}--col-lg-${colLg}`]: colLg,
     [`${prefix}--col-xl-${colXl}`]: colXl,
     [`${prefix}--col-max-${colMax}`]: colMax,
+    [`${prefix}--gutter-lg`]: gutterLg,
+    [`${prefix}--margin-sm--top`]: marginSmTop,
+    [`${prefix}--no-margin-lg--top`]: noMarginLgTop,
     [className]: className,
   });
 

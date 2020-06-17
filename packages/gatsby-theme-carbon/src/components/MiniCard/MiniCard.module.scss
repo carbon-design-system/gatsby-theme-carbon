@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $ui-background;
+  height: $layout-05;
+}
+
+.card:hover {
+  background: $hover-ui;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: $spacing-05;
+  padding-left: $spacing-05;
+}
+
+.title {
+  @include carbon--type-style("body-long-02");
+}
+
+.image {
+  width: 20px;
+  height: 20px;
+}
+
+.icon {
+  padding-top: 4px;
+}
