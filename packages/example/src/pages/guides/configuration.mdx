@@ -16,6 +16,7 @@ Gatsby themes allow you to override configuration from the theme by defining the
   <AnchorLink>Additional font weights</AnchorLink>
   <AnchorLink>Image compression</AnchorLink>
   <AnchorLink>Global search</AnchorLink>
+  <AnchorLink>Navigation style</AnchorLink>
   <AnchorLink>Edit on Github link</AnchorLink>
   <AnchorLink>Medium</AnchorLink>
   <AnchorLink>Other options</AnchorLink>
@@ -138,6 +139,38 @@ Global search is enabled by default. To disable it, set the `isSearchEnabled` op
 
 Under the hood, we use [Lunr](https://lunrjs.com/) to create our search index. If necessary, you tweak the search scoring algorithm and source nodes.
 To do so, provide your own [resolvers object](https://www.gatsbyjs.org/packages/gatsby-plugin-lunr/#getting-started) to the `lunrOptions` theme option.
+
+## Navigation style
+
+By default, the navigation style used by the theme is a sidebar that sits on the left-hand side of the screen. You can see it right now as you read this documentation. This style works great for websites with a lot of content, like documentation sites. 
+
+However, if your site is more editorial in nature, and has less pages of content, you may want to use the `header` navigation. This will remove the sidebar on the left-hand side of the page and replace it with a navigation menu that sits in the header. If in the future, the content on your site evolves and you feel the left nav is better suited, you can always change it back.
+
+To enable the header nav, provide `header` as a string to the `navigationStyle` option. To switch back to the default left nav provide an empty string `''` to the `navigationStyle` option. Note: By using the `header` navigation style, you will lose the ResourceLinks that sit directly below the left nav.
+
+```js
+  plugins: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        navigationStyle: 'header',
+      },
+    },
+  ],
+```
+When enabled, your header navigation will look like the image below: 
+
+<Row>
+<Column colMd={8} colLg={8}>
+
+![Header navigation style](header-nav-config.png)
+
+</Column>
+</Row>
+
+With the header navigation style enabled, the content on your page will be further left-aligned to allow for more content space.
+
+**Just a note:** In mobile-view, when the header navigation is enabled, the sidebar will persist.
 
 ## Edit on GitHub link
 

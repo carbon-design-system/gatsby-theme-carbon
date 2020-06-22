@@ -10,6 +10,7 @@ import {
 import { AppSwitcher20, Close20 } from '@carbon/icons-react';
 import cx from 'classnames';
 
+import HeaderNav from '../HeaderNav/HeaderNav';
 import GlobalSearch from '../GlobalSearch';
 import NavContext from '../../util/context/NavContext';
 import useMetadata from '../../util/hooks/useMetadata';
@@ -31,7 +32,7 @@ const Header = ({ children }) => {
     switcherIsOpen,
     searchIsOpen,
   } = useContext(NavContext);
-  const { isSearchEnabled } = useMetadata();
+  const { isSearchEnabled, navigationStyle } = useMetadata();
 
   return (
     <ShellHeader aria-label="Header" className={header}>
@@ -53,6 +54,7 @@ const Header = ({ children }) => {
       >
         {children}
       </Link>
+      {navigationStyle && <HeaderNav />}
       <HeaderGlobalBar>
         {isSearchEnabled && <GlobalSearch />}
         <HeaderGlobalAction
