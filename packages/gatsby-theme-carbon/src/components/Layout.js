@@ -1,8 +1,8 @@
 /* eslint-disable import/no-unresolved */
 import React, { useLayoutEffect } from 'react';
 
-import LeftNav from './LeftNav';
 import Meta from './Meta';
+import LeftNav from './LeftNav';
 import Header from './Header';
 import Switcher from './Switcher';
 import Footer from './Footer';

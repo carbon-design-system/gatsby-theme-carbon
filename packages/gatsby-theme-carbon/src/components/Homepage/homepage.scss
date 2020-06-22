@@ -73,6 +73,20 @@
   }
 }
 
+.container--header--nav .#{$prefix}--grid {
+  margin: 0;
+
+  @include carbon--breakpoint("lg") {
+    padding-left: calc(
+      2% + 2rem
+    ); //2rem to account for 2rem left padding default on grid
+  }
+
+  @include carbon--breakpoint("max") {
+    padding-left: 2%;
+  }
+}
+
 .container--homepage .#{$prefix}--col-no-gutter {
   padding: 0;
 }

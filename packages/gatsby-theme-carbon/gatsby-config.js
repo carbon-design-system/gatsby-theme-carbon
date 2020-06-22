@@ -11,6 +11,7 @@ module.exports = (themeOptions) => {
 
   const {
     isSearchEnabled = true,
+    navigationStyle = '',
     withWebp = false,
     iconPath,
     mdxExtensions = ['.mdx', '.md'],
@@ -21,6 +22,7 @@ module.exports = (themeOptions) => {
     mediumAccount = '',
     gatsbyRemarkPlugins = [],
     remarkPlugins = [],
+    gatsbyPluginSharpOptions = {},
   } = themeOptions;
 
   const optionalPlugins = [];
@@ -46,6 +48,7 @@ module.exports = (themeOptions) => {
         quality: imageQuality,
         withWebp,
         pngCompressionSpeed,
+        ...gatsbyPluginSharpOptions,
       },
     },
     { resolve: `gatsby-remark-responsive-iframe` },
@@ -55,6 +58,7 @@ module.exports = (themeOptions) => {
   return {
     siteMetadata: {
       isSearchEnabled,
+      navigationStyle,
       title: 'Gatsby Theme Carbon',
       description:
         'Add a description by supplying it to siteMetadata in your gatsby-config.js file.',

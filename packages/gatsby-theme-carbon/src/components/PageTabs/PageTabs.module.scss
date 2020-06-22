@@ -30,7 +30,9 @@
   white-space: nowrap;
   border-top: 3px solid transparent; // 3px accessibility minimum
   height: 3rem;
-  transition: all $duration--moderate-01 $carbon--standard-easing;
+  outline-offset: -2px; // needed for focus state to be visible
+  transition: background $duration--moderate-01 $carbon--standard-easing,
+    border-top $duration--moderate-01 $carbon--standard-easing; //transitioning all creates a bug on focus bc of outline transition
 
   @include carbon--breakpoint("md") {
     padding-right: $spacing-09;
