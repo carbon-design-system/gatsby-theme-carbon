@@ -5,7 +5,7 @@ description: Usage instructions for the MiniCard component
 
 <PageDescription>
 
-The `<MiniCard>` component should be wrapped with a `<Column>` inside of a `<Row>`. This allows the correct border placement between a group of cards.
+The `<MiniCard>` component should be wrapped with a `<Column>` inside of a `<CardGroup>`. This allows the correct border placement between a group of cards. Learn more about the `<CardGroup>` [here](/components/CardGroup).
 
 </PageDescription>
 
@@ -13,148 +13,31 @@ The `<MiniCard>` component should be wrapped with a `<Column>` inside of a `<Row
 
 <CardGroup>
 <Column colMd={4} colLg={4} noGutterSm>
-  <MiniCard className="test" title="test tile" href="/demo">
+  <MiniCard title="26 characters per MiniCard" href="/demo">
 
 ![Github icon](/images/github-icon.png)
 
   </MiniCard>
 </Column>
 <Column colMd={4} colLg={4} noGutterSm>
-  <MiniCard title="test tile" href="/demo">
+  <MiniCard title="Use the default icon" href="/demo" />
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+  <MiniCard title="Choose from other icons" href="/demo" actionIcon="arrowRight" />
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+  <MiniCard title="Or bring your own" href="/demo">
 
-![Github icon](/images/github-icon.png)
+![Github icon](/images/sketch-icon.png)
 
   </MiniCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
-  <MiniCard title="test tile" href="/demo">
-
-![Github icon](/images/github-icon.png)
-
-  </MiniCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
-  <MiniCard title="test tile" href="/demo">
-
-![Github icon](/images/github-icon.png)
-
-  </MiniCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
-    <ResourceCard
-      title="Disabled card"
-      color="dark"
-      aspectRatio="2:1"
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-      >
-
-![Sketch icon](/images/sketch-icon.png)
-
-  </ResourceCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
-  <MiniCard title="test tile" href="/demo">
-
-![Github icon](/images/github-icon.png)
-
-  </MiniCard>
-  <MiniCard title="test tile" href="/demo">
-
-![Github icon](/images/github-icon.png)
-
-  </MiniCard>
-  <MiniCard title="test tile" href="/demo">
-
-![Github icon](/images/github-icon.png)
-
-  </MiniCard>
-  <MiniCard title="test tile" href="/demo">
-
-![Github icon](/images/github-icon.png)
-
-  </MiniCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
-  <MiniCard title="test tile" href="/demo">
-
-![Github icon](/images/github-icon.png)
-
-  </MiniCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
-    <ResourceCard
-      title="Disabled card"
-      aspectRatio="2:1"
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-      >
-
-![Sketch icon](/images/sketch-icon.png)
-
-  </ResourceCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
-  <MiniCard title="test tile1" href="https://www.google.com" />
-</Column>
-</CardGroup>
-
-<CardGroup>
-  <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceCard
-      subTitle="With subtitle"
-      title="Title"
-      aspectRatio="2:1"
-      actionIcon="arrowRight"
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-      >
-
-![IBM Rebus](/images/rebus.svg)
-
-  </ResourceCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
-    <ResourceCard
-      subTitle="Only subtitle"
-      actionIcon="download"
-      aspectRatio="2:1"
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-      >
-
-![Github icon](/images/github-icon.png)
-
-  </ResourceCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
-    <ResourceCard
-      subTitle="Alternate color"
-      title="Dark"
-      aspectRatio="2:1"
-      color="dark"
-      actionIcon="email"
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-      >
-
-![Sketch icon](/images/sketch-icon.png)
-
-  </ResourceCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
-    <ResourceCard
-      title="Disabled card"
-      aspectRatio="2:1"
-      disabled
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-      >
-
-![Sketch icon](/images/sketch-icon.png)
-
-  </ResourceCard>
 </Column>
 </CardGroup>
 
 <Row>
 <Column colLg={8}>
 
-When you have the mini resource card sitting aside the main content, be sure to add the `gutterLg` property to the `<Column>` alongside `noGutterSm`.
+When you have the mini resource card sitting aside the main content, be sure to add the `gutterLg`, `marginSmTop`, and `noMarginLgTop` properties to the `<Column>` alongside `noGutterSm`. This will ensure the MiniCard has the appropriate gutters and margins at the approriate breakpoints.
 
 </Column>
 <Column colMd={4} colLg={4} noGutterSm gutterLg marginSmTop noMarginLgTop>
@@ -173,94 +56,59 @@ When you have the mini resource card sitting aside the main content, be sure to 
 
 <Title>Group</Title>
 
-```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
-<Row className="resource-card-group">
+```jsx path=components/MiniCard/MiniCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/MiniCard
+<CardGroup>
   <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceCard
-      subTitle="Carbon Design System"
-      href="https://www.carbondesignsystem.com"
-    >
+    <MiniCard title="26 characters per MiniCard" href="/demo">
       ![Github icon](/images/github-icon.png)
-    </ResourceCard>
+    </MiniCard>
   </Column>
   <Column colMd={4} colLg={4} noGutterSm>
-    <ResourceCard
-      subTitle="Carbon Design System"
-      href="https://www.carbondesignsystem.com"
-    >
-      ![Github icon](/images/github-icon.png)
-    </ResourceCard>
+    <MiniCard title="Use the default icon" href="/demo" />
   </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <MiniCard
+      title="Choose from other icons"
+      href="/demo"
+      actionIcon="arrowRight"
+    />
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <MiniCard title="Or bring your own" href="/demo">
+      ![Github icon](/images/sketch-icon.png)
+    </MiniCard>
+  </Column>
+</CardGroup>
+```
+
+<Title>Aside</Title>
+
+```jsx path=components/MiniCard/MiniCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/MiniCard
+<Row>
+<Column colLg={8}>
+
+When you have the mini resource card sitting aside the main content, be sure to add the `gutterLg`, `marginSmTop`, and `noMarginLgTop` properties to the `<Column>` alongside `noGutterSm`. This will ensure the MiniCard has the appropriate gutters and margins at the approriate breakpoints.
+
+</Column>
+<Column colMd={4} colLg={4} noGutterSm gutterLg marginSmTop noMarginLgTop>
+  <MiniCard
+  title="By itself"
+  href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  >
+
+![Sketch icon](/images/sketch-icon.png)
+
+  </MiniCard>
+</Column>
 </Row>
-```
-
-<Title>With title</Title>
-
-```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
-<Column colMd={4} colLg={4} noGutterSm>
-  <ResourceCard
-    subTitle="With subtitle"
-    title="Title"
-    aspectRatio="2:1"
-    actionIcon="arrowRight"
-    href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-  >
-    ![Github icon](/images/github-icon.png)
-  </ResourceCard>
-</Column>
-```
-
-<Title>Only subtitle</Title>
-
-```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
-<Column colMd={4} colLg={4} noGutterSm>
-  <ResourceCard
-    subTitle="Only subtitle"
-    actionIcon="download"
-    aspectRatio="2:1"
-    href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-  >
-    ![Github icon](/images/github-icon.png)
-  </ResourceCard>
-</Column>
-```
-
-<Title>Dark</Title>
-
-```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
-<Column colMd={4} colLg={4} noGutterSm>
-  <ResourceCard
-    subTitle="Alternate color"
-    title="Dark"
-    aspectRatio="2:1"
-    color="dark"
-    actionIcon="email"
-    href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-  >
-    ![Sketch icon](/images/sketch-icon.png)
-  </ResourceCard>
-</Column>
-```
-
-<Title>Disabled</Title>
-
-```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
-<Column colMd={4} colLg={4} noGutterSm>
-  <ResourceCard
-    title="Disabled card"
-    aspectRatio="2:1"
-    disabled
-    href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-  />
-</Column>
 ```
 
 ### Props
 
 | property   | propType | required | default  | description                                                                                         |
 | ---------- | -------- | -------- | -------- | --------------------------------------------------------------------------------------------------- |
-| children   | node     |          |          | Use 32x32 image as child, will display in bottom left of card                                       |
+| children   | node     |          |          | Use 32x32 image as child, will display in right-hand corner of the card                             |
 | href       | string   |          |          | Set url for card                                                                                    |
-| title      | string   |          |          | Large title                                                                                         |
+| title      | string   |          |          | Title for the card                                                                                  |
 | actionIcon | string   |          | `launch` | Action icon, default is launch, options are `launch`, `arrowRight`, `download`, `disabled`, `email` |
 | className  | string   |          |          | Add custom class name                                                                               |

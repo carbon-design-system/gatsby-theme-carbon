@@ -1,0 +1,235 @@
+---
+title: CardGroup
+description: Usage instructions for the CardGroup component
+---
+
+<PageDescription>
+
+The `<CardGroup>` component is essentially a `<Row>` component with extra styling to support the `<ResourceCard>` and `<MiniCard>` components. There should be a `<Column>` inside of the `<CardGroup>`. This allows the correct border placement between a group of cards.
+
+</PageDescription>
+
+<InlineNotification kind="warning">
+
+**Do not** use the `<CardGroup>` component for the `<FeatureCard>` component. In addition, while it won't hurt to use the `<CardGroup>` with the `<ArticleCard>` component, there are currently no added benefits.
+
+</InlineNotification>
+
+## Examples
+
+<Title>MiniCards in their own columns</Title>
+
+<CardGroup>
+<Column colMd={4} colLg={4} noGutterSm>
+  <MiniCard title="These MiniCards" href="/demo">
+
+![Github icon](/images/github-icon.png)
+
+  </MiniCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+  <MiniCard title="are stacking" href="/demo">
+
+![Github icon](/images/sketch-icon.png)
+
+  </MiniCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+  <MiniCard title="against each other" href="/demo" />
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+  <MiniCard title="in their own columns" href="/demo">
+
+![Github icon](/images/github-icon.png)
+
+  </MiniCard>
+</Column>
+</CardGroup>
+
+<Title>MiniCards sharing a column</Title>
+
+<CardGroup>
+<Column colMd={4} colLg={4} noGutterSm>
+  <MiniCard title="These MiniCards" href="/demo">
+
+![Github icon](/images/github-icon.png)
+
+  </MiniCard>
+  <MiniCard title="are stacking" href="/demo">
+
+![Github icon](/images/github-icon.png)
+
+  </MiniCard>
+  <MiniCard title="on top of each other" href="/demo">
+
+![Github icon](/images/github-icon.png)
+
+  </MiniCard>
+  <MiniCard title="in the same column" href="/demo">
+
+![Github icon](/images/github-icon.png)
+
+  </MiniCard>
+</Column>
+</CardGroup>
+
+<Title>ResourceCards in their own columns</Title>
+
+<CardGroup>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="With subtitle"
+      title="Title"
+      aspectRatio="2:1"
+      actionIcon="arrowRight"
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      >
+
+![IBM Rebus](/images/rebus.svg)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Only subtitle"
+      actionIcon="download"
+      aspectRatio="2:1"
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      >
+
+![Github icon](/images/github-icon.png)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Alternate color"
+      title="Dark"
+      aspectRatio="2:1"
+      color="dark"
+      actionIcon="email"
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      >
+
+![Sketch icon](/images/sketch-icon.png)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      title="Disabled card"
+      aspectRatio="2:1"
+      disabled
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      >
+
+![Sketch icon](/images/sketch-icon.png)
+
+  </ResourceCard>
+</Column>
+</CardGroup>
+
+## Code
+
+<Title>MiniCards in their own columns</Title>
+
+```jsx path=components/CardGroup/CardGroup.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/CardGroup
+<CardGroup>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <MiniCard title="These MiniCards" href="/demo">
+      ![Github icon](/images/github-icon.png)
+    </MiniCard>
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <MiniCard title="are stacking" href="/demo">
+      ![Github icon](/images/sketch-icon.png)
+    </MiniCard>
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <MiniCard title="against each other" href="/demo" />
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <MiniCard title="in their own columns" href="/demo">
+      ![Github icon](/images/github-icon.png)
+    </MiniCard>
+  </Column>
+</CardGroup>
+```
+
+<Title>MiniCards sharing a column</Title>
+
+```jsx path=components/CardGroup/CardGroup.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/CardGroup
+<CardGroup>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <MiniCard title="These MiniCards" href="/demo">
+      ![Github icon](/images/github-icon.png)
+    </MiniCard>
+    <MiniCard title="are stacking" href="/demo">
+      ![Github icon](/images/github-icon.png)
+    </MiniCard>
+    <MiniCard title="on top of each other" href="/demo">
+      ![Github icon](/images/github-icon.png)
+    </MiniCard>
+    <MiniCard title="in the same column" href="/demo">
+      ![Github icon](/images/github-icon.png)
+    </MiniCard>
+  </Column>
+</CardGroup>
+```
+
+<Title>ResourceCards in their own columns</Title>
+
+```jsx path=components/CardGroup/CardGroup.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/CardGroup
+<CardGroup>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="With subtitle"
+      title="Title"
+      aspectRatio="2:1"
+      actionIcon="arrowRight"
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+    >
+      ![IBM Rebus](/images/rebus.svg)
+    </ResourceCard>
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Only subtitle"
+      actionIcon="download"
+      aspectRatio="2:1"
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+    >
+      ![Github icon](/images/github-icon.png)
+    </ResourceCard>
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Alternate color"
+      title="Dark"
+      aspectRatio="2:1"
+      color="dark"
+      actionIcon="email"
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+    >
+      ![Sketch icon](/images/sketch-icon.png)
+    </ResourceCard>
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      title="Disabled card"
+      aspectRatio="2:1"
+      disabled
+      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+    >
+      ![Sketch icon](/images/sketch-icon.png)
+    </ResourceCard>
+  </Column>
+</CardGroup>
+```
+
+### Props
+
+| property  | propType | required | default | description                                                                |
+| --------- | -------- | -------- | ------- | -------------------------------------------------------------------------- |
+| children  | node     |          |         | Needs a `<Column>` component along with a `<ResourceCard>` or `<MiniCard>` |
+| className | string   |          |         | Add custom class name                                                      |

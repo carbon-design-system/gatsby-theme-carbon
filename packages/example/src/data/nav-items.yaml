@@ -38,6 +38,8 @@
       path: /components/Aside
     - title: Caption
       path: /components/Caption
+    - title: CardGroup
+      path: /components/CardGroup
     - title: Code blocks
       path: /components/code-blocks
     - title: DoDontExample
