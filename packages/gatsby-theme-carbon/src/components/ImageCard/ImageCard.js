@@ -68,8 +68,8 @@ export default class ImageCard extends React.Component {
 
     const cardContent = (
       <>
-        {title ? <h4 className={titleClassNames}>{title}</h4> : null}
         {subTitle ? <h5 className={subTitleClassNames}>{subTitle}</h5> : null}
+        {title ? <h4 className={titleClassNames}>{title}</h4> : null}
         <div className={iconClassNames}>
           {actionIcon === 'launch' && !disabled ? (
             <Launch20 aria-label="Open resource" />
