@@ -39,6 +39,7 @@ const Default = ({ pageContext, children, location, Title }) => {
   };
 
   const currentTab = getCurrentTab();
+
   return (
     <Layout
       tabs={tabs}

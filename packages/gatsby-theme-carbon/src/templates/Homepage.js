@@ -17,6 +17,7 @@ const Homepage = ({
 }) => {
   const { frontmatter = {}, titleType } = pageContext;
   const { title, description, keywords } = frontmatter;
+
   return (
     <Layout
       pageTitle={title}
