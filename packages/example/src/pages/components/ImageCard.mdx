@@ -15,7 +15,6 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
 <Column colMd={4} colLg={4} noGutterSm>
     <ImageCard
       title="Title"
-      subTitle="Subtitle"
       href="/"
       >
 
@@ -28,8 +27,8 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       aspectRatio="1:1"
       href="/"
       actionIcon="arrowRight"
-      subTitleColor="light"
-      subTitle="Light subtitle"
+      subTitleColor="dark"
+      subTitle="Dark subtitle"
       >
 
 ![Light dark](./images/light-dark.jpg)
@@ -63,11 +62,13 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
   </ImageCard>
       <ImageCard
       disabled
+      title="Title"
+      subTitle="Subtitle"
       aspectRatio="1:1"
       href="/"
       >
 
-![Square](/images/square.jpg)
+![IBM Cloud Server](/images/IBM_Cloud_Server.png)
 
   </ImageCard>
 </Column>
@@ -87,8 +88,8 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
       aspectRatio="1:1"
       href="/"
       actionIcon="arrowRight"
-      subTitleColor="light"
-      subTitle="Light subtitle"
+      subTitleColor="dark"
+      subTitle="Dark subtitle"
     >
       ![Light dark](./images/light-dark.jpg)
     </ImageCard>
@@ -124,7 +125,7 @@ The `<ImageCard>` component should generally be used inside of a `<Row>` and `<C
 | children      | node     |          |         | Background image for the card, make sure it is saved out at the correct aspect ratio or it will appear distorted |
 | href          | string   |          |         | Set url for card                                                                                                 |
 | aspectRatio   | string   |          | `1:1`   | Set card aspect ratio, default is `1:1`, options are `1:1`, `16:9`, `4:3`, `2:1`, `1:2`                          |
-| subTitle      | string   |          |         | Smaller title in bottom left of card                                                                             |
+| subTitle      | string   |          |         | Smaller title on top left of card                                                                                |
 | title         | string   |          |         | Large title                                                                                                      |
 | actionIcon    | string   |          |         | Action icon, default is no icon, options are `Launch`, `ArrowRight`, `Download`, `Disabled`, `Email`             |
 | titleColor    | string   |          | `light` | Set title text color, default is `light`, options are `light` or `dark`                                          |

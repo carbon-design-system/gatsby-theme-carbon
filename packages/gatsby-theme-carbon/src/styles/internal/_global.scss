@@ -45,6 +45,11 @@ body {
   border: 0;
 }
 
+// Global links
+a:focus {
+  outline: 2px solid $focus;
+}
+
 //---------------------------------------
 // CSS reset overrides
 //---------------------------------------

@@ -43,9 +43,9 @@
   font-weight: 400;
   text-decoration: none;
   color: $text-04;
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
+  position: relative;
+  top: 0;
+  left: 0;
   z-index: 1;
 }
 

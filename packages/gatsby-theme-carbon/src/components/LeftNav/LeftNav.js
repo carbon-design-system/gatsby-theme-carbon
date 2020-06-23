@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 import { SideNav, SideNavItems } from 'carbon-components-react';
-import { useNavItems } from './LeftNavItemProvider';
+import { useNavItems } from '../../util/NavItems';
 
 import NavContext from '../../util/context/NavContext';
 import LeftNavItem from './LeftNavItem';
@@ -9,11 +9,15 @@ import LeftNavResourceLinks from './ResourceLinks';
 
 import LeftNavWrapper from './LeftNavWrapper';
 import { sideNavDark } from './LeftNav.module.scss';
+import useMetadata from '../../util/hooks/useMetadata';
 
 const LeftNav = (props) => {
-  const { leftNavIsOpen, leftNavScrollTop, setLeftNavScrollTop } = useContext(
-    NavContext
-  );
+  const {
+    leftNavIsOpen,
+    leftNavScrollTop,
+    setLeftNavScrollTop,
+    toggleNavState,
+  } = useContext(NavContext);
 
   const sideNavRef = useRef();
   const sideNavListRef = useRef();
@@ -35,15 +39,25 @@ const LeftNav = (props) => {
   }, [leftNavScrollTop]);
 
   const navItems = useNavItems();
+  const { navigationStyle } = useMetadata();
+
+  const closeSwitcher = () => {
+    toggleNavState('switcherIsOpen', 'close');
+  };
 
   // TODO: replace old addon website styles with sass modules, move to wrapper
   return (
-    <LeftNavWrapper expanded={leftNavIsOpen}>
+    <LeftNavWrapper
+      expanded={leftNavIsOpen}
+      onClick={closeSwitcher}
+      onKeyPress={closeSwitcher}
+    >
       <SideNav
         ref={sideNavRef}
-        expanded
-        defaultExpanded
         aria-label="Side navigation"
+        expanded={navigationStyle ? leftNavIsOpen : true}
+        defaultExpanded={!navigationStyle}
+        isPersistent={!navigationStyle}
         className={classnames({
           [sideNavDark]: props.theme === 'dark' || props.homepage,
           'bx--side-nav--website': true,

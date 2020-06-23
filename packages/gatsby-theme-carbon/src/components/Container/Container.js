@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import cx from 'classnames';
 import NavContext from '../../util/context/NavContext';
 import useWindowSize from '../../util/hooks/useWindowSize';
+import useMetadata from '../../util/hooks/useMetadata';
 import { overlay, visible } from './Container.module.scss';
 
 const Container = ({ children, homepage, theme }) => {
@@ -12,6 +13,7 @@ const Container = ({ children, homepage, theme }) => {
   );
   const windowSize = useWindowSize();
   const lastWindowSize = useRef(windowSize);
+  const { navigationStyle } = useMetadata();
 
   const closeNavs = useCallback(() => {
     toggleNavState('leftNavIsOpen', 'close');
@@ -37,6 +39,7 @@ const Container = ({ children, homepage, theme }) => {
     container: true,
     'container--homepage': homepage,
     'container--dark': theme === 'dark',
+    'container--header--nav': navigationStyle,
   });
 
   return (
@@ -50,6 +53,9 @@ const Container = ({ children, homepage, theme }) => {
       />
       <main
         id="main-content"
+        role="presentation" // needed for jsx-a11y/no-noninteractive-element-interactions
+        onClick={closeNavs}
+        onKeyPress={closeNavs}
         aria-hidden={overlayVisible}
         className={containerClassNames}
       >
