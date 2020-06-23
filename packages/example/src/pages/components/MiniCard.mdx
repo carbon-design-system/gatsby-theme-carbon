@@ -5,44 +5,48 @@ description: Usage instructions for the MiniCard component
 
 <PageDescription>
 
-The `<MiniCard>` component should be wrapped with a `<Column>` inside of a `<CardGroup>`. This allows the correct border placement between a group of cards. Learn more about the `<CardGroup>` [here](/components/CardGroup).
+The `<MiniCard>` component can be used in place of a `<ResourceCard>` if your content allows it. Unless it is sitting aside your main conent, it should always be wrapped inside of a `<CardGroup>`. This allows the correct gutter and border placement between a group of cards.
 
 </PageDescription>
 
 ## Example
 
-<CardGroup>
-<Column colMd={4} colLg={4} noGutterSm>
-  <MiniCard title="26 characters per MiniCard" href="/demo">
+<Title>Group</Title>
+
+<CardGroup className="test">
+
+<MiniCard title="26 characters per MiniCard" href="/demo">
 
 ![Github icon](/images/github-icon.png)
 
-  </MiniCard>
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
-  <MiniCard title="Use the default icon" href="/demo" />
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
-  <MiniCard title="Choose from other icons" href="/demo" actionIcon="arrowRight" />
-</Column>
-<Column colMd={4} colLg={4} noGutterSm>
-  <MiniCard title="Or bring your own" href="/demo">
+</MiniCard>
+<MiniCard title="Use the default icon" href="/demo" />
+
+<MiniCard
+  title="Choose from other icons"
+  href="/demo"
+  actionIcon="arrowRight"
+/>
+
+<MiniCard title="Or bring your own" href="/demo">
 
 ![Github icon](/images/sketch-icon.png)
 
-  </MiniCard>
-</Column>
+</MiniCard>
+
 </CardGroup>
+
+<Title>Aside</Title>
 
 <Row>
 <Column colLg={8}>
 
-When you have the mini resource card sitting aside the main content, be sure to add the `gutterLg`, `marginSmTop`, and `noMarginLgTop` properties to the `<Column>` alongside `noGutterSm`. This will ensure the MiniCard has the appropriate gutters and margins at the approriate breakpoints.
+When you have the mini resource card sitting aside the main content, be sure to add the `noGutterSm`, `gutterLg`, `marginSmTop`, and `noMarginLgTop` properties to the `<Column>` alongside `colMd={4}` `colLg={4}`. This will ensure the MiniCard has the appropriate gutters and margins at the approriate breakpoints.
 
 </Column>
 <Column colMd={4} colLg={4} noGutterSm gutterLg marginSmTop noMarginLgTop>
   <MiniCard
-  title="By itself"
+  title="By itself, as an Aside"
   href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
   >
 
@@ -58,26 +62,20 @@ When you have the mini resource card sitting aside the main content, be sure to 
 
 ```jsx path=components/MiniCard/MiniCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/MiniCard
 <CardGroup>
-  <Column colMd={4} colLg={4} noGutterSm>
-    <MiniCard title="26 characters per MiniCard" href="/demo">
-      ![Github icon](/images/github-icon.png)
-    </MiniCard>
-  </Column>
-  <Column colMd={4} colLg={4} noGutterSm>
-    <MiniCard title="Use the default icon" href="/demo" />
-  </Column>
-  <Column colMd={4} colLg={4} noGutterSm>
-    <MiniCard
-      title="Choose from other icons"
-      href="/demo"
-      actionIcon="arrowRight"
-    />
-  </Column>
-  <Column colMd={4} colLg={4} noGutterSm>
-    <MiniCard title="Or bring your own" href="/demo">
-      ![Github icon](/images/sketch-icon.png)
-    </MiniCard>
-  </Column>
+  <MiniCard title="26 characters per MiniCard" href="/demo">
+    ![Github icon](/images/github-icon.png)
+  </MiniCard>
+  <MiniCard title="Use the default icon" href="/demo" />
+
+  <MiniCard
+    title="Choose from other icons"
+    href="/demo"
+    actionIcon="arrowRight"
+  />
+
+  <MiniCard title="Or bring your own" href="/demo">
+    ![Github icon](/images/sketch-icon.png)
+  </MiniCard>
 </CardGroup>
 ```
 

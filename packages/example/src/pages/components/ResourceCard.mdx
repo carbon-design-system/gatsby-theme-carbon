@@ -5,13 +5,13 @@ description: Usage instructions for the ResourceCard component
 
 <PageDescription>
 
-The `<ResourceCard>` component should be wrapped with a `<Column>` inside of a `<CardGroup>`. This allows the correct border placement between a group of cards. Learn more about the `<CardGroup>` [here](/components/CardGroup).
+The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<Row className="resource-card-group">`. This allows the correct border placement between a group of cards.
 
 </PageDescription>
 
 ## Example
 
-<CardGroup>
+<Row className="resource-card-group">
 <Column colMd={4} colLg={4} noGutterSm>
     <ResourceCard
       subTitle="With subtitle"
@@ -63,14 +63,14 @@ The `<ResourceCard>` component should be wrapped with a `<Column>` inside of a `
 
   </ResourceCard>
 </Column>
-</CardGroup>
+</Row>
 
 ## Code
 
 <Title>Group</Title>
 
 ```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
-<CardGroup className="resource-card-group">
+<Row className="resource-card-group">
   <Column colMd={4} colLg={4} noGutterSm>
     <ResourceCard
       subTitle="Carbon Design System"
@@ -87,7 +87,7 @@ The `<ResourceCard>` component should be wrapped with a `<Column>` inside of a `
       ![Github icon](/images/github-icon.png)
     </ResourceCard>
   </Column>
-</CardGroup>
+</Row>
 ```
 
 <Title>With title</Title>

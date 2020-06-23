@@ -13,32 +13,35 @@ import styles from './MiniCard.module.scss';
 
 const { prefix } = settings;
 
+const getIcon = ({ actionIcon }) => {
+  switch (actionIcon) {
+    case 'arrowRight':
+      return <ArrowRight20 aria-label="Open resource" />;
+    case 'download':
+      return <Download20 aria-label="Download" />;
+    case 'email':
+      return <Email20 aria-label="Email" />;
+    case 'calendar':
+      return <Calendar20 aria-label="Calendar" />;
+    default:
+      return <Launch20 aria-label="Open resource" />;
+  }
+};
+
 const MiniCard = ({
   children,
   className,
   href,
   title,
-  actionIcon = 'launch',
+  actionIcon,
   ...rest
 }) => {
-  const icons = (
-    <>
-      {actionIcon === 'launch' ? <Launch20 aria-label="Open resource" /> : null}
-      {actionIcon === 'arrowRight' ? (
-        <ArrowRight20 aria-label="Open resource" />
-      ) : null}
-      {actionIcon === 'download' ? <Download20 aria-label="Download" /> : null}
-      {actionIcon === 'email' ? <Email20 aria-label="Email" /> : null}
-      {actionIcon === 'calendar' ? <Calendar20 aria-label="Calendar" /> : null}
-    </>
-  );
-
   const cardContent = (
     <div className={styles.card}>
       <div className={styles.wrapper}>
         <div className={styles.title}>{title}</div>
         {children === undefined ? (
-          <div className={styles.icon}>{icons}</div>
+          <div className={styles.icon}>{getIcon({ actionIcon })}</div>
         ) : (
           <div className={styles.image}>{children}</div>
         )}

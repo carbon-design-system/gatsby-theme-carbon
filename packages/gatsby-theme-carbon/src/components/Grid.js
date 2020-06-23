@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-
 import { settings } from 'carbon-components';
+import styles from '../styles/internal/_card-group.module.scss';
 
 const { prefix } = settings;
 
@@ -57,6 +57,7 @@ export const Column = ({
   gutterLg,
   marginSmTop,
   noMarginLgTop,
+  cardGroup,
   className,
 }) => {
   const colClasses = classnames({
@@ -83,6 +84,7 @@ export const Column = ({
     [`${prefix}--gutter-lg`]: gutterLg,
     [`${prefix}--margin-sm--top`]: marginSmTop,
     [`${prefix}--no-margin-lg--top`]: noMarginLgTop,
+    [styles.cardGroup]: cardGroup,
     [className]: className,
   });
 

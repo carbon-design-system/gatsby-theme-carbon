@@ -1,0 +1,31 @@
+// Sets gray border on the top of cards at the smallest breakpoint
+
+.cardGroup {
+  border-top: 1px solid $carbon--gray-20;
+}
+
+.cardGroup:first-child {
+  border-top: 0px solid transparent;
+}
+
+// When Cards are in a group, they can't occupy the third rail
+
+.cardGroup:nth-child(2n) {
+  @include carbon--breakpoint("lg") {
+    margin-right: 33%;
+  }
+}
+
+// Borders for cards at the medium breakpoint
+
+.cardGroup:nth-child(-n + 2) {
+  @include carbon--breakpoint("md") {
+    border-top: 0px solid transparent;
+  }
+}
+
+.cardGroup:nth-child(even) {
+  @include carbon--breakpoint("md") {
+    border-left: 1px solid $carbon--gray-20;
+  }
+}

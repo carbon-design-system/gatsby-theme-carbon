@@ -27,8 +27,7 @@ import GifPlayer from '../GifPlayer';
 import ArtDirection from '../ArtDirection';
 import MediumPosts from '../MediumPosts';
 import Title from '../Title';
-import MiniCard from '../MiniCard';
-import CardGroup from '../CardGroup';
+import { MiniCard, CardGroup } from '../MiniCard';
 
 const components = {
   wrapper: function Wrapper({ children, ...props }) {
