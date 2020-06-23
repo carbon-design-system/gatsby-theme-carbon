@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Link } from 'gatsby';
 import {
-  Launch20,
-  Download20,
   ArrowRight20,
-  Error20,
+  Calendar20,
+  Download20,
   Email20,
+  Error20,
+  Launch20,
 } from '@carbon/icons-react';
 import { settings } from 'carbon-components';
 
@@ -64,6 +65,9 @@ export default class ResourceCard extends React.Component {
           ) : null}
           {actionIcon === 'email' && !disabled ? (
             <Email20 aria-label="Email" />
+          ) : null}
+          {actionIcon === 'calendar' && !disabled ? (
+            <Calendar20 aria-label="Calendar" />
           ) : null}
           {actionIcon === 'disabled' || disabled === true ? (
             <Error20 aria-label="disabled" />

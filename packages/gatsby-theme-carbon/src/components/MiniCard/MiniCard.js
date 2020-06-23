@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  Launch20,
-  Download20,
   ArrowRight20,
   Calendar20,
+  Download20,
   Email20,
+  Launch20,
 } from '@carbon/icons-react';
 import cx from 'classnames';
 import { settings } from 'carbon-components';
