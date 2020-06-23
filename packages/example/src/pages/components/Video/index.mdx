@@ -3,6 +3,9 @@ title: Video
 description: Usage instructions for the Video component
 ---
 
+import localVideo from './local-video.mp4';
+import localPoster from './local-poster.png';
+
 <PageDescription>
 
 The `<Video>` component can render a Vimeo player or a html video player.
@@ -21,6 +24,10 @@ The `<Video>` component can render a Vimeo player or a html video player.
   <track kind="captions" default src="/videos/vtt/hero-video.vtt" srcLang="en" />
 </Video>
 
+<Title>Video in MDX</Title>
+
+<Video src={localVideo} poster={localPoster} />
+
 ## Code
 
 <Title>Vimeo</Title>
@@ -35,6 +42,15 @@ The `<Video>` component can render a Vimeo player or a html video player.
 <Video src="/videos/hero-video.mp4" poster="/images/poster.png">
   <track kind="captions" default src="/videos/vtt/hero-video.vtt" srcLang="en" />
 </Video>
+```
+
+<Title>Video in MDX</Title>
+
+```markdown path=components/Video.mdx src=https://github.com/carbon-design-system/gatsby-theme-carbon/blob/master/packages/example/src/pages/components/Video/index.mdx
+import localVideo from './local-video.mp4';
+import localPoster from './local-poster.png';
+
+<Video src={localVideo} poster={localPoster} />
 ```
 
 ### Props
