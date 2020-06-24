@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useEffect, useState } from 'react';
+import React, { useContext, useRef, useLayoutEffect, useState } from 'react';
 import cx from 'classnames';
 import useMedia from 'use-media';
 import NavContext from '../../util/context/NavContext';
@@ -8,10 +8,10 @@ const Switcher = ({ children }) => {
   const lgBreakpoint = useMedia('min-width: 1056px');
   const { switcherIsOpen } = useContext(NavContext);
   const listRef = useRef(null);
-  const [height, setHeight] = useState(null);
+  const [height, setHeight] = useState(0);
 
   // calculate and update height
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (switcherIsOpen) {
       setHeight(listRef.current.offsetHeight + 40);
     } else {
