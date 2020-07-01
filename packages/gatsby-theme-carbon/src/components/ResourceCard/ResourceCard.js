@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { Link } from 'gatsby';
+import { Link, withPrefix } from 'gatsby';
 import {
   Launch20,
   Download20,
@@ -29,7 +29,7 @@ export default class ResourceCard extends React.Component {
     } = this.props;
 
     let isLink;
-    if (href !== undefined) {
+    if (href !== undefined && !rest.download) {
       isLink = href.charAt(0) === '/';
     }
 
@@ -90,7 +90,11 @@ export default class ResourceCard extends React.Component {
       );
     } else {
       cardContainer = (
-        <a href={href} className={carbonTileclassNames} {...rest}>
+        <a
+          href={rest.download ? withPrefix(href) : href}
+          className={carbonTileclassNames}
+          {...rest}
+        >
           {cardContent}
         </a>
       );
