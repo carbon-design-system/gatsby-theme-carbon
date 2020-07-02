@@ -91,7 +91,11 @@ export default class ResourceCard extends React.Component {
     } else {
       cardContainer = (
         <a
-          href={rest.download ? withPrefix(href) : href}
+          href={
+            rest.download && !RegExp(/^(https?:)?\/\//g).test(href)
+              ? withPrefix(href)
+              : href
+          }
           className={carbonTileclassNames}
           {...rest}
         >
