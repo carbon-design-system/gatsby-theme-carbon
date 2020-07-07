@@ -69,7 +69,12 @@ const LeftNav = (props) => {
       >
         <SideNavItems className="sidenav-list">
           {navItems.map((item, i) => (
-            <LeftNavItem items={item.pages} category={item.title} key={i} />
+            <LeftNavItem
+              items={item.pages}
+              category={item.title}
+              key={i}
+              hasDivider={item.hasDivider}
+            />
           ))}
           <LeftNavResourceLinks />
         </SideNavItems>

@@ -64,6 +64,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   type NavItemsYaml implements Node {
     title: String!
     pages: [NavItemsYamlPage]!
+    hasDivider: Boolean
   }`,
     schema.buildObjectType({
       name: 'MediumFeed',

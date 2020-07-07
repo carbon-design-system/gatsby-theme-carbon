@@ -13,6 +13,7 @@ export function useNavItems() {
               title
               path
             }
+            hasDivider
           }
         }
       }

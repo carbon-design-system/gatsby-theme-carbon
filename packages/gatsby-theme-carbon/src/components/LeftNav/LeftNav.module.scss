@@ -11,6 +11,13 @@
   color: $ui-05;
 }
 
+.divider {
+  margin: $spacing-03 $spacing-05;
+  border-color: var(--cds-ui-03, #e0e0e0);
+  border-style: solid;
+  border-bottom: none;
+}
+
 .resource-link {
   &:first-of-type {
     margin-top: $spacing-05;
