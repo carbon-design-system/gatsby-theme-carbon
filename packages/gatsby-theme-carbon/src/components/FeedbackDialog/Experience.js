@@ -34,6 +34,7 @@ const Experience = React.forwardRef(function Experience(props, ref) {
         >
           <input
             ref={selected === NEGATIVE ? ref : undefined}
+            aria-label={NEGATIVE}
             type="radio"
             id={NEGATIVE}
             defaultChecked={selected === NEGATIVE}
@@ -56,6 +57,7 @@ const Experience = React.forwardRef(function Experience(props, ref) {
         >
           <input
             ref={selected === NEUTRAL ? ref : undefined}
+            aria-label={NEUTRAL}
             type="radio"
             id={NEUTRAL}
             defaultChecked={selected === NEUTRAL}
@@ -75,6 +77,7 @@ const Experience = React.forwardRef(function Experience(props, ref) {
           <input
             ref={selected === POSITIVE ? ref : undefined}
             type="radio"
+            aria-label={POSITIVE}
             id={POSITIVE}
             defaultChecked={selected === POSITIVE}
             name="feedback-form-experience"
