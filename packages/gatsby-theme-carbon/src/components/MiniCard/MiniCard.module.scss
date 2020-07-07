@@ -4,6 +4,7 @@
   justify-content: center;
   background: $ui-background;
   height: $layout-05;
+  transition: background $duration--fast-02;
 }
 
 .card:hover {

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { settings } from 'carbon-components';
-import styles from '../styles/internal/_card-group.module.scss';
 
 const { prefix } = settings;
 
@@ -32,6 +31,7 @@ Row.propTypes = {
   className: PropTypes.string,
 };
 
+// TODO: Bring over to CardGroup/MiniCard
 export const Column = ({
   children,
   colSm,
@@ -57,7 +57,6 @@ export const Column = ({
   gutterLg,
   marginSmTop,
   noMarginLgTop,
-  cardGroup,
   className,
 }) => {
   const colClasses = classnames({
@@ -82,9 +81,8 @@ export const Column = ({
     [`${prefix}--col-xl-${colXl}`]: colXl,
     [`${prefix}--col-max-${colMax}`]: colMax,
     [`${prefix}--gutter-lg`]: gutterLg,
-    [`${prefix}--margin-sm--top`]: marginSmTop,
-    [`${prefix}--no-margin-lg--top`]: noMarginLgTop,
-    [styles.cardGroup]: cardGroup,
+    [`${prefix}--margin-sm--top`]: marginSmTop, // TODO: remove and use use mediaqueries in media
+    [`${prefix}--no-margin-lg--top`]: noMarginLgTop, // TODO: remove and use use mediaqueries in media
     [className]: className,
   });
 
