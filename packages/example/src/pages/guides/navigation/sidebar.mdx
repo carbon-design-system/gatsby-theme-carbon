@@ -55,12 +55,12 @@ In the example above, a divider will appear between **Menu** and **Single Page**
 
 ## Customizing
 
-The nav item list can be customized using Gatsby theme [shadowing](../shadowing).
-Simply provide your own implementation of `src/components/LeftNav/LeftNavItemProvider.js` which can augment or replace the nav items read from `src/data/nav-items.yaml`.
+The nav item list can be customized using Gatsby theme [shadowing](/guides/shadowing).
+Simply provide your own implementation of `/src/util/NavItems.js` which can augment or replace the nav items read from `src/data/nav-items.yaml`.
 
 ```javascript
-// src/gatsby-theme-carbon/components/LeftNav/LeftNavItemProvider.js
-import { useNavItems as themeUseNavItems } from 'gatsby-theme-carbon/src/components/LeftNav/LeftNavItemProvider';
+// /src/util/NavItems.js
+import { useNavItems as themeUseNavItems } from 'gatsby-theme-carbon/src/util/NavItems.js';
 
 // add nav items
 export function useNavItems() {
