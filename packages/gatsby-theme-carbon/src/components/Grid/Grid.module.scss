@@ -1,0 +1,5 @@
+.column {
+  @include carbon--breakpoint-down("lg") {
+    margin-bottom: var(--space);
+  }
+}
