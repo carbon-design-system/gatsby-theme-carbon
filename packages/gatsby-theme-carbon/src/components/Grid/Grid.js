@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { settings } from 'carbon-components';
+import { column } from './Grid.module.scss';
 
 const { prefix } = settings;
 
@@ -60,7 +61,7 @@ export const Column = ({
   noMarginLgTop,
   className,
 }) => {
-  const colClasses = classnames({
+  const colClasses = classnames(column, {
     [`${prefix}--gutter-lg`]: gutterLg,
     [`${prefix}--no-gutter-sm`]: noGutterSm,
     [`${prefix}--no-gutter-md`]: noGutterMd,
