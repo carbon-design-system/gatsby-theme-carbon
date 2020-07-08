@@ -1,7 +1,8 @@
-// Sets gray border on the top of cards at the smallest breakpoint
+// Sets gray border on the top of cards at the smallest breakpoint and removes the margin set by the <Column> in the Grid component.
 
 .cardGroup {
   border-top: 1px solid $carbon--gray-20;
+  margin-bottom: 0;
 }
 
 .cardGroup:first-child {
