@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import { settings } from 'carbon-components';
-import { column } from './Grid.module.scss';
+import styles from './Grid.module.scss';
 
 const { prefix } = settings;
 
@@ -20,8 +20,14 @@ Grid.propTypes = {
   className: PropTypes.string,
 };
 
-export const Row = ({ children, className }) => (
-  <div className={classnames([`${prefix}--row`], className)}>{children}</div>
+export const Row = ({ children, className, addPaddingWhenWrapped = true }) => (
+  <div
+    className={classnames(`${prefix}--row`, className, {
+      [styles.addPaddingWhenWrapped]: addPaddingWhenWrapped,
+    })}
+  >
+    {children}
+  </div>
 );
 
 Row.propTypes = {
@@ -31,6 +37,11 @@ Row.propTypes = {
    * Specify a class name for row
    */
   className: PropTypes.string,
+
+  /**
+   * Should vertical padding be added when the row wraps
+   */
+  addPaddingWhenWrapped: PropTypes.bool,
 };
 
 export const Column = ({
@@ -56,8 +67,9 @@ export const Column = ({
   noGutterXlLeft,
   noGutterMaxLeft,
   className,
+  addPaddingWhenWrapped = true,
 }) => {
-  const colClasses = classnames(column, {
+  const colClasses = classnames(styles.column, {
     [`${prefix}--no-gutter-sm`]: noGutterSm,
     [`${prefix}--no-gutter-md`]: noGutterMd,
     [`${prefix}--no-gutter-lg`]: noGutterLg,
@@ -79,6 +91,7 @@ export const Column = ({
     [`${prefix}--col-xl-${colXl}`]: colXl,
     [`${prefix}--col-max-${colMax}`]: colMax,
     [className]: className,
+    [styles.addPaddingWhenWrapped]: addPaddingWhenWrapped,
   });
 
   return <div className={colClasses}>{children}</div>;
@@ -142,4 +155,8 @@ Column.propTypes = {
    * Specify a class name for column
    */
   className: PropTypes.string,
+  /**
+   * Should vertical padding be added when the row wraps
+   */
+  addPaddingWhenWrapped: PropTypes.bool,
 };

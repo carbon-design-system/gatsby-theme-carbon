@@ -1,4 +1,12 @@
-.column {
+// If the row has addPaddingWhenWrapped, pad all children
+.row.addPaddingWhenWrapped .column {
+  @include carbon--breakpoint-down("lg") {
+    margin-bottom: var(--space);
+  }
+}
+
+// If the column has addPaddingWhenWrapped, pad that child
+.column.addPaddingWhenWrapped {
   @include carbon--breakpoint-down("lg") {
     margin-bottom: var(--space);
   }

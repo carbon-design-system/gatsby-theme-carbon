@@ -26,10 +26,11 @@ The `<Row>` component is a wrapper that adds the `bx--row` class to a wrapper di
 
 <Title>Row props</Title>
 
-| property  | propType | required | default | description           |
-| --------- | -------- | -------- | ------- | --------------------- |
-| children  | node     |          |         |                       |
-| className | string   |          |         | Add custom class name |
+| property              | propType | required | default | description                                                             |
+| --------------------- | -------- | -------- | ------- | ----------------------------------------------------------------------- |
+| children              | node     | yes      |         |                                                                         |
+| className             | string   | no       |         | Add custom class name                                                   |
+| addPaddingWhenWrapped | boolean  | no       | true    | True if vertical padding should be added to children when the row wraps |
 
 ## Column
 
@@ -171,29 +172,48 @@ The `<Column>` component is used to define column widths for your content, you c
 </Row>
 ```
 
+<Title>Padding when wrapped</Title>
+
+```jsx path=components/Grid.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/Grid
+{
+  /* addPaddingWhenWrapped will padd all of a rows children or an individual column */
+  /* some theme components have this prop disabled by default */
+}
+
+<Row>
+  <Column colMd={4} colLg={4} offsetLg={4}>
+    ![Grid Example](images/Article_05.png)
+  </Column>
+  <Column colMd={4} colLg={4}>
+    ![Grid Example](images/Article_05.png)
+  </Column>
+</Row>;
+```
+
 <Title>Column props</Title>
 
-| property        | propType | required | default | description                                  |
-| --------------- | -------- | -------- | ------- | -------------------------------------------- |
-| children        | node     |          |         |                                              |
-| className       | string   |          |         | Add custom class name                        |
-| colSm           | number   |          |         | Specify the col width at small breakpoint    |
-| colMd           | number   |          |         | Specify the col width at medium breakpoint   |
-| colLg           | number   |          | 12      | Specify the col width at large breakpoint    |
-| colXl           | number   |          |         | Specify the col width at x-large breakpoint  |
-| colMax          | number   |          |         | Specify the col width at max breakpoint      |
-| offsetSm        | number   |          |         | Specify the col offset at small breakpoint   |
-| offsetMd        | number   |          |         | Specify the col offset at medium breakpoint  |
-| offsetLg        | number   |          |         | Specify the col offset at large breakpoint   |
-| offsetXl        | number   |          |         | Specify the col offset at x-large breakpoint |
-| offsetMax       | number   |          |         | Specify the col offset at max breakpoint     |
-| noGutterSm      | bool     |          |         | Specify no-gutter at small breakpoint        |
-| noGutterMd      | bool     |          |         | Specify no-gutter at medium breakpoint       |
-| noGutterLg      | bool     |          |         | Specify no-gutter at large breakpoint        |
-| noGutterXl      | bool     |          |         | Specify no-gutter at x-large breakpoint      |
-| noGutterMax     | bool     |          |         | Specify no-gutter at max breakpoint          |
-| noGutterSmLeft  | bool     |          |         | Specify no-gutter left at small breakpoint   |
-| noGutterMdLeft  | bool     |          |         | Specify no-gutter left at medium breakpoint  |
-| noGutterLgLeft  | bool     |          |         | Specify no-gutter left at large breakpoint   |
-| noGutterXlLeft  | bool     |          |         | Specify no-gutter left at x-large breakpoint |
-| noGutterMaxLeft | bool     |          |         | Specify no-gutter left at max breakpoint     |
+| property              | propType | required | default | description                                                             |
+| --------------------- | -------- | -------- | ------- | ----------------------------------------------------------------------- |
+| children              | node     |          |         |                                                                         |
+| className             | string   |          |         | Add custom class name                                                   |
+| colSm                 | number   |          |         | Specify the col width at small breakpoint                               |
+| colMd                 | number   |          |         | Specify the col width at medium breakpoint                              |
+| colLg                 | number   |          | 12      | Specify the col width at large breakpoint                               |
+| colXl                 | number   |          |         | Specify the col width at x-large breakpoint                             |
+| colMax                | number   |          |         | Specify the col width at max breakpoint                                 |
+| offsetSm              | number   |          |         | Specify the col offset at small breakpoint                              |
+| offsetMd              | number   |          |         | Specify the col offset at medium breakpoint                             |
+| offsetLg              | number   |          |         | Specify the col offset at large breakpoint                              |
+| offsetXl              | number   |          |         | Specify the col offset at x-large breakpoint                            |
+| offsetMax             | number   |          |         | Specify the col offset at max breakpoint                                |
+| noGutterSm            | bool     |          |         | Specify no-gutter at small breakpoint                                   |
+| noGutterMd            | bool     |          |         | Specify no-gutter at medium breakpoint                                  |
+| noGutterLg            | bool     |          |         | Specify no-gutter at large breakpoint                                   |
+| noGutterXl            | bool     |          |         | Specify no-gutter at x-large breakpoint                                 |
+| noGutterMax           | bool     |          |         | Specify no-gutter at max breakpoint                                     |
+| noGutterSmLeft        | bool     |          |         | Specify no-gutter left at small breakpoint                              |
+| noGutterMdLeft        | bool     |          |         | Specify no-gutter left at medium breakpoint                             |
+| noGutterLgLeft        | bool     |          |         | Specify no-gutter left at large breakpoint                              |
+| noGutterXlLeft        | bool     |          |         | Specify no-gutter left at x-large breakpoint                            |
+| noGutterMaxLeft       | bool     |          |         | Specify no-gutter left at max breakpoint                                |
+| addPaddingWhenWrapped | boolean  | no       | true    | True if vertical padding should be added to children when the row wraps |
