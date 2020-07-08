@@ -1,5 +1,5 @@
 .figure {
-  margin-bottom: 1.5rem;
+  margin-bottom: $spacing-07;
 }
 
 .image-button-wrapper {
@@ -19,7 +19,7 @@
 }
 
 .image-title {
-  @include carbon--type-style('productive-heading-02');
+  @include carbon--type-style("productive-heading-02");
   position: absolute;
   display: block;
   width: 100%;
@@ -49,7 +49,7 @@
   margin: $spacing-05 0;
 }
 
-.image-button-wrapper:focus img {
+.image-button-wrapper:focus img,
+.image-button-wrapper:focus video {
   outline: 2px solid $focus;
-  outline-offset: -2px;
 }

@@ -20,9 +20,10 @@ const ToggleIcon = ({ paused, hovering }) =>
 
 const GifPlayer = ({ children, color, className, isInDialog }) => {
   const [paused, setPaused] = useState(false);
-  const [hovering, setHovering] = useState(false);
 
-  const onClick = () => {
+  const [hovering, setHovering] = useState(false);
+  const onClick = (e) => {
+    e.stopPropagation();
     setPaused(!paused);
   };
 
@@ -72,6 +73,10 @@ const GifPlayer = ({ children, color, className, isInDialog }) => {
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}
         onClick={onClick}
+        onKeyDown={(e) => {
+          // Stop keyDown event from propogating to ImageGalleryImage component.
+          e.stopPropagation();
+        }}
       >
         <ToggleIcon hovering={hovering} paused={paused} />
       </button>

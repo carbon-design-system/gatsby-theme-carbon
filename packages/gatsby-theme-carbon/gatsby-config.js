@@ -11,6 +11,7 @@ module.exports = (themeOptions) => {
 
   const {
     isSearchEnabled = true,
+    navigationStyle = '',
     withWebp = false,
     iconPath,
     mdxExtensions = ['.mdx', '.md'],
@@ -20,6 +21,8 @@ module.exports = (themeOptions) => {
     pngCompressionSpeed = 4, // default for gatsby-plugin-sharp
     mediumAccount = '',
     gatsbyRemarkPlugins = [],
+    remarkPlugins = [],
+    gatsbyPluginSharpOptions = {},
   } = themeOptions;
 
   const optionalPlugins = [];
@@ -45,6 +48,7 @@ module.exports = (themeOptions) => {
         quality: imageQuality,
         withWebp,
         pngCompressionSpeed,
+        ...gatsbyPluginSharpOptions,
       },
     },
     { resolve: `gatsby-remark-responsive-iframe` },
@@ -54,6 +58,7 @@ module.exports = (themeOptions) => {
   return {
     siteMetadata: {
       isSearchEnabled,
+      navigationStyle,
       title: 'Gatsby Theme Carbon',
       description:
         'Add a description by supplying it to siteMetadata in your gatsby-config.js file.',
@@ -90,6 +95,7 @@ module.exports = (themeOptions) => {
             ...defaultRemarkPlugins,
             ...gatsbyRemarkPlugins,
           ],
+          remarkPlugins,
           defaultLayouts: {
             default: require.resolve('./src/templates/Default.js'),
             home: require.resolve('./src/templates/Homepage.js'),

@@ -10,6 +10,7 @@ import {
 import { AppSwitcher20, Close20 } from '@carbon/icons-react';
 import cx from 'classnames';
 
+import HeaderNav from '../HeaderNav/HeaderNav';
 import GlobalSearch from '../GlobalSearch';
 import NavContext from '../../util/context/NavContext';
 import useMetadata from '../../util/hooks/useMetadata';
@@ -31,47 +32,46 @@ const Header = ({ children }) => {
     switcherIsOpen,
     searchIsOpen,
   } = useContext(NavContext);
-  const { isSearchEnabled } = useMetadata();
+  const { isSearchEnabled, navigationStyle } = useMetadata();
 
   return (
-    <>
-      <ShellHeader aria-label="Header" className={header}>
-        <SkipToContent href="#main-content" className={skipToContent} />
-        <HeaderMenuButton
-          className={cx('bx--header__action--menu', headerButton)}
-          aria-label="Open menu"
-          onClick={() => {
-            toggleNavState('leftNavIsOpen');
-            toggleNavState('switcherIsOpen', 'close');
-          }}
-          isActive={leftNavIsOpen}
-        />
-        <Link
-          className={cx(headerName, {
-            [collapsed]: searchIsOpen,
+    <ShellHeader aria-label="Header" className={header}>
+      <SkipToContent href="#main-content" className={skipToContent} />
+      <HeaderMenuButton
+        className={cx('bx--header__action--menu', headerButton)}
+        aria-label="Open menu"
+        onClick={() => {
+          toggleNavState('leftNavIsOpen');
+          toggleNavState('switcherIsOpen', 'close');
+        }}
+        isActive={leftNavIsOpen}
+      />
+      <Link
+        className={cx(headerName, {
+          [collapsed]: searchIsOpen,
+        })}
+        to="/"
+      >
+        {children}
+      </Link>
+      {navigationStyle && <HeaderNav />}
+      <HeaderGlobalBar>
+        {isSearchEnabled && <GlobalSearch />}
+        <HeaderGlobalAction
+          className={cx(headerButton, switcherButton, {
+            [switcherButtonOpen]: switcherIsOpen,
           })}
-          to="/"
+          aria-label="Switch"
+          onClick={() => {
+            toggleNavState('switcherIsOpen');
+            toggleNavState('searchIsOpen', 'close');
+            toggleNavState('leftNavIsOpen', 'close');
+          }}
         >
-          {children}
-        </Link>
-        <HeaderGlobalBar>
-          {isSearchEnabled && <GlobalSearch />}
-          <HeaderGlobalAction
-            className={cx(headerButton, switcherButton, {
-              [switcherButtonOpen]: switcherIsOpen,
-            })}
-            aria-label="Switch"
-            onClick={() => {
-              toggleNavState('switcherIsOpen');
-              toggleNavState('searchIsOpen', 'close');
-              toggleNavState('leftNavIsOpen', 'close');
-            }}
-          >
-            {switcherIsOpen ? <Close20 /> : <AppSwitcher20 />}
-          </HeaderGlobalAction>
-        </HeaderGlobalBar>
-      </ShellHeader>
-    </>
+          {switcherIsOpen ? <Close20 /> : <AppSwitcher20 />}
+        </HeaderGlobalAction>
+      </HeaderGlobalBar>
+    </ShellHeader>
   );
 };
 

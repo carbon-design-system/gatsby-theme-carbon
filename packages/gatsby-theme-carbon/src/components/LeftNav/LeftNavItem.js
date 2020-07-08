@@ -8,15 +8,17 @@ import {
   SideNavMenuItem,
 } from 'carbon-components-react';
 
-import styles, { currentItem } from './LeftNav.module.scss';
+import styles from './LeftNav.module.scss';
 
 import NavContext from '../../util/context/NavContext';
 import usePathprefix from '../../util/hooks/usePathprefix';
 
 const LeftNavItem = (props) => {
-  const { items, category } = props;
+  const { items, category, hasDivider } = props;
   const { toggleNavState } = useContext(NavContext);
-  const closeLeftNav = () => toggleNavState('leftNavIsOpen', 'close');
+  const closeLeftNav = () => {
+    toggleNavState('leftNavIsOpen', 'close');
+  };
   const pathPrefix = usePathprefix();
 
   return (
@@ -32,31 +34,39 @@ const LeftNavItem = (props) => {
 
         if (items.length === 1) {
           return (
-            <SideNavLink
-              onClick={closeLeftNav}
-              icon={<span>dummy icon</span>}
-              element={Link}
-              className={cx({ [currentItem]: isActive })}
-              isActive={isActive}
-              to={`${items[0].path}`}
-            >
-              {category}
-            </SideNavLink>
+            <>
+              <SideNavLink
+                onClick={closeLeftNav}
+                icon={<span>dummy icon</span>}
+                element={Link}
+                className={cx({
+                  [styles.currentItem]: isActive,
+                })}
+                isActive={isActive}
+                to={`${items[0].path}`}
+              >
+                {category}
+              </SideNavLink>
+              {hasDivider && <hr className={styles.divider} />}
+            </>
           );
         }
         return (
-          <SideNavMenu
-            icon={<span>dummy icon</span>}
-            isActive={isActive} // TODO similar categories
-            defaultExpanded={isActive}
-            title={category}
-          >
-            <SubNavItems
-              onClick={closeLeftNav}
-              items={items}
-              pathname={pathname}
-            />
-          </SideNavMenu>
+          <>
+            <SideNavMenu
+              icon={<span>dummy icon</span>}
+              isActive={isActive} // TODO similar categories
+              defaultExpanded={isActive}
+              title={category}
+            >
+              <SubNavItems
+                onClick={closeLeftNav}
+                items={items}
+                pathname={pathname}
+              />
+            </SideNavMenu>
+            {hasDivider && <hr className={styles.divider} />}
+          </>
         );
       }}
     </Location>
@@ -66,10 +76,8 @@ const LeftNavItem = (props) => {
 const SubNavItems = ({ items, pathname, onClick }) =>
   items.map((item, i) => {
     const hasActiveTab =
-      item.path.split('/') > 3
-        ? item.path.split('/')[3] === pathname.split('/')[3]
-        : item.path.split('/')[2] === pathname.split('/')[2];
-
+      `${item.path.split('/')[1]}/${item.path.split('/')[2]}` ===
+      `${pathname.split('/')[1]}/${pathname.split('/')[2]}`;
     return (
       <SideNavMenuItem
         to={`${item.path}`}

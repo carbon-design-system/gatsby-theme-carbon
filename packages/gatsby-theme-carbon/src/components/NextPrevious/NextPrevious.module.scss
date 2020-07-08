@@ -27,14 +27,15 @@
   display: block;
   height: 100%;
   color: $carbon--white-0;
+  outline-offset: -2px; //needed for focus state to be visible
 }
 
 .direction {
-  @include carbon--type-style('body-short-01');
+  @include carbon--type-style("body-short-01");
 }
 
 .name {
-  @include carbon--type-style('expressive-heading-03', true);
+  @include carbon--type-style("expressive-heading-03", true);
   padding-bottom: $spacing-05;
 }
 

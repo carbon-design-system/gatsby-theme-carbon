@@ -16,6 +16,7 @@ Gatsby themes allow you to override configuration from the theme by defining the
   <AnchorLink>Additional font weights</AnchorLink>
   <AnchorLink>Image compression</AnchorLink>
   <AnchorLink>Global search</AnchorLink>
+  <AnchorLink>Navigation style</AnchorLink>
   <AnchorLink>Edit on Github link</AnchorLink>
   <AnchorLink>Medium</AnchorLink>
   <AnchorLink>Other options</AnchorLink>
@@ -139,9 +140,43 @@ Global search is enabled by default. To disable it, set the `isSearchEnabled` op
 Under the hood, we use [Lunr](https://lunrjs.com/) to create our search index. If necessary, you tweak the search scoring algorithm and source nodes.
 To do so, provide your own [resolvers object](https://www.gatsbyjs.org/packages/gatsby-plugin-lunr/#getting-started) to the `lunrOptions` theme option.
 
+## Navigation style
+
+By default, the navigation style used by the theme is a sidebar that sits on the left-hand side of the screen. You can see it right now as you read this documentation. This style works great for websites with a lot of content, like documentation sites. 
+
+However, if your site is more editorial in nature, and has less pages of content, you may want to use the `header` navigation. This will remove the sidebar on the left-hand side of the page and replace it with a navigation menu that sits in the header. If in the future, the content on your site evolves and you feel the left nav is better suited, you can always change it back.
+
+To enable the header nav, provide `header` as a string to the `navigationStyle` option. To switch back to the default left nav provide an empty string `''` to the `navigationStyle` option. Note: By using the `header` navigation style, you will lose the ResourceLinks that sit directly below the left nav.
+
+```js
+  plugins: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        navigationStyle: 'header',
+      },
+    },
+  ],
+```
+When enabled, your header navigation will look like the image below: 
+
+<Row>
+<Column colMd={8} colLg={8}>
+
+![Header navigation style](header-nav-config.png)
+
+</Column>
+</Row>
+
+With the header navigation style enabled, the content on your page will be further left-aligned to allow for more content space.
+
+**Just a note:** In mobile-view, when the header navigation is enabled, the sidebar will persist.
+
 ## Edit on GitHub link
 
 To add a link to the bottom of each page that points to the current page source in GitHub, provide a `repository` object to `siteMetadata` in your `gatsby-config.js` file. You can provide a `baseUrl`, and if needed, the `subDirectory` and `branch` where your site source lives.
+
+To disable the `Edit in Github` link, remove the `repository` option. If the options object is now empty, delete it all together.
 
 ```js
   plugins: [
@@ -201,6 +236,9 @@ plugins: [
 ## Additional remark plugins and override existing remark plugin configuration
 
 - `gatsbyRemarkPlugins` - An array containing gatsby remark plugin configurations to be added/overridden.
+- `remarkPlugins` - An array containing [remark plugin configurations](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/#remark-plugins) to be added.
+
+The `gatsbyRemarkPlugins` option is compatible with all gatsby-remark-* plugins, for example `gatsby-remark-mermaid`. If a gatsby remark plugin does not work, you can try calling the (underlying) remark plugin directly using the `remarkPlugins` option.
 
 ### Example [Gatsby Remark Mermaid plugin](https://www.gatsbyjs.org/packages/gatsby-remark-mermaid/)
 
@@ -247,4 +285,39 @@ to turn into an image one should add the following configuration to her/his own 
     },
   ],
 
+```
+
+### Example [Remark Grid Tables](https://github.com/zestedesavoir/zmarkdown/tree/master/packages/remark-grid-tables)
+
+For the below markdown snippet:
+
+```
++-------+----------+------+
+| Table Headings   | Here |
++-------+----------+------+
+| Sub   | Headings | Too  |
++=======+==========+======+
+| cell  | column spanning |
++ spans +----------+------+
+| rows  | normal   | cell |
++-------+----------+------+
+| multi | cells can be    |
+| line  | *formatted*     |
+|       | **paragraphs**  |
+| cells |                 |
+| too   |                 |
++-------+-----------------+
+```
+
+After installing the `remark-grid-tables` plugin, add it to the `remarkPlugins` array in the theme options.
+
+```js
+ plugins: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        remarkPlugins: [require("remark-grid-tables")],
+      },
+    },
+  ],
 ```

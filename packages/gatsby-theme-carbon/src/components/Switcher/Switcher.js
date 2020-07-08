@@ -1,10 +1,25 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useLayoutEffect, useState } from 'react';
 import cx from 'classnames';
+import useMedia from 'use-media';
 import NavContext from '../../util/context/NavContext';
 import { nav, open, divider, link, linkDisabled } from './Switcher.module.scss';
 
 const Switcher = ({ children }) => {
+  const lgBreakpoint = useMedia('min-width: 1056px');
   const { switcherIsOpen } = useContext(NavContext);
+  const listRef = useRef(null);
+  const [height, setHeight] = useState(0);
+
+  // calculate and update height
+  useLayoutEffect(() => {
+    if (switcherIsOpen) {
+      setHeight(listRef.current.offsetHeight + 40);
+    } else {
+      setHeight(0);
+    }
+  }, [listRef, switcherIsOpen]);
+
+  const maxHeight = !lgBreakpoint && switcherIsOpen ? '100%' : `${height}px`;
 
   return (
     <nav
@@ -12,8 +27,9 @@ const Switcher = ({ children }) => {
       aria-label="IBM Design ecosystem navigation"
       aria-expanded={switcherIsOpen}
       tabIndex="-1"
+      style={{ maxHeight }}
     >
-      <ul>{children}</ul>
+      <ul ref={listRef}>{children}</ul>
     </nav>
   );
 };
@@ -33,13 +49,14 @@ export const SwitcherLink = ({
   const href = disabled || !hrefProp ? undefined : hrefProp;
   const className = disabled ? linkDisabled : link;
   const { switcherIsOpen } = useContext(NavContext);
+  const openTabIndex = disabled ? '-1' : 0;
 
   return (
     <li>
       <a
         aria-disabled={disabled}
         role="button"
-        tabIndex={switcherIsOpen ? 0 : '-1'}
+        tabIndex={switcherIsOpen ? openTabIndex : '-1'}
         className={className}
         href={href}
         {...rest}
@@ -69,6 +86,9 @@ const DefaultChildren = () => {
         IBM Design Language
       </SwitcherLink>
       <SwitcherLink href="https://ibm.com/brand">IBM Brand Center</SwitcherLink>
+      <SwitcherLink href="https://www.ibm.com/able/">
+        IBM Accessibility
+      </SwitcherLink>
       <SwitcherDivider>Design disciplines</SwitcherDivider>
       <SwitcherLink href="https://www.carbondesignsystem.com/">
         Product

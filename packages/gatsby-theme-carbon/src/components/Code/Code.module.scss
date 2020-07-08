@@ -1,13 +1,13 @@
 :global {
   code {
-    font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
-      'Bitstream Vera Sans Mono', Courier, monospace;
+    font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
+      "Bitstream Vera Sans Mono", Courier, monospace;
   }
 
   p > code,
   li > code,
   td > code {
-    @include carbon--type-style('code-01');
+    @include carbon--type-style("code-01");
     position: relative;
     display: inline;
     padding: 0 0.5em;
@@ -30,12 +30,12 @@
 
 .row {
   position: relative;
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
-    'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", Courier, monospace;
   color: $inverse-01;
-  @include carbon--type-style('code-02');
+  @include carbon--type-style("code-02");
   width: calc(100% + 2rem);
-  @include carbon--breakpoint('lg') {
+  @include carbon--breakpoint("lg") {
     width: calc(67% + 1rem);
   }
 }
@@ -75,7 +75,7 @@
   }
   &::before,
   &::after {
-    z-index: z('floating');
+    z-index: z("floating");
   }
 }
 
@@ -98,8 +98,8 @@
 }
 
 .show-more-button {
-  @include carbon--type-style('body-short-01');
-  font-family: 'IBM Plex Sans VF', sans-serif;
+  @include carbon--type-style("body-short-01");
+  font-family: "IBM Plex Sans VF", sans-serif;
   position: absolute;
   right: $spacing-03;
   bottom: $spacing-03;
@@ -113,6 +113,11 @@
   transition: background-color $duration--fast-02;
   &:hover {
     background-color: $inverse-02;
+  }
+
+  &:focus {
+    outline: 2px solid $focus;
+    outline-offset: -2px;
   }
 }
 
@@ -149,6 +154,7 @@
   align-items: center;
   background: transparent;
   transition: background $duration--fast-02;
+  outline-offset: -2px;
   z-index: 1000;
   &:hover {
     background-color: $inverse-02;
