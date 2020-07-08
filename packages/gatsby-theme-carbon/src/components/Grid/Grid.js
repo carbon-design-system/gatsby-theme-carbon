@@ -32,7 +32,6 @@ Row.propTypes = {
   className: PropTypes.string,
 };
 
-// TODO: Bring over to CardGroup/MiniCard
 export const Column = ({
   children,
   colSm,
@@ -59,7 +58,6 @@ export const Column = ({
   className,
 }) => {
   const colClasses = classnames(column, {
-    [`${prefix}--gutter-lg`]: gutterLg,
     [`${prefix}--no-gutter-sm`]: noGutterSm,
     [`${prefix}--no-gutter-md`]: noGutterMd,
     [`${prefix}--no-gutter-lg`]: noGutterLg,
@@ -80,6 +78,7 @@ export const Column = ({
     [`${prefix}--col-lg-${colLg}`]: colLg,
     [`${prefix}--col-xl-${colXl}`]: colXl,
     [`${prefix}--col-max-${colMax}`]: colMax,
+    [`${prefix}--gutter-lg`]: gutterLg,
     [className]: className,
   });
 
