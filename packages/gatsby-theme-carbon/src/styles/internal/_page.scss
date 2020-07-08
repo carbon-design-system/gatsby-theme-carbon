@@ -178,6 +178,12 @@ img {
   margin-top: 24px;
 }
 
+.container .#{$prefix}--no-margin-md--top {
+  @include carbon--breakpoint("md") {
+    margin-top: 0;
+  }
+}
+
 .container .#{$prefix}--no-margin-lg--top {
   @include carbon--breakpoint("lg") {
     margin-top: 0;

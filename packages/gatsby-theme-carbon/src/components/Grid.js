@@ -56,10 +56,12 @@ export const Column = ({
   noGutterMaxLeft,
   gutterLg,
   marginSmTop,
+  noMarginMdTop,
   noMarginLgTop,
   className,
 }) => {
   const colClasses = classnames({
+    [`${prefix}--gutter-lg`]: gutterLg,
     [`${prefix}--no-gutter-sm`]: noGutterSm,
     [`${prefix}--no-gutter-md`]: noGutterMd,
     [`${prefix}--no-gutter-lg`]: noGutterLg,
@@ -80,8 +82,8 @@ export const Column = ({
     [`${prefix}--col-lg-${colLg}`]: colLg,
     [`${prefix}--col-xl-${colXl}`]: colXl,
     [`${prefix}--col-max-${colMax}`]: colMax,
-    [`${prefix}--gutter-lg`]: gutterLg,
     [`${prefix}--margin-sm--top`]: marginSmTop, // TODO: remove and use use mediaqueries in media
+    [`${prefix}--no-margin-md--top`]: noMarginMdTop, // TODO: remove and use use mediaqueries in media
     [`${prefix}--no-margin-lg--top`]: noMarginLgTop, // TODO: remove and use use mediaqueries in media
     [className]: className,
   });
