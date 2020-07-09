@@ -9,7 +9,7 @@ export const wrapRootElement = wrapRoot;
 export const onRenderBody = ({ setHeadComponents, setBodyAttributes }) => {
   // prevents jank while page hydrates, removed on page load
   setBodyAttributes({
-    class: 'body--preload',
+    className: 'body--preload',
   });
 
   const script = `
