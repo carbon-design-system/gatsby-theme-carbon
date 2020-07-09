@@ -52,6 +52,10 @@
   height: 20px;
 }
 
+.#{$prefix}--resource-card .#{$prefix}--resource-card__icon--action svg {
+  fill: $icon-01;
+}
+
 // Dark
 .#{$prefix}--resource-card--dark .#{$prefix}--tile {
   background: $carbon--gray-90; //$ui-background for gray 90 theme
