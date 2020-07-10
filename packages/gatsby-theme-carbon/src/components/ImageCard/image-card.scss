@@ -1,3 +1,9 @@
+// #906: We need to use the attribute selector here b.c. we don't control the column,
+// it's provided by the developers through MDX and we don't want to force an extra prop
+.image-card-group [class*="--column"] {
+  --space: 0;
+}
+
 .#{$prefix}--image-card {
   //overrides global vertical spacing
   --space: 0;
