@@ -25,7 +25,6 @@ const Switcher = ({ children }) => {
     <nav
       className={cx(nav, { [open]: switcherIsOpen })}
       aria-label="IBM Design ecosystem navigation"
-      aria-expanded={switcherIsOpen}
       tabIndex="-1"
       style={{ maxHeight }}
     >
