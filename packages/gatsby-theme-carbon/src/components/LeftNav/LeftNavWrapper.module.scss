@@ -13,21 +13,21 @@
   }
 
   // LeftNav default style in desktop view.
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     transform: translateX(0px);
   }
 }
 
 // HeaderNavigation default style in desktop view (hide LeftNav).
 .useHeaderNavStyles.leftNavWrapper {
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     transform: translateX(-256px);
   }
 }
 
 // Transition expanded LeftNav in mobile back to HeaderNavigation in dektop view.
 .useHeaderNavStyles.expanded {
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     transform: translateX(-256px);
   }
 }
@@ -42,7 +42,7 @@
   transform: translateX(0px);
 
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     box-shadow: none;
   }
 }

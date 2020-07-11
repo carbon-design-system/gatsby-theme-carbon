@@ -108,7 +108,7 @@ $z-02: 2;
 
 .in-dialog-gallery-container,
 .gallery-container {
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     :global(.bx--col-lg-2) {
       flex: 0 0 16.66666667%;
       max-width: 16.66666667%;
@@ -187,7 +187,7 @@ $z-02: 2;
 }
 
 .image-title {
-  @include carbon--type-style("productive-heading-02");
+  @include carbon--type-style('productive-heading-02');
   position: absolute;
   display: block;
   width: 100%;

@@ -1,4 +1,4 @@
-@import "~carbon-components/scss/globals/scss/helper-mixins";
+@import '~carbon-components/scss/globals/scss/helper-mixins';
 
 .container {
   position: relative;
@@ -34,7 +34,7 @@
 }
 
 .input {
-  @include carbon--type-style("body-short-02");
+  @include carbon--type-style('body-short-02');
   color: $inverse-01;
   caret-color: $inverse-01;
   background-color: transparent;
@@ -57,7 +57,7 @@
 
 .list {
   position: absolute;
-  z-index: z("floating");
+  z-index: z('floating');
   padding: $spacing-05 0;
   left: 0;
   right: 0;
@@ -78,7 +78,7 @@
 }
 
 .description {
-  @include carbon--type-style("caption-01");
+  @include carbon--type-style('caption-01');
   text-transform: lowercase;
   color: $carbon--gray-30;
 }
@@ -86,7 +86,7 @@
 .link {
   padding: 6px $spacing-05;
   cursor: pointer;
-  @include carbon--type-style("heading-01");
+  @include carbon--type-style('heading-01');
   transition: all $duration--fast-01 motion(standard, productive);
   display: block;
   text-decoration: none;
