@@ -99,8 +99,7 @@ export default class ResourceCard extends React.Component {
         <a
           href={rest.download && !isExternalURL ? hrefPrefixed : href}
           className={carbonTileclassNames}
-          {...rest}
-        >
+          {...rest}>
           {cardContent}
         </a>
       );

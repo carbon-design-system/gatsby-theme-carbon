@@ -106,8 +106,7 @@ export default class ImageCard extends React.Component {
           target="_blank"
           rel="noopener noreferrer"
           href={href}
-          className={carbonTileclassNames}
-        >
+          className={carbonTileclassNames}>
           {cardContent}
         </a>
       );

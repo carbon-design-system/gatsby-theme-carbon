@@ -136,15 +136,13 @@ function ImageGallery({ children }) {
             <div
               role="group"
               className={inDialogGalleryContainer}
-              onKeyDown={onKeyDown}
-            >
+              onKeyDown={onKeyDown}>
               <Row>
                 <Column colLg={2}>
                   <button
                     type="button"
                     className={closeButton}
-                    onClick={closeGallery}
-                  >
+                    onClick={closeGallery}>
                     <Close32 className={icon} />
                   </button>
                 </Column>
@@ -156,8 +154,7 @@ function ImageGallery({ children }) {
                       <button
                         type="button"
                         className={leftNavButton}
-                        onClick={selectPrevImage}
-                      >
+                        onClick={selectPrevImage}>
                         <ChevronLeft32 className={icon} />
                       </button>
                     )}
@@ -180,8 +177,7 @@ function ImageGallery({ children }) {
                       <button
                         type="button"
                         className={rightNavButton}
-                        onClick={selectNextImage}
-                      >
+                        onClick={selectNextImage}>
                         <ChevronRight32 className={icon} />
                       </button>
                     )}

@@ -61,8 +61,7 @@ const GifPlayer = ({ children, color, className, isInDialog }) => {
       </div>
       <div
         className={staticImageClassNames}
-        aria-hidden={paused ? false : 'true'}
-      >
+        aria-hidden={paused ? false : 'true'}>
         {childrenArray[1]}
       </div>
       <button
@@ -76,8 +75,7 @@ const GifPlayer = ({ children, color, className, isInDialog }) => {
         onKeyDown={(e) => {
           // Stop keyDown event from propogating to ImageGalleryImage component.
           e.stopPropagation();
-        }}
-      >
+        }}>
         <ToggleIcon hovering={hovering} paused={paused} />
       </button>
     </div>
