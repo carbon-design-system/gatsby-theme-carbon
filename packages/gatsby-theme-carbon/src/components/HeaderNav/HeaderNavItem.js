@@ -7,7 +7,7 @@ import cx from 'classnames';
 import {
   HeaderMenu,
   HeaderMenuItem,
-} from 'carbon-components-react/lib/components/UIShell';
+} from 'carbon-components-react';
 import styles from '../Header/Header.module.scss';
 
 import NavContext from '../../util/context/NavContext';
