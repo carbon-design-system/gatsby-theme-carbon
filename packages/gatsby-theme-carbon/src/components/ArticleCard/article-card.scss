@@ -5,7 +5,6 @@
   position: relative;
   transition: background $duration--fast-01;
   text-decoration: none;
-  margin-bottom: $spacing-05;
 }
 
 .#{$prefix}--article-card:hover .#{$prefix}--tile {
