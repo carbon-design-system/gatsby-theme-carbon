@@ -2,6 +2,11 @@
   position: relative;
 }
 
+// #906
+.#{$prefix}--feature-card .#{$prefix}--feature-card__column {
+  --space: 0;
+}
+
 .#{$prefix}--feature-card__row {
   @include carbon--breakpoint("md") {
     position: absolute;

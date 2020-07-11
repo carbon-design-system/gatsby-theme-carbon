@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 import { Column } from '../Grid';
 import {
   imageButtonWrapper,
   imageTitle,
   imageInDialog,
   figure,
-} from './ImageGalleryImage.module.scss';
+  column,
+} from './ImageGallery.module.scss';
 
 function ImageGalleryImage({
   title,
@@ -27,7 +29,8 @@ function ImageGalleryImage({
   }
 
   return (
-    <Column colLg={col} className={className}>
+    // #906
+    <Column colLg={col} className={cx(className, column)}>
       <figure className={figure} role="group" aria-label={alt}>
         <div
           className={imageButtonWrapper}

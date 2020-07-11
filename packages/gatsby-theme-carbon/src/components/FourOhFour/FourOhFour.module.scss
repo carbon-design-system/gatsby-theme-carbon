@@ -54,11 +54,11 @@
 .heading {
   @include carbon--type-style("expressive-heading-04", true);
   margin-bottom: $spacing-06;
+  padding-top: $spacing-06;
 }
 
 .container {
   margin: 0;
-  margin-top: 6rem;
   max-width: 100%;
   min-height: calc(100vh - 455px);
   padding-left: $spacing-07;

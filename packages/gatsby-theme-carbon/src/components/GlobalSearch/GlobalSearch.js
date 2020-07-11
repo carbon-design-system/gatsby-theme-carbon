@@ -190,6 +190,7 @@ const GlobalSearchInput = () => {
             className={cx(input, {
               [hidden]: !searchIsOpen,
             })}
+            aria-label="Site wide search input"
             id="search-input"
             placeholder="Search"
             value={query}

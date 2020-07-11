@@ -34,14 +34,33 @@ Some important things to note here:
 - You can make a `Page/index.mdx` file if you’d prefer to have assets in a folder.
   The path would still just look like `/Page`
 
+## Adding a divider
+
+You can add divider(s) between the items of your nav item list by adding `hasDivider: true` in `src/data/nav-items.yaml`. Note the divider is only for top-level nav items and can only be used with the left sidebar navigation style. It cannot be used in conjunction with the [header navigation style](/guides/configuration#navigation-style).
+
+```yaml
+- title: Menu
+  pages:
+    - title: Page 1
+      path: /menu/Page-1
+    - title: Page 2
+      path: /menu/Page-2
+  hasDivider: true
+- title: Single Page
+  pages:
+    - path: /single-page
+```
+
+In the example above, a divider will appear between **Menu** and **Single Page**.
+
 ## Customizing
 
-The nav item list can be customized using Gatsby theme [shadowing](../shadowing).
-Simply provide your own implementation of `src/components/LeftNav/LeftNavItemProvider.js` which can augment or replace the nav items read from `src/data/nav-items.yaml`.
+The nav item list can be customized using Gatsby theme [shadowing](/guides/shadowing).
+Simply provide your own implementation of `/src/util/NavItems.js` which can augment or replace the nav items read from `src/data/nav-items.yaml`.
 
 ```javascript
-// src/gatsby-theme-carbon/components/LeftNav/LeftNavItemProvider.js
-import { useNavItems as themeUseNavItems } from 'gatsby-theme-carbon/src/components/LeftNav/LeftNavItemProvider';
+// /src/util/NavItems.js
+import { useNavItems as themeUseNavItems } from 'gatsby-theme-carbon/src/util/NavItems.js';
 
 // add nav items
 export function useNavItems() {
