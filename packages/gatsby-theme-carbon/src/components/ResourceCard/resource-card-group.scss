@@ -1,4 +1,11 @@
 // Card groups
+
+// #906: We need to use the attribute selector here b.c. we don't control the column,
+// it's provided by the developers through MDX and we don't want to force an extra prop
+.resource-card-group [class*="--column"] {
+  --space: 0;
+}
+
 // Set spacing to the right of the group
 .resource-card-group .#{$prefix}--col-lg-4:nth-child(2n) {
   @include carbon--breakpoint("lg") {
