@@ -53,12 +53,6 @@ import localPoster from './local-poster.png';
 <Video src={localVideo} poster={localPoster} />
 ```
 
-#### Note to those using the video in MDX with Github Pages
-
-If you are trying to implement the video inside an MDX file and are hosting with Github Pages you may run into an issue where during local development the video loads properly, but once pushed to Github Pages the video fails to load due to a 404 error. One known cause is due to the usage of `pathPrefix` inside your `gatsby-config.js` file. To fix this it is recommended to put a `static` folder in the root of the repository, place the video file in there, and then instead of directly importing the video file into your MDX file like in example above you would then simply implement like this `<Video src="/video.mp4" />`
-
-
-
 ### Props
 
 | property | propType                                                                     | required | default | description                                                                                                                                                                                                                                                                                                                              |
