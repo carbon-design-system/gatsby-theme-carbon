@@ -7,9 +7,9 @@ import {
   Email20,
   Launch20,
 } from '@carbon/icons-react';
-import cx from 'classnames';
 import { settings } from 'carbon-components';
 import styles from './MiniCard.module.scss';
+import { Column } from '../Grid';
 
 const { prefix } = settings;
 
@@ -28,14 +28,7 @@ const getIcon = ({ actionIcon }) => {
   }
 };
 
-const MiniCard = ({
-  children,
-  className,
-  href,
-  title,
-  actionIcon,
-  ...rest
-}) => {
+const MiniCard = ({ children, href, title, actionIcon, ...rest }) => {
   const cardContent = (
     <div className={styles.card}>
       <div className={styles.wrapper}>
@@ -51,24 +44,20 @@ const MiniCard = ({
 
   const cardContainer =
     href.charAt(0) === '/' ? (
-      <Link
-        to={href}
-        className={cx(className, `${prefix}--tile--clickable`)}
-        {...rest}
-      >
+      <Link to={href} className={`${prefix}--tile--clickable`}>
         {cardContent}
       </Link>
     ) : (
-      <a
-        href={href}
-        className={cx(className, `${prefix}--tile--clickable`)}
-        {...rest}
-      >
+      <a href={href} className={`${prefix}--tile--clickable`}>
         {cardContent}
       </a>
     );
 
-  return cardContainer;
+  return (
+    <Column colMd={4} colLg={4} noGutterSm {...rest}>
+      {cardContainer}
+    </Column>
+  );
 };
 
 export default MiniCard;

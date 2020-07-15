@@ -49,19 +49,18 @@ The `<MiniCard>` component can be used in place of a `<ResourceCard>` if your co
 <Row>
 <Column colLg={8}>
 
-When you have the mini resource card sitting aside the main content, be sure to add the `noGutterSm` and `gutterLg`, properties to the `<Column>` alongside `colMd={4}` `colLg={4}`. This will ensure the MiniCard has the appropriate gutters at the approriate breakpoints.
+When you have the mini resource card sitting aside the main content, be sure to add the `gutterLg`, properties to the `<MiniCard>`. This will ensure the MiniCard has the appropriate gutters at the approriate breakpoints.
 
 </Column>
-<Column colMd={4} colLg={4} noGutterSm gutterLg>
-  <MiniCard
+<MiniCard 
+  gutterLg
   title="By itself, as an Aside"
   href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
   >
 
 ![Sketch icon](/images/sketch-icon.png)
 
-  </MiniCard>
-</Column>
+</MiniCard>
 </Row>
 
 ## Code
@@ -93,19 +92,18 @@ When you have the mini resource card sitting aside the main content, be sure to 
 <Row>
 <Column colLg={8}>
 
-When you have the mini resource card sitting aside the main content, be sure to add the `gutterLg`, `marginSmTop`, and `noMarginLgTop` properties to the `<Column>` alongside `noGutterSm`. This will ensure the MiniCard has the appropriate gutters and margins at the approriate breakpoints.
+When you have the mini resource card sitting aside the main content, be sure to add the `gutterLg`, properties to the `<MiniCard>`. This will ensure the MiniCard has the appropriate gutters at the approriate breakpoints.
 
 </Column>
-<Column colMd={4} colLg={4} noGutterSm gutterLg>
-  <MiniCard
-  title="By itself"
+<MiniCard
+  gutterLg
+  title="By itself, as an Aside"
   href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
   >
 
 ![Sketch icon](/images/sketch-icon.png)
 
-  </MiniCard>
-</Column>
+</MiniCard>
 </Row>
 ```
 
