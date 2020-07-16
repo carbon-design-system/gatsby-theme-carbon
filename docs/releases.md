@@ -1,5 +1,4 @@
-# How to release a theme version
-
+# How to publish a new theme version
 > be sure to have lerna installed globally (`npm i -g lerna`)
 
 1. Checkout `master` and `git pull upstream master`
