@@ -42,16 +42,20 @@ const MiniCard = ({ children, href, title, actionIcon, ...rest }) => {
     </div>
   );
 
-  const cardContainer =
-    href.charAt(0) === '/' ? (
-      <Link to={href} className={`${prefix}--tile--clickable`}>
-        {cardContent}
-      </Link>
-    ) : (
-      <a href={href} className={`${prefix}--tile--clickable`}>
-        {cardContent}
-      </a>
-    );
+  let isLink;
+  if (href !== undefined) {
+    isLink = href.charAt(0) === '/';
+  }
+
+  const cardContainer = isLink ? (
+    <Link to={href} className={`${prefix}--tile--clickable`}>
+      {cardContent}
+    </Link>
+  ) : (
+    <a href={href} className={`${prefix}--tile--clickable`}>
+      {cardContent}
+    </a>
+  );
 
   return (
     <Column colMd={4} colLg={4} noGutterSm {...rest}>
