@@ -150,6 +150,13 @@ img {
   padding-left: 0;
 }
 
+.container .#{$prefix}--gutter-lg {
+  @include carbon--breakpoint("lg") {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 // Clears styles for nested grid components
 .container .#{$prefix}--row .#{$prefix}--row {
   margin-left: 0;

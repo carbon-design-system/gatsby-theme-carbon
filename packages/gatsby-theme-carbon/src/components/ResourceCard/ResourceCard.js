@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Link, withPrefix } from 'gatsby';
 import {
-  Launch20,
-  Download20,
   ArrowRight20,
-  Error20,
+  Calendar20,
+  Download20,
   Email20,
+  Error20,
+  Launch20,
 } from '@carbon/icons-react';
 import { settings } from 'carbon-components';
 
@@ -39,13 +40,6 @@ export default class ResourceCard extends React.Component {
       [`${prefix}--resource-card--dark`]: color === 'dark',
     });
 
-    const aspectRatioClassNames = classnames([`${prefix}--aspect-ratio`], {
-      [`${prefix}--aspect-ratio--2x1`]: aspectRatio === '2:1',
-      [`${prefix}--aspect-ratio--1x1`]: aspectRatio === '1:1',
-      [`${prefix}--aspect-ratio--16x9`]: aspectRatio === '16:9',
-      [`${prefix}--aspect-ratio--4x3`]: aspectRatio === '4:3',
-    });
-
     const carbonTileclassNames = classnames([`${prefix}--tile`], {
       [`${prefix}--tile--clickable`]: href !== undefined,
     });
@@ -71,6 +65,9 @@ export default class ResourceCard extends React.Component {
           ) : null}
           {actionIcon === 'email' && !disabled ? (
             <Email20 aria-label="Email" />
+          ) : null}
+          {actionIcon === 'calendar' && !disabled ? (
+            <Calendar20 aria-label="Calendar" />
           ) : null}
           {actionIcon === 'disabled' || disabled === true ? (
             <Error20 aria-label="disabled" />
@@ -108,7 +105,12 @@ export default class ResourceCard extends React.Component {
 
     return (
       <div className={ResourceCardClassNames}>
-        <div className={aspectRatioClassNames}>
+        <div
+          className={classnames(
+            `${prefix}--aspect-ratio`,
+            `${prefix}--aspect-ratio--${aspectRatio.replace(':', 'x')}`
+          )}
+        >
           <div className={`${prefix}--aspect-ratio--object`}>
             {cardContainer}
           </div>
