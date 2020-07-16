@@ -1,0 +1,118 @@
+---
+title: MiniCard
+description: Although the mini-resource card has a similar geometry to the button component, they should not be used in place of a button. Buttons encourage action from the user and affect the website's front-end or back-end. The resource cards, both large and mini are essentially links. They are used for navigation and actions that do not affect the website.
+---
+
+<PageDescription>
+
+The `<MiniCard>` component can be used in place of a `<ResourceCard>` if your content allows it. Unless it is sitting aside your main conent, it should always be wrapped inside of a `<CardGroup>`. This allows the correct gutter and border placement between a group of cards.
+
+</PageDescription>
+
+<InlineNotification>
+  Although the mini-resource card has a similar geometry to the button
+  component, they should not be used in place of a button. Buttons encourage
+  action from the user and affect the website's front-end or back-end. The
+  resource cards, both large and mini are essentially links. They are used for
+  navigation and actions that do not affect the website.
+</InlineNotification>
+
+## Example
+
+<Title>Group</Title>
+
+<CardGroup>
+
+<MiniCard title="26 characters per MiniCard" href="/demo">
+
+![Github icon](/images/github-icon.png)
+
+</MiniCard>
+<MiniCard title="Use the default icon" href="/demo" />
+
+<MiniCard
+  title="Choose from other icons"
+  href="/demo"
+  actionIcon="arrowRight"
+/>
+
+<MiniCard title="Or bring your own" href="/demo">
+
+![Github icon](/images/sketch-icon.png)
+
+</MiniCard>
+
+</CardGroup>
+
+<Title>Aside</Title>
+
+<Row>
+<Column colLg={8}>
+
+When you have the mini resource card sitting aside the main content, be sure to add the `gutterLg`, properties to the `<MiniCard>`. This will ensure the MiniCard has the appropriate gutters at the approriate breakpoints.
+
+</Column>
+<MiniCard 
+  gutterLg
+  title="By itself, as an Aside"
+  href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  >
+
+![Sketch icon](/images/sketch-icon.png)
+
+</MiniCard>
+</Row>
+
+## Code
+
+<Title>Group</Title>
+
+```jsx path=components/MiniCard/MiniCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/MiniCard
+<CardGroup>
+  <MiniCard title="26 characters per MiniCard" href="/demo">
+    ![Github icon](/images/github-icon.png)
+  </MiniCard>
+  <MiniCard title="Use the default icon" href="/demo" />
+
+  <MiniCard
+    title="Choose from other icons"
+    href="/demo"
+    actionIcon="arrowRight"
+  />
+
+  <MiniCard title="Or bring your own" href="/demo">
+    ![Github icon](/images/sketch-icon.png)
+  </MiniCard>
+</CardGroup>
+```
+
+<Title>Aside</Title>
+
+```jsx path=components/MiniCard/MiniCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/MiniCard
+<Row>
+<Column colLg={8}>
+
+When you have the mini resource card sitting aside the main content, be sure to add the `gutterLg`, properties to the `<MiniCard>`. This will ensure the MiniCard has the appropriate gutters at the approriate breakpoints.
+
+</Column>
+<MiniCard
+  gutterLg
+  title="By itself, as an Aside"
+  href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  >
+
+![Sketch icon](/images/sketch-icon.png)
+
+</MiniCard>
+</Row>
+```
+
+### Props
+
+| property   | propType | required | default  | description                                                                                         |
+| ---------- | -------- | -------- | -------- | --------------------------------------------------------------------------------------------------- |
+| children   | node     |          |          | Use 32x32 image as child, will display in right-hand corner of the card                             |
+| href       | string   |          |          | Set url for card                                                                                    |
+| title      | string   |          |          | Title for the card                                                                                  |
+| actionIcon | string   |          | `launch` | Action icon, default is launch, options are `launch`, `arrowRight`, `download`, `disabled`, `email` |
+| className  | string   |          |          | Add custom class name                                                                               |
