@@ -1,6 +1,6 @@
 .main {
   padding-bottom: 80px;
-  --space: 1.5rem;
+  --space: 2rem;
 }
 
 .main > * {
@@ -9,7 +9,7 @@
 }
 
 .main > * + * {
-  margin-top: 1.5rem; // IE fallback
+  margin-top: 2rem; // IE fallback
   margin-top: var(--space);
 }
 
