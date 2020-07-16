@@ -4,7 +4,7 @@
 
 .do-dont-row + .do-dont-row {
   --space: 0;
-  @include carbon--breakpoint-up("lg") {
+  @include carbon--breakpoint("lg") {
     --space: #{$spacing-07};
   }
 }
