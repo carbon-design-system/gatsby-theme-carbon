@@ -1,32 +1,32 @@
 // Sets gray border on the top of cards at the smallest breakpoint and removes the margin set by the <Column> in the Grid component.
 
-.cardGroup [class*="column"] {
+.cardGroup [class*='column'] {
   border-top: 1px solid $carbon--gray-20;
   margin-bottom: 0;
 }
 
-.cardGroup [class*="column"]:first-child {
+.cardGroup [class*='column']:first-child {
   border-top: 0px solid transparent;
 }
 
 // When Cards are in a group, they can't occupy the third rail
 
-.cardGroup [class*="column"]:nth-child(2n) {
-  @include carbon--breakpoint("lg") {
+.cardGroup [class*='column']:nth-child(2n) {
+  @include carbon--breakpoint('lg') {
     margin-right: 33%;
   }
 }
 
 // Borders for cards at the medium breakpoint
 
-.cardGroup [class*="column"]:nth-child(-n + 2) {
-  @include carbon--breakpoint("md") {
+.cardGroup [class*='column']:nth-child(-n + 2) {
+  @include carbon--breakpoint('md') {
     border-top: 0px solid transparent;
   }
 }
 
-.cardGroup [class*="column"]:nth-child(even) {
-  @include carbon--breakpoint("md") {
+.cardGroup [class*='column']:nth-child(even) {
+  @include carbon--breakpoint('md') {
     border-left: 1px solid $carbon--gray-20;
   }
 }

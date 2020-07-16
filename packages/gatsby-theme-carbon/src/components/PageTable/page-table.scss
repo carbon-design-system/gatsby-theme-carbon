@@ -7,13 +7,13 @@
   line-height: 1.25;
   width: calc(100%);
 
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     min-width: calc(67.3%);
   }
 
   thead {
     th {
-      @include carbon--type-style("heading-01");
+      @include carbon--type-style('heading-01');
       color: $text-01;
       padding: $spacing-md;
       text-align: left;
@@ -27,25 +27,25 @@
       border-bottom: 1px solid $ui-03;
 
       td {
-        @include carbon--type-style("body-short-01");
+        @include carbon--type-style('body-short-01');
         color: $text-01;
         padding: $spacing-md;
 
-        img[src$="checkmark--glyph.svg"] {
+        img[src$='checkmark--glyph.svg'] {
           width: 16px;
           height: 16px;
           margin: 0;
         }
 
         strong {
-          font-weight: font-weight("semibold");
+          font-weight: font-weight('semibold');
         }
 
-        @include carbon--breakpoint("lg") {
+        @include carbon--breakpoint('lg') {
           min-width: rem(100px);
         }
 
-        @include carbon--breakpoint("xlg") {
+        @include carbon--breakpoint('xlg') {
           min-width: rem(150px);
         }
       }
@@ -54,11 +54,11 @@
 }
 
 .component-docs p {
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     max-width: 75%;
   }
 
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     max-width: 55%;
   }
 }
@@ -68,11 +68,11 @@
   margin-left: -1rem;
   margin-top: rem(16px);
 
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     max-width: 75%;
   }
 
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     max-width: 50%;
   }
 }

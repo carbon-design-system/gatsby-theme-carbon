@@ -94,8 +94,7 @@ const Video = ({ autoPlay, vimeoId, title, src, poster, ...props }) => {
         role="button"
         onClick={onClick}
         onKeyDown={onKeyDown}
-        tabIndex="0"
-      >
+        tabIndex="0">
         {isPlaying ? <Pause32 /> : <Play32 />}
         <span className="bx--assistive-text">
           {isPlaying ? 'Pause' : 'Play'}

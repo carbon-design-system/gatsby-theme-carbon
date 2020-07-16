@@ -1,21 +1,21 @@
 .aside {
-  @include carbon--type-style("body-long-01");
+  @include carbon--type-style('body-long-01');
   position: relative;
   padding-top: $spacing-04;
   top: -$spacing-04;
   display: none;
 
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     display: block;
   }
 
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     padding-right: 26%; //spacing values came from IDL site design
   }
 }
 
 .aside:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: -1rem;
@@ -25,7 +25,7 @@
 }
 
 :global(.#{$prefix}--row) .aside p {
-  @include carbon--type-style("body-long-01");
+  @include carbon--type-style('body-long-01');
   width: 100%;
   padding-right: 0;
 }

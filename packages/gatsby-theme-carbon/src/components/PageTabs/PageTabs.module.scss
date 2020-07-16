@@ -4,7 +4,7 @@
   background: $carbon--black-100;
   position: sticky;
   top: 3rem;
-  z-index: z("header");
+  z-index: z('header');
 }
 
 .list {
@@ -22,7 +22,7 @@
 }
 
 .link {
-  @include carbon--type-style("body-short-02");
+  @include carbon--type-style('body-short-02');
   padding: 13px $spacing-05 0 $spacing-05;
   text-decoration: none;
   line-height: 1;
@@ -34,7 +34,7 @@
   transition: background $duration--moderate-01 $carbon--standard-easing,
     border-top $duration--moderate-01 $carbon--standard-easing; //transitioning all creates a bug on focus bc of outline transition
 
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     padding-right: $spacing-09;
   }
 

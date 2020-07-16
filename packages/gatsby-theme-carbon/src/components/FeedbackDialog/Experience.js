@@ -30,8 +30,7 @@ const Experience = React.forwardRef(function Experience(props, ref) {
           className={cx(styles.experience, {
             [styles.selected]: selected === NEGATIVE,
           })}
-          htmlFor={NEGATIVE}
-        >
+          htmlFor={NEGATIVE}>
           <input
             ref={selected === NEGATIVE ? ref : undefined}
             aria-label={NEGATIVE}
@@ -53,8 +52,7 @@ const Experience = React.forwardRef(function Experience(props, ref) {
           className={cx(styles.experience, {
             [styles.selected]: selected === NEUTRAL,
           })}
-          htmlFor={NEUTRAL}
-        >
+          htmlFor={NEUTRAL}>
           <input
             ref={selected === NEUTRAL ? ref : undefined}
             aria-label={NEUTRAL}
@@ -72,8 +70,7 @@ const Experience = React.forwardRef(function Experience(props, ref) {
           className={cx(styles.experience, {
             [styles.selected]: selected === POSITIVE,
           })}
-          htmlFor={POSITIVE}
-        >
+          htmlFor={POSITIVE}>
           <input
             ref={selected === POSITIVE ? ref : undefined}
             type="radio"
