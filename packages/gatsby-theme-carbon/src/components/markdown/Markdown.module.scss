@@ -68,6 +68,11 @@
   width: 100%;
 }
 
+:global(.bx--list--ordered),
+ol {
+  list-style: decimal;
+}
+
 :global(.bx--list--ordered:not(.bx--list--nested)) {
   margin-left: 1ch;
 }
@@ -174,6 +179,14 @@ ul :global(.bx--list--unordered) {
 :global(.container--dark) .blockquote,
 :global(.container--dark) .blockquote .list-item {
   color: $carbon--blue-40;
+}
+
+:global(.bx--list--ordered:not(.bx--list--nested) > .bx--list__item::before) {
+  display: none;
+}
+
+:global(.bx--list--ordered:not(.bx--list--nested)) .list-item {
+  margin-left: 0.5rem;
 }
 //---------------------------------------
 // Headings

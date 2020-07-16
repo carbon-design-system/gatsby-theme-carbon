@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-
 import { settings } from 'carbon-components';
 import { column } from './Grid.module.scss';
 
@@ -55,6 +54,7 @@ export const Column = ({
   noGutterLgLeft,
   noGutterXlLeft,
   noGutterMaxLeft,
+  gutterLg,
   className,
 }) => {
   const colClasses = classnames(column, {
@@ -78,6 +78,7 @@ export const Column = ({
     [`${prefix}--col-lg-${colLg}`]: colLg,
     [`${prefix}--col-xl-${colXl}`]: colXl,
     [`${prefix}--col-max-${colMax}`]: colMax,
+    [`${prefix}--gutter-lg`]: gutterLg,
     [className]: className,
   });
 
