@@ -1,3 +1,12 @@
+# When does the theme publish releases?
+At the moment, we intentionally publish releases manually. We want each release to have meaning and reduce constant release churn. For that reason we release when any of the following conditions are true:
+
+- A bug fix or patch for something in Carbon, IBM Design Language, or the IBM Brand Center sites
+- A bug fix that impacts every theme site
+- A new feature (includes a corresponding slack announcement)
+
+If a patch is narrow in scope(impacting a small subset of sites) we'll hold off on releasing the patch for the reasons mentioned above.
+
 # How to publish a new theme version
 
 1. Checkout `master` and `git pull upstream master`
