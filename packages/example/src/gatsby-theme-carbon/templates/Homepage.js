@@ -37,7 +37,7 @@ const SecondRightText = () => (
   </p>
 );
 
-const BannerText = () => <h1>Banner component</h1>;
+const BannerText = () => <h1>Carbon Gatsby theme</h1>;
 
 const customProps = {
   Banner: <HomepageBanner renderText={BannerText} image={Carbon} />,
