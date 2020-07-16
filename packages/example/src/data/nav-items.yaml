@@ -62,6 +62,8 @@
       path: /components/markdown
     - title: MediumPosts
       path: /components/MediumPosts
+    - title: MiniCard
+      path: /components/MiniCard
     - title: PageDescription
       path: /components/PageDescription
     - title: ResourceCard

@@ -10,6 +10,7 @@ import {
   vimeo,
   videoIsPlaying,
 } from './Video.module.scss';
+import usePathPrefix from '../../util/hooks/usePathprefix';
 
 const Video = ({ autoPlay, vimeoId, title, src, poster, ...props }) => {
   const [isPlaying, setIsPlaying] = useState(autoPlay);
@@ -18,6 +19,9 @@ const Video = ({ autoPlay, vimeoId, title, src, poster, ...props }) => {
   const buttonClassName = cx(videoButton, {
     [videoIsPlaying]: isPlaying,
   });
+  const pathPrefix = usePathPrefix();
+  const srcContainsPrefix = pathPrefix && src && src.includes(pathPrefix);
+  const fixedSrc = srcContainsPrefix ? src : withPrefix(src);
 
   if (vimeoId) {
     return (
@@ -103,7 +107,7 @@ const Video = ({ autoPlay, vimeoId, title, src, poster, ...props }) => {
         type="video/mp4"
         ref={videoRef}
         onEnded={onEnded}
-        src={withPrefix(src)}
+        src={fixedSrc}
         poster={withPrefix(poster)}
         {...props}
       />
