@@ -1,17 +1,17 @@
 //---------------------------------------
 // Row
 //---------------------------------------
+
 .do-dont-row + .do-dont-row {
   --space: 0;
-  @include carbon--breakpoint("md") {
-    --space: 2rem;
+  @include carbon--breakpoint-up("lg") {
+    --space: 32px;
   }
 }
 
 .do-dont-row [class*="--col"] {
-  margin-top: 2rem;
-  @include carbon--breakpoint("md") {
-    margin-top: 0;
+  @include carbon--breakpoint-down("lg") {
+    --space: 32px;
   }
 }
 
