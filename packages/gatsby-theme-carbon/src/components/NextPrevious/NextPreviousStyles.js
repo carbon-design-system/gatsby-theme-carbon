@@ -22,8 +22,7 @@ const NextPreviousContainer = ({ previousItem, nextItem, isHomepage }) => (
             className={cx(link, { [isHomepageStyles]: isHomepage })}
             colLg={6}
             colMd={4}
-            colSm={2}
-          >
+            colSm={2}>
             <Link to={previousItem.to}>
               <div className={direction}>Previous</div>
               <div className={name}>{previousItem.name}</div>

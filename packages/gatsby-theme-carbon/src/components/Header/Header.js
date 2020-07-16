@@ -50,8 +50,7 @@ const Header = ({ children }) => {
         className={cx(headerName, {
           [collapsed]: searchIsOpen,
         })}
-        to="/"
-      >
+        to="/">
         {children}
       </Link>
       {navigationStyle && <HeaderNav />}
@@ -66,8 +65,7 @@ const Header = ({ children }) => {
             toggleNavState('switcherIsOpen');
             toggleNavState('searchIsOpen', 'close');
             toggleNavState('leftNavIsOpen', 'close');
-          }}
-        >
+          }}>
           {switcherIsOpen ? <Close20 /> : <AppSwitcher20 />}
         </HeaderGlobalAction>
       </HeaderGlobalBar>

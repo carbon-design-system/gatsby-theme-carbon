@@ -1,4 +1,4 @@
-$prefix: "bx";
+$prefix: 'bx';
 
 // Disable feature flag warning
 $did-warn-diverged-feature-flags: true;
@@ -13,21 +13,21 @@ $feature-flags: (
 );
 
 // Carbon globals/helpers
-@import "~carbon-components/scss/globals/grid/grid";
-@import "~carbon-components/scss/globals/scss/layout";
-@import "carbon-components";
+@import '~carbon-components/scss/globals/grid/grid';
+@import '~carbon-components/scss/globals/scss/layout';
+@import 'carbon-components';
 
 // Shell overrides until themeing is ready
-@import "website-side-nav";
+@import 'website-side-nav';
 
 // Typography
 @include carbon--type-reset();
-@import "~@carbon/elements/scss/type/classes";
-@import "plex";
+@import '~@carbon/elements/scss/type/classes';
+@import 'plex';
 
-$font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
-$font-family-mono: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
-  "Bitstream Vera Sans Mono", Courier, monospace;
+$font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+$font-family-mono: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
+  'Bitstream Vera Sans Mono', Courier, monospace;
 
 //---------------------------------------
 // Global styles

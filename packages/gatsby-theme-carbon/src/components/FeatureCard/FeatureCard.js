@@ -37,11 +37,9 @@ export default class FeatureCard extends React.Component {
           {/* #906 */}
           <Column className={`${prefix}--feature-card__column`} noGutterMdLeft>
             <div
-              className={`${prefix}--aspect-ratio ${prefix}--feature-card__img ${prefix}--aspect-ratio--1x1`}
-            >
+              className={`${prefix}--aspect-ratio ${prefix}--feature-card__img ${prefix}--aspect-ratio--1x1`}>
               <div
-                className={`${prefix}--aspect-ratio--object ${prefix}--feature-background`}
-              >
+                className={`${prefix}--aspect-ratio--object ${prefix}--feature-background`}>
                 {children}
               </div>
             </div>
@@ -54,8 +52,7 @@ export default class FeatureCard extends React.Component {
             offsetLg={8}
             offsetMd={4}
             noGutterMdLeft
-            className={`${prefix}--feature-card__column`}
-          >
+            className={`${prefix}--feature-card__column`}>
             <ResourceCard
               title={title}
               subTitle={subTitle}
@@ -84,8 +81,7 @@ export default class FeatureCard extends React.Component {
         <a
           className={`${prefix}--feature-card__link`}
           href={href}
-          {...resourceCardProps}
-        >
+          {...resourceCardProps}>
           {cardContent}
         </a>
       );

@@ -96,8 +96,7 @@ export default class ResourceCard extends React.Component {
         <a
           href={rest.download && !isExternalURL ? hrefPrefixed : href}
           className={carbonTileclassNames}
-          {...rest}
-        >
+          {...rest}>
           {cardContent}
         </a>
       );
@@ -109,8 +108,7 @@ export default class ResourceCard extends React.Component {
           className={classnames(
             `${prefix}--aspect-ratio`,
             `${prefix}--aspect-ratio--${aspectRatio.replace(':', 'x')}`
-          )}
-        >
+          )}>
           <div className={`${prefix}--aspect-ratio--object`}>
             {cardContainer}
           </div>

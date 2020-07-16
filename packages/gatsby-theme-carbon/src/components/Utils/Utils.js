@@ -22,8 +22,7 @@ const Utils = () => {
   return (
     <div
       aria-label="This section contains utilities"
-      className={cx(styles.container, { [styles.hidden]: hidden })}
-    >
+      className={cx(styles.container, { [styles.hidden]: hidden })}>
       <FeedbackDialog />
       <BackToTopBtn />
     </div>

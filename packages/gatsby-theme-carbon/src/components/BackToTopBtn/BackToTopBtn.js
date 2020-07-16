@@ -7,8 +7,7 @@ const BackToTopBtn = () => (
     onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}
     className={button}
     type="button"
-    aria-label="Back to Top"
-  >
+    aria-label="Back to Top">
     <UpToTop20 />
   </button>
 );

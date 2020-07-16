@@ -1,5 +1,5 @@
 .footer {
-  @include carbon--type-style("body-short-01");
+  @include carbon--type-style('body-short-01');
   width: 100%;
   background: $carbon--black-100;
   color: $carbon--gray-30;
@@ -22,8 +22,8 @@
   position: relative;
 
   &:after {
-    @include carbon--breakpoint("sm") {
-      content: "";
+    @include carbon--breakpoint('sm') {
+      content: '';
       background: $carbon--gray-80;
       width: calc(100% - 2rem);
       height: 1px;
@@ -32,7 +32,7 @@
       bottom: 0;
     }
 
-    @include carbon--breakpoint("md") {
+    @include carbon--breakpoint('md') {
       display: none;
     }
   }
@@ -41,11 +41,11 @@
 .listItem {
   display: block;
 
-  @include carbon--breakpoint("sm") {
+  @include carbon--breakpoint('sm') {
     margin: 0 0 $spacing-03 0;
   }
 
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     margin: 0;
   }
 }
@@ -56,7 +56,7 @@
 }
 
 .footer .listItem a {
-  @include carbon--type-style("body-long-01");
+  @include carbon--type-style('body-long-01');
   color: $carbon--gray-10 !important; //needed to get the color correct on the homepage, we are setting all homepage links to a light blue in the homepage sass file.
   text-decoration: none;
   transition: $duration--fast-01 motion(standard, productive);
@@ -74,7 +74,7 @@
 }
 
 .footer p {
-  @include carbon--type-style("body-short-01");
+  @include carbon--type-style('body-short-01');
   padding-bottom: $spacing-05;
 }
 

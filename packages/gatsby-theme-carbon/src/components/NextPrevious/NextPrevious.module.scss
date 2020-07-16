@@ -31,11 +31,11 @@
 }
 
 .direction {
-  @include carbon--type-style("body-short-01");
+  @include carbon--type-style('body-short-01');
 }
 
 .name {
-  @include carbon--type-style("expressive-heading-03", true);
+  @include carbon--type-style('expressive-heading-03', true);
   padding-bottom: $spacing-05;
 }
 
