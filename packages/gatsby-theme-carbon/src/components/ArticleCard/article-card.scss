@@ -5,7 +5,7 @@
   position: relative;
   transition: background $duration--fast-01;
   text-decoration: none;
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     margin-bottom: var(--space);
   }
 }
