@@ -79,14 +79,12 @@ const Form = ({ visible, setVisible, onSubmit: submitHandler }) => {
       }}
       addEndListener={(node, done) => {
         node.addEventListener('transitionend', done, false);
-      }}
-    >
+      }}>
       <div className={styles.dialog}>
         <div
           className={styles.formContainer}
           role="dialog"
-          aria-labelledby="feedback-dialog-label"
-        >
+          aria-labelledby="feedback-dialog-label">
           <h2 id="feedback-dialog-label">Was this page helpful to you?</h2>
           <form ref={formRef}>
             <Experience ref={experienceRef} />
@@ -97,8 +95,7 @@ const Form = ({ visible, setVisible, onSubmit: submitHandler }) => {
           <Button
             className={styles.button}
             onClick={() => setVisible(false)}
-            kind="secondary"
-          >
+            kind="secondary">
             Cancel
           </Button>
           <Button className={styles.button} onClick={onSubmit}>

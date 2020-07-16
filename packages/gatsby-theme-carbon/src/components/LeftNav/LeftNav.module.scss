@@ -57,15 +57,15 @@
   //dark
   // active item background color
   .bx--side-nav--website--dark
-    .bx--side-nav__menu[role="menu"]
+    .bx--side-nav__menu[role='menu']
     a.bx--side-nav__link--current,
   .bx--side-nav--website--dark
-    .bx--side-nav__menu[role="menu"]
-    a.bx--side-nav__link[aria-current="page"],
+    .bx--side-nav__menu[role='menu']
+    a.bx--side-nav__link[aria-current='page'],
   .bx--side-nav--website--dark a.bx--side-nav__link--current,
   .bx--side-nav--website--dark
     .bx--side-nav__item--active
-    .bx--side-nav__submenu[aria-expanded="false"] {
+    .bx--side-nav__submenu[aria-expanded='false'] {
     background-color: #282828 !important;
   }
 

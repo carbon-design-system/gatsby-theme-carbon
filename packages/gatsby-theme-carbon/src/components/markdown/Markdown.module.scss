@@ -3,11 +3,11 @@
 //---------------------------------------
 
 .paragraph {
-  @include carbon--type-style("body-long-02");
+  @include carbon--type-style('body-long-02');
   padding-left: $spacing-05;
   padding-right: $spacing-05;
 
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     padding-right: $spacing-07;
   }
 }
@@ -15,12 +15,12 @@
 // Responsive by default
 .paragraph--responsive {
   // 8 col
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     width: 75%;
   }
 
   // 8 col
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     width: 66.667%;
   }
 }
@@ -30,7 +30,7 @@
   width: 100%;
   padding-left: 0;
 
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     padding-right: 0;
   }
 }
@@ -48,12 +48,12 @@
 .list {
   padding-right: $spacing-05;
 
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     width: 100%;
     padding-right: $spacing-07;
   }
 
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     width: 66.667%;
   }
 }
@@ -87,7 +87,7 @@ ol {
 .list-item > pre {
   margin-left: 1rem;
   margin-top: $spacing-05;
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     margin-right: -$spacing-05;
   }
 }
@@ -99,7 +99,7 @@ ul :global(.bx--list--unordered) {
 
 :global(.bx--list--ordered) .list-item,
 :global(.bx--list--unordered) .list-item {
-  @include carbon--type-style("body-long-02");
+  @include carbon--type-style('body-long-02');
   padding-right: 0;
   width: 100%;
   margin-left: $spacing-05;
@@ -128,44 +128,44 @@ ul :global(.bx--list--unordered) {
   margin-left: $spacing-05;
   padding-left: 1ch;
   text-indent: -1ch;
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     margin-left: $spacing-08;
   }
 }
 
 .blockquote .paragraph {
   position: relative;
-  @include carbon--type-style("expressive-heading-03", true);
+  @include carbon--type-style('expressive-heading-03', true);
   margin-bottom: 0;
   width: 100%;
 }
 
 .blockquote .paragraph::before {
-  content: "“";
-  @include carbon--type-style("expressive-heading-03", true);
+  content: '“';
+  @include carbon--type-style('expressive-heading-03', true);
 }
 
 .blockquote .paragraph::after {
-  content: "”";
-  @include carbon--type-style("expressive-heading-03", true);
+  content: '”';
+  @include carbon--type-style('expressive-heading-03', true);
 }
 
 .blockquote .paragraph--responsive {
   // 8 col
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     width: calc(66.667% - 3rem);
   }
 }
 
 // If quote is inside a user specified row then allow the grid code to set the width
 :global(.#{$prefix}--row) .blockquote .paragraph {
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     width: 100%;
   }
 }
 
 .blockquote cite {
-  @include carbon--type-style("body-long-01");
+  @include carbon--type-style('body-long-01');
   display: block;
   margin-top: $spacing-02;
   text-indent: 0;
@@ -194,28 +194,28 @@ ul :global(.bx--list--unordered) {
 
 .h1 {
   margin-top: $spacing-12;
-  @include carbon--type-style("expressive-heading-05", true);
+  @include carbon--type-style('expressive-heading-05', true);
 }
 
 .h2 {
   margin-top: $spacing-11;
-  @include carbon--type-style("expressive-heading-04", true);
+  @include carbon--type-style('expressive-heading-04', true);
 }
 
 .h3 {
   margin-top: $spacing-10;
-  @include carbon--type-style("expressive-heading-03", true);
+  @include carbon--type-style('expressive-heading-03', true);
 }
 
 .h4 {
   margin-top: $spacing-07;
-  @include carbon--type-style("heading-02");
+  @include carbon--type-style('heading-02');
 }
 
 .h5,
 .h6 {
   --space: 0;
-  @include carbon--type-style("heading-01");
+  @include carbon--type-style('heading-01');
 }
 
 //---------------------------------------

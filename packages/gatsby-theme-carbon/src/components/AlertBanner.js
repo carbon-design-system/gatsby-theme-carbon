@@ -10,8 +10,7 @@ const AlertBanner = ({ alertText, buttonText }) => (
     <Link
       className="website-alert__button"
       tabIndex="-1"
-      to="/updates/v10-migration/overview"
-    >
+      to="/updates/v10-migration/overview">
       <button className="bx--btn bx--btn--secondary bx--btn--sm" type="button">
         {buttonText}
         <ArrowRight20 />

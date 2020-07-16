@@ -56,8 +56,7 @@ export default class ArticleCard extends React.Component {
         <div className={`${prefix}--article-card__img`}>{children}</div>
         <div className={aspectRatioClassNames}>
           <div
-            className={`${prefix}--aspect-ratio--object ${prefix}--article-card__tile`}
-          >
+            className={`${prefix}--aspect-ratio--object ${prefix}--article-card__tile`}>
             {subTitle ? (
               <h5 className={`${prefix}--article-card__subtitle`}>
                 {subTitle}
@@ -117,8 +116,7 @@ export default class ArticleCard extends React.Component {
           rel="noopener noreferrer"
           href={href}
           className={carbonTileclassNames}
-          {...rest}
-        >
+          {...rest}>
           {cardContent}
         </a>
       );

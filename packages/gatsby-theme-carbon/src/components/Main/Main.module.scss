@@ -13,7 +13,7 @@
   margin-top: var(--space);
 }
 
-[class*="--col"] > * + * {
+[class*='--col'] > * + * {
   margin-top: 1.5rem;
   margin-top: var(--space);
 }

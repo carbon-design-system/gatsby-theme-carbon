@@ -2,13 +2,13 @@
 
 // #906: We need to use the attribute selector here b.c. we don't control the column,
 // it's provided by the developers through MDX and we don't want to force an extra prop
-.resource-card-group [class*="--column"] {
+.resource-card-group [class*='--column'] {
   --space: 0;
 }
 
 // Set spacing to the right of the group
 .resource-card-group .#{$prefix}--col-lg-4:nth-child(2n) {
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     margin-right: 33%;
   }
 }
@@ -25,7 +25,7 @@
 .resource-card-group
   .#{$prefix}--col-lg-4:nth-child(2)
   .#{$prefix}--resource-card {
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     border-top: 0px solid transparent;
   }
 }
@@ -39,7 +39,7 @@
 .resource-card-group
   .#{$prefix}--col-lg-4:nth-child(odd)
   .#{$prefix}--resource-card {
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     border-left: 1px solid transparent;
   }
 }
@@ -47,7 +47,7 @@
 .resource-card-group
   .#{$prefix}--col-lg-4:nth-child(even)
   .#{$prefix}--resource-card {
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     border-left: 1px solid $carbon--gray-20;
   }
 }
@@ -60,7 +60,7 @@
 
 // Set spacing to the right of the group
 .resource-card-group .#{$prefix}--col-lg-4:nth-child(2) {
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     margin-right: 33%;
   }
 }

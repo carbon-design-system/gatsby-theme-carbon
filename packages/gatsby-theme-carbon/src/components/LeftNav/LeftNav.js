@@ -50,8 +50,7 @@ const LeftNav = (props) => {
     <LeftNavWrapper
       expanded={leftNavIsOpen}
       onClick={closeSwitcher}
-      onKeyPress={closeSwitcher}
-    >
+      onKeyPress={closeSwitcher}>
       <SideNav
         ref={sideNavRef}
         aria-label="Side navigation"
@@ -65,8 +64,7 @@ const LeftNav = (props) => {
             props.theme === 'dark' || props.homepage,
           'bx--side-nav--website--light':
             props.theme !== 'dark' && !props.homepage,
-        })}
-      >
+        })}>
         <SideNavItems className="sidenav-list">
           {navItems.map((item, i) => (
             <LeftNavItem

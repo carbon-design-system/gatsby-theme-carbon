@@ -52,8 +52,7 @@ const Menu = ({ results, onKeyDown }) => {
       id="search-menu"
       className={cx(list, {
         [hidden]: results.length === 0,
-      })}
-    >
+      })}>
       {resultsWithTabAdded.map((page, index) => (
         <MenuItem
           id={`menu-item-${index}`}
@@ -87,8 +86,7 @@ const MenuItem = ({ page, index, onKeyDown, id }) => {
         id={id}
         role="menuitem"
         className={className}
-        to={page.path}
-      >
+        to={page.path}>
         {page.title}&nbsp;
         {page.tab && <span className={tab}>→ {page.tab} </span>}
         {page.description && (

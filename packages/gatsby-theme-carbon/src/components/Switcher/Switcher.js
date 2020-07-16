@@ -26,8 +26,7 @@ const Switcher = ({ children }) => {
       className={cx(nav, { [open]: switcherIsOpen })}
       aria-label="IBM Design ecosystem navigation"
       tabIndex="-1"
-      style={{ maxHeight }}
-    >
+      style={{ maxHeight }}>
       <ul ref={listRef}>{children}</ul>
     </nav>
   );
@@ -58,8 +57,7 @@ export const SwitcherLink = ({
         tabIndex={switcherIsOpen ? openTabIndex : '-1'}
         className={className}
         href={href}
-        {...rest}
-      >
+        {...rest}>
         {children}
       </a>
     </li>

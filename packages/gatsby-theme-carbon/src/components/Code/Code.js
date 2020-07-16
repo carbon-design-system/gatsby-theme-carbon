@@ -49,8 +49,7 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
         {...defaultProps}
         code={children}
         language={language}
-        theme={prismTheme}
-      >
+        theme={prismTheme}>
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <div className={styles.container}>
             <pre
@@ -58,8 +57,7 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
                 [styles.sideBarMinHeight]: !path && src,
                 [className]: className,
               })}
-              style={style}
-            >
+              style={style}>
               {getLines(tokens).map((line, i) => (
                 <div {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (
@@ -78,8 +76,7 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
         <button
           className={styles.showMoreButton}
           onClick={() => setShouldShowMore(!shouldShowMore)}
-          type="button"
-        >
+          type="button">
           {shouldShowMore ? (
             <>
               <span>Show less</span>

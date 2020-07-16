@@ -7,7 +7,7 @@
 }
 
 .notification :global(.bx--inline-notification__subtitle p) {
-  @include carbon--type-style("body-short-01");
+  @include carbon--type-style('body-short-01');
 }
 
 .notification :global(.bx--inline-notification__subtitle .bx--row) {

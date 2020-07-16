@@ -1,17 +1,17 @@
 .caption {
-  @include carbon--type-style("body-short-01");
+  @include carbon--type-style('body-short-01');
   --space: #{$spacing-05};
 }
 
 // Responsive by default
 .caption-responsive {
   // 6/8 columns
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     width: 75%;
   }
 
   // 6/12 columns wide
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     width: 50%;
   }
 }

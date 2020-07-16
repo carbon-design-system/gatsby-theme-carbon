@@ -68,5 +68,8 @@
     "*.{css,scss}": [
       "stylelint --fix"
     ]
+  },
+  "dependencies": {
+    "prettier-config-carbon": "^0.2.0"
   }
 }

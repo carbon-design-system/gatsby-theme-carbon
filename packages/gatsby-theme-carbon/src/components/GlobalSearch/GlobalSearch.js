@@ -150,8 +150,7 @@ const GlobalSearchInput = () => {
           [hidden]: !searchIsOpen,
           [inputFocusWithin]: inputIsFocused,
         })}
-        role="search"
-      >
+        role="search">
         <label htmlFor="search-input" id="search-label" className={label}>
           Search
         </label>
@@ -160,8 +159,7 @@ const GlobalSearchInput = () => {
           role="combobox"
           aria-owns="search-menu"
           aria-haspopup="menu"
-          aria-expanded={searchIsOpen}
-        >
+          aria-expanded={searchIsOpen}>
           <button
             tabIndex={searchIsOpen ? '-1' : '0'}
             className={cx(searchButton, {
@@ -173,8 +171,7 @@ const GlobalSearchInput = () => {
             onClick={() => {
               toggleNavState('searchIsOpen', 'open');
               toggleNavState('switcherIsOpen', 'close');
-            }}
-          >
+            }}>
             <Search20 description="Open search" />
           </button>
           <input
@@ -204,8 +201,7 @@ const GlobalSearchInput = () => {
             })}
             type="button"
             aria-label="Clear search"
-            onClick={clearAndClose}
-          >
+            onClick={clearAndClose}>
             <Close20 description="Clear search" />
           </button>
         </div>
