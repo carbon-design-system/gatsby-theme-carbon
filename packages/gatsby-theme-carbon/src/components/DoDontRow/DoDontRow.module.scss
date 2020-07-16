@@ -5,13 +5,13 @@
 .do-dont-row + .do-dont-row {
   --space: 0;
   @include carbon--breakpoint-up("lg") {
-    --space: 32px;
+    --space: #{$spacing-07};
   }
 }
 
 .do-dont-row [class*="--col"] {
   @include carbon--breakpoint-down("lg") {
-    --space: 32px;
+    --space: #{$spacing-07};
   }
 }
 
