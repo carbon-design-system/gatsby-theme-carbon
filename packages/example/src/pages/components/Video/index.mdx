@@ -4,7 +4,7 @@ description: Usage instructions for the Video component
 ---
 
 import localVideo from './local-video.mp4';
-import localPoster from './local-poster.png';
+import localPoster from './local-poster.jpg';
 
 <PageDescription>
 
@@ -20,7 +20,7 @@ The `<Video>` component can render a Vimeo player or a html video player.
 
 <Title>Video</Title>
 
-<Video src="/videos/hero-video.mp4" poster="/images/poster.png">
+<Video src="/videos/hero-video.mp4" poster="/images/poster.jpg">
   <track kind="captions" default src="/videos/vtt/hero-video.vtt" srcLang="en" />
 </Video>
 
@@ -39,7 +39,7 @@ The `<Video>` component can render a Vimeo player or a html video player.
 <Title>Video</Title>
 
 ```jsx path=components/Video/Video.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/Video
-<Video src="/videos/hero-video.mp4" poster="/images/poster.png">
+<Video src="/videos/hero-video.mp4" poster="/images/poster.jpg">
   <track kind="captions" default src="/videos/vtt/hero-video.vtt" srcLang="en" />
 </Video>
 ```
@@ -48,7 +48,7 @@ The `<Video>` component can render a Vimeo player or a html video player.
 
 ```markdown path=components/Video.mdx src=https://github.com/carbon-design-system/gatsby-theme-carbon/blob/master/packages/example/src/pages/components/Video/index.mdx
 import localVideo from './local-video.mp4';
-import localPoster from './local-poster.png';
+import localPoster from './local-poster.jpg';
 
 <Video src={localVideo} poster={localPoster} />
 ```
