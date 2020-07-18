@@ -1,12 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import {
-  list,
-  listSmall,
-  multipleColumns,
-  item,
-} from './AnchorLinks.module.scss';
+import { list, listSmall, multipleColumns } from './AnchorLinks.module.scss';
 
 export default class AnchorLinks extends React.Component {
   render() {
@@ -20,9 +15,7 @@ export default class AnchorLinks extends React.Component {
     return (
       <ul className={classNames}>
         {React.Children.map(children, (link, i) => (
-          <li key={i} className={item}>
-            {link}
-          </li>
+          <li key={i}>{link}</li>
         ))}
       </ul>
     );
