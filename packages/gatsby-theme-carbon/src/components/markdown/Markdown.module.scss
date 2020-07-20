@@ -46,11 +46,15 @@
 .h5,
 .h6,
 .list {
-  padding-right: $spacing-05;
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: 0;
 
   @include carbon--breakpoint('md') {
     width: 100%;
-    padding-right: $spacing-07;
+    padding-right: 0;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   @include carbon--breakpoint('lg') {
@@ -95,6 +99,7 @@ ol {
 ul :global(.bx--list--ordered),
 ul :global(.bx--list--unordered) {
   width: 100%;
+  padding-right: $spacing-05;
 }
 
 :global(.bx--list--ordered) .list-item,
