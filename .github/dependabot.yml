@@ -1,0 +1,12 @@
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/packages/gatsby-theme-carbon"
+    schedule:
+      interval: "daily"
+      time: "17:29"
+      timezone: "America/Chicago"
+    allow:
+      - dependency-name: "@carbon"
+      - dependency-name: "carbon"
