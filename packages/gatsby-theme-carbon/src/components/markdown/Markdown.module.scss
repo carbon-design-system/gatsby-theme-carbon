@@ -46,11 +46,15 @@
 .h5,
 .h6,
 .list {
-  padding-right: $spacing-05;
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: 0;
 
   @include carbon--breakpoint('md') {
     width: 100%;
-    padding-right: $spacing-07;
+    padding-right: 0;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   @include carbon--breakpoint('lg') {
@@ -65,6 +69,7 @@
 //spacing exception for nested list items
 :global(.bx--list--nested) {
   --space: 0;
+  width: 100%;
 }
 
 :global(.bx--list--ordered),
@@ -89,6 +94,12 @@ ol {
   @include carbon--breakpoint('md') {
     margin-right: -$spacing-05;
   }
+}
+
+ul :global(.bx--list--ordered),
+ul :global(.bx--list--unordered) {
+  width: 100%;
+  padding-right: $spacing-05;
 }
 
 :global(.bx--list--ordered) .list-item,
