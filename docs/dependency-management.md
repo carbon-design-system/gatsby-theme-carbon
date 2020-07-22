@@ -4,21 +4,25 @@ We use [`yarn`](https://classic.yarnpkg.com/lang/en/) to manage our dependencies
 
 ## TLDR
 
-1. New dependency: `yarn add my-package`
-1. New dev dependency: `yarn add -D my-package`
+1. New *theme* dependency: `yarn workspace gatsby-theme-carbon add my-package`
+1. New *dev* dependency: `yarn add -D -W my-package`
 1. Update dependencies: `yarn upgrade-interactive`
 1. Update dependencies (include breaking/non-semver): `yarn upgrade-interactive --latest`
-1. Remove dependency: `yarn remove my-package`
+1. Remove dependency: `yarn workspace gatsby-theme-carbon remove my-package` or `yarn -W remove my-package` for dev dependencies.
 1. Resolve merge conflict in `yarn.lock`: `yarn`
-1. Update package in both `yarn.lock` and `package.json`: `yarn add my-package-i-already-have`
+1. Update package in both `yarn.lock` and `package.json`: `yarn workspace gatsby-theme-carbon add existing-package` or `yarn add -W -D existing-package` for dev dependencies
+
+## Workspaces
+
+This project uses [yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces/) to keep our two "packages" in sync (the example app and the Gatsby theme itself. If you're in the project's root and want to run a command in a specific workspace you can run `yarn workspace X run my-command`. For example, `yarn workspace gatsby-theme-carbon remove my-speciall-dependency`.
+
+Dev dependencies (linting, formatting etc.) aren't managed in either of the packages, their managed at the root of the project. However, if you try to run `yarn add my-dependency` in the root, yarn will ask you to pass the `-W` flag so confirm you didn't mean to put it in a specific package.
 
 ## Adding and removing dependencies
 
 There's two kinds of dependencies: regular dependencies, and dev dependencies. The difference isn't super important for Gatsby sites. However when `NODE_ENV` is `production`, yarn won't install the development dependencies. By installing them in the right category, we can decrease the installation time.
 
-As a rule of thumb, dependencies required to build the site are regular dependencies. Dependencies required to edit the code (linters, formatters, commit checkers, etc.) are dev dependencies.
-
-When a dependency is no longer needed, it should be removed so we can reduce our CI install time.
+As a rule of thumb, dependencies required to build the site are regular dependencies. Dependencies required to edit the code (linters, formatters, commit checkers, etc.) are dev dependencies. When a dependency is no longer needed, it should be removed so we can reduce our CI install time.
 
 ## Updating dependencies
 
