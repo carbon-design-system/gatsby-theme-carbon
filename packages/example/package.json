@@ -4,16 +4,12 @@
   "version": "1.26.4",
   "license": "Apache 2.0",
   "scripts": {
-    "develop": "gatsby develop -H 0.0.0.0",
-    "develop:clean": "yarn clean && yarn develop",
+    "dev": "gatsby develop -H 0.0.0.0",
+    "dev:clean": "yarn clean && yarn dev",
     "build": "gatsby build",
     "build:clean": "yarn clean && gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "build:analyze": "ANALYZE=true yarn build",
-    "build:prefix": "gatsby build --prefix-paths",
-    "serve:prefix": "gatsby serve --prefix-paths",
-    "test:prefix": "yarn build:prefix && yarn serve:prefix"
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "gatsby": "^2.20.4",
