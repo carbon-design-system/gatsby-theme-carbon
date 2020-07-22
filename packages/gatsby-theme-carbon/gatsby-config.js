@@ -2,6 +2,13 @@ const path = require('path');
 const { uiBackground, interactive01 } = require('@carbon/elements');
 const defaultLunrOptions = require('./config/lunr-options');
 
+const carbonThemes = {
+  white: require.resolve('./src/styles/internal/white.scss'),
+  g10: require.resolve('./src/styles/internal/g10.scss'),
+  g90: require.resolve('./src/styles/internal/g90.scss'),
+  g100: require.resolve('./src/styles/internal/g100.scss'),
+};
+
 module.exports = (themeOptions) => {
   const repositoryDefault = {
     baseUrl: '',
@@ -23,6 +30,7 @@ module.exports = (themeOptions) => {
     gatsbyRemarkPlugins = [],
     remarkPlugins = [],
     gatsbyPluginSharpOptions = {},
+    carbonTheme = 'white',
   } = themeOptions;
 
   const optionalPlugins = [];
@@ -111,7 +119,10 @@ module.exports = (themeOptions) => {
       {
         resolve: `gatsby-plugin-sass-resources`,
         options: {
-          resources: [require.resolve('./src/styles/internal/resources.scss')],
+          resources: [
+            require.resolve('./src/styles/internal/resources.scss'),
+            carbonThemes[carbonTheme],
+          ],
         },
       },
       `gatsby-plugin-emotion`,
