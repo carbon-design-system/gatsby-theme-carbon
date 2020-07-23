@@ -104,7 +104,7 @@ img {
 }
 
 .bx--website-switcher {
-  z-index: z('floating');
+  z-index: 10000; /* old z('floating') #938 */
 }
 
 // ie 11 hidden fix

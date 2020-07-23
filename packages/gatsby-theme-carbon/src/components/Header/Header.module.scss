@@ -9,7 +9,7 @@
 header.header {
   background-color: $ui-05;
   border-bottom: 1px solid $inverse-02;
-  z-index: z('floating');
+  z-index: 10000; /* old z('floating') #938 */
 }
 
 .header :global(.bx--header__action--menu) {

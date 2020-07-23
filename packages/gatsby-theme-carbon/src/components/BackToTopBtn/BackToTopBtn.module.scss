@@ -12,10 +12,11 @@
   cursor: pointer;
   z-index: z('modal');
   padding-top: 0.325rem;
+  color: $text-01;
 }
 
 .button:hover {
-  background: var(--cds-inverse-01);
+  background: $inverse-01;
   border-color: transparent;
 }
 
@@ -26,8 +27,4 @@
 
 .button svg {
   fill: $carbon--black-100;
-}
-
-.button:hover svg {
-  fill: $carbon--white-0;
 }
