@@ -14,14 +14,24 @@ import usePathPrefix from '../../util/hooks/usePathprefix';
 
 const Video = ({ autoPlay, vimeoId, title, src, poster, ...props }) => {
   const [isPlaying, setIsPlaying] = useState(autoPlay);
+  const pathPrefix = usePathPrefix();
   const videoRef = useRef(null);
   const iframeRef = useRef(null);
   const buttonClassName = cx(videoButton, {
     [videoIsPlaying]: isPlaying,
   });
-  const pathPrefix = usePathPrefix();
+
+  // If a video/poster is imported into an MDX file and provided through
+  // a js variable, it will already have the path-prefix.
+  //
+  // If the src/poster is just a reference to a file in the static directory,
+  // then we need to prefix for them.
   const srcContainsPrefix = pathPrefix && src && src.includes(pathPrefix);
   const fixedSrc = srcContainsPrefix ? src : withPrefix(src);
+
+  const posterContainsPrefix =
+    pathPrefix && poster && poster.includes(pathPrefix);
+  const fixedPoster = posterContainsPrefix ? poster : withPrefix(poster);
 
   if (vimeoId) {
     return (
@@ -108,7 +118,7 @@ const Video = ({ autoPlay, vimeoId, title, src, poster, ...props }) => {
         ref={videoRef}
         onEnded={onEnded}
         src={fixedSrc}
-        poster={withPrefix(poster)}
+        poster={fixedPoster}
         {...props}
       />
     </div>
