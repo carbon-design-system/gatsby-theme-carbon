@@ -14,15 +14,15 @@ on releasing the patch for the reasons mentioned above.
 
 # How to publish a new theme version
 
-1. Checkout `master` and `git pull upstream master`
+1. Checkout `main` and `git pull upstream main`
 2. Run `yarn install` to make sure you have the latest version of all the dev
    dependencies
 3. Determine whether the release is a patch, minor (feature) or major
    (breaking). You do this by looking at all of the commits since the last
    release:
-   [https://github.com/carbon-design-system/gatsby-theme-carbon/commits/master](https://github.com/carbon-design-system/gatsby-theme-carbon/commits/master)
+   [https://github.com/carbon-design-system/gatsby-theme-carbon/commits/main](https://github.com/carbon-design-system/gatsby-theme-carbon/commits/main)
 4. Type `yarn release X` where `X` is `patch`, `minor`, or `major` from step 2
-5. `git push upstream master --follow-tags`
+5. `git push upstream main --follow-tags`
 6. Navigate to the theme releases pages and draft a new release:
    [https://github.com/carbon-design-system/gatsby-theme-carbon/releases/new](https://github.com/carbon-design-system/gatsby-theme-carbon/releases/new)
    1. For tag version, choose the latest tag that was just published
@@ -40,9 +40,9 @@ should update the gatsby starter kit
    [starter kit](https://github.com/carbon-design-system/gatsby-starter-carbon-theme)
    into your projects directory (wherever you have this project). The clone
    should use the default directory name and be siblings with the this project.
-1. Be sure your terminal is in the root of the theme project, `checkout master`
-   and `pull upstream master`
+1. Be sure your terminal is in the root of the theme project, `checkout main`
+   and `pull upstream main`
 1. In your terminal, type `sh cp-example.sh`
 1. Head over to the `gatsby-starter-carbon-theme` directory
-1. Add and commit the changes to master then run `git push upstream master`
-   (it's fine I trust you) :)
+1. Add and commit the changes to main then run `git push upstream main` (it's
+   fine I trust you) :)
