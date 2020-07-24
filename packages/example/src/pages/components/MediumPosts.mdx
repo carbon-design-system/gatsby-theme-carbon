@@ -1,17 +1,20 @@
 ---
 title: MediumPosts
-description: Guide for pulling Medium posts through their RSS feed using a Gatsby plugin.
+description:
+  Guide for pulling Medium posts through their RSS feed using a Gatsby plugin.
 ---
 
 <PageDescription>
 
-Using a Gatsby plugin, this component automatically builds three `ArticleCards` populated with the most recent Medium posts at build time.
+Using a Gatsby plugin, this component automatically builds three `ArticleCards`
+populated with the most recent Medium posts at build time.
 
 </PageDescription>
 
 ## Setup
 
-To update the source account for this component, pass in a `mediumAccount` to your theme options in `gatsby-config.js`.
+To update the source account for this component, pass in a `mediumAccount` to
+your theme options in `gatsby-config.js`.
 
 ```js
 plugins: [
@@ -36,7 +39,7 @@ plugins: [
 
 ### Props
 
-| property | propType | required | default | description                                                                                   |
-| -------- | -------- | -------- | ------- | --------------------------------------------------------------------------------------------- |
-| color    | string   |          | `light` | Sets the card for the correct color theme, default is `light`, options are `light` and `dark` |
-| postLimit    | number   |          | `3`     | Sets the number of posts pulled from Medium, default is `3`, maximum is `10`.                 |
+| property  | propType | required | default | description                                                                                   |
+| --------- | -------- | -------- | ------- | --------------------------------------------------------------------------------------------- |
+| color     | string   |          | `light` | Sets the card for the correct color theme, default is `light`, options are `light` and `dark` |
+| postLimit | number   |          | `3`     | Sets the number of posts pulled from Medium, default is `3`, maximum is `10`.                 |

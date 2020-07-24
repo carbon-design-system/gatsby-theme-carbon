@@ -5,7 +5,8 @@ description: Usage instructions for the Accordion component
 
 <PageDescription>
 
-The `<GifPlayer>` component is used to pause and play images that are gif's. It works by replacing the gif with a static image on pause.
+The `<GifPlayer>` component is used to pause and play images that are gif's. It
+works by replacing the gif with a static image on pause.
 
 </PageDescription>
 
@@ -26,7 +27,6 @@ The `<GifPlayer>` component is used to pause and play images that are gif's. It 
 </Column>
 </Row>
 
-
 <Row>
 <Column colLg='8'>
 
@@ -44,44 +44,46 @@ The `<GifPlayer>` component is used to pause and play images that are gif's. It 
 
 ## Code
 
-Place two images inside of the GifPlayer component. The first image will be used as the gif, the second image will be used as the static image on pause. Only provide two images inside the component, do not place any other children inside the component.
+Place two images inside of the GifPlayer component. The first image will be used
+as the gif, the second image will be used as the static image on pause. Only
+provide two images inside the component, do not place any other children inside
+the component.
 
 <Title>Light</Title>
 
 ```mdx path=components/GifPlayer/GifPlayer.js src= https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/GifPlayer
-
 <Column colLg='4'>
 <GifPlayer>
 
 ![IBM Cloud Pictograms](/images/IBM_Cloud_Pictograms.gif) // must be gif
 
-![IBM Cloud Pictograms](/images/IBM_Cloud_Pictograms.jpg) // must be static image
+![IBM Cloud Pictograms](/images/IBM_Cloud_Pictograms.jpg) // must be static
+image
 
 </GifPlayer>
 </Column>
-
 ```
 
 <Title>Dark</Title>
 
 ```mdx path=components/GifPlayer/GifPlayer.js src= https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/GifPlayer
-
 <Column colLg='8'>
 <GifPlayer color='dark'>
 
-![IBM Cloud Platform Prototype](/images/IBM_Cloud_Platform_Prototype.gif) // must be gif
+![IBM Cloud Platform Prototype](/images/IBM_Cloud_Platform_Prototype.gif) //
+must be gif
 
-![IBM Cloud Platform Prototype](/images/IBM_Cloud_Platform_Prototype.jpg) //must be static image
+![IBM Cloud Platform Prototype](/images/IBM_Cloud_Platform_Prototype.jpg) //must
+be static image
 
 </GifPlayer>
 </Column>
-
 ```
 
 ### Props
 
-| property  | propType | required | default | description           |
-| --------- | -------- | -------- | ------- | --------------------- |
-| children  | node     |    yes      |         | Pass in the images that will be rendered.  Only pass in the images, no other children                    |
-| color | string     |          |    `light`     |  Specify if the icon color should be light or dark                |
-| className  | string    |          |         |  Specify an optional className to be applied to the container node                     |
+| property  | propType | required | default | description                                                                          |
+| --------- | -------- | -------- | ------- | ------------------------------------------------------------------------------------ |
+| children  | node     | yes      |         | Pass in the images that will be rendered. Only pass in the images, no other children |
+| color     | string   |          | `light` | Specify if the icon color should be light or dark                                    |
+| className | string   |          |         | Specify an optional className to be applied to the container node                    |

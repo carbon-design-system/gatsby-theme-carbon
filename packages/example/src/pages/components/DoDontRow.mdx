@@ -5,7 +5,8 @@ description: Usage instructions for the DoDontRow and DoDont components
 
 <PageDescription>
 
-The `<DoDontRow>` component is a custom row used alongside the `<DoDont>` component, which now includes built in columns.
+The `<DoDontRow>` component is a custom row used alongside the `<DoDont>`
+component, which now includes built in columns.
 
 </PageDescription>
 
@@ -75,10 +76,16 @@ The `<DoDontRow>` component is a custom row used alongside the `<DoDont>` compon
 ```mdx path=components/DoDontRow/DoDontRow.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/DoDontRow
 <DoDontRow>
   <DoDont text="This is some text" aspectRatio="1:1" />
-  <DoDont type='dont' text="This is some text" color="dark" aspectRatio="1:1"/>
+  <DoDont type="dont" text="This is some text" color="dark" aspectRatio="1:1" />
 </DoDontRow>
 <DoDontRow>
-  <DoDont text="This is some text" captionTitle="Caption title" caption="Caption" aspectRatio="1:1" colLg="8"/>
+  <DoDont
+    text="This is some text"
+    captionTitle="Caption title"
+    caption="Caption"
+    aspectRatio="1:1"
+    colLg="8"
+  />
 </DoDontRow>
 ```
 
@@ -96,8 +103,8 @@ The `<DoDontRow>` component is a custom row used alongside the `<DoDont>` compon
 
 ### DoDontRow
 
-| property | propType | required | default | description                                                 |
-| -------- | -------- | -------- | ------- | ----------------------------------------------------------- |
+| property | propType | required | default | description                              |
+| -------- | -------- | -------- | ------- | ---------------------------------------- |
 | children | node     | yes      |         | child node, expects a `DoDont` component |
 
 ### Do & Dont
