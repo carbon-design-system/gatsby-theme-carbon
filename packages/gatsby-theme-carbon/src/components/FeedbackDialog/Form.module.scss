@@ -3,7 +3,7 @@
   position: fixed;
   bottom: 0px;
   width: 100vw;
-  z-index: z('floating');
+  z-index: 10000; /* old z('floating') #940 */
   transform-origin: 100% 50%;
   transition-property: opacity, transform;
   transition-duration: $duration--moderate-02;
