@@ -48,7 +48,7 @@ Use this guide to contribute to the theme. We’ll show you how to get the devel
 
 We use [yarn](https://yarnpkg.com/lang/en/docs/install/) and yarn workspaces to develop the Carbon Gatsby theme. This allows us to have a development environment that’s closely linked to the theme with minimal setup. Run `yarn install` to install all of the projects dependencies.
 
-This project has two packages: the actual theme package (`gatsby-theme-carbon`) and the `example` package. The example package emulates a project which uses the theme. Its only dependencies are Gatsby, React, and the adjacent theme package. The `example` package also serves as the theme’s documentation and [website](https://gatsby-theme-carbon.now.sh); it’s deployed on every merge to master.
+This project has two packages: the actual theme package (`gatsby-theme-carbon`) and the `example` package. The example package emulates a project which uses the theme. Its only dependencies are Gatsby, React, and the adjacent theme package. The `example` package also serves as the theme’s documentation and [website](https://gatsby-theme-carbon.now.sh); it’s deployed on every merge to main.
 
 New theme development will happen in the theme package while documentation and testing of that change will occur through changes in the example directory.
 
@@ -62,11 +62,11 @@ New theme development will happen in the theme package while documentation and t
 
 ## Work in a branch
 
-You should always start a new project by pulling upstream changes into master and then creating a new branch. This workflow ensures you don’t accidentally commit anything to your master branch and get stuck when trying to open a pull request.
+You should always start a new project by pulling upstream changes into main and then creating a new branch. This workflow ensures you don’t accidentally commit anything to your main branch and get stuck when trying to open a pull request.
 
 ```sh
-git checkout master
-git pull upstream master
+git checkout main
+git pull upstream main
 git checkout -b my-branch-name
 ```
 
@@ -98,7 +98,7 @@ You’ll get a message in your terminal with a URL to open up a pull request in 
 
 ## Sass and CSS Modules
 
-For internal theme components we use [Sass](https://sass-lang.com/documentation/syntax) and [CSS Modules](https://github.com/css-modules/css-modules#css-modules). This allows us to take advantage of the Carbon Design System resources while not worrying about className collisions. By default, each `.scss` file will be supplied with all of the Carbon Sass [variables](https://github.com/carbon-design-system/carbon/blob/master/packages/components/src/globals/scss/_vars.scss): color, spacing, theme, and motion, as well as type and layout mixins, are imported automatically.
+For internal theme components we use [Sass](https://sass-lang.com/documentation/syntax) and [CSS Modules](https://github.com/css-modules/css-modules#css-modules). This allows us to take advantage of the Carbon Design System resources while not worrying about className collisions. By default, each `.scss` file will be supplied with all of the Carbon Sass [variables](https://github.com/carbon-design-system/carbon/blob/main/packages/components/src/globals/scss/_vars.scss): color, spacing, theme, and motion, as well as type and layout mixins, are imported automatically.
 
 You should colocate your stylesheet with the component(s) that import it. If the component is `TreeView` then the stylesheet should be `TreeView.module.scss`. All contained within the `TreeView` directory.
 
@@ -206,5 +206,5 @@ If you want to add examples of what you are working on or see changes you’ve m
 
 1. figure out if it’s patch or feature
 2. from the root of the package run `lerna publish patch` or `lerna publish minor`
-3. git push upstream master --follow-tags
+3. git push upstream main --follow-tags
 4. In the project’s [release tab](https://github.com/carbon-design-system/gatsby-theme-carbon/releases), edit the new release to include a summary of new changes
