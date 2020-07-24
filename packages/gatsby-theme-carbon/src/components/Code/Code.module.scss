@@ -79,7 +79,7 @@ li .row {
   }
   &::before,
   &::after {
-    z-index: z('floating');
+    z-index: 10000; /* old z('floating') #940 */
   }
 }
 
