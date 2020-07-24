@@ -62,7 +62,7 @@ and the `example` package. The example package emulates a project which uses the
 theme. Its only dependencies are Gatsby, React, and the adjacent theme package.
 The `example` package also serves as the theme’s documentation and
 [website](https://gatsby-theme-carbon.now.sh); it’s deployed on every merge to
-master.
+main.
 
 New theme development will happen in the theme package while documentation and
 testing of that change will occur through changes in the example directory.
@@ -77,10 +77,9 @@ testing of that change will occur through changes in the example directory.
 
 ## Work in a branch
 
-You should always start a new project by pulling upstream changes into master
-and then creating a new branch. This workflow ensures you don’t accidentally
-commit anything to your master branch and get stuck when trying to open a pull
-request.
+You should always start a new project by pulling upstream changes into main and
+then creating a new branch. This workflow ensures you don’t accidentally commit
+anything to your main branch and get stuck when trying to open a pull request.
 
 ```sh
 git checkout main
@@ -127,7 +126,7 @@ For internal theme components we use
 allows us to take advantage of the Carbon Design System resources while not
 worrying about className collisions. By default, each `.scss` file will be
 supplied with all of the Carbon Sass
-[variables](https://github.com/carbon-design-system/carbon/blob/master/packages/components/src/globals/scss/_vars.scss):
+[variables](https://github.com/carbon-design-system/carbon/blob/main/packages/components/src/globals/scss/_vars.scss):
 color, spacing, theme, and motion, as well as type and layout mixins, are
 imported automatically.
 
@@ -262,7 +261,7 @@ its purpose to be included with your pull request.
 1. figure out if it’s patch or feature
 2. from the root of the package run `lerna publish patch` or
    `lerna publish minor`
-3. git push upstream master --follow-tags
+3. git push upstream main --follow-tags
 4. In the project’s
    [release tab](https://github.com/carbon-design-system/gatsby-theme-carbon/releases),
    edit the new release to include a summary of new changes
