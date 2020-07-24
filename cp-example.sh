@@ -9,5 +9,3 @@ find ./packages/example -type f -maxdepth 1 ! -iname '.DS_Store' -exec cp {} ../
 rm -rf ../gatsby-starter-carbon-theme/{src,static}
 cp -r ./packages/example/src ../gatsby-starter-carbon-theme/src
 cp -r ./packages/example/static ../gatsby-starter-carbon-theme/static
-
-cd ../gatsby-starter-carbon-theme && git add . && git commit -m "chore: update with theme release" && git push upstream master
