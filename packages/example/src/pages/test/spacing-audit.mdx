@@ -25,7 +25,50 @@ This is a demo page to see variations on components before/after headings.
   <AnchorLink>Paragraph and Tables</AnchorLink>
   <AnchorLink>Paragraph and Tabs</AnchorLink>
   <AnchorLink>Paragraph and Code</AnchorLink>
+  <AnchorLink>Code and Nested Lists</AnchorLink>
+  <AnchorLink>Notifications and Lists</AnchorLink>
 </AnchorLinks>
+
+## testing lists
+
+1. First ordered list item
+2. Item with a nested item
+   1. Nested list item
+   2. Another nested list item
+
+![](/images/poster.jpg)
+
+3. This is technically a new ordered list, but we've given it the start attribute of 3
+4. To continue from the list above
+5. The rest of the numbers don't matter, but the starting number does
+
+| Tables        |      Are      |   Cool |
+| ------------- | :-----------: | -----: |
+| col 3 is      | right-aligned | \$1600 |
+| col 2 is      |   centered    |   \$12 |
+| zebra stripes |   are neat    |    \$1 |
+
+6. This is also a new ordered list, but we've given it the start attribute of 7
+7. The rest of the numbers don't matter, but the starting number does
+
+- Unordered list can use asterisks
+  - Nested list item
+  - Nested list item
+
+![](/images/poster.jpg)
+
+- Or hyphens to create list items
+- Unordered list can use asterisks
+
+| Tables        |      Are      |   Cool |
+| ------------- | :-----------: | -----: |
+| col 3 is      | right-aligned | \$1600 |
+| col 2 is      |   centered    |   \$12 |
+| zebra stripes |   are neat    |    \$1 |
+
+- Or hyphens to create list items
+- Or hyphens to create list items
+- Or hyphens to create list items
 
 ## Headers and Paragraphs
 
@@ -45,19 +88,19 @@ I’m a paragraph underneath an h4. Lorem ipsum dolor sit amet, consectetur adip
 
 ## Header 2
 
-<Video src="/videos/hero-video.mp4" poster="/images/poster.png">
+<Video src="/videos/hero-video.mp4" poster="/images/poster.jpg">
   <track default src="/videos/vtt/hero-video.vtt" srcLang="en" />
 </Video>
 
 ### Header 3
 
-<Video src="/videos/hero-video.mp4" poster="/images/poster.png">
+<Video src="/videos/hero-video.mp4" poster="/images/poster.jpg">
   <track default src="/videos/vtt/hero-video.vtt" srcLang="en" />
 </Video>
 
 #### Header 4
 
-<Video src="/videos/hero-video.mp4" poster="/images/poster.png">
+<Video src="/videos/hero-video.mp4" poster="/images/poster.jpg">
   <track default src="/videos/vtt/hero-video.vtt" srcLang="en" />
 </Video>
 
@@ -65,7 +108,7 @@ I’m a paragraph underneath an h4. Lorem ipsum dolor sit amet, consectetur adip
 
 ## Header 2
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 <Caption>
   This is a regular caption. It will attempt to respond to it’s container
@@ -74,7 +117,7 @@ I’m a paragraph underneath an h4. Lorem ipsum dolor sit amet, consectetur adip
 
 ### Header 3
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 <Caption>
   This is a regular caption. It will attempt to respond to it’s container
@@ -83,7 +126,7 @@ I’m a paragraph underneath an h4. Lorem ipsum dolor sit amet, consectetur adip
 
 #### Header 4
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 <Caption>
   This is a regular caption. It will attempt to respond to it’s container
@@ -193,7 +236,7 @@ The tab component can be used for a variety of content. From text, to images, to
 
 If your content is full width, you don’t need `Row` and `Column`
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 </Tab>
 
@@ -204,14 +247,14 @@ If your content is full width, you don’t need `Row` and `Column`
 
 Column one
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 </Column>
 <Column colSm={6} colLg={6}>
 
 Column two
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 </Column>
 </Row>
@@ -234,7 +277,7 @@ The tab component can be used for a variety of content. From text, to images, to
 
 If your content is full width, you don’t need `Row` and `Column`
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 </Tab>
 
@@ -245,14 +288,14 @@ If your content is full width, you don’t need `Row` and `Column`
 
 Column one
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 </Column>
 <Column colSm={6} colLg={6}>
 
 Column two
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 </Column>
 </Row>
@@ -275,7 +318,7 @@ The tab component can be used for a variety of content. From text, to images, to
 
 If your content is full width, you don’t need `Row` and `Column`
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 </Tab>
 
@@ -286,14 +329,14 @@ If your content is full width, you don’t need `Row` and `Column`
 
 Column one
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 </Column>
 <Column colSm={6} colLg={6}>
 
 Column two
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 </Column>
 </Row>
@@ -338,7 +381,7 @@ Column two
 
 I’m a paragraph above a video. Lorem ipsum dolor sit amet, consectetur adipiscers elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
 
-<Video src="/videos/hero-video.mp4" poster="/images/poster.png">
+<Video src="/videos/hero-video.mp4" poster="/images/poster.jpg">
   <track default src="/videos/vtt/hero-video.vtt" srcLang="en" />
 </Video>
 
@@ -348,11 +391,11 @@ I’m a paragraph below a video. Lorem ipsum dolor sit amet, consectetur adipisc
 
 I’m a paragraph above an image. Lorem ipsum dolor sit amet, consectetur adipiscers elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 I’m a paragraph below an image. Lorem ipsum dolor sit amet, consectetur adipiscers elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
 
-## Paragraph and List
+## Paragraph and Lists
 
 I’m a paragraph above a list. Lorem ipsum dolor sit amet, consectetur adipiscers elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
 
@@ -407,7 +450,7 @@ The tab component can be used for a variety of content. From text, to images, to
 
 If your content is full width, you don’t need `Row` and `Column`
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 </Tab>
 
@@ -418,14 +461,14 @@ If your content is full width, you don’t need `Row` and `Column`
 
 Column one
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 </Column>
 <Column colSm={6} colLg={6}>
 
 Column two
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 </Column>
 </Row>
@@ -448,14 +491,14 @@ I’m a paragraph above code. Lorem ipsum dolor sit amet, consectetur adipiscers
 
 Column one
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 </Column>
 <Column colSm={6} colLg={6}>
 
 Column two
 
-![](/images/poster.png)
+![](/images/poster.jpg)
 
 </Column>
 </Row>
@@ -467,3 +510,83 @@ Column two
 ```
 
 I’m a paragraph below code. Lorem ipsum dolor sit amet, consectetur adipiscers elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+
+## Code & Nested Lists
+
+<Title>Ordered List</Title>
+
+1. Fist ordered list item
+2. Item with a nested code block. Perspiciatis cupiditate eveniet reprehenderit. Dolores eum dolor at officia qui libero adipisci. Consequuntur culpa qui laudantium iure reiciendis mollitia est eveniet illum. Sunt ut et. Quia earum dolore dolor.
+
+   ```jsx path=components/Accordion/Accordion.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/Accordion
+   <Accordion>
+     <AccordionItem title="Title 1">Content Section</AccordionItem>
+     <AccordionItem title="Title 2">Content Section</AccordionItem>
+     <AccordionItem title="Title 3">Content Section</AccordionItem>
+   </Accordion>
+   ```
+
+3. Third ordered list item
+4. Item with nested list. Consequuntur et excepturi aperiam labore accusamus. Fuga itaque ut molestiae quia minus voluptatem iste officiis enim. Reprehenderit et aperiam. Rerum molestiae delectus iusto provident sint cupiditate.
+
+   1. Nested list item with code blcok. Consequuntur et excepturi aperiam labore accusamus. Fuga itaque ut molestiae quia minus voluptatem iste officiis enim. Reprehenderit et aperiam. Rerum molestiae delectus iusto provident sint cupiditate.
+
+      ```jsx path=components/Accordion/Accordion.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/Accordion
+      <Accordion>
+        <AccordionItem title="Title 1">Content Section</AccordionItem>
+        <AccordionItem title="Title 2">Content Section</AccordionItem>
+        <AccordionItem title="Title 3">Content Section</AccordionItem>
+      </Accordion>
+      ```
+
+<Title>Unordered List</Title>
+
+- Unorderd list item
+- Item with a nested code block. Perspiciatis cupiditate eveniet reprehenderit. Dolores eum dolor at officia qui libero adipisci. Consequuntur culpa qui laudantium iure reiciendis mollitia est eveniet illum. Sunt ut et. Quia earum dolore dolor.
+
+  ```jsx path=components/Accordion/Accordion.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/Accordion
+  <Accordion>
+    <AccordionItem title="Title 1">Content Section</AccordionItem>
+    <AccordionItem title="Title 2">Content Section</AccordionItem>
+    <AccordionItem title="Title 3">Content Section</AccordionItem>
+  </Accordion>
+  ```
+
+- Unorderd list item
+- Item with nested list. Consequuntur et excepturi aperiam labore accusamus. Fuga itaque ut molestiae quia minus voluptatem iste officiis enim. Reprehenderit et aperiam. Rerum molestiae delectus iusto provident sint cupiditate.
+
+  - Nested list item with code blcok. Consequuntur et excepturi aperiam labore accusamus. Fuga itaque ut molestiae quia minus voluptatem iste officiis enim. Reprehenderit et aperiam. Rerum molestiae delectus iusto provident sint cupiditate.
+
+    ```jsx path=components/Accordion/Accordion.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/Accordion
+    <Accordion>
+      <AccordionItem title="Title 1">Content Section</AccordionItem>
+      <AccordionItem title="Title 2">Content Section</AccordionItem>
+      <AccordionItem title="Title 3">Content Section</AccordionItem>
+    </Accordion>
+    ```
+
+## Notifications and Lists
+
+<InlineNotification>
+
+A basic Notification. Omnis officiis culpa enim harum qui sint soluta qui nam. Labore minus sunt suscipit reiciendis laudantium nihil dolores quia. Enim quod ea omnis nihil cum. Similique consequatur illum ea libero quam. Earum quis vel fugiat dicta sapiente.
+
+</InlineNotification>
+
+- a list item. Omnis officiis culpa enim harum qui sint soluta qui nam. Labore minus sunt suscipit reiciendis laudantium nihil dolores quia. Enim quod ea omnis nihil cum. Similique consequatur illum ea libero quam. Earum quis vel fugiat dicta sapiente.
+
+  <InlineNotification>
+
+  A basic Notification.Omnis officiis culpa enim harum qui sint soluta qui nam. Labore minus sunt suscipit reiciendis laudantium nihil dolores quia. Enim quod ea omnis nihil cum. Similique consequatur illum ea libero quam. Earum quis vel fugiat dicta sapiente.
+
+  </InlineNotification>
+
+- another item. Omnis officiis culpa enim harum qui sint soluta qui nam. Labore minus sunt suscipit reiciendis laudantium nihil dolores quia. Enim quod ea omnis nihil cum. Similique consequatur illum ea libero quam. Earum quis vel fugiat dicta sapiente.
+
+  - with a Notification. Omnis officiis culpa enim harum qui sint soluta qui nam. Labore minus sunt suscipit reiciendis laudantium nihil dolores quia. Enim quod ea omnis nihil cum. Similique consequatur illum ea libero quam. Earum quis vel fugiat dicta sapiente.
+
+    <InlineNotification>
+
+    A basic Notification. Omnis officiis culpa enim harum qui sint soluta qui nam. Labore minus sunt suscipit reiciendis laudantium nihil dolores quia. Enim quod ea omnis nihil cum. Similique consequatur illum ea libero quam. Earum quis vel fugiat dicta sapiente.
+
+    </InlineNotification>

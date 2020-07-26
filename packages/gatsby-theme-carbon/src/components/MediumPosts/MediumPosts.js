@@ -33,16 +33,14 @@ const MediumPosts = ({ postLimit = 3, cardProps, ...rest }) => {
           colMd={4}
           colLg={4}
           noGutterMdLeft
-          className={cardContainer}
-        >
+          className={cardContainer}>
           <ArticleCard
             title={latestPost.title}
             author={latestPost.author}
             href={latestPost.link}
             date={latestPost.date}
             color="dark"
-            {...cardProps}
-          >
+            {...cardProps}>
             <img
               alt={latestPost.title}
               src={latestPost.thumbnail}

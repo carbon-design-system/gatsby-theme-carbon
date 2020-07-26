@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { Link } from 'gatsby';
+import { Link, withPrefix } from 'gatsby';
 import {
-  Launch20,
-  Download20,
   ArrowRight20,
-  Error20,
+  Calendar20,
+  Download20,
   Email20,
+  Error20,
+  Launch20,
 } from '@carbon/icons-react';
 import { settings } from 'carbon-components';
 
@@ -29,7 +30,7 @@ export default class ResourceCard extends React.Component {
     } = this.props;
 
     let isLink;
-    if (href !== undefined) {
+    if (href !== undefined && !rest.download) {
       isLink = href.charAt(0) === '/';
     }
 
@@ -37,13 +38,6 @@ export default class ResourceCard extends React.Component {
       [className]: className,
       [`${prefix}--resource-card--disabled`]: disabled,
       [`${prefix}--resource-card--dark`]: color === 'dark',
-    });
-
-    const aspectRatioClassNames = classnames([`${prefix}--aspect-ratio`], {
-      [`${prefix}--aspect-ratio--2x1`]: aspectRatio === '2:1',
-      [`${prefix}--aspect-ratio--1x1`]: aspectRatio === '1:1',
-      [`${prefix}--aspect-ratio--16x9`]: aspectRatio === '16:9',
-      [`${prefix}--aspect-ratio--4x3`]: aspectRatio === '4:3',
     });
 
     const carbonTileclassNames = classnames([`${prefix}--tile`], {
@@ -72,6 +66,9 @@ export default class ResourceCard extends React.Component {
           {actionIcon === 'email' && !disabled ? (
             <Email20 aria-label="Email" />
           ) : null}
+          {actionIcon === 'calendar' && !disabled ? (
+            <Calendar20 aria-label="Calendar" />
+          ) : null}
           {actionIcon === 'disabled' || disabled === true ? (
             <Error20 aria-label="disabled" />
           ) : null}
@@ -89,8 +86,17 @@ export default class ResourceCard extends React.Component {
         </Link>
       );
     } else {
+      // The URL is assumed to be external if an http protocol is present or defaulted (i.e. it is a protocal-relative URL).
+      const isExternalURL = RegExp(/^(https?:)?\/\//g).test(href);
+
+      // Prepend the path prefix in production.
+      const hrefPrefixed = withPrefix(href);
+
       cardContainer = (
-        <a href={href} className={carbonTileclassNames} {...rest}>
+        <a
+          href={rest.download && !isExternalURL ? hrefPrefixed : href}
+          className={carbonTileclassNames}
+          {...rest}>
           {cardContent}
         </a>
       );
@@ -98,7 +104,11 @@ export default class ResourceCard extends React.Component {
 
     return (
       <div className={ResourceCardClassNames}>
-        <div className={aspectRatioClassNames}>
+        <div
+          className={classnames(
+            `${prefix}--aspect-ratio`,
+            `${prefix}--aspect-ratio--${aspectRatio.replace(':', 'x')}`
+          )}>
           <div className={`${prefix}--aspect-ratio--object`}>
             {cardContainer}
           </div>

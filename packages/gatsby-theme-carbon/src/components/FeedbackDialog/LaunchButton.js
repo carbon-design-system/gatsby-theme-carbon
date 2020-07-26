@@ -18,8 +18,7 @@ function LaunchButton({
       aria-haspopup
       className={classNames}
       onClick={onClick}
-      aria-label="This launches a modal form to give website feedback."
-    >
+      aria-label="This launches a modal form to give website feedback.">
       {visible ? <FilledIcon /> : <RegularIcon />}
     </button>
   );

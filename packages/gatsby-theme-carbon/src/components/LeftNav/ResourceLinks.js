@@ -30,8 +30,7 @@ const LeftNavResourceLinks = ({ links, shouldOpenNewTabs }) => {
             href={href}
             className={cx(resourceLink, { [outboundLink]: outbound })}
             element={outbound ? 'a' : Link}
-            {...shouldOpenNewTabsProps}
-          >
+            {...shouldOpenNewTabsProps}>
             {title}
           </SideNavLink>
         );

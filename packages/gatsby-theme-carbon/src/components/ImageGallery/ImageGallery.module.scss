@@ -108,7 +108,7 @@ $z-02: 2;
 
 .in-dialog-gallery-container,
 .gallery-container {
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     :global(.bx--col-lg-2) {
       flex: 0 0 16.66666667%;
       max-width: 16.66666667%;
@@ -159,4 +159,65 @@ $z-02: 2;
       max-width: 91.66666667%;
     }
   }
+}
+
+// #906
+.gallery-container .column {
+  margin-bottom: 0;
+}
+
+.figure {
+  margin-bottom: $spacing-07;
+}
+
+.image-button-wrapper {
+  border: 0;
+  background: none;
+  padding: 0;
+  outline: none;
+  width: 100%;
+}
+
+.image-button-wrapper::-moz-focus-inner {
+  border: 0;
+}
+
+.image-button-wrapper:focus {
+  outline: none;
+}
+
+.image-title {
+  @include carbon--type-style('productive-heading-02');
+  position: absolute;
+  display: block;
+  width: 100%;
+  align-self: flex-start;
+  left: $spacing-07;
+  color: $text-04;
+  margin-top: $spacing-09;
+  margin-left: $spacing-03;
+  user-select: none;
+}
+
+.image-in-dialog {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.image-in-dialog :global(.gatsby-resp-image-wrapper) {
+  width: 100%;
+}
+
+.image-in-dialog img,
+.image-in-dialog button {
+  margin: $spacing-05 0;
+}
+
+.image-button-wrapper:focus img,
+.image-button-wrapper:focus video {
+  outline: 2px solid $focus;
 }

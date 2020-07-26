@@ -7,24 +7,25 @@
   },
   "license": "Apache 2.0",
   "engines": {
-    "node": "10.x || 12.x"
+    "node": "12.x"
   },
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "dev": "yarn workspace example develop",
-    "dev:clean": "yarn workspace example develop:clean",
+    "dev": "yarn workspace example dev",
+    "dev:clean": "yarn workspace example dev:clean",
     "build": "yarn workspace example build",
     "build:clean": "yarn workspace example build:clean",
     "build:analyze": "ANALYZE=true yarn workspace example build",
+    "build:prefix": "yarn workspace example build --prefix-paths",
     "serve": "yarn build && yarn workspace example serve",
-    "test:prefix": "yarn workspace example test:prefix",
+    "serve:prefix": "yarn build:prefix && yarn workspace example serve --prefix-paths",
     "now-build": "yarn workspace example build",
     "format": "prettier --write \"**/*.{css,scss,json,html,yaml}\"",
     "lint:js": "eslint . --fix",
     "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
-    "release": "lerna publish --conventional-commits --create-release github --git-remote upstream"
+    "release": "lerna publish"
   },
   "eslintIgnore": [
     "**/node_modules/",
@@ -45,7 +46,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "husky": "^4.2.3",
-    "lerna": "^3.16.2",
+    "lerna": "^3.22.1",
     "lint-staged": "^10.0.9",
     "prettier": "^2.0.2",
     "stylelint": "^13.2.1",
@@ -68,5 +69,8 @@
     "*.{css,scss}": [
       "stylelint --fix"
     ]
+  },
+  "dependencies": {
+    "prettier-config-carbon": "^0.2.0"
   }
 }

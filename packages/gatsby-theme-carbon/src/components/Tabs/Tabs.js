@@ -102,8 +102,7 @@ export const Tab = ({ _id, label, active, index, tab, children }) => {
           role="tab"
           id={`${_id}--tab`}
           tabIndex={!active ? '-1' : '0'}
-          aria-selected={active || undefined}
-        >
+          aria-selected={active || undefined}>
           {label}
         </button>
       </li>
@@ -116,8 +115,7 @@ export const Tab = ({ _id, label, active, index, tab, children }) => {
       hidden={!active}
       role="tabpanel"
       id={`${_id}--panel`}
-      aria-labelledby={`${_id}--tab`}
-    >
+      aria-labelledby={`${_id}--tab`}>
       {children}
     </section>
   );
@@ -134,8 +132,7 @@ export const Tabs = (props) => {
 
   return (
     <TabContext.Provider
-      value={{ setActiveTab, activeTab, tabList: tabList.current }}
-    >
+      value={{ setActiveTab, activeTab, tabList: tabList.current }}>
       {isMobile ? (
         <Select _id={id}>{props.children}</Select>
       ) : (

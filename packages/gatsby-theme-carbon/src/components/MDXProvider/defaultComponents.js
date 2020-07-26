@@ -27,6 +27,7 @@ import GifPlayer from '../GifPlayer';
 import ArtDirection from '../ArtDirection';
 import MediumPosts from '../MediumPosts';
 import Title from '../Title';
+import { MiniCard, CardGroup } from '../MiniCard';
 
 const components = {
   wrapper: function Wrapper({ children, ...props }) {
@@ -74,6 +75,8 @@ const components = {
   InlineNotification,
   MediumPosts,
   Title,
+  MiniCard,
+  CardGroup,
 };
 
 export default components;

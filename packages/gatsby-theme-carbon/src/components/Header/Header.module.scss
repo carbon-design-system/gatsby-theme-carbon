@@ -1,4 +1,4 @@
-@import "~carbon-components/scss/globals/scss/layout";
+@import '~carbon-components/scss/globals/scss/layout';
 
 .header button {
   display: flex;
@@ -9,7 +9,7 @@
 header.header {
   background-color: $ui-05;
   border-bottom: 1px solid $inverse-02;
-  z-index: z("floating");
+  z-index: 10000; /* old z('floating') #940 */
 }
 
 .header :global(.bx--header__action--menu) {
@@ -21,7 +21,7 @@ header.header {
     outline: 2px solid $inverse-01;
     outline-offset: -2px;
   }
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     display: none;
   }
 }
@@ -29,7 +29,7 @@ header.header {
 .header :global(.bx--header__action--menu.bx--header__action--active) {
   background-color: $ui-05;
   border-right: 1px solid $inverse-02;
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     display: none;
   }
 }
@@ -52,7 +52,7 @@ header.header {
 }
 
 .headerName {
-  @include carbon--type-style("body-short-02");
+  @include carbon--type-style('body-short-02');
   transition: opacity $duration--fast-02 $carbon--standard-easing;
   color: $inverse-01;
   text-decoration: none;
@@ -68,7 +68,7 @@ header.header {
     outline-offset: -2px;
   }
 
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     left: 0;
   }
 }

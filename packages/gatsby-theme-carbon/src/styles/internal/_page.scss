@@ -11,14 +11,14 @@
 .container .#{$prefix}--grid {
   margin: 0;
 
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     padding-left: calc(
       25% + 2rem
     ); //2rem to account for 2rem left padding default on grid
     padding-right: 2rem;
   }
 
-  @include carbon--breakpoint("max") {
+  @include carbon--breakpoint('max') {
     padding-left: 400px;
     padding-right: 2rem;
   }
@@ -37,7 +37,7 @@
 // Header styles
 //---------------------------------------
 .#{$prefix}--header__menu-trigger {
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     display: none;
   }
 }
@@ -47,7 +47,7 @@
 //---------------------------------------
 .page-p,
 .component-docs p {
-  @include carbon--type-style("body-long-02");
+  @include carbon--type-style('body-long-02');
   padding: 0 0 $spacing-lg;
 
   &:empty {
@@ -98,13 +98,13 @@ img {
 }
 
 //svg and gif images
-.page-content > div > img[src*="svg"],
-.page-content > div > img[src*="gif"] {
+.page-content > div > img[src*='svg'],
+.page-content > div > img[src*='gif'] {
   background: $ui-02;
 }
 
 .bx--website-switcher {
-  z-index: z("floating");
+  z-index: 10000; /* old z('floating') #940 */
 }
 
 // ie 11 hidden fix
@@ -116,14 +116,14 @@ img {
 
 // No gutter class names
 .container .#{$prefix}--no-gutter-lg {
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
 .container .#{$prefix}--no-gutter-md {
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     padding-left: 0;
     padding-right: 0;
   }
@@ -135,19 +135,26 @@ img {
 }
 
 .container .#{$prefix}--no-gutter-lg--left {
-  @include carbon--breakpoint("lg") {
+  @include carbon--breakpoint('lg') {
     padding-left: 0;
   }
 }
 
 .container .#{$prefix}--no-gutter-md--left {
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     padding-left: 0;
   }
 }
 
 .container .#{$prefix}--no-gutter-sm--left {
   padding-left: 0;
+}
+
+.container .#{$prefix}--gutter-lg {
+  @include carbon--breakpoint('lg') {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 // Clears styles for nested grid components

@@ -4,10 +4,7 @@ import { Link } from 'gatsby';
 import { Location } from '@reach/router';
 import cx from 'classnames';
 
-import {
-  HeaderMenu,
-  HeaderMenuItem,
-} from 'carbon-components-react';
+import { HeaderMenu, HeaderMenuItem } from 'carbon-components-react';
 import styles from '../Header/Header.module.scss';
 
 import NavContext from '../../util/context/NavContext';
@@ -37,8 +34,7 @@ const HeaderNavItem = (props) => {
               icon={<span>dummy icon</span>}
               element={Link}
               isActive={isActive}
-              to={`${items[0].path}`}
-            >
+              to={`${items[0].path}`}>
               {category}
             </HeaderMenuItem>
           );
@@ -49,8 +45,7 @@ const HeaderNavItem = (props) => {
             isActive={isActive} // TODO similar categories
             defaultExpanded={isActive}
             title={category}
-            menuLinkName={category}
-          >
+            menuLinkName={category}>
             <TabItems
               onClick={closeLeftNav}
               items={items}
@@ -79,13 +74,11 @@ const TabItems = ({ items, pathname, onClick }) =>
         onClick={onClick}
         element={Link}
         isActive={hasActiveTab}
-        key={i}
-      >
+        key={i}>
         <span
           className={cx(styles.linkText, {
             [styles.linkText__active]: hasActiveTab,
-          })}
-        >
+          })}>
           {item.title}
         </span>
       </HeaderMenuItem>

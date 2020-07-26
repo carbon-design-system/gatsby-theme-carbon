@@ -1,17 +1,17 @@
 //---------------------------------------
 // Row
 //---------------------------------------
+
 .do-dont-row + .do-dont-row {
   --space: 0;
-  @include carbon--breakpoint("md") {
-    --space: 2rem;
+  @include carbon--breakpoint('lg') {
+    --space: #{$spacing-07};
   }
 }
 
-.do-dont-row [class*="--col"] {
-  margin-top: 2rem;
-  @include carbon--breakpoint("md") {
-    margin-top: 0;
+.do-dont-row [class*='--col'] {
+  @include carbon--breakpoint-down('lg') {
+    --space: #{$spacing-07};
   }
 }
 
@@ -20,17 +20,17 @@
 //---------------------------------------
 .caption {
   padding: $spacing-05 0 0 0;
-  @include carbon--breakpoint("sm") {
+  @include carbon--breakpoint('sm') {
     width: 100%;
   }
 
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     width: 75%;
   }
 }
 
 .title {
-  @include carbon--type-style("body-short-01");
+  @include carbon--type-style('body-short-01');
   font-weight: 600;
   margin: 0;
 
@@ -38,19 +38,19 @@
     padding: 0 25% 0 0;
   }
 
-  @include carbon--breakpoint("md") {
+  @include carbon--breakpoint('md') {
     padding: 0 25% 0 0;
   }
 }
 
 .description {
-  @include carbon--type-style("body-short-01");
+  @include carbon--type-style('body-short-01');
   margin: 0;
   padding: 0;
 }
 
-[class*="--col"] .caption {
-  @include carbon--breakpoint("md") {
+[class*='--col'] .caption {
+  @include carbon--breakpoint('md') {
     width: 100%;
   }
 }
@@ -76,8 +76,8 @@
   fill: $carbon--red-60;
 }
 
-.icon path[dataIconPath="inner-path"],
-.icon path[data-icon-path="inner-path"] {
+.icon path[dataIconPath='inner-path'],
+.icon path[data-icon-path='inner-path'] {
   fill: $carbon--white-0;
   opacity: 1;
 }
@@ -108,7 +108,7 @@
 }
 
 .card::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: -1px;
@@ -184,6 +184,6 @@
 //---------------------------------------
 // Video
 //---------------------------------------
-.example [class^="Video-module--video-container"] {
+.example [class^='Video-module--video-container'] {
   margin-bottom: 0;
 }

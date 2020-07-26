@@ -20,8 +20,7 @@ const PathRow = ({ src, path, children }) => {
           title="View source"
           className={styles.button}
           href={src}
-          style={{ position: 'relative', zIndex: 200 }}
-        >
+          style={{ position: 'relative', zIndex: 200 }}>
           <Launch16 alt="View source" />
         </a>
       ) : (
