@@ -5,18 +5,23 @@ description: Usage instructions for the Grid component
 
 <PageDescription>
 
-`<Row>` and `<Column>` components are used to arrange content and components on the grid within a page.
-To learn more about the grid is built, you can read the docs in the [Carbon](https://github.com/carbon-design-system/carbon/tree/master/packages/grid) repo.
+`<Row>` and `<Column>` components are used to arrange content and components on
+the grid within a page. To learn more about the grid is built, you can read the
+docs in the
+[Carbon](https://github.com/carbon-design-system/carbon/tree/master/packages/grid)
+repo.
 
 </PageDescription>
 
 ## Row
 
-The `<Row>` component is a wrapper that adds the `bx--row` class to a wrapper div. You will want to use this to define rows that you will place `<Column>` components inside of.
+The `<Row>` component is a wrapper that adds the `bx--row` class to a wrapper
+div. You will want to use this to define rows that you will place `<Column>`
+components inside of.
 
 ### Code
 
-```jsx path=components/Grid.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/Grid
+```mdx path=components/Grid.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/Grid
 <Row>
   <Column>
     Content or additional <Components />
@@ -33,7 +38,8 @@ The `<Row>` component is a wrapper that adds the `bx--row` class to a wrapper di
 
 ## Column
 
-The `<Column>` component is used to define column widths for your content, you can set the rules at different breakpoints with the props.
+The `<Column>` component is used to define column widths for your content, you
+can set the rules at different breakpoints with the props.
 
 ### Example
 
@@ -112,61 +118,83 @@ The `<Column>` component is used to define column widths for your content, you c
 
 ### Code
 
-```jsx path=components/Grid.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/Grid
+```mdx path=components/Grid.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/Grid
 <Row>
   <Column colMd={4} colLg={4}>
-    ![Grid Example](images/Article_05.jpg)
+
+![Grid Example](images/Article_05.jpg)
+
   </Column>
   <Column colMd={4} colLg={4}>
-    ![Grid Example](images/Article_05.jpg)
+
+![Grid Example](images/Article_05.jpg)
+
   </Column>
   <Column colMd={4} colLg={4}>
-    ![Grid Example](images/Article_05.jpg)
+
+![Grid Example](images/Article_05.jpg)
+
   </Column>
 </Row>
 ```
 
 <Title>No gutter left</Title>
 
-```jsx path=components/Grid.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/Grid
+```mdx path=components/Grid.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/Grid
 <Row>
   <Column colMd={4} colLg={4} noGutterMdLeft>
-    ![Grid Example](images/Article_05.jpg)
+
+![Grid Example](images/Article_05.jpg)
+
   </Column>
   <Column colMd={4} colLg={4} noGutterMdLeft>
-    ![Grid Example](images/Article_05.jpg)
+
+![Grid Example](images/Article_05.jpg)
+
   </Column>
   <Column colMd={4} colLg={4} noGutterMdLeft>
-    ![Grid Example](images/Article_05.jpg)
+
+![Grid Example](images/Article_05.jpg)
+
   </Column>
 </Row>
 ```
 
 <Title>No gutter</Title>
 
-```jsx path=components/Grid.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/Grid
+```mdx path=components/Grid.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/Grid
 <Row>
   <Column colMd={4} colLg={4} noGutterSm>
-    ![Grid Example](images/Article_05.jpg)
+
+![Grid Example](images/Article_05.jpg)
+
   </Column>
   <Column colMd={4} colLg={4} noGutterSm>
-    ![Grid Example](images/Article_05.jpg)
+
+![Grid Example](images/Article_05.jpg)
+
   </Column>
   <Column colMd={4} colLg={4} noGutterSm>
-    ![Grid Example](images/Article_05.jpg)
+
+![Grid Example](images/Article_05.jpg)
+
   </Column>
 </Row>
 ```
 
 <Title>Offset</Title>
 
-```jsx path=components/Grid.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/Grid
+```mdx path=components/Grid.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/Grid
 <Row>
   <Column colMd={4} colLg={4} offsetLg={4}>
-    ![Grid Example](images/Article_05.jpg)
+
+![Grid Example](images/Article_05.jpg)
+
   </Column>
   <Column colMd={4} colLg={4}>
-    ![Grid Example](images/Article_05.jpg)
+
+![Grid Example](images/Article_05.jpg)
+
   </Column>
 </Row>
 ```
