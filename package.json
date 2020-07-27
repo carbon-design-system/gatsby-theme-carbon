@@ -22,7 +22,7 @@
     "serve": "yarn build && yarn workspace example serve",
     "serve:prefix": "yarn build:prefix && yarn workspace example serve --prefix-paths",
     "now-build": "yarn workspace example build",
-    "format": "prettier --write \"**/*.{css,scss,json,html,yaml}\"",
+    "format": "prettier --write \"**/*.{css,scss,json,html,yaml,mdx}\"",
     "lint:js": "eslint . --fix",
     "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
     "release": "lerna publish"
