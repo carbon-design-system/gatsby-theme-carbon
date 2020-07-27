@@ -1,11 +1,19 @@
 ---
 title: MiniCard
-description: Although the mini-resource card has a similar geometry to the button component, they should not be used in place of a button. Buttons encourage action from the user and affect the website's front-end or back-end. The resource cards, both large and mini are essentially links. They are used for navigation and actions that do not affect the website.
+description:
+  Although the mini-resource card has a similar geometry to the button
+  component, they should not be used in place of a button. Buttons encourage
+  action from the user and affect the website's front-end or back-end. The
+  resource cards, both large and mini are essentially links. They are used for
+  navigation and actions that do not affect the website.
 ---
 
 <PageDescription>
 
-The `<MiniCard>` component can be used in place of a `<ResourceCard>` if your content allows it. Unless it is sitting aside your main conent, it should always be wrapped inside of a `<CardGroup>`. This allows the correct gutter and border placement between a group of cards.
+The `<MiniCard>` component can be used in place of a `<ResourceCard>` if your
+content allows it. Unless it is sitting aside your main conent, it should always
+be wrapped inside of a `<CardGroup>`. This allows the correct gutter and border
+placement between a group of cards.
 
 </PageDescription>
 
@@ -49,13 +57,15 @@ The `<MiniCard>` component can be used in place of a `<ResourceCard>` if your co
 <Row>
 <Column colLg={8}>
 
-When you have the mini resource card sitting aside the main content, be sure to add the `gutterLg`, properties to the `<MiniCard>`. This will ensure the MiniCard has the appropriate gutters at the approriate breakpoints.
+When you have the mini resource card sitting aside the main content, be sure to
+add the `gutterLg`, properties to the `<MiniCard>`. This will ensure the
+MiniCard has the appropriate gutters at the approriate breakpoints.
 
 </Column>
 <MiniCard 
   gutterLg
   title="By itself, as an Aside"
-  href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  href="https://gatsby-theme-carbon.now.sh"
   >
 
 ![Sketch icon](/images/sketch-icon.png)
@@ -67,19 +77,17 @@ When you have the mini resource card sitting aside the main content, be sure to 
 
 <Title>Group</Title>
 
-```jsx path=components/MiniCard/MiniCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/MiniCard
+```mdx path=components/MiniCard/MiniCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/MiniCard
 <CardGroup>
   <MiniCard title="26 characters per MiniCard" href="/demo">
     ![Github icon](/images/github-icon.png)
   </MiniCard>
   <MiniCard title="Use the default icon" href="/demo" />
-
   <MiniCard
     title="Choose from other icons"
     href="/demo"
     actionIcon="arrowRight"
   />
-
   <MiniCard title="Or bring your own" href="/demo">
     ![Github icon](/images/sketch-icon.png)
   </MiniCard>
@@ -88,17 +96,19 @@ When you have the mini resource card sitting aside the main content, be sure to 
 
 <Title>Aside</Title>
 
-```jsx path=components/MiniCard/MiniCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/MiniCard
+```mdx path=components/MiniCard/MiniCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/MiniCard
 <Row>
 <Column colLg={8}>
 
-When you have the mini resource card sitting aside the main content, be sure to add the `gutterLg`, properties to the `<MiniCard>`. This will ensure the MiniCard has the appropriate gutters at the approriate breakpoints.
+When you have the mini resource card sitting aside the main content, be sure to
+add the `gutterLg`, properties to the `<MiniCard>`. This will ensure the
+MiniCard has the appropriate gutters at the approriate breakpoints.
 
 </Column>
 <MiniCard
   gutterLg
   title="By itself, as an Aside"
-  href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+  href="https://gatsby-theme-carbon.now.sh"
   >
 
 ![Sketch icon](/images/sketch-icon.png)

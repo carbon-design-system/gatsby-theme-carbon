@@ -16,7 +16,7 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
   const [hasMoreThanNineLines, setHasMoreThanNineLines] = useState(false);
   const [shouldShowMore, setShouldShowMore] = useState(false);
 
-  const language = classNameProp.replace(/language-/, '');
+  const language = classNameProp.replace(/language-/, '').replace('mdx', 'jsx');
 
   const removeTrailingEmptyLine = (lines) => {
     const [lastLine] = lines.splice(-1);
