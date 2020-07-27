@@ -1,8 +1,8 @@
 .footer {
   @include carbon--type-style('body-short-01');
   width: 100%;
-  background: $carbon--black-100;
-  color: $carbon--gray-30;
+  background: $ui-background;
+  color: $inverse-02;
   position: relative;
   z-index: 2;
 }
