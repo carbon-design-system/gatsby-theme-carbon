@@ -44,18 +44,19 @@ const Container = ({ children, homepage, theme }) => {
 
   return (
     <>
+      <span hidden id="overlay-label">
+        Collapse navigation items
+      </span>
       <div
+        role="button"
+        aria-labelledby="overlay-label"
+        tabIndex="0"
         className={cx(overlay, { [visible]: overlayVisible })}
         onClick={closeNavs}
         onKeyPress={closeNavs}
-        role="presentation"
-        tabIndex="-1"
       />
       <main
         id="main-content"
-        role="presentation" // needed for jsx-a11y/no-noninteractive-element-interactions
-        onClick={closeNavs}
-        onKeyPress={closeNavs}
         aria-hidden={overlayVisible}
         className={containerClassNames}>
         {children}
