@@ -4,7 +4,7 @@
   position: fixed;
   top: 0px;
   bottom: 0;
-  z-index: 9999;
+  z-index: 9999; /* old z('floating) - 1 #940 */
   scrollbar-width: none;
   transform: translateX(-256px);
 
