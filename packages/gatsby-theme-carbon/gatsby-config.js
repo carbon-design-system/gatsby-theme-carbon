@@ -68,6 +68,7 @@ module.exports = (themeOptions) => {
     },
     plugins: [
       `gatsby-plugin-sharp`,
+      `gatsby-remark-images`,
       `gatsby-transformer-yaml`,
       `gatsby-plugin-catch-links`,
       {
