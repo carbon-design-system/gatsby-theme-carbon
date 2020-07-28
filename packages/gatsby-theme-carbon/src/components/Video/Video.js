@@ -1,5 +1,5 @@
 import { Play32, Pause32 } from '@carbon/icons-react';
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { withPrefix } from 'gatsby';
@@ -12,7 +12,7 @@ import {
 } from './Video.module.scss';
 import usePathPrefix from '../../util/hooks/usePathprefix';
 
-const Video = ({ autoPlay, vimeoId, title, src, poster, ...props }) => {
+const Video = ({ autoPlay, vimeoId, title, src, poster, muted, ...props }) => {
   const [isPlaying, setIsPlaying] = useState(autoPlay);
   const pathPrefix = usePathPrefix();
   const videoRef = useRef(null);
@@ -20,6 +20,14 @@ const Video = ({ autoPlay, vimeoId, title, src, poster, ...props }) => {
   const buttonClassName = cx(videoButton, {
     [videoIsPlaying]: isPlaying,
   });
+
+  // React doesn't handle the muted attribute well
+  // https://github.com/facebook/react/issues/10389#issuecomment-605689475
+  useEffect(() => {
+    if (muted && videoRef.current) {
+      videoRef.current.setAttribute('muted', '');
+    }
+  }, [muted]);
 
   // If a video/poster is imported into an MDX file and provided through
   // a js variable, it will already have the path-prefix.
