@@ -156,7 +156,6 @@ const GlobalSearchInput = () => {
         </label>
         <div
           className={inputWrapper}
-          role="combobox"
           aria-owns="search-menu"
           aria-haspopup="menu"
           aria-expanded={searchIsOpen}>
