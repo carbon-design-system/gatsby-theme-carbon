@@ -198,22 +198,22 @@ ul :global(.bx--list--unordered) {
 //---------------------------------------
 
 .h1 {
-  margin-top: $spacing-12;
+  --space: #{$spacing-12};
   @include carbon--type-style('expressive-heading-05', true);
 }
 
 .h2 {
-  margin-top: $spacing-11;
+  --space: #{$spacing-11};
   @include carbon--type-style('expressive-heading-04', true);
 }
 
 .h3 {
-  margin-top: $spacing-10;
+  --space: #{$spacing-10};
   @include carbon--type-style('expressive-heading-03', true);
 }
 
 .h4 {
-  margin-top: $spacing-07;
+  --space: #{$spacing-07};
   @include carbon--type-style('heading-02');
 }
 
