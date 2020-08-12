@@ -7,6 +7,7 @@ import Header from './Header';
 import Switcher from './Switcher';
 import Footer from './Footer';
 import Container from './Container';
+import LandmarksBeta from './LandmarksBeta';
 
 import '../styles/index.scss';
 
@@ -36,7 +37,7 @@ const Layout = ({
   }, [tabs]);
 
   return (
-    <>
+    <LandmarksBeta>
       <Meta
         titleType={titleType}
         pageTitle={pageTitle}
@@ -50,7 +51,7 @@ const Layout = ({
         {children}
         <Footer />
       </Container>
-    </>
+    </LandmarksBeta>
   );
 };
 

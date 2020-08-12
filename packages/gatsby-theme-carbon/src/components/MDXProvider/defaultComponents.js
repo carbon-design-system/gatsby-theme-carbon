@@ -28,6 +28,7 @@ import ArtDirection from '../ArtDirection';
 import MediumPosts from '../MediumPosts';
 import Title from '../Title';
 import { MiniCard, CardGroup } from '../MiniCard';
+import LandmarksBeta from '../LandmarksBeta';
 
 const components = {
   wrapper: function Wrapper({ children, ...props }) {
@@ -77,6 +78,7 @@ const components = {
   Title,
   MiniCard,
   CardGroup,
+  LandmarksBeta,
 };
 
 export default components;
