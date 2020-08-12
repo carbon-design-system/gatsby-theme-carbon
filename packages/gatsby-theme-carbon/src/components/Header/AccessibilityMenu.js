@@ -14,7 +14,7 @@ import {
 } from './Header.module.scss';
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [size, setSize] = useState(1);
   const [weight, setWeight] = useState(400);
   const [stretch, setStretch] = useState(100);
@@ -31,6 +31,7 @@ const Header = () => {
   return (
     <>
       <HeaderGlobalAction
+        style={{ borderRight: menuOpen ? '1px solid #393939' : 'none' }}
         className={cx(headerButton, switcherButton, {
           [switcherButtonOpen]: menuOpen,
         })}

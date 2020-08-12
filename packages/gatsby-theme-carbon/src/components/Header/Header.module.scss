@@ -119,6 +119,14 @@ header.header {
   width: max-content;
   padding: 1rem;
   --cds-ui-05: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  border-left: 1px solid #393939;
+  border-bottom: 1px solid #393939;
+  border-right: 1px solid #393939;
+}
+
+.a11y-menu :global(.bx--form-item:not(:first-of-type)) {
+  margin-top: 1.5rem;
 }
 
 .a11y-menu label {
