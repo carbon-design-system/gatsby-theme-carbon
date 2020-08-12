@@ -1,0 +1,133 @@
+.landmarks-wrapper main,
+.landmarks-wrapper [role='main'] {
+  border: 5px solid blue;
+  position: relative;
+}
+
+.landmarks-wrapper main::after,
+.landmarks-wrapper [role='main']::after {
+  content: 'main';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2rem;
+  width: 5rem;
+  background: blue;
+  color: white;
+  text-align: center;
+}
+
+.landmarks-wrapper nav,
+.landmarks-wrapper [role='nav'] {
+  border: 5px solid green;
+}
+
+.landmarks-wrapper nav::after,
+.landmarks-wrapper [role='nav']::after {
+  content: 'nav';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2rem;
+  width: 5rem;
+  background: green;
+  color: white;
+  text-align: center;
+}
+
+.landmarks-wrapper [role='banner'] {
+  border: 5px solid grey;
+}
+
+.landmarks-wrapper [role='banner']::after {
+  content: 'banner';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2rem;
+  width: 5rem;
+  background: grey;
+  color: white;
+  text-align: center;
+}
+
+.landmarks-wrapper [role='complementary'] {
+  border: 5px solid maroon;
+}
+
+.landmarks-wrapper [role='complementary']::after {
+  content: 'complementary';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2rem;
+  width: 5rem;
+  background: maroon;
+  color: white;
+  text-align: center;
+}
+
+.landmarks-wrapper [role='contentinfo'] {
+  border: 5px solid olive;
+}
+
+.landmarks-wrapper [role='contentinfo']::after {
+  content: 'contentinfo';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2rem;
+  width: 5rem;
+  background: grey;
+  color: white;
+  text-align: center;
+}
+
+.landmarks-wrapper [role='search'] {
+  border: 5px solid purple;
+}
+
+.landmarks-wrapper [role='search']::after {
+  content: 'search';
+  position: absolute;
+  line-height: 1.75rem;
+  right: 2rem;
+  bottom: -2rem;
+  height: 2rem;
+  width: 5rem;
+  background: purple;
+  color: white;
+  text-align: center;
+}
+
+.landmarks-wrapper [role='form'] {
+  border: 5px solid red;
+}
+
+.landmarks-wrapper [role='form']::after {
+  content: 'form';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2rem;
+  width: 5rem;
+  background: grey;
+  color: white;
+  text-align: center;
+}
+
+.landmarks-wrapper [role='application'] {
+  border: 5px solid orange;
+}
+
+.landmarks-wrapper [role='application']::after {
+  content: 'application';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2rem;
+  width: 5rem;
+  background: orange;
+  color: white;
+  text-align: center;
+}
