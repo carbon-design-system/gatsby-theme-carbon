@@ -13,3 +13,10 @@
   pointer-events: auto;
   opacity: 1;
 }
+
+.a11yContainer [class*='Main-module--main'] * {
+  font-weight: var(--cds-font-weight) !important;
+  font-stretch: var(--cds-font-stretch) !important;
+  font-size: var(--cds-font-size) !important;
+  line-height: 1.5 !important;
+}

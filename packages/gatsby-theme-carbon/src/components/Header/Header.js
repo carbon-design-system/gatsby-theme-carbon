@@ -14,6 +14,7 @@ import HeaderNav from '../HeaderNav/HeaderNav';
 import GlobalSearch from '../GlobalSearch';
 import NavContext from '../../util/context/NavContext';
 import useMetadata from '../../util/hooks/useMetadata';
+import AccessibilityMenu from './AccessibilityMenu';
 
 import {
   header,
@@ -56,6 +57,7 @@ const Header = ({ children }) => {
       {navigationStyle && <HeaderNav />}
       <HeaderGlobalBar>
         {isSearchEnabled && <GlobalSearch />}
+        <AccessibilityMenu />
         <HeaderGlobalAction
           className={cx(headerButton, switcherButton, {
             [switcherButtonOpen]: switcherIsOpen,

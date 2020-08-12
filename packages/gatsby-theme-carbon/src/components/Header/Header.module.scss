@@ -110,3 +110,30 @@ header.header {
     border-left: 1px solid $inverse-02;
   }
 }
+
+.a11y-menu {
+  position: absolute;
+  background: $ui-05;
+  top: 3rem;
+  right: 3rem;
+  width: max-content;
+  padding: 1rem;
+  --cds-ui-05: white;
+}
+
+.a11y-menu label {
+  color: $carbon--gray-30;
+}
+
+.label {
+  color: $carbon--gray-30;
+  font-size: 1rem;
+}
+
+.label-size-max {
+  font-size: 1.5rem;
+}
+
+.label-size-min {
+  font-size: 0.8rem;
+}

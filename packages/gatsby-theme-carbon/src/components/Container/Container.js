@@ -5,7 +5,7 @@ import cx from 'classnames';
 import NavContext from '../../util/context/NavContext';
 import useWindowSize from '../../util/hooks/useWindowSize';
 import useMetadata from '../../util/hooks/useMetadata';
-import { overlay, visible } from './Container.module.scss';
+import { overlay, visible, a11yContainer } from './Container.module.scss';
 
 const Container = ({ children, homepage, theme }) => {
   const { leftNavIsOpen, switcherIsOpen, toggleNavState } = useContext(
@@ -37,6 +37,7 @@ const Container = ({ children, homepage, theme }) => {
 
   const containerClassNames = classnames({
     container: true,
+    [a11yContainer]: true,
     'container--homepage': homepage,
     'container--dark': theme === 'dark',
     'container--header--nav': navigationStyle,
