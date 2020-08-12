@@ -7,12 +7,10 @@ const LandmarksBeta = ({ children }) => {
   const [active, setActive] = useState(false);
 
   return (
-    <>
-      <div className={cx(landmarksWrapper, { landmarksActive: active })}>
-        {children}
-      </div>
+    <div className={cx(landmarksWrapper, { landmarksActive: active })}>
+      {children}
       <LandmarksButton />
-    </>
+    </div>
   );
 };
 

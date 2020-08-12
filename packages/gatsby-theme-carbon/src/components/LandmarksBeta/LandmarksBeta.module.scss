@@ -131,3 +131,25 @@
   color: white;
   text-align: center;
 }
+
+.landmarks-button {
+  position: fixed;
+  bottom: calc(9.5rem + 8px);
+  right: $spacing-07;
+  z-index: z('modal');
+  width: $spacing-09;
+  height: $spacing-09;
+  border-radius: 50%;
+  border-color: transparent;
+  background: $interactive-02;
+}
+
+.landmarks-button svg {
+  fill: $icon-03;
+}
+
+.landmarks-button:focus {
+  outline: none;
+  border: 2px solid $focus;
+  box-shadow: inset 0 0 0 1px #fff;
+}
