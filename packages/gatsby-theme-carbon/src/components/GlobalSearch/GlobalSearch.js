@@ -170,6 +170,12 @@ const GlobalSearchInput = () => {
             onClick={() => {
               toggleNavState('searchIsOpen', 'open');
               toggleNavState('switcherIsOpen', 'close');
+              document.addEventListener('keyup', function(e){ 
+                if(e.which == 27){
+                  toggleNavState('switcherIsOpen', 'close');
+                  toggleNavState('searchIsOpen', 'close');
+                }  
+              })
             }}>
             <Search20 description="Open search" />
           </button>
