@@ -13,9 +13,13 @@
 
 .divider {
   margin: $spacing-03 $spacing-05;
-  border-color: var(--cds-ui-03, #e0e0e0);
+  border-color: $carbon--gray-80;
   border-style: solid;
   border-bottom: none;
+}
+
+[class*='--side-nav--website--light'] .divider {
+  border-color: $ui-03;
 }
 
 .resource-link {

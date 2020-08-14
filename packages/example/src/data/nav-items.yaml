@@ -4,6 +4,7 @@
 - title: Demo
   pages:
     - path: /demo
+  hasDivider: true
 - title: Gallery
   pages:
     - path: /gallery
