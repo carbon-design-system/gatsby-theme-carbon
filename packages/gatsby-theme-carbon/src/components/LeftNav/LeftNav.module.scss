@@ -1,3 +1,7 @@
+.side-nav--dark {
+  --cds-ui-03: #{$carbon--gray-80};
+}
+
 .side-nav--dark :global(.bx--side-nav__link):focus,
 .side-nav--dark :global(.bx--side-nav__submenu):focus {
   outline: 2px solid $carbon--white-0;
