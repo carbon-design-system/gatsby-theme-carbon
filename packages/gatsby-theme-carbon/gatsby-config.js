@@ -38,19 +38,7 @@ module.exports = (themeOptions) => {
   }
 
   const defaultRemarkPlugins = [
-    { resolve: `gatsby-remark-unwrap-images` },
     { resolve: `gatsby-remark-smartypants` },
-    {
-      resolve: `gatsby-remark-images`,
-      options: {
-        maxWidth: 1152,
-        linkImagesToOriginal: false,
-        quality: imageQuality,
-        withWebp,
-        pngCompressionSpeed,
-        ...gatsbyPluginSharpOptions,
-      },
-    },
     { resolve: `gatsby-remark-responsive-iframe` },
     { resolve: `gatsby-remark-copy-linked-files` },
   ];
@@ -67,8 +55,6 @@ module.exports = (themeOptions) => {
       repository: { ...repositoryDefault, ...repository },
     },
     plugins: [
-      `gatsby-plugin-sharp`,
-      `gatsby-remark-images`,
       `gatsby-transformer-yaml`,
       `gatsby-plugin-catch-links`,
       {

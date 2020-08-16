@@ -33,6 +33,7 @@ const components = {
   wrapper: function Wrapper({ children, ...props }) {
     return <div {...props}>{children}</div>;
   },
+  img: ({ src, alt }) => <img src={src} alt={alt} />,
   h1: H1,
   h2: H2,
   h3: H3,
