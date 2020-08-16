@@ -22,11 +22,11 @@
   border-bottom: none;
 }
 
-.resource-link {
-  &:first-of-type {
-    margin-top: $spacing-05;
-  }
+.divider-space {
+  margin-top: 4rem;
+  margin-bottom: $spacing-05;
 }
+
 // Moves icons to the right
 .outboundLink {
   flex-direction: row-reverse;
