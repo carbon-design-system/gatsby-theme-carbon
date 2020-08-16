@@ -10,7 +10,7 @@ import { outboundLink, divider, dividerSpace } from './LeftNav.module.scss';
 const LeftNavResourceLinks = ({
   links,
   shouldOpenNewTabs,
-  includeDividerSpace = false,
+  includeDividerSpace = true,
 }) => {
   if (!links) return null;
 
