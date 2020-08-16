@@ -10,7 +10,7 @@ import { outboundLink, divider, dividerSpace } from './LeftNav.module.scss';
 const LeftNavResourceLinks = ({
   links,
   shouldOpenNewTabs,
-  includeDividerSpace = true,
+  includeDividerSpace = false,
 }) => {
   if (!links) return null;
 
@@ -30,7 +30,6 @@ const LeftNavResourceLinks = ({
         return (
           <SideNavLink
             key={i}
-            style={{ marginTop: i === 0 && includeDividerSpace ? '0.5rem' : 0 }}
             renderIcon={outbound ? LaunchIcon : undefined}
             // eslint-disable-next-line jsx-a11y/aria-proptypes
             aria-current=""

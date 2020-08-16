@@ -17,8 +17,6 @@ const links = [
 ];
 
 // shouldOpenNewTabs: true if outbound links should open in a new tab
-const CustomResources = () => (
-  <ResourceLinks includeDividerSpace shouldOpenNewTabs links={links} />
-);
+const CustomResources = () => <ResourceLinks shouldOpenNewTabs links={links} />;
 
 export default CustomResources;
