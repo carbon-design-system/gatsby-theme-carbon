@@ -41,7 +41,15 @@ Some important things to note here:
 
 ## Adding a divider
 
-You can insert a divider below any top-level nav item by adding the `hasDivider: true` property to it's configuration under `src/data/nav-items.yaml`. **Note:** dividers can only be use with top-level nav items and are incompatible with the [header navigation style](/guides/configuration#navigation-style).
+You can insert a divider below any top-level nav item by adding the
+`hasDivider: true` property to it's configuration under
+`src/data/nav-items.yaml`. **Note:** dividers can only be use with top-level nav
+items and are incompatible with the
+[header navigation style](/guides/configuration#navigation-style).
+
+When shadowed, the `ResourceLinks` component can optionally receive an
+`includeDividerSpace` prop. Set this to false if you want to remove the
+margin above and below the `ResourceLinks` divider.
 
 ```yaml
 - title: Menu
