@@ -83,7 +83,7 @@ const DefaultChildren = () => (
     <SwitcherLink href="https://www.carbondesignsystem.com/">
       Product
     </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/standards/web/ibm-dotcom-library">
+    <SwitcherLink href="https://www.ibm.com/standards/web/ibm-dotcom-library/">
       Digital
     </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/design/event/">Event</SwitcherLink>
