@@ -79,6 +79,15 @@ const GlobalSearchInput = () => {
   );
 
   useEffect(() => {
+    document.addEventListener('keyup', function(e){ 
+      if(e.which == 27){
+        toggleNavState('switcherIsOpen', 'close');
+        toggleNavState('searchIsOpen', 'close');
+      }  
+    })
+  })
+
+  useEffect(() => {
     if (inputRef.current && searchIsOpen) {
       inputRef.current.focus();
       setInputIsFocused(true);
@@ -179,13 +188,7 @@ const GlobalSearchInput = () => {
             aria-label="Open search"
             onClick={() => {
               toggleNavState('searchIsOpen', 'open');
-              toggleNavState('switcherIsOpen', 'close');
-              document.addEventListener('keyup', function(e){ 
-                if(e.which == 27){
-                  toggleNavState('switcherIsOpen', 'close');
-                  toggleNavState('searchIsOpen', 'close');
-                }  
-              })
+              toggleNavState('switcherIsOpen', 'close')
             }}>
             <Search20 description="Open search" />
           </button>
