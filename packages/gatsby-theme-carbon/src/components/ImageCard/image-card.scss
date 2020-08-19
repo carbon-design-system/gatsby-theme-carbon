@@ -86,7 +86,11 @@
   height: 100%;
   max-width: 100% !important;
   top: -1px;
-  left: -1px;
+  left: 0px;
+
+  @include carbon--breakpoint('md') {
+    left: -1px;
+  }
 }
 
 .#{$prefix}--image-card__img:after {
