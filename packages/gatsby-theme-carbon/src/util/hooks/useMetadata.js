@@ -9,6 +9,7 @@ const useMetadata = () => {
           description
           keywords
           isSearchEnabled
+          homepageTheme
           navigationStyle
           lang
         }

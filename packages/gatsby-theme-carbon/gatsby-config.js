@@ -17,6 +17,7 @@ module.exports = (themeOptions) => {
   };
 
   const {
+    homepageTheme = 'dark',
     isSearchEnabled = true,
     navigationStyle = '',
     withWebp = false,
@@ -67,6 +68,7 @@ module.exports = (themeOptions) => {
     siteMetadata: {
       isSearchEnabled,
       navigationStyle,
+      homepageTheme,
       title: 'Gatsby Theme Carbon',
       description:
         'Add a description by supplying it to siteMetadata in your gatsby-config.js file.',

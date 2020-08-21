@@ -12,7 +12,14 @@ import Main from '../components/Main';
 
 const Default = ({ pageContext, children, location, Title }) => {
   const { frontmatter = {}, relativePagePath, titleType } = pageContext;
-  const { tabs, title, theme, description, keywords } = frontmatter;
+  const {
+    tabs,
+    title,
+    theme,
+    description,
+    keywords,
+    header: { background, fontColor } = {},
+  } = frontmatter;
 
   // get the path prefix if it exists
   const {
@@ -40,6 +47,18 @@ const Default = ({ pageContext, children, location, Title }) => {
 
   const currentTab = getCurrentTab();
 
+  const addClassNameToBackGroundProp = () => {
+    if (background) return `bg--${background}`;
+  };
+
+  const headerBgColor = addClassNameToBackGroundProp();
+
+  const addClassNameToFontColorProp = () => {
+    if (fontColor) return `color--${fontColor}`;
+  };
+
+  const headerFontColor = addClassNameToFontColorProp();
+
   return (
     <Layout
       tabs={tabs}
@@ -49,7 +68,13 @@ const Default = ({ pageContext, children, location, Title }) => {
       pageDescription={description}
       pageKeywords={keywords}
       titleType={titleType}>
-      <PageHeader title={Title ? <Title /> : title} label="label" tabs={tabs} />
+      <PageHeader
+        title={Title ? <Title /> : title}
+        label="label"
+        tabs={tabs}
+        headerBgColor={headerBgColor}
+        headerFontColor={headerFontColor}
+      />
       {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}
       <Main padded>
         {children}
