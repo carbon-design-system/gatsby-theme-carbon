@@ -5,14 +5,47 @@
   padding: 2px;
 }
 
-.path {
-  stroke-dasharray: 30px;
-  stroke-dashoffset: 30px;
-  animation: drawStroke 1200ms forwards;
+circle {
+  fill: none;
+  stroke-dasharray: 0;
+  animation: drawStroke 600ms forwards ease-in;
+}
+
+polygon {
+  fill: transparent;
+  animation: transitionCheckmark 600ms forwards ease-in;
 }
 
 @keyframes drawStroke {
-  to {
-    stroke-dashoffset: 0;
+  0% {
+    stroke: none;
+    stroke-dasharray: 0;
+  }
+
+  1% {
+    stroke: white;
+  }
+
+  99% {
+    stroke-dasharray: 60, 2000;
+    fill: none;
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
+@keyframes transitionCheckmark {
+  0% {
+    fill: transparent;
+  }
+
+  99% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: #0f62fe;
   }
 }
