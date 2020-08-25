@@ -1,36 +1,36 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Button } from 'carbon-components-react';
-import { CSSTransition } from 'react-transition-group';
+import cx from 'classnames';
 
 import Checkmark from './Checkmark';
-
 import Experience from './Experience';
 import Comment from './Comment';
 
 import styles from './Form.module.scss';
 
-const { enter, enterActive, enterDone, exit, exitActive, exitDone } = styles;
-
-const classNames = {
-  enter,
-  enterActive,
-  enterDone,
-  exit,
-  exitActive,
-  exitDone,
-};
-
-const Form = ({ visible, setVisible, onSubmit: submitHandler }) => {
+const Form = ({
+  visible,
+  setVisible,
+  animateButtonRow,
+  setAnimateButtonRow,
+  onSubmit: submitHandler,
+}) => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const formRef = useRef();
   const experienceRef = useRef();
   const previouslyFocusedElement = useRef();
-
   const resetForm = () => {
     setFormSubmitted(false);
     formRef.current['feedback-form-comment'].value = '';
     formRef.current['feedback-form-experience'].value = 'Neutral';
   };
+
+  useEffect(() => {
+    if (visible) {
+      previouslyFocusedElement.current = document.activeElement;
+      experienceRef.current.focus();
+    }
+  }, [visible, setVisible]);
 
   const onSubmit = () => {
     const form = new FormData(formRef.current);
@@ -48,39 +48,33 @@ const Form = ({ visible, setVisible, onSubmit: submitHandler }) => {
 
     setTimeout(() => {
       setVisible(false);
-    }, 1200);
+      setAnimateButtonRow(false);
+      previouslyFocusedElement.current.focus();
+      resetForm();
+    }, 1000);
+  };
+
+  const onCancel = () => {
+    setVisible(false);
+    setAnimateButtonRow(false);
   };
 
   useEffect(() => {
     const onKeyDown = (e) => {
       if (e.code === 'Escape') {
         setVisible(false);
+        setAnimateButtonRow(false);
       }
     };
 
     window.addEventListener('keydown', onKeyDown);
 
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [setVisible]);
+  }, [setVisible, setAnimateButtonRow]);
 
   return (
-    <CSSTransition
-      in={visible}
-      classNames={classNames}
-      unmountOnExit
-      mountOnEnter
-      onEnter={() => {
-        previouslyFocusedElement.current = document.activeElement;
-        experienceRef.current.focus();
-      }}
-      onExited={() => {
-        previouslyFocusedElement.current.focus();
-        resetForm();
-      }}
-      addEndListener={(node, done) => {
-        node.addEventListener('transitionend', done, false);
-      }}>
-      <div className={styles.dialog}>
+    <div className={cx(styles.dialog, { [styles.dialogActive]: visible })}>
+      <div>
         <div
           className={styles.formContainer}
           role="dialog"
@@ -91,20 +85,20 @@ const Form = ({ visible, setVisible, onSubmit: submitHandler }) => {
             <Comment />
           </form>
         </div>
-        <div className={styles.buttonRow}>
-          <Button
-            className={styles.button}
-            onClick={() => setVisible(false)}
-            kind="secondary">
+        <div
+          className={cx(styles.buttonRow, {
+            [styles.buttonRowActive]: animateButtonRow,
+          })}>
+          <Button className={styles.button} onClick={onCancel} kind="secondary">
             Cancel
           </Button>
           <Button className={styles.button} onClick={onSubmit}>
-            {formSubmitted ? 'Thanks!' : 'Submit'}
+            {formSubmitted ? 'Thank you' : 'Submit'}
             {formSubmitted && <Checkmark />}
           </Button>
         </div>
       </div>
-    </CSSTransition>
+    </div>
   );
 };
 

@@ -1,47 +1,30 @@
 .dialog {
   box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
+  background-color: var(--cds-ui-background);
   position: fixed;
-  bottom: 0px;
-  width: 100vw;
+  bottom: 10rem;
+  right: 2rem;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  white-space: nowrap;
   z-index: 10000; /* old z('floating') #940 */
-  transform-origin: 100% 50%;
-  transition-property: opacity, transform;
-  transition-duration: $duration--moderate-02;
+  transition: width $duration--fast-01 motion(entrance, productive),
+    height $duration--slow-01 motion(entrance, productive);
+}
+
+.dialog-active {
+  height: 456px;
+  width: 320px;
+
   @include carbon--breakpoint('md') {
-    transform-origin: 100% bottom;
-    width: 320px;
-    right: 2rem;
-    bottom: 10rem;
-    transition-duration: $duration--fast-02;
+    height: 436px;
   }
-}
-
-.enter {
-  opacity: 0.01;
-  transform: scale(0.8);
-  transition-timing-function: motion(entrance, productive);
-}
-
-.enter.enterActive {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.exit {
-  opacity: 1;
-  transform: scale(1);
-  transition-timing-function: motion(entrance, productive);
-}
-
-.exit.exitActive {
-  opacity: 0.01;
-  transform: scale(0.8);
 }
 
 .form-container {
   padding: $spacing-05;
   padding-bottom: $spacing-08;
-  background-color: var(--cds-ui-background);
   color: var(--cds-text-02);
   width: 100%;
 }
@@ -67,9 +50,18 @@
 }
 
 .buttonRow {
+  position: absolute;
+  height: 0;
+  overflow: hidden;
   width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
+  bottom: 0;
+  left: 0;
+  transition: height $duration--moderate-01 motion(entrance, productive);
+}
+
+.button-row-active {
+  height: 4rem;
+  bottom: 0;
 }
 
 .button {
