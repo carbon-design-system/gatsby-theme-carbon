@@ -18,7 +18,7 @@ that have the largest likelihood of solving more problems than it causes.
 A breaking change for the theme is one in which, after upgrading, a site is
 unable to build.
 
-Changes to the apearence of theme components are inevitable as bug fixes and
+Changes to the appearance of theme components are inevitable as bug fixes and
 enhancements occur. While developer intervention is avoided at all costs, we
 weight that burden against the advantages of rapid enhancements and robust
 solutions.
