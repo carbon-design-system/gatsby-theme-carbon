@@ -20,7 +20,7 @@ unable to build.
 
 Changes to the appearance of theme components are inevitable as bug fixes and
 enhancements occur. While developer intervention is avoided at all costs, we
-weight that burden against the advantages of rapid enhancements and robust
+weigh that burden against the advantages of rapid enhancements and robust
 solutions.
 
 The Carbon and IBM Design Language websites are primary consumers of the Gatsby
