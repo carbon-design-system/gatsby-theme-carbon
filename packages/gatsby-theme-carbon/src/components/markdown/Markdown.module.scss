@@ -77,6 +77,12 @@ ol {
   list-style: decimal;
 }
 
+ul :global(.bx--list--ordered),
+ul :global(.bx--list--unordered) {
+  width: 100%;
+  padding-right: $spacing-05;
+}
+
 :global(.bx--list--ordered:not(.bx--list--nested)) {
   margin-left: 1ch;
 }
@@ -94,12 +100,6 @@ ol {
   @include carbon--breakpoint('md') {
     margin-right: -$spacing-05;
   }
-}
-
-ul :global(.bx--list--ordered),
-ul :global(.bx--list--unordered) {
-  width: 100%;
-  padding-right: $spacing-05;
 }
 
 :global(.bx--list--ordered) .list-item,
@@ -129,10 +129,9 @@ ul :global(.bx--list--unordered) {
 //---------------------------------------
 .blockquote {
   margin: $spacing-08 0;
-  color: $carbon--blue-60;
+  color: $text-01;
   margin-left: $spacing-05;
   padding-left: 1ch;
-  text-indent: -1ch;
   @include carbon--breakpoint('md') {
     margin-left: $spacing-08;
   }
@@ -141,18 +140,9 @@ ul :global(.bx--list--unordered) {
 .blockquote .paragraph {
   position: relative;
   @include carbon--type-style('expressive-heading-03', true);
+  font-style: italic;
   margin-bottom: 0;
   width: 100%;
-}
-
-.blockquote .paragraph::before {
-  content: '“';
-  @include carbon--type-style('expressive-heading-03', true);
-}
-
-.blockquote .paragraph::after {
-  content: '”';
-  @include carbon--type-style('expressive-heading-03', true);
 }
 
 .blockquote .paragraph--responsive {
@@ -171,19 +161,16 @@ ul :global(.bx--list--unordered) {
 
 .blockquote cite {
   @include carbon--type-style('body-long-01');
+  font-style: italic;
   display: block;
   margin-top: $spacing-02;
   text-indent: 0;
 }
 
-.blockquote .list-item {
-  color: $carbon--blue-60;
-}
-
 //dark
 :global(.container--dark) .blockquote,
 :global(.container--dark) .blockquote .list-item {
-  color: $carbon--blue-40;
+  color: $text-04;
 }
 
 :global(.bx--list--ordered:not(.bx--list--nested) > .bx--list__item::before) {
