@@ -8,7 +8,7 @@ import LeftNavItem from './LeftNavItem';
 import LeftNavResourceLinks from './ResourceLinks';
 
 import LeftNavWrapper from './LeftNavWrapper';
-import { sideNavDark } from './LeftNav.module.scss';
+import style from './LeftNav.module.scss';
 import useMetadata from '../../util/hooks/useMetadata';
 
 const LeftNav = (props) => {
@@ -39,7 +39,7 @@ const LeftNav = (props) => {
   }, [leftNavScrollTop]);
 
   const navItems = useNavItems();
-  const { navigationStyle } = useMetadata();
+  const { navigationStyle, homepageTheme, interiorTheme } = useMetadata();
 
   const closeSwitcher = () => {
     toggleNavState('switcherIsOpen', 'close');
@@ -58,12 +58,24 @@ const LeftNav = (props) => {
         defaultExpanded={!navigationStyle}
         isPersistent={!navigationStyle}
         className={classnames({
-          [sideNavDark]: props.theme === 'dark' || props.homepage,
-          'bx--side-nav--website': true,
-          'bx--side-nav--website--dark':
-            props.theme === 'dark' || props.homepage,
-          'bx--side-nav--website--light':
-            props.theme !== 'dark' && !props.homepage,
+          // 'bx--side-nav--website': true,
+          [style.sideNavDark]:
+            (homepageTheme === 'dark' && props.homepage) ||
+            (interiorTheme === 'dark' && !props.homepage),
+          [style.sideNavWhite]:
+            (homepageTheme === 'white' && props.homepage) ||
+            (homepageTheme === 'dark' && !props.homepage) ||
+            (interiorTheme === 'white' && !props.homepage),
+          // 'bx--side-nav--website--light':
+          //   (homepageTheme === 'white' && !props.homepage) ||
+          //   (homepageTheme === 'dark' && interiorTheme === 'g10'),
+
+          // [style.sideNavDark]: homepageTheme === 'dark' && !props.homepage,
+
+          // 'bx--side-nav--website--dark':
+          //   props.theme === 'dark' || props.homepage,
+          // 'bx--side-nav--website--light':
+          //   props.theme !== 'dark' && !props.homepage,
         })}>
         <SideNavItems className="sidenav-list">
           {navItems.map((item, i) => (

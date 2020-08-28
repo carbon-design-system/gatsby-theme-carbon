@@ -5,8 +5,7 @@ const defaultLunrOptions = require('./config/lunr-options');
 const carbonThemes = {
   white: require.resolve('./src/styles/internal/white.scss'),
   g10: require.resolve('./src/styles/internal/g10.scss'),
-  g90: require.resolve('./src/styles/internal/g90.scss'),
-  g100: require.resolve('./src/styles/internal/g100.scss'),
+  dark: require.resolve('./src/styles/internal/g100.scss'),
 };
 
 module.exports = (themeOptions) => {
@@ -31,7 +30,7 @@ module.exports = (themeOptions) => {
     gatsbyRemarkPlugins = [],
     remarkPlugins = [],
     gatsbyPluginSharpOptions = {},
-    carbonTheme = 'g10',
+    interiorTheme = 'dark',
   } = themeOptions;
 
   const optionalPlugins = [];
@@ -69,6 +68,7 @@ module.exports = (themeOptions) => {
       isSearchEnabled,
       navigationStyle,
       homepageTheme,
+      interiorTheme,
       title: 'Gatsby Theme Carbon',
       description:
         'Add a description by supplying it to siteMetadata in your gatsby-config.js file.',
@@ -124,7 +124,7 @@ module.exports = (themeOptions) => {
         options: {
           resources: [
             require.resolve('./src/styles/internal/resources.scss'),
-            carbonThemes[carbonTheme],
+            carbonThemes[interiorTheme],
           ],
         },
       },

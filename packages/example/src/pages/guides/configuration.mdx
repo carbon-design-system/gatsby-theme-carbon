@@ -16,6 +16,7 @@ file.
 <AnchorLinks>
   <AnchorLink>Site metadata</AnchorLink>
   <AnchorLink>Manifest</AnchorLink>
+  <AnchorLink>Themeing</AnchorLink>
   <AnchorLink>Favicon</AnchorLink>
   <AnchorLink>Additional font weights</AnchorLink>
   <AnchorLink>Image compression</AnchorLink>
@@ -69,6 +70,23 @@ siteMetadata: {
         background_color: '#ffffff',
         theme_color: '#0062ff',
         display: 'browser',
+      },
+    },
+  ],
+```
+
+## Themeing
+
+With theming, you can control the colors being used on the homepage as well as
+the interior pages. Your choices include `white`, `dark`, and `g10`.
+
+```js
+  plugins: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        homepageTheme: 'dark',
+        interiorTheme: 'g10'
       },
     },
   ],

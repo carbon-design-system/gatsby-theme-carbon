@@ -10,6 +10,7 @@ const useMetadata = () => {
           keywords
           isSearchEnabled
           homepageTheme
+          interiorTheme
           navigationStyle
           lang
         }
