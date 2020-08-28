@@ -30,7 +30,7 @@ module.exports = (themeOptions) => {
     gatsbyRemarkPlugins = [],
     remarkPlugins = [],
     gatsbyPluginSharpOptions = {},
-    interiorTheme = 'dark',
+    interiorTheme = 'g10',
   } = themeOptions;
 
   const optionalPlugins = [];
