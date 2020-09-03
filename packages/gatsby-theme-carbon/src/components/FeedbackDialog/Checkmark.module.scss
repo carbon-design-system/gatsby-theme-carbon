@@ -1,51 +1,39 @@
 .svg {
   position: absolute;
+  border-radius: 50%;
   right: 10px;
   top: 10px;
   padding: 2px;
+  height: 24px;
+  width: 24px;
 }
 
-circle {
+.circle {
   fill: none;
-  stroke-dasharray: 0;
-  animation: drawStroke 600ms forwards ease-in;
+  stroke: white;
+  stroke-dasharray: 320;
+  stroke-dashoffset: 320;
+  animation: drawCircle 400ms forwards ease-in;
 }
 
-polygon {
-  fill: transparent;
-  animation: transitionCheckmark 600ms forwards ease-in;
+.checkmark {
+  fill: none;
+  stroke: transparent;
+  stroke-dasharray: 30px;
+  stroke-dashoffset: 30px;
+  animation: drawCheckmark 900ms forwards;
 }
 
-@keyframes drawStroke {
-  0% {
-    stroke: none;
-    stroke-dasharray: 0;
+@keyframes drawCheckmark {
+  to {
+    stroke: #0f62fe;
+    stroke-dashoffset: 0;
   }
+}
 
-  1% {
-    stroke: white;
-  }
-
-  99% {
-    stroke-dasharray: 120, 2000;
-    fill: none;
-  }
-
-  100% {
+@keyframes drawCircle {
+  to {
+    stroke-dashoffset: 0;
     fill: white;
-  }
-}
-
-@keyframes transitionCheckmark {
-  0% {
-    fill: transparent;
-  }
-
-  99% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: #0f62fe;
   }
 }

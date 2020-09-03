@@ -2,18 +2,25 @@ import React from 'react';
 import styles from './Checkmark.module.scss';
 
 const Checkmark = () => (
-  <svg className={styles.svg} width="24" viewBox="0 0 32 32">
+  <svg
+    className={styles.svg}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 52 52"
+    width="32"
+    height="32">
     <circle
-      cx="16"
-      cy="16"
-      r="12"
-      stroke="white"
-      fill="white"
-      strokeWidth="2.5"
+      className={styles.circle}
+      cx="26"
+      cy="26"
+      r="25"
+      strokeWidth="5"
+      fill="none"
     />
-    <polygon
-      className="checkmark"
-      points="14 21.414 9 16.413 10.413 15 14 18.586 21.585 11 23 12.415 14 21.414"
+    <path
+      className={styles.checkmark}
+      d="M14.1 27.2l7.1 7.2 16.7-16.8"
+      strokeWidth="4"
+      stroke="#0f62fe"
     />
   </svg>
 );
