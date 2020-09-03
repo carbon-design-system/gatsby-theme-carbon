@@ -8,13 +8,7 @@ import Comment from './Comment';
 
 import styles from './Form.module.scss';
 
-const Form = ({
-  visible,
-  setVisible,
-  animateButtonRow,
-  setAnimateButtonRow,
-  onSubmit: submitHandler,
-}) => {
+const Form = ({ visible, setVisible, onSubmit: submitHandler }) => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const formRef = useRef();
   const experienceRef = useRef();
@@ -48,7 +42,6 @@ const Form = ({
 
     setTimeout(() => {
       setVisible(false);
-      setAnimateButtonRow(false);
       previouslyFocusedElement.current.focus();
       resetForm();
     }, 1000);
@@ -56,21 +49,19 @@ const Form = ({
 
   const onCancel = () => {
     setVisible(false);
-    setAnimateButtonRow(false);
   };
 
   useEffect(() => {
     const onKeyDown = (e) => {
       if (e.code === 'Escape') {
         setVisible(false);
-        setAnimateButtonRow(false);
       }
     };
 
     window.addEventListener('keydown', onKeyDown);
 
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [setVisible, setAnimateButtonRow]);
+  }, [setVisible]);
 
   return (
     <div className={cx(styles.dialog, { [styles.dialogActive]: visible })}>
@@ -87,7 +78,7 @@ const Form = ({
         </div>
         <div
           className={cx(styles.buttonRow, {
-            [styles.buttonRowActive]: animateButtonRow,
+            [styles.buttonRowActive]: visible,
           })}>
           <Button className={styles.button} onClick={onCancel} kind="secondary">
             Cancel

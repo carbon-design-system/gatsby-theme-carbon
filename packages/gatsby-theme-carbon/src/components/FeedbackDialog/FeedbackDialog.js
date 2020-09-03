@@ -7,29 +7,14 @@ import Form from './Form';
 
 const FeedbackDialog = ({ onSubmit }) => {
   const [visible, setVisible] = useState(false);
-  const [animateButtonRow, setAnimateButtonRow] = useState(false);
 
   const handleLaunch = () => {
     setVisible(!visible);
-
-    setTimeout(() => {
-      if (visible) {
-        setAnimateButtonRow(false);
-      } else {
-        setAnimateButtonRow(true);
-      }
-    }, 400);
   };
 
   return onSubmit ? (
     <>
-      <Form
-        onSubmit={onSubmit}
-        setVisible={setVisible}
-        visible={visible}
-        animateButtonRow={animateButtonRow}
-        setAnimateButtonRow={setAnimateButtonRow}
-      />
+      <Form onSubmit={onSubmit} setVisible={setVisible} visible={visible} />
       <LaunchButton
         visible={visible}
         icon={FaceWink20}
