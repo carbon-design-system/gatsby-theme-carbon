@@ -27,26 +27,6 @@
   }
 }
 
-@keyframes animateWidthEntrance {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 320px;
-  }
-}
-
-@keyframes animateWidthExit {
-  0% {
-    width: 320px;
-  }
-
-  100% {
-    width: 0;
-  }
-}
-
 .form-container {
   padding: $spacing-05;
   padding-bottom: $spacing-08;
