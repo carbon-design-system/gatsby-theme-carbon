@@ -1,5 +1,6 @@
 .page-description p {
   @include carbon--type-style('expressive-heading-03', true);
+  color: $ui-01;
 
   // 8 col
   @include carbon--breakpoint('lg') {
@@ -15,9 +16,4 @@
 .page-description code {
   font-size: 0.75em;
   line-height: 1.25;
-}
-
-// dark background
-:global(.container--dark) .page-description {
-  color: $carbon--white-0;
 }

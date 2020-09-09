@@ -14,7 +14,7 @@
 .panel {
   --space: 0;
   color: $text-01;
-  background: $ui-background;
+  background: $ui-01;
   margin-left: -$spacing-05;
   margin-right: -$spacing-05;
 
@@ -27,7 +27,7 @@
   cursor: pointer;
   position: relative;
   display: inline-block;
-  background-color: $ui-background;
+  background-color: $ui-01;
   height: 3rem;
   text-align: left;
   min-width: 0;
