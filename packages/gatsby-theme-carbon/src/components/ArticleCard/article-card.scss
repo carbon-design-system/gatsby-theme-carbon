@@ -19,7 +19,7 @@
 }
 
 .#{$prefix}--article-card__title {
-  @include carbon--type-style('productive-heading-03');
+  @include carbon--type-style('body-short-02');
   text-decoration: none;
   color: $text-01;
 }
