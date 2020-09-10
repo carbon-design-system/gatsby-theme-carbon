@@ -85,6 +85,7 @@ ul :global(.bx--list--unordered) {
 
 :global(.bx--list--ordered:not(.bx--list--nested)) {
   margin-left: 1ch;
+  -webkit-padding-start: 0.5ch; // needed to align ordered lists to body copy in Safari
 }
 
 // responsive items in a list need to be full width
