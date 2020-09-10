@@ -79,12 +79,19 @@ const GlobalSearchInput = () => {
   );
 
   useEffect(() => {
-    document.addEventListener('keyup', function(e){ 
+    var collapseOpenNavs = function(e){ 
       if(e.which == 27){
         toggleNavState('switcherIsOpen', 'close');
         toggleNavState('searchIsOpen', 'close');
       }  
-    })
+    };
+
+    document.addEventListener('keyup',collapseOpenNavs)
+    
+    return function cleanup(){
+      document.removeEventListener('keyup', collapseOpenNavs)
+    };
+  
   })
 
   useEffect(() => {
