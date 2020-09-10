@@ -195,7 +195,7 @@ const GlobalSearchInput = () => {
             aria-label="Open search"
             onClick={() => {
               toggleNavState('searchIsOpen', 'open');
-              toggleNavState('switcherIsOpen', 'close')
+              toggleNavState('switcherIsOpen', 'close');
             }}>
             <Search20 description="Open search" />
           </button>
