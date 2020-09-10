@@ -187,7 +187,7 @@ ul :global(.bx--list--unordered) {
   display: none;
 }
 
-:global(.bx--list--ordered:not(.bx--list--nested)) > .list-item {
+:global(.bx--list--ordered:not(.bx--list--nested)) .list-item {
   margin-left: 0.5rem;
 }
 //---------------------------------------
