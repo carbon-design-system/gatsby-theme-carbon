@@ -16,6 +16,14 @@
   animation: drawCircle 400ms forwards ease-in;
 }
 
+//Safari only fix for checkmark circle bc the fill won't transition
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .circle {
+    fill: white;
+    animation: none;
+  }
+}
+
 .checkmark {
   fill: none;
   stroke: transparent;
