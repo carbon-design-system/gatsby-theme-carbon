@@ -83,6 +83,25 @@ ul :global(.bx--list--unordered) {
   padding-right: $spacing-05;
 }
 
+:global(.bx--list--ordered) .list-item,
+:global(.bx--list--unordered) .list-item {
+  @include carbon--type-style('body-long-02');
+  padding-right: 0;
+  width: 100%;
+  margin-left: $spacing-05;
+  padding-left: $spacing-02;
+}
+
+.list:not(:global(.bx--list--nested)) > .list-item {
+  padding-right: 2rem;
+  @include carbon--breakpoint('md') {
+    width: 75%;
+  }
+  @include carbon--breakpoint('lg') {
+    width: 100%;
+  }
+}
+
 :global(.bx--list--ordered:not(.bx--list--nested)) {
   margin-left: 1ch;
 }
@@ -102,18 +121,9 @@ ul :global(.bx--list--unordered) {
   }
 }
 
-:global(.bx--list--ordered) .list-item,
-:global(.bx--list--unordered) .list-item {
-  @include carbon--type-style('body-long-02');
-  padding-right: 0;
-  width: 100%;
-  margin-left: $spacing-05;
-  padding-left: $spacing-02;
+:global(.container--dark) :global(.bx--list__item) {
+  color: $carbon--white-0;
 }
-
-// :global(.container--dark) :global(.bx--list__item) {
-//   color: $carbon--white-0;
-// }
 
 //spacing for content within list item
 .list-item > * + * {
