@@ -1,3 +1,7 @@
+.side-nav--dark {
+  --cds-ui-03: #{$carbon--gray-80};
+}
+
 .side-nav--dark :global(.bx--side-nav__link):focus,
 .side-nav--dark :global(.bx--side-nav__submenu):focus {
   outline: 2px solid $carbon--white-0;
@@ -18,11 +22,11 @@
   border-bottom: none;
 }
 
-.resource-link {
-  &:first-of-type {
-    margin-top: $spacing-05;
-  }
+.divider-space {
+  margin-top: 4rem;
+  margin-bottom: $spacing-05;
 }
+
 // Moves icons to the right
 .outboundLink {
   flex-direction: row-reverse;

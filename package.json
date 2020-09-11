@@ -22,7 +22,7 @@
     "serve": "yarn build && yarn workspace example serve",
     "serve:prefix": "yarn build:prefix && yarn workspace example serve --prefix-paths",
     "now-build": "yarn workspace example build",
-    "format": "prettier --write \"**/*.{css,scss,json,html,yaml}\"",
+    "format": "prettier --write \"**/*.{css,scss,json,html,yaml,mdx}\"",
     "lint:js": "eslint . --fix",
     "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
     "release": "lerna publish"
@@ -33,27 +33,6 @@
     "**/.cache/",
     "**/build/"
   ],
-  "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.1.0",
-    "eslint-config-prettier": "^6.10.1",
-    "eslint-config-wesbos": "0.0.19",
-    "eslint-plugin-html": "^6.0.0",
-    "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^2.5.1",
-    "husky": "^4.2.3",
-    "lerna": "^3.22.1",
-    "lint-staged": "^10.0.9",
-    "prettier": "^2.0.2",
-    "stylelint": "^13.2.1",
-    "stylelint-config-recommended-scss": "^4.2.0",
-    "stylelint-scss": "^3.16.0",
-    "yarn": "^1.22.4"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -71,6 +50,25 @@
     ]
   },
   "dependencies": {
-    "prettier-config-carbon": "^0.2.0"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-config-wesbos": "0.0.19",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "husky": "^4.2.3",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.0.9",
+    "prettier": "^2.0.2",
+    "prettier-config-carbon": "^0.2.0",
+    "stylelint": "^13.2.1",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-scss": "^3.16.0",
+    "yarn": "^1.22.4"
   }
 }

@@ -7,7 +7,7 @@ import {
   HeaderGlobalBar,
   HeaderGlobalAction,
 } from 'carbon-components-react';
-import { AppSwitcher20, Close20 } from '@carbon/icons-react';
+import { Switcher20, Close20 } from '@carbon/icons-react';
 import cx from 'classnames';
 
 import HeaderNav from '../HeaderNav/HeaderNav';
@@ -66,7 +66,7 @@ const Header = ({ children }) => {
             toggleNavState('searchIsOpen', 'close');
             toggleNavState('leftNavIsOpen', 'close');
           }}>
-          {switcherIsOpen ? <Close20 /> : <AppSwitcher20 />}
+          {switcherIsOpen ? <Close20 /> : <Switcher20 />}
         </HeaderGlobalAction>
       </HeaderGlobalBar>
     </ShellHeader>
