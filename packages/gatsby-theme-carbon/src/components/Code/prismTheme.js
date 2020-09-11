@@ -5,12 +5,12 @@
 // Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
 
 /* :: import type { PrismTheme } from '../src/types' */
-import { ui05 } from '@carbon/elements';
+import { gray100, white0 } from '@carbon/elements';
 
 const theme /* : PrismTheme */ = {
   plain: {
-    backgroundColor: ui05,
-    color: '#fff',
+    backgroundColor: gray100,
+    color: white0,
   },
   styles: [
     {

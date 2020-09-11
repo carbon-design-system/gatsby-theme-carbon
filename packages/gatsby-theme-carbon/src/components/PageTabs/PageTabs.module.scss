@@ -1,7 +1,8 @@
 .tabs-container {
   margin: 0;
   width: 100%;
-  background: $carbon--black-100;
+  background: var(--cds-ui-background);
+  border-bottom: 1px solid $ui-03;
   position: sticky;
   top: 3rem;
   z-index: 6000; /* old z('header') #940 */
@@ -26,7 +27,7 @@
   padding: 13px $spacing-05 0 $spacing-05;
   text-decoration: none;
   line-height: 1;
-  color: $inverse-01;
+  color: var(--cds-text-01);
   white-space: nowrap;
   border-top: 3px solid transparent; // 3px accessibility minimum
   height: 3rem;
@@ -39,19 +40,19 @@
   }
 
   &:hover {
-    background: #353535;
+    background: $hover-ui;
   }
 }
 
 .selected-item .link {
   border-top: 3px solid $brand-01; // 3px accessibility minimum
-  background: $carbon--gray-80;
+  background: var(--cds-ui-03);
 }
 
 .list-item:not(.selected-item) .link {
-  color: $active-01;
+  color: var(--cds-text-01);
 
   &:hover {
-    color: #fff;
+    color: $text-01;
   }
 }

@@ -29,6 +29,11 @@
   color: $carbon--gray-30 !important;
 }
 
+// Background color for nested accordion items
+.side-nav--dark :global(a.bx--side-nav__link--current) {
+  background: $carbon--gray-80 !important;
+}
+
 // Outline color for nav items
 .side-nav--dark :global(.bx--side-nav__link):focus,
 .side-nav--dark :global(.bx--side-nav__submenu):focus {
@@ -46,6 +51,13 @@
   background-color: $carbon--gray-80 !important;
 }
 
+// Font color for top-level accordion items
+.side-nav--dark
+  :global(.bx--side-nav__item--active)
+  :global(.bx--side-nav__submenu-title) {
+  color: $carbon--gray-30;
+}
+
 // Font color for non-accordion listed items when hovering over the <li>
 .side-nav--dark
   :global(.bx--side-nav__link):hover
@@ -54,11 +66,20 @@
 }
 
 .current-item {
-  background-color: #dcdcdc !important;
+  background-color: $carbon--gray-20 !important;
 }
 
 .current-item span {
   color: $ui-05;
+}
+
+// Dark theme current selected nav item
+[class*='--side-nav--dark'] .current-item {
+  background-color: $carbon--gray-80 !important;
+}
+
+[class*='--side-nav--dark'] .current-item span {
+  color: $carbon--gray-10;
 }
 
 .divider {
@@ -106,20 +127,20 @@
 //     padding-left: 0 !important;
 //   }
 
-//   //dark
-//   // active item background color
-//   .bx--side-nav--website--dark
-//     .bx--side-nav__menu[role='menu']
-//     a.bx--side-nav__link--current,
-//   .bx--side-nav--website--dark
-//     .bx--side-nav__menu[role='menu']
-//     a.bx--side-nav__link[aria-current='page'],
-//   .bx--side-nav--website--dark a.bx--side-nav__link--current,
-//   .bx--side-nav--website--dark
-//     .bx--side-nav__item--active
-//     .bx--side-nav__submenu[aria-expanded='false'] {
-//     background-color: #282828 !important;
-//   }
+// //dark
+// // active item background color
+// .bx--side-nav--website--dark
+//   .bx--side-nav__menu[role='menu']
+//   a.bx--side-nav__link--current,
+// .bx--side-nav--website--dark
+//   .bx--side-nav__menu[role='menu']
+//   a.bx--side-nav__link[aria-current='page'],
+// .bx--side-nav--website--dark a.bx--side-nav__link--current,
+// .bx--side-nav--website--dark
+//   .bx--side-nav__item--active
+//   .bx--side-nav__submenu[aria-expanded='false'] {
+//   background-color: #282828 !important;
+// }
 
 //   // text hover color
 //   .bx--side-nav--website--dark

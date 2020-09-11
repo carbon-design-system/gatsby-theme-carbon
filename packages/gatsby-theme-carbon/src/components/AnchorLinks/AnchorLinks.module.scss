@@ -16,7 +16,9 @@
   position: relative;
   display: inline-block;
   transition: color $transition--base;
-  color: $carbon--gray-100;
+  color: var(
+    --cds-text-01
+  ); // 👈 not sure how this is working, but would love to know.
   text-decoration: none;
   margin-bottom: $spacing-03;
   margin-left: $spacing-06;
@@ -33,8 +35,7 @@
     content: '\21B3'; //"↳"
     position: absolute;
     left: -$spacing-06;
-    color: $interactive-02;
-    transition: color $transition--base;
+    color: var(--cds-text-01);
     cursor: pointer;
   }
 }

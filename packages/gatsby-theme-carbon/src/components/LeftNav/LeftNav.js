@@ -58,24 +58,18 @@ const LeftNav = (props) => {
         defaultExpanded={!navigationStyle}
         isPersistent={!navigationStyle}
         className={classnames({
-          // 'bx--side-nav--website': true,
           [style.sideNavDark]:
             (homepageTheme === 'dark' && props.homepage) ||
             (interiorTheme === 'dark' && !props.homepage),
           [style.sideNavWhite]:
             (homepageTheme === 'white' && props.homepage) ||
-            (homepageTheme === 'dark' && !props.homepage) ||
+            (homepageTheme === 'dark' &&
+              interiorTheme === 'white' &&
+              !props.homepage) ||
+            (homepageTheme === 'dark' &&
+              interiorTheme === 'g10' &&
+              !props.homepage) ||
             (interiorTheme === 'white' && !props.homepage),
-          // 'bx--side-nav--website--light':
-          //   (homepageTheme === 'white' && !props.homepage) ||
-          //   (homepageTheme === 'dark' && interiorTheme === 'g10'),
-
-          // [style.sideNavDark]: homepageTheme === 'dark' && !props.homepage,
-
-          // 'bx--side-nav--website--dark':
-          //   props.theme === 'dark' || props.homepage,
-          // 'bx--side-nav--website--light':
-          //   props.theme !== 'dark' && !props.homepage,
         })}>
         <SideNavItems className="sidenav-list">
           {navItems.map((item, i) => (

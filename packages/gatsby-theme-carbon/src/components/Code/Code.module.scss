@@ -89,7 +89,7 @@ li .row {
   justify-content: space-between;
   width: 100%;
   height: $spacing-09;
-  background: $ui-05;
+  background: $carbon--black-100;
   padding-left: $spacing-05;
   padding-right: $spacing-03;
   border-bottom: 1px solid $inverse-02;
@@ -142,8 +142,8 @@ li .row {
   overflow: visible;
   background: linear-gradient(
     90deg,
-    rgba(23, 23, 23, 0) 0%,
-    rgba(23, 23, 23, 1) 24px
+    rgba(22, 22, 22, 0) 0%,
+    rgb(22, 22, 22) 24px
   );
 }
 

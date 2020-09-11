@@ -17,6 +17,7 @@ module.exports = (themeOptions) => {
 
   const {
     homepageTheme = 'dark',
+    interiorTheme = 'g10',
     isSearchEnabled = true,
     navigationStyle = '',
     withWebp = false,
@@ -30,7 +31,6 @@ module.exports = (themeOptions) => {
     gatsbyRemarkPlugins = [],
     remarkPlugins = [],
     gatsbyPluginSharpOptions = {},
-    interiorTheme = 'dark',
   } = themeOptions;
 
   const optionalPlugins = [];

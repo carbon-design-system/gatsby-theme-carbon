@@ -111,9 +111,9 @@ ul :global(.bx--list--unordered) {
   padding-left: $spacing-02;
 }
 
-:global(.container--dark) :global(.bx--list__item) {
-  color: $carbon--white-0;
-}
+// :global(.container--dark) :global(.bx--list__item) {
+//   color: $carbon--white-0;
+// }
 
 //spacing for content within list item
 .list-item > * + * {
@@ -168,10 +168,10 @@ ul :global(.bx--list--unordered) {
 }
 
 //dark
-:global(.container--dark) .blockquote,
-:global(.container--dark) .blockquote .list-item {
-  color: $text-04;
-}
+// :global(.container--dark) .blockquote,
+// :global(.container--dark) .blockquote .list-item {
+//   color: $text-04;
+// }
 
 :global(.bx--list--ordered:not(.bx--list--nested) > .bx--list__item::before) {
   display: none;

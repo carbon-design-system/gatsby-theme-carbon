@@ -35,8 +35,10 @@ $font-family-mono: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
 //---------------------------------------
 // Global styles
 //---------------------------------------
+
 body {
   background: $carbon--black-100;
+  color: $text-01;
 }
 
 // prevents jank while page hydrates

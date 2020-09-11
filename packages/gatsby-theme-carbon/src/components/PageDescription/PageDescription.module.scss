@@ -1,6 +1,5 @@
 .page-description p {
   @include carbon--type-style('expressive-heading-03', true);
-  color: $ui-01;
 
   // 8 col
   @include carbon--breakpoint('lg') {
