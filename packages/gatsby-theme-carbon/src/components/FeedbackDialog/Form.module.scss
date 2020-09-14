@@ -22,9 +22,13 @@
   transition: width $duration--moderate-01 motion(entrance, productive),
     height $duration--slow-01 motion(entrance, productive),
     margin-top $duration--slow-01 motion(entrance, productive);
-  @include carbon--breakpoint('md') {
-    height: 436px;
-  }
+}
+
+.dialog > div {
+  display: flex;
+  flex-direction: column;
+  height: 456px;
+  justify-content: space-between;
 }
 
 .form-container {
