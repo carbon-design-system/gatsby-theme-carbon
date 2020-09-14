@@ -25,24 +25,26 @@ exports.onCreatePage = (
   { page, actions, getNodesByType, ...rest },
   pluginOptions
 ) => {
-  // Find the MdxNode that created our page
-  const MdxNode = getNodesByType('Mdx').find(
-    ({ fileAbsolutePath }) => fileAbsolutePath === page.component
-  );
+  if(!page.context.MdxNode){ // Enable the possibility to overwrite it
+    // Find the MdxNode that created our page
+    const MdxNode = getNodesByType('Mdx').find(
+      ({ fileAbsolutePath }) => fileAbsolutePath === page.component
+    );
 
-  const { titleType = 'page' } = pluginOptions;
-  const { createPage, deletePage } = actions;
-  const [relativePagePath] = page.componentPath.split('src/pages').splice('-1');
-  deletePage(page);
-  createPage({
-    ...page,
-    context: {
-      ...page.context,
-      relativePagePath,
-      titleType,
-      MdxNode,
-    },
-  });
+    const { titleType = 'page' } = pluginOptions;
+    const { createPage, deletePage } = actions;
+    const [relativePagePath] = page.componentPath.split('src/pages').splice('-1');
+    deletePage(page);
+    createPage({
+      ...page,
+      context: {
+        ...page.context,
+        relativePagePath,
+        titleType,
+        MdxNode,
+      },
+    });
+  }
 };
 
 // In the case where none of the nav items have child pages, an error occurs in the left nav
