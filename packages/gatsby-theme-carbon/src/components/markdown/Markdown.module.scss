@@ -102,15 +102,17 @@ ul :global(.bx--list--unordered) {
   }
 }
 
+// aligns UNnested ordered list item to body copy
 :global(.bx--list--ordered:not(.bx--list--nested)) {
   margin-left: 1ch;
 }
 
+// aligns NESTED ordered list item to parent list item text #993
 :global(.bx--list--ordered.bx--list--nested) {
   margin-left: 0.5rem;
 }
 
-//Safari only fixes to align ordered list/nested ordered list to body copy #993
+//Safari only fixes to align unnested/nested ordered list to body copy #993
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   :global(.bx--list--ordered:not(.bx--list--nested)) {
     padding-left: 0.5ch;
