@@ -79,22 +79,6 @@ const GlobalSearchInput = () => {
   );
 
   useEffect(() => {
-    var collapseOpenNavs = function(e){ 
-      if(e.which == 27){
-        toggleNavState('switcherIsOpen', 'close');
-        toggleNavState('searchIsOpen', 'close');
-      }  
-    };
-
-    document.addEventListener('keyup',collapseOpenNavs)
-    
-    return function cleanup(){
-      document.removeEventListener('keyup', collapseOpenNavs)
-    };
-  
-  })
-
-  useEffect(() => {
     if (inputRef.current && searchIsOpen) {
       inputRef.current.focus();
       setInputIsFocused(true);
