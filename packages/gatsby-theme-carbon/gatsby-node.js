@@ -25,7 +25,8 @@ exports.onCreatePage = (
   { page, actions, getNodesByType, ...rest },
   pluginOptions
 ) => {
-  if(!page.context.MdxNode){ // Enable the possibility to overwrite it
+  // Don't override if it's already been provided
+  if(!page.context.MdxNode){
     // Find the MdxNode that created our page
     const MdxNode = getNodesByType('Mdx').find(
       ({ fileAbsolutePath }) => fileAbsolutePath === page.component
