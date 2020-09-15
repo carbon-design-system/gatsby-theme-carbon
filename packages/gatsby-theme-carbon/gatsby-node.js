@@ -26,7 +26,7 @@ exports.onCreatePage = (
   pluginOptions
 ) => {
   // Don't override if it's already been provided
-  if(!page.context.MdxNode){
+  if (!page.context.MdxNode) {
     // Find the MdxNode that created our page
     const MdxNode = getNodesByType('Mdx').find(
       ({ fileAbsolutePath }) => fileAbsolutePath === page.component
@@ -34,7 +34,9 @@ exports.onCreatePage = (
 
     const { titleType = 'page' } = pluginOptions;
     const { createPage, deletePage } = actions;
-    const [relativePagePath] = page.componentPath.split('src/pages').splice('-1');
+    const [relativePagePath] = page.componentPath
+      .split('src/pages')
+      .splice('-1');
     deletePage(page);
     createPage({
       ...page,
