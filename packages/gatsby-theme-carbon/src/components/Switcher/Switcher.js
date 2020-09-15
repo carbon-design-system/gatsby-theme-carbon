@@ -1,4 +1,10 @@
-import React, { useContext, useRef, useLayoutEffect, useState } from 'react';
+import React, {
+  useContext,
+  useRef,
+  useLayoutEffect,
+  useEffect,
+  useState,
+} from 'react';
 import cx from 'classnames';
 import useMedia from 'use-media';
 import NavContext from '../../util/context/NavContext';
@@ -6,9 +12,23 @@ import { nav, open, divider, link, linkDisabled } from './Switcher.module.scss';
 
 const Switcher = ({ children }) => {
   const lgBreakpoint = useMedia('min-width: 1056px');
-  const { switcherIsOpen } = useContext(NavContext);
+  const { switcherIsOpen, toggleNavState } = useContext(NavContext);
   const listRef = useRef(null);
   const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    const collapseOpenNavs = function (e) {
+      if (e.which === 27) {
+        toggleNavState('switcherIsOpen', 'close');
+      }
+    };
+
+    document.addEventListener('keyup', collapseOpenNavs);
+
+    return function cleanup() {
+      document.removeEventListener('keyup', collapseOpenNavs);
+    };
+  }, [toggleNavState]);
 
   // calculate and update height
   useLayoutEffect(() => {
