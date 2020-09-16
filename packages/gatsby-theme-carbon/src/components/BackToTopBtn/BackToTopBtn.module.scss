@@ -23,7 +23,6 @@
 .button:focus {
   outline: none;
   border: 2px solid $focus;
-  box-shadow: inset 0 0 0 1px $inverse-01;
 }
 
 .button svg {

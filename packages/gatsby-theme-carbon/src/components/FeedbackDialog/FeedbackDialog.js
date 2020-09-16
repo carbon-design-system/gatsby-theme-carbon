@@ -8,10 +8,6 @@ import Form from './Form';
 const FeedbackDialog = ({ onSubmit }) => {
   const [visible, setVisible] = useState(false);
 
-  const handleLaunch = () => {
-    setVisible(!visible);
-  };
-
   return onSubmit ? (
     <>
       <Form onSubmit={onSubmit} setVisible={setVisible} visible={visible} />
@@ -19,7 +15,7 @@ const FeedbackDialog = ({ onSubmit }) => {
         visible={visible}
         icon={FaceWink20}
         filledIcon={FaceWinkFilled20}
-        onClick={handleLaunch}
+        onClick={() => setVisible(!visible)}
       />
     </>
   ) : null;
