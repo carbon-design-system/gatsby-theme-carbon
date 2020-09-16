@@ -1,39 +1,47 @@
 .dialog {
   box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
-  background-color: var(--cds-ui-background);
   position: fixed;
-  bottom: 10rem;
-  right: 2rem;
-  width: 0;
-  height: 0;
-  margin-top: 456px;
-  overflow: hidden;
-  white-space: nowrap;
+  bottom: 0px;
+  width: 100vw;
   z-index: 10000; /* old z('floating') #940 */
-  transition: width $duration--slow-01 motion(exit, productive),
-    height $duration--moderate-01 motion(exit, productive),
-    margin-top $duration--moderate-01 motion(exit, productive);
+  transform-origin: 100% 50%;
+  transition-property: opacity, transform;
+  transition-duration: $duration--moderate-02;
+  @include carbon--breakpoint('md') {
+    transform-origin: 100% bottom;
+    width: 320px;
+    right: 2rem;
+    bottom: 10rem;
+    transition-duration: $duration--fast-02;
+  }
 }
 
-.dialog-active {
-  height: 456px;
-  width: 320px;
-  margin-top: 0;
-  transition: width $duration--moderate-01 motion(entrance, productive),
-    height $duration--slow-01 motion(entrance, productive),
-    margin-top $duration--slow-01 motion(entrance, productive);
+.enter {
+  opacity: 0.01;
+  transform: scale(0.8);
+  transition-timing-function: motion(entrance, productive);
 }
 
-.dialog > div {
-  display: flex;
-  flex-direction: column;
-  height: 456px;
-  justify-content: space-between;
+.enter.enterActive {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.exit {
+  opacity: 1;
+  transform: scale(1);
+  transition-timing-function: motion(entrance, productive);
+}
+
+.exit.exitActive {
+  opacity: 0.01;
+  transform: scale(0.8);
 }
 
 .form-container {
   padding: $spacing-05;
   padding-bottom: $spacing-08;
+  background-color: var(--cds-ui-background);
   color: var(--cds-text-02);
   width: 100%;
 }
@@ -59,16 +67,9 @@
 }
 
 .buttonRow {
-  height: 0;
-  margin-top: 4rem; //used to transition height from bottom
-  overflow: hidden;
-  transition: all 300ms motion(entrance, productive);
-  transition-delay: 15ms;
-}
-
-.button-row-active {
-  height: 4rem;
-  margin-top: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .button {

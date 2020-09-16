@@ -3,7 +3,7 @@
   height: $spacing-09;
   border-radius: 50%;
   border-color: transparent;
-  background: $carbon--gray-30;
+  background: var(--cds-interactive-02);
   transition: all $duration--fast-02;
   z-index: z('modal');
   padding-top: 0.325rem;
@@ -16,7 +16,7 @@
 }
 
 .button:hover {
-  background: $inverse-01; // gray-60 hover
+  background: var(--cds-inverse-01); // gray-60 hover
 }
 
 .button.selected:hover {
@@ -26,13 +26,9 @@
 .button:focus {
   outline: none;
   border: 2px solid var(--cds-inverse-focus-ui);
-  box-shadow: inset 0 0 0 1px $inverse-01;
+  box-shadow: inset 0 0 0 1px #fff;
 }
 
 .button svg {
-  fill: $carbon--black-100;
-}
-
-.button.selected:hover svg {
-  fill: $icon-03;
+  fill: var(--cds-icon-03);
 }

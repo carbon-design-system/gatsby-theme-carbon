@@ -1,47 +1,18 @@
 .svg {
   position: absolute;
-  border-radius: 50%;
   right: 10px;
   top: 10px;
   padding: 2px;
-  height: 24px;
-  width: 24px;
 }
 
-.circle {
-  fill: none;
-  stroke: white;
-  stroke-dasharray: 320;
-  stroke-dashoffset: 320;
-  animation: drawCircle 400ms forwards ease-in;
-}
-
-//Safari only fix for checkmark circle bc the fill won't transition
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .circle {
-    fill: white;
-    animation: none;
-  }
-}
-
-.checkmark {
-  fill: none;
-  stroke: transparent;
+.path {
   stroke-dasharray: 30px;
   stroke-dashoffset: 30px;
-  animation: drawCheckmark 900ms forwards;
+  animation: drawStroke 1200ms forwards;
 }
 
-@keyframes drawCheckmark {
-  to {
-    stroke: #0f62fe;
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes drawCircle {
+@keyframes drawStroke {
   to {
     stroke-dashoffset: 0;
-    fill: white;
   }
 }
