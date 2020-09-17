@@ -1,5 +1,4 @@
 import React, { useContext, useRef, useEffect } from 'react';
-import classnames from 'classnames';
 import { SideNav, SideNavItems } from 'carbon-components-react';
 import { useNavItems } from '../../util/NavItems';
 
@@ -38,8 +37,15 @@ const LeftNav = (props) => {
     }
   }, [leftNavScrollTop]);
 
+  const getLeftNavClassNames = () => {
+    if (props.theme === 'dark') {
+      return style.sideNavDark;
+    }
+    return style.sideNavWhite;
+  };
+
   const navItems = useNavItems();
-  const { navigationStyle, homepageTheme, interiorTheme } = useMetadata();
+  const { navigationStyle } = useMetadata();
 
   const closeSwitcher = () => {
     toggleNavState('switcherIsOpen', 'close');
@@ -57,20 +63,7 @@ const LeftNav = (props) => {
         expanded={navigationStyle ? leftNavIsOpen : true}
         defaultExpanded={!navigationStyle}
         isPersistent={!navigationStyle}
-        className={classnames({
-          [style.sideNavDark]:
-            (homepageTheme === 'dark' && props.homepage) ||
-            (interiorTheme === 'dark' && !props.homepage),
-          [style.sideNavWhite]:
-            (homepageTheme === 'white' && props.homepage) ||
-            (homepageTheme === 'dark' &&
-              interiorTheme === 'white' &&
-              !props.homepage) ||
-            (homepageTheme === 'dark' &&
-              interiorTheme === 'g10' &&
-              !props.homepage) ||
-            (interiorTheme === 'white' && !props.homepage),
-        })}>
+        className={getLeftNavClassNames()}>
         <SideNavItems className="sidenav-list">
           {navItems.map((item, i) => (
             <LeftNavItem

@@ -16,8 +16,8 @@ module.exports = (themeOptions) => {
   };
 
   const {
-    homepageTheme = 'dark',
-    interiorTheme = 'g10',
+    homepageTheme = 'white',
+    interiorTheme = 'white',
     isSearchEnabled = true,
     navigationStyle = '',
     withWebp = false,

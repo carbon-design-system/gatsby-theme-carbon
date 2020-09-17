@@ -9,17 +9,19 @@ import EditLink from '../components/EditLink';
 import NextPrevious from '../components/NextPrevious';
 import PageTabs from '../components/PageTabs';
 import Main from '../components/Main';
+import useMetadata from '../util/hooks/useMetadata';
 
 const Default = ({ pageContext, children, location, Title }) => {
   const { frontmatter = {}, relativePagePath, titleType } = pageContext;
   const {
     tabs,
     title,
-    theme,
+    theme: frontmatterTheme,
     description,
     keywords,
-    header: { background, fontColor } = {},
   } = frontmatter;
+
+  const { interiorTheme } = useMetadata();
 
   // get the path prefix if it exists
   const {
@@ -47,17 +49,7 @@ const Default = ({ pageContext, children, location, Title }) => {
 
   const currentTab = getCurrentTab();
 
-  const addClassNameToBackGroundProp = () => {
-    if (background) return `bg--${background}`;
-  };
-
-  const headerBgColor = addClassNameToBackGroundProp();
-
-  const addClassNameToFontColorProp = () => {
-    if (fontColor) return `color--${fontColor}`;
-  };
-
-  const headerFontColor = addClassNameToFontColorProp();
+  const theme = frontmatterTheme || interiorTheme;
 
   return (
     <Layout
@@ -72,8 +64,7 @@ const Default = ({ pageContext, children, location, Title }) => {
         title={Title ? <Title /> : title}
         label="label"
         tabs={tabs}
-        headerBgColor={headerBgColor}
-        headerFontColor={headerFontColor}
+        theme={theme}
       />
       {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}
       <Main padded>
