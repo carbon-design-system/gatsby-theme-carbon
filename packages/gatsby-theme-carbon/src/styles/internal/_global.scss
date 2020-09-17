@@ -17,12 +17,6 @@ $feature-flags: (
 @import '~carbon-components/scss/globals/scss/layout';
 @import 'carbon-components';
 
-// Shell overrides until themeing is ready
-// @import 'website-side-nav';
-
-// Color modifiers for header background and header font color
-@import 'modifiers';
-
 // Typography
 @include carbon--type-reset();
 @import '~@carbon/elements/scss/type/classes';
