@@ -85,8 +85,6 @@
   width: 100%;
   height: 100%;
   max-width: 100% !important;
-  top: -1px;
-  left: -1px;
 }
 
 .#{$prefix}--image-card__img:after {
@@ -99,6 +97,15 @@
   background: hsla(0, 0%, 100%, 0.08);
   opacity: 0;
   transition: opacity $duration--fast-01;
+}
+
+.#{$prefix}--image-card__spacing {
+  margin-right: 1px;
+  margin-bottom: 1px;
+
+  @include carbon--breakpoint-down('md') {
+    margin-right: 0px;
+  }
 }
 
 .#{$prefix}--image-card
