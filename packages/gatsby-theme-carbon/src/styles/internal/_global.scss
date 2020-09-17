@@ -21,6 +21,7 @@ $feature-flags: (
 @import 'website-side-nav';
 
 // Typography
+@include carbon--type-reset();
 @import '~@carbon/elements/scss/type/classes';
 @import 'plex';
 
