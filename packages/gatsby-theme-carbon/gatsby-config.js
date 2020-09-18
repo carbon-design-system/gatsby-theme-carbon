@@ -15,9 +15,10 @@ module.exports = (themeOptions) => {
     branch: 'master',
   };
 
+  const defaultTheme = { homepage: 'dark', interior: 'g10' };
+
   const {
-    homepageTheme = 'dark',
-    interiorTheme = 'g10',
+    theme: themeOption,
     isSearchEnabled = true,
     navigationStyle = '',
     withWebp = false,
@@ -32,6 +33,8 @@ module.exports = (themeOptions) => {
     remarkPlugins = [],
     gatsbyPluginSharpOptions = {},
   } = themeOptions;
+
+  const theme = { ...defaultTheme, ...themeOption };
 
   const optionalPlugins = [];
 
@@ -67,8 +70,8 @@ module.exports = (themeOptions) => {
     siteMetadata: {
       isSearchEnabled,
       navigationStyle,
-      homepageTheme,
-      interiorTheme,
+      homepageTheme: theme.homepage,
+      interiorTheme: theme.interior,
       title: 'Gatsby Theme Carbon',
       description:
         'Add a description by supplying it to siteMetadata in your gatsby-config.js file.',
@@ -124,7 +127,7 @@ module.exports = (themeOptions) => {
         options: {
           resources: [
             require.resolve('./src/styles/internal/resources.scss'),
-            carbonThemes[interiorTheme],
+            carbonThemes[theme.interior],
           ],
         },
       },

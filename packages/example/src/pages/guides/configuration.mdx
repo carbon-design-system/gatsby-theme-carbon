@@ -78,15 +78,18 @@ siteMetadata: {
 ## Themeing
 
 With theming, you can control the colors being used on the homepage as well as
-the interior pages. Your choices include `white`, `dark`, and `g10`.
+the interior pages. Your choices include `white`, `dark`, and `g10`. The default
+for the homepage and the interior theme are dark and g10, respectively.
 
 ```js
   plugins: [
     {
       resolve: 'gatsby-theme-carbon',
       options: {
-        homepageTheme: 'dark',
-        interiorTheme: 'g10'
+        theme: {
+          homepage: 'dark',
+          interior: 'g10',
+        },
       },
     },
   ],
