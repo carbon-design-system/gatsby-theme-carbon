@@ -3,7 +3,7 @@
   height: $spacing-09;
   border-radius: 50%;
   border-color: transparent;
-  background: $active-secondary; //g60
+  background: $interactive-02; //g60
   transition: all $duration--fast-02;
   z-index: z('modal');
   padding-top: 0.325rem;
@@ -18,11 +18,20 @@
 }
 
 .button:hover {
-  background: $inverse-hover-ui; // g80 hover
+  background: $hover-secondary; // g80 hover
 }
 
 .button:focus {
   outline: none;
   border: 2px solid var(--cds-inverse-focus-ui);
   box-shadow: inset 0 0 0 1px $inverse-01;
+}
+
+[class*='container--dark'] {
+  .button {
+    background: $carbon--gray-60;
+    &:hover {
+      background: #606060;
+    }
+  }
 }
