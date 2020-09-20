@@ -23,9 +23,10 @@ module.exports = (themeOptions) => {
     gatsbyRemarkPlugins = [],
     remarkPlugins = [],
     gatsbyPluginSharpOptions = {},
+    offline = true,
   } = themeOptions;
 
-  const optionalPlugins = [];
+  const optionalPlugins = [offline ? `gatsby-plugin-offline` : undefined];
 
   if (mediumAccount) {
     optionalPlugins.push({
