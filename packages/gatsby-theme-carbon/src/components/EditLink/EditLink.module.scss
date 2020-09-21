@@ -1,10 +1,10 @@
 .link {
   @include carbon--type-style('body-short-01');
   transition: color $transition--base;
-  color: var(--cds-text-01);
+  color: currentColor;
 
   &:hover {
-    color: $hover-secondary;
+    color: $inverse-hover-ui;
   }
 }
 
