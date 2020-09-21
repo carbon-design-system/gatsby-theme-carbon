@@ -26,7 +26,7 @@ module.exports = (themeOptions) => {
     isServiceWorkerEnabled = false,
   } = themeOptions;
 
-  const optionalPlugins = [isServiceWorkerEnabled && `gatsby-plugin-offline`];
+  const optionalPlugins = [];
 
   if (mediumAccount) {
     optionalPlugins.push({
@@ -36,6 +36,10 @@ module.exports = (themeOptions) => {
         name: 'MediumFeed',
       },
     });
+  }
+
+  if (isServiceWorkerEnabled) {
+    optionalPlugins.push(`gatsby-plugin-offline`);
   }
 
   const defaultRemarkPlugins = [
