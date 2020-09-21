@@ -23,10 +23,12 @@ module.exports = (themeOptions) => {
     gatsbyRemarkPlugins = [],
     remarkPlugins = [],
     gatsbyPluginSharpOptions = {},
-    offline = true,
+    isServiceWorkerEnabled = false,
   } = themeOptions;
 
-  const optionalPlugins = [offline ? `gatsby-plugin-offline` : undefined];
+  const optionalPlugins = [
+    isServiceWorkerEnabled ? `gatsby-plugin-offline` : undefined,
+  ];
 
   if (mediumAccount) {
     optionalPlugins.push({
@@ -60,6 +62,7 @@ module.exports = (themeOptions) => {
     siteMetadata: {
       isSearchEnabled,
       navigationStyle,
+      isServiceWorkerEnabled,
       title: 'Gatsby Theme Carbon',
       description:
         'Add a description by supplying it to siteMetadata in your gatsby-config.js file.',

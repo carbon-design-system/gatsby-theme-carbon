@@ -14,19 +14,23 @@ import styles from './LeftNav.module.scss';
 
 import NavContext from '../../util/context/NavContext';
 import usePathprefix from '../../util/hooks/usePathprefix';
+import useMetadata from '../../util/hooks/useMetadata';
 
 export const SERVICE_WORKER_UPDATE_FOUND = 'myAppServiceWorkerUpdateFound';
 
 const LeftNavItem = (props) => {
   const { items, category, hasDivider } = props;
   const { toggleNavState } = useContext(NavContext);
+  const { isServiceWorkerEnabled } = useMetadata();
   const isOnline = useNetwork();
 
   const handleClick = (event, to) => {
     toggleNavState('leftNavIsOpen', 'close');
-    if (isOnline && window[SERVICE_WORKER_UPDATE_FOUND] === true) {
-      event.preventDefault();
-      window.location.href = to;
+    if (isServiceWorkerEnabled) {
+      if (isOnline && window[SERVICE_WORKER_UPDATE_FOUND] === true) {
+        event.preventDefault();
+        window.location.href = to;
+      }
     }
   };
 
