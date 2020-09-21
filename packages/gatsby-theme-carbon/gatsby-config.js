@@ -126,8 +126,8 @@ module.exports = (themeOptions) => {
         resolve: `gatsby-plugin-sass-resources`,
         options: {
           resources: [
-            require.resolve('./src/styles/internal/resources.scss'),
             carbonThemes[theme.interior],
+            require.resolve('./src/styles/internal/resources.scss'),
           ],
         },
       },

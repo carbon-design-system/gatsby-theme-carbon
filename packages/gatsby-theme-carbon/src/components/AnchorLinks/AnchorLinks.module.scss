@@ -16,26 +16,20 @@
   position: relative;
   display: inline-block;
   transition: color $transition--base;
-  color: var(
-    --cds-text-01
-  ); // 👈 not sure how this is working, but would love to know.
+  color: currentColor;
   text-decoration: none;
   margin-bottom: $spacing-03;
   margin-left: $spacing-06;
 
   &:hover {
-    color: $interactive-01;
-
-    &::before {
-      color: $interactive-01;
-    }
+    color: $link-01;
   }
 
   &:before {
     content: '\21B3'; //"↳"
     position: absolute;
     left: -$spacing-06;
-    color: var(--cds-text-01);
+    color: currentColor;
     cursor: pointer;
   }
 }
@@ -53,18 +47,18 @@
 }
 
 // dark background
-:global(.container--dark) .link {
-  color: $carbon--white-0;
+// :global(.container--dark) .link {
+//   color: $carbon--white-0;
 
-  &:before {
-    color: $carbon--white-0;
-  }
+//   &:before {
+//     color: $carbon--white-0;
+//   }
 
-  &:hover {
-    color: $carbon--blue-40;
+//   &:hover {
+//     color: $carbon--blue-40;
 
-    &::before {
-      color: $carbon--blue-40;
-    }
-  }
-}
+//     &::before {
+//       color: $carbon--blue-40;
+//     }
+//   }
+// }
