@@ -26,9 +26,7 @@ module.exports = (themeOptions) => {
     isServiceWorkerEnabled = false,
   } = themeOptions;
 
-  const optionalPlugins = [
-    isServiceWorkerEnabled ? `gatsby-plugin-offline` : undefined,
-  ];
+  const optionalPlugins = [isServiceWorkerEnabled && `gatsby-plugin-offline`];
 
   if (mediumAccount) {
     optionalPlugins.push({
