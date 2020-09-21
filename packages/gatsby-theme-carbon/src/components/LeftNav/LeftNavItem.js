@@ -16,7 +16,7 @@ import NavContext from '../../util/context/NavContext';
 import usePathprefix from '../../util/hooks/usePathprefix';
 import useMetadata from '../../util/hooks/useMetadata';
 
-export const SERVICE_WORKER_UPDATE_FOUND = 'myAppServiceWorkerUpdateFound';
+export const SERVICE_WORKER_UPDATE_FOUND = 'GTC-ServiceWorkerUpdateFound';
 
 const LeftNavItem = (props) => {
   const { items, category, hasDivider } = props;
