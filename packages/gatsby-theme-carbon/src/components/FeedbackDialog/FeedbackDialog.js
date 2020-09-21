@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-import { FaceWink20, FaceWinkFilled20 } from '@carbon/icons-react';
+import { FaceWink20 } from '@carbon/icons-react';
 
 import LaunchButton from './LaunchButton';
 import Form from './Form';
@@ -14,7 +14,6 @@ const FeedbackDialog = ({ onSubmit }) => {
       <LaunchButton
         visible={visible}
         icon={FaceWink20}
-        filledIcon={FaceWinkFilled20}
         onClick={() => setVisible(!visible)}
       />
     </>
