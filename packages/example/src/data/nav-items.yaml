@@ -12,6 +12,8 @@
     - path: /contributions
 - title: Guides
   pages:
+    - title: Testing tabs
+      path: /guides/testing-tabs/testing
     - title: Configuration
       path: /guides/configuration
     - title: Authoring MDX
