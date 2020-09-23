@@ -241,6 +241,13 @@ ul :global(.bx--list--unordered) {
   @include carbon--type-style('heading-01');
 }
 
+.sup {
+  font-feature-settings: 'sups' on;
+}
+
+.abbr:global(.bx--tooltip--definition) button {
+  font-size: 1em;
+}
 //---------------------------------------
 // Images
 //---------------------------------------
