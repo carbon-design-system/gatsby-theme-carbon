@@ -15,11 +15,11 @@ import {
 export default class PageTabs extends React.Component {
   render() {
     const { tabs, slug } = this.props;
-    const newSlug = slug.replace(/\'/g, ''); // removes any apostrophes from slug
+    const newSlug = slug.replace(/[’']/g, ''); // removes any apostrophes from slug
     const currentTab = newSlug.split('/').filter(Boolean).slice(-1)[0];
 
     const pageTabs = tabs.map((tab) => {
-      const tempTab = tab.replace(/\'/g, ''); // removes any apostrophes from tab
+      const tempTab = tab.replace(/[’']/g, ''); // removes any apostrophes from tab
       const slugifiedTab = slugify(tempTab, { lower: true });
       const selected = slugifiedTab === currentTab;
       const currentTabRegex = new RegExp(`(?<!-)${currentTab}(?!-)`);
