@@ -5,7 +5,6 @@ import Carbon from '../images/carbon.jpg';
 import Main from '../components/Main';
 import Utils from '../components/Utils';
 
-import BackToTopBtn from '../components/BackToTopBtn';
 import NextPrevious from '../components/NextPrevious';
 
 const Homepage = ({
