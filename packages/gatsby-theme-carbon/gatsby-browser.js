@@ -1,4 +1,5 @@
 import wrapRoot from './src/util/wrap-root-element';
+import { SERVICE_WORKER_UPDATE_FOUND } from './src/components/LeftNav/LeftNavItem';
 
 export const wrapRootElement = wrapRoot;
 
@@ -34,3 +35,7 @@ export const shouldUpdateScroll = ({ routerProps: { location } }) => {
   const offset = getTargetOffset(location.hash);
   return offset !== null ? [0, offset] : true;
 };
+
+export function onServiceWorkerUpdateReady() {
+  window[SERVICE_WORKER_UPDATE_FOUND] = true;
+}
