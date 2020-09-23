@@ -32,7 +32,7 @@
   position: relative;
   font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
     'Bitstream Vera Sans Mono', Courier, monospace;
-  color: $inverse-01;
+  color: $text-01;
   @include carbon--type-style('code-02');
   width: calc(100% + 2rem);
   @include carbon--breakpoint('lg') {
@@ -45,7 +45,7 @@
 }
 
 .row svg {
-  fill: $inverse-01;
+  fill: $text-01;
 }
 
 li .row {
@@ -89,10 +89,10 @@ li .row {
   justify-content: space-between;
   width: 100%;
   height: $spacing-09;
-  background: $carbon--black-100;
+  background: $ui-01;
   padding-left: $spacing-05;
   padding-right: $spacing-03;
-  border-bottom: 1px solid $inverse-02;
+  border-bottom: 1px solid $ui-03;
 }
 
 .path {
@@ -107,16 +107,16 @@ li .row {
   position: absolute;
   right: $spacing-03;
   bottom: $spacing-03;
-  background: $ui-05;
+  background: $ui-01;
   border: none;
-  color: white;
+  color: $text-01;
   cursor: pointer;
   padding: $spacing-03;
   padding-left: $spacing-05;
   display: inline-flex;
   transition: background-color $duration--fast-02;
   &:hover {
-    background-color: $inverse-02;
+    background-color: $hover-ui;
   }
 
   &:focus {
@@ -140,11 +140,7 @@ li .row {
   flex-direction: column;
   align-items: center;
   overflow: visible;
-  background: linear-gradient(
-    90deg,
-    rgba(22, 22, 22, 0) 0%,
-    rgb(22, 22, 22) 24px
-  );
+  background: linear-gradient(90deg, rgba(22, 22, 22, 0), $ui-01 24px);
 }
 
 // Copy button and src button
@@ -162,7 +158,7 @@ li .row {
   z-index: 1000;
   font-size: 0;
   &:hover {
-    background-color: $inverse-02;
+    background-color: $hover-ui;
   }
 }
 
