@@ -3,10 +3,12 @@ LATINEXT="U+0100-1EF9"
 PUNCTUATION="U+2000-FB02"
 ARROWS="U+2190-21c6"
 
-pyftsubset src/IBMPlexSans-Italic-VF.ttf --unicodes=$LATIN --flavor="woff2" --output-file=IBMPlexSansLatin-Italic-VF.woff2;
-pyftsubset src/IBMPlexSans-Italic-VF.ttf --unicodes=$LATINEXT --flavor="woff2" --output-file=IBMPlexSansLatinExt-Italic-VF.woff2;
-pyftsubset src/IBMPlexSans-Italic-VF.ttf --unicodes=$PUNCTUATION --flavor="woff2" --output-file=IBMPlexSansOther-Italic-VF.woff2;
+LAYOUT_FEATURES="*"
 
-pyftsubset src/IBMPlexSans-VF.ttf --unicodes=$LATIN,$ARROWS --flavor="woff2" --output-file=IBMPlexSansLatin-VF.woff2;
-pyftsubset src/IBMPlexSans-VF.ttf --unicodes=$LATINEXT --flavor="woff2" --output-file=IBMPlexSansLatinExt-VF.woff2;
-pyftsubset src/IBMPlexSans-VF.ttf --unicodes=$PUNCTUATION --flavor="woff2" --output-file=IBMPlexSansOther-VF.woff2;
+pyftsubset src/IBMPlexSans-Italic-VF.ttf --passthrough-tables --layout-features+=$LAYOUT_FEATURES --unicodes=$LATIN --flavor="woff2" --ignore-missing-glyphs --output-file=IBMPlexSansLatin-Italic-VF.woff2;
+pyftsubset src/IBMPlexSans-Italic-VF.ttf --passthrough-tables --layout-features+=$LAYOUT_FEATURES --unicodes=$LATINEXT --flavor="woff2" --ignore-missing-glyphs --output-file=IBMPlexSansLatinExt-Italic-VF.woff2;
+pyftsubset src/IBMPlexSans-Italic-VF.ttf --passthrough-tables --layout-features+=$LAYOUT_FEATURES --unicodes=$PUNCTUATION --flavor="woff2" --ignore-missing-glyphs --output-file=IBMPlexSansOther-Italic-VF.woff2;
+
+pyftsubset src/IBMPlexSans-VF.ttf --passthrough-tables --layout-features+=$LAYOUT_FEATURES --unicodes=$LATIN,$ARROWS --flavor="woff2" --ignore-missing-glyphs --output-file=IBMPlexSansLatin-VF.woff2;
+pyftsubset src/IBMPlexSans-VF.ttf --passthrough-tables --layout-features+=$LAYOUT_FEATURES --unicodes=$LATINEXT --flavor="woff2" --ignore-missing-glyphs --output-file=IBMPlexSansLatinExt-VF.woff2;
+pyftsubset src/IBMPlexSans-VF.ttf --passthrough-tables --layout-features+=$LAYOUT_FEATURES --unicodes=$PUNCTUATION --flavor="woff2" --ignore-missing-glyphs --output-file=IBMPlexSansOther-VF.woff2;
