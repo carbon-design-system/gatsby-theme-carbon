@@ -115,7 +115,7 @@ const getTheme = (interiorTheme) => {
       {
         types: ['important'],
         style: {
-          color: '#c94922',
+          color: text01,
         },
       },
     ],
