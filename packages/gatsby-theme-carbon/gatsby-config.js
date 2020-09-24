@@ -32,6 +32,7 @@ module.exports = (themeOptions) => {
     gatsbyRemarkPlugins = [],
     remarkPlugins = [],
     gatsbyPluginSharpOptions = {},
+    isServiceWorkerEnabled = false,
   } = themeOptions;
 
   const theme = { ...defaultTheme, ...themeOption };
@@ -46,6 +47,10 @@ module.exports = (themeOptions) => {
         name: 'MediumFeed',
       },
     });
+  }
+
+  if (isServiceWorkerEnabled) {
+    optionalPlugins.push(`gatsby-plugin-offline`);
   }
 
   const defaultRemarkPlugins = [
@@ -72,6 +77,7 @@ module.exports = (themeOptions) => {
       navigationStyle,
       homepageTheme: theme.homepage,
       interiorTheme: theme.interior,
+      isServiceWorkerEnabled,
       title: 'Gatsby Theme Carbon',
       description:
         'Add a description by supplying it to siteMetadata in your gatsby-config.js file.',
