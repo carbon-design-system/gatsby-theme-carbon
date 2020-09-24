@@ -19,17 +19,14 @@ export default class PageTabs extends React.Component {
     const currentTab = newSlug.split('/').filter(Boolean).slice(-1)[0];
 
     const pageTabs = tabs.map((tab) => {
-      const tempTab = tab.replace(/[’']/g, ''); // removes any apostrophes from tab
-      const slugifiedTab = slugify(tempTab, { lower: true });
+      const slugifiedTab = slugify(tab, { lower: true, strict: true });
       const selected = slugifiedTab === currentTab;
-      const currentTabRegex = new RegExp(`(?<!-)${currentTab}(?!-)`);
-      // currentTabRegex checks for negative lookbehind: (?<!-) to make sure slug isn't following "-" otherwise that's an incomplete slug
-      // currentTabRegex checks for negative lookahead: (?!-) to make sure slug isn't followed by "-" otherwise that's an incomplete slug
+      // matches with or without trailing slash: /?
+      // matches with or without hash link: (#.*)?
+      const currentTabRegex = new RegExp(`${currentTab}/?(#.*)?$`);
       const href = slug.replace(currentTabRegex, slugifiedTab);
       return (
-        <li
-          key={tempTab}
-          className={cx({ [selectedItem]: selected }, listItem)}>
+        <li key={tab} className={cx({ [selectedItem]: selected }, listItem)}>
           <Link className={link} to={`${href}`}>
             {tab}
           </Link>
