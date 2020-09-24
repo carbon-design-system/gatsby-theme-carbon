@@ -44,7 +44,7 @@ const Switcher = ({ children }) => {
   return (
     <nav
       className={cx(nav, { [open]: switcherIsOpen })}
-      aria-label="IBM Design ecosystem navigation"
+      aria-label="IBM Design ecosystem"
       tabIndex="-1"
       style={{ maxHeight }}>
       <ul ref={listRef}>{children}</ul>
