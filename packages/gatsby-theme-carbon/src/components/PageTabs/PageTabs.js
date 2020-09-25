@@ -15,8 +15,7 @@ import {
 export default class PageTabs extends React.Component {
   render() {
     const { tabs, slug } = this.props;
-    const newSlug = slug.replace(/[^a-zA-Z0-9-\/]/g, ''); // removes any characters that aren't letters, numbers or dash/fwd slash
-    const currentTab = newSlug.split('/').filter(Boolean).slice(-1)[0];
+    const currentTab = slug.split('/').filter(Boolean).slice(-1)[0];
 
     const pageTabs = tabs.map((tab) => {
       const slugifiedTab = slugify(tab, { lower: true, strict: true });
