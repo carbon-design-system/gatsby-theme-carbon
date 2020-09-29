@@ -1059,6 +1059,11 @@
   resolved "https://registry.yarnpkg.com/@carbon/colors/-/colors-10.11.0.tgz#060dce87ddfaabe313ad85d677962e92cf6184a1"
   integrity sha512-x9kT5sN3f8sz/gELpVmDbTeNJ20LP70MI+kLsd19RQICrZipoLJG0Ajn1J9t5NCdz3XGBYb3oiUoAtMiwt/4jA==
 
+"@carbon/colors@^10.13.0":
+  version "10.13.0"
+  resolved "https://registry.yarnpkg.com/@carbon/colors/-/colors-10.13.0.tgz#8b17a4555dd00c4494471471c7813b3df5bab9a3"
+  integrity sha512-SVWgbwa5cjT4cnZ6xJZUB8KJakSIzEqvtD23RHOWpv/qLATXbCEWzSvsa7RO0hNaqYH5EYkYxFS2Y+qV/Mz9pA==
+
 "@carbon/elements@^10.11.0":
   version "10.15.0"
   resolved "https://registry.yarnpkg.com/@carbon/elements/-/elements-10.15.0.tgz#ec2d10ae4f43e59c837f609ba93a57c0fe7bd37c"
@@ -1108,6 +1113,11 @@
   resolved "https://registry.yarnpkg.com/@carbon/layout/-/layout-10.12.0.tgz#8f80c8d169a1c62669cb65470619b6c259e187a5"
   integrity sha512-qS6WHPqEyVl1AzAnG5awoxfYw8RbX4Pf5Y/Z46s5wTTxm/zzF7Ju/Ej3H2Xkjny1NL7PsF3xyh2CtiojLBrurg==
 
+"@carbon/layout@^10.13.0":
+  version "10.13.0"
+  resolved "https://registry.yarnpkg.com/@carbon/layout/-/layout-10.13.0.tgz#fd7ecaf1502f4d4ef1598816d9316dd6c84be5da"
+  integrity sha512-OgLe9/27zffC019rOGjWd4lavZO7BAkgUyKG+0Mg8IpzqqmGt7v8k4viMH5ThMt8y7Qk1LQfno/4ZzBItWi5Ow==
+
 "@carbon/motion@^10.9.0":
   version "10.9.0"
   resolved "https://registry.yarnpkg.com/@carbon/motion/-/motion-10.9.0.tgz#39cdfe2f9fc7ecc85479413a5b4eadb36e0e366d"
@@ -1123,6 +1133,16 @@
     "@carbon/type" "^10.13.0"
     color "^3.1.2"
 
+"@carbon/themes@^10.19.0":
+  version "10.19.0"
+  resolved "https://registry.yarnpkg.com/@carbon/themes/-/themes-10.19.0.tgz#57f7e7bd2d4c0699032e139d351a2500431e5ce8"
+  integrity sha512-i5znhSU4o+86P2KONv6SxNLitwvlzOlwrX1guobM3S2w9oFOaQypMEkRpklM8D2l3E0i++/qcdBCa307R0qnsA==
+  dependencies:
+    "@carbon/colors" "^10.13.0"
+    "@carbon/layout" "^10.13.0"
+    "@carbon/type" "^10.16.0"
+    color "^3.1.2"
+
 "@carbon/type@^10.13.0":
   version "10.13.0"
   resolved "https://registry.yarnpkg.com/@carbon/type/-/type-10.13.0.tgz#6248082de72a5fcd99dfb88aa1769e169178aa4d"
@@ -1130,6 +1150,14 @@
   dependencies:
     "@carbon/import-once" "^10.3.0"
     "@carbon/layout" "^10.12.0"
+
+"@carbon/type@^10.16.0":
+  version "10.16.0"
+  resolved "https://registry.yarnpkg.com/@carbon/type/-/type-10.16.0.tgz#0f85209852f5c1a0e0128b7408d9c71e588a4ca7"
+  integrity sha512-Qf2TfUJTFFcrCyFT9sH9wsETAVHKPGID0e3k9KjGrBjvbgeqny1jPHM7B7Gpl29NtOVDY2+K7AvGiBIH7SP/jQ==
+  dependencies:
+    "@carbon/import-once" "^10.3.0"
+    "@carbon/layout" "^10.13.0"
 
 "@emotion/babel-plugin-jsx-pragmatic@^0.1.5":
   version "0.1.5"

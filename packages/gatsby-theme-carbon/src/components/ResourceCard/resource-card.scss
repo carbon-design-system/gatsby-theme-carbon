@@ -71,12 +71,12 @@
 }
 
 .#{$prefix}--resource-card--dark .#{$prefix}--resource-card__icon--action svg {
-  fill: $carbon--gray-10; //$icon-01 for grsay 90 theme
+  fill: $inverse-01; //$icon-01 for grsay 90 theme
 }
 
 // Disabled
 .#{$prefix}--resource-card--disabled .#{$prefix}--tile:hover {
-  background: $ui-background;
+  background: $ui-01;
   cursor: not-allowed;
 }
 

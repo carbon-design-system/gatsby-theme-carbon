@@ -4,18 +4,20 @@
 // Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-evening-dark.css)
 // Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
 
-import { white, g10, g100 } from '@carbon/elements';
+import { white, g10, g100 } from '@carbon/themes';
 
 const getTheme = (interiorTheme) => {
   let theme = g10; // default
+
+  if (interiorTheme === 'dark') {
+    theme = g100;
+  }
 
   if (interiorTheme === 'white') {
     theme = white;
   }
 
-  if (interiorTheme === 'dark') {
-    theme = g100;
-  }
+  console.log(theme);
 
   const { ui01, text01 } = theme;
 
@@ -28,7 +30,7 @@ const getTheme = (interiorTheme) => {
       {
         types: ['comment', 'prolog', 'doctype', 'cdata'],
         style: {
-          color: '#bebebe',
+          color: text01,
         },
       },
       {
@@ -52,7 +54,7 @@ const getTheme = (interiorTheme) => {
       {
         types: ['variable'],
         style: {
-          color: '#ffffff',
+          color: text01,
         },
       },
       {
