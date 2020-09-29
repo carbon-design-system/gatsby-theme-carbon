@@ -28,7 +28,7 @@ module.exports = {
         },
         theme: {
           homepage: 'dark',
-          interior: 'dark',
+          interior: 'g10',
         },
       },
     },
