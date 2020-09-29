@@ -17,8 +17,6 @@ const getTheme = (interiorTheme) => {
     theme = white;
   }
 
-  console.log(theme);
-
   const { ui01, text01 } = theme;
 
   return {
