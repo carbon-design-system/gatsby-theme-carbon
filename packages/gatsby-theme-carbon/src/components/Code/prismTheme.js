@@ -10,13 +10,13 @@ import { ui05 } from '@carbon/elements';
 const theme /* : PrismTheme */ = {
   plain: {
     backgroundColor: ui05,
-    color: '#fff',
+    color: '#fff', // white
   },
   styles: [
     {
       types: ['comment', 'prolog', 'doctype', 'cdata'],
       style: {
-        color: '#bebebe',
+        color: '#bebebe', // gray
       },
     },
     {
@@ -28,25 +28,25 @@ const theme /* : PrismTheme */ = {
     {
       types: ['tag', 'operator'],
       style: {
-        color: '#6ea6ff',
+        color: '#6ea6ff', // blue40
       },
     },
     {
       types: ['property', 'function', 'attr-name'],
       style: {
-        color: '#92eeee',
+        color: '#92eeee', // teal20
       },
     },
     {
       types: ['variable'],
       style: {
-        color: '#ffffff',
+        color: '#ffffff', // white
       },
     },
     {
       types: ['string'],
       style: {
-        color: '#fa75a6',
+        color: '#fa75a6', // magenta40
       },
     },
     {
@@ -72,7 +72,7 @@ const theme /* : PrismTheme */ = {
         'placeholder',
       ],
       style: {
-        color: '#bb8eff',
+        color: '#bb8eff', // purple40
       },
     },
     {
@@ -103,7 +103,7 @@ const theme /* : PrismTheme */ = {
     {
       types: ['important'],
       style: {
-        color: '#c94922',
+        color: '#6ea6ff', // blue40
       },
     },
   ],
