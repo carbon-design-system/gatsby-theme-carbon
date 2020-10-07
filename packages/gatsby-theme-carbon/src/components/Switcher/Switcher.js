@@ -7,6 +7,7 @@ import React, {
 } from 'react';
 import cx from 'classnames';
 import useMedia from 'use-media';
+import { Locked16 } from '@carbon/icons-react';
 import NavContext from '../../util/context/NavContext';
 import { nav, open, divider, link, linkDisabled } from './Switcher.module.scss';
 
@@ -61,6 +62,7 @@ export const SwitcherDivider = (props) => (
 export const SwitcherLink = ({
   disabled,
   children,
+  isInternal,
   href: hrefProp,
   ...rest
 }) => {
@@ -79,6 +81,7 @@ export const SwitcherLink = ({
         href={href}
         {...rest}>
         {children}
+        {isInternal && <Locked16 />}
       </a>
     </li>
   );
@@ -88,35 +91,39 @@ export const SwitcherLink = ({
 // Note: if you change this, update the max-height in the switcher stylesheet
 const DefaultChildren = () => (
   <>
-    <SwitcherLink href="https://ibm.com/design">IBM Design</SwitcherLink>
+    <SwitcherDivider>Foundations</SwitcherDivider>
+    <SwitcherLink href="https://ibm.com/brand" isInternal>
+      IBM Brand Center
+    </SwitcherLink>
     <SwitcherLink href="https://ibm.com/design/language">
       IBM Design Language
     </SwitcherLink>
-    <SwitcherLink href="https://ibm.com/brand">IBM Brand Center</SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/able/">
-      IBM Accessibility
-    </SwitcherLink>
-    <SwitcherDivider>Design disciplines</SwitcherDivider>
+    <SwitcherDivider>Implementation</SwitcherDivider>
     <SwitcherLink href="https://www.carbondesignsystem.com/">
-      Product
+      Carbon Design System
     </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/standards/web/ibm-dotcom-library/">
-      Digital
+      IBM.com Library
     </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/design/event/">Event</SwitcherLink>
-    <SwitcherLink disabled>Workplace</SwitcherLink>
-    <SwitcherDivider>Design practices</SwitcherDivider>
+    <SwitcherLink href="https://www.ibm.com/design/event/">
+      IBM Event Design
+    </SwitcherLink>
+    <SwitcherDivider>Community</SwitcherDivider>
+    <SwitcherLink href="https://ibm.com/design" isInternal>
+      IBM Design
+    </SwitcherLink>
+    <SwitcherDivider>Practices</SwitcherDivider>
     <SwitcherLink href="https://www.ibm.com/design/thinking/">
       Enterprise Design Thinking
     </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/design/research/">
-      IBM Design Research
+    <SwitcherLink href="https://www.ibm.com/able/">
+      IBM Accessibility
     </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/design/ai">
       IBM Design for AI
     </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/services/ibmix/">
-      IBM iX
+    <SwitcherLink href="https://www.ibm.com/design/research/">
+      IBM Design Research
     </SwitcherLink>
   </>
 );

@@ -52,7 +52,8 @@
 .link {
   padding: 6px 1rem;
   @include carbon--type-style('heading-01');
-  display: block;
+  display: flex;
+  justify-content: space-between;
   text-decoration: none;
   color: $carbon--gray-30;
 
