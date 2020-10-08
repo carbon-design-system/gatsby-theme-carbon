@@ -18,9 +18,11 @@ export default class PageTabs extends React.Component {
     const currentTab = slug.split('/').filter(Boolean).slice(-1)[0];
 
     const pageTabs = tabs.map((tab) => {
-      const slugifiedTab = slugify(tab, { lower: true });
+      const slugifiedTab = slugify(tab, { lower: true, strict: true });
       const selected = slugifiedTab === currentTab;
-      const currentTabRegex = new RegExp(`${currentTab}(?!-)`);
+      // matches with or without trailing slash: /?
+      // matches with or without hash link: (#.*)?
+      const currentTabRegex = new RegExp(`${currentTab}/?(#.*)?$`);
       const href = slug.replace(currentTabRegex, slugifiedTab);
       return (
         <li key={tab} className={cx({ [selectedItem]: selected }, listItem)}>
