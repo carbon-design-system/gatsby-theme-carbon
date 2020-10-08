@@ -27,8 +27,8 @@ module.exports = {
           subDirectory: '/packages/example',
         },
         theme: {
-          homepage: 'dark',
-          interior: 'g10',
+          homepage: 'white',
+          interior: 'white',
         },
       },
     },
