@@ -24,7 +24,7 @@
   background: $ui-05;
 }
 
-.asideNoRule:before {
+.asideNoRule::before {
   content: none;
 }
 
