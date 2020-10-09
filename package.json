@@ -31,6 +31,9 @@
     "plugins": {
       "release-it-yarn-workspaces": true
     },
+    "git": {
+      "pushRepo": "upstream"
+    },
     "npm": false
   },
   "eslintIgnore": [
