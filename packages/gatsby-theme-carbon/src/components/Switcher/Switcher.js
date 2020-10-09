@@ -109,7 +109,7 @@ const DefaultChildren = () => (
       IBM Event Design
     </SwitcherLink>
     <SwitcherDivider>Community</SwitcherDivider>
-    <SwitcherLink href="https://ibm.com/design" isInternal>
+    <SwitcherLink href="https://w3.ibm.com/design/" isInternal>
       IBM Design
     </SwitcherLink>
     <SwitcherDivider>Practices</SwitcherDivider>
