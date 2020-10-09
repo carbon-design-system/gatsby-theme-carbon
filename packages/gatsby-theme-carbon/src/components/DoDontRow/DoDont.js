@@ -26,6 +26,7 @@ export default class DoDont extends React.Component {
       aspectRatio,
       color,
       type,
+      className,
       ...columnProps
     } = this.props;
 
@@ -35,7 +36,7 @@ export default class DoDont extends React.Component {
       [styles.iconIncorrect]: type === 'dont',
     });
 
-    const wrapperClassNames = classnames({
+    const wrapperClassNames = classnames(className, {
       [styles.example]: true,
       [styles.correct]: type === 'do',
       [styles.incorrect]: type === 'dont',

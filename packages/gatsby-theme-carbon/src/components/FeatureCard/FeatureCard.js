@@ -27,9 +27,10 @@ export default class FeatureCard extends React.Component {
       isLink = href.charAt(0) === '/';
     }
 
-    const FeatureCardClassNames = classnames([`${prefix}--feature-card`], {
-      [className]: className,
-    });
+    const FeatureCardClassNames = classnames(
+      `${prefix}--feature-card`,
+      className
+    );
 
     const cardContent = (
       <>

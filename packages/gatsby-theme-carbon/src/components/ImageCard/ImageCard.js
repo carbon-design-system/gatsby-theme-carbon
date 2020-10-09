@@ -36,8 +36,7 @@ export default class ImageCard extends React.Component {
       isLink = href.charAt(0) === '/';
     }
 
-    const ImageCardClassNames = classnames([`${prefix}--image-card`], {
-      [className]: className,
+    const ImageCardClassNames = classnames(className, `${prefix}--image-card`, {
       [`${prefix}--image-card--disabled`]: disabled,
       [`${prefix}--image-card--dark`]: hoverColor === 'dark',
     });

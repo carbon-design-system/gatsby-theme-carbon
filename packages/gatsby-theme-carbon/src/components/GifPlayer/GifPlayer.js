@@ -27,24 +27,19 @@ const GifPlayer = ({ children, color, className, isInDialog }) => {
     setPaused(!paused);
   };
 
-  const controlsClassNames = classnames({
-    [styles.controls]: true,
+  const controlsClassNames = classnames(styles.controls, {
     [styles.dark]: color === 'dark',
   });
 
-  const containerClassNames = classnames({
-    [styles.container]: true,
-    [className]: className,
+  const containerClassNames = classnames(className, styles.container, {
     [styles.gifInDialog]: isInDialog,
   });
 
-  const staticImageClassNames = classnames({
-    [styles.imgHidden]: true,
+  const staticImageClassNames = classnames(styles.imgHidden, {
     [styles.imgDisplayed]: paused,
   });
 
-  const gifClassNames = classnames({
-    [styles.gifDisplayed]: true,
+  const gifClassNames = classnames(styles.gifDisplayed, {
     [styles.gifHidden]: paused,
   });
 

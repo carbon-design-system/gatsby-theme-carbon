@@ -34,11 +34,14 @@ export default class ResourceCard extends React.Component {
       isLink = href.charAt(0) === '/';
     }
 
-    const ResourceCardClassNames = classnames([`${prefix}--resource-card`], {
-      [className]: className,
-      [`${prefix}--resource-card--disabled`]: disabled,
-      [`${prefix}--resource-card--dark`]: color === 'dark',
-    });
+    const ResourceCardClassNames = classnames(
+      className,
+      `${prefix}--resource-card`,
+      {
+        [`${prefix}--resource-card--disabled`]: disabled,
+        [`${prefix}--resource-card--dark`]: color === 'dark',
+      }
+    );
 
     const carbonTileclassNames = classnames([`${prefix}--tile`], {
       [`${prefix}--tile--clickable`]: href !== undefined,

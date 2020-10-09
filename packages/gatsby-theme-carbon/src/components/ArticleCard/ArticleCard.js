@@ -35,11 +35,14 @@ export default class ArticleCard extends React.Component {
       isLink = href.charAt(0) === '/';
     }
 
-    const ArticleCardClassNames = classnames([`${prefix}--article-card`], {
-      [className]: className,
-      [`${prefix}--article-card--disabled`]: disabled,
-      [`${prefix}--article-card--dark`]: color === 'dark',
-    });
+    const ArticleCardClassNames = classnames(
+      className,
+      `${prefix}--article-card`,
+      {
+        [`${prefix}--article-card--disabled`]: disabled,
+        [`${prefix}--article-card--dark`]: color === 'dark',
+      }
+    );
 
     const aspectRatioClassNames = classnames(
       [`${prefix}--aspect-ratio`],

@@ -1,10 +1,11 @@
 import React from 'react';
+import cx from 'classnames';
 import AutolinkHeader from '../AutolinkHeader';
 
 import { h2 } from './Markdown.module.scss';
 
-const H2 = ({ children, ...rest }) => (
-  <AutolinkHeader className={h2} is="h2" {...rest}>
+const H2 = ({ children, className, ...rest }) => (
+  <AutolinkHeader className={cx(className, h2)} is="h2" {...rest}>
     {children}
   </AutolinkHeader>
 );

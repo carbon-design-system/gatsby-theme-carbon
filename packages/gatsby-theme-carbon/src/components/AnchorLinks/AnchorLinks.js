@@ -5,9 +5,9 @@ import { list, listSmall, multipleColumns } from './AnchorLinks.module.scss';
 
 export default class AnchorLinks extends React.Component {
   render() {
-    const { children, small } = this.props;
+    const { children, small, className } = this.props;
     const isColumn = React.Children.count(children) > 6;
-    const classNames = classnames(list, {
+    const classNames = classnames(list, className, {
       [listSmall]: small,
       [multipleColumns]: isColumn,
     });
