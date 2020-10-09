@@ -5,9 +5,21 @@
 // Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
 
 import { white, g10, g100 } from '@carbon/themes';
+import {
+  teal20,
+  blue40,
+  cyan40,
+  magenta40,
+  purple40,
+  gray90,
+  gray100,
+  white0,
+} from '@carbon/elements';
 
 const getTheme = (interiorTheme) => {
   let theme = g10; // default
+
+  const isLightTheme = interiorTheme === 'white' || interiorTheme === 'g10';
 
   if (interiorTheme === 'dark') {
     theme = g100;
@@ -17,18 +29,26 @@ const getTheme = (interiorTheme) => {
     theme = white;
   }
 
-  const { ui01, text01 } = theme;
+  theme = {
+    ...theme,
+    plainBackground: isLightTheme ? gray100 : gray90,
+    property: teal20,
+    tag: blue40,
+    important: cyan40,
+    string: magenta40,
+    boolean: purple40,
+  };
 
   return {
     plain: {
-      backgroundColor: ui01,
-      color: text01,
+      backgroundColor: theme.plainBackground,
+      color: white0,
     },
     styles: [
       {
         types: ['comment', 'prolog', 'doctype', 'cdata'],
         style: {
-          color: text01,
+          color: theme.text02,
         },
       },
       {
@@ -40,25 +60,25 @@ const getTheme = (interiorTheme) => {
       {
         types: ['tag', 'operator'],
         style: {
-          color: text01,
+          color: theme.tag,
         },
       },
       {
         types: ['property', 'function', 'attr-name'],
         style: {
-          color: text01,
+          color: theme.property,
         },
       },
       {
         types: ['variable'],
         style: {
-          color: text01,
+          color: theme.inverse01, // white
         },
       },
       {
         types: ['string'],
         style: {
-          color: text01,
+          color: theme.string,
         },
       },
       {
@@ -84,7 +104,7 @@ const getTheme = (interiorTheme) => {
           'placeholder',
         ],
         style: {
-          color: text01,
+          color: theme.boolean,
         },
       },
       {
@@ -115,7 +135,7 @@ const getTheme = (interiorTheme) => {
       {
         types: ['important'],
         style: {
-          color: text01,
+          color: theme.important,
         },
       },
     ],

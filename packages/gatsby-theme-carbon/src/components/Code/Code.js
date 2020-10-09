@@ -45,7 +45,7 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
   };
 
   return (
-    <Row className={styles.row}>
+    <Row className={cx(styles.row)}>
       <PathRow src={src} path={path}>
         {children}
       </PathRow>
@@ -78,7 +78,9 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
       </Highlight>
       {hasMoreThanNineLines && (
         <button
-          className={styles.showMoreButton}
+          className={cx(styles.showMoreButton, {
+            [styles.dark]: interiorTheme === 'dark',
+          })}
           onClick={() => setShouldShowMore(!shouldShowMore)}
           type="button">
           {shouldShowMore ? (
