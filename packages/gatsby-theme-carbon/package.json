@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-carbon",
-  "version": "1.26.14",
+  "version": "1.26.15",
   "main": "index.js",
   "author": "vpicone <vp@vincepic.one> (@vpicone)",
   "repository": {
@@ -8,6 +8,11 @@
     "type": "git"
   },
   "license": "Apache 2.0",
+  "release-it": {
+    "npm": {
+      "skipChecks": false
+    }
+  },
   "peerDependencies": {
     "gatsby": "^2.20.4",
     "react": "^16.13.1",
