@@ -3,7 +3,7 @@ on: workflow_dispatch
 
 jobs:
   release:
-    if: contains(["alisonjoseph","vpicone", "sstrubberg", "jnm2377"], github.actor)
+    if: contains('["alisonjoseph","vpicone", "sstrubberg", "jnm2377"]', github.actor)
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
