@@ -8,6 +8,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
+    - uses: bahmutov/npm-install@v1.4.3
     - name: Run release command
       run: |
         echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
