@@ -54,6 +54,7 @@
   ],
   "husky": {
     "hooks": {
+      "commit-msg": "commitlint --edit $HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
   },
@@ -69,6 +70,8 @@
     ]
   },
   "dependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@release-it/conventional-changelog": "^2.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
