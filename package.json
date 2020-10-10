@@ -52,11 +52,6 @@
     "**/.cache/",
     "**/build/"
   ],
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-angular"
-    ]
-  },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint --edit $HUSKY_GIT_PARAMS",
