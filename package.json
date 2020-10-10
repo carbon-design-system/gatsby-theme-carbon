@@ -42,7 +42,7 @@
       "release": true
     },
     "git": {
-      "pushRepo": "upstream",
+      "pushRepo": "git@github.com:carbon-design-system/gatsby-theme-carbon.git",
       "commitMessage": "chore: release ${version}"
     },
     "npm": false
