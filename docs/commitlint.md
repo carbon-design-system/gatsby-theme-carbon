@@ -13,16 +13,16 @@ to our guidelines.
 We need a commit message that describes what's happening in your commit, let's
 build one.
 
+### Type
+
 Commit messages need a type, pick the one below that best matches your commit:
 
-### Release
-
-Commits in this category will trigger a release of the package
+**Release:** commits in this category will trigger a release of the package
 
 - fix: a bug fix (triggers a `patch` release)
 - feat: a new feature (triggers a `minor` release)
 
-### No release
+**No release:** commits in this category won't trigger a release
 
 - build: changes that affect the build system
 - ci: changes to our CI configuration
@@ -34,6 +34,35 @@ Commits in this category will trigger a release of the package
 
 Commit messages should look like this:
 
+### Structure
+
+Your commit should look like this (keep everything lowercase, even React
+components):
+
+```bash
+type(scope): subject # scope is optional, it refers to a particular component/feature
 ```
-type(scope): subject
+
+The `subject` is just a short summary of the code changes
+
+### Examples
+
+```bash
+feat: add RTL support
+```
+
+```bash
+fix(aside): remove aside margin
+```
+
+### Fixing the PR
+
+1. On the command line, navigate to the repository that contains the commit you
+   want to amend
+2. Type `git commit --amend -m "type: subject"` replacing the message with your
+   own
+3. Use the `push --force` command to force push over the old commit:
+
+```bash
+git push --force _my-branch_
 ```
