@@ -1,8 +1,8 @@
 .tabs-container {
   margin: 0;
   width: 100%;
-  background: $ui-background;
-  border-bottom: 1px solid $ui-03;
+  background: $carbon--black-100;
+  border-bottom: 1px solid $carbon--gray-80;
   position: sticky;
   top: 3rem;
   z-index: 6000; /* old z('header') #940 */
@@ -27,7 +27,7 @@
   padding: 13px $spacing-05 0 $spacing-05;
   text-decoration: none;
   line-height: 1;
-  color: var(--cds-text-01);
+  color: $carbon--white-0;
   white-space: nowrap;
   border-top: 3px solid transparent; // 3px accessibility minimum
   height: 3rem;
@@ -40,7 +40,7 @@
   }
 
   &:hover {
-    background: $hover-ui;
+    background: $carbon--gray-80;
   }
 }
 
@@ -50,9 +50,9 @@
 }
 
 .list-item:not(.selected-item) .link {
-  color: var(--cds-text-01);
+  color: $carbon--white-0;
 
   &:hover {
-    color: $text-01;
+    color: $carbon--white-0;
   }
 }

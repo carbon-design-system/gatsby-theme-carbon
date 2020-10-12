@@ -5,6 +5,7 @@ description: Guide for configuring the theme’s various settings
 
 <PageDescription>
 
+
 Gatsby themes allow you to override configuration from the theme by defining the
 same property in your `gatsby-config.js` at the root of your project. You can
 see the default configuration provided by the theme’s
@@ -12,6 +13,7 @@ see the default configuration provided by the theme’s
 file.
 
 </PageDescription>
+
 
 <AnchorLinks>
   <AnchorLink>Site metadata</AnchorLink>
@@ -129,7 +131,7 @@ plugins: [
       resolve: 'gatsby-theme-carbon',
       options: {
 		// will get added to default [300, 400, 600]
-        additionalFontWeights: ['200', '200i]
+        additionalFontWeights: ['200', '200i']
       },
     },
   ],
@@ -219,10 +221,12 @@ When enabled, your header navigation will look like the image below:
 <Row>
 <Column colMd={8} colLg={8}>
 
+
 ![Header navigation style](header-nav-config.jpg)
 
 </Column>
 </Row>
+
 
 With the header navigation style enabled, the content on your page will be
 further left-aligned to allow for more content space.
