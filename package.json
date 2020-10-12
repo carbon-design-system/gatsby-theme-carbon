@@ -34,7 +34,7 @@
     "plugins": {
       "release-it-yarn-workspaces": true,
       "@release-it/conventional-changelog": {
-        "preset": "angular",
+        "preset": "conventionalcommits",
         "infile": "CHANGELOG.md"
       }
     },
@@ -42,7 +42,8 @@
       "release": true
     },
     "git": {
-      "pushRepo": "upstream"
+      "pushRepo": "git@github.com:carbon-design-system/gatsby-theme-carbon.git",
+      "commitMessage": "chore: release ${version}"
     },
     "npm": false
   },
@@ -54,6 +55,7 @@
   ],
   "husky": {
     "hooks": {
+      "commit-msg": "commitlint --edit $HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
   },
@@ -69,6 +71,8 @@
     ]
   },
   "dependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@release-it/conventional-changelog": "^2.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
@@ -93,5 +97,5 @@
     "stylelint-scss": "^3.16.0",
     "yarn": "^1.22.4"
   },
-  "version": "1.26.17"
+  "version": "1.26.18"
 }
