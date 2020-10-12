@@ -1,0 +1,19 @@
+name: Release
+on: workflow_dispatch
+
+jobs:
+  release:
+    if: contains('["alisonjoseph","vpicone", "sstrubberg", "jnm2377"]', github.actor)
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - uses: bahmutov/npm-install@v1.4.3
+    - name: Run release command
+      run: |
+        echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+        npx release-it --ci --dry-run
+      env:
+       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
