@@ -103,14 +103,10 @@ const DefaultChildren = () => (
       Carbon Design System
     </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/standards/web/ibm-dotcom-library/">
-      IBM.com Library
+      Carbon for IBM.com 
     </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/design/event/">
       IBM Event Design
-    </SwitcherLink>
-    <SwitcherDivider>Community</SwitcherDivider>
-    <SwitcherLink href="https://w3.ibm.com/design/" isInternal>
-      IBM Design
     </SwitcherLink>
     <SwitcherDivider>Practices</SwitcherDivider>
     <SwitcherLink href="https://www.ibm.com/design/thinking/">
@@ -124,6 +120,10 @@ const DefaultChildren = () => (
     </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/design/research/">
       IBM Design Research
+    </SwitcherLink>
+    <SwitcherDivider>Community</SwitcherDivider>
+    <SwitcherLink href="https://w3.ibm.com/design/" isInternal>
+      IBM Design
     </SwitcherLink>
   </>
 );
