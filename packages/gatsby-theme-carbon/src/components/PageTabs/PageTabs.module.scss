@@ -1,7 +1,7 @@
 .tabs-container {
   margin: 0;
   width: 100%;
-  background: var(--cds-ui-background);
+  background: $ui-background;
   border-bottom: 1px solid $ui-03;
   position: sticky;
   top: 3rem;
