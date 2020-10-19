@@ -8,7 +8,6 @@ import { white, g10, g100 } from '@carbon/themes';
 import {
   teal20,
   blue40,
-  cyan40,
   magenta40,
   purple40,
   gray90,
@@ -34,7 +33,7 @@ const getTheme = (interiorTheme) => {
     plainBackground: isLightTheme ? gray100 : gray90,
     property: teal20,
     tag: blue40,
-    important: cyan40,
+    important: blue40,
     string: magenta40,
     boolean: purple40,
   };
