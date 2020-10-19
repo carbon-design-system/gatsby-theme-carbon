@@ -37,11 +37,10 @@
 }
 
 .divider {
-  margin: 32px 1rem 0 1rem;
+  margin: 32px 1rem 8px 1rem;
   color: $carbon--gray-70;
   padding-bottom: 4px;
   border-bottom: 1px solid $carbon--gray-70;
-  margin-bottom: 8px;
 }
 
 .divider span {
@@ -52,7 +51,8 @@
 .link {
   padding: 6px 1rem;
   @include carbon--type-style('heading-01');
-  display: block;
+  display: flex;
+  justify-content: space-between;
   text-decoration: none;
   color: $carbon--gray-30;
 
