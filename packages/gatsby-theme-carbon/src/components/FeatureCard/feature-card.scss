@@ -89,4 +89,10 @@
 .#{$prefix}--feature-card .gatsby-resp-image-wrapper {
   margin-left: 0;
   margin-right: 0;
+  @include carbon--breakpoint('lg') {
+    max-width: calc(100%) !important;
+  }
+  @include carbon--breakpoint('max') {
+    max-width: calc(100% - 1rem) !important;
+  }
 }
