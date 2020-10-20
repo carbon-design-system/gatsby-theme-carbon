@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import style from './PageHeader.module.scss';
+import styles from './PageHeader.module.scss';
 
 const PageHeader = ({ title, tabs = [] }) => (
   <div
-    className={cx(style.pageHeader, {
-      [style.withTabs]: tabs.length,
+    className={cx(styles.pageHeader, {
+      [styles.withTabs]: tabs.length,
     })}>
     <div className="bx--grid">
       <div className="bx--row">
         <div className="bx--col-lg-12">
-          <h1 id="page-title" className={style.text}>
+          <h1 id="page-title" className={styles.text}>
             {title}
           </h1>
         </div>

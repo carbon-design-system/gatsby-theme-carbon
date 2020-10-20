@@ -20,7 +20,6 @@ file.
   <AnchorLink>Manifest</AnchorLink>
   <AnchorLink>Theming</AnchorLink>
   <AnchorLink>Favicon</AnchorLink>
-  <AnchorLink>Additional font weights</AnchorLink>
   <AnchorLink>Image compression</AnchorLink>
   <AnchorLink>Global search</AnchorLink>
   <AnchorLink>Navigation style</AnchorLink>
@@ -115,23 +114,6 @@ plugins: [
       resolve: 'gatsby-theme-carbon',
       options: {
         iconPath: './src/images/custom-icon-512.jpg'
-      },
-    },
-  ],
-```
-
-## Additional font weights
-
-If needed, you can add support for additional Plex font weights. Don’t forget to
-specify italics for the additional weights if needed.
-
-```js
-plugins: [
-    {
-      resolve: 'gatsby-theme-carbon',
-      options: {
-		// will get added to default [300, 400, 600]
-        additionalFontWeights: ['200', '200i']
       },
     },
   ],
@@ -278,8 +260,6 @@ plugins: [
 
 ## Other options
 
-- `additionalFontWeights` – add support for additional Plex font weights. Don’t
-  forget to specify italics for the additional weights if needed.
 - `mdxExtensions` – change the file extensions processed by `gatsby-mdx`
   (default ['.mdx', '.md']).
 - `pngCompressionSpeed` - a speed/quality trade-off from 1 (brute-force) to 10
@@ -298,7 +278,6 @@ plugins: [
     {
       resolve: 'gatsby-theme-carbon',
       options: {
-        additionalFontWeights: ['200', '200i'],
         mdxExtensions: ['.mdx'],
         titleType: 'append'
       },

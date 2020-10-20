@@ -7,7 +7,7 @@ import LeftNavItem from './LeftNavItem';
 import LeftNavResourceLinks from './ResourceLinks';
 
 import LeftNavWrapper from './LeftNavWrapper';
-import style from './LeftNav.module.scss';
+import styles from './LeftNav.module.scss';
 import useMetadata from '../../util/hooks/useMetadata';
 
 const LeftNav = (props) => {
@@ -39,9 +39,9 @@ const LeftNav = (props) => {
 
   const getLeftNavClassNames = () => {
     if (props.theme === 'dark') {
-      return style.sideNavDark;
+      return styles.sideNavDark;
     }
-    return style.sideNavWhite;
+    return styles.sideNavWhite;
   };
 
   const navItems = useNavItems();

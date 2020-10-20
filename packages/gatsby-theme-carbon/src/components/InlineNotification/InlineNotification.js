@@ -23,7 +23,7 @@ const InlineNotification = ({ children, className, kind = 'info' }) => {
           kind={kind}
           title=""
           subtitle={children}
-          className={cx({ [styles.darkMode]: interiorTheme === 'dark' })}
+          className={interiorTheme === 'dark' && styles.darkMode}
         />
       </Column>
     </Row>
