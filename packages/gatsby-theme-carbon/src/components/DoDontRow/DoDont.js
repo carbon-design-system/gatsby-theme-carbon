@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import cx from 'classnames';
 import { CheckmarkFilled24, Misuse24 } from '@carbon/icons-react';
 import { Column } from '../Grid';
 import styles from './DoDontRow.module.scss';
@@ -30,14 +30,12 @@ export default class DoDont extends React.Component {
       ...columnProps
     } = this.props;
 
-    const iconClassNames = classnames({
-      [styles.icon]: true,
+    const iconClassNames = cx(styles.icon, {
       [styles.iconCorrect]: type === 'do',
       [styles.iconIncorrect]: type === 'dont',
     });
 
-    const wrapperClassNames = classnames(className, {
-      [styles.example]: true,
+    const wrapperClassNames = cx(className, styles.example, {
       [styles.correct]: type === 'do',
       [styles.incorrect]: type === 'dont',
       [styles.square]: aspectRatio === '1:1',

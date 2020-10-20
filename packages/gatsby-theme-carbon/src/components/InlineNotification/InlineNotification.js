@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import cx from 'classnames';
 import { InlineNotification as CarbonInlineNotification } from 'carbon-components-react';
 import { Row, Column } from '../Grid';
 
@@ -8,7 +8,7 @@ import { notification } from './InlineNotification.module.scss';
 
 const InlineNotification = ({ children, className, kind }) => (
   <Row>
-    <Column colLg={8} colMd={6} className={classnames(notification, className)}>
+    <Column colLg={8} colMd={6} className={cx(notification, className)}>
       <CarbonInlineNotification
         lowContrast
         hideCloseButton

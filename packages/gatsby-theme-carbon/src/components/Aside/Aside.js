@@ -1,5 +1,5 @@
 import React from 'react';
-import classnames from 'classnames';
+import cx from 'classnames';
 import { aside } from './Aside.module.scss';
 
 export default class Aside extends React.Component {
@@ -7,7 +7,7 @@ export default class Aside extends React.Component {
     const { children, className, ...rest } = this.props;
 
     return (
-      <aside className={classnames(aside, className)} {...rest}>
+      <aside className={cx(aside, className)} {...rest}>
         {children}
       </aside>
     );

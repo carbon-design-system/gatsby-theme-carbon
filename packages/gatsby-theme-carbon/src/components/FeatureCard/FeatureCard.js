@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import cx from 'classnames';
 import { Link } from 'gatsby';
 import { settings } from 'carbon-components';
 import { Row, Column } from '../Grid';
@@ -27,10 +27,7 @@ export default class FeatureCard extends React.Component {
       isLink = href.charAt(0) === '/';
     }
 
-    const FeatureCardClassNames = classnames(
-      `${prefix}--feature-card`,
-      className
-    );
+    const FeatureCardClassNames = cx(`${prefix}--feature-card`, className);
 
     const cardContent = (
       <>

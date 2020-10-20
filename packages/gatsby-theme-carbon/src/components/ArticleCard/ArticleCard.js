@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import cx from 'classnames';
 import { Link } from 'gatsby';
 import {
   Launch20,
@@ -35,21 +35,17 @@ export default class ArticleCard extends React.Component {
       isLink = href.charAt(0) === '/';
     }
 
-    const ArticleCardClassNames = classnames(
-      className,
-      `${prefix}--article-card`,
-      {
-        [`${prefix}--article-card--disabled`]: disabled,
-        [`${prefix}--article-card--dark`]: color === 'dark',
-      }
-    );
+    const ArticleCardClassNames = cx(className, `${prefix}--article-card`, {
+      [`${prefix}--article-card--disabled`]: disabled,
+      [`${prefix}--article-card--dark`]: color === 'dark',
+    });
 
-    const aspectRatioClassNames = classnames(
+    const aspectRatioClassNames = cx(
       [`${prefix}--aspect-ratio`],
       [`${prefix}--aspect-ratio--2x1`]
     );
 
-    const carbonTileclassNames = classnames(
+    const carbonTileclassNames = cx(
       [`${prefix}--tile`],
       [`${prefix}--tile--clickable`]
     );

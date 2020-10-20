@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import cx from 'classnames';
 import { Link, withPrefix } from 'gatsby';
 import {
   ArrowRight20,
@@ -34,16 +34,12 @@ export default class ResourceCard extends React.Component {
       isLink = href.charAt(0) === '/';
     }
 
-    const ResourceCardClassNames = classnames(
-      className,
-      `${prefix}--resource-card`,
-      {
-        [`${prefix}--resource-card--disabled`]: disabled,
-        [`${prefix}--resource-card--dark`]: color === 'dark',
-      }
-    );
+    const ResourceCardClassNames = cx(className, `${prefix}--resource-card`, {
+      [`${prefix}--resource-card--disabled`]: disabled,
+      [`${prefix}--resource-card--dark`]: color === 'dark',
+    });
 
-    const carbonTileclassNames = classnames([`${prefix}--tile`], {
+    const carbonTileclassNames = cx([`${prefix}--tile`], {
       [`${prefix}--tile--clickable`]: href !== undefined,
     });
 
@@ -108,7 +104,7 @@ export default class ResourceCard extends React.Component {
     return (
       <div className={ResourceCardClassNames}>
         <div
-          className={classnames(
+          className={cx(
             `${prefix}--aspect-ratio`,
             `${prefix}--aspect-ratio--${aspectRatio.replace(':', 'x')}`
           )}>

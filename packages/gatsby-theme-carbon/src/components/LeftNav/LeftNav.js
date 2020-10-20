@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useEffect } from 'react';
-import classnames from 'classnames';
+import cx from 'classnames';
 import { SideNav, SideNavItems } from 'carbon-components-react';
 import { useNavItems } from '../../util/NavItems';
 
@@ -57,9 +57,8 @@ const LeftNav = (props) => {
         expanded={navigationStyle ? leftNavIsOpen : true}
         defaultExpanded={!navigationStyle}
         isPersistent={!navigationStyle}
-        className={classnames({
+        className={cx('bx--side-nav--website', {
           [sideNavDark]: props.theme === 'dark' || props.homepage,
-          'bx--side-nav--website': true,
           'bx--side-nav--website--dark':
             props.theme === 'dark' || props.homepage,
           'bx--side-nav--website--light':
