@@ -1,22 +1,22 @@
 // White theme
 
-.side-nav--white {
-  background-color: $carbon--white-0 !important;
+nav.side-nav--white {
+  background-color: $carbon--white-0;
   border-right: 1px solid $carbon--gray-20;
 }
 
 // Dark theme
 
-.side-nav--dark {
+nav.side-nav--dark {
   --cds-ui-03: #{$carbon--gray-80};
   padding-top: $spacing-05;
-  background-color: $carbon--gray-100 !important;
+  background-color: $carbon--gray-100;
   border-right: 1px solid $carbon--gray-80;
 }
 
 // Chevron color
-.side-nav--dark :global(svg) {
-  fill: $carbon--gray-30 !important;
+nav.side-nav--dark :global(svg) {
+  fill: $carbon--gray-30;
 }
 
 // Font color for accordion listed items in the nav
@@ -27,11 +27,6 @@
 // Font color for non-accordion listed items in the nav
 .side-nav--dark :global(.bx--side-nav__link-text) {
   color: $carbon--gray-30 !important;
-}
-
-// Background color for nested accordion items
-.side-nav--dark :global(a.bx--side-nav__link--current) {
-  background: $carbon--gray-80 !important;
 }
 
 // Outline color for nav items
@@ -58,6 +53,21 @@
   color: $carbon--gray-30;
 }
 
+// Icons
+.outboundLink :global(.bx--side-nav__icon:not(.bx--side-nav__submenu-chevron)) {
+  display: inline-block;
+  flex: 0;
+  margin-right: 0;
+  height: 1rem;
+}
+
+// Background for selected top level accordion when *not* hovering
+.side-nav--dark
+  :global(.bx--side-nav__item--active
+    .bx--side-nav__submenu[aria-expanded='false']) {
+  background: $carbon--gray-80;
+}
+
 // Font color for non-accordion listed items when hovering over the <li>
 .side-nav--dark
   :global(.bx--side-nav__link):hover
@@ -65,8 +75,10 @@
   color: $carbon--gray-10 !important;
 }
 
-.current-item {
-  background-color: $carbon--gray-20 !important;
+// Background color for nested accordion items
+.side-nav--dark.side-nav--dark
+  :global(.bx--side-nav__menu .bx--side-nav__link.bx--side-nav__link--current) {
+  background: $carbon--gray-80;
 }
 
 .current-item span {
@@ -74,8 +86,8 @@
 }
 
 // Dark theme current selected nav item
-[class*='--side-nav--dark'] .current-item {
-  background-color: $carbon--gray-80 !important;
+nav.side-nav--dark a.current-item {
+  background-color: $carbon--gray-80;
 }
 
 [class*='--side-nav--dark'] .current-item span {
@@ -98,12 +110,4 @@
 .outboundLink {
   flex-direction: row-reverse;
   justify-content: space-between;
-}
-
-// Icons
-.outboundLink div {
-  display: inline-block !important;
-  flex: 0;
-  margin-right: 0 !important;
-  height: 1rem;
 }

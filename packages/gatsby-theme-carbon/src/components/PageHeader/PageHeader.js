@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import styles from './PageHeader.module.scss';
 
-const PageHeader = ({ title, tabs = [] }) => (
+const PageHeader = ({ title, theme, tabs = [] }) => (
   <div
     className={cx(styles.pageHeader, {
       [styles.withTabs]: tabs.length,
+      [styles.darkMode]: theme === 'dark',
     })}>
     <div className="bx--grid">
       <div className="bx--row">

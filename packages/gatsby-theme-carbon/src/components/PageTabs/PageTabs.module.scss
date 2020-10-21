@@ -2,7 +2,6 @@
   margin: 0;
   width: 100%;
   background: $carbon--black-100;
-  border-bottom: 1px solid $carbon--gray-80;
   position: sticky;
   top: 3rem;
   z-index: 6000; /* old z('header') #940 */
@@ -46,7 +45,7 @@
 
 .selected-item .link {
   border-top: 3px solid $brand-01; // 3px accessibility minimum
-  background: var(--cds-ui-03);
+  background: $carbon--gray-80;
 }
 
 .list-item:not(.selected-item) .link {
