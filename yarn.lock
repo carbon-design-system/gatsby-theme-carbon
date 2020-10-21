@@ -15722,7 +15722,7 @@ release-it@^13.3.2:
     yaml "1.10.0"
     yargs-parser "19.0.4"
 
-release-it@^14.2.0:
+release-it@^14.0.4:
   version "14.2.0"
   resolved "https://registry.npmjs.org/release-it/-/release-it-14.2.0.tgz#395804c3b14893cd32ae5e17b7b995906c44f7ea"
   integrity sha512-34m8YlmZOUs+/mJhiVx11hcJEi67CAxtqqWXGGszc0uoEUdojUNTm1cWCEW/kuJbv6bMhmb8jP8B/8qmGjiKyQ==
