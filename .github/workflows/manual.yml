@@ -6,14 +6,25 @@ jobs:
     if: contains('["alisonjoseph","vpicone", "sstrubberg", "jnm2377"]', github.actor)
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-    - uses: bahmutov/npm-install@v1.4.3
-    - name: Run release command
-      run: |
-        echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
-        npx release-it --ci
-      env:
-       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
+      - name: Set up node
+        uses: actions/setup-node@v2-beta
+        with:
+          always-auth: true
+          node-version: 14.x
+          registry-url: 'https://registry.npmjs.org'
+
+      # fetch-depth: 0 ensures we get commit messages for changelog/versioning
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Run release command
+        run: yarn run release:dry
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
