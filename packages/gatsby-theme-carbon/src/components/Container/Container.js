@@ -39,6 +39,8 @@ const Container = ({ children, homepage, theme }) => {
     container: true,
     'container--homepage': homepage,
     'container--dark': theme === 'dark',
+    'container--white': theme === 'white',
+    'container--g10': theme === 'g10',
     'container--header--nav': navigationStyle,
   });
 

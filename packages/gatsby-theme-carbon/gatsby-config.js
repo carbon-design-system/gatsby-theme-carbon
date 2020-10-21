@@ -2,6 +2,12 @@ const path = require('path');
 const { uiBackground, interactive01 } = require('@carbon/elements');
 const defaultLunrOptions = require('./config/lunr-options');
 
+const carbonThemes = {
+  white: require.resolve('./src/styles/internal/white.scss'),
+  g10: require.resolve('./src/styles/internal/g10.scss'),
+  dark: require.resolve('./src/styles/internal/g100.scss'),
+};
+
 module.exports = (themeOptions) => {
   const repositoryDefault = {
     baseUrl: '',
@@ -9,7 +15,10 @@ module.exports = (themeOptions) => {
     branch: 'master',
   };
 
+  const defaultTheme = { homepage: 'dark', interior: 'g10' };
+
   const {
+    theme: themeOption,
     isSearchEnabled = true,
     navigationStyle = '',
     withWebp = false,
@@ -25,6 +34,8 @@ module.exports = (themeOptions) => {
     gatsbyPluginSharpOptions = {},
     isServiceWorkerEnabled = false,
   } = themeOptions;
+
+  const theme = { ...defaultTheme, ...themeOption };
 
   const optionalPlugins = [];
 
@@ -64,6 +75,8 @@ module.exports = (themeOptions) => {
     siteMetadata: {
       isSearchEnabled,
       navigationStyle,
+      homepageTheme: theme.homepage,
+      interiorTheme: theme.interior,
       isServiceWorkerEnabled,
       title: 'Gatsby Theme Carbon',
       description:
@@ -118,7 +131,10 @@ module.exports = (themeOptions) => {
       {
         resolve: `gatsby-plugin-sass-resources`,
         options: {
-          resources: [require.resolve('./src/styles/internal/resources.scss')],
+          resources: [
+            carbonThemes[theme.interior],
+            require.resolve('./src/styles/internal/resources.scss'),
+          ],
         },
       },
       `gatsby-plugin-emotion`,

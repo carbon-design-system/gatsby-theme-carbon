@@ -16,25 +16,20 @@
   position: relative;
   display: inline-block;
   transition: color $transition--base;
-  color: $carbon--gray-100;
+  color: currentColor;
   text-decoration: none;
   margin-bottom: $spacing-03;
   margin-left: $spacing-06;
 
   &:hover {
-    color: $interactive-01;
-
-    &::before {
-      color: $interactive-01;
-    }
+    color: $link-01;
   }
 
   &:before {
     content: '\21B3'; //"↳"
     position: absolute;
     left: -$spacing-06;
-    color: $interactive-02;
-    transition: color $transition--base;
+    color: currentColor;
     cursor: pointer;
   }
 }
@@ -48,22 +43,5 @@
 .multiple-columns {
   @include carbon--breakpoint('md') {
     column-count: 2;
-  }
-}
-
-// dark background
-:global(.container--dark) .link {
-  color: $carbon--white-0;
-
-  &:before {
-    color: $carbon--white-0;
-  }
-
-  &:hover {
-    color: $carbon--blue-40;
-
-    &::before {
-      color: $carbon--blue-40;
-    }
   }
 }

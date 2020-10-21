@@ -72,3 +72,5 @@ yarn-error.log
 .vscode/settings.json
 .vscode/tasks.json
 .vercel
+# Local Netlify folder
+.netlify

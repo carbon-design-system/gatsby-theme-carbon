@@ -5,6 +5,7 @@ description: Guide for configuring the theme’s various settings
 
 <PageDescription>
 
+
 Gatsby themes allow you to override configuration from the theme by defining the
 same property in your `gatsby-config.js` at the root of your project. You can
 see the default configuration provided by the theme’s
@@ -13,11 +14,12 @@ file.
 
 </PageDescription>
 
+
 <AnchorLinks>
   <AnchorLink>Site metadata</AnchorLink>
   <AnchorLink>Manifest</AnchorLink>
+  <AnchorLink>Theming</AnchorLink>
   <AnchorLink>Favicon</AnchorLink>
-  <AnchorLink>Additional font weights</AnchorLink>
   <AnchorLink>Image compression</AnchorLink>
   <AnchorLink>Global search</AnchorLink>
   <AnchorLink>Navigation style</AnchorLink>
@@ -74,6 +76,26 @@ siteMetadata: {
   ],
 ```
 
+## Theming
+
+With theming, you can control the colors being used on the homepage as well as
+the interior pages. Your choices include `white`, `dark`, and `g10`. The default
+for the homepage and the interior theme are dark and g10, respectively.
+
+```js
+  plugins: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        theme: {
+          homepage: 'dark',
+          interior: 'g10',
+        },
+      },
+    },
+  ],
+```
+
 ## Favicon
 
 If you need to override the default favicon, you can do so by passing a relative
@@ -92,23 +114,6 @@ plugins: [
       resolve: 'gatsby-theme-carbon',
       options: {
         iconPath: './src/images/custom-icon-512.jpg'
-      },
-    },
-  ],
-```
-
-## Additional font weights
-
-If needed, you can add support for additional Plex font weights. Don’t forget to
-specify italics for the additional weights if needed.
-
-```js
-plugins: [
-    {
-      resolve: 'gatsby-theme-carbon',
-      options: {
-		// will get added to default [300, 400, 600]
-        additionalFontWeights: ['200', '200i]
       },
     },
   ],
@@ -198,10 +203,12 @@ When enabled, your header navigation will look like the image below:
 <Row>
 <Column colMd={8} colLg={8}>
 
+
 ![Header navigation style](header-nav-config.jpg)
 
 </Column>
 </Row>
+
 
 With the header navigation style enabled, the content on your page will be
 further left-aligned to allow for more content space.
@@ -253,8 +260,6 @@ plugins: [
 
 ## Other options
 
-- `additionalFontWeights` – add support for additional Plex font weights. Don’t
-  forget to specify italics for the additional weights if needed.
 - `mdxExtensions` – change the file extensions processed by `gatsby-mdx`
   (default ['.mdx', '.md']).
 - `pngCompressionSpeed` - a speed/quality trade-off from 1 (brute-force) to 10
@@ -273,7 +278,6 @@ plugins: [
     {
       resolve: 'gatsby-theme-carbon',
       options: {
-        additionalFontWeights: ['200', '200i'],
         mdxExtensions: ['.mdx'],
         titleType: 'append'
       },
