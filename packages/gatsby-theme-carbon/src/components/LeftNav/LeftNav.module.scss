@@ -24,7 +24,7 @@ nav.side-nav--dark :global(svg) {
   color: $carbon--gray-30;
 }
 
-// Font color for non-accordion listed items in the nav
+// Font color for non-accordion listed items in the nav. Carbon upstream styles make it extremely challenging to pin down this style.
 .side-nav--dark :global(.bx--side-nav__link-text) {
   color: $carbon--gray-30 !important;
 }
@@ -35,13 +35,13 @@ nav.side-nav--dark :global(svg) {
   outline: 2px solid $carbon--white-0;
 }
 
-// Font and background color for accordion listed items in the nav on hover
+// Font and background color for accordion listed items in the nav on hover. Carbon upstream styles make it extremely challenging to pin down this style.
 .side-nav--dark :global(.bx--side-nav__submenu):hover {
   background-color: $carbon--gray-80 !important;
   color: $carbon--gray-10;
 }
 
-// Background for non-accordion listed items on hover
+// Background for non-accordion listed items on hover. Carbon upstream styles make it extremely challenging to pin down this style.
 .side-nav--dark :global(.bx--side-nav__link):hover {
   background-color: $carbon--gray-80 !important;
 }
@@ -68,7 +68,7 @@ nav.side-nav--dark :global(svg) {
   background: $carbon--gray-80;
 }
 
-// Font color for non-accordion listed items when hovering over the <li>
+// Font color for non-accordion listed items when hovering over the <li>. Carbon upstream styles make it extremely challenging to pin down this style.
 .side-nav--dark
   :global(.bx--side-nav__link):hover
   > :global(.bx--side-nav__link-text) {
