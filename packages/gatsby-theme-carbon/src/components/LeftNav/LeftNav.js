@@ -1,5 +1,4 @@
 import React, { useContext, useRef, useEffect } from 'react';
-import classnames from 'classnames';
 import { SideNav, SideNavItems } from 'carbon-components-react';
 import { useNavItems } from '../../util/NavItems';
 
@@ -8,7 +7,7 @@ import LeftNavItem from './LeftNavItem';
 import LeftNavResourceLinks from './ResourceLinks';
 
 import LeftNavWrapper from './LeftNavWrapper';
-import { sideNavDark } from './LeftNav.module.scss';
+import styles from './LeftNav.module.scss';
 import useMetadata from '../../util/hooks/useMetadata';
 
 const LeftNav = (props) => {
@@ -38,6 +37,13 @@ const LeftNav = (props) => {
     }
   }, [leftNavScrollTop]);
 
+  const getLeftNavClassNames = () => {
+    if (props.theme === 'dark') {
+      return styles.sideNavDark;
+    }
+    return styles.sideNavWhite;
+  };
+
   const navItems = useNavItems();
   const { navigationStyle } = useMetadata();
 
@@ -57,14 +63,7 @@ const LeftNav = (props) => {
         expanded={navigationStyle ? leftNavIsOpen : true}
         defaultExpanded={!navigationStyle}
         isPersistent={!navigationStyle}
-        className={classnames({
-          [sideNavDark]: props.theme === 'dark' || props.homepage,
-          'bx--side-nav--website': true,
-          'bx--side-nav--website--dark':
-            props.theme === 'dark' || props.homepage,
-          'bx--side-nav--website--light':
-            props.theme !== 'dark' && !props.homepage,
-        })}>
+        className={getLeftNavClassNames()}>
         <SideNavItems className="sidenav-list">
           {navItems.map((item, i) => (
             <LeftNavItem
