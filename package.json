@@ -26,7 +26,7 @@
     "lint:js": "eslint . --fix",
     "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
     "release": "release-it",
-    "release:ci": "release-it --ci",
+    "release:ci": "release-it --ci --npm.skipChecks",
     "release:dry": "release-it --ci --dry-run"
   },
   "publishConfig": {
