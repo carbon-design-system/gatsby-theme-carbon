@@ -1,3 +1,12 @@
+## [1.27.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.18...v1.27.0) (2020-10-22)
+
+
+### Features
+
+* **Aside:** add option to hide hanging rule from Aside component ([#1014](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1014)) ([d416901](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/d416901985f00162149bf4e58b54082c43a490a1))
+* **Theming:** Adds Dark, White, and g10 themes to GTC ([#979](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/979)) ([432f243](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/432f24345aafa8883347a4af237dba3face1c0e8))
+* update switcher content ([#1023](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1023)) ([ed2df93](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ed2df93443b3aa9230e1162e6759c61fab90cca5))
+
 ### [1.26.18](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.17...v1.26.18) (2020-10-10)
 
 ## [1.26.17](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-10-10)
