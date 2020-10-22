@@ -40,6 +40,9 @@
         "infile": "CHANGELOG.md"
       }
     },
+    "hooks": {
+      "before:init": "git pull upstream main --tags"
+    },
     "github": {
       "release": true
     },
