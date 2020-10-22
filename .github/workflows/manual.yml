@@ -9,9 +9,7 @@ jobs:
       - name: Set up node
         uses: actions/setup-node@v2-beta
         with:
-          always-auth: true
           node-version: 14.x
-          registry-url: 'https://registry.npmjs.org'
 
       # fetch-depth: 0 ensures we get commit messages for changelog/versioning
       - uses: actions/checkout@v2
@@ -20,8 +18,6 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Run release command
         run: |
@@ -29,3 +25,4 @@ jobs:
           yarn run release:ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
