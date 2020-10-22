@@ -41,7 +41,7 @@
       }
     },
     "hooks": {
-      "before:init": "git pull upstream main --tags --depth=0"
+      "before:init": "git pull upstream main --tags"
     },
     "github": {
       "release": true
