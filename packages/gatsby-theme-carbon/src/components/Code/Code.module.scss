@@ -32,7 +32,7 @@
   position: relative;
   font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
     'Bitstream Vera Sans Mono', Courier, monospace;
-  color: $inverse-01;
+  color: $carbon--white-0;
   @include carbon--type-style('code-02');
   width: calc(100% + 2rem);
   @include carbon--breakpoint('lg') {
@@ -45,7 +45,7 @@
 }
 
 .row svg {
-  fill: $inverse-01;
+  fill: $carbon--white-0;
 }
 
 li .row {
@@ -92,7 +92,12 @@ li .row {
   background: $ui-05;
   padding-left: $spacing-05;
   padding-right: $spacing-03;
-  border-bottom: 1px solid $inverse-02;
+  border-bottom: 1px solid $carbon--gray-80;
+}
+
+.path-row.dark {
+  background: $carbon--gray-90;
+  border-bottom: 1px solid $carbon--gray-70;
 }
 
 .path {
@@ -107,21 +112,28 @@ li .row {
   position: absolute;
   right: $spacing-03;
   bottom: $spacing-03;
-  background: $ui-05;
+  background: $carbon--gray-100;
   border: none;
-  color: white;
+  color: $carbon--white-0;
   cursor: pointer;
   padding: $spacing-03;
   padding-left: $spacing-05;
   display: inline-flex;
   transition: background-color $duration--fast-02;
   &:hover {
-    background-color: $inverse-02;
+    background-color: $carbon--gray-80;
   }
 
   &:focus {
     outline: 2px solid $focus;
     outline-offset: -2px;
+  }
+}
+
+.show-more-button.dark {
+  background: $carbon--gray-90;
+  &:hover {
+    background: $carbon--gray-80;
   }
 }
 
@@ -142,8 +154,16 @@ li .row {
   overflow: visible;
   background: linear-gradient(
     90deg,
-    rgba(23, 23, 23, 0) 0%,
-    rgba(23, 23, 23, 1) 24px
+    rgba(22, 22, 22, 0) 0%,
+    $carbon--gray-100 24px
+  );
+}
+
+.sidebar.dark {
+  background: linear-gradient(
+    90deg,
+    rgba(35, 35, 35, 0) 0%,
+    $carbon--gray-90 24px
   );
 }
 
@@ -162,7 +182,7 @@ li .row {
   z-index: 1000;
   font-size: 0;
   &:hover {
-    background-color: $inverse-02;
+    background-color: $carbon--gray-80;
   }
 }
 

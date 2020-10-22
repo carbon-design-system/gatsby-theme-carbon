@@ -7,7 +7,7 @@
   },
   "license": "Apache 2.0",
   "engines": {
-    "node": "12.x"
+    "node": "12.x || 14.x"
   },
   "workspaces": [
     "packages/*"
@@ -25,7 +25,9 @@
     "format": "prettier --write \"**/*.{css,scss,json,html,yaml,mdx}\"",
     "lint:js": "eslint . --fix",
     "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
-    "release": "release-it"
+    "release": "release-it",
+    "release:ci": "release-it --ci --npm.skipChecks",
+    "release:dry": "release-it --ci --dry-run"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -90,8 +92,8 @@
     "lint-staged": "^10.0.9",
     "prettier": "^2.0.2",
     "prettier-config-carbon": "^0.2.0",
-    "release-it": "^14.0.4",
-    "release-it-yarn-workspaces": "^1.5.0",
+    "release-it": "^14.2.0",
+    "release-it-yarn-workspaces": "^2.0.0",
     "stylelint": "^13.2.1",
     "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-scss": "^3.16.0",

@@ -4,13 +4,17 @@
   --height: 20rem;
   height: 20rem;
   height: var(--height);
-  background: $carbon--black-100;
-  color: $inverse-01;
+  background-color: $carbon--black-100;
+  color: $carbon--white-0;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border-bottom: 1px solid $inverse-02;
+  border-bottom: 1px solid $carbon--gray-80;
+}
+
+.dark-mode.page-header {
+  border-bottom: 1px solid $carbon--gray-100;
 }
 
 .with-tabs {

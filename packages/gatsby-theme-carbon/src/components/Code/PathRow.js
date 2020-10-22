@@ -4,14 +4,20 @@ import { Launch16 } from '@carbon/icons-react';
 import copy from 'copy-to-clipboard';
 import cx from 'classnames';
 import styles from './Code.module.scss';
+import useMetadata from '../../util/hooks/useMetadata';
 
 // If no path is given, don't render. We'll use the Sidebar for buttons
 // If a src url is given, the src Icon will display in this row, otherwise
 // The copy button will.
+
 const PathRow = ({ src, path, children }) => {
+  const { interiorTheme } = useMetadata();
   if (!path) return null;
   return (
-    <div className={styles.pathRow}>
+    <div
+      className={cx(styles.pathRow, {
+        [styles.dark]: interiorTheme === 'dark',
+      })}>
       <span className={styles.path}>{path}</span>
       {src ? (
         <a

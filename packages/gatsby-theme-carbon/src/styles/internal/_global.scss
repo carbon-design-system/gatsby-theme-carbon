@@ -17,9 +17,6 @@ $feature-flags: (
 @import '~carbon-components/scss/globals/scss/layout';
 @import 'carbon-components';
 
-// Shell overrides until themeing is ready
-@import 'website-side-nav';
-
 // Typography
 @include carbon--type-reset();
 @import '~@carbon/elements/scss/type/classes';
@@ -28,8 +25,10 @@ $feature-flags: (
 //---------------------------------------
 // Global styles
 //---------------------------------------
+
 body {
   background: $carbon--black-100;
+  color: $text-01;
 }
 
 // prevents jank while page hydrates

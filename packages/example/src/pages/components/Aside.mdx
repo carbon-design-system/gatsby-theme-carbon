@@ -27,6 +27,8 @@ for more information. Props for accessibility labels are described in the
 
 ## Example
 
+<Title>With hanging rule</Title>
+
 <Row>
 <Column colMd={5} colLg={8}>
 
@@ -54,11 +56,37 @@ What we borrow from our own design history is not a mid-century aesthetic in
 stylistic terms, but the modernist attitudes and approach used at the time.
 
 </Aside>
+</Column>
+</Row>
 
+<Title>Without hanging rule</Title>
+
+<Row>
+<Column colMd={5} colLg={8}>
+
+Like our brand values, our design ethos must be palpable in everything we
+produce. Our philosophy and principles are for designers and non-designers
+alike–anyone authoring or authorizing any form of design on behalf of IBM.
+
+They provide clear criteria for the conception, creativity and craftsmanship our
+brand demands and our clients deserve. The expression of our philosophy may
+evolve and expand over time, but our principles are designed to endure, ensuring
+everything IBM is distinctly IBM.
+
+</Column>
+<Column colMd={2} colLg={3} offsetMd={1} offsetLg={1}>
+<Aside aria-label="Example aside" hideRule>
+
+A by-product of every experience with IBM should be time—time saved or time
+well-spent.
+
+</Aside>
 </Column>
 </Row>
 
 ## Code
+
+<Title>With hanging rule</Title>
 
 ```mdx path=components/Aside/Aside.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/Aside
 <Column colMd={2} colLg={3} offsetMd={1} offsetLg={1}>
@@ -72,6 +100,19 @@ attitudes and approach used at the time.
 </Column>
 ```
 
+<Title>Without hanging rule</Title>
+
+```mdx path=components/Aside/Aside.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/Aside
+<Column colMd={2} colLg={3} offsetMd={1} offsetLg={1} hideRule>
+  <Aside>
+
+A by-product of every experience with IBM should be time—time saved or time
+well-spent.
+
+  </Aside>
+</Column>
+```
+
 ### Props
 
 | property        | propType | required | default | description                                                                                                                       |
@@ -80,3 +121,4 @@ attitudes and approach used at the time.
 | aria-labelledBy | string   |          |         | Specify an `aria-labelledby` value that references the id of an existing element to serve as a label for the inner aside element. |
 | children        | node     |          |         |                                                                                                                                   |
 | className       | string   |          |         | Add custom class name                                                                                                             |
+| hideRule        | bool     |          |         | Hide the hanging rule                                                                                                             |
