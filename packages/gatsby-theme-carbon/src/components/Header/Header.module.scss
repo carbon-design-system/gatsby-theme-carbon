@@ -101,10 +101,10 @@ header.header {
 
 .header-button.switcher-button.switcher-button--open {
   border: 1px solid transparent;
-  border-left: 1px solid $inverse-02;
-  border-bottom: 1px solid $ui-05;
-  background-color: $ui-05;
+  border-left: 1px solid $carbon--gray-80;
+  border-bottom: 1px solid $carbon--gray-100;
+  background-color: $carbon--gray-100;
   &:active {
-    border-left: 1px solid $inverse-02;
+    border-left: 1px solid $carbon--white-0;
   }
 }
