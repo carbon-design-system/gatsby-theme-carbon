@@ -27,7 +27,7 @@
     "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
     "pre:release": "git pull upstream main --tags",
     "release": "npm run pre:release && release-it",
-    "release:ci": "release-it --ci --npm.skipChecks=true",
+    "release:ci": "release-it --ci",
     "release:dry": "release-it --ci --dry-run"
   },
   "publishConfig": {
@@ -35,7 +35,9 @@
   },
   "release-it": {
     "plugins": {
-      "release-it-yarn-workspaces": true,
+      "release-it-yarn-workspaces": {
+        "skipChecks": true
+      },
       "@release-it/conventional-changelog": {
         "preset": "conventionalcommits",
         "infile": "CHANGELOG.md"
