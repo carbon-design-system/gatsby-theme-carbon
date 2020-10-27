@@ -27,7 +27,7 @@
     "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
     "pre:release": "git pull upstream main --tags",
     "release": "npm run pre:release && release-it",
-    "release:ci": "release-it --ci",
+    "release:ci": "release-it --ci --npm.skipChecks=true",
     "release:dry": "release-it --ci --dry-run"
   },
   "publishConfig": {
