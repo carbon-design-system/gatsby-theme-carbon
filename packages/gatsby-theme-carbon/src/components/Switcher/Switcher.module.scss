@@ -1,13 +1,13 @@
 .nav {
-  color: $inverse-01;
+  color: $carbon--white-0;
   z-index: 10000;
   position: fixed;
   right: 0;
   top: 48px;
   height: 100%;
   width: 16rem;
-  background-color: $ui-05;
-  border-left: 1px solid $inverse-02;
+  background-color: $carbon--gray-100;
+  border-left: 1px solid $carbon--gray-80;
   transform: translateX(16rem);
   overflow-y: hidden;
   transition: all $duration--fast-02 carbon--motion('exit');
@@ -29,7 +29,7 @@
 .open {
   transform: translateX(0);
   transition: all $duration--moderate-01 carbon--motion('entrance');
-  border-bottom: 1px solid $inverse-02;
+  border-bottom: 1px solid $carbon--gray-80;
   box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
   @include carbon--breakpoint('lg') {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); // header__menu shadow
@@ -62,7 +62,7 @@
   }
 
   &:focus {
-    outline: 2px solid $inverse-01;
+    outline: 2px solid $carbon--white-0;
     outline-offset: -2px;
   }
 }
