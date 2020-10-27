@@ -25,7 +25,8 @@
     "format": "prettier --write \"**/*.{css,scss,json,html,yaml,mdx}\"",
     "lint:js": "eslint . --fix",
     "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
-    "release": "release-it",
+    "pre:release": "git pull upstream main --tags",
+    "release": "npm run pre:release && release-it",
     "release:ci": "release-it --ci",
     "release:dry": "release-it --ci --dry-run"
   },
@@ -39,9 +40,6 @@
         "preset": "conventionalcommits",
         "infile": "CHANGELOG.md"
       }
-    },
-    "hooks": {
-      "before:init": "git pull upstream main --tags"
     },
     "github": {
       "release": true
