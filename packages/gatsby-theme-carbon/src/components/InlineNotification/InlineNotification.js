@@ -3,27 +3,34 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { InlineNotification as CarbonInlineNotification } from 'carbon-components-react';
 import { Row, Column } from '../Grid';
+import useMetadata from '../../util/hooks/useMetadata';
 
-import { notification } from './InlineNotification.module.scss';
+import styles from './InlineNotification.module.scss';
 
-const InlineNotification = ({ children, className, kind }) => (
-  <Row>
-    <Column colLg={8} colMd={6} className={cx(notification, className)}>
-      <CarbonInlineNotification
-        lowContrast
-        hideCloseButton
-        kind={kind}
-        title=""
-        subtitle={children}
-      />
-    </Column>
-  </Row>
-);
+const InlineNotification = ({ children, className, kind = 'info' }) => {
+  const { interiorTheme } = useMetadata();
+
+  return (
+    <Row>
+      <Column
+        colLg={8}
+        colMd={6}
+        className={cx(styles.notification, className)}>
+        <CarbonInlineNotification
+          lowContrast
+          hideCloseButton
+          kind={kind}
+          title=""
+          subtitle={children}
+          className={interiorTheme === 'dark' && styles.darkMode}
+        />
+      </Column>
+    </Row>
+  );
+};
 
 InlineNotification.propTypes = {
   kind: PropTypes.oneOf(['error', 'info', 'success', 'warning']),
 };
 
-InlineNotification.defaultProps = {
-  kind: 'info',
-};
+export default InlineNotification;

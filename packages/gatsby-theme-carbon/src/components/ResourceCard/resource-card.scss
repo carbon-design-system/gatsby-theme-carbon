@@ -1,5 +1,5 @@
 .#{$prefix}--resource-card .#{$prefix}--tile {
-  background: $ui-background;
+  background: $ui-01;
   height: 100%;
   padding: $spacing-05 25% $spacing-05 $spacing-05;
   position: relative;
@@ -71,12 +71,12 @@
 }
 
 .#{$prefix}--resource-card--dark .#{$prefix}--resource-card__icon--action svg {
-  fill: $carbon--gray-10; //$icon-01 for grsay 90 theme
+  fill: $carbon--gray-10;
 }
 
 // Disabled
 .#{$prefix}--resource-card--disabled .#{$prefix}--tile:hover {
-  background: $ui-background;
+  background: $ui-01;
   cursor: not-allowed;
 }
 

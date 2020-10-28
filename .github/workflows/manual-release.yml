@@ -1,0 +1,27 @@
+name: Release
+on: workflow_dispatch
+
+jobs:
+  release:
+    if: contains('["alisonjoseph","vpicone", "sstrubberg", "jnm2377"]', github.actor)
+    runs-on: ubuntu-latest
+    steps:
+      # fetch-depth: 0 ensures we get commit messages for changelog/versioning
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Set up node
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: 14.x
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run release command
+        run: npm run release:ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

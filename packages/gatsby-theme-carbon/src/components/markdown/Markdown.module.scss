@@ -194,12 +194,6 @@ ul :global(.bx--list--unordered) {
   text-indent: 0;
 }
 
-//dark
-:global(.container--dark) .blockquote,
-:global(.container--dark) .blockquote .list-item {
-  color: $text-04;
-}
-
 :global(.bx--list--ordered:not(.bx--list--nested) > .bx--list__item::before) {
   display: none;
 }

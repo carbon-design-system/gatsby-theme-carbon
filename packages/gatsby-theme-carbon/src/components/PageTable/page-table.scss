@@ -18,7 +18,7 @@
       padding: $spacing-md;
       text-align: left;
       white-space: nowrap;
-      background: $carbon--white-0;
+      background: $ui-01;
     }
   }
 
@@ -79,14 +79,4 @@
 
 .page-table__container {
   overflow-x: auto;
-}
-
-// dark background
-.container--dark .page-table thead th {
-  background: $carbon--gray-90;
-  color: $inverse-01;
-}
-
-.container--dark .page-table td {
-  color: $inverse-01;
 }

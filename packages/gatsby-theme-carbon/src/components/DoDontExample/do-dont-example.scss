@@ -74,11 +74,11 @@
 }
 
 .#{$prefix}--example--correct .#{$prefix}--example-card::before {
-  background: $carbon--green-50;
+  background: $support-02;
 }
 
 .#{$prefix}--example--incorrect .#{$prefix}--example-card::before {
-  background: $carbon--red-60;
+  background: $support-01;
 }
 
 .#{$prefix}--example__icon {
@@ -92,11 +92,11 @@
 }
 
 .#{$prefix}--example__icon--correct {
-  fill: $carbon--green-50;
+  fill: $support-02;
 }
 
 .#{$prefix}--example__icon--incorrect {
-  fill: $carbon--red-60;
+  fill: $support-01;
 }
 
 .#{$prefix}--example__icon path[dataIconPath='inner-path'],
