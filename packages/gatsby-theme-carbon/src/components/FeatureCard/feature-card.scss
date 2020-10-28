@@ -68,7 +68,7 @@
     display: block;
     margin-left: -1rem;
     margin-right: -1rem;
-    max-width: 100%;
+    max-width: none !important;
     overflow: hidden;
     height: 100%;
   }
@@ -82,17 +82,5 @@
     left: auto !important;
     right: 0;
     object-fit: cover;
-  }
-}
-
-// overrides for larger breakpoints
-.#{$prefix}--feature-card .gatsby-resp-image-wrapper {
-  margin-left: 0;
-  margin-right: 0;
-  @include carbon--breakpoint('lg') {
-    max-width: 100% !important;
-  }
-  @include carbon--breakpoint('max') {
-    max-width: calc(100% - 1rem) !important;
   }
 }
