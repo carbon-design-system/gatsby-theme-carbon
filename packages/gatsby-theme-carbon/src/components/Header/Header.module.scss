@@ -7,8 +7,7 @@
 }
 
 header.header {
-  background-color: $ui-05;
-  border-bottom: 1px solid $inverse-02;
+  background-color: $carbon--gray-100;
   z-index: 10000; /* old z('floating') #940 */
 }
 
@@ -18,7 +17,7 @@ header.header {
   position: relative;
   flex-shrink: 0;
   &:focus {
-    outline: 2px solid $inverse-01;
+    outline: 2px solid $carbon--white-0;
     outline-offset: -2px;
   }
   @include carbon--breakpoint('lg') {
@@ -27,7 +26,7 @@ header.header {
 }
 
 .header :global(.bx--header__action--menu.bx--header__action--active) {
-  background-color: $ui-05;
+  background-color: $carbon--gray-100;
   border-right: 1px solid $inverse-02;
   @include carbon--breakpoint('lg') {
     display: none;
@@ -54,7 +53,7 @@ header.header {
 .headerName {
   @include carbon--type-style('body-short-02');
   transition: opacity $duration--fast-02 $carbon--standard-easing;
-  color: $inverse-01;
+  color: $carbon--white-0;
   text-decoration: none;
   left: 3rem;
   white-space: nowrap;
@@ -64,7 +63,7 @@ header.header {
   display: flex;
   align-items: center;
   &:focus {
-    outline: 2px solid $inverse-01;
+    outline: 2px solid $carbon--white-0;
     outline-offset: -2px;
   }
 
@@ -81,18 +80,17 @@ header.header {
 // Switcher button, extra specificity to override Carbon styles
 // Hex values used pending shell theming
 .header .header-button.switcher-button {
-  background-color: $ui-05;
+  background-color: $carbon--gray-100;
   position: relative;
   border: none;
   border-color: $ui-05;
-  border-bottom: 1px solid $inverse-02;
+  border-bottom: 1px solid $carbon--gray-80;
   &:focus {
-    border-color: $inverse-02;
-    outline: 2px solid $inverse-01;
+    outline: 2px solid $carbon--white-0;
     outline-offset: -2px;
   }
   &:hover {
-    background-color: #353535;
+    background-color: $carbon--gray-80;
   }
   &:active {
     background-color: #3d3d3d;
@@ -103,10 +101,10 @@ header.header {
 
 .header-button.switcher-button.switcher-button--open {
   border: 1px solid transparent;
-  border-left: 1px solid $inverse-02;
-  border-bottom: 1px solid $ui-05;
-  background-color: $ui-05;
+  border-left: 1px solid $carbon--gray-80;
+  border-bottom: 1px solid $carbon--gray-100;
+  background-color: $carbon--gray-100;
   &:active {
-    border-left: 1px solid $inverse-02;
+    border-left: 1px solid $carbon--white-0;
   }
 }

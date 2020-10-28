@@ -25,7 +25,7 @@
   }
 }
 
-// Transition expanded LeftNav in mobile back to HeaderNavigation in dektop view.
+// Transition expanded LeftNav in mobile back to HeaderNavigation in desktop view.
 .useHeaderNavStyles.expanded {
   @include carbon--breakpoint('lg') {
     transform: translateX(-256px);

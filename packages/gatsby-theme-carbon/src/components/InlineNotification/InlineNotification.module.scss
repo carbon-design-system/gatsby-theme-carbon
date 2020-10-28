@@ -19,3 +19,9 @@ li .notification {
   flex: 0 0 100%;
   max-width: 100%;
 }
+
+// Remove this when Notifications are fixed upstream
+.darkMode {
+  background: $carbon--gray-90 !important;
+  color: $carbon--white-0;
+}
