@@ -30,17 +30,20 @@ const HeaderNavItem = (props) => {
         if (items.length === 1) {
           return (
             <HeaderMenuItem
+              className={cx({ [styles.isCurrentPageOverride]: isActive })}
               onClick={closeLeftNav}
               icon={<span>dummy icon</span>}
               element={Link}
               isActive={isActive}
-              to={`${items[0].path}`}>
+              to={`${items[0].path}`}
+              isCurrentPage={isActive}>
               {category}
             </HeaderMenuItem>
           );
         }
         return (
           <HeaderMenu
+            className={cx({ [styles.isActive]: isActive })}
             icon={<span>dummy icon</span>}
             isActive={isActive} // TODO similar categories
             defaultExpanded={isActive}
@@ -74,7 +77,8 @@ const TabItems = ({ items, pathname, onClick }) =>
         onClick={onClick}
         element={Link}
         isActive={hasActiveTab}
-        key={i}>
+        key={i}
+        isCurrentPage={hasActiveTab}>
         <span
           className={cx(styles.linkText, {
             [styles.linkText__active]: hasActiveTab,
