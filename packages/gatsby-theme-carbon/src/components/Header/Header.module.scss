@@ -1,5 +1,39 @@
 @import '~carbon-components/scss/globals/scss/layout';
 
+// Creates the blue line under the active menu item
+.isActive::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  border-bottom: 3px solid $carbon--blue-60;
+  content: '';
+}
+
+// Creates the blue line that sits to the left of an active item in a menu.
+.isActive :global(.bx--header__menu-item--current) {
+  background-color: $carbon--gray-80;
+}
+
+// Removes the blue line that sits under an active item in menu.
+.isActive :global(.bx--header__menu-item--current)::after {
+  display: none;
+}
+
+// Overrides the style from upstream Carbon to give a blue60 instead of a blue50
+.isCurrentPageOverride :global(.bx--header__menu-item--current)::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  border-bottom: 3px solid $carbon--blue-60;
+  content: '';
+}
+
 .header button {
   display: flex;
   justify-content: center;
@@ -108,44 +142,4 @@ header.header {
   &:active {
     border-left: 1px solid $carbon--white-0;
   }
-}
-
-// Creates the blue line under the active menu item
-.isActive::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  border-bottom: 3px solid $carbon--blue-60;
-  content: '';
-}
-
-// Creates the blue line that sits to the left of an active item in a menu.
-.isActive :global(.bx--header__menu-item--current)::before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 4px;
-  background-color: $carbon--blue-60;
-  content: '';
-}
-
-// Removes the blue line that sits under an active item in menu.
-.isActive :global(.bx--header__menu-item--current)::after {
-  display: none;
-}
-
-// Overrides the style from upstream Carbon to give a blue60 instead of a blue50
-.isCurrentPageOverride :global(.bx--header__menu-item--current)::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  border-bottom: 3px solid $carbon--blue-60;
-  content: '';
 }
