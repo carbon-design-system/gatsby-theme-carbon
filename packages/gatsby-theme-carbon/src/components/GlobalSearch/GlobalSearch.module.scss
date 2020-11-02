@@ -3,9 +3,8 @@
 .container {
   position: relative;
   display: flex;
-  max-width: 28rem;
+  max-width: 100%;
   width: 100%;
-  margin-left: $spacing-03;
   height: 3rem;
   background-color: $inverse-02;
   color: $inverse-01;
