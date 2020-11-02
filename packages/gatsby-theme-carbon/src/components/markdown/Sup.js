@@ -1,8 +1,9 @@
 import React from 'react';
+import cx from 'classnames';
 import { sup } from './Markdown.module.scss';
 
-const Sup = ({ children, ...rest }) => (
-  <sup className={sup} {...rest}>
+const Sup = ({ children, className, ...rest }) => (
+  <sup className={cx(className, sup)} {...rest}>
     {children}
   </sup>
 );
