@@ -2,12 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import styles from './LaunchButton.module.scss';
 
-function LaunchButton({
-  onClick,
-  visible,
-  icon: RegularIcon,
-  filledIcon: FilledIcon,
-}) {
+function LaunchButton({ onClick, visible, icon: RegularIcon }) {
   const classNames = cx(styles.button, {
     [styles.selected]: visible,
   });
@@ -19,7 +14,7 @@ function LaunchButton({
       className={classNames}
       onClick={onClick}
       aria-label="This launches a modal form to give website feedback.">
-      {visible ? <FilledIcon /> : <RegularIcon />}
+      <RegularIcon />
     </button>
   );
 }

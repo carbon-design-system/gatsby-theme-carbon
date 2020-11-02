@@ -1,7 +1,7 @@
 // Sets gray border on the top of cards at the smallest breakpoint and removes the margin set by the <Column> in the Grid component.
 
 .cardGroup [class*='column'] {
-  border-top: 1px solid $carbon--gray-20;
+  border-top: 1px solid $ui-03;
   margin-bottom: 0;
 }
 
@@ -27,6 +27,6 @@
 
 .cardGroup [class*='column']:nth-child(even) {
   @include carbon--breakpoint('md') {
-    border-left: 1px solid $carbon--gray-20;
+    border-left: 1px solid $ui-03;
   }
 }

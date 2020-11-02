@@ -15,11 +15,11 @@
 
 // set border between cards
 .resource-card-group .#{$prefix}--resource-card {
-  border-top: 1px solid $carbon--gray-20;
+  border-top: 1px solid $ui-03;
 }
 
 .resource-card-group .#{$prefix}--resource-card--dark {
-  border-top-color: $carbon--black-100;
+  border-top-color: $ui-03;
 }
 
 .resource-card-group
@@ -48,14 +48,14 @@
   .#{$prefix}--col-lg-4:nth-child(even)
   .#{$prefix}--resource-card {
   @include carbon--breakpoint('md') {
-    border-left: 1px solid $carbon--gray-20;
+    border-left: 1px solid $ui-03;
   }
 }
 
 .resource-card-group
   .#{$prefix}--col-lg-4:nth-child(even)
   .#{$prefix}--resource-card--dark {
-  border-left-color: $carbon--black-100;
+  border-left-color: $ui-background;
 }
 
 // Set spacing to the right of the group

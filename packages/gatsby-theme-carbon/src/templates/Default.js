@@ -9,10 +9,19 @@ import EditLink from '../components/EditLink';
 import NextPrevious from '../components/NextPrevious';
 import PageTabs from '../components/PageTabs';
 import Main from '../components/Main';
+import useMetadata from '../util/hooks/useMetadata';
 
 const Default = ({ pageContext, children, location, Title }) => {
   const { frontmatter = {}, relativePagePath, titleType } = pageContext;
-  const { tabs, title, theme, description, keywords } = frontmatter;
+  const {
+    tabs,
+    title,
+    theme: frontmatterTheme,
+    description,
+    keywords,
+  } = frontmatter;
+
+  const { interiorTheme } = useMetadata();
 
   // get the path prefix if it exists
   const {
@@ -40,6 +49,8 @@ const Default = ({ pageContext, children, location, Title }) => {
 
   const currentTab = getCurrentTab();
 
+  const theme = frontmatterTheme || interiorTheme;
+
   return (
     <Layout
       tabs={tabs}
@@ -49,7 +60,12 @@ const Default = ({ pageContext, children, location, Title }) => {
       pageDescription={description}
       pageKeywords={keywords}
       titleType={titleType}>
-      <PageHeader title={Title ? <Title /> : title} label="label" tabs={tabs} />
+      <PageHeader
+        title={Title ? <Title /> : title}
+        label="label"
+        tabs={tabs}
+        theme={theme}
+      />
       {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}
       <Main padded>
         {children}

@@ -1,14 +1,97 @@
+// White theme
+
+nav.side-nav--white {
+  background-color: $carbon--white-0;
+  border-right: 1px solid $carbon--gray-20;
+}
+
+// Dark theme
+
+nav.side-nav--dark {
+  --cds-ui-03: #{$carbon--gray-80};
+  padding-top: $spacing-05;
+  background-color: $carbon--gray-100;
+  border-right: 1px solid $carbon--gray-80;
+}
+
+// Chevron color
+nav.side-nav--dark :global(svg) {
+  fill: $carbon--gray-30;
+}
+
+// Font color for accordion listed items in the nav
+.side-nav--dark :global(.bx--side-nav__submenu) {
+  color: $carbon--gray-30;
+}
+
+// Font color for non-accordion listed items in the nav. Carbon upstream styles make it extremely challenging to pin down this style.
+.side-nav--dark :global(.bx--side-nav__link-text) {
+  color: $carbon--gray-30 !important;
+}
+
+// Outline color for nav items
 .side-nav--dark :global(.bx--side-nav__link):focus,
 .side-nav--dark :global(.bx--side-nav__submenu):focus {
   outline: 2px solid $carbon--white-0;
 }
 
-.current-item {
-  background-color: #dcdcdc !important;
+// Font and background color for accordion listed items in the nav on hover. Carbon upstream styles make it extremely challenging to pin down this style.
+.side-nav--dark :global(.bx--side-nav__submenu):hover {
+  background-color: $carbon--gray-80 !important;
+  color: $carbon--gray-10;
+}
+
+// Background for non-accordion listed items on hover. Carbon upstream styles make it extremely challenging to pin down this style.
+.side-nav--dark :global(.bx--side-nav__link):hover {
+  background-color: $carbon--gray-80 !important;
+}
+
+// Font color for top-level accordion items
+.side-nav--dark
+  :global(.bx--side-nav__item--active)
+  :global(.bx--side-nav__submenu-title) {
+  color: $carbon--gray-30;
+}
+
+// Icons
+.outboundLink :global(.bx--side-nav__icon:not(.bx--side-nav__submenu-chevron)) {
+  display: inline-block;
+  flex: 0;
+  margin-right: 0;
+  height: 1rem;
+}
+
+// Background for selected top level accordion when *not* hovering
+.side-nav--dark
+  :global(.bx--side-nav__item--active
+    .bx--side-nav__submenu[aria-expanded='false']) {
+  background: $carbon--gray-80;
+}
+
+// Font color for non-accordion listed items when hovering over the <li>. Carbon upstream styles make it extremely challenging to pin down this style.
+.side-nav--dark
+  :global(.bx--side-nav__link):hover
+  > :global(.bx--side-nav__link-text) {
+  color: $carbon--gray-10 !important;
+}
+
+// Background color for nested accordion items
+.side-nav--dark.side-nav--dark
+  :global(.bx--side-nav__menu .bx--side-nav__link.bx--side-nav__link--current) {
+  background: $carbon--gray-80;
 }
 
 .current-item span {
   color: $ui-05;
+}
+
+// Dark theme current selected nav item
+nav.side-nav--dark a.current-item {
+  background-color: $carbon--gray-80;
+}
+
+[class*='--side-nav--dark'] .current-item span {
+  color: $carbon--gray-10;
 }
 
 .divider {
@@ -18,80 +101,13 @@
   border-bottom: none;
 }
 
-.resource-link {
-  &:first-of-type {
-    margin-top: $spacing-05;
-  }
+.divider-space {
+  margin-top: 4rem;
+  margin-bottom: $spacing-05;
 }
+
 // Moves icons to the right
 .outboundLink {
   flex-direction: row-reverse;
   justify-content: space-between;
-}
-
-// Icons
-.outboundLink div {
-  display: inline-block !important;
-  flex: 0;
-}
-
-// Style overrides waiting for UI Shell theming
-.link-text {
-  color: inherit;
-}
-
-.link-text__active {
-  color: $ui-05;
-}
-
-/* stylelint-disable */
-// Padding overrides for top level menu items
-:global {
-  .bx--side-nav__items > .bx--side-nav__item > .bx--side-nav__link span {
-    padding-left: 0 !important;
-  }
-  .bx--side-nav__items > .bx--side-nav__item > .bx--side-nav__submenu span {
-    padding-left: 0 !important;
-  }
-
-  //dark
-  // active item background color
-  .bx--side-nav--website--dark
-    .bx--side-nav__menu[role='menu']
-    a.bx--side-nav__link--current,
-  .bx--side-nav--website--dark
-    .bx--side-nav__menu[role='menu']
-    a.bx--side-nav__link[aria-current='page'],
-  .bx--side-nav--website--dark a.bx--side-nav__link--current,
-  .bx--side-nav--website--dark
-    .bx--side-nav__item--active
-    .bx--side-nav__submenu[aria-expanded='false'] {
-    background-color: #282828 !important;
-  }
-
-  // text hover color
-  .bx--side-nav--website--dark
-    .bx--side-nav__item:not(.bx--side-nav__item--active)
-    > .bx--side-nav__link:hover
-    > span,
-  .bx--side-nav--website--dark
-    .bx--side-nav__item:not(.bx--side-nav__item--active)
-    .bx--side-nav__menu-item
-    > .bx--side-nav__link:hover
-    > span {
-    color: $carbon--white-0;
-  }
-
-  //active title
-  .bx--side-nav--website--dark
-    .bx--side-nav__item--active
-    .bx--side-nav__submenu-title {
-    color: $carbon--white-0;
-  }
-}
-/* stylelint-enable */
-
-//active sub-item
-:global(.bx--side-nav--website--dark) .link-text__active {
-  color: $carbon--white-0;
 }

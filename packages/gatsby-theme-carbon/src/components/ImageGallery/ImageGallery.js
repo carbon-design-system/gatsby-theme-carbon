@@ -22,7 +22,7 @@ import {
   addNoScroll,
 } from './ImageGallery.module.scss';
 
-function ImageGallery({ children }) {
+function ImageGallery({ children, className }) {
   const [portalsNode, updateNode] = useState(null);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [activeImageIndex, updateActiveImageIndex] = useState(null);
@@ -116,7 +116,7 @@ function ImageGallery({ children }) {
   }
 
   return (
-    <>
+    <div className={className}>
       <figure role="group" aria-label="Gallery of Various Media">
         <Row className={galleryContainer}>
           {Children.map(children, (child, index) =>
@@ -188,7 +188,7 @@ function ImageGallery({ children }) {
           </FocusTrap>,
           portalsNode
         )}
-    </>
+    </div>
   );
 }
 

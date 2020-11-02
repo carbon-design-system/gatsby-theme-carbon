@@ -142,6 +142,16 @@ const GlobalSearchInput = () => {
     }
   };
 
+  // Check if there are results, if there are the listbox is open
+  // and set focus to the first menu item
+  const getAriaActiveDescendantValue = () => {
+    if (results.length > 0) {
+      return `menu-item-${focusedItem}`;
+    }
+
+    return null;
+  };
+
   return (
     <MenuContext.Provider value={value}>
       <div
@@ -156,7 +166,6 @@ const GlobalSearchInput = () => {
         </label>
         <div
           className={inputWrapper}
-          role="combobox"
           aria-owns="search-menu"
           aria-haspopup="menu"
           aria-expanded={searchIsOpen}>
@@ -183,7 +192,7 @@ const GlobalSearchInput = () => {
             type="text"
             aria-autocomplete="list"
             aria-controls="search-menu"
-            aria-activedescendant={`menu-item-${focusedItem}`}
+            aria-activedescendant={getAriaActiveDescendantValue()}
             className={cx(input, {
               [hidden]: !searchIsOpen,
             })}

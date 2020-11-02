@@ -1,5 +1,5 @@
 .#{$prefix}--article-card .#{$prefix}--tile {
-  background: $ui-background;
+  background: $ui-01;
   height: 100%;
   padding: 0;
   position: relative;
@@ -19,7 +19,7 @@
 }
 
 .#{$prefix}--article-card__title {
-  @include carbon--type-style('productive-heading-03');
+  @include carbon--type-style('body-short-02');
   text-decoration: none;
   color: $text-01;
 }
@@ -87,7 +87,7 @@
 }
 
 .#{$prefix}--article-card--disabled .#{$prefix}--tile:hover {
-  background: $ui-background;
+  background: $ui-01;
   cursor: not-allowed;
 }
 

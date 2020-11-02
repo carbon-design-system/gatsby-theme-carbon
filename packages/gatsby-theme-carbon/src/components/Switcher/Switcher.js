@@ -1,14 +1,35 @@
-import React, { useContext, useRef, useLayoutEffect, useState } from 'react';
+import React, {
+  useContext,
+  useRef,
+  useLayoutEffect,
+  useEffect,
+  useState,
+} from 'react';
 import cx from 'classnames';
 import useMedia from 'use-media';
+import { Locked16 } from '@carbon/icons-react';
 import NavContext from '../../util/context/NavContext';
 import { nav, open, divider, link, linkDisabled } from './Switcher.module.scss';
 
 const Switcher = ({ children }) => {
   const lgBreakpoint = useMedia('min-width: 1056px');
-  const { switcherIsOpen } = useContext(NavContext);
+  const { switcherIsOpen, toggleNavState } = useContext(NavContext);
   const listRef = useRef(null);
   const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    const collapseOpenNavs = function (e) {
+      if (e.which === 27) {
+        toggleNavState('switcherIsOpen', 'close');
+      }
+    };
+
+    document.addEventListener('keyup', collapseOpenNavs);
+
+    return function cleanup() {
+      document.removeEventListener('keyup', collapseOpenNavs);
+    };
+  }, [toggleNavState]);
 
   // calculate and update height
   useLayoutEffect(() => {
@@ -24,7 +45,7 @@ const Switcher = ({ children }) => {
   return (
     <nav
       className={cx(nav, { [open]: switcherIsOpen })}
-      aria-label="IBM Design ecosystem navigation"
+      aria-label="IBM Design ecosystem"
       tabIndex="-1"
       style={{ maxHeight }}>
       <ul ref={listRef}>{children}</ul>
@@ -41,6 +62,7 @@ export const SwitcherDivider = (props) => (
 export const SwitcherLink = ({
   disabled,
   children,
+  isInternal,
   href: hrefProp,
   ...rest
 }) => {
@@ -59,6 +81,7 @@ export const SwitcherLink = ({
         href={href}
         {...rest}>
         {children}
+        {isInternal && <Locked16 />}
       </a>
     </li>
   );
@@ -68,35 +91,42 @@ export const SwitcherLink = ({
 // Note: if you change this, update the max-height in the switcher stylesheet
 const DefaultChildren = () => (
   <>
-    <SwitcherLink href="https://ibm.com/design">IBM Design</SwitcherLink>
+    <SwitcherDivider>Foundations</SwitcherDivider>
+    <SwitcherLink href="https://ibm.com/brand" isInternal>
+      IBM Brand Center
+    </SwitcherLink>
     <SwitcherLink href="https://ibm.com/design/language">
       IBM Design Language
     </SwitcherLink>
-    <SwitcherLink href="https://ibm.com/brand">IBM Brand Center</SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/able/">
-      IBM Accessibility
-    </SwitcherLink>
-    <SwitcherDivider>Design disciplines</SwitcherDivider>
+    <SwitcherDivider>Implementation</SwitcherDivider>
     <SwitcherLink href="https://www.carbondesignsystem.com/">
-      Product
+      Carbon Design System
     </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/standards/web/">
-      Digital
+    <SwitcherLink href="https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/">
+      Carbon for IBM.com 
     </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/design/event/">Event</SwitcherLink>
-    <SwitcherLink disabled>Workplace</SwitcherLink>
-    <SwitcherDivider>Design practices</SwitcherDivider>
+    <SwitcherLink href="https://www.ibm.com/design/event/">
+      IBM Event Design
+    </SwitcherLink>
+    <SwitcherDivider>Practices</SwitcherDivider>
     <SwitcherLink href="https://www.ibm.com/design/thinking/">
       Enterprise Design Thinking
     </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/design/research/">
-      IBM Design Research
+    <SwitcherLink href="https://www.ibm.com/able/">
+      IBM Accessibility
     </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/design/ai">
       IBM Design for AI
     </SwitcherLink>
+    <SwitcherLink href="https://www.ibm.com/design/research/">
+      IBM Design Research
+    </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/services/ibmix/">
       IBM iX
+    </SwitcherLink>
+    <SwitcherDivider>Community</SwitcherDivider>
+    <SwitcherLink href="https://w3.ibm.com/design/" isInternal>
+      IBM Design
     </SwitcherLink>
   </>
 );
