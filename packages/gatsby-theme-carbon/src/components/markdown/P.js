@@ -1,39 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import cx from 'classnames';
 import { Row } from '../Grid';
 
 import { paragraph, paragraphResponsive } from './Markdown.module.scss';
 
-export default class P extends React.Component {
-  render() {
-    const { children, className, fullWidth, ...rest } = this.props;
+const P = ({ children, className, fullWidth, ...rest }) => {
+  const paragraphClasses = cx(className, paragraph, {
+    [paragraphResponsive]: !fullWidth,
+  });
 
-    const paragraphClasses = classnames(paragraph, {
-      [className]: className,
-      [paragraphResponsive]: !fullWidth,
-    });
-
-    return (
-      <Row>
-        <p className={paragraphClasses} {...rest}>
-          {children}
-        </p>
-      </Row>
-    );
-  }
-}
+  return (
+    <Row>
+      <p className={paragraphClasses} {...rest}>
+        {children}
+      </p>
+    </Row>
+  );
+};
 
 P.propTypes = {
-  children: PropTypes.node,
-
   /**
    * Set to full width
    */
   fullWidth: PropTypes.bool,
-
-  /**
-   * Specify a custom class
-   */
-  className: PropTypes.string,
 };
