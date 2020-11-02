@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import cx from 'classnames';
 import {
   PlayOutline24,
   PlayOutlineFilled24,
@@ -27,24 +27,19 @@ const GifPlayer = ({ children, color, className, isInDialog }) => {
     setPaused(!paused);
   };
 
-  const controlsClassNames = classnames({
-    [styles.controls]: true,
+  const controlsClassNames = cx(styles.controls, {
     [styles.dark]: color === 'dark',
   });
 
-  const containerClassNames = classnames({
-    [styles.container]: true,
-    [className]: className,
+  const containerClassNames = cx(className, styles.container, {
     [styles.gifInDialog]: isInDialog,
   });
 
-  const staticImageClassNames = classnames({
-    [styles.imgHidden]: true,
+  const staticImageClassNames = cx(styles.imgHidden, {
     [styles.imgDisplayed]: paused,
   });
 
-  const gifClassNames = classnames({
-    [styles.gifDisplayed]: true,
+  const gifClassNames = cx(styles.gifDisplayed, {
     [styles.gifHidden]: paused,
   });
 

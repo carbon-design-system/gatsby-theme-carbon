@@ -13,6 +13,8 @@ import React, {
 import { Dropdown } from 'carbon-components-react';
 import { useMedia } from 'use-media';
 import { breakpoints } from '@carbon/elements';
+import cx from 'classnames';
+
 import { useId } from '../../util/hooks/useId';
 import styles from './Tabs.module.scss';
 
@@ -43,10 +45,10 @@ const Select = ({ children, _id }) => {
   );
 };
 
-const TabList = ({ children, _id }) => {
+const TabList = ({ children, className, _id }) => {
   const { activeTab } = useContext(TabContext);
   return (
-    <ul className={styles.tabList} role="tablist">
+    <ul className={cx(className, styles.tabList)} role="tablist">
       {React.Children.map(children, (child, index) => {
         if (elementIsNullOrString(child)) return child;
         return React.cloneElement(child, {

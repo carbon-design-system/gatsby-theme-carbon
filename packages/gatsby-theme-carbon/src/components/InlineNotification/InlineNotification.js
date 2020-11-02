@@ -8,15 +8,14 @@ import useMetadata from '../../util/hooks/useMetadata';
 import styles from './InlineNotification.module.scss';
 
 const InlineNotification = ({ children, className, kind = 'info' }) => {
-  const notificationClasses = cx(styles.notification, {
-    [className]: className,
-  });
-
   const { interiorTheme } = useMetadata();
 
   return (
     <Row>
-      <Column colLg={8} colMd={6} className={notificationClasses}>
+      <Column
+        colLg={8}
+        colMd={6}
+        className={cx(styles.notification, className)}>
         <CarbonInlineNotification
           lowContrast
           hideCloseButton
@@ -31,8 +30,6 @@ const InlineNotification = ({ children, className, kind = 'info' }) => {
 };
 
 InlineNotification.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
   kind: PropTypes.oneOf(['error', 'info', 'success', 'warning']),
 };
 

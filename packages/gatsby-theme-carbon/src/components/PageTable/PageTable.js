@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import cx from 'classnames';
 
 export default class PageTable extends React.Component {
   render() {
@@ -12,7 +12,7 @@ export default class PageTable extends React.Component {
       gridSize = children[1].props.children.props.children.length;
     }
 
-    const classNames = classnames({
+    const classNames = cx({
       'bx--col-lg-8 bx--col-md-6': gridSize < 4,
       'bx--col-lg-12': gridSize > 3,
       'bx--col-no-gutter': true,
