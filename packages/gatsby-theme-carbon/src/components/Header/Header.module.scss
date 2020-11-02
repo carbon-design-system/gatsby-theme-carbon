@@ -81,8 +81,8 @@ header.header {
 
   @include carbon--breakpoint('lg') {
     left: 0;
-    width: calc(25% + 2rem);
-    max-width: 400px;
+    width: calc(25% + 1rem);
+    max-width: 384px;
   }
 }
 
