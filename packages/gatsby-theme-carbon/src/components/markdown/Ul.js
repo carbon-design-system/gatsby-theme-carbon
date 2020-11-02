@@ -2,12 +2,12 @@ import React from 'react';
 import cx from 'classnames';
 import { list } from './Markdown.module.scss';
 
-const Ul = ({ children, nested, ...rest }) => {
-  const className = cx('bx--list--unordered', list, {
+const Ul = ({ children, nested, className, ...rest }) => {
+  const classNames = cx(className, 'bx--list--unordered', list, {
     'bx--list--nested': nested,
   });
   return (
-    <ul className={className} {...rest}>
+    <ul className={classNames} {...rest}>
       {children}
     </ul>
   );

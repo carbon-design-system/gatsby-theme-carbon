@@ -8,6 +8,8 @@ import {
   Launch20,
 } from '@carbon/icons-react';
 import { settings } from 'carbon-components';
+import cx from 'classnames';
+
 import styles from './MiniCard.module.scss';
 import { Column } from '../Grid';
 
@@ -28,9 +30,16 @@ const getIcon = ({ actionIcon }) => {
   }
 };
 
-const MiniCard = ({ children, href, title, actionIcon, ...rest }) => {
+const MiniCard = ({
+  children,
+  href,
+  title,
+  actionIcon,
+  className,
+  ...rest
+}) => {
   const cardContent = (
-    <div className={styles.card}>
+    <div className={cx(className, styles.card)}>
       <div className={styles.wrapper}>
         <div className={styles.title}>{title}</div>
         {children === undefined ? (
