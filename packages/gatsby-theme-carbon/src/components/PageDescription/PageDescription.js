@@ -1,8 +1,11 @@
 import React from 'react';
+import cx from 'classnames';
 import { pageDescription } from './PageDescription.module.scss';
 
-const PageDescription = ({ children }) => (
-  <section className={pageDescription}>{children}</section>
+const PageDescription = ({ children, className, ...rest }) => (
+  <section className={cx(pageDescription, className)} {...rest}>
+    {children}
+  </section>
 );
 
 export default PageDescription;
