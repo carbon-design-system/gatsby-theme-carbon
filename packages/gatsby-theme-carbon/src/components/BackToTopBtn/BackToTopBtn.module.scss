@@ -5,14 +5,19 @@
   background: $carbon--gray-30;
   border-color: transparent;
   position: fixed;
-  bottom: $spacing-09;
-  right: $spacing-07;
+  bottom: $spacing-06;
+  right: $spacing-05;
   transition: all $duration--fast-02;
 
   cursor: pointer;
   z-index: z('modal');
   padding-top: 0.325rem;
   color: $text-01;
+
+  @include carbon--breakpoint('md') {
+    bottom: $spacing-09;
+    right: $spacing-07;
+  }
 }
 
 .button:hover {

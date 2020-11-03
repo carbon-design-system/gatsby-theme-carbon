@@ -7,12 +7,15 @@
   transition: all $duration--fast-02;
   z-index: z('modal');
   padding-top: 0.325rem;
-
   cursor: pointer;
-
   position: fixed;
-  bottom: calc(6rem + 8px);
-  right: $spacing-07;
+  bottom: 5rem;
+  right: $spacing-05;
+
+  @include carbon--breakpoint('md') {
+    bottom: calc(6rem + 8px);
+    right: $spacing-07;
+  }
 }
 
 .button:hover {
