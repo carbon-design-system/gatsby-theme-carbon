@@ -6,13 +6,18 @@ description: guide for adding and maintaining the sidebar entries
 
 <PageDescription>
 
-One of the most important pieces of making a working site is to define your navigation items. This allows the theme to inform the SideNav component as well as the next/previous components at the bottom of each page.
+One of the most important pieces of making a working site is to define your
+navigation items. This allows the theme to inform the SideNav component as well
+as the next/previous components at the bottom of each page.
 
 </PageDescription>
 
 ## Yaml data
 
-Unfortunately, genenerating left nav contents purely from the pages directory has some fatal flaws. It makes it very difficult to establish the order of items or to hide items all together. In `src/data/nav-items.yaml`, you’ll list your nav items in order.
+Unfortunately, genenerating left nav contents purely from the pages directory
+has some fatal flaws. It makes it very difficult to establish the order of items
+or to hide items all together. In `src/data/nav-items.yaml`, you’ll list your
+nav items in order.
 
 ```yaml
 - title: Menu
@@ -31,12 +36,20 @@ Some important things to note here:
 - You only need to link to the first tab if using page tabs
 - The `title` refers to the menu and item text, it’s allowed to have spaces
 - The `path` refer to the relative path to the mdx file in your pages
-- You can make a `Page/index.mdx` file if you’d prefer to have assets in a folder.
-  The path would still just look like `/Page`
+- You can make a `Page/index.mdx` file if you’d prefer to have assets in a
+  folder. The path would still just look like `/Page`
 
 ## Adding a divider
 
-You can add divider(s) between the items of your nav item list by adding `hasDivider: true` in `src/data/nav-items.yaml`. Note the divider is only for top-level nav items and can only be used with the left sidebar navigation style. It cannot be used in conjunction with the [header navigation style](/guides/configuration#navigation-style).
+You can insert a divider below any top-level nav item by adding the
+`hasDivider: true` property to it's configuration under
+`src/data/nav-items.yaml`. **Note:** dividers can only be use with top-level nav
+items and are incompatible with the
+[header navigation style](/guides/configuration#navigation-style).
+
+When shadowed, the `ResourceLinks` component can optionally receive an
+`includeDividerSpace` prop. Set this to false if you want to remove the margin
+above and below the `ResourceLinks` divider.
 
 ```yaml
 - title: Menu
@@ -51,12 +64,15 @@ You can add divider(s) between the items of your nav item list by adding `hasDiv
     - path: /single-page
 ```
 
-In the example above, a divider will appear between **Menu** and **Single Page**.
+In the example above, a divider will appear between **Menu** and **Single
+Page**.
 
 ## Customizing
 
-The nav item list can be customized using Gatsby theme [shadowing](/guides/shadowing).
-Simply provide your own implementation of `/src/util/NavItems.js` which can augment or replace the nav items read from `src/data/nav-items.yaml`.
+The nav item list can be customized using Gatsby theme
+[shadowing](/guides/shadowing). Simply provide your own implementation of
+`/src/util/NavItems.js` which can augment or replace the nav items read from
+`src/data/nav-items.yaml`.
 
 ```javascript
 // /src/util/NavItems.js

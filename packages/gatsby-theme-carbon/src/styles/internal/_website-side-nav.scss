@@ -2,19 +2,6 @@
   border-right: 1px solid $carbon--gray-80;
 }
 
-// Bottom links
-.#{$prefix}--side-nav__divider {
-  display: block;
-  margin: rem(64px) 1rem 0;
-  border-style: solid;
-  border-bottom: none;
-  border-color: $carbon--gray-80;
-}
-
-.#{$prefix}--side-nav--website--light .#{$prefix}--side-nav__divider {
-  border-color: $ui-03;
-}
-
 .#{$prefix}--side-nav--website .#{$prefix}--side-nav__item {
   &:nth-last-child(2) {
     .#{$prefix}--side-nav--website-link {
@@ -82,7 +69,7 @@
 }
 
 .#{$prefix}--side-nav--website--light .#{$prefix}--side-nav__navigation {
-  background-color: $ui-02;
+  background-color: $ui-01;
 }
 
 .#{$prefix}--side-nav--website .#{$prefix}--side-nav__icon > svg {

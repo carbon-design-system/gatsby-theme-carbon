@@ -72,13 +72,50 @@
   width: 100%;
 }
 
-:global(.bx--list--ordered),
-ol {
-  list-style: decimal;
+ul :global(.bx--list--ordered--native),
+ul :global(.bx--list--unordered) {
+  width: 100%;
+  padding-right: $spacing-05;
 }
 
-:global(.bx--list--ordered:not(.bx--list--nested)) {
+:global(.bx--list--ordered--native) .list-item,
+:global(.bx--list--unordered) .list-item {
+  @include carbon--type-style('body-long-02');
+  padding-right: 0;
+  width: 100%;
+  margin-left: $spacing-05;
+  padding-left: $spacing-02;
+}
+
+.list:not(:global(.bx--list--nested)) > .list-item {
+  padding-right: 2rem;
+  @include carbon--breakpoint('md') {
+    width: 75%;
+  }
+  @include carbon--breakpoint('lg') {
+    width: 100%;
+  }
+}
+
+// aligns UNnested ordered list item to body copy
+:global(.bx--list--ordered--native:not(.bx--list--nested)) {
   margin-left: 1ch;
+}
+
+// aligns NESTED ordered list item to parent list item text #993
+:global(.bx--list--ordered--native.bx--list--nested) {
+  margin-left: 0.5rem;
+}
+
+//Safari only fixes to align unnested/nested ordered list to body copy #993
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  :global(.bx--list--ordered:not(.bx--list--nested)) {
+    padding-left: 0.5ch;
+  }
+
+  :global(.bx--list--ordered.bx--list--nested) {
+    padding-left: 0.25rem;
+  }
 }
 
 // responsive items in a list need to be full width
@@ -94,21 +131,6 @@ ol {
   @include carbon--breakpoint('md') {
     margin-right: -$spacing-05;
   }
-}
-
-ul :global(.bx--list--ordered),
-ul :global(.bx--list--unordered) {
-  width: 100%;
-  padding-right: $spacing-05;
-}
-
-:global(.bx--list--ordered) .list-item,
-:global(.bx--list--unordered) .list-item {
-  @include carbon--type-style('body-long-02');
-  padding-right: 0;
-  width: 100%;
-  margin-left: $spacing-05;
-  padding-left: $spacing-02;
 }
 
 :global(.container--dark) :global(.bx--list__item) {
@@ -129,10 +151,9 @@ ul :global(.bx--list--unordered) {
 //---------------------------------------
 .blockquote {
   margin: $spacing-08 0;
-  color: $carbon--blue-60;
+  color: $text-01;
   margin-left: $spacing-05;
   padding-left: 1ch;
-  text-indent: -1ch;
   @include carbon--breakpoint('md') {
     margin-left: $spacing-08;
   }
@@ -141,18 +162,9 @@ ul :global(.bx--list--unordered) {
 .blockquote .paragraph {
   position: relative;
   @include carbon--type-style('expressive-heading-03', true);
+  font-style: italic;
   margin-bottom: 0;
   width: 100%;
-}
-
-.blockquote .paragraph::before {
-  content: '“';
-  @include carbon--type-style('expressive-heading-03', true);
-}
-
-.blockquote .paragraph::after {
-  content: '”';
-  @include carbon--type-style('expressive-heading-03', true);
 }
 
 .blockquote .paragraph--responsive {
@@ -171,19 +183,10 @@ ul :global(.bx--list--unordered) {
 
 .blockquote cite {
   @include carbon--type-style('body-long-01');
+  font-style: italic;
   display: block;
   margin-top: $spacing-02;
   text-indent: 0;
-}
-
-.blockquote .list-item {
-  color: $carbon--blue-60;
-}
-
-//dark
-:global(.container--dark) .blockquote,
-:global(.container--dark) .blockquote .list-item {
-  color: $carbon--blue-40;
 }
 
 :global(.bx--list--ordered:not(.bx--list--nested) > .bx--list__item::before) {
@@ -198,22 +201,26 @@ ul :global(.bx--list--unordered) {
 //---------------------------------------
 
 .h1 {
-  margin-top: $spacing-12;
+  --space: #{$spacing-12};
+  margin-top: var(--space);
   @include carbon--type-style('expressive-heading-05', true);
 }
 
 .h2 {
-  margin-top: $spacing-11;
+  --space: #{$spacing-11};
+  margin-top: var(--space);
   @include carbon--type-style('expressive-heading-04', true);
 }
 
 .h3 {
-  margin-top: $spacing-10;
+  --space: #{$spacing-10};
+  margin-top: var(--space);
   @include carbon--type-style('expressive-heading-03', true);
 }
 
 .h4 {
-  margin-top: $spacing-07;
+  --space: #{$spacing-07};
+  margin-top: var(--space);
   @include carbon--type-style('heading-02');
 }
 
@@ -223,6 +230,13 @@ ul :global(.bx--list--unordered) {
   @include carbon--type-style('heading-01');
 }
 
+.sup {
+  font-feature-settings: 'sups' on;
+}
+
+.abbr:global(.bx--tooltip--definition) button {
+  font-size: 1em;
+}
 //---------------------------------------
 // Images
 //---------------------------------------

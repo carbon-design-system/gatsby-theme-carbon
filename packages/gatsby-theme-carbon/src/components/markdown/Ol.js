@@ -2,13 +2,13 @@ import React from 'react';
 import cx from 'classnames';
 import { list } from './Markdown.module.scss';
 
-const Ol = ({ children, nested, start, ...rest }) => {
-  const className = cx('bx--list--ordered', list, {
+const Ol = ({ children, nested, start, className, ...rest }) => {
+  const classNames = cx(className, 'bx--list--ordered--native', list, {
     'bx--list--nested': nested,
   });
 
   return (
-    <ol className={className} {...rest} start={`${start}`}>
+    <ol className={classNames} {...rest} start={`${start}`}>
       {children}
     </ol>
   );

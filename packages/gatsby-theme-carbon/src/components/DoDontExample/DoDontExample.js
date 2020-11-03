@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import cx from 'classnames';
 import { CheckmarkFilled24, Misuse24 } from '@carbon/icons-react';
 import { settings } from 'carbon-components';
 
@@ -33,16 +33,14 @@ export default class DoDontExample extends React.Component {
       type,
     } = this.props;
 
-    const wrapperClassNames = classnames({
-      [`${prefix}--example`]: true,
+    const wrapperClassNames = cx(`${prefix}--example`, {
       [`${prefix}--example--square`]: aspectRatio === '1:1',
       [`${prefix}--example--correct`]: type === 'do',
       [`${prefix}--example--incorrect`]: type !== 'do',
       [`${prefix}--example--dark`]: color === 'dark',
     });
 
-    const iconClassNames = classnames({
-      [`${prefix}--example__icon`]: true,
+    const iconClassNames = cx(`${prefix}--example__icon`, {
       [`${prefix}--example__icon--correct`]: type === 'do',
       [`${prefix}--example__icon--incorrect`]: type !== 'do',
     });
