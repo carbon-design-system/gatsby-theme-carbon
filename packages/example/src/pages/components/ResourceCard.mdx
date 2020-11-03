@@ -5,9 +5,13 @@ description: Usage instructions for the ResourceCard component
 
 <PageDescription>
 
-The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<Row className="resource-card-group">`. This allows the correct border placement between a group of cards.
+
+The `<ResourceCard>` component should be wrapped with a `<Column>` inside of
+`<Row className="resource-card-group">`. This allows the correct border
+placement between a group of cards.
 
 </PageDescription>
+
 
 ## Example
 
@@ -18,10 +22,11 @@ The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<R
       title="Title"
       aspectRatio="2:1"
       actionIcon="arrowRight"
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      href="https://gatsby-theme-carbon.now.sh"
       >
 
-![IBM Rebus](/images/rebus.svg)
+
+![Adobe Acrobat icon](/images/adobe-icon.svg)
 
   </ResourceCard>
 </Column>
@@ -30,10 +35,11 @@ The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<R
       subTitle="Only subtitle"
       actionIcon="download"
       aspectRatio="2:1"
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      href="https://gatsby-theme-carbon.now.sh"
       >
 
-![Github icon](/images/github-icon.png)
+
+![Mural icon](/images/mural-icon.png)
 
   </ResourceCard>
 </Column>
@@ -44,8 +50,9 @@ The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<R
       aspectRatio="2:1"
       color="dark"
       actionIcon="email"
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      href="https://gatsby-theme-carbon.now.sh"
       >
+
 
 ![Sketch icon](/images/sketch-icon.png)
 
@@ -56,8 +63,9 @@ The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<R
       title="Disabled card"
       aspectRatio="2:1"
       disabled
-      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+      href="https://gatsby-theme-carbon.now.sh"
       >
+
 
 ![Sketch icon](/images/sketch-icon.png)
 
@@ -65,65 +73,79 @@ The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<R
 </Column>
 </Row>
 
+
 ## Code
 
 <Title>Group</Title>
 
-```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
+```mdx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/ResourceCard
 <Row className="resource-card-group">
   <Column colMd={4} colLg={4} noGutterSm>
     <ResourceCard
       subTitle="Carbon Design System"
-      href="https://www.carbondesignsystem.com"
-    >
-      ![Github icon](/images/github-icon.png)
+      href="https://www.carbondesignsystem.com">
+
+
+![Github icon](/images/github-icon.png)
+
     </ResourceCard>
+
   </Column>
   <Column colMd={4} colLg={4} noGutterSm>
     <ResourceCard
       subTitle="Carbon Design System"
-      href="https://www.carbondesignsystem.com"
-    >
-      ![Github icon](/images/github-icon.png)
+      href="https://www.carbondesignsystem.com">
+
+
+![Github icon](/images/github-icon.png)
+
     </ResourceCard>
+
   </Column>
 </Row>
+
 ```
 
 <Title>With title</Title>
 
-```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
+```mdx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/ResourceCard
 <Column colMd={4} colLg={4} noGutterSm>
   <ResourceCard
     subTitle="With subtitle"
     title="Title"
     aspectRatio="2:1"
     actionIcon="arrowRight"
-    href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-  >
-    ![Github icon](/images/github-icon.png)
+    href="https://gatsby-theme-carbon.now.sh">
+
+
+![Adobe Acrobat icon](/images/adobe-icon.svg)
+
   </ResourceCard>
 </Column>
+
 ```
 
 <Title>Only subtitle</Title>
 
-```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
+```mdx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/ResourceCard
 <Column colMd={4} colLg={4} noGutterSm>
   <ResourceCard
     subTitle="Only subtitle"
     actionIcon="download"
     aspectRatio="2:1"
-    href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-  >
-    ![Github icon](/images/github-icon.png)
+    href="https://gatsby-theme-carbon.now.sh">
+
+
+![Mural icon](/images/mural-icon.png)
+
   </ResourceCard>
 </Column>
+
 ```
 
 <Title>Dark</Title>
 
-```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
+```mdx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/ResourceCard
 <Column colMd={4} colLg={4} noGutterSm>
   <ResourceCard
     subTitle="Alternate color"
@@ -131,22 +153,25 @@ The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<R
     aspectRatio="2:1"
     color="dark"
     actionIcon="email"
-    href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-  >
-    ![Sketch icon](/images/sketch-icon.png)
+    href="https://gatsby-theme-carbon.now.sh">
+
+
+![Sketch icon](/images/sketch-icon.png)
+
   </ResourceCard>
 </Column>
+
 ```
 
 <Title>Disabled</Title>
 
-```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
+```mdx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/ResourceCard
 <Column colMd={4} colLg={4} noGutterSm>
   <ResourceCard
     title="Disabled card"
     aspectRatio="2:1"
     disabled
-    href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+    href="https://gatsby-theme-carbon.now.sh"
   />
 </Column>
 ```

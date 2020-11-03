@@ -24,6 +24,10 @@
   background: $ui-05;
 }
 
+.asideNoRule::before {
+  content: none;
+}
+
 :global(.#{$prefix}--row) .aside p {
   @include carbon--type-style('body-long-01');
   width: 100%;

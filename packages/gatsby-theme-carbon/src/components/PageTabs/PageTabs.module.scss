@@ -26,7 +26,7 @@
   padding: 13px $spacing-05 0 $spacing-05;
   text-decoration: none;
   line-height: 1;
-  color: $inverse-01;
+  color: $carbon--white-0;
   white-space: nowrap;
   border-top: 3px solid transparent; // 3px accessibility minimum
   height: 3rem;
@@ -39,7 +39,7 @@
   }
 
   &:hover {
-    background: #353535;
+    background: $carbon--gray-80;
   }
 }
 
@@ -49,9 +49,9 @@
 }
 
 .list-item:not(.selected-item) .link {
-  color: $active-01;
+  color: $carbon--white-0;
 
   &:hover {
-    color: #fff;
+    color: $carbon--white-0;
   }
 }

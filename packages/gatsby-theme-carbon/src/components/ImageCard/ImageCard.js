@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import cx from 'classnames';
 import { Link } from 'gatsby';
 import {
   Launch20,
@@ -36,33 +36,36 @@ export default class ImageCard extends React.Component {
       isLink = href.charAt(0) === '/';
     }
 
-    const ImageCardClassNames = classnames([`${prefix}--image-card`], {
-      [className]: className,
+    const ImageCardClassNames = cx(className, `${prefix}--image-card`, {
       [`${prefix}--image-card--disabled`]: disabled,
       [`${prefix}--image-card--dark`]: hoverColor === 'dark',
     });
 
-    const aspectRatioClassNames = classnames([`${prefix}--aspect-ratio`], {
-      [`${prefix}--aspect-ratio--2x1`]: aspectRatio === '2:1',
-      [`${prefix}--aspect-ratio--1x2`]: aspectRatio === '1:2',
-      [`${prefix}--aspect-ratio--1x1`]: aspectRatio === '1:1',
-      [`${prefix}--aspect-ratio--16x9`]: aspectRatio === '16:9',
-      [`${prefix}--aspect-ratio--4x3`]: aspectRatio === '4:3',
-    });
+    const aspectRatioClassNames = cx(
+      `${prefix}--aspect-ratio`,
+      `${prefix}--image-card__spacing`,
+      {
+        [`${prefix}--aspect-ratio--2x1`]: aspectRatio === '2:1',
+        [`${prefix}--aspect-ratio--1x2`]: aspectRatio === '1:2',
+        [`${prefix}--aspect-ratio--1x1`]: aspectRatio === '1:1',
+        [`${prefix}--aspect-ratio--16x9`]: aspectRatio === '16:9',
+        [`${prefix}--aspect-ratio--4x3`]: aspectRatio === '4:3',
+      }
+    );
 
-    const carbonTileclassNames = classnames([`${prefix}--tile`], {
+    const carbonTileclassNames = cx(`${prefix}--tile`, {
       [`${prefix}--tile--clickable`]: href !== undefined,
     });
 
-    const titleClassNames = classnames([`${prefix}--image-card__title`], {
+    const titleClassNames = cx(`${prefix}--image-card__title`, {
       [`${prefix}--image-card__title--dark`]: titleColor === 'dark',
     });
 
-    const subTitleClassNames = classnames([`${prefix}--image-card__subtitle`], {
+    const subTitleClassNames = cx(`${prefix}--image-card__subtitle`, {
       [`${prefix}--image-card__subtitle--dark`]: subTitleColor === 'dark',
     });
 
-    const iconClassNames = classnames([`${prefix}--image-card__icon--action`], {
+    const iconClassNames = cx(`${prefix}--image-card__icon--action`, {
       [`${prefix}--image-card__icon--action--dark`]: iconColor === 'dark',
     });
 
@@ -102,11 +105,7 @@ export default class ImageCard extends React.Component {
       );
     } else {
       cardContainer = (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={href}
-          className={carbonTileclassNames}>
+        <a href={href} className={carbonTileclassNames}>
           {cardContent}
         </a>
       );

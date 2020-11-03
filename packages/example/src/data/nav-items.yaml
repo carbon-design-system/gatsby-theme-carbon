@@ -24,6 +24,8 @@
       path: /guides/navigation/sidebar
     - title: npm scripts
       path: /guides/npm-scripts
+    - title: Hosting
+      path: /guides/hosting
 - title: Components
   pages:
     - title: Accordion

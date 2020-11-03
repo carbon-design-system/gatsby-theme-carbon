@@ -1,7 +1,16 @@
-.container--dark,
-.container--homepage {
+.container--dark {
   background: $carbon--gray-100;
-  color: $carbon--white-0;
+  color: $carbon--gray-10;
+}
+
+.container--white {
+  background: $carbon--white-0;
+  color: $carbon--gray-100;
+}
+
+.container--g10 {
+  background: $carbon--gray-10;
+  color: $carbon--gray-100;
 }
 
 .container--dark a.#{$prefix}--link,
