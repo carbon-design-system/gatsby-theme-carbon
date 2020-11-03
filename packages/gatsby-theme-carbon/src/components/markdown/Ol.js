@@ -3,7 +3,7 @@ import cx from 'classnames';
 import { list } from './Markdown.module.scss';
 
 const Ol = ({ children, nested, start, className, ...rest }) => {
-  const classNames = cx(className, list, 'bx--list--ordered', {
+  const classNames = cx(className, 'bx--list--ordered--native', list, {
     'bx--list--nested': nested,
   });
 
