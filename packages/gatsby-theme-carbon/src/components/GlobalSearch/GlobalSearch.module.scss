@@ -34,8 +34,8 @@
 
 .input {
   @include carbon--type-style('body-short-02');
-  color: $inverse-01;
-  caret-color: $inverse-01;
+  color: $carbon--white-0;
+  caret-color: $carbon--white-0;
   background-color: transparent;
   border: none;
   outline: none;
@@ -61,8 +61,8 @@
   left: 0;
   right: 0;
   top: 3rem;
-  background-color: $ui-05;
-  border: 1px solid $inverse-02;
+  background-color: $carbon--gray-100;
+  border: 1px solid $carbon--gray-80;
   border-top: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
