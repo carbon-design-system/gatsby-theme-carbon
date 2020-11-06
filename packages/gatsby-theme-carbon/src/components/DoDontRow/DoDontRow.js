@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 import { Row } from '../Grid';
 import { doDontRow } from './DoDontRow.module.scss';
 
 export default class DoDontRow extends React.Component {
   render() {
-    const { children } = this.props;
+    const { children, className } = this.props;
 
-    return <Row className={doDontRow}>{children}</Row>;
+    return <Row className={cx(className, doDontRow)}>{children}</Row>;
   }
 }
 

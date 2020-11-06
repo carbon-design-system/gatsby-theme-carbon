@@ -1,6 +1,5 @@
 /* eslint-disable import/no-duplicates */
 import React, { useContext, useEffect, useRef, useCallback } from 'react';
-import classnames from 'classnames';
 import cx from 'classnames';
 import NavContext from '../../util/context/NavContext';
 import useWindowSize from '../../util/hooks/useWindowSize';
@@ -35,10 +34,11 @@ const Container = ({ children, homepage, theme }) => {
     return navOpen && windowSize.innerWidth && windowSize.innerWidth < 1056;
   })();
 
-  const containerClassNames = classnames({
-    container: true,
+  const containerClassNames = cx('container', {
     'container--homepage': homepage,
     'container--dark': theme === 'dark',
+    'container--white': theme === 'white',
+    'container--g10': theme === 'g10',
     'container--header--nav': navigationStyle,
   });
 

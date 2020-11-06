@@ -1,0 +1,13 @@
+name: Lint commit messages
+on: [pull_request, push]
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v2.1.0
+        with:
+          helpURL: https://github.com/carbon-design-system/gatsby-theme-carbon/blob/main/docs/commitlint.md

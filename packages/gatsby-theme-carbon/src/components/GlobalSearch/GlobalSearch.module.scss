@@ -7,36 +7,36 @@
   width: 100%;
   margin-left: $spacing-03;
   height: 3rem;
-  background-color: $inverse-02;
-  color: $inverse-01;
+  background-color: $carbon--gray-80;
+  color: $carbon--white-0;
   transition: max-width $duration--fast-02 $carbon--standard-easing,
     background $duration--fast-02 $carbon--standard-easing;
 }
 
 .container.inputFocusWithin {
-  outline: 2px solid $inverse-01;
+  outline: 2px solid $carbon--white-0;
   outline-offset: -2px;
 }
 
 .container.hidden {
   max-width: 3rem;
-  background-color: $ui-05;
+  background-color: $carbon--gray-100;
 }
 
 .container svg {
-  fill: $inverse-01;
+  fill: $carbon--white-0;
 }
 
 .inputWrapper {
   display: flex;
   flex-grow: 1;
-  border-bottom: 1px solid $inverse-02;
+  border-bottom: 1px solid $carbon--gray-80;
 }
 
 .input {
   @include carbon--type-style('body-short-02');
-  color: $inverse-01;
-  caret-color: $inverse-01;
+  color: $carbon--white-0;
+  caret-color: $carbon--white-0;
   background-color: transparent;
   border: none;
   outline: none;
@@ -62,8 +62,8 @@
   left: 0;
   right: 0;
   top: 3rem;
-  background-color: $ui-05;
-  border: 1px solid $inverse-02;
+  background-color: $carbon--gray-100;
+  border: 1px solid $carbon--gray-80;
   border-top: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
@@ -127,7 +127,7 @@
   }
   &:focus {
     // shell header button's don't present focus on mobile
-    outline: 2px solid $inverse-01;
+    outline: 2px solid $carbon--white-0;
     outline-offset: -2px;
   }
 }

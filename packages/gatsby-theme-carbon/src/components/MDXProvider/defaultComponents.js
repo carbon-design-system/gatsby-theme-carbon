@@ -28,6 +28,8 @@ import ArtDirection from '../ArtDirection';
 import MediumPosts from '../MediumPosts';
 import Title from '../Title';
 import { MiniCard, CardGroup } from '../MiniCard';
+import Sup from '../markdown/Sup';
+import Abbr from '../markdown/Abbr';
 
 const components = {
   wrapper: function Wrapper({ children, ...props }) {
@@ -48,6 +50,8 @@ const components = {
   code: Code,
   table: PageTable,
   a: Link,
+  sup: Sup,
+  abbr: Abbr,
   ArtDirection,
   PageDescription,
   Accordion,

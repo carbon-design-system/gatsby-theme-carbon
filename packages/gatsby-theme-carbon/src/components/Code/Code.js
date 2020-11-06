@@ -5,16 +5,20 @@ import { ChevronDown16, ChevronUp16 } from '@carbon/icons-react';
 import cx from 'classnames';
 
 import { Row } from '../Grid';
-import prismTheme from './prismTheme';
+import getTheme from './getTheme';
 
 import styles from './Code.module.scss';
 
 import PathRow from './PathRow';
 import Sidebar from './Sidebar';
 
+import useMetadata from '../../util/hooks/useMetadata';
+
 const Code = ({ children, className: classNameProp = '', path, src }) => {
   const [hasMoreThanNineLines, setHasMoreThanNineLines] = useState(false);
   const [shouldShowMore, setShouldShowMore] = useState(false);
+
+  const { interiorTheme } = useMetadata();
 
   const language = classNameProp.replace(/language-/, '').replace('mdx', 'jsx');
 
@@ -41,7 +45,7 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
   };
 
   return (
-    <Row className={styles.row}>
+    <Row className={cx(styles.row)}>
       <PathRow src={src} path={path}>
         {children}
       </PathRow>
@@ -49,7 +53,7 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
         {...defaultProps}
         code={children}
         language={language}
-        theme={prismTheme}>
+        theme={getTheme(interiorTheme)}>
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <div className={styles.container}>
             <pre
@@ -74,7 +78,9 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
       </Highlight>
       {hasMoreThanNineLines && (
         <button
-          className={styles.showMoreButton}
+          className={cx(styles.showMoreButton, {
+            [styles.dark]: interiorTheme === 'dark',
+          })}
           onClick={() => setShouldShowMore(!shouldShowMore)}
           type="button">
           {shouldShowMore ? (
