@@ -23,11 +23,7 @@
 
 .button:focus {
   outline: none;
-<<<<<<< HEAD
-  border: 2px solid $focus;
-=======
   border: 2px solid var(--cds-inverse-focus-ui);
->>>>>>> upstream/main
   box-shadow: inset 0 0 0 1px $inverse-01;
 }
 
