@@ -18,12 +18,8 @@ const FeedbackDialog = ({ onSubmit }) => {
       <LaunchButton
         visible={visible}
         icon={FaceWink20}
-<<<<<<< HEAD
         filledIcon={FaceWinkFilled20}
         onClick={handleLaunch}
-=======
-        onClick={() => setVisible(!visible)}
->>>>>>> upstream/main
       />
     </>
   ) : null;
