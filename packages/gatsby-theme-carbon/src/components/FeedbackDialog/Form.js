@@ -67,7 +67,9 @@ const Form = ({ visible, setVisible, onSubmit: submitHandler }) => {
     <div className={cx(styles.dialog, { [styles.dialogActive]: visible })}>
       <div>
         <div
-          className={styles.formContainer}
+          className={cx(styles.formContainer, {
+            [styles.formContainerActive]: visible,
+          })}
           role="dialog"
           aria-labelledby="feedback-dialog-label">
           <h2 id="feedback-dialog-label">Was this page helpful to you?</h2>

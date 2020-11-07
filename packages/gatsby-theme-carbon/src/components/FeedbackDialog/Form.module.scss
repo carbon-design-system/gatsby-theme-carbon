@@ -6,22 +6,26 @@
   right: 2rem;
   width: 0;
   height: 0;
+  opacity: 0;
   margin-top: 456px;
   overflow: hidden;
   white-space: nowrap;
   z-index: 10000; /* old z('floating') #940 */
-  transition: width $duration--slow-01 motion(exit, productive),
-    height $duration--moderate-01 motion(exit, productive),
-    margin-top $duration--moderate-01 motion(exit, productive);
+  transition-property: width, height, opacity;
+  transition-duration: 250ms;
+  transition-delay: 70ms, 0ms;
+  transition-timing-function: motion(standard, expressive);
 }
 
 .dialog-active {
   height: 456px;
   width: 320px;
+  opacity: 1;
   margin-top: 0;
-  transition: width $duration--moderate-01 motion(entrance, productive),
-    height $duration--slow-01 motion(entrance, productive),
-    margin-top $duration--slow-01 motion(entrance, productive);
+  transition-property: width, height;
+  transition-duration: 120ms, 200ms;
+  transition-delay: 0ms, 40ms;
+  transition-timing-function: motion(entrance, expressive);
 }
 
 .dialog > div {
@@ -32,10 +36,28 @@
 }
 
 .form-container {
+  position: relative;
   padding: $spacing-05;
   padding-bottom: $spacing-08;
   color: var(--cds-text-02);
   width: 100%;
+  top: 200px;
+  opacity: 0;
+  transition-duration: 350ms;
+  transition-timing-function: motion(entrance, expressive);
+}
+
+.form-container-active {
+  position: relative;
+  padding: $spacing-05;
+  padding-bottom: $spacing-08;
+  color: var(--cds-text-02);
+  width: 100%;
+  top: 0px;
+  opacity: 1;
+  transition-duration: 250ms;
+  transition-delay: 40ms;
+  transition-timing-function: motion(entrance, expressive);
 }
 
 .form-container h2 {
@@ -44,8 +66,11 @@
   border-bottom: 1px solid var(--cds-ui-03);
 }
 
-.form-container label,
 .form-container legend {
+  @include carbon--type-style('label-01');
+}
+
+.form-container label {
   @include carbon--type-style('label-01');
 }
 
@@ -62,13 +87,15 @@
   height: 0;
   margin-top: 4rem; //used to transition height from bottom
   overflow: hidden;
-  transition: all 300ms motion(entrance, productive);
-  transition-delay: 15ms;
+  transition: all 210ms motion(entrance, productive);
+  transition-delay: 120ms;
 }
 
-.button-row-active {
+.buttonRow-active {
   height: 4rem;
   margin-top: 0;
+  transition: all 120ms motion(entrance, productive);
+  transition-delay: 170ms;
 }
 
 .button {
