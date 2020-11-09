@@ -7,7 +7,7 @@
   },
   "license": "Apache 2.0",
   "engines": {
-    "node": "12.x || 14.x"
+    "node": ">=12"
   },
   "workspaces": [
     "packages/*"
