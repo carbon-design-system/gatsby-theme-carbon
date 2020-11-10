@@ -13,7 +13,7 @@
   right: $spacing-05;
 
   @include carbon--breakpoint('md') {
-    bottom: calc(6rem + 8px);
+    bottom: 6.5rem;
     right: $spacing-07;
   }
 }
