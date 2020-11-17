@@ -22,6 +22,17 @@
   font-size: 1rem;
 }
 
+:global(.bx--header__global) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 3rem);
+  @include carbon--breakpoint('lg') {
+    position: static;
+    width: auto;
+  }
+}
+
 .header :global(.bx--header__action--menu) {
   border: none;
   top: 0.5px;
@@ -121,6 +132,8 @@ header.header {
 
   @include carbon--breakpoint('lg') {
     left: 0;
+    width: calc(25% + 1rem);
+    max-width: 384px;
   }
 }
 

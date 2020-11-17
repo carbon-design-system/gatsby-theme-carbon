@@ -72,18 +72,13 @@
   width: 100%;
 }
 
-:global(.bx--list--ordered),
-ol {
-  list-style: decimal;
-}
-
-ul :global(.bx--list--ordered),
+ul :global(.bx--list--ordered--native),
 ul :global(.bx--list--unordered) {
   width: 100%;
   padding-right: $spacing-05;
 }
 
-:global(.bx--list--ordered) .list-item,
+:global(.bx--list--ordered--native) .list-item,
 :global(.bx--list--unordered) .list-item {
   @include carbon--type-style('body-long-02');
   padding-right: 0;
@@ -103,12 +98,12 @@ ul :global(.bx--list--unordered) {
 }
 
 // aligns UNnested ordered list item to body copy
-:global(.bx--list--ordered:not(.bx--list--nested)) {
+:global(.bx--list--ordered--native:not(.bx--list--nested)) {
   margin-left: 1ch;
 }
 
 // aligns NESTED ordered list item to parent list item text #993
-:global(.bx--list--ordered.bx--list--nested) {
+:global(.bx--list--ordered--native.bx--list--nested) {
   margin-left: 0.5rem;
 }
 
