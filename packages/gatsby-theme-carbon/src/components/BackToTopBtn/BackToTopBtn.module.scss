@@ -9,8 +9,13 @@
   padding-top: 0.325rem;
   cursor: pointer;
   position: fixed;
-  bottom: $spacing-09;
-  right: $spacing-07;
+  bottom: $spacing-06;
+  right: $spacing-05;
+
+  @include carbon--breakpoint('md') {
+    bottom: $spacing-09;
+    right: $spacing-07;
+  }
 }
 
 .button svg {
