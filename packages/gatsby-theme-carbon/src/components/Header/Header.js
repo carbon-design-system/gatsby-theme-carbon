@@ -23,6 +23,8 @@ import {
   collapsed,
   headerButton,
   switcherButton,
+  headerNameWithHeaderNav,
+  headerWithHeaderNav,
 } from './Header.module.scss';
 
 const Header = ({ children }) => {
@@ -35,7 +37,9 @@ const Header = ({ children }) => {
   const { isSearchEnabled, navigationStyle } = useMetadata();
 
   return (
-    <ShellHeader aria-label="Header" className={header}>
+    <ShellHeader
+      aria-label="Header"
+      className={cx(header, { [headerWithHeaderNav]: navigationStyle })}>
       <SkipToContent href="#main-content" className={skipToContent} />
       <HeaderMenuButton
         className={cx('bx--header__action--menu', headerButton)}
@@ -49,6 +53,7 @@ const Header = ({ children }) => {
       <Link
         className={cx(headerName, {
           [collapsed]: searchIsOpen,
+          [headerNameWithHeaderNav]: navigationStyle,
         })}
         to="/">
         {children}

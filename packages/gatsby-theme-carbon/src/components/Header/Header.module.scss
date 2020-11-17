@@ -1,5 +1,31 @@
 @import '~carbon-components/scss/globals/scss/layout';
 
+// Changes the background color of an active item in a menu.
+.currentPageAccordion :global(.bx--header__menu-item--current) {
+  background-color: $carbon--gray-80;
+}
+
+// Overrides upstream Carbon styles for header nav
+.headerWithHeaderNav :global(.bx--header__nav) {
+  display: block;
+  position: absolute;
+  left: 25%;
+  top: 0;
+  padding-left: 0;
+}
+
+.headerWithHeaderNav :global(.bx--header__menu-bar) {
+  margin-left: 5px;
+}
+
+.headerWithHeaderNav :global(.bx--header__menu-item) {
+  font-size: 1rem;
+}
+
+.headerWithHeaderNav :global(.bx--header__nav::before) {
+  display: none;
+}
+
 // Creates the blue line under the active accordion menu item
 .currentPageAccordion::after {
   position: absolute;
@@ -8,13 +34,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  border-bottom: 4px solid $carbon--blue-60;
+  border-bottom: 3px solid $carbon--blue-60;
   content: '';
-}
-
-// Changes the background color of an active item in a menu.
-.currentPageAccordion :global(.bx--header__menu-item--current) {
-  background-color: $carbon--gray-80;
 }
 
 // Removes the blue line that sits under an active item in menu.
@@ -24,7 +45,7 @@
 
 // Overrides the style from upstream Carbon for non-accordion menu items
 .currentPage :global(.bx--header__menu-item--current)::after {
-  border-bottom: 4px solid $carbon--blue-60;
+  border-bottom: 3px solid $carbon--blue-60;
   width: calc(100% + 4px);
   left: -2px;
 }
@@ -38,20 +59,6 @@
 header.header {
   background-color: $carbon--gray-100;
   z-index: 10000; /* old z('floating') #940 */
-}
-
-.header :global(.bx--header__action--menu) {
-  border: none;
-  top: 0.5px;
-  position: relative;
-  flex-shrink: 0;
-  &:focus {
-    outline: 2px solid $carbon--white-0;
-    outline-offset: -2px;
-  }
-  @include carbon--breakpoint('lg') {
-    display: none;
-  }
 }
 
 .header :global(.bx--header__action--menu.bx--header__action--active) {
@@ -99,6 +106,12 @@ header.header {
 
   @include carbon--breakpoint('lg') {
     left: 0;
+  }
+}
+
+.headerNameWithHeaderNav {
+  @include carbon--breakpoint('lg') {
+    padding: 0 2rem;
   }
 }
 
