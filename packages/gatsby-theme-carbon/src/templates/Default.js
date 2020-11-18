@@ -60,12 +60,14 @@ const Default = ({ pageContext, children, location, Title }) => {
       pageDescription={description}
       pageKeywords={keywords}
       titleType={titleType}>
-      <PageHeader
-        title={Title ? <Title /> : title}
-        label="label"
-        tabs={tabs}
-        theme={theme}
-      />
+      {title && (
+        <PageHeader
+          title={() => <Title />}
+          label="label"
+          tabs={tabs}
+          theme={theme}
+        />
+      )}
       {tabs && <PageTabs slug={slug} tabs={tabs} currentTab={currentTab} />}
       <Main padded>
         {children}
