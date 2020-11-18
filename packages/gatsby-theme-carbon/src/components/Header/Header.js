@@ -15,17 +15,7 @@ import GlobalSearch from '../GlobalSearch';
 import NavContext from '../../util/context/NavContext';
 import useMetadata from '../../util/hooks/useMetadata';
 
-import {
-  header,
-  switcherButtonOpen,
-  skipToContent,
-  headerName,
-  collapsed,
-  headerButton,
-  switcherButton,
-  headerNameWithHeaderNav,
-  headerWithHeaderNav,
-} from './Header.module.scss';
+import styles from './Header.module.scss';
 
 const Header = ({ children }) => {
   const {
@@ -39,10 +29,12 @@ const Header = ({ children }) => {
   return (
     <ShellHeader
       aria-label="Header"
-      className={cx(header, { [headerWithHeaderNav]: navigationStyle })}>
-      <SkipToContent href="#main-content" className={skipToContent} />
+      className={cx(styles.header, {
+        [styles.headerWithHeaderNav]: navigationStyle,
+      })}>
+      <SkipToContent href="#main-content" className={styles.skipToContent} />
       <HeaderMenuButton
-        className={cx('bx--header__action--menu', headerButton)}
+        className={cx('bx--header__action--menu', styles.headerButton)}
         aria-label="Open menu"
         onClick={() => {
           toggleNavState('leftNavIsOpen');
@@ -51,9 +43,9 @@ const Header = ({ children }) => {
         isActive={leftNavIsOpen}
       />
       <Link
-        className={cx(headerName, {
-          [collapsed]: searchIsOpen,
-          [headerNameWithHeaderNav]: navigationStyle,
+        className={cx(styles.headerName, {
+          [styles.collapsed]: searchIsOpen,
+          [styles.headerNameWithHeaderNav]: navigationStyle,
         })}
         to="/">
         {children}
@@ -62,8 +54,8 @@ const Header = ({ children }) => {
       <HeaderGlobalBar>
         {isSearchEnabled && <GlobalSearch />}
         <HeaderGlobalAction
-          className={cx(headerButton, switcherButton, {
-            [switcherButtonOpen]: switcherIsOpen,
+          className={cx(styles.headerButton, styles.switcherButton, {
+            [styles.switcherButtonOpen]: switcherIsOpen,
           })}
           aria-label="Switch"
           onClick={() => {

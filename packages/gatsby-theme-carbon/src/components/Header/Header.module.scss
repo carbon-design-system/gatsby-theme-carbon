@@ -1,8 +1,20 @@
 @import '~carbon-components/scss/globals/scss/layout';
 
+:global(.bx--header__global) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 3rem);
+  @include carbon--breakpoint('lg') {
+    position: static;
+    width: auto;
+  }
+}
+
 // Changes the background color of an active item in a menu.
 .currentPageAccordion :global(.bx--header__menu-item--current) {
   background-color: $carbon--gray-80;
+  color: $carbon--white-0;
 }
 
 // Overrides upstream Carbon styles for header nav
@@ -22,16 +34,7 @@
   font-size: 1rem;
 }
 
-:global(.bx--header__global) {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: calc(100% - 3rem);
-  @include carbon--breakpoint('lg') {
-    position: static;
-    width: auto;
-  }
-}
+//
 
 .header :global(.bx--header__action--menu) {
   border: none;
@@ -43,9 +46,16 @@
   }
 }
 
+// Overrides the style from upstream Carbon for non-accordion menu items
+.currentPage :global(.bx--header__menu-item--current) {
+  color: $carbon--white-0;
+}
+
+// Overrides upstream Carbon styles for header nav
 .headerWithHeaderNav :global(.bx--header__nav::before) {
   display: none;
 }
+//
 
 .header :global(.bx--header__action--menu:focus) {
   outline: 2px solid $carbon--white-0;
@@ -178,4 +188,8 @@ header.header {
   &:active {
     border-left: 1px solid $carbon--white-0;
   }
+}
+
+.header :global(a.bx--header__menu-item:hover) {
+  color: $carbon--white-0;
 }
