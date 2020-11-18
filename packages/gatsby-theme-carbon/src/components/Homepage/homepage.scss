@@ -86,7 +86,7 @@
   margin: 0;
 
   @include carbon--breakpoint('lg') {
-    padding-left: calc(2rem);
+    padding-left: 2rem;
   }
 
   @include carbon--breakpoint('max') {
