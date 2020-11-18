@@ -38,7 +38,7 @@ export default class PageTabs extends React.Component {
         <div className="bx--grid">
           <div className="bx--row">
             <div className="bx--col-lg-12 bx--col-no-gutter">
-              <nav>
+              <nav aria-label={currentTab}>
                 <ul className={list}>{pageTabs}</ul>
               </nav>
             </div>
