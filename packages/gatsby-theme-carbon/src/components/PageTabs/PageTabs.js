@@ -14,7 +14,7 @@ import {
 
 export default class PageTabs extends React.Component {
   render() {
-    const { tabs, slug } = this.props;
+    const { title, tabs, slug } = this.props;
     const currentTab = slug.split('/').filter(Boolean).slice(-1)[0];
 
     const pageTabs = tabs.map((tab) => {
@@ -38,7 +38,7 @@ export default class PageTabs extends React.Component {
         <div className="bx--grid">
           <div className="bx--row">
             <div className="bx--col-lg-12 bx--col-no-gutter">
-              <nav aria-label={currentTab}>
+              <nav aria-label={title}>
                 <ul className={list}>{pageTabs}</ul>
               </nav>
             </div>
