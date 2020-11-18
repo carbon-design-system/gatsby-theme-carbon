@@ -25,3 +25,5 @@ P.propTypes = {
    */
   fullWidth: PropTypes.bool,
 };
+
+export default P;
