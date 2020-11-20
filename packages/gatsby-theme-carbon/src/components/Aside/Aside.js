@@ -15,6 +15,8 @@ const Aside = ({ children, className, hideRule, ...rest }) => {
   );
 };
 
+export default Aside;
+
 Aside.propTypes = {
   children: PropTypes.node,
 
