@@ -30,3 +30,5 @@ Aside.propTypes = {
    */
   hideRule: PropTypes.bool,
 };
+
+export default Aside;
