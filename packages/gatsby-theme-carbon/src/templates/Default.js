@@ -50,7 +50,6 @@ const Default = ({ pageContext, children, location, Title }) => {
   const currentTab = getCurrentTab();
 
   const theme = frontmatterTheme || interiorTheme;
-  const titleComponent = Title ? <Title /> : title;
 
   return (
     <Layout
@@ -61,14 +60,12 @@ const Default = ({ pageContext, children, location, Title }) => {
       pageDescription={description}
       pageKeywords={keywords}
       titleType={titleType}>
-      {titleComponent && (
-        <PageHeader
-          title={titleComponent}
-          label="label"
-          tabs={tabs}
-          theme={theme}
-        />
-      )}
+      <PageHeader
+        title={Title ? <Title /> : title}
+        label="label"
+        tabs={tabs}
+        theme={theme}
+      />
       {tabs && (
         <PageTabs
           title={title}
