@@ -10,6 +10,7 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Carbon Design Gatsby Theme',
+        icon: 'src/images/favicon.svg',
         short_name: 'Gatsby Theme Carbon',
         start_url: '/',
         background_color: '#ffffff',
