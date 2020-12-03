@@ -48,6 +48,7 @@ const HeaderNavItem = (props) => {
             isActive={isActive} // TODO similar categories
             defaultExpanded={isActive}
             title={category}
+            role="menuitem"
             menuLinkName={category}>
             <TabItems
               onClick={closeLeftNav}
