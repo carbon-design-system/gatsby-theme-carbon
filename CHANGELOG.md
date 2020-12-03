@@ -1,3 +1,15 @@
+### [1.27.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.27.0...v1.27.1) (2020-11-23)
+
+
+### Bug Fixes
+
+* **page-tabs:** nav aria unique labels ([#1063](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1063)) ([a536b8a](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/a536b8a624ca9b0f642b7df5be20c6d410d70ab8))
+* default exports ([68594c5](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/68594c54590b9b1ae678e9112f44398b920f00d0))
+* feedback and back to top button mobile spacing ([#1052](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1052)) ([db91ffd](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/db91ffdb4320f9377ecd468addddac4a6bf4c435))
+* **footer:** width of rules on mobile ([#1051](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1051)) ([aa7d34a](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/aa7d34a1aee99f16c1fb9bc59db010b4d800b89d))
+* **search:** update search styles ([#1050](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1050)) ([bcc3f23](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/bcc3f23f8f28f57619b6fd689b5cb73ce61c5dab))
+* ordered list styles in firefox  ([#1047](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1047)) ([eae9688](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/eae96880f43da34ba53395bb01f49af91c9ea695))
+
 ## [1.27.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.18...v1.27.0) (2020-10-22)
 
 
