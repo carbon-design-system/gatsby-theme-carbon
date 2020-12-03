@@ -176,13 +176,11 @@ const GlobalSearchInput = () => {
             ref={openButtonRef}
             type="button"
             aria-label="Open search"
-            aria-expanded={searchIsOpen}>
-            onClick=
-            {() => {
+            aria-expanded={searchIsOpen}
+            onClick={() => {
               toggleNavState('searchIsOpen', 'open');
               toggleNavState('switcherIsOpen', 'close');
-            }}
-            >
+            }}>
             <Search20 description="Open search" />
           </button>
           <input
