@@ -167,8 +167,7 @@ const GlobalSearchInput = () => {
         <div
           className={inputWrapper}
           aria-owns="search-menu"
-          aria-haspopup="menu"
-          aria-expanded={searchIsOpen}>
+          aria-haspopup="menu">
           <button
             tabIndex={searchIsOpen ? '-1' : '0'}
             className={cx(searchButton, {
@@ -177,6 +176,7 @@ const GlobalSearchInput = () => {
             ref={openButtonRef}
             type="button"
             aria-label="Open search"
+            aria-expanded={searchIsOpen}
             onClick={() => {
               toggleNavState('searchIsOpen', 'open');
               toggleNavState('switcherIsOpen', 'close');
