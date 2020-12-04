@@ -197,7 +197,7 @@ header.header {
   color: $carbon--white-0;
 }
 
-// Style for the line in the headernav sub menu.
+// Style for the subtle border under each item in the headernav sub menu.
 .header
   :global(.bx--header__submenu
     > .bx--header__menu
@@ -216,4 +216,13 @@ header.header {
   &:hover::after {
     display: none;
   }
+}
+
+// Removes the last subtle border in a menu from creeping onto the page.
+.header
+  :global(.bx--header__submenu
+    > .bx--header__menu
+    > li:last-child
+    > .bx--header__menu-item:after) {
+  display: none;
 }
