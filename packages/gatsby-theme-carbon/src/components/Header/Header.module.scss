@@ -11,12 +11,6 @@
   }
 }
 
-// Changes style of an active item in a menu.
-.currentPageAccordion :global(.bx--header__menu-item--current) {
-  background-color: $carbon--gray-80;
-  color: $carbon--white-0;
-}
-
 // Overrides upstream Carbon styles for header nav
 .headerWithHeaderNav :global(.bx--header__nav) {
   @include carbon--breakpoint('lg') {
@@ -49,11 +43,6 @@
   }
 }
 
-// Overrides the style from upstream Carbon for non-accordion menu items
-.currentPage :global(.bx--header__menu-item--current) {
-  color: $carbon--white-0;
-}
-
 // Overrides upstream Carbon styles for header nav
 .headerWithHeaderNav :global(.bx--header__nav::before) {
   display: none;
@@ -63,30 +52,6 @@
 .header :global(.bx--header__action--menu:focus) {
   outline: 2px solid $carbon--white-0;
   outline-offset: -2px;
-}
-
-// Creates the blue line under the active accordion menu item
-.currentPageAccordion::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-bottom: 3px solid $carbon--blue-60;
-  content: '';
-}
-
-// Removes the blue line that sits under an active item in menu.
-.currentPageAccordion :global(.bx--header__menu-item--current)::after {
-  display: none;
-}
-
-// Overrides the style from upstream Carbon for non-accordion menu items
-.currentPage :global(.bx--header__menu-item--current)::after {
-  border-bottom: 3px solid $carbon--blue-60;
-  width: calc(100% + 4px);
-  left: -2px;
 }
 
 .header button {
@@ -145,7 +110,6 @@ header.header {
 
   @include carbon--breakpoint('lg') {
     left: 0;
-    // width: calc(25% + 1rem);
     max-width: 384px;
   }
 }
@@ -195,34 +159,4 @@ header.header {
 
 .header :global(a.bx--header__menu-item:hover) {
   color: $carbon--white-0;
-}
-
-// Style for the subtle border under each item in the headernav sub menu.
-.header
-  :global(.bx--header__submenu
-    > .bx--header__menu
-    > li
-    > .bx--header__menu-item) {
-  &::after {
-    position: absolute;
-    right: 0;
-    bottom: -3px;
-    left: 1rem;
-    width: calc(100% - 2rem);
-    content: '';
-    border-bottom: 1px solid $carbon--gray-80;
-  }
-
-  &:hover::after {
-    display: none;
-  }
-}
-
-// Removes the last subtle border in a menu from creeping onto the page.
-.header
-  :global(.bx--header__submenu
-    > .bx--header__menu
-    > li:last-child
-    > .bx--header__menu-item:after) {
-  display: none;
 }

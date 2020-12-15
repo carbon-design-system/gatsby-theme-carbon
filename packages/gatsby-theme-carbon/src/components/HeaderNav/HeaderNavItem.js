@@ -5,7 +5,8 @@ import { Location } from '@reach/router';
 import cx from 'classnames';
 
 import { HeaderMenu, HeaderMenuItem } from 'carbon-components-react';
-import styles from '../Header/Header.module.scss';
+import styles from './HeaderNavItem.module.scss';
+// import styles from './HeaderNav.module.scss';
 
 import NavContext from '../../util/context/NavContext';
 import usePathprefix from '../../util/hooks/usePathprefix';
@@ -72,20 +73,18 @@ const TabItems = ({ items, pathname, onClick }) =>
     return (
       <HeaderMenuItem
         to={`${item.path}`}
-        className={cx({
-          [styles.linkText__dark]: pathname === '/',
-        })}
+        className={cx(
+          {
+            [styles.border]: hasActiveTab === true,
+          },
+          styles.menuItem
+        )}
         onClick={onClick}
         element={Link}
         isActive={hasActiveTab}
         key={i}
         isCurrentPage={hasActiveTab}>
-        <span
-          className={cx(styles.linkText, {
-            [styles.linkText__active]: hasActiveTab,
-          })}>
-          {item.title}
-        </span>
+        <span>{item.title}</span>
       </HeaderMenuItem>
     );
   });
