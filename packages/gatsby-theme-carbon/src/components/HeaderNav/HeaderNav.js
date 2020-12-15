@@ -2,7 +2,6 @@ import React from 'react';
 
 import { HeaderNavigation } from 'carbon-components-react';
 import HeaderNavItem from './HeaderNavItem';
-// import styles from './HeaderNav.module.scss';
 
 import { useNavItems } from '../../util/NavItems';
 
