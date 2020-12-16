@@ -88,7 +88,6 @@ ul :global(.bx--list--unordered) {
 }
 
 .list:not(:global(.bx--list--nested)) > .list-item {
-  padding-right: 2rem;
   @include carbon--breakpoint('md') {
     width: 75%;
   }
