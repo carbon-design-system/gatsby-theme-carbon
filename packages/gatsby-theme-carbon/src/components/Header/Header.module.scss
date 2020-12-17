@@ -66,8 +66,8 @@
   align-items: center;
 }
 
+// Extra specificity needed to override upstream styles.
 header.header {
-  background-color: $carbon--gray-100;
   z-index: 10000; /* old z('floating') #940 */
 }
 
