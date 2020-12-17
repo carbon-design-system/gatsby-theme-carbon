@@ -109,6 +109,7 @@ header.header {
   border-top: 1px solid transparent;
   display: flex;
   align-items: center;
+  z-index: 1;
   &:focus {
     outline: 2px solid $carbon--white-0;
     outline-offset: -2px;
