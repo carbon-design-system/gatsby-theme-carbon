@@ -1,16 +1,5 @@
 @import '~carbon-components/scss/globals/scss/layout';
 
-.header button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header.header {
-  background-color: $carbon--gray-100;
-  z-index: 10000; /* old z('floating') #940 */
-}
-
 :global(.bx--header__global) {
   position: absolute;
   top: 0;
@@ -22,23 +11,70 @@ header.header {
   }
 }
 
+// Overrides upstream Carbon styles for header nav
+.headerWithHeaderNav :global(.bx--header__nav) {
+  @include carbon--breakpoint('lg') {
+    display: block;
+    position: absolute;
+    left: 25%;
+    top: 0;
+    padding-left: 0;
+  }
+}
+
+// Aligns HeaderNav with 12 col grid
+.headerWithHeaderNav :global(.bx--header__menu-bar) {
+  margin-left: 5px;
+}
+
+// Overrides upstream Carbon styles for header nav
+.headerWithHeaderNav :global(.bx--header__menu-item) {
+  font-size: 1rem;
+}
+
+// Overrides upstream Carbon styles for left nav in mobile.
 .header :global(.bx--header__action--menu) {
   border: none;
   top: 0.5px;
   position: relative;
   flex-shrink: 0;
-  &:focus {
-    outline: 2px solid $carbon--white-0;
-    outline-offset: -2px;
-  }
   @include carbon--breakpoint('lg') {
     display: none;
   }
 }
 
+// Overrides upstream Carbon styles for header nav
+.headerWithHeaderNav :global(.bx--header__nav::before) {
+  display: none;
+}
+
+.headerNameWithHeaderNav {
+  @include carbon--breakpoint('lg') {
+    padding: 0 2rem;
+  }
+}
+
+// Overrides upstream Carbon styles for left nav in mobile.
+.header :global(.bx--header__action--menu):focus {
+  outline: 2px solid $carbon--white-0;
+  outline-offset: -2px;
+}
+
+.header button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Extra specificity needed to override upstream styles.
+header.header {
+  z-index: 10000; /* old z('floating') #940 */
+}
+
 .header :global(.bx--header__action--menu.bx--header__action--active) {
   background-color: $carbon--gray-100;
   border-right: 1px solid $inverse-02;
+
   @include carbon--breakpoint('lg') {
     display: none;
   }
@@ -81,7 +117,6 @@ header.header {
 
   @include carbon--breakpoint('lg') {
     left: 0;
-    width: calc(25% + 1rem);
     max-width: 384px;
   }
 }
@@ -121,4 +156,8 @@ header.header {
   &:active {
     border-left: 1px solid $carbon--white-0;
   }
+}
+
+.header :global(a.bx--header__menu-item:hover) {
+  color: $carbon--white-0;
 }
