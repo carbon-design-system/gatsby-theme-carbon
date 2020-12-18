@@ -150,10 +150,6 @@ const NextPreviousContainer = (props) => {
   };
 
   const getNextItem = () => {
-    if (!navigationList[navIndex]) {
-      return null;
-    }
-
     if (currentTitle === 'Home') {
       return {
         to: navigationList[navIndex].path,
@@ -189,16 +185,13 @@ const NextPreviousContainer = (props) => {
     return null;
   }
 
-  const nextItem = getNextItem();
-  const previousItem = getPreviousItem();
-
-  return nextItem && previousItem ? (
+  return (
     <NextPrevious
       isHomepage={isHomepage}
-      previousItem={previousItem}
-      nextItem={nextItem}
+      previousItem={getPreviousItem()}
+      nextItem={getNextItem()}
     />
-  ) : null;
+  );
 };
 
 export default NextPreviousContainer;
