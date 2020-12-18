@@ -5,7 +5,7 @@ import { Location } from '@reach/router';
 import cx from 'classnames';
 
 import { HeaderMenu, HeaderMenuItem } from 'carbon-components-react';
-import styles from '../Header/Header.module.scss';
+import styles from './HeaderNavItem.module.scss';
 
 import NavContext from '../../util/context/NavContext';
 import usePathprefix from '../../util/hooks/usePathprefix';
@@ -30,21 +30,25 @@ const HeaderNavItem = (props) => {
         if (items.length === 1) {
           return (
             <HeaderMenuItem
+              className={cx({ [styles.currentPage]: isActive })}
               onClick={closeLeftNav}
               icon={<span>dummy icon</span>}
               element={Link}
               isActive={isActive}
-              to={`${items[0].path}`}>
+              to={`${items[0].path}`}
+              isCurrentPage={isActive}>
               {category}
             </HeaderMenuItem>
           );
         }
         return (
           <HeaderMenu
+            className={cx({ [styles.currentPageAccordion]: isActive })}
             icon={<span>dummy icon</span>}
             isActive={isActive} // TODO similar categories
             defaultExpanded={isActive}
             title={category}
+            role="menuitem"
             menuLinkName={category}>
             <TabItems
               onClick={closeLeftNav}
@@ -68,19 +72,18 @@ const TabItems = ({ items, pathname, onClick }) =>
     return (
       <HeaderMenuItem
         to={`${item.path}`}
-        className={cx({
-          [styles.linkText__dark]: pathname === '/',
-        })}
+        className={cx(
+          {
+            [styles.border]: hasActiveTab === true,
+          },
+          styles.menuItem
+        )}
         onClick={onClick}
         element={Link}
         isActive={hasActiveTab}
-        key={i}>
-        <span
-          className={cx(styles.linkText, {
-            [styles.linkText__active]: hasActiveTab,
-          })}>
-          {item.title}
-        </span>
+        key={i}
+        isCurrentPage={hasActiveTab}>
+        <span>{item.title}</span>
       </HeaderMenuItem>
     );
   });

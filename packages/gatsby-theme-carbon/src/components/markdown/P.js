@@ -19,11 +19,11 @@ const P = ({ children, className, fullWidth, ...rest }) => {
   );
 };
 
+export default P;
+
 P.propTypes = {
   /**
    * Set to full width
    */
   fullWidth: PropTypes.bool,
 };
-
-export default P;
