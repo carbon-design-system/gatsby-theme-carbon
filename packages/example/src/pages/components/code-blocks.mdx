@@ -5,11 +5,13 @@ description: Usage instructions for the Code blocks component
 
 <PageDescription>
 
+
 When authoring markdown using the Carbon Gatsby theme, code blocks have some
 extra super powers you can take advantage of. We provide carbon-themed syntax
 highlighting as well as optional `path` and `src` features.
 
 </PageDescription>
+
 
 ## Example
 
@@ -39,6 +41,28 @@ demonstrates the show more button. This example demonstrates the show more
 button. This example demonstrates the show more button.
 ```
 
+<Title>Configuring Vertical overflow</Title>
+
+You can specify after how many lines you want your code to overflow. Use `0` to
+disable overflowing completely.
+
+```markdown path=/directory/file.mdx src=https://gatsby-theme-carbon.now.sh overflow=5
+## Path and src w/ overflow
+
+This example demonstrates the show more button. This example demonstrates the
+show more button. This example demonstrates the show more button. This example
+demonstrates the show more button. This example demonstrates the show more
+button. This example demonstrates the show more button. This example
+demonstrates the show more button. This example demonstrates the show more
+button. This example demonstrates the show more button. This example
+demonstrates the show more button. This example demonstrates the show more
+button. This example demonstrates the show more button.
+```
+
+````
+```markdown overflow=5
+````
+
 ## Code
 
 ````
@@ -56,3 +80,4 @@ This code snippet provides both a `path` and a `src`.
 | language | string   | [Available languages.](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js) |
 | src      | string   | The full url of a relevant link (source)                                                                                    |
 | path     | string   | A string indicating the filename or path. Due to markdown limitations this can only be a single word                        |
+| overflow | number   | A number indicating how many lines to display before overflowing. Use `0` to disable overflowing completely.                |

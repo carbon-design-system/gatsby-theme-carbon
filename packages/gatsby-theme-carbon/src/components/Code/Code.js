@@ -14,9 +14,18 @@ import Sidebar from './Sidebar';
 
 import useMetadata from '../../util/hooks/useMetadata';
 
-const Code = ({ children, className: classNameProp = '', path, src }) => {
-  const [hasMoreThanNineLines, setHasMoreThanNineLines] = useState(false);
-  const [shouldShowMore, setShouldShowMore] = useState(false);
+const Code = ({
+  children,
+  className: classNameProp = '',
+  overflow = 9,
+  path,
+  src,
+}) => {
+  const isOverFlowEnabled = overflow > 0;
+  const shouldOverflow = children.split('\n').length > overflow;
+  const [isOverflowExpanded, setOverflowExpanded] = useState(
+    !isOverFlowEnabled
+  );
 
   const { interiorTheme } = useMetadata();
 
@@ -33,15 +42,11 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
   const getLines = (lines) => {
     const withoutTrailingEmpty = removeTrailingEmptyLine(lines);
 
-    if (withoutTrailingEmpty.length > 9) {
-      setHasMoreThanNineLines(true);
-    }
-
-    if (shouldShowMore) {
+    if (isOverflowExpanded) {
       return withoutTrailingEmpty;
     }
 
-    return withoutTrailingEmpty.slice(0, 9);
+    return withoutTrailingEmpty.slice(0, overflow);
   };
 
   return (
@@ -76,14 +81,14 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
           </div>
         )}
       </Highlight>
-      {hasMoreThanNineLines && (
+      {isOverFlowEnabled && shouldOverflow && (
         <button
           className={cx(styles.showMoreButton, {
             [styles.dark]: interiorTheme === 'dark',
           })}
-          onClick={() => setShouldShowMore(!shouldShowMore)}
+          onClick={() => setOverflowExpanded(!isOverflowExpanded)}
           type="button">
-          {shouldShowMore ? (
+          {isOverflowExpanded ? (
             <>
               <span>Show less</span>
               <ChevronUp16 />
