@@ -8,7 +8,7 @@ description: Usage instructions for the Code blocks component
 
 When authoring markdown using the Carbon Gatsby theme, code blocks have some
 extra super powers you can take advantage of. We provide carbon-themed syntax
-highlighting as well as optional `path` and `src` features.
+highlighting as well as optional `path`, `src`, and `overflow` features.
 
 </PageDescription>
 
@@ -43,11 +43,11 @@ button. This example demonstrates the show more button.
 
 <Title>Configuring Vertical overflow</Title>
 
-You can specify after how many lines you want your code to overflow. Use `0` to
-disable overflowing completely.
+You can specify after how many lines you want your code to overflow. Set
+`overflow` to a number like you do for `path` or `src`.
 
-```markdown path=/directory/file.mdx src=https://gatsby-theme-carbon.now.sh overflow=5
-## Path and src w/ overflow
+```markdown overflow=5
+## Overflow set to 5
 
 This example demonstrates the show more button. This example demonstrates the
 show more button. This example demonstrates the show more button. This example
@@ -61,6 +61,23 @@ button. This example demonstrates the show more button.
 
 ````
 ```markdown overflow=5
+````
+
+<Title>Disabling Vertical overflow</Title>
+
+Additionally, you can disable overflow completely by setting `overflow` to `0`.
+
+```markdown overflow=0
+## Overflow disabled
+
+This example demonstrates no show more button. This example demonstrates no show
+more button. This example demonstrates no show more button. This example
+demonstrates no show more button. This example demonstrates no show more button.
+This example demonstrates no show more button.
+```
+
+````
+```markdown overflow=0
 ````
 
 ## Code

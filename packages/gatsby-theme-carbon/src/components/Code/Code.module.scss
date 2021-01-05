@@ -1,3 +1,6 @@
+$button-size: $spacing-07;
+$button-padding: $spacing-03;
+
 :global {
   code {
     font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
@@ -58,6 +61,7 @@ li .row {
 }
 
 .highlight {
+  min-height: $button-size + $button-padding * 2;
   padding: $spacing-05;
   position: relative;
   overflow: auto;
@@ -145,9 +149,8 @@ li .row {
   position: absolute;
   right: 0;
   top: 0;
-  bottom: 16px;
-  padding: 8px;
-  padding-left: 32px;
+  bottom: $spacing-05;
+  padding: $button-padding;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,8 +173,8 @@ li .row {
 // Copy button and src button
 .button,
 .copy-button.button {
-  width: 32px;
-  height: 32px;
+  width: $button-size;
+  height: $button-size;
   display: flex;
   flex-shrink: 0;
   justify-content: center;
