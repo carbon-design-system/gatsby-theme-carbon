@@ -5,6 +5,7 @@
   top: 0;
   right: 0;
   width: calc(100% - 3rem);
+  z-index: 2;
   @include carbon--breakpoint('lg') {
     position: static;
     width: auto;
