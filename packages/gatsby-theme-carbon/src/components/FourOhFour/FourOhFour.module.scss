@@ -22,7 +22,7 @@
   position: relative;
   display: inline-block;
   transition: color $transition--base;
-  color: white;
+  color: $text-01;
   text-decoration: none;
   margin-left: $spacing-05;
 
@@ -37,7 +37,7 @@
     content: '\21B3'; //"↳"
     position: absolute;
     left: -$spacing-05;
-    color: white;
+    color: $text-01;
     transition: color $transition--base;
     cursor: pointer;
   }
