@@ -12,7 +12,7 @@ module.exports = (themeOptions) => {
   const repositoryDefault = {
     baseUrl: '',
     subDirectory: '',
-    branch: 'master',
+    branch: 'main',
   };
 
   const defaultTheme = { homepage: 'dark', interior: 'g10' };
