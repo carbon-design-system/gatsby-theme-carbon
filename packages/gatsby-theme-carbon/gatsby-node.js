@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const mkdirp = require('mkdirp');
+const startCase = require('lodash.startcase');
 
 exports.onPreBootstrap = ({ store, reporter }) => {
   const { program } = store.getState();
@@ -31,12 +32,35 @@ exports.onCreatePage = (
     const MdxNode = getNodesByType('Mdx').find(
       ({ fileAbsolutePath }) => fileAbsolutePath === page.component
     );
+    let frontmatter = {
+      ...page.context.frontmatter,
+    };
 
     const { titleType = 'page' } = pluginOptions;
     const { createPage, deletePage } = actions;
     const [relativePagePath] = page.componentPath
       .split('src/pages')
       .splice('-1');
+
+    // Inject titles and descriptions for pages that don't include them
+    if (!frontmatter.title) {
+      const title = page.path
+        .split('/')
+        .filter((part) => part)
+        .map((part) => startCase(part))
+        .join(' / ');
+
+      frontmatter = {
+        description: title,
+        ...frontmatter,
+        title,
+      };
+    }
+
+    if (MdxNode) {
+      Object.assign(MdxNode, { frontmatter });
+    }
+
     deletePage(page);
     createPage({
       ...page,
@@ -44,6 +68,7 @@ exports.onCreatePage = (
         ...page.context,
         relativePagePath,
         titleType,
+        frontmatter,
         MdxNode,
       },
     });
