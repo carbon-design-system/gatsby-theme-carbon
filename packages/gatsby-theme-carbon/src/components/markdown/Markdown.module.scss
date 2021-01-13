@@ -93,6 +93,7 @@ ul :global(.bx--list--unordered) {
   }
   @include carbon--breakpoint('lg') {
     width: 100%;
+    padding-right: 2rem;
   }
 }
 
