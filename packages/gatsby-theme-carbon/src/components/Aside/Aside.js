@@ -15,6 +15,8 @@ const Aside = ({ children, className, hideRule, ...rest }) => {
   );
 };
 
+export default Aside;
+
 Aside.propTypes = {
   children: PropTypes.node,
 
@@ -28,5 +30,3 @@ Aside.propTypes = {
    */
   hideRule: PropTypes.bool,
 };
-
-export default Aside;
