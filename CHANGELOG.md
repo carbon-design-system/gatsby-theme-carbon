@@ -1,3 +1,11 @@
+### [1.27.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.27.1...v1.27.2) (2021-01-06)
+
+
+### Bug Fixes
+
+* un-minify homepage image to remove jank ([#1071](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1071)) ([cef5a5c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/cef5a5c4e7e80513c1eb9cce5c9ba15e35dc1028))
+* **global search:** 1989-aat-avt1-gs-about-carbon-aria-expanded ([#1064](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1064)) ([7520c0b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/7520c0b98d3dd507232c58ac97a8ae23bbb0ca04))
+
 ### [1.27.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.27.0...v1.27.1) (2020-11-23)
 
 

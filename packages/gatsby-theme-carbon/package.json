@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-carbon",
-  "version": "1.27.1",
+  "version": "1.27.2",
   "main": "index.js",
   "author": "vpicone <vp@vincepic.one> (@vpicone)",
   "repository": {
@@ -59,6 +59,7 @@
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-source-medium-feed": "^1.0.6",
     "gatsby-transformer-yaml": "^2.3.1",
+    "lodash.startcase": "^4.4.0",
     "lodash.throttle": "^4.1.1",
     "mkdirp": "^1.0.3",
     "node-sass": "^4.11.0",
