@@ -132,6 +132,10 @@ li .row {
     outline: 2px solid $focus;
     outline-offset: -2px;
   }
+
+  &__inline {
+    right: $spacing-09;
+  }
 }
 
 .show-more-button.dark {

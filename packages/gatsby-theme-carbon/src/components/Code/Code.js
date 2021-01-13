@@ -17,10 +17,11 @@ import useMetadata from '../../util/hooks/useMetadata';
 const Code = ({
   children,
   className: classNameProp = '',
-  overflow = 9,
+  overflow: overflowProp = 9,
   path,
   src,
 }) => {
+  const overflow = Number(overflowProp); // MDX parses this as a string
   const isOverFlowEnabled = overflow > 0;
   const shouldOverflow = children.split('\n').length > overflow;
   const [isOverflowExpanded, setOverflowExpanded] = useState(
@@ -84,6 +85,8 @@ const Code = ({
       {isOverFlowEnabled && shouldOverflow && (
         <button
           className={cx(styles.showMoreButton, {
+            [styles.showMoreButton__inline]:
+              !isOverflowExpanded && overflow === 1,
             [styles.dark]: interiorTheme === 'dark',
           })}
           onClick={() => setOverflowExpanded(!isOverflowExpanded)}
