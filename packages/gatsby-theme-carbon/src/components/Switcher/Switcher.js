@@ -103,7 +103,7 @@ const DefaultChildren = () => (
       Carbon Design System
     </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/">
-      Carbon for IBM.com 
+      Carbon for IBM.com
     </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/design/event/">
       IBM Event Design
@@ -127,6 +127,9 @@ const DefaultChildren = () => (
     <SwitcherDivider>Community</SwitcherDivider>
     <SwitcherLink href="https://w3.ibm.com/design/" isInternal>
       IBM Design
+    </SwitcherLink>
+    <SwitcherLink href="https://www.ibm.com/design/racial-equity-in-design">
+      Racial Equity in Design
     </SwitcherLink>
   </>
 );
