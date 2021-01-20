@@ -9,10 +9,16 @@ import EditLink from '../components/EditLink';
 import NextPrevious from '../components/NextPrevious';
 import PageTabs from '../components/PageTabs';
 import Main from '../components/Main';
+import ModifiedDate from '../components/ModifiedDate';
 import useMetadata from '../util/hooks/useMetadata';
 
 const Default = ({ pageContext, children, location, Title }) => {
-  const { frontmatter = {}, relativePagePath, titleType } = pageContext;
+  const {
+    frontmatter = {},
+    relativePagePath,
+    titleType,
+    MdxNode: { fields: gitDate },
+  } = pageContext;
   const {
     tabs,
     title,
@@ -21,6 +27,7 @@ const Default = ({ pageContext, children, location, Title }) => {
     keywords,
   } = frontmatter;
 
+  console.log(pageContext);
   const { interiorTheme } = useMetadata();
 
   // get the path prefix if it exists
@@ -46,7 +53,6 @@ const Default = ({ pageContext, children, location, Title }) => {
       slugify(tabs[0], { lower: true })
     );
   };
-
   const currentTab = getCurrentTab();
 
   const theme = frontmatterTheme || interiorTheme;
@@ -77,6 +83,7 @@ const Default = ({ pageContext, children, location, Title }) => {
       <Main padded>
         {children}
         <EditLink relativePagePath={relativePagePath} />
+        <ModifiedDate gitDate={gitDate} />
       </Main>
       <NextPrevious
         pageContext={pageContext}

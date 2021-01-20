@@ -117,3 +117,26 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 
   createTypes(typeDefs);
 };
+
+// Grabs the author date commit from git and appends it to the pageContext prop @author conrad.schmidt@de.ibm.com
+const { spawn } = require('child_process');
+
+const getDate = (dir) =>
+  new Promise((res) => {
+    const git = spawn('git', ['log', '-1', '--format="%ad"', '--', dir]);
+    git.stdout.on('data', (data) =>
+      res(new Date(data.toString().replace(/"/g, '')).toISOString())
+    );
+    git.on('close', () => res('NOT FOUND'));
+  });
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+  if (node.internal.type === 'Mdx') {
+    const parent = getNode(node.parent);
+    if (parent.internal.type === 'File')
+      getDate(parent.absolutePath).then((date) =>
+        createNodeField({ name: 'gitDate', node, value: date })
+      );
+  }
+};

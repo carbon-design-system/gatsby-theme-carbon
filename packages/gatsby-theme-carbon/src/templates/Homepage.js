@@ -5,6 +5,7 @@ import Carbon from '../images/carbon.jpg';
 import Main from '../components/Main';
 import useMetadata from '../util/hooks/useMetadata';
 import Utils from '../components/Utils';
+import ModifiedDate from '../components/ModifiedDate';
 
 import NextPrevious from '../components/NextPrevious';
 
@@ -16,8 +17,13 @@ const Homepage = ({
   location,
   pageContext,
 }) => {
-  const { frontmatter = {}, titleType } = pageContext;
+  const {
+    frontmatter = {},
+    titleType,
+    MdxNode: { fields: gitDate },
+  } = pageContext;
   const { title, description, keywords } = frontmatter;
+
   const { homepageTheme } = useMetadata();
 
   return (
@@ -32,6 +38,8 @@ const Homepage = ({
       {FirstCallout}
       <Main>{children}</Main>
       {SecondCallout}
+      <ModifiedDate gitDate={gitDate} />
+
       <NextPrevious isHomepage location={location} pageContext={pageContext} />
       <Utils />
     </Layout>

@@ -18,6 +18,7 @@ module.exports = (themeOptions) => {
   const defaultTheme = { homepage: 'dark', interior: 'g10' };
 
   const {
+    pageModifiedDate = false,
     theme: themeOption,
     isSearchEnabled = true,
     navigationStyle = '',
@@ -73,6 +74,7 @@ module.exports = (themeOptions) => {
 
   return {
     siteMetadata: {
+      pageModifiedDate,
       isSearchEnabled,
       navigationStyle,
       homepageTheme: theme.homepage,
