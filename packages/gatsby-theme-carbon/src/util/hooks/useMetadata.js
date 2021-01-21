@@ -13,6 +13,7 @@ const useMetadata = () => {
           interiorTheme
           navigationStyle
           lang
+          pageModifiedDate
         }
       }
     }
