@@ -6,8 +6,6 @@ import useMetadata from '../../util/hooks/useMetadata';
 const ModifiedDate = (gitDate) => {
   const { pageModifiedDate } = useMetadata();
 
-  console.log(pageModifiedDate);
-
   const chonkyDate = gitDate.gitDate.gitDate;
 
   const date = chonkyDate.split('T')[0];

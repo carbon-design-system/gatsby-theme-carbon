@@ -27,7 +27,6 @@ const Default = ({ pageContext, children, location, Title }) => {
     keywords,
   } = frontmatter;
 
-  console.log(pageContext);
   const { interiorTheme } = useMetadata();
 
   // get the path prefix if it exists
