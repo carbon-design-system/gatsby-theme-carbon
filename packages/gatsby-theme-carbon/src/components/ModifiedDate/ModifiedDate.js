@@ -8,7 +8,7 @@ const ModifiedDate = (gitDate) => {
   const date = chonkyDate.split('T')[0];
 
   return (
-    <Row>
+    <Row className={styles.row}>
       <Column>
         <div className={styles.text}>Page last updated: {date}</div>
       </Column>
