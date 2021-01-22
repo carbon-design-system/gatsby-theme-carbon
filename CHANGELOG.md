@@ -1,3 +1,12 @@
+### [1.27.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.27.2...v1.27.3) (2021-01-22)
+
+
+### Bug Fixes
+
+* 404 link color and config branch as main ([#1085](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1085)) ([659ea89](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/659ea8925048d31909c5b2959eadc79ec4eb779a))
+* added Racial Equity to switcher -closes [#1057](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1057) ([#1088](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1088)) ([c1e18fd](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c1e18fde900c4219da69e7743e1f027b7a22b2e0))
+* fail gracefully without page titles ([#1065](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1065)) ([aeba5ea](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/aeba5ea6b3562bdb5d4b561dfe7f582203e656f7))
+
 ### [1.27.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.27.1...v1.27.2) (2021-01-06)
 
 
