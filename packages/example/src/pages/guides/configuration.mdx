@@ -5,7 +5,6 @@ description: Guide for configuring the theme’s various settings
 
 <PageDescription>
 
-
 Gatsby themes allow you to override configuration from the theme by defining the
 same property in your `gatsby-config.js` at the root of your project. You can
 see the default configuration provided by the theme’s
@@ -13,7 +12,6 @@ see the default configuration provided by the theme’s
 file.
 
 </PageDescription>
-
 
 <AnchorLinks>
   <AnchorLink>Site metadata</AnchorLink>
@@ -25,6 +23,7 @@ file.
   <AnchorLink>Navigation style</AnchorLink>
   <AnchorLink>Edit on Github link</AnchorLink>
   <AnchorLink>Medium</AnchorLink>
+  <AnchorLink>Page modified date</AnchorLink>
   <AnchorLink>Other options</AnchorLink>
 </AnchorLinks>
 
@@ -203,12 +202,10 @@ When enabled, your header navigation will look like the image below:
 <Row>
 <Column colMd={8} colLg={8}>
 
-
 ![Header navigation style](header-nav-config.jpg)
 
 </Column>
 </Row>
-
 
 With the header navigation style enabled, the content on your page will be
 further left-aligned to allow for more content space.
@@ -253,6 +250,23 @@ plugins: [
     resolve: 'gatsby-theme-carbon',
     options: {
       mediumAccount: 'carbondesign',
+    },
+  },
+];
+```
+
+## Page modified date
+
+By enabling this feature, a timestamp will appear in the lower-left corner of
+all inner pages (not the home page) indicating the last date an author committed
+that page to git.
+
+```js
+plugins: [
+  {
+    resolve: 'gatsby-theme-carbon',
+    options: {
+      pageModifiedDate: true,
     },
   },
 ];
