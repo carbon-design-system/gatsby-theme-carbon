@@ -3,8 +3,6 @@ import { Row, Column } from '../Grid';
 import styles from './modified-date.module.scss';
 
 const ModifiedDate = ({ date }) =>
-  //   const { modifiedDate } = date.date.date;
-
   date ? (
     <Row className={styles.row}>
       <Column>
