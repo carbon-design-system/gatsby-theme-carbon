@@ -1,0 +1,8 @@
+.text {
+  @include carbon--type-style('body-short-01');
+}
+
+.row {
+  position: relative;
+  top: 5rem;
+}
