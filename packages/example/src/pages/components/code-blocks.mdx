@@ -46,7 +46,7 @@ button. This example demonstrates the show more button.
 You can specify after how many lines you want your code to overflow. Set
 `overflow` to a number like you do for `path` or `src`.
 
-```markdown overflow=5
+```markdown overflowAfter=5
 ## Overflow set to 5
 
 This example demonstrates the show more button. This example demonstrates the
@@ -60,14 +60,15 @@ button. This example demonstrates the show more button.
 ```
 
 ````
-```markdown overflow=5
+```markdown overflowAfter=5
 ````
 
-<Title>Disabling Vertical overflow</Title>
+<Title>Disabling Vertical overflowAfter</Title>
 
-Additionally, you can disable overflow completely by setting `overflow` to `0`.
+Additionally, you can disable overflowAfter completely by setting
+`overflowAfter` to `0`.
 
-```markdown overflow=0
+```markdown overflowAfter=0
 ## Overflow disabled
 
 This example demonstrates no show more button. This example demonstrates no show
@@ -77,7 +78,7 @@ This example demonstrates no show more button.
 ```
 
 ````
-```markdown overflow=0
+```markdown overflowAfter=0
 ````
 
 ## Code
@@ -92,9 +93,9 @@ This code snippet provides both a `path` and a `src`.
 
 ### Props
 
-| property | propType | description                                                                                                                 |
-| -------- | -------- | --------------------------------------------------------------------------------------------------------------------------- |
-| language | string   | [Available languages.](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js) |
-| src      | string   | The full url of a relevant link (source)                                                                                    |
-| path     | string   | A string indicating the filename or path. Due to markdown limitations this can only be a single word                        |
-| overflow | number   | A number indicating how many lines to display before overflowing. Use `0` to disable overflowing completely.                |
+| property      | propType | description                                                                                                                 |
+| ------------- | -------- | --------------------------------------------------------------------------------------------------------------------------- |
+| language      | string   | [Available languages.](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js) |
+| src           | string   | The full url of a relevant link (source)                                                                                    |
+| path          | string   | A string indicating the filename or path. Due to markdown limitations this can only be a single word                        |
+| overflowAfter | number   | A number indicating how many lines to display before overflowing. Use `0` to disable overflowing completely.                |
