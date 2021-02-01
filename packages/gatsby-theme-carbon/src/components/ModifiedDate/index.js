@@ -1,3 +1,3 @@
-import ModifedDate from './ModifiedDate';
+import ModifiedDate from './ModifiedDate';
 
-export default ModifedDate;
+export default ModifiedDate;

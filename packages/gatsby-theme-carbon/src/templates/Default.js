@@ -10,7 +10,7 @@ import NextPrevious from '../components/NextPrevious';
 import PageTabs from '../components/PageTabs';
 import Main from '../components/Main';
 import useMetadata from '../util/hooks/useMetadata';
-import ModifedDate from '../components/ModifiedDate';
+import ModifiedDate from '../components/ModifiedDate';
 
 const Default = ({ pageContext, children, location, Title }) => {
   const { frontmatter = {}, relativePagePath, titleType } = pageContext;
@@ -79,7 +79,7 @@ const Default = ({ pageContext, children, location, Title }) => {
       <Main padded>
         {children}
         <EditLink relativePagePath={relativePagePath} />
-        <ModifedDate date={date} />
+        <ModifiedDate date={date} />
       </Main>
       <NextPrevious
         pageContext={pageContext}
