@@ -12,6 +12,7 @@
   }
 }
 
+// When search is open, it will properly sit on top of the navigation links when using the headernav style of naviation.
 .searchIsOpenOnBar {
   z-index: 2;
 }
@@ -127,6 +128,7 @@ header.header {
   }
 }
 
+// When search is open this will allow the search bar to cover the header on mobile and tablet screens.
 .searchIsOpenOnLink {
   z-index: 1;
 }
