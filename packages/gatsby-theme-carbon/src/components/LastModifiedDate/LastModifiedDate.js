@@ -1,8 +1,8 @@
 import React from 'react';
 import { Row, Column } from '../Grid';
-import styles from './modified-date.module.scss';
+import styles from './last-modified-date.module.scss';
 
-const ModifiedDate = ({ date }) => {
+const LastModifiedDate = ({ date }) => {
   const options = {
     day: '2-digit',
     year: 'numeric',
@@ -22,4 +22,4 @@ const ModifiedDate = ({ date }) => {
     </Row>
   ) : null;
 };
-export default ModifiedDate;
+export default LastModifiedDate;
