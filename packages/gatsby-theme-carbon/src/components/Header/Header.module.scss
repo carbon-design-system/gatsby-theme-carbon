@@ -5,11 +5,16 @@
   top: 0;
   right: 0;
   width: calc(100% - 3rem);
-  z-index: 2;
+  z-index: 1;
   @include carbon--breakpoint('lg') {
     position: static;
     width: auto;
   }
+}
+
+// When search is open, it will properly sit on top of the navigation links when using the headernav style of naviation.
+.searchIsOpenOnBar {
+  z-index: 2;
 }
 
 // Overrides upstream Carbon styles for header nav
@@ -20,6 +25,7 @@
     left: 25%;
     top: 0;
     padding-left: 0;
+    z-index: 2;
   }
 }
 
@@ -122,7 +128,8 @@ header.header {
   }
 }
 
-.collapsed {
+// When search is open this will allow the search bar to cover the header on mobile and tablet screens.
+.searchIsOpenOnLink {
   z-index: 1;
 }
 
