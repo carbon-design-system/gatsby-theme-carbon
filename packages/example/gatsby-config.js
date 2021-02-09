@@ -27,7 +27,6 @@ module.exports = {
             'https://github.com/carbon-design-system/gatsby-theme-carbon',
           subDirectory: '/packages/example',
         },
-        navigationStyle: 'header',
       },
     },
   ],
