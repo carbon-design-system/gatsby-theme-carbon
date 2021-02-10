@@ -1,5 +1,6 @@
 ---
 description: Instructions for developing and contributing to the theme
+date: 27 January 2020
 ---
 
 <!-- Page title left out so it can be generated -->
@@ -259,10 +260,10 @@ its purpose to be included with your pull request.
 
 ## Publishing
 
-1. figure out if it’s patch or feature
-2. from the root of the package run `lerna publish patch` or
-   `lerna publish minor`
-3. git push upstream main --follow-tags
+1. Pull the latest from the main branch, usually by running
+   `git pull upstream main` on your local machine.
+2. From the root of the package run `yarn release`.
+3. Follow the prompts accordingly.
 4. In the project’s
    [release tab](https://github.com/carbon-design-system/gatsby-theme-carbon/releases),
-   edit the new release to include a summary of new changes
+   edit the new release to include a summary of new changes.
