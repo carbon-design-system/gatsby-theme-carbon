@@ -10,15 +10,9 @@
   color: $carbon--white-0;
   transition: max-width $duration--fast-02 $carbon--standard-easing,
     background $duration--fast-02 $carbon--standard-easing;
-
-  /* The shell is, by design, above and removed from the page's grid/layout. 
-     Because we're trying to align to the page's (seperate) grid, this is an 
-     approximation based on the content's padding, assumptions and magic. */
+  
   @include carbon--breakpoint('lg') {
-    max-width: calc(75% + 72px);
-  }
-  @include carbon--breakpoint('xlg') {
-    max-width: calc(100vw - 456px);
+    max-width: 28rem;
   }
 }
 
