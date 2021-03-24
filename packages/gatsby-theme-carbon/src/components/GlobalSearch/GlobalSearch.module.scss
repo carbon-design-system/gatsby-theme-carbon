@@ -10,6 +10,10 @@
   color: $carbon--white-0;
   transition: max-width $duration--fast-02 $carbon--standard-easing,
     background $duration--fast-02 $carbon--standard-easing;
+  
+  @include carbon--breakpoint('lg') {
+    max-width: 28rem;
+  }
 }
 
 .container.inputFocusWithin {
