@@ -12,20 +12,22 @@
     - path: /contributions
 - title: Guides
   pages:
-    - title: Configuration
-      path: /guides/configuration
     - title: Authoring MDX
       path: /guides/MDX
-    - title: Shadowing
-      path: /guides/shadowing
-    - title: Styling
-      path: /guides/styling
+    - title: Configuration
+      path: /guides/configuration
+    - title: Gatsby Sketch kit
+      path: /guides/sketch-kit
+    - title: Hosting
+      path: /guides/hosting
     - title: Navigation
       path: /guides/navigation/sidebar
     - title: npm scripts
       path: /guides/npm-scripts
-    - title: Hosting
-      path: /guides/hosting
+    - title: Shadowing
+      path: /guides/shadowing
+    - title: Styling
+      path: /guides/styling
 - title: Components
   pages:
     - title: Accordion
