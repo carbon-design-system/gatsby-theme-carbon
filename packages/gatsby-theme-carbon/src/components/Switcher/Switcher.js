@@ -124,6 +124,11 @@ const DefaultChildren = () => (
     <SwitcherLink href="https://www.ibm.com/services/ibmix/">
       IBM iX
     </SwitcherLink>
+    <SwitcherLink
+      isInternal
+      href="https://w3.ibm.com/design/universal-experiences/">
+      IBM Universal Experiences
+    </SwitcherLink>
     <SwitcherDivider>Community</SwitcherDivider>
     <SwitcherLink href="https://w3.ibm.com/design/" isInternal>
       IBM Design
