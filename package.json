@@ -25,10 +25,9 @@
     "format": "prettier --write \"**/*.{css,scss,json,html,yaml,mdx}\"",
     "lint:js": "eslint . --fix",
     "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
-    "pre:release": "git pull upstream main --tags",
-    "release": "npm run pre:release && release-it",
+    "release": "release-it",
     "release:ci": "release-it --ci",
-    "release:dry": "release-it --ci --dry-run"
+    "release:dry": "release-it --dry-run"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
