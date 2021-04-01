@@ -1,3 +1,18 @@
+## [1.28.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.27.3...v1.28.0) (2021-04-01)
+
+
+### Features
+
+* date in frontmatter resolves last modifed date on page ([#1094](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1094)) ([17947ce](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/17947ceb4d37ef9a6f09e1c38ce4e1b9367fe179))
+
+
+### Bug Fixes
+
+* adjust search container width to align with page contents ([#1105](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1105)) ([c08db04](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c08db049d246c2e6908e9e9924d531915a7e981b)), closes [#1101](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1101)
+* update latest carbon and add style override for sidenav overlay bug ([#1106](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1106)) ([7f4378e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/7f4378e5113e47e455924d3a0980f88c91bafa9e))
+* update package.json scripts for npm users ([#1103](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1103)) ([d855fac](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/d855facfda32aefcfef0163b97c965053549406d))
+* zindex for search bar on headernav style ([#1096](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1096)) ([5b81985](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/5b8198571d3e3888b7ae90761d3135af85ef2ebf))
+
 ### [1.27.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.27.2...v1.27.3) (2021-01-22)
 
 
