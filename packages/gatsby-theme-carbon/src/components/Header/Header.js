@@ -44,14 +44,15 @@ const Header = ({ children }) => {
       />
       <Link
         className={cx(styles.headerName, {
-          [styles.collapsed]: searchIsOpen,
+          [styles.searchIsOpenOnLink]: searchIsOpen,
           [styles.headerNameWithHeaderNav]: navigationStyle,
         })}
         to="/">
         {children}
       </Link>
       {navigationStyle && <HeaderNav />}
-      <HeaderGlobalBar>
+      <HeaderGlobalBar
+        className={cx({ [styles.searchIsOpenOnBar]: searchIsOpen })}>
         {isSearchEnabled && <GlobalSearch />}
         <HeaderGlobalAction
           className={cx(styles.headerButton, styles.switcherButton, {

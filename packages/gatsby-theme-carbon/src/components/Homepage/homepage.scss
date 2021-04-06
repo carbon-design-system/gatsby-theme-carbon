@@ -97,3 +97,8 @@
 .container--homepage .#{$prefix}--col-no-gutter {
   padding: 0;
 }
+
+.bx--side-nav__overlay-active {
+  //rel: https://github.com/carbon-design-system/carbon-website/pull/2187
+  width: 100%;
+}
