@@ -17,16 +17,14 @@ import useMetadata from '../../util/hooks/useMetadata';
 const Code = ({
   children,
   className: classNameProp = '',
-  overflow: overflowProp = 9,
+  overflowAfter: overflowAfterProp = 9,
   path,
   src,
 }) => {
-  const overflow = Number(overflowProp); // MDX parses this as a string
-  const isOverFlowEnabled = overflow > 0;
-  const shouldOverflow = children.split('\n').length > overflow;
-  const [isOverflowExpanded, setOverflowExpanded] = useState(
-    !isOverFlowEnabled
-  );
+  const overflowAfter = Number(overflowAfterProp); // MDX parses this as a string
+  const isOverflowEnabled = overflowAfter > 0;
+  const shouldOverflow = children.split('\n').length > overflowAfter;
+  const [isOverflowExpanded, setOverflowExpanded] = useState(false);
 
   const { interiorTheme } = useMetadata();
 
@@ -43,11 +41,11 @@ const Code = ({
   const getLines = (lines) => {
     const withoutTrailingEmpty = removeTrailingEmptyLine(lines);
 
-    if (isOverflowExpanded) {
+    if (!isOverflowEnabled || isOverflowExpanded) {
       return withoutTrailingEmpty;
     }
 
-    return withoutTrailingEmpty.slice(0, overflow);
+    return withoutTrailingEmpty.slice(0, overflowAfter);
   };
 
   return (
@@ -82,11 +80,11 @@ const Code = ({
           </div>
         )}
       </Highlight>
-      {isOverFlowEnabled && shouldOverflow && (
+      {isOverflowEnabled && shouldOverflow && (
         <button
           className={cx(styles.showMoreButton, {
             [styles.showMoreButton__inline]:
-              !isOverflowExpanded && overflow === 1,
+              !isOverflowExpanded && overflowAfter <= 2,
             [styles.dark]: interiorTheme === 'dark',
           })}
           onClick={() => setOverflowExpanded(!isOverflowExpanded)}

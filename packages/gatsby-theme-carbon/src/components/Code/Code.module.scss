@@ -135,6 +135,8 @@ li .row {
 
   &__inline {
     right: $spacing-09;
+    top: $spacing-03;
+    bottom: unset;
   }
 }
 
