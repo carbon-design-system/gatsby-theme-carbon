@@ -139,7 +139,6 @@ module.exports = (themeOptions) => {
           ],
         },
       },
-      `gatsby-plugin-emotion`,
       {
         resolve: `gatsby-source-filesystem`,
         options: {
