@@ -6,12 +6,11 @@ const HomepageBanner = ({ image, position, renderText }) => (
   <Grid
     style={{
       maxWidth: '100%',
-      backgroundImage: `url(${(props) => props.image})`,
+      backgroundImage: `url(${image})`,
       backgroundPosition: position || 'center',
     }}
     className={grid}
-    position={position}
-    image={image}>
+    position={position}>
     <Row className={row}>
       <Column className={column}>{renderText()}</Column>
     </Row>
