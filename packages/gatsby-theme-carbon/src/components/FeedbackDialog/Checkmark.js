@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Checkmark.module.scss';
+import * as styles from './Checkmark.module.scss';
 
 const Checkmark = () => (
   <svg className={styles.svg} width="20" viewBox="0 0 28 28">

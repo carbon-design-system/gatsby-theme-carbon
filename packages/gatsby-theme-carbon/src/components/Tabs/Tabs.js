@@ -16,7 +16,7 @@ import { breakpoints } from '@carbon/elements';
 import cx from 'classnames';
 
 import { useId } from '../../util/hooks/useId';
-import styles from './Tabs.module.scss';
+import * as styles from './Tabs.module.scss';
 
 function elementIsNullOrString(child) {
   return !child || typeof child.type === 'string';

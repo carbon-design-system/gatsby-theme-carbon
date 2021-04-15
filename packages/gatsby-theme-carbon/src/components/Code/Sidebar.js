@@ -3,7 +3,7 @@ import { CopyButton } from 'carbon-components-react';
 import { Launch16 } from '@carbon/icons-react';
 import copy from 'copy-to-clipboard';
 import cx from 'classnames';
-import styles from './Code.module.scss';
+import * as styles from './Code.module.scss';
 import useMetadata from '../../util/hooks/useMetadata';
 
 // If there is a src url, but no path name, both icons appear in the sidebar.

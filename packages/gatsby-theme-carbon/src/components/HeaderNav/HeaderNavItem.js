@@ -5,7 +5,7 @@ import { Location } from '@reach/router';
 import cx from 'classnames';
 
 import { HeaderMenu, HeaderMenuItem } from 'carbon-components-react';
-import styles from './HeaderNavItem.module.scss';
+import * as styles from './HeaderNavItem.module.scss';
 
 import NavContext from '../../util/context/NavContext';
 import usePathprefix from '../../util/hooks/usePathprefix';

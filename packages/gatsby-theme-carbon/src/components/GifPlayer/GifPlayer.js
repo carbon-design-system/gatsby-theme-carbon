@@ -7,7 +7,7 @@ import {
   PauseOutline24,
   PauseOutlineFilled24,
 } from '@carbon/icons-react';
-import styles from './GifPlayer.module.scss';
+import * as styles from './GifPlayer.module.scss';
 
 const Pause = ({ hovering }) =>
   hovering ? <PauseOutlineFilled24 /> : <PauseOutline24 />;
