@@ -55,15 +55,11 @@ const Header = ({ children }) => {
         className={cx({ [styles.searchIsOpenOnBar]: searchIsOpen })}>
         {isSearchEnabled && <GlobalSearch />}
         <HeaderGlobalAction
-          className={cx(
-            styles.headerButton,
-            styles.switcherButton,
-            'bx--tooltip--hidden',
-            {
-              [styles.switcherButtonOpen]: switcherIsOpen,
-            }
-          )}
+          className={cx(styles.headerButton, styles.switcherButton, {
+            [styles.switcherButtonOpen]: switcherIsOpen,
+          })}
           aria-label="App switcher"
+          tooltipAlignment="end"
           onClick={() => {
             toggleNavState('switcherIsOpen');
             toggleNavState('searchIsOpen', 'close');
