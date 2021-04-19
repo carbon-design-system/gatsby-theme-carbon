@@ -1,3 +1,11 @@
+## [2.0.0-next.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.29.0...v2.0.0-next.0) (2021-04-19)
+
+
+### Bug Fixes
+
+* sass module import ([a0c3bcc](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/a0c3bcc0006b3be31b0beb48b5f4bf5e57c99a85))
+* sassOptions ([e7ac68e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/e7ac68e9b128a4450419e2641e65204b6929b735))
+
 ## [1.29.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.28.0...v1.29.0) (2021-04-19)
 
 
