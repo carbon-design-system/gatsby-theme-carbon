@@ -61,8 +61,6 @@ const customProps = {
 
 // spreading the original props gives us props.children (mdx content)
 function ShadowedHomepage(props) {
-  console.log(customProps);
-  console.log('hello?');
   return <HomepageTemplate {...props} {...customProps} />;
 }
 
