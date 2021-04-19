@@ -108,6 +108,9 @@ const DefaultChildren = () => (
     <SwitcherLink href="https://www.ibm.com/design/event/">
       IBM Event Design
     </SwitcherLink>
+    <SwitcherLink href="https://www.ibm.com/design/workplace/">
+      IBM Workplace Design
+    </SwitcherLink>
     <SwitcherDivider>Practices</SwitcherDivider>
     <SwitcherLink href="https://www.ibm.com/design/thinking/">
       Enterprise Design Thinking

@@ -1,3 +1,10 @@
+## [1.29.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.28.0...v1.29.0) (2021-04-19)
+
+
+### Features
+
+* adding workplace design into switcher ([#1117](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1117)) ([c6d755e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c6d755eba5f3cf7d61729b9b8fad3f835e44f9ab))
+
 ## [1.28.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.27.3...v1.28.0) (2021-04-01)
 
 
