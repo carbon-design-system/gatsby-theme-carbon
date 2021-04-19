@@ -26,6 +26,7 @@
     "lint:js": "eslint . --fix",
     "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
     "release": "release-it",
+    "release:pre": "release-it --preRelease",
     "release:ci": "release-it --ci",
     "release:dry": "release-it --dry-run"
   },

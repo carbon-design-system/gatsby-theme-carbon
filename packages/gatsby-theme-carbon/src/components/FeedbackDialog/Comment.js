@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { TextArea } from 'carbon-components-react';
 import cx from 'classnames';
-import styles from './Comment.module.scss';
+import * as styles from './Comment.module.scss';
 
 const Comment = () => {
   const [focused, setFocused] = useState(false);

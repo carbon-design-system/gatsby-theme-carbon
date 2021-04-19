@@ -9,7 +9,7 @@ import {
 } from '@carbon/icons-react';
 import cx from 'classnames';
 
-import styles from './Experience.module.scss';
+import * as styles from './Experience.module.scss';
 
 const NEGATIVE = 'feedback-form-negative';
 const NEUTRAL = 'feedback-form-neutral';

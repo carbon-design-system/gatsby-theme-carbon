@@ -7,7 +7,7 @@ import cx from 'classnames';
 import { Row } from '../Grid';
 import getTheme from './getTheme';
 
-import styles from './Code.module.scss';
+import * as styles from './Code.module.scss';
 
 import PathRow from './PathRow';
 import Sidebar from './Sidebar';

@@ -10,7 +10,7 @@ import {
 import { settings } from 'carbon-components';
 import cx from 'classnames';
 
-import styles from './MiniCard.module.scss';
+import * as styles from './MiniCard.module.scss';
 import { Column } from '../Grid';
 
 const { prefix } = settings;

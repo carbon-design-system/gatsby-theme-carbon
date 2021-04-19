@@ -4,7 +4,7 @@ import cx from 'classnames';
 import FeedbackDialog from '../FeedbackDialog';
 import BackToTopBtn from '../BackToTopBtn';
 
-import styles from './Utils.module.scss';
+import * as styles from './Utils.module.scss';
 
 const Utils = () => {
   const [hidden, setHidden] = useState(true);

@@ -15,7 +15,7 @@ import GlobalSearch from '../GlobalSearch';
 import NavContext from '../../util/context/NavContext';
 import useMetadata from '../../util/hooks/useMetadata';
 
-import styles from './Header.module.scss';
+import * as styles from './Header.module.scss';
 
 const Header = ({ children }) => {
   const {

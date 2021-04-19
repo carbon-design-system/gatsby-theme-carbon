@@ -37,23 +37,5 @@ const Homepage = ({
     </Layout>
   );
 };
-Homepage.defaultProps = {
-  Banner: (
-    <HomepageBanner
-      renderText={() => (
-        <h1>
-          Carbon
-          <br />
-          Design System
-        </h1>
-      )}
-      image={Carbon}
-    />
-  ),
-  FirstCallout: <HomepageCallout />,
-  SecondCallout: (
-    <HomepageCallout color="inverse01" backgroundColor="#061f80" />
-  ),
-};
 
 export default Homepage;

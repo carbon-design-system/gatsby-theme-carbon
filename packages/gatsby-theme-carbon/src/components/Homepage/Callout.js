@@ -1,34 +1,42 @@
 import React from 'react';
-import styled from '@emotion/styled';
 import { Grid, Column, Row } from '../Grid';
 
 import { grid, row, firstColumn, secondColumn } from './Callout.module.scss';
+import theme from '../../util/theme';
 
-const StyledGrid = styled(Grid)`
-  background-color: ${(props) =>
-    props.theme.colors[props.backgroundColor] ||
-    props.backgroundColor ||
-    props.theme.colors.interactive02};
-  color: ${(props) =>
-    props.theme.colors[props.color] ||
-    props.color ||
-    props.theme.colors.inverse01}};
-  width: 100%;
-  max-width: 100%;
-`;
+const getBackgroundColor = (backgroundColor) =>
+  theme.colors[backgroundColor] ||
+  backgroundColor ||
+  theme.colors.interactive02;
 
-const HomepageCallout = ({ leftText, rightText, ...rest }) => (
-  <StyledGrid className={grid} {...rest}>
-    <Row className={row}>
-      <Column colLg={4} colMd={4} className={firstColumn}>
-        {leftText()}
-      </Column>
-      <Column colLg={8} colMd={4} className={secondColumn}>
-        {rightText()}
-      </Column>
-    </Row>
-  </StyledGrid>
-);
+const getColor = (color) =>
+  theme.colors[color] || color || theme.colors.inverse01;
+
+const HomepageCallout = ({
+  leftText,
+  rightText,
+  backgroundColor: backgroundColorProp,
+  color: colorProp,
+  ...rest
+}) => {
+  const backgroundColor = getBackgroundColor(backgroundColorProp);
+  const color = getColor(colorProp);
+  return (
+    <Grid
+      style={{ backgroundColor, color, width: '100%', maxWidth: '100%' }}
+      className={grid}
+      {...rest}>
+      <Row className={row}>
+        <Column colLg={4} colMd={4} className={firstColumn}>
+          {leftText()}
+        </Column>
+        <Column colLg={8} colMd={4} className={secondColumn}>
+          {rightText()}
+        </Column>
+      </Row>
+    </Grid>
+  );
+};
 
 HomepageCallout.defaultProps = {
   leftText: function renderLeftText() {
