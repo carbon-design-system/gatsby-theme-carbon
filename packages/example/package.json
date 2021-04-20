@@ -12,9 +12,9 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby": "^3.3.0",
+    "gatsby": "^3.3.1",
+    "gatsby-theme-carbon": "^2.0.0-next.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "gatsby-theme-carbon": "^2.0.0-next.0"
+    "react-dom": "^17.0.2"
   }
 }

@@ -17,12 +17,12 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "gatsby": "^3.3.0",
+    "gatsby": "^3.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "dependencies": {
-    "@babel/core": "^7.10.4",
+    "@babel/core": "^7.13.16",
     "@carbon/elements": "^10.32.0",
     "@carbon/icons-react": "^10.30.0",
     "@carbon/themes": "^10.32.0",
@@ -36,7 +36,7 @@
     "carbon-icons": "^7.0.7",
     "classnames": "^2.2.6",
     "copy-to-clipboard": "^3.2.0",
-    "focus-trap-react": "^6.0.0",
+    "focus-trap-react": "^8.4.2",
     "gatsby-plugin-catch-links": "^3.3.0",
     "gatsby-plugin-lunr": "^1.5.2",
     "gatsby-plugin-manifest": "^3.3.0",
@@ -45,8 +45,8 @@
     "gatsby-plugin-react-helmet": "^4.3.0",
     "gatsby-plugin-sass": "^4.3.0",
     "gatsby-plugin-sass-resources": "^2.0.0",
-    "gatsby-plugin-sharp": "^3.3.0",
-    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.8",
+    "gatsby-plugin-sharp": "^3.3.1",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.22",
     "gatsby-remark-copy-linked-files": "^4.0.0",
     "gatsby-remark-images": "^5.0.0",
     "gatsby-remark-responsive-iframe": "^4.0.0",
