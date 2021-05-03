@@ -58,7 +58,7 @@ const Header = ({ children }) => {
           className={cx(styles.headerButton, styles.switcherButton, {
             [styles.switcherButtonOpen]: switcherIsOpen,
           })}
-          aria-label="App switcher"
+          aria-label="Switch sites"
           tooltipAlignment="end"
           onClick={() => {
             toggleNavState('switcherIsOpen');
