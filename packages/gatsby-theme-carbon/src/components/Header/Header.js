@@ -23,6 +23,7 @@ const Header = ({ children }) => {
     toggleNavState,
     switcherIsOpen,
     searchIsOpen,
+    switcherTooltipText = 'Switch sites',
   } = useContext(NavContext);
   const { isSearchEnabled, navigationStyle } = useMetadata();
 
@@ -58,7 +59,7 @@ const Header = ({ children }) => {
           className={cx(styles.headerButton, styles.switcherButton, {
             [styles.switcherButtonOpen]: switcherIsOpen,
           })}
-          aria-label="Switch sites"
+          aria-label={switcherTooltipText}
           tooltipAlignment="end"
           onClick={() => {
             toggleNavState('switcherIsOpen');
