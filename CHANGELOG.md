@@ -1,3 +1,10 @@
+### [1.29.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.29.1...v1.29.2) (2021-05-17)
+
+
+### Bug Fixes
+
+* remove light prop ([#1126](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1126)) ([b5da16b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/b5da16b068be4ac9f44f7f2680fcb00a00c2d5b4))
+
 ### [1.29.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.29.0...v1.29.1) (2021-05-03)
 
 ## [1.29.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.28.0...v1.29.0) (2021-04-19)
