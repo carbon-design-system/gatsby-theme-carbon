@@ -16,7 +16,7 @@ import { breakpoints } from '@carbon/elements';
 import cx from 'classnames';
 
 import { useId } from '../../util/hooks/useId';
-import styles from './Tabs.module.scss';
+import * as styles from './Tabs.module.scss';
 
 function elementIsNullOrString(child) {
   return !child || typeof child.type === 'string';
@@ -31,12 +31,11 @@ const Select = ({ children, _id }) => {
     index,
   }));
   return (
-    <div style={{ marginLeft: '-1rem', marginRight: '-1rem' }}>
+    <div className={styles.dropdownWrapper}>
       <Dropdown
         size="xl"
         onChange={({ selectedItem }) => setActiveTab(selectedItem.index)}
         initialSelectedItem={items[0]}
-        light
         label="tab selection"
         items={items}
         id={_id}
