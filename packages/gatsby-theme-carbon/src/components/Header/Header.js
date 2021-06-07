@@ -25,7 +25,7 @@ const Header = ({ children }) => {
     searchIsOpen,
     switcherTooltipText = 'Switch sites',
   } = useContext(NavContext);
-  const { isSearchEnabled, navigationStyle } = useMetadata();
+  const { isSearchEnabled, navigationStyle, isSwitcherEnabled } = useMetadata();
 
   return (
     <ShellHeader
@@ -55,19 +55,21 @@ const Header = ({ children }) => {
       <HeaderGlobalBar
         className={cx({ [styles.searchIsOpenOnBar]: searchIsOpen })}>
         {isSearchEnabled && <GlobalSearch />}
-        <HeaderGlobalAction
-          className={cx(styles.headerButton, styles.switcherButton, {
-            [styles.switcherButtonOpen]: switcherIsOpen,
-          })}
-          aria-label={switcherTooltipText}
-          tooltipAlignment="end"
-          onClick={() => {
-            toggleNavState('switcherIsOpen');
-            toggleNavState('searchIsOpen', 'close');
-            toggleNavState('leftNavIsOpen', 'close');
-          }}>
-          {switcherIsOpen ? <Close20 /> : <Switcher20 />}
-        </HeaderGlobalAction>
+        {isSwitcherEnabled && (
+          <HeaderGlobalAction
+            className={cx(styles.headerButton, styles.switcherButton, {
+              [styles.switcherButtonOpen]: switcherIsOpen,
+            })}
+            aria-label={switcherTooltipText}
+            tooltipAlignment="end"
+            onClick={() => {
+              toggleNavState('switcherIsOpen');
+              toggleNavState('searchIsOpen', 'close');
+              toggleNavState('leftNavIsOpen', 'close');
+            }}>
+            {switcherIsOpen ? <Close20 /> : <Switcher20 />}
+          </HeaderGlobalAction>
+        )}
       </HeaderGlobalBar>
     </ShellHeader>
   );
