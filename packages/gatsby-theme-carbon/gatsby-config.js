@@ -33,6 +33,7 @@ module.exports = (themeOptions) => {
     remarkPlugins = [],
     gatsbyPluginSharpOptions = {},
     isServiceWorkerEnabled = false,
+    isSwitcherEnabled = true,
   } = themeOptions;
 
   const theme = { ...defaultTheme, ...themeOption };
@@ -78,6 +79,7 @@ module.exports = (themeOptions) => {
       homepageTheme: theme.homepage,
       interiorTheme: theme.interior,
       isServiceWorkerEnabled,
+      isSwitcherEnabled,
       title: 'Gatsby Theme Carbon',
       description:
         'Add a description by supplying it to siteMetadata in your gatsby-config.js file.',
