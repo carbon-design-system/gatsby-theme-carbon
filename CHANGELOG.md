@@ -1,12 +1,23 @@
 ## [2.0.0-next.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.0.0-next.0...v2.0.0-next.1) (2021-04-20)
 
 ## [2.0.0-next.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.29.0...v2.0.0-next.0) (2021-04-19)
+## [1.30.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.29.2...v1.30.0) (2021-06-15)
+
+
+### Features
+
+* add option to remove site switcher from header ([#1132](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1132)) ([06ab644](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/06ab644f557cef4716b1372eba61587141bb89f6))
+
+### [1.29.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.29.1...v1.29.2) (2021-05-17)
 
 
 ### Bug Fixes
 
 * sass module import ([a0c3bcc](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/a0c3bcc0006b3be31b0beb48b5f4bf5e57c99a85))
 * sassOptions ([e7ac68e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/e7ac68e9b128a4450419e2641e65204b6929b735))
+* remove light prop ([#1126](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1126)) ([b5da16b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/b5da16b068be4ac9f44f7f2680fcb00a00c2d5b4))
+
+### [1.29.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.29.0...v1.29.1) (2021-05-03)
 
 ## [1.29.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.28.0...v1.29.0) (2021-04-19)
 
