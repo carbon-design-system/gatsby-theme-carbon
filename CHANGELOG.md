@@ -1,3 +1,10 @@
+## [1.30.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.29.2...v1.30.0) (2021-06-15)
+
+
+### Features
+
+* add option to remove site switcher from header ([#1132](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1132)) ([06ab644](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/06ab644f557cef4716b1372eba61587141bb89f6))
+
 ### [1.29.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.29.1...v1.29.2) (2021-05-17)
 
 
