@@ -1,3 +1,10 @@
+### [1.30.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.30.0...v1.30.1) (2021-06-21)
+
+
+### Bug Fixes
+
+* cover gap between page tabs and shell ([0bccf8f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0bccf8f9039f368434a307a7f405ba66e2c6fa97))
+
 ## [1.30.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.29.2...v1.30.0) (2021-06-15)
 
 
