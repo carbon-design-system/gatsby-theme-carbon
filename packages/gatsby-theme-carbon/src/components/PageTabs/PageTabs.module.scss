@@ -3,7 +3,7 @@
   width: 100%;
   background: $carbon--black-100;
   position: sticky;
-  top: 3rem;
+  top: calc(3rem - 1px);
   z-index: 6000; /* old z('header') #940 */
 }
 
