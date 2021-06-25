@@ -13,6 +13,10 @@
   color: $carbon--gray-100;
 }
 
+.container--dark a {
+  color: $carbon--gray-10 !important;
+}
+
 .container--dark a.#{$prefix}--link,
 .container--dark a.#{$prefix}--link:hover,
 .container--dark a.#{$prefix}--link:active,
