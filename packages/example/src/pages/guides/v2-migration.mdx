@@ -73,9 +73,9 @@ equivalent if your project uses `npm` as its package manager.
 
    const MySpan = () => <span className={mySpan} />;
    ```
-
-5. Run `npx gatsby clean` to delete your projects development bundle
-6. Run `yarn dev`
+5. If you have a custom webpack config, be sure your config is compatible with [Webpack 5](https://webpack.js.org/migrate/5/) (the version Gatsby 3 uses)
+6. Run `npx gatsby clean` to delete your projects development bundle
+7. Run `yarn dev`
 
 ## Troubleshooting
 
