@@ -27,7 +27,7 @@
   margin-left: $spacing-05;
 
   &:hover {
-    color: $carbon--blue-40 !important;
+    color: $carbon--blue-40;
     &::before {
       color: $carbon--blue-40;
     }
@@ -41,6 +41,11 @@
     transition: color $transition--base;
     cursor: pointer;
   }
+}
+
+:global(.container--dark) .link,
+:global(.container--g10) .link {
+  color: $carbon--gray-10;
 }
 
 .paragraph {
