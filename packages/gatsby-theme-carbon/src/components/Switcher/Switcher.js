@@ -96,7 +96,7 @@ const DefaultChildren = () => (
     <SwitcherLink href="https://www.carbondesignsystem.com/">
       Carbon Design System
     </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/">
+    <SwitcherLink href="https://www.ibm.com/standards/carbon/">
       Carbon for IBM.com
     </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/design/event/">
