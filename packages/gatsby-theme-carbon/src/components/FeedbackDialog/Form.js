@@ -7,17 +7,15 @@ import Checkmark from './Checkmark';
 import Experience from './Experience';
 import Comment from './Comment';
 
-import styles from './Form.module.scss';
+import * as styles from './Form.module.scss';
 
-const { enter, enterActive, enterDone, exit, exitActive, exitDone } = styles;
+const { enter, enterActive, exit, exitActive } = styles;
 
 const classNames = {
   enter,
   enterActive,
-  enterDone,
   exit,
   exitActive,
-  exitDone,
 };
 
 const Form = ({ visible, setVisible, onSubmit: submitHandler }) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import styles from './PageHeader.module.scss';
+import * as styles from './PageHeader.module.scss';
 
 const PageHeader = ({ title, theme, tabs = [] }) => (
   <div

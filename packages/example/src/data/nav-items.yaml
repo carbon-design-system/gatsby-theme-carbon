@@ -28,6 +28,8 @@
       path: /guides/shadowing
     - title: Styling
       path: /guides/styling
+    - title: v2.0 Migration
+      path: /guides/v2-migration
 - title: Components
   pages:
     - title: Accordion

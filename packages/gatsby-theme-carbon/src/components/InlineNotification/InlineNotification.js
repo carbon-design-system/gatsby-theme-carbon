@@ -5,7 +5,7 @@ import { InlineNotification as CarbonInlineNotification } from 'carbon-component
 import { Row, Column } from '../Grid';
 import useMetadata from '../../util/hooks/useMetadata';
 
-import styles from './InlineNotification.module.scss';
+import * as styles from './InlineNotification.module.scss';
 
 const InlineNotification = ({ children, className, kind = 'info' }) => {
   const { interiorTheme } = useMetadata();

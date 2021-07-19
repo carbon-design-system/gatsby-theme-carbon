@@ -6,8 +6,10 @@ import { column } from './Grid.module.scss';
 
 const { prefix } = settings;
 
-export const Grid = ({ children, className }) => (
-  <div className={cx(`${prefix}--grid`, className)}>{children}</div>
+export const Grid = ({ children, className, ...rest }) => (
+  <div className={cx(`${prefix}--grid`, className)} {...rest}>
+    {children}
+  </div>
 );
 
 Grid.propTypes = {
@@ -19,8 +21,10 @@ Grid.propTypes = {
   className: PropTypes.string,
 };
 
-export const Row = ({ children, className }) => (
-  <div className={cx(`${prefix}--row`, className)}>{children}</div>
+export const Row = ({ children, className, ...rest }) => (
+  <div className={cx(`${prefix}--row`, className)} {...rest}>
+    {children}
+  </div>
 );
 
 Row.propTypes = {
@@ -56,6 +60,7 @@ export const Column = ({
   noGutterMaxLeft,
   gutterLg,
   className,
+  ...rest
 }) => {
   const colClasses = cx(column, {
     [`${prefix}--no-gutter-sm`]: noGutterSm,
@@ -82,7 +87,11 @@ export const Column = ({
     [className]: className,
   });
 
-  return <div className={colClasses}>{children}</div>;
+  return (
+    <div className={colClasses} {...rest}>
+      {children}
+    </div>
+  );
 };
 
 Column.defaultProps = {

@@ -26,6 +26,7 @@
     "lint:js": "eslint . --fix",
     "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
     "release": "release-it",
+    "release:pre": "release-it --preRelease=next",
     "release:ci": "release-it --ci",
     "release:dry": "release-it --dry-run"
   },
@@ -94,12 +95,12 @@
     "lint-staged": "^10.0.9",
     "prettier": "^2.0.2",
     "prettier-config-carbon": "^0.2.0",
-    "release-it": "^14.2.0",
-    "release-it-yarn-workspaces": "^2.0.0",
+    "release-it": "^14.6.1",
+    "release-it-yarn-workspaces": "^2.0.1",
     "stylelint": "^13.2.1",
     "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-scss": "^3.16.0",
     "yarn": "^1.22.4"
   },
-  "version": "1.30.2"
+  "version": "2.0.0-next.4"
 }

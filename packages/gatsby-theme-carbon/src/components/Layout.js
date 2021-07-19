@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import React, { useLayoutEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import Meta from './Meta';
 import LeftNav from './LeftNav';
@@ -24,7 +24,7 @@ const Layout = ({
   const is404 = children.key === null;
   const { isSwitcherEnabled } = useMetadata();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     // eslint-disable-next-line global-require
     const scroll = require('smooth-scroll')('a[href*="#"]', {
       speed: 400,
