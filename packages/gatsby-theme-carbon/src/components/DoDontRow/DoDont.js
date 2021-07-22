@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { CheckmarkFilled24, Misuse24 } from '@carbon/icons-react';
 import { Column } from '../Grid';
-import styles from './DoDontRow.module.scss';
+import * as styles from './DoDontRow.module.scss';
 
 export default class DoDont extends React.Component {
   renderCaption = (caption, captionTitle) => {

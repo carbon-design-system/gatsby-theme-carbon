@@ -1,10 +1,4 @@
-import React, {
-  useContext,
-  useRef,
-  useLayoutEffect,
-  useEffect,
-  useState,
-} from 'react';
+import React, { useContext, useRef, useEffect, useState } from 'react';
 import cx from 'classnames';
 import useMedia from 'use-media';
 import { Locked16 } from '@carbon/icons-react';
@@ -32,7 +26,7 @@ const Switcher = ({ children }) => {
   }, [toggleNavState]);
 
   // calculate and update height
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (switcherIsOpen) {
       setHeight(listRef.current.offsetHeight + 40);
     } else {
@@ -102,7 +96,7 @@ const DefaultChildren = () => (
     <SwitcherLink href="https://www.carbondesignsystem.com/">
       Carbon Design System
     </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/">
+    <SwitcherLink href="https://www.ibm.com/standards/carbon/">
       Carbon for IBM.com
     </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/design/event/">

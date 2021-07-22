@@ -5,6 +5,10 @@ let globalIndex = 0;
 // eslint-disable-next-line no-plusplus
 const genId = () => ++globalIndex;
 
+// https://medium.com/@alexandereardon/uselayouteffect-and-ssr-192986cdcf7a
+const useIsomorphicLayoutEffect =
+  typeof window !== 'undefined' ? useLayoutEffect : useEffect;
+
 export const useId = (label) => {
   /*
    * If this instance isn't part of the initial render, we don't have to do the
@@ -14,7 +18,7 @@ export const useId = (label) => {
 
   const [id, setId] = useState(initialId);
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (id === null) {
       /*
        * Patch the ID after render. We do this in `useLayoutEffect` to avoid any

@@ -1,8 +1,18 @@
+## [2.0.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.30.2...v2.0.0) (2021-07-19)
+
+### [1.30.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.30.1...v1.30.2) (2021-07-14)
+
 ### [1.30.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.30.0...v1.30.1) (2021-06-21)
 
 
 ### Bug Fixes
 
+* sass module import ([a0c3bcc](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/a0c3bcc0006b3be31b0beb48b5f4bf5e57c99a85))
+* sassOptions ([e7ac68e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/e7ac68e9b128a4450419e2641e65204b6929b735))
+
+## [2.0.0-next.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.0.0-next.0...v2.0.0-next.1) (2021-04-20)
+
+## [2.0.0-next.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.29.0...v2.0.0-next.0) (2021-04-19)
 * cover gap between page tabs and shell ([0bccf8f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0bccf8f9039f368434a307a7f405ba66e2c6fa97))
 
 ## [1.30.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.29.2...v1.30.0) (2021-06-15)
@@ -17,6 +27,8 @@
 
 ### Bug Fixes
 
+* sass module import ([a0c3bcc](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/a0c3bcc0006b3be31b0beb48b5f4bf5e57c99a85))
+* sassOptions ([e7ac68e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/e7ac68e9b128a4450419e2641e65204b6929b735))
 * remove light prop ([#1126](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1126)) ([b5da16b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/b5da16b068be4ac9f44f7f2680fcb00a00c2d5b4))
 
 ### [1.29.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.29.0...v1.29.1) (2021-05-03)

@@ -7,7 +7,7 @@ import LeftNavItem from './LeftNavItem';
 import LeftNavResourceLinks from './ResourceLinks';
 
 import LeftNavWrapper from './LeftNavWrapper';
-import styles from './LeftNav.module.scss';
+import * as styles from './LeftNav.module.scss';
 import useMetadata from '../../util/hooks/useMetadata';
 
 const LeftNav = (props) => {

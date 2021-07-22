@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Column } from '../Grid';
-import styles from './last-modified-date.module.scss';
+import * as styles from './last-modified-date.module.scss';
 
 const LastModifiedDate = ({ date }) => {
   const options = {

@@ -10,7 +10,7 @@ import {
   SideNavMenuItem,
 } from 'carbon-components-react';
 
-import styles from './LeftNav.module.scss';
+import * as styles from './LeftNav.module.scss';
 
 import NavContext from '../../util/context/NavContext';
 import usePathprefix from '../../util/hooks/usePathprefix';
@@ -96,19 +96,11 @@ const SubNavItems = ({ items, pathname, onClick }) =>
     return (
       <SideNavMenuItem
         to={to}
-        className={cx({
-          [styles.linkText__dark]: pathname === '/',
-        })}
         onClick={(e) => onClick(e, to)}
         element={Link}
         isActive={hasActiveTab}
         key={i}>
-        <span
-          className={cx(styles.linkText, {
-            [styles.linkText__active]: hasActiveTab,
-          })}>
-          {item.title}
-        </span>
+        {item.title}
       </SideNavMenuItem>
     );
   });
