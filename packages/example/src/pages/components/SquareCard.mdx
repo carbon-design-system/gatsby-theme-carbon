@@ -57,71 +57,49 @@ properly space the `<Column>` components when they wrap on mobile.
 ## Code
 
 ```mdx path=components/ImageCard/ImageCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/ImageCard
-<Row className="image-card-group">
+<Row className="square-card-group">
   <Column colMd={4} colLg={4} noGutterSm>
-    <ImageCard title="Title" subTitle="Subtitle" href="/">
-      
-![Square](/images/square.jpg)
-
-    </ImageCard>
-    <ImageCard
-      title="Dark title"
-      titleColor="dark"
-      aspectRatio="1:1"
-      href="/"
-      actionIcon="arrowRight"
-      subTitleColor="dark"
-      subTitle="Dark subtitle">
-
-![Light dark](./images/light-dark.jpg)
-
-    </ImageCard>
-
-  </Column>
-  <Column colMd={4} colLg={4} noGutterSm>
-    <ImageCard
+    <SquareCard
       title="Title"
-      subTitle="Subtitle"
-      aspectRatio="1:2"
       href="/"
-      actionIcon="download"
-      titleColor="light"
-      subTitleColor="light">
-      
-![Plane image](./images/plane.jpg)
-
-    </ImageCard>
-
+      bodyText="im body text that is super long maybe a link goes here"
+      helperText="helper text"
+      />
   </Column>
   <Column colMd={4} colLg={4} noGutterSm>
-    <ImageCard aspectRatio="1:1" href="/" hoverColor="dark">
-      
-![color pallete array](/images/color-grid.svg)
-
-    </ImageCard>
-    <ImageCard disabled aspectRatio="1:1" href="/">
-
-![Square](/images/square.jpg)
-
-    </ImageCard>
-
+    <SquareCard
+      title="Title"
+      href="/"
+      bodyText="im body text"
+      />
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <SquareCard
+      title="Title"
+      href="/"
+      bodyText="im body text"
+      />
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <SquareCard
+      title="Title"
+      href="/"
+      bodyText="im body text"
+      />
   </Column>
 </Row>
 ```
 
 ### Props
 
-| property      | propType | required | default | description                                                                                                      |
-| ------------- | -------- | -------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
-| children      | node     |          |         | Background image for the card, make sure it is saved out at the correct aspect ratio or it will appear distorted |
-| href          | string   |          |         | Set url for card                                                                                                 |
-| aspectRatio   | string   |          | `1:1`   | Set card aspect ratio, default is `1:1`, options are `1:1`, `16:9`, `4:3`, `2:1`, `1:2`                          |
-| subTitle      | string   |          |         | Smaller title on top left of card                                                                                |
-| title         | string   |          |         | Large title                                                                                                      |
-| actionIcon    | string   |          |         | Action icon, default is no icon, options are `Launch`, `ArrowRight`, `Download`, `Disabled`, `Email`             |
-| titleColor    | string   |          | `light` | Set title text color, default is `light`, options are `light` or `dark`                                          |
-| subTitleColor | string   |          | `light` | Set sub title text color, default is `light`, options are `light` or `dark`                                      |
-| iconColor     | string   |          | `light` | Set icon color, default is `light`, options are `light` or `dark`                                                |
-| hoverColor    | string   |          | `light` | Set hover to lighten or darken the image, default is `light`, options are `light` or `dark`                      |
-| disabled      | bool     |          | `false` | Set for disabled card                                                                                            |
-| className     | string   |          |         | Add custom class name                                                                                            |
+| property      | propType | required | default     | description                                                                                                      |
+| ------------- | -------- | -------- | ----------- | ---------------------------------------------------------------------------------------------------------------- |
+| children      | node     |          |             | Optional pictogram icon                                                                                          |
+| href          | string   |          |             | Set url for card                                                                                                 |
+| smallTitle    | bool     |          | `false`     | Set to true to display smaller title                                                                             |
+| title         | string   |          |             | Card title - default is large                                                                                    |
+| actionIcon    | string   |          | `ArrowRight`| Action icon, default is no 'ArrowRight', options are `Launch`, `ArrowRight`, `Download`, `Disabled`, `Email`     |
+| disabled      | bool     |          | `false`     | Set for disabled card                                                                                            |
+| className     | string   |          |             | Add custom class name                                                                                            |
+| helperText    | string   |          |             | Optional helper text that appears at the bottom left corner                                                      |
+| bodyText      | string   |          |             | Optional body text for card description                                                                          |
