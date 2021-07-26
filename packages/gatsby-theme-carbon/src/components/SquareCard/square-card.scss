@@ -1,0 +1,141 @@
+// Square Card Group border
+.square-card-group .#{$prefix}--square-card {
+  border-top: 0px solid transparent;
+
+  @include carbon--breakpoint('md') {
+    border-left: 1px solid $ui-03;
+  }
+}
+
+.square-card-group .bx--col-lg-4 .bx--square-card {
+  border-left: 1px solid $ui-03;
+}
+
+.square-card-group .#{$prefix}--col-lg-4:first-child .#{$prefix}--square-card {
+  border-left: 0 solid transparent;
+}
+
+.square-card-group
+  .#{$prefix}--col-lg-4:nth-child(4n)
+  .#{$prefix}--square-card {
+  @include carbon--breakpoint('lg') {
+    border-left: 0 solid transparent;
+  }
+}
+
+.square-card-group
+  .#{$prefix}--col-lg-4:nth-child(n + 4)
+  .#{$prefix}--square-card {
+  border-top: 1px solid $ui-03;
+}
+
+.resource-card-group-3 .bx--col-lg-4:nth-child(2n + 1) .bx--resource-card {
+  @include carbon--breakpoint('md') {
+    border-left: 1px solid $ui-03;
+  }
+}
+
+.square-card-group
+  .#{$prefix}--col-lg-4:nth-child(2n + 1)
+  .#{$prefix}--square-card {
+  @include carbon--breakpoint('md') {
+    border-left: 1px solid transparent;
+  }
+}
+
+// Square Card Component
+.#{$prefix}--square-card {
+  //overrides global vertical spacing
+  --space: 0;
+}
+
+.#{$prefix}--square-card .#{$prefix}--tile {
+  height: 100%;
+  padding: $spacing-05 15% $spacing-05 $spacing-05;
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: calc(100% - 1px); // 1px to offset negative `left` positioning
+    height: calc(100% - 1px); // 1px to offset negative `top` positioning
+    outline: 3px solid transparent;
+    outline-offset: -3px;
+    transition: outline motion(standard, productive) $duration--fast-01;
+  }
+}
+
+.#{$prefix}--square-card .#{$prefix}--tile:focus {
+  outline: none;
+
+  &::after {
+    outline: 3px solid $focus;
+  }
+}
+
+.#{$prefix}--square-card__title {
+  @include carbon--type-style('productive-heading-04');
+
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+}
+
+.#{$prefix}--square-card__title--small {
+  @include carbon--type-style('productive-heading-03');
+}
+
+.#{$prefix}--square-card__body {
+  @include carbon--type-style('body-short-02');
+
+  padding-top: $spacing-05;
+}
+
+.#{$prefix}--square-card__helper-text {
+  @include carbon--type-style('body-short-01');
+
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+// .#{$prefix}--square-card__helper-icon {
+//   position: absolute;
+//   bottom: 1rem;
+//   left: 1rem;
+//   min-width: 32px;
+//   min-height: 32px;
+//   display: flex;
+//   align-items: flex-end;
+// }
+
+.#{$prefix}--square-card__icon--action {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 20px;
+  height: 20px;
+}
+
+// Disabled
+.#{$prefix}--square-card--disabled {
+  cursor: not-allowed;
+}
+
+.#{$prefix}--square-card--disabled .#{$prefix}--tile:hover {
+  background: $ui-01;
+  cursor: not-allowed;
+}
+
+.#{$prefix}--square-card--disabled .#{$prefix}--square-card__title {
+  color: $disabled-03;
+}
+
+.#{$prefix}--square-card--disabled .#{$prefix}--square-card__icon--action svg {
+  fill: $disabled-02;
+}

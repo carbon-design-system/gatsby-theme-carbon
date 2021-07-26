@@ -74,6 +74,8 @@
       path: /components/PageDescription
     - title: ResourceCard
       path: /components/ResourceCard
+    - title: SquareCard
+      path: /components/SquareCard
     - title: Tabs
       path: /components/Tabs
     - title: Title

@@ -2,7 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { Link, withPrefix } from 'gatsby';
-import { ArrowRight20 } from '@carbon/icons-react';
+import {
+  Launch20,
+  Download20,
+  ArrowRight20,
+  Error20,
+  Email20,
+} from '@carbon/icons-react';
 import { settings } from 'carbon-components';
 
 const { prefix } = settings;
@@ -12,11 +18,13 @@ export default class SquareCard extends React.Component {
     const {
       children,
       href,
+      title,
       smallTitle,
-      largeTitle,
       disabled,
-      actionIcon,
+      bodyText,
+      helperText,
       className,
+      actionIcon,
       ...rest
     } = this.props;
 
@@ -25,29 +33,54 @@ export default class SquareCard extends React.Component {
       isLink = href.charAt(0) === '/';
     }
 
+    const SquareCardClassNames = cx(className, `${prefix}--square-card`, {
+      [`${prefix}--square-card--disabled`]: disabled,
+      // [`${prefix}--square-card--dark`]: color === 'dark',
+      [`${prefix}--square-card__title--small`]: smallTitle,
+    });
+
     const carbonTileclassNames = cx(
       [`${prefix}--tile`],
       [`${prefix}--tile--clickable`]
     );
 
+    const aspectRatioClassNames = cx(
+      `${prefix}--aspect-ratio`,
+      `${prefix}--aspect-ratio--1x1`
+    );
+
     const cardContent = (
       <>
-        {smallTitle ? (
-          <h5 className={`${prefix}--resource-card__title--small`}>
-            {smallTitle}
-          </h5>
+        {/* {smallTitle ? (
+          <h5 className={`${prefix}--resource-card__title--small`}>{smallTitle}</h5>
+        ) : null } */}
+        <h4 className={`${prefix}--square-card__title`}>{title}</h4>
+        {bodyText ? (
+          <p className={`${prefix}--square-card__body`}>{bodyText}</p>
         ) : null}
-        {largeTitle ? (
-          <h4 className={`${prefix}--resource-card__title--large`}>
-            {largeTitle}
-          </h4>
+        {helperText ? (
+          <p className={`${prefix}--square-card__helper-text`}>{helperText}</p>
         ) : null}
         {children ? (
-          <p className={`${prefix}--resource-card__icon--body`}>{children}</p>
+          <div className={`${prefix}--square-card__helper-icon`}>
+            {children}
+          </div>
         ) : null}
-        <div className={`${prefix}--resource-card__icon--action`}>
+        <div className={`${prefix}--square-card__icon--action`}>
           {actionIcon === 'arrowRight' && !disabled ? (
-            <ArrowRight20 aria-label="Open" />
+            <ArrowRight20 aria-label="Open resource" />
+          ) : null}
+          {actionIcon === 'launch' && !disabled ? (
+            <Launch20 aria-label="Open resource" />
+          ) : null}
+          {actionIcon === 'download' && !disabled ? (
+            <Download20 aria-label="Download" />
+          ) : null}
+          {actionIcon === 'email' && !disabled ? (
+            <Email20 aria-label="Email" />
+          ) : null}
+          {actionIcon === 'disabled' || disabled === true ? (
+            <Error20 aria-label="disabled" />
           ) : null}
         </div>
       </>
@@ -70,11 +103,22 @@ export default class SquareCard extends React.Component {
       );
     }
 
-    return <div>{cardContainer}</div>;
+    return (
+      <div className={SquareCardClassNames} {...rest}>
+        <div className={aspectRatioClassNames}>
+          <div className={`${prefix}--aspect-ratio--object`}>
+            {cardContainer}
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
 SquareCard.propTypes = {
+  /**
+   * Use to set a pictogram
+   */
   children: PropTypes.node,
 
   /**
@@ -83,17 +127,17 @@ SquareCard.propTypes = {
   href: PropTypes.string,
 
   /**
-   * Smaller heading
-   */
-  smallTitle: PropTypes.string,
-
-  /**
    * Large heading
    */
-  largeTitle: PropTypes.string,
+  title: PropTypes.string,
 
   /**
-   * Action icon is ArrowRight
+   * Use to enable the smaller heading
+   */
+  smallTitle: PropTypes.bool,
+
+  /**
+   * Action icon, default is Arrow Right, options are Launch, ArrowRight, Download, Error
    */
   actionIcon: PropTypes.string,
 
@@ -103,7 +147,23 @@ SquareCard.propTypes = {
   disabled: PropTypes.bool,
 
   /**
+   * Body text
+   */
+  bodyText: PropTypes.string,
+
+  /**
+   * Helper text
+   */
+  helperText: PropTypes.string,
+
+  /**
    * Specify a custom class
    */
   className: PropTypes.string,
+};
+
+SquareCard.defaultProps = {
+  disabled: false,
+  smallTitle: false,
+  actionIcon: 'arrowRight',
 };
