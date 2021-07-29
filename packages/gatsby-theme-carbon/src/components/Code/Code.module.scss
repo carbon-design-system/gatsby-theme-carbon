@@ -33,6 +33,7 @@
   font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
     'Bitstream Vera Sans Mono', Courier, monospace;
   color: $carbon--white-0;
+  color-scheme: dark;
   @include carbon--type-style('code-02');
   width: calc(100% + 2rem);
   @include carbon--breakpoint('lg') {
