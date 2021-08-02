@@ -25,6 +25,7 @@ export default class SquareCard extends React.Component {
       helperText,
       className,
       actionIcon,
+      color,
       ...rest
     } = this.props;
 
@@ -35,9 +36,16 @@ export default class SquareCard extends React.Component {
 
     const SquareCardClassNames = cx(className, `${prefix}--square-card`, {
       [`${prefix}--square-card--disabled`]: disabled,
-      // [`${prefix}--square-card--dark`]: color === 'dark',
-      [`${prefix}--square-card__title--small`]: smallTitle,
+      [`${prefix}--square-card--dark`]: color === 'dark',
     });
+
+    const SquareCardTitleClassNames = cx(
+      className,
+      `${prefix}--square-card__title`,
+      {
+        [`${prefix}--square-card__title--small`]: smallTitle,
+      }
+    );
 
     const carbonTileclassNames = cx(
       [`${prefix}--tile`],
@@ -51,10 +59,7 @@ export default class SquareCard extends React.Component {
 
     const cardContent = (
       <>
-        {/* {smallTitle ? (
-          <h5 className={`${prefix}--resource-card__title--small`}>{smallTitle}</h5>
-        ) : null } */}
-        <h4 className={`${prefix}--square-card__title`}>{title}</h4>
+        <h4 className={SquareCardTitleClassNames}>{title}</h4>
         {bodyText ? (
           <p className={`${prefix}--square-card__body`}>{bodyText}</p>
         ) : null}
@@ -157,12 +162,18 @@ SquareCard.propTypes = {
   helperText: PropTypes.string,
 
   /**
+   * set to "dark" for dark background card
+   */
+  color: PropTypes.string,
+
+  /**
    * Specify a custom class
    */
   className: PropTypes.string,
 };
 
 SquareCard.defaultProps = {
+  color: 'light',
   disabled: false,
   smallTitle: false,
   actionIcon: 'arrowRight',

@@ -3,6 +3,8 @@ title: SquareCard
 description: Usage instructions for the SquareCard component
 ---
 
+import { Tools } from '@carbon/pictograms-react';
+
 <PageDescription>
 
 The `<SquareCard>` component should generally be used inside of a
@@ -16,41 +18,46 @@ properly space the `<Column>` components when they wrap on mobile.
 <Row className="square-card-group">
 <Column colMd={4} colLg={4} noGutterSm>
     <SquareCard
-      title="Title"
+      title="A small sentence can go here in conjunction with a pictogram"
       href="/"
-      bodyText="im body text that is super long maybe a link goes here"
-      helperText="helper text"
       >
-
+      <Tools aria-label="Tools" className="my-custom-class" />
   </SquareCard>
   </Column>
 <Column colMd={4} colLg={4} noGutterSm>
   <SquareCard
-      title="Title"
+      title="A small sentence can go here with no pictogram"
       href="/"
-      bodyText="im body text"
-      >
-  </SquareCard>
+      helperText="(Optional) Text could be added here"
+      />
   </Column>
 <Column colMd={4} colLg={4} noGutterSm>
   <SquareCard
-      title="Title"
+      title="Short title"
       href="/"
-      bodyText="im body text"
-      >
-
-  </SquareCard>
-  
+      bodyText="A short body paragraph describing the card could go here."
+      />
 </Column>
 <Column colMd={4} colLg={4} noGutterSm>
   <SquareCard
-      title="Title"
+      title="Small title here"
+      smallTitle
       href="/"
-      bodyText="im body text"
+      bodyText="A short body paragraph describing the card could go here."
+      disabled
       >
-
+      <Tools aria-label="Tools" className="my-custom-class" />
   </SquareCard>
-  
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+  <SquareCard
+      title="Small title here"
+      smallTitle
+      href="/"
+      bodyText="A short body paragraph describing the card could go here."
+      helperText="(Optional) Text could be added here"
+      disabled
+      />
 </Column>
 </Row>
 
@@ -60,31 +67,49 @@ properly space the `<Column>` components when they wrap on mobile.
 <Row className="square-card-group">
   <Column colMd={4} colLg={4} noGutterSm>
     <SquareCard
-      title="Title"
+      title="A small sentence can go here in conjunction with a pictogram"
       href="/"
-      bodyText="im body text that is super long maybe a link goes here"
-      helperText="helper text"
-      />
+      >
+        <Tools aria-label="Tools" className="my-custom-class" />
+    </SquareCard>
   </Column>
+
   <Column colMd={4} colLg={4} noGutterSm>
     <SquareCard
-      title="Title"
+      title="A small sentence can go here with no pictogram"
       href="/"
-      bodyText="im body text"
+      helperText="(Optional) Text could be added here"
       />
   </Column>
+
   <Column colMd={4} colLg={4} noGutterSm>
     <SquareCard
-      title="Title"
+      title="Short title"
       href="/"
-      bodyText="im body text"
+      bodyText="A short body paragraph describing the card could go here."
       />
   </Column>
+
   <Column colMd={4} colLg={4} noGutterSm>
     <SquareCard
-      title="Title"
+      title="Small title here"
+      smallTitle
       href="/"
-      bodyText="im body text"
+      bodyText="A short body paragraph describing the card could go here."
+      disabled
+      >
+        <Tools aria-label="Tools" className="my-custom-class" />
+    </SquareCard>
+  </Column>
+  
+  <Column colMd={4} colLg={4} noGutterSm>
+    <SquareCard
+      title="Small title here"
+      smallTitle
+      href="/"
+      bodyText="A short body paragraph describing the card could go here."
+      helperText="(Optional) Text could be added here"
+      disabled
       />
   </Column>
 </Row>
@@ -94,12 +119,13 @@ properly space the `<Column>` components when they wrap on mobile.
 
 | property      | propType | required | default     | description                                                                                                      |
 | ------------- | -------- | -------- | ----------- | ---------------------------------------------------------------------------------------------------------------- |
-| children      | node     |          |             | Optional pictogram icon                                                                                          |
+| children      | node     |          |             | Optional pictogram icon to add to bottom left corner cannot be combined with 'helperText'                        |
 | href          | string   |          |             | Set url for card                                                                                                 |
 | smallTitle    | bool     |          | `false`     | Set to true to display smaller title                                                                             |
-| title         | string   |          |             | Card title - default is large                                                                                    |
+| title         | string   |          |             | Card title - default is `large`                                                                                  |
 | actionIcon    | string   |          | `ArrowRight`| Action icon, default is no 'ArrowRight', options are `Launch`, `ArrowRight`, `Download`, `Disabled`, `Email`     |
 | disabled      | bool     |          | `false`     | Set for disabled card                                                                                            |
 | className     | string   |          |             | Add custom class name                                                                                            |
-| helperText    | string   |          |             | Optional helper text that appears at the bottom left corner                                                      |
+| helperText    | string   |          |             | Optional helper text that appears at the bottom left corner cannot be combined with 'children' text              |
 | bodyText      | string   |          |             | Optional body text for card description                                                                          |
+| color         | string   |          | `light`     | Set to `dark` for dark background                                                                                |

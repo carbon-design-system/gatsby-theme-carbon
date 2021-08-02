@@ -1,44 +1,49 @@
-// Square Card Group border
+// Square Card Group
+.square-card-group .#{$prefix}--col-lg-4 {
+  margin-bottom: 0;
+}
 .square-card-group .#{$prefix}--square-card {
-  border-top: 0px solid transparent;
+  border-top: 1px solid #e0e0e0;
 
   @include carbon--breakpoint('md') {
-    border-left: 1px solid $ui-03;
+    border-left: 1px solid #e0e0e0;
   }
 }
+.square-card-group .#{$prefix}--col-lg-4 .#{$prefix}--square-card {
+  border-left: 1px solid transparent;
 
-.square-card-group .bx--col-lg-4 .bx--square-card {
-  border-left: 1px solid $ui-03;
+  @include carbon--breakpoint('md') {
+    border-left: 1px solid #e0e0e0;
+  }
 }
-
 .square-card-group .#{$prefix}--col-lg-4:first-child .#{$prefix}--square-card {
-  border-left: 0 solid transparent;
+  border-top: 0 solid transparent;
 }
-
-.square-card-group
-  .#{$prefix}--col-lg-4:nth-child(4n)
-  .#{$prefix}--square-card {
-  @include carbon--breakpoint('lg') {
-    border-left: 0 solid transparent;
-  }
-}
-
-.square-card-group
-  .#{$prefix}--col-lg-4:nth-child(n + 4)
-  .#{$prefix}--square-card {
-  border-top: 1px solid $ui-03;
-}
-
-.resource-card-group-3 .bx--col-lg-4:nth-child(2n + 1) .bx--resource-card {
+.square-card-group .#{$prefix}--col-lg-4:nth-child(2) .#{$prefix}--square-card {
   @include carbon--breakpoint('md') {
-    border-left: 1px solid $ui-03;
+    border-top: 0 solid transparent;
   }
 }
-
+.square-card-group .#{$prefix}--col-lg-4:nth-child(3) .#{$prefix}--square-card {
+  @include carbon--breakpoint('lg') {
+    border-top: 0 solid transparent;
+  }
+}
 .square-card-group
   .#{$prefix}--col-lg-4:nth-child(2n + 1)
   .#{$prefix}--square-card {
   @include carbon--breakpoint('md') {
+    border-left: 1px solid transparent;
+  }
+
+  @include carbon--breakpoint('lg') {
+    border-left: 1px solid #e0e0e0;
+  }
+}
+.square-card-group
+  .#{$prefix}--col-lg-4:nth-child(3n + 1)
+  .#{$prefix}--square-card {
+  @include carbon--breakpoint('lg') {
     border-left: 1px solid transparent;
   }
 }
@@ -104,15 +109,15 @@
   align-items: flex-end;
 }
 
-// .#{$prefix}--square-card__helper-icon {
-//   position: absolute;
-//   bottom: 1rem;
-//   left: 1rem;
-//   min-width: 32px;
-//   min-height: 32px;
-//   display: flex;
-//   align-items: flex-end;
-// }
+.#{$prefix}--square-card__helper-icon {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  min-width: 32px;
+  min-height: 32px;
+  display: flex;
+  align-items: flex-end;
+}
 
 .#{$prefix}--square-card__icon--action {
   position: absolute;
@@ -120,6 +125,26 @@
   right: 1rem;
   width: 20px;
   height: 20px;
+}
+
+// Dark
+.#{$prefix}--square-card--dark .#{$prefix}--tile {
+  background: $carbon--gray-90; //$ui-background for gray 90 theme
+}
+
+.#{$prefix}--square-card--dark .#{$prefix}--tile:hover {
+  background: $carbon--gray-80; //$hover-ui for gray 90 theme
+}
+
+.#{$prefix}--square-card--dark .#{$prefix}--square-card__title,
+.#{$prefix}--square-card--dark .#{$prefix}--square-square-card__body,
+.#{$prefix}--square-card--dark .#{$prefix}--square-card__helper-text {
+  color: $text-04;
+}
+
+.#{$prefix}--square-card--dark .#{$prefix}--square-card__icon--action svg,
+.#{$prefix}--square-card--dark .#{$prefix}--square-card__helper-icon svg {
+  fill: $carbon--gray-10;
 }
 
 // Disabled
@@ -132,10 +157,13 @@
   cursor: not-allowed;
 }
 
-.#{$prefix}--square-card--disabled .#{$prefix}--square-card__title {
+.#{$prefix}--square-card--disabled .#{$prefix}--square-card__title,
+.#{$prefix}--square-card--disabled .#{$prefix}--square-card__body,
+.#{$prefix}--square-card--disabled .#{$prefix}--square-card__helper-text {
   color: $disabled-03;
 }
 
-.#{$prefix}--square-card--disabled .#{$prefix}--square-card__icon--action svg {
+.#{$prefix}--square-card--disabled .#{$prefix}--square-card__icon--action svg,
+.#{$prefix}--square-card--disabled .#{$prefix}--square-card__helper-icon svg {
   fill: $disabled-02;
 }
