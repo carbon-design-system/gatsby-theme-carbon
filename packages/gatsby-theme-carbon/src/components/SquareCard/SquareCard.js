@@ -59,7 +59,7 @@ export default class SquareCard extends React.Component {
 
     const cardContent = (
       <>
-        <h4 className={SquareCardTitleClassNames}>{title}</h4>
+        <h2 className={SquareCardTitleClassNames}>{title}</h2>
         {bodyText ? (
           <p className={`${prefix}--square-card__body`}>{bodyText}</p>
         ) : null}

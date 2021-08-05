@@ -87,10 +87,18 @@
   text-decoration: none;
   position: relative;
   z-index: 1;
+
+  @include carbon--breakpoint-between('lg', 'xlg') {
+    @include carbon--type-style('productive-heading-03');
+  }
 }
 
 .#{$prefix}--square-card__title--small {
   @include carbon--type-style('productive-heading-03');
+
+  @include carbon--breakpoint-between('lg', 'xlg') {
+    @include carbon--type-style('productive-heading-02');
+  }
 }
 
 .#{$prefix}--square-card__body {
@@ -107,6 +115,7 @@
   left: 1rem;
   display: flex;
   align-items: flex-end;
+  padding-right: $spacing-07;
 }
 
 .#{$prefix}--square-card__helper-icon {
