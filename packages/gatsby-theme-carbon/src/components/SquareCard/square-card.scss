@@ -107,6 +107,12 @@
   padding-top: $spacing-05;
 }
 
+.#{$prefix}--square-card__title--small + .#{$prefix}--square-card__body {
+  @include carbon--breakpoint-between('lg', 'xlg') {
+    padding-top: 0;
+  }
+}
+
 .#{$prefix}--square-card__helper-text {
   @include carbon--type-style('body-short-01');
 
@@ -116,6 +122,7 @@
   display: flex;
   align-items: flex-end;
   padding-right: $spacing-07;
+  margin-right: $spacing-06;
 }
 
 .#{$prefix}--square-card__helper-icon {
