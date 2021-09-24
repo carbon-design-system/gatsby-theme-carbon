@@ -20,10 +20,10 @@ helpful npm scripts. You can run these commands by typing `yarn [command]` or
 
 ## Develop
 
-- **develop** - this is your primary for starting up your gatsby site for
+- **dev** - this is your primary for starting up your gatsby site for
   development
-- **develop:clean** - this is provided as a convenience; it first runs `clean`
-  then `develop`
+- **dev:clean** - this is provided as a convenience; it first runs `clean`
+  then `dev`
 
 ## Build
 
@@ -33,14 +33,3 @@ helpful npm scripts. You can run these commands by typing `yarn [command]` or
   It can be used to debug locally if any issues are encountered durring build.
 - **build:clean** - this is a provided as a convenience, it first runs `clean`
   then `build`
-- **build:prefix** - this will append all of your links with a
-  [`pathPrefix`](https://www.gatsbyjs.org/docs/path-prefix/) specified in your
-  `gatsby-config.js`
-- **serve:prefix** - this will allow you to serve the file locally using a
-  prefixed site built with `build:prefix`
-- **test:prefix** - this is provided as a convenience; it first runs
-  `build:prefix` then `test:prefix`
-- **build:analyze** - this will run build while also running
-  [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
-  to help debug bundle size issues
-  ![webpack bundle analysis screenshot](analyzer.jpg)

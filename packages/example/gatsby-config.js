@@ -14,7 +14,7 @@ module.exports = {
         short_name: 'Gatsby Theme Carbon',
         start_url: '/',
         background_color: '#ffffff',
-        theme_color: '#0062ff',
+        theme_color: '#161616',
         display: 'browser',
       },
     },
