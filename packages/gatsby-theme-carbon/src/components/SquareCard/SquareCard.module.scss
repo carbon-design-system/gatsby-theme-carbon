@@ -1,37 +1,32 @@
 // Square Card Group
-.square-card-group .#{$prefix}--col-lg-4 {
+:global(.square-card-group) > * {
   margin-bottom: 0;
 }
-.square-card-group .#{$prefix}--square-card {
+.squareCard {
+  //overrides global vertical spacing
+  --space: 0;
   border-top: 1px solid #e0e0e0;
-
-  @include carbon--breakpoint('md') {
-    border-left: 1px solid #e0e0e0;
-  }
-}
-.square-card-group .#{$prefix}--col-lg-4 .#{$prefix}--square-card {
   border-left: 1px solid transparent;
 
   @include carbon--breakpoint('md') {
     border-left: 1px solid #e0e0e0;
   }
 }
-.square-card-group .#{$prefix}--col-lg-4:first-child .#{$prefix}--square-card {
+
+:global(.square-card-group) .squareCard:first-child {
   border-top: 0 solid transparent;
 }
-.square-card-group .#{$prefix}--col-lg-4:nth-child(2) .#{$prefix}--square-card {
+:global(.square-card-group) .squareCard:nth-child(2) {
   @include carbon--breakpoint('md') {
     border-top: 0 solid transparent;
   }
 }
-.square-card-group .#{$prefix}--col-lg-4:nth-child(3) .#{$prefix}--square-card {
+:global(.square-card-group) .squareCard:nth-child(3) {
   @include carbon--breakpoint('lg') {
     border-top: 0 solid transparent;
   }
 }
-.square-card-group
-  .#{$prefix}--col-lg-4:nth-child(2n + 1)
-  .#{$prefix}--square-card {
+:global(.square-card-group) .squareCard:nth-child(2n + 1) {
   @include carbon--breakpoint('md') {
     border-left: 1px solid transparent;
   }
@@ -40,21 +35,13 @@
     border-left: 1px solid #e0e0e0;
   }
 }
-.square-card-group
-  .#{$prefix}--col-lg-4:nth-child(3n + 1)
-  .#{$prefix}--square-card {
+:global(.square-card-group) .squareCard:nth-child(3n + 1) {
   @include carbon--breakpoint('lg') {
     border-left: 1px solid transparent;
   }
 }
 
-// Square Card Component
-.#{$prefix}--square-card {
-  //overrides global vertical spacing
-  --space: 0;
-}
-
-.#{$prefix}--square-card .#{$prefix}--tile {
+.squareCard :global(.#{$prefix}--tile) {
   height: 100%;
   padding: $spacing-05 15% $spacing-05 $spacing-05;
   position: relative;
@@ -73,7 +60,7 @@
   }
 }
 
-.#{$prefix}--square-card .#{$prefix}--tile:focus {
+.squareCard :global(.#{$prefix}--tile:focus) {
   outline: none;
 
   &::after {
@@ -81,7 +68,7 @@
   }
 }
 
-.#{$prefix}--square-card__title {
+.title {
   @include carbon--type-style('productive-heading-04');
 
   text-decoration: none;
@@ -93,7 +80,7 @@
   }
 }
 
-.#{$prefix}--square-card__title--small {
+.titleSmall {
   @include carbon--type-style('productive-heading-03');
 
   @include carbon--breakpoint-between('lg', 'xlg') {
@@ -101,19 +88,19 @@
   }
 }
 
-.#{$prefix}--square-card__body {
+.body {
   @include carbon--type-style('body-short-02');
 
   padding-top: $spacing-05;
 }
 
-.#{$prefix}--square-card__title--small + .#{$prefix}--square-card__body {
+.titleSmall + .body {
   @include carbon--breakpoint-between('lg', 'xlg') {
     padding-top: 0;
   }
 }
 
-.#{$prefix}--square-card__helper-text {
+.helperText {
   @include carbon--type-style('body-short-01');
 
   position: absolute;
@@ -125,7 +112,7 @@
   margin-right: $spacing-06;
 }
 
-.#{$prefix}--square-card__helper-icon {
+.helperIcon {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
@@ -135,7 +122,7 @@
   align-items: flex-end;
 }
 
-.#{$prefix}--square-card__icon--action {
+.actionIcon {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -144,42 +131,42 @@
 }
 
 // Dark
-.#{$prefix}--square-card--dark .#{$prefix}--tile {
+.darkMode :global(.#{$prefix}--tile) {
   background: $carbon--gray-90; //$ui-background for gray 90 theme
 }
 
-.#{$prefix}--square-card--dark .#{$prefix}--tile:hover {
+.darkMode :global(.#{$prefix}--tile:hover) {
   background: $carbon--gray-80; //$hover-ui for gray 90 theme
 }
 
-.#{$prefix}--square-card--dark .#{$prefix}--square-card__title,
-.#{$prefix}--square-card--dark .#{$prefix}--square-square-card__body,
-.#{$prefix}--square-card--dark .#{$prefix}--square-card__helper-text {
+.darkMode .title,
+.darkMode .body,
+.darkMode .helperText {
   color: $text-04;
 }
 
-.#{$prefix}--square-card--dark .#{$prefix}--square-card__icon--action svg,
-.#{$prefix}--square-card--dark .#{$prefix}--square-card__helper-icon svg {
+.darkMode .actionIcon svg,
+.darkMode .helperIcon svg {
   fill: $carbon--gray-10;
 }
 
 // Disabled
-.#{$prefix}--square-card--disabled {
+.disabled {
   cursor: not-allowed;
 }
 
-.#{$prefix}--square-card--disabled .#{$prefix}--tile:hover {
+.disabled :global(.#{$prefix}--tile:hover) {
   background: $ui-01;
   cursor: not-allowed;
 }
 
-.#{$prefix}--square-card--disabled .#{$prefix}--square-card__title,
-.#{$prefix}--square-card--disabled .#{$prefix}--square-card__body,
-.#{$prefix}--square-card--disabled .#{$prefix}--square-card__helper-text {
+.disabled .title,
+.disabled .body,
+.disabled .helperText {
   color: $disabled-03;
 }
 
-.#{$prefix}--square-card--disabled .#{$prefix}--square-card__icon--action svg,
-.#{$prefix}--square-card--disabled .#{$prefix}--square-card__helper-icon svg {
+.disabled .actionIcon svg,
+.disabled .helperIcon svg {
   fill: $disabled-02;
 }

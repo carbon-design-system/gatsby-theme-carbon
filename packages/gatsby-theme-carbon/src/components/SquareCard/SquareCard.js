@@ -10,6 +10,8 @@ import {
   Email20,
 } from '@carbon/icons-react';
 import { settings } from 'carbon-components';
+import { Column } from '../Grid';
+import * as styles from './SquareCard.module.scss';
 
 const { prefix } = settings;
 
@@ -34,18 +36,14 @@ export default class SquareCard extends React.Component {
       isLink = href.charAt(0) === '/';
     }
 
-    const SquareCardClassNames = cx(className, `${prefix}--square-card`, {
-      [`${prefix}--square-card--disabled`]: disabled,
-      [`${prefix}--square-card--dark`]: color === 'dark',
+    const SquareCardClassNames = cx(className, styles.squareCard, {
+      [styles.disabled]: disabled,
+      [styles.darkMode]: color === 'dark',
     });
 
-    const SquareCardTitleClassNames = cx(
-      className,
-      `${prefix}--square-card__title`,
-      {
-        [`${prefix}--square-card__title--small`]: smallTitle,
-      }
-    );
+    const SquareCardTitleClassNames = cx(className, styles.title, {
+      [styles.titleSmall]: smallTitle,
+    });
 
     const carbonTileclassNames = cx(
       [`${prefix}--tile`],
@@ -60,18 +58,10 @@ export default class SquareCard extends React.Component {
     const cardContent = (
       <>
         <h2 className={SquareCardTitleClassNames}>{title}</h2>
-        {bodyText ? (
-          <p className={`${prefix}--square-card__body`}>{bodyText}</p>
-        ) : null}
-        {helperText ? (
-          <p className={`${prefix}--square-card__helper-text`}>{helperText}</p>
-        ) : null}
-        {children ? (
-          <div className={`${prefix}--square-card__helper-icon`}>
-            {children}
-          </div>
-        ) : null}
-        <div className={`${prefix}--square-card__icon--action`}>
+        {bodyText ? <p className={styles.body}>{bodyText}</p> : null}
+        {helperText ? <p className={styles.helperText}>{helperText}</p> : null}
+        {children ? <div className={styles.helperIcon}>{children}</div> : null}
+        <div className={styles.actionIcon}>
           {actionIcon === 'arrowRight' && !disabled ? (
             <ArrowRight20 aria-label="Open resource" />
           ) : null}
@@ -109,13 +99,18 @@ export default class SquareCard extends React.Component {
     }
 
     return (
-      <div className={SquareCardClassNames} {...rest}>
+      <Column
+        colMd={4}
+        colLg={4}
+        noGutterSm
+        className={SquareCardClassNames}
+        {...rest}>
         <div className={aspectRatioClassNames}>
           <div className={`${prefix}--aspect-ratio--object`}>
             {cardContainer}
           </div>
         </div>
-      </div>
+      </Column>
     );
   }
 }
