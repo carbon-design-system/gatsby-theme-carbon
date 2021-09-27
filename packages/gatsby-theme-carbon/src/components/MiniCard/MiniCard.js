@@ -36,6 +36,7 @@ const MiniCard = ({
   title,
   actionIcon,
   className,
+  linkProps,
   ...rest
 }) => {
   const cardContent = (
@@ -57,11 +58,11 @@ const MiniCard = ({
   }
 
   const cardContainer = isLink ? (
-    <Link to={href} className={`${prefix}--tile--clickable`}>
+    <Link to={href} className={`${prefix}--tile--clickable`} {...linkProps}>
       {cardContent}
     </Link>
   ) : (
-    <a href={href} className={`${prefix}--tile--clickable`}>
+    <a href={href} className={`${prefix}--tile--clickable`} {...linkProps}>
       {cardContent}
     </a>
   );
