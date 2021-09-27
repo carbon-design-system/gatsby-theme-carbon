@@ -1,0 +1,114 @@
+---
+title: SquareCard
+description: Usage instructions for the SquareCard component
+---
+
+import { Tools } from '@carbon/pictograms-react';
+
+<PageDescription>
+
+The `<SquareCard>` component should generally be used inside of a
+`<Row className="square-card-group">` component. This allows us to
+properly space the columns components when they wrap on mobile.
+
+</PageDescription>
+
+## Example
+
+
+<Row className="square-card-group">
+<SquareCard
+  title="A small sentence can go here in conjunction with a pictogram"
+  href="/"
+  >
+  <Tools aria-label="Tools" className="my-custom-class" />
+</SquareCard>
+<SquareCard
+  title="A small sentence can go here with no pictogram"
+  href="/"
+  helperText="(Optional text)"
+  />
+<SquareCard
+  title="Short title"
+  href="/"
+  bodyText="A short body paragraph describing the card could go here."
+  />
+<SquareCard
+  title="Small title here"
+  smallTitle
+  href="/"
+  bodyText="A short body paragraph describing the card could go here."
+  disabled
+  >
+  <Tools aria-label="Tools" className="my-custom-class" />
+</SquareCard>
+<SquareCard
+  title="Small title here"
+  smallTitle
+  href="/"
+  bodyText="A short body paragraph describing the card could go here."
+  helperText="(Optional text)"
+  disabled
+  />
+</Row>
+
+## Code
+
+```mdx path=components/SquareCard/SquareCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/SquareCard
+import { Tools } from '@carbon/pictograms-react';
+
+<Row className="square-card-group">
+  <SquareCard
+    title="A small sentence can go here in conjunction with a pictogram"
+    href="/"
+    >
+    <Tools aria-label="Tools" className="my-custom-class" />
+  </SquareCard>
+
+  <SquareCard
+    title="A small sentence can go here with no pictogram"
+    href="/"
+    helperText="(Optional text)"
+    />
+
+  <SquareCard
+    title="Short title"
+    href="/"
+    bodyText="A short body paragraph describing the card could go here."
+    />
+
+  <SquareCard
+    title="Small title here"
+    smallTitle
+    href="/"
+    bodyText="A short body paragraph describing the card could go here."
+    disabled
+    >
+    <Tools aria-label="Tools" className="my-custom-class" />
+  </SquareCard>
+
+  <SquareCard
+    title="Small title here"
+    smallTitle
+    href="/"
+    bodyText="A short body paragraph describing the card could go here."
+    helperText="(Optional text)"
+    disabled
+    />
+</Row>
+```
+
+### Props
+
+| property      | propType | required | default     | description                                                                                                      |
+| ------------- | -------- | -------- | ----------- | ---------------------------------------------------------------------------------------------------------------- |
+| children      | node     |          |             | Optional pictogram icon to add to bottom left corner cannot be combined with 'helperText'                        |
+| href          | string   |          |             | Set url for card                                                                                                 |
+| smallTitle    | bool     |          | `false`     | Set to true to display smaller title                                                                             |
+| title         | string   |          |             | Card title - default is `large`                                                                                  |
+| actionIcon    | string   |          | `ArrowRight`| Action icon, default is no 'ArrowRight', options are `Launch`, `ArrowRight`, `Download`, `Disabled`, `Email`     |
+| disabled      | bool     |          | `false`     | Set for disabled card                                                                                            |
+| className     | string   |          |             | Add custom class name                                                                                            |
+| helperText    | string   |          |             | Optional helper text that appears at the bottom left corner cannot be combined with 'children' text. This is only meant for a date or a category name              |
+| bodyText      | string   |          |             | Optional body text for card description                                                                          |
+| color         | string   |          | `light`     | Set to `dark` for dark background                                                                                |

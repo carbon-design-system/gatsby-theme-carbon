@@ -25,6 +25,7 @@
     "@babel/core": "^7.14.6",
     "@carbon/elements": "^10.38.0",
     "@carbon/icons-react": "^10.35.0",
+    "@carbon/pictograms-react": "^11.14.0",
     "@carbon/themes": "^10.38.0",
     "@mdx-js/mdx": "^1.5.5",
     "@mdx-js/react": "^1.5.5",

@@ -13,6 +13,7 @@ export { default as Aside } from './src/components/Aside';
 export { default as FeatureCard } from './src/components/FeatureCard';
 export { default as FourOhFour } from './src/components/FourOhFour';
 export { default as ImageCard } from './src/components/ImageCard';
+export { default as SquareCard } from './src/components/SquareCard';
 export { Tabs, Tab } from './src/components/Tabs';
 export { default as InlineNotification } from './src/components/InlineNotification';
 // Homepage Template Components

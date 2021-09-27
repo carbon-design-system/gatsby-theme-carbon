@@ -30,6 +30,7 @@ import Title from '../Title';
 import { MiniCard, CardGroup } from '../MiniCard';
 import Sup from '../markdown/Sup';
 import Abbr from '../markdown/Abbr';
+import SquareCard from '../SquareCard';
 
 const components = {
   wrapper: function Wrapper({ children, ...props }) {
@@ -81,6 +82,7 @@ const components = {
   Title,
   MiniCard,
   CardGroup,
+  SquareCard,
 };
 
 export default components;
