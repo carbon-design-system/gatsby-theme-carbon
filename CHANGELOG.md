@@ -1,3 +1,17 @@
+## [2.1.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.0.0...v2.1.0) (2021-09-28)
+
+
+### Features
+
+* **minicard:** support transferring props to Gatsby Links and anchors ([#1160](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1160)) ([23e589d](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/23e589d5c9c6cc8ddbb727adb7f2333657bcc45e))
+* **shadowing:** update guidelines for shadowing header and footer ([#1148](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1148)) ([33b0493](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/33b04937e77cf2421ea28e431d5daa0aca3f05be))
+* **square-card:** add new square card component ([#1151](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1151)) ([8438c05](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8438c0525f211c74895dda13d6ff86526be4053d))
+
+
+### Bug Fixes
+
+* changes theme_color to gray 100 ([#1164](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1164)) ([5a676f2](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/5a676f2a3d6b4f4413f6eb054254c46feeebc21f))
+
 ## [2.0.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.30.2...v2.0.0) (2021-07-19)
 
 ### [1.30.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.30.1...v1.30.2) (2021-07-14)
