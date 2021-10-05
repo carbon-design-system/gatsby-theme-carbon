@@ -57,7 +57,7 @@ const MediumPosts = ({ postLimit = 3, cardProps, color = "white", ...rest }) => 
 MediumPosts.propTypes = {
   cardProps: PropTypes.object,
   postLimit: PropTypes.number,
-  color: PropType.string,
+  color: PropTypes.string,
 };
 
 export default MediumPosts;
