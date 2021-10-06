@@ -44,15 +44,14 @@
 .h3,
 .h4,
 .h5,
-.h6,
-.list {
-  padding-right: 0;
+.h6 {
+  padding-right: $spacing-05;
   margin-right: 0;
   margin-left: 0;
 
   @include carbon--breakpoint('md') {
-    width: 100%;
-    padding-right: 0;
+    width: 75%;
+    padding-right: $spacing-07;
     margin-right: 0;
     margin-left: 0;
   }
@@ -64,6 +63,23 @@
 
 .h4 + * {
   --space: 0;
+}
+
+.list {
+  padding-right: $spacing-05;
+  margin-right: 0;
+  margin-left: 0;
+
+  @include carbon--breakpoint('md') {
+    width: 100%;
+    padding-right: $spacing-07;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  @include carbon--breakpoint('lg') {
+    width: 66.667%;
+  }
 }
 
 //spacing exception for nested list items
