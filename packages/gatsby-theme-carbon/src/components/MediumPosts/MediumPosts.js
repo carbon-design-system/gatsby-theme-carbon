@@ -5,7 +5,7 @@ import { Column, Row } from '../Grid';
 import ArticleCard from '../ArticleCard';
 import { image, cardContainer } from './MediumPosts.module.scss';
 
-const MediumPosts = ({ postLimit = 3, cardProps, color = "white", ...rest }) => {
+const MediumPosts = ({ postLimit = 3, cardProps, color = "dark", ...rest }) => {
   const data = useStaticQuery(graphql`
     query {
       allMediumFeed(sort: { fields: date, order: DESC }, limit: 10) {
