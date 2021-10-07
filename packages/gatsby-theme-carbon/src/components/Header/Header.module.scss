@@ -155,6 +155,16 @@ header.header {
   &:hover {
     background-color: $carbon--gray-80;
   }
+  &:focus,
+  &:focus:active {
+    outline: 2px solid $carbon--white-0;
+    outline-offset: -2px;
+  }
+  &:active {
+    background-color: #3d3d3d;
+    border-left: 2px solid $ui-05;
+    border-right: 2px solid $ui-05;
+  }
 }
 
 .header-button.switcher-button.switcher-button--open {
