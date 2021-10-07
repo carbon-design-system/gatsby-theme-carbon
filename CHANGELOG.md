@@ -1,3 +1,13 @@
+### [2.1.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.0...v2.1.1) (2021-10-07)
+
+
+### Bug Fixes
+
+* add back active switcher styles ([#1175](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1175)) ([3f52646](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/3f52646fbc332e7a2a51a7e79bad48dce2e28328))
+* line length for lists and headings ([#1172](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1172)) ([5ac93f1](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/5ac93f1d7280119eb66fef23c498d99099d0981d))
+* switcher button focus state ([#1170](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1170)) ([3467672](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/346767259b891c00a30b8f1b87f99018bface00b))
+* update grid padding at large breakpoint ([#1167](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1167)) ([e0e18d3](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/e0e18d308cf10c929a50cee0ab35360b93dd3d99))
+
 ## [2.1.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.0.0...v2.1.0) (2021-09-28)
 
 
