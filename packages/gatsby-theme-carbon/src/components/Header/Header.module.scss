@@ -150,3 +150,15 @@ header.header {
 .header :global(a.bx--header__menu-item:hover) {
   color: $carbon--white-0;
 }
+
+.header-button.switcher-button.switcher-button--open {
+  border: 2px solid transparent;
+  border-left: 2px solid $carbon--gray-80;
+  border-bottom: 2px solid $carbon--gray-100;
+  background-color: $carbon--gray-100;
+  &:active {
+    border-left: 2px solid $carbon--white-0;
+    box-shadow: none;
+    border-color: $carbon--white-0;
+  }
+}
