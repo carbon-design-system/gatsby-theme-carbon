@@ -151,6 +151,12 @@ header.header {
   color: $carbon--white-0;
 }
 
+.header .header-button.switcher-button {
+  &:hover {
+    background-color: $carbon--gray-80;
+  }
+}
+
 .header-button.switcher-button.switcher-button--open {
   border: 2px solid transparent;
   border-left: 2px solid $carbon--gray-80;
