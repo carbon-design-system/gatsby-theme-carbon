@@ -41,4 +41,4 @@ should update the gatsby starter kit
 1. In your terminal, type `sh cp-example.sh`
 1. Head over to the `gatsby-starter-carbon-theme` directory
 1. Add and commit the changes to main then run `git push upstream main` (it's
-   fine I trust you) :)
+   fine we trust you) :)
