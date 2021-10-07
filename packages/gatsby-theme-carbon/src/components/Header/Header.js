@@ -57,7 +57,9 @@ const Header = ({ children }) => {
         {isSearchEnabled && <GlobalSearch />}
         {isSwitcherEnabled && (
           <HeaderGlobalAction
-            className={cx(styles.headerButton, styles.switcherButton)}
+            className={cx(styles.headerButton, styles.switcherButton, {
+              [styles.switcherButtonOpen]: switcherIsOpen,
+            })}
             aria-label={switcherTooltipText}
             tooltipAlignment="end"
             onClick={() => {
