@@ -1,5 +1,5 @@
 const path = require('path');
-const { uiBackground, interactive01 } = require('@carbon/elements');
+const { gray100 } = require('@carbon/elements');
 const defaultLunrOptions = require('./config/lunr-options');
 
 const carbonThemes = {
@@ -162,8 +162,8 @@ module.exports = (themeOptions) => {
           name: 'Carbon Design Gatsby Theme',
           short_name: 'Gatsby Theme Carbon',
           start_url: '/',
-          background_color: uiBackground,
-          theme_color: interactive01,
+          background_color: gray100,
+          theme_color: gray100,
           display: 'browser',
           icon: iconPath
             ? path.resolve(iconPath)
