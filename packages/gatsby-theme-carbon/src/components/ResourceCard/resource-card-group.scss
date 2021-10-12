@@ -19,7 +19,7 @@
 }
 
 .resource-card-group .#{$prefix}--resource-card--dark {
-  border-top-color: $ui-03;
+  border-color: transparent !important;
 }
 
 .resource-card-group
