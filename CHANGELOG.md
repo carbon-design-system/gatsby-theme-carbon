@@ -1,3 +1,10 @@
+### [2.1.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.2...v2.1.3) (2021-10-12)
+
+
+### Bug Fixes
+
+* resource card border closes [#1171](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1171) ([#1177](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1177)) ([ad5021c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ad5021c21840cac7cffe13ef7ccfc43ad87c1819))
+
 ### [2.1.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.1...v2.1.2) (2021-10-12)
 
 ### [2.1.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.0...v2.1.1) (2021-10-07)
