@@ -1,3 +1,15 @@
+### [2.1.4-next.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.3...v2.1.4-next.0) (2021-10-19)
+
+
+### Features
+
+* add node 16 support ([#1178](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1178)) ([c142740](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c14274094c4c07d57181a2df54ba6948e7c735e0))
+
+
+### Bug Fixes
+
+* switcher repairs ([#1179](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1179)) ([bed3705](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/bed3705782bbc8ffbd54c749e465bd117b699188))
+
 ### [2.1.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.2...v2.1.3) (2021-10-12)
 
 
