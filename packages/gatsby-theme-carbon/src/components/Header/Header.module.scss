@@ -138,12 +138,33 @@ header.header {
   transition: background-color $duration--fast-02 $carbon--standard-easing;
 }
 
+.header .header-button.switcher-button {
+  background-color: $carbon--gray-100;
+  border: none;
+  border-color: transparent;
+  border-bottom: 1px solid $carbon--gray-80;
+  &:hover {
+    background-color: $carbon--gray-80;
+  }
+  &:active {
+    background-color: #3d3d3d;
+    border-left: 1px solid $ui-05;
+    border-right: 1px solid $ui-05;
+  }
+  &:focus {
+    outline: 2px solid $carbon--white-0;
+    outline-offset: -2px;
+  }
+}
+
 // Switcher button, extra specificity to override Carbon tooltip button styles
 // Hex values used pending shell theming
 .header :global(.bx--tooltip__trigger).header-button.switcher-button {
   &:focus {
     box-shadow: none;
-    border-color: $carbon--white-0;
+    border: none;
+    outline: 2px solid $carbon--white-0;
+    outline-offset: -2px;
   }
 }
 
@@ -151,29 +172,11 @@ header.header {
   color: $carbon--white-0;
 }
 
-.header .header-button.switcher-button {
-  &:hover {
-    background-color: $carbon--gray-80;
-  }
-  &:focus,
-  &:focus:active {
-    outline: 2px solid $carbon--white-0;
-    outline-offset: -2px;
-  }
-  &:active {
-    background-color: #3d3d3d;
-    border-left: 2px solid $ui-05;
-    border-right: 2px solid $ui-05;
-  }
-}
-
 .header-button.switcher-button.switcher-button--open {
-  border: 2px solid transparent;
-  border-left: 2px solid $carbon--gray-80;
-  border-bottom: 2px solid $carbon--gray-100;
-  background-color: $carbon--gray-100;
+  border: 1px solid transparent;
+  border-left: 1px solid $carbon--gray-80;
+  border-bottom: 1px solid transparent;
   &:active {
-    border-left: 2px solid $carbon--white-0;
     box-shadow: none;
     border-color: $carbon--white-0;
   }
