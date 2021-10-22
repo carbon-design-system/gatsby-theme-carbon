@@ -10,6 +10,7 @@
 
 .container .#{$prefix}--grid {
   margin: 0;
+  max-width: rem(1544px);
 
   @include carbon--breakpoint('lg') {
     padding-left: calc(
@@ -19,18 +20,13 @@
   }
 
   @include carbon--breakpoint('max') {
-    padding-left: 400px;
-    padding-right: 2rem;
+    padding-left: 425px;
+    padding-right: 0;
   }
 }
 
 .container .#{$prefix}--col-no-gutter {
   padding: 0;
-}
-
-// Grids on the homepage should be full width
-.container:not(.container--homepage) .#{$prefix}--grid {
-  max-width: rem(1584px);
 }
 
 //---------------------------------------

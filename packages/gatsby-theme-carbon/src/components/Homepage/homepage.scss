@@ -78,7 +78,8 @@
   }
 
   @include carbon--breakpoint('max') {
-    padding-left: 400px;
+    padding-left: 425px;
+    padding-right: 0;
   }
 }
 

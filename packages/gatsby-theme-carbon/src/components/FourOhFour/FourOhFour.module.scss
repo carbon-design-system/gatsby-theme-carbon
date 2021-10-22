@@ -16,6 +16,10 @@
   animation: gradient 2s ease infinite;
 }
 
+:global(.container--dark) .link {
+  color: $carbon--gray-10;
+}
+
 .list .link {
   @include carbon--type-style('body-short-02');
   margin-bottom: $spacing-03;
@@ -41,10 +45,6 @@
     transition: color $transition--base;
     cursor: pointer;
   }
-}
-
-:global(.container--dark) .link {
-  color: $carbon--gray-10;
 }
 
 .paragraph {
@@ -75,7 +75,7 @@
   }
 
   @include carbon--breakpoint('max') {
-    padding-left: 400px;
+    padding-left: 425px;
   }
 }
 
