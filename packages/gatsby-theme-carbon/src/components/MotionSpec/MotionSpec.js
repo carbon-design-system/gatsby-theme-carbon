@@ -1,5 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  fast01,
+  fast02,
+  moderate01,
+  moderate02,
+  slow01,
+  slow02,
+} from '@carbon/elements';
 
 import * as styles from './MotionSpec.module.scss';
 
@@ -11,9 +19,40 @@ const scaleThresholds = [
   [0, 100],
 ];
 
+const durationTokens = Object.fromEntries(
+  Object.entries({
+    'fast-01': fast01,
+    'fast-02': fast02,
+    'moderate-01': moderate01,
+    'moderate-02': moderate02,
+    'slow-01': slow01,
+    'slow-02': slow02,
+  }).map(([k, v]) => [k, Number(v.replace('ms', ''))])
+);
+
 const MotionSpec = ({ className, spec, ...rest }) => {
+  function getFormattedDuration(duration) {
+    const index = Object.values(durationTokens).findIndex(
+      (v) => v === duration
+    );
+
+    return Object.keys(durationTokens)[index] || `${duration}ms`;
+  }
+
+  const transformedSpec = spec.map((s) => ({
+    ...s,
+    transitions: s.transitions.map((t) => ({
+      ...t,
+      duration:
+        typeof t.duration === 'string'
+          ? durationTokens[t.duration]
+          : t.duration,
+      delay: typeof t.delay === 'string' ? durationTokens[t.delay] : t.delay,
+    })),
+  }));
+
   const max = Math.max(
-    ...spec.flatMap(({ transitions }) =>
+    ...transformedSpec.flatMap(({ transitions }) =>
       transitions.map(({ duration, delay }) => duration + delay)
     )
   );
@@ -30,7 +69,7 @@ const MotionSpec = ({ className, spec, ...rest }) => {
       <div className="bx--row">
         <div className="bx--col bx--col-no-gutter">
           <div className={styles.container}>
-            {spec.map(({ element, transitions }) => (
+            {transformedSpec.map(({ element, transitions }) => (
               <>
                 <h6 className={styles.yAxis}>{element}</h6>
                 <div className={styles.timeline}>
@@ -48,11 +87,11 @@ const MotionSpec = ({ className, spec, ...rest }) => {
                           {property}: {from} &rarr; {to}
                         </div>
                         <div className={styles.details}>
-                          {mode} {curve}, {duration}ms
+                          {mode} {curve}, {getFormattedDuration(duration)}
                           {delay > 0 && (
                             <>
                               <br />
-                              {delay}ms delay
+                              {getFormattedDuration(delay)} delay
                             </>
                           )}
                         </div>
@@ -99,14 +138,30 @@ MotionSpec.propTypes = {
           property: PropTypes.string,
           curve: PropTypes.oneOf(['standard', 'entrance', 'exit']),
           mode: PropTypes.oneOf(['productive', 'expressive']),
-          duration: PropTypes.number,
-          delay: PropTypes.number,
+          duration: PropTypes.oneOf([
+            PropTypes.number,
+            'fast-01',
+            'fast-02',
+            'moderate-01',
+            'moderate-02',
+            'slow-01',
+            'slow-02',
+          ]),
+          delay: PropTypes.oneOf([
+            PropTypes.number,
+            'fast-01',
+            'fast-02',
+            'moderate-01',
+            'moderate-02',
+            'slow-01',
+            'slow-02',
+          ]),
           from: PropTypes.string,
           to: PropTypes.string,
         })
       ),
     })
-  ),
+  ).isRequired,
 };
 
 export default MotionSpec;
