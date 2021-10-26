@@ -1,0 +1,80 @@
+.container {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+
+.y-axis,
+.timeline,
+.x-axis,
+.zero-corner {
+  border-top: 1px solid $border-subtle;
+}
+
+.y-axis {
+  @include carbon--type-style('productive-heading-01');
+  padding: ($spacing-06 + $spacing-02) $spacing-05 0 $spacing-05;
+}
+
+.timeline {
+  @include carbon--type-style('body-short-01');
+  position: relative;
+  background: $layer;
+  padding: $spacing-06 0;
+  display: grid;
+  row-gap: $spacing-04;
+}
+
+.transition {
+  position: relative;
+  z-index: 1;
+}
+
+.bar {
+  background-color: $background-brand;
+  color: $text-on-color;
+  padding: $spacing-02 $spacing-05;
+  height: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.details {
+  width: max-content;
+  background-color: $layer;
+  color: $text-primary;
+  padding: $spacing-02 $spacing-03;
+  margin-left: $spacing-03;
+}
+
+.ticks {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.y-tick {
+  position: absolute;
+  width: 1px;
+  background-color: $border-subtle;
+  top: 0;
+  bottom: 0;
+}
+
+.x-axis {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+}
+
+.x-tick,
+.zero-corner {
+  @include carbon--type-style('body-short-01');
+  color: $text-secondary;
+  text-align: right;
+  padding: $spacing-02 $spacing-03;
+  border-right: 1px solid $border-subtle;
+}

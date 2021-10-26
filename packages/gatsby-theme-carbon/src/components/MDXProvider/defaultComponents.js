@@ -28,6 +28,7 @@ import ArtDirection from '../ArtDirection';
 import MediumPosts from '../MediumPosts';
 import Title from '../Title';
 import { MiniCard, CardGroup } from '../MiniCard';
+import MotionSpec from '../MotionSpec';
 import Sup from '../markdown/Sup';
 import Abbr from '../markdown/Abbr';
 import SquareCard from '../SquareCard';
@@ -82,6 +83,7 @@ const components = {
   Title,
   MiniCard,
   CardGroup,
+  MotionSpec,
   SquareCard,
 };
 

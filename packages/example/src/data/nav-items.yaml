@@ -70,6 +70,8 @@
       path: /components/MediumPosts
     - title: MiniCard
       path: /components/MiniCard
+    - title: MotionSpec
+      path: /components/MotionSpec
     - title: PageDescription
       path: /components/PageDescription
     - title: ResourceCard

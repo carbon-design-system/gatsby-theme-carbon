@@ -1,0 +1,102 @@
+---
+title: MotionSpec
+description: Usage instructions for the MotionSpec component
+---
+
+<PageDescription>
+
+The `<MotionSpec>` can be used to document how a component's motion / animation
+behaves at a certain point or user interaction. It displays the individual
+elements of a component and their transitions as a timeline.
+
+</PageDescription>
+
+## Example
+
+<MotionSpec
+  spec={[
+    {
+      element: 'Chevron',
+      transitions: [
+        {
+          property: 'Rotation',
+          curve: 'standard',
+          mode: 'productive',
+          duration: 112,
+          delay: 48,
+          from: '0°',
+          to: '180°',
+        },
+      ],
+    },
+    {
+      element: 'List',
+      transitions: [
+        {
+          property: 'Opacity',
+          curve: 'entrance',
+          mode: 'productive',
+          duration: 160,
+          delay: 0,
+          from: '0%',
+          to: '100%',
+        },
+        {
+          property: 'Height',
+          curve: 'entrance',
+          mode: 'productive',
+          duration: 160,
+          delay: 0,
+          from: '0',
+          to: '16rem',
+        },
+      ],
+    },
+  ]}
+/>
+
+## Code
+
+```mdx path=components/MotionSpec/MotionSpec.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/MotionSpec
+<MotionSpec
+  spec={[
+    {
+      element: 'Chevron',
+      transitions: [
+        {
+          property: 'Rotation',
+          curve: 'standard',
+          mode: 'productive',
+          duration: 112,
+          delay: 48,
+          from: '0°',
+          to: '180°',
+        },
+      ],
+    },
+    {
+      element: 'List',
+      transitions: [
+        {
+          property: 'Opacity',
+          curve: 'entrance',
+          mode: 'productive',
+          duration: 160,
+          delay: 0,
+          from: '0%',
+          to: '100%',
+        },
+        {
+          property: 'Height',
+          curve: 'entrance',
+          mode: 'productive',
+          duration: 160,
+          delay: 0,
+          from: '0',
+          to: '16rem',
+        },
+      ],
+    },
+  ]}
+/>
+```
