@@ -10,7 +10,6 @@
 
 .container .#{$prefix}--grid {
   margin: 0;
-  max-width: rem(1544px);
 
   @include carbon--breakpoint('lg') {
     padding-left: calc(
@@ -20,6 +19,7 @@
   }
 
   @include carbon--breakpoint('max') {
+    max-width: rem(1544px);
     padding-left: 424px;
     padding-right: 0;
   }
