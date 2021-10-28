@@ -45,9 +45,10 @@ export default class ArticleCard extends React.Component {
       [`${prefix}--aspect-ratio--2x1`]
     );
 
-    const carbonTileclassNames = cx(
+    const cardContentClassNames = cx(
       [`${prefix}--tile`],
-      [`${prefix}--tile--clickable`]
+      [`${prefix}--tile--clickable`],
+      [`${prefix}--article-card_content`]
     );
 
     const cardContent = (
@@ -101,16 +102,18 @@ export default class ArticleCard extends React.Component {
 
     let cardContainer;
     if (disabled === true) {
-      cardContainer = <div className={carbonTileclassNames}>{cardContent}</div>;
+      cardContainer = (
+        <div className={cardContentClassNames}>{cardContent}</div>
+      );
     } else if (isLink === true) {
       cardContainer = (
-        <Link to={href} className={carbonTileclassNames} {...rest}>
+        <Link to={href} className={cardContentClassNames} {...rest}>
           {cardContent}
         </Link>
       );
     } else {
       cardContainer = (
-        <a href={href} className={carbonTileclassNames} {...rest}>
+        <a href={href} className={cardContentClassNames} {...rest}>
           {cardContent}
         </a>
       );

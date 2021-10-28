@@ -1,11 +1,7 @@
 // Fixes the gutter of the article cards on the homepage
 .card-container {
-  padding-right: 0;
-  padding-left: 0;
-  @include carbon--breakpoint('md') {
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 // Fixs the breaking type
@@ -40,18 +36,5 @@
 
 .image {
   object-fit: cover;
-  width: 100%;
-
-  @include carbon--breakpoint('sm') {
-    height: 315px;
-  }
-  @include carbon--breakpoint('md') {
-    height: 290px;
-  }
-  @include carbon--breakpoint('lg') {
-    height: 165px;
-  }
-  @include carbon--breakpoint('xlg') {
-    height: 215px;
-  }
+  aspect-ratio: 16 / 9;
 }
