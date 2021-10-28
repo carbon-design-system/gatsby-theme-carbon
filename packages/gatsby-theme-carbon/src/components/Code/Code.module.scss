@@ -36,7 +36,7 @@
   @include carbon--type-style('code-02');
   width: calc(100% + 2rem);
   @include carbon--breakpoint('lg') {
-    width: calc(67% + 1rem);
+    width: calc(67% + 1.15rem);
   }
 }
 
