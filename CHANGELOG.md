@@ -1,3 +1,11 @@
+### [2.1.5](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.4...v2.1.5) (2021-10-28)
+
+
+### Bug Fixes
+
+* grid alignment at max breakpoint ([#1181](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1181)) ([9a44a87](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9a44a87b8958c5a790e1c5726a341e31e4a5ae63))
+* medium post image aspect ratio closes [#1176](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1176) ([#1185](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1185)) ([566cfe7](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/566cfe77f4a7489e5f300eb0e94f64aebf3ee2f6))
+
 ### [2.1.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.4-next.0...v2.1.4) (2021-10-19)
 
 ### [2.1.4-next.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.3...v2.1.4-next.0) (2021-10-19)
