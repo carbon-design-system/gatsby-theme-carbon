@@ -1,0 +1,20 @@
+.listRow {
+  background-color: $carbon--white-0;
+  padding: 1rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid $ui-03;
+}
+
+:global(.expressive-content-list-group) > .listRow:not(:first-child) {
+  margin-top: 0;
+}
+
+.title {
+  @include carbon--type-style('expressive-heading-04', true);
+
+  padding-right: 32px;
+}
+
+.content {
+  @include carbon--type-style('body-long-02');
+}
