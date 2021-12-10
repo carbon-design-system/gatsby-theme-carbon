@@ -1,5 +1,4 @@
 .listRow {
-  background-color: $carbon--white-0;
   padding: 1rem;
   padding-bottom: 4rem;
   border-bottom: 1px solid $ui-03;
@@ -9,10 +8,22 @@
   margin-top: 0;
 }
 
+.background {
+  background: $ui-01;
+}
+
 .title {
   @include carbon--type-style('expressive-heading-04', true);
 
   padding-right: 32px;
+}
+
+.expressive_03 {
+  @include carbon--type-style('expressive-heading-03', true);
+}
+
+.expressive_02 {
+  @include carbon--type-style('expressive-heading-02', true);
 }
 
 .content {

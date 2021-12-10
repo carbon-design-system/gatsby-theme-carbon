@@ -31,7 +31,7 @@ import { MiniCard, CardGroup } from '../MiniCard';
 import Sup from '../markdown/Sup';
 import Abbr from '../markdown/Abbr';
 import SquareCard from '../SquareCard';
-import ExpressiveContentList from '../ExpressiveContentList';
+import ExpressiveList from '../ExpressiveList';
 
 const components = {
   wrapper: function Wrapper({ children, ...props }) {
@@ -84,7 +84,7 @@ const components = {
   MiniCard,
   CardGroup,
   SquareCard,
-  ExpressiveContentList,
+  ExpressiveList,
 };
 
 export default components;
