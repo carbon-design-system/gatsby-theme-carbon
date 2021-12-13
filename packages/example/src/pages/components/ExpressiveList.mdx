@@ -7,7 +7,7 @@ import { Connect } from '@carbon/pictograms-react';
 
 <PageDescription>
 
-The `<ExpressiveList>` component is meant to be used with the `expressive-content-list-group` className when grouped together. This component is only intended for paragraph content and not meant to nest other components within it. `ExpressiveListContainer` coming soon. This can be used with a pictogram by importing a pictogram from our library and passing it into the `picogram` prop as a node.
+The `<ExpressiveList>` component is meant to be used with the `expressive-content-list-group` className when grouped together. This component is only intended for paragraph content and not meant to nest other components within it. This can be used with a pictogram by importing a pictogram from our library and passing it into the `pictogram` prop as a node.
 
 </PageDescription>
 
@@ -95,6 +95,8 @@ Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus suspe
 <Title>With pictograms</Title>
 
 ```mdx path=components/ExpressiveList/ExpressiveList.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/ExpressiveList
+import { Connect } from '@carbon/pictograms-react';
+
 <div className="expressive-content-list-group">
   <ExpressiveList 
     title="Short Title"
