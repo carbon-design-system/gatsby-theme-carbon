@@ -16,5 +16,6 @@ export { default as ImageCard } from './src/components/ImageCard';
 export { default as SquareCard } from './src/components/SquareCard';
 export { Tabs, Tab } from './src/components/Tabs';
 export { default as InlineNotification } from './src/components/InlineNotification';
+export { default as ExpressiveListContainer } from './src/components/ExpressiveListContainer';
 // Homepage Template Components
 export { HomepageCallout, HomepageBanner } from './src/components/Homepage';
