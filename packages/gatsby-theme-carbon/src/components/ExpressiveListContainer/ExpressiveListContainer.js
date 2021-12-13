@@ -39,7 +39,7 @@ const ExpressiveListContainer = ({
 
 ExpressiveListContainer.propTypes = {
   contentClassName: propTypes.string,
-  children: propTypes.string,
+  children: propTypes.node,
   className: propTypes.string,
   title: propTypes.string,
   titleType: propTypes.string,
