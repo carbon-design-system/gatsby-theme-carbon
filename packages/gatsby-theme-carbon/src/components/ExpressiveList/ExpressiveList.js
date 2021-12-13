@@ -1,13 +1,17 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import cx from 'classnames';
+import { settings } from 'carbon-components';
 import { Row, Column } from '../Grid';
 import * as styles from './ExpressiveList.module.scss';
+
+const { prefix } = settings;
 
 const ExpressiveList = ({
   background = false,
   children,
   className,
+  pictogram,
   title,
   titleType,
 }) => {
@@ -20,12 +24,25 @@ const ExpressiveList = ({
     [styles.background]: background,
   });
 
+  if (!pictogram) {
+    return (
+      <Row className={ExpressiveListBackgroundClassNames}>
+        <Column colMd={2} colLg={4} noGutterLgLeft>
+          <h3 className={ExpressiveListTitleClassNames}>{title}</h3>
+        </Column>
+        <Column colMd={6} colLg={8}>
+          <p className={styles.content}>{children}</p>
+        </Column>
+      </Row>
+    );
+  }
   return (
     <Row className={ExpressiveListBackgroundClassNames}>
-      <Column colLg={4} noGutterLgLeft>
-        <h3 className={ExpressiveListTitleClassNames}>{title}</h3>
+      <Column colMd={2} colLg={1} noGutterLgLeft className={styles.pictogram}>
+        {pictogram}
       </Column>
-      <Column colLg={8}>
+      <Column colMd={6} colLg={7} className={styles.pictogramContent}>
+        <h3 className={ExpressiveListTitleClassNames}>{title}</h3>
         <p className={styles.content}>{children}</p>
       </Column>
     </Row>
@@ -36,11 +53,9 @@ ExpressiveList.propTypes = {
   background: propTypes.bool,
   children: propTypes.string,
   className: propTypes.string,
+  pictogram: propTypes.node,
   title: propTypes.string,
   titleType: propTypes.string,
 };
 
 export default ExpressiveList;
-
-// TODO
-// - pictogram

@@ -15,7 +15,15 @@
 .title {
   @include carbon--type-style('expressive-heading-04', true);
 
-  padding-right: 32px;
+  padding-right: 2rem;
+
+  @media (max-width: 847px) {
+    padding-right: 0;
+  }
+
+  @include carbon--breakpoint-down('md') {
+    @include carbon--type-style('expressive-heading-03', true);
+  }
 }
 
 .expressive_03 {
@@ -28,4 +36,12 @@
 
 .content {
   @include carbon--type-style('body-long-02');
+}
+
+.pictogram > svg {
+  width: 48px;
+}
+
+.pictogramContent {
+  padding-right: 2rem;
 }
