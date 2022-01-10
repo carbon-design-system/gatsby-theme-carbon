@@ -6,6 +6,7 @@ const HomepageBanner = ({ image, position, renderText }) => (
   <Grid
     style={{
       maxWidth: '100%',
+      overflow: 'hidden',
       backgroundImage: `url(${image})`,
       backgroundPosition: position || 'center',
     }}
