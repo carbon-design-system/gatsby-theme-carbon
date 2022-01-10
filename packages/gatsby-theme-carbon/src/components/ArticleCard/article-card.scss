@@ -10,7 +10,7 @@
   }
 }
 
-.#{$prefix}--article-card:hover .#{$prefix}--tile {
+.#{$prefix}--article-card:hover .#{$prefix}--article-card__tile {
   background: $hover-ui;
 }
 
@@ -43,6 +43,13 @@
   @include carbon--type-style('caption-01');
 }
 
+// At the moment, we force 16:9 for medium posts, this
+// is how we would force 16:9 for all article cards
+//
+// .#{$prefix}--article-card__img {
+//   aspect-ratio: 16 / 9;
+// }
+
 .#{$prefix}--article-card__img .gatsby-resp-image-wrapper {
   margin-bottom: 0;
 }
@@ -60,11 +67,11 @@
 }
 
 // Dark
-.#{$prefix}--article-card--dark .#{$prefix}--tile {
+.#{$prefix}--article-card--dark .#{$prefix}--article-card__tile {
   background: $carbon--gray-90; //$ui-background for gray 90 theme
 }
 
-.#{$prefix}--article-card--dark:hover .#{$prefix}--tile {
+.#{$prefix}--article-card--dark:hover .#{$prefix}--article-card__tile {
   background: $carbon--gray-80; //$hover-ui for gray 90 theme
 }
 
@@ -86,7 +93,7 @@
   cursor: not-allowed;
 }
 
-.#{$prefix}--article-card--disabled .#{$prefix}--tile:hover {
+.#{$prefix}--article-card--disabled .#{$prefix}--article-card__tile:hover {
   background: $ui-01;
   cursor: not-allowed;
 }
@@ -105,7 +112,7 @@
 
 // Disabled dark
 .#{$prefix}--article-card--disabled.#{$prefix}--article-card--dark
-  .#{$prefix}--tile:hover {
+  .#{$prefix}--article-card__tile:hover {
   background: $carbon--gray-90; //$ui-background for gray 90 theme
 }
 

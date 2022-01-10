@@ -19,18 +19,14 @@
   }
 
   @include carbon--breakpoint('max') {
-    padding-left: 400px;
-    padding-right: 2rem;
+    max-width: rem(1544px);
+    padding-left: 424px;
+    padding-right: 0;
   }
 }
 
 .container .#{$prefix}--col-no-gutter {
   padding: 0;
-}
-
-// Grids on the homepage should be full width
-.container:not(.container--homepage) .#{$prefix}--grid {
-  max-width: rem(1584px);
 }
 
 //---------------------------------------

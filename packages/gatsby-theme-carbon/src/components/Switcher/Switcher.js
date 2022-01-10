@@ -123,8 +123,8 @@ const DefaultChildren = () => (
     </SwitcherLink>
     <SwitcherLink
       isInternal
-      href="https://w3.ibm.com/design/universal-experiences/">
-      IBM Universal Experiences
+      href="https://w3.ibm.com/design/experience-standards/">
+      IBM Experience Standards
     </SwitcherLink>
     <SwitcherDivider>Community</SwitcherDivider>
     <SwitcherLink href="https://w3.ibm.com/design/" isInternal>
