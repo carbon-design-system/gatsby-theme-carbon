@@ -96,6 +96,9 @@ const DefaultChildren = () => (
     <SwitcherLink href="https://www.carbondesignsystem.com/">
       Carbon Design System
     </SwitcherLink>
+    <SwitcherLink href="http://ibm.biz/carbon4ibmproducts" isInternal>
+      Carbon for IBM Products
+    </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/standards/carbon/">
       Carbon for IBM.com
     </SwitcherLink>
@@ -118,13 +121,10 @@ const DefaultChildren = () => (
     <SwitcherLink href="https://www.ibm.com/design/research/">
       IBM Design Research
     </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/services/ibmix/">
-      IBM iX
-    </SwitcherLink>
     <SwitcherLink
       isInternal
-      href="https://w3.ibm.com/design/universal-experiences/">
-      IBM Universal Experiences
+      href="https://w3.ibm.com/design/experience-standards/">
+      IBM Experience Standards
     </SwitcherLink>
     <SwitcherDivider>Community</SwitcherDivider>
     <SwitcherLink href="https://w3.ibm.com/design/" isInternal>
