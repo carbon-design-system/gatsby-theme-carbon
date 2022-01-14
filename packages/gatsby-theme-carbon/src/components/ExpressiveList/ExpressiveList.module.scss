@@ -1,15 +1,16 @@
 .listRow {
+  background: $ui-01;
   padding: 1rem;
   padding-bottom: 4rem;
   border-bottom: 1px solid $ui-03;
 }
 
-:global(.expressive-content-list-group) > .listRow:not(:first-child) {
+.listRow:not(:first-child) {
   margin-top: 0;
 }
 
-.background {
-  background: $ui-01;
+.listRow:last-child {
+  border-bottom: none;
 }
 
 .title {
@@ -36,10 +37,6 @@
 
 .content {
   @include carbon--type-style('body-long-02');
-}
-
-.pictogram > svg {
-  width: 48px;
 }
 
 .pictogramContent {

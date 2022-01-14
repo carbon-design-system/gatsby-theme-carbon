@@ -8,7 +8,6 @@ import * as styles from './ExpressiveList.module.scss';
 const { prefix } = settings;
 
 const ExpressiveList = ({
-  background = false,
   children,
   className,
   pictogram,
@@ -20,13 +19,9 @@ const ExpressiveList = ({
     [styles.expressive_02]: titleType === 'expressive-02',
   });
 
-  const ExpressiveListBackgroundClassNames = cx(className, styles.listRow, {
-    [styles.background]: background,
-  });
-
   if (!pictogram) {
     return (
-      <Row className={ExpressiveListBackgroundClassNames}>
+      <Row className={styles.listRow}>
         <Column colMd={2} colLg={4} noGutterLgLeft>
           <h3 className={ExpressiveListTitleClassNames}>{title}</h3>
         </Column>
@@ -37,7 +32,7 @@ const ExpressiveList = ({
     );
   }
   return (
-    <Row className={ExpressiveListBackgroundClassNames}>
+    <Row className={styles.listRow}>
       <Column colMd={2} colLg={1} noGutterLgLeft className={styles.pictogram}>
         {pictogram}
       </Column>
@@ -50,7 +45,6 @@ const ExpressiveList = ({
 };
 
 ExpressiveList.propTypes = {
-  background: propTypes.bool,
   children: propTypes.string,
   className: propTypes.string,
   pictogram: propTypes.node,
