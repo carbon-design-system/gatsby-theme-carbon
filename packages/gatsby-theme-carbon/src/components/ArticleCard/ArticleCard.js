@@ -9,9 +9,9 @@ import {
   Error20,
   Email20,
 } from '@carbon/icons-react';
-import { settings } from 'carbon-components';
+import usePrefix from '../../util/hooks/usePrefix';
 
-const { prefix } = settings;
+const prefix = usePrefix();
 
 export default class ArticleCard extends React.Component {
   render() {

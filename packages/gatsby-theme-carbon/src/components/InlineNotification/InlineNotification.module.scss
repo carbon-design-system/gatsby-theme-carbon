@@ -1,4 +1,4 @@
-.notification :global(.bx--inline-notification) {
+.notification :global(.#{$prefix}--inline-notification) {
   margin: 0;
   max-width: 100%;
   box-shadow: none;
@@ -6,11 +6,11 @@
   margin-top: 0;
 }
 
-.notification :global(.bx--inline-notification__subtitle p) {
+.notification :global(.#{$prefix}--inline-notification__subtitle p) {
   @include carbon--type-style('body-short-01');
 }
 
-.notification :global(.bx--inline-notification__subtitle .bx--row) {
+.notification :global(.#{$prefix}--inline-notification__subtitle .#{$prefix}--row) {
   margin: 0;
 }
 

@@ -69,7 +69,7 @@ li .row {
 }
 
 // feedback tooltip adjustments
-.container :global(.bx--btn--copy__feedback) {
+.container :global(.#{$prefix}--btn--copy__feedback) {
   position: absolute;
   &::before {
     left: $spacing-07;

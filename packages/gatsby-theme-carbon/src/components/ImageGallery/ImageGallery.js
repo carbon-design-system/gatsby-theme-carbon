@@ -21,6 +21,9 @@ import {
   leftNav,
   addNoScroll,
 } from './ImageGallery.module.scss';
+import usePrefix from '../../util/hooks/usePrefix';
+
+const prefix = usePrefix();
 
 function ImageGallery({ children, className }) {
   const [portalsNode, updateNode] = useState(null);
@@ -147,7 +150,7 @@ function ImageGallery({ children, className }) {
                   </button>
                 </Column>
               </Row>
-              <Grid className={cx('bx--grid--full-width', galleryGrid)}>
+              <Grid className={cx(`${prefix}--grid--full-width`, galleryGrid)}>
                 <Row className={galleryRow}>
                   <Column colLg={3} className={navButtonsContainer}>
                     {activeImageIndex - 1 >= 0 && (

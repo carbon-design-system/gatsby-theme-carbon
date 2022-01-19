@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { Link } from 'gatsby';
-import { settings } from 'carbon-components';
 import { Row, Column } from '../Grid';
 import ResourceCard from '../ResourceCard';
+import usePrefix from '../../util/hooks/usePrefix';
 
-const { prefix } = settings;
+const prefix = usePrefix();
 
 export default class FeatureCard extends React.Component {
   render() {

@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import slugify from 'slugify';
 import cx from 'classnames';
+import usePrefix from '../../util/hooks/usePrefix';
+
+const prefix = usePrefix();
 
 import {
   tabsContainer,
@@ -35,9 +38,9 @@ export default class PageTabs extends React.Component {
 
     return (
       <div className={tabsContainer}>
-        <div className="bx--grid">
-          <div className="bx--row">
-            <div className="bx--col-lg-12 bx--col-no-gutter">
+        <div className={`${prefix}--grid`}>
+          <div className={`${prefix}--row`}>
+            <div className={`${prefix}--col-lg-12 ${prefix}--col-no-gutter`}>
               <nav aria-label={title}>
                 <ul className={list}>{pageTabs}</ul>
               </nav>

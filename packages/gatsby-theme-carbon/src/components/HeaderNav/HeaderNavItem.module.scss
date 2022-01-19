@@ -1,9 +1,9 @@
 // Overrides the style from upstream Carbon for non-accordion menu items
-.currentPage :global(.bx--header__menu-item--current) {
+.currentPage :global(.#{$prefix}--header__menu-item--current) {
   color: $carbon--white-0;
 }
 
-.currentPage :global(.bx--header__menu-item--current)::after {
+.currentPage :global(.#{$prefix}--header__menu-item--current)::after {
   border-bottom: 3px solid $carbon--blue-60;
   width: calc(100% + 4px);
   left: -2px;
@@ -23,7 +23,7 @@
 }
 
 // Removes the blue line that sits under an active item in menu.
-.currentPageAccordion :global(.bx--header__menu-item--current)::after {
+.currentPageAccordion :global(.#{$prefix}--header__menu-item--current)::after {
   display: none;
 }
 
@@ -48,7 +48,7 @@
   display: none;
 }
 
-.menuItem :global(.bx--header__menu-item--current) {
+.menuItem :global(.#{$prefix}--header__menu-item--current) {
   background-color: $carbon--gray-80;
   color: $carbon--white-0;
 }

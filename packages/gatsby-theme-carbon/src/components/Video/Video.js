@@ -11,6 +11,9 @@ import {
   videoIsPlaying,
 } from './Video.module.scss';
 import usePathPrefix from '../../util/hooks/usePathprefix';
+import usePrefix from '../../util/hooks/usePrefix';
+
+const prefix = usePrefix();
 
 const Video = ({ autoPlay, vimeoId, title, src, poster, muted, ...props }) => {
   const [isPlaying, setIsPlaying] = useState(autoPlay);
@@ -114,7 +117,7 @@ const Video = ({ autoPlay, vimeoId, title, src, poster, muted, ...props }) => {
         onKeyDown={onKeyDown}
         tabIndex="0">
         {isPlaying ? <Pause32 /> : <Play32 />}
-        <span className="bx--assistive-text">
+        <span className={`${prefix}--assistive-text`}>
           {isPlaying ? 'Pause' : 'Play'}
         </span>
       </div>

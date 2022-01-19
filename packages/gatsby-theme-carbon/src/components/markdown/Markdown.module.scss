@@ -83,19 +83,19 @@
 }
 
 //spacing exception for nested list items
-:global(.bx--list--nested) {
+:global(.#{$prefix}--list--nested) {
   --space: 0;
   width: 100%;
 }
 
-ul :global(.bx--list--ordered--native),
-ul :global(.bx--list--unordered) {
+ul :global(.#{$prefix}--list--ordered--native),
+ul :global(.#{$prefix}--list--unordered) {
   width: 100%;
   padding-right: $spacing-05;
 }
 
-:global(.bx--list--ordered--native) .list-item,
-:global(.bx--list--unordered) .list-item {
+:global(.#{$prefix}--list--ordered--native) .list-item,
+:global(.#{$prefix}--list--unordered) .list-item {
   @include carbon--type-style('body-long-02');
   padding-right: 0;
   width: 100%;
@@ -103,7 +103,7 @@ ul :global(.bx--list--unordered) {
   padding-left: $spacing-02;
 }
 
-.list:not(:global(.bx--list--nested)) > .list-item {
+.list:not(:global(.#{$prefix}--list--nested)) > .list-item {
   padding-right: 2rem;
   @include carbon--breakpoint('md') {
     width: 75%;
@@ -114,29 +114,29 @@ ul :global(.bx--list--unordered) {
 }
 
 // aligns UNnested ordered list item to body copy
-:global(.bx--list--ordered--native:not(.bx--list--nested)) {
+:global(.#{$prefix}--list--ordered--native:not(.#{$prefix}--list--nested)) {
   margin-left: 1ch;
 }
 
 // aligns NESTED ordered list item to parent list item text #993
-:global(.bx--list--ordered--native.bx--list--nested) {
+:global(.#{$prefix}--list--ordered--native.#{$prefix}--list--nested) {
   margin-left: 0.5rem;
 }
 
 //Safari only fixes to align unnested/nested ordered list to body copy #993
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  :global(.bx--list--ordered:not(.bx--list--nested)) {
+  :global(.#{$prefix}--list--ordered:not(.#{$prefix}--list--nested)) {
     padding-left: 0.5ch;
   }
 
-  :global(.bx--list--ordered.bx--list--nested) {
+  :global(.#{$prefix}--list--ordered.#{$prefix}--list--nested) {
     padding-left: 0.25rem;
   }
 }
 
 // responsive items in a list need to be full width
 .list-item .paragraph,
-.list-item :global(.bx--row) {
+.list-item :global(.#{$prefix}--row) {
   width: 100%;
 }
 
@@ -149,7 +149,7 @@ ul :global(.bx--list--unordered) {
   }
 }
 
-:global(.container--dark) :global(.bx--list__item) {
+:global(.container--dark) :global(.#{$prefix}--list__item) {
   color: $carbon--white-0;
 }
 
@@ -205,11 +205,11 @@ ul :global(.bx--list--unordered) {
   text-indent: 0;
 }
 
-:global(.bx--list--ordered:not(.bx--list--nested) > .bx--list__item::before) {
+:global(.#{$prefix}--list--ordered:not(.#{$prefix}--list--nested) > .#{$prefix}--list__item::before) {
   display: none;
 }
 
-:global(.bx--list--ordered:not(.bx--list--nested)) .list-item {
+:global(.#{$prefix}--list--ordered:not(.#{$prefix}--list--nested)) .list-item {
   margin-left: 0.5rem;
 }
 //---------------------------------------
@@ -250,7 +250,7 @@ ul :global(.bx--list--unordered) {
   font-feature-settings: 'sups' on;
 }
 
-.abbr:global(.bx--tooltip--definition) button {
+.abbr:global(.#{$prefix}--tooltip--definition) button {
   font-size: 1em;
 }
 //---------------------------------------

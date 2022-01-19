@@ -20,41 +20,41 @@ nav.side-nav--dark :global(svg) {
 }
 
 // Font color for accordion listed items in the nav
-.side-nav--dark :global(.bx--side-nav__submenu) {
+.side-nav--dark :global(.#{$prefix}--side-nav__submenu) {
   color: $carbon--gray-30;
 }
 
 // Font color for non-accordion listed items in the nav. Carbon upstream styles make it extremely challenging to pin down this style.
-.side-nav--dark :global(.bx--side-nav__link-text) {
+.side-nav--dark :global(.#{$prefix}--side-nav__link-text) {
   color: $carbon--gray-30 !important;
 }
 
 // Outline color for nav items
-.side-nav--dark :global(.bx--side-nav__link):focus,
-.side-nav--dark :global(.bx--side-nav__submenu):focus {
+.side-nav--dark :global(.#{$prefix}--side-nav__link):focus,
+.side-nav--dark :global(.#{$prefix}--side-nav__submenu):focus {
   outline: 2px solid $carbon--white-0;
 }
 
 // Font and background color for accordion listed items in the nav on hover. Carbon upstream styles make it extremely challenging to pin down this style.
-.side-nav--dark :global(.bx--side-nav__submenu):hover {
+.side-nav--dark :global(.#{$prefix}--side-nav__submenu):hover {
   background-color: $carbon--gray-80 !important;
   color: $carbon--gray-10;
 }
 
 // Background for non-accordion listed items on hover. Carbon upstream styles make it extremely challenging to pin down this style.
-.side-nav--dark :global(.bx--side-nav__link):hover {
+.side-nav--dark :global(.#{$prefix}--side-nav__link):hover {
   background-color: $carbon--gray-80 !important;
 }
 
 // Font color for top-level accordion items
 .side-nav--dark
-  :global(.bx--side-nav__item--active)
-  :global(.bx--side-nav__submenu-title) {
+  :global(.#{$prefix}--side-nav__item--active)
+  :global(.#{$prefix}--side-nav__submenu-title) {
   color: $carbon--gray-30;
 }
 
 // Icons
-.outboundLink :global(.bx--side-nav__icon:not(.bx--side-nav__submenu-chevron)) {
+.outboundLink :global(.#{$prefix}--side-nav__icon:not(.#{$prefix}--side-nav__submenu-chevron)) {
   display: inline-block;
   flex: 0;
   margin-right: 0;
@@ -63,21 +63,21 @@ nav.side-nav--dark :global(svg) {
 
 // Background for selected top level accordion when *not* hovering
 .side-nav--dark
-  :global(.bx--side-nav__item--active
-    .bx--side-nav__submenu[aria-expanded='false']) {
+  :global(.#{$prefix}--side-nav__item--active
+    .#{$prefix}--side-nav__submenu[aria-expanded='false']) {
   background: $carbon--gray-80;
 }
 
 // Font color for non-accordion listed items when hovering over the <li>. Carbon upstream styles make it extremely challenging to pin down this style.
 .side-nav--dark
-  :global(.bx--side-nav__link):hover
-  > :global(.bx--side-nav__link-text) {
+  :global(.#{$prefix}--side-nav__link):hover
+  > :global(.#{$prefix}--side-nav__link-text) {
   color: $carbon--gray-10 !important;
 }
 
 // Background color for nested accordion items
 .side-nav--dark.side-nav--dark
-  :global(.bx--side-nav__menu .bx--side-nav__link.bx--side-nav__link--current) {
+  :global(.#{$prefix}--side-nav__menu .#{$prefix}--side-nav__link.#{$prefix}--side-nav__link--current) {
   background: $carbon--gray-80;
 }
 

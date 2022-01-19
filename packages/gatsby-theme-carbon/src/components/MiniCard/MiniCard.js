@@ -7,13 +7,14 @@ import {
   Email20,
   Launch20,
 } from '@carbon/icons-react';
-import { settings } from 'carbon-components';
 import cx from 'classnames';
 
 import * as styles from './MiniCard.module.scss';
 import { Column } from '../Grid';
 
-const { prefix } = settings;
+import usePrefix from '../../util/hooks/usePrefix';
+
+const prefix = usePrefix();
 
 const getIcon = ({ actionIcon }) => {
   switch (actionIcon) {

@@ -1,4 +1,4 @@
-.link:global(.bx--link) {
+.link:global(.#{$prefix}--link) {
   font-size: inherit;
   text-decoration: underline;
 

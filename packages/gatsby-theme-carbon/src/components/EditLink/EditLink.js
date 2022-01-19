@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import { link, row } from './EditLink.module.scss';
+import usePrefix from '../../util/hooks/usePrefix';
+
+const prefix = usePrefix();
 
 const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
   const {
@@ -28,8 +31,8 @@ const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
   const href = `${baseUrl}/edit/${branch}${subDirectory}/src/pages${relativePagePath}`;
 
   return baseUrl ? (
-    <div className={`bx--row ${row}`}>
-      <div className="bx--col">
+    <div className={`${prefix}--row ${row}`}>
+      <div className={`${prefix}--col`}>
         <a className={link} href={href}>
           Edit this page on GitHub
         </a>

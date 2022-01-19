@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import * as styles from './PageHeader.module.scss';
+import usePrefix from '../../util/hooks/usePrefix';
+
+const prefix = usePrefix();
 
 const PageHeader = ({ title, theme, tabs = [] }) => (
   <div
@@ -9,9 +12,9 @@ const PageHeader = ({ title, theme, tabs = [] }) => (
       [styles.withTabs]: tabs.length,
       [styles.darkMode]: theme === 'dark',
     })}>
-    <div className="bx--grid">
-      <div className="bx--row">
-        <div className="bx--col-lg-12">
+    <div className={`${prefix}--grid`}>
+      <div className={`${prefix}--row`}>
+        <div className={`${prefix}--col-lg-12`}>
           <h1 id="page-title" className={styles.text}>
             {title}
           </h1>

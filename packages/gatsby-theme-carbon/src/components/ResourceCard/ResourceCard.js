@@ -10,9 +10,9 @@ import {
   Error20,
   Launch20,
 } from '@carbon/icons-react';
-import { settings } from 'carbon-components';
+import usePrefix from '../../util/hooks/usePrefix';
 
-const { prefix } = settings;
+const prefix = usePrefix();
 
 export default class ResourceCard extends React.Component {
   render() {

@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { CheckmarkFilled24, Misuse24 } from '@carbon/icons-react';
-import { settings } from 'carbon-components';
+import usePrefix from '../../util/hooks/usePrefix';
 
-const { prefix } = settings;
+const prefix = usePrefix();
 
 export default class DoDontExample extends React.Component {
   renderCaption = (caption, captionTitle) => {

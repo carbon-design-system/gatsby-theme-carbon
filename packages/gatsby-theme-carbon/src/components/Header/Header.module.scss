@@ -1,6 +1,6 @@
 @import '~carbon-components/scss/globals/scss/layout';
 
-:global(.bx--header__global) {
+:global(.#{$prefix}--header__global) {
   position: absolute;
   top: 0;
   right: 0;
@@ -18,7 +18,7 @@
 }
 
 // Overrides upstream Carbon styles for header nav
-.headerWithHeaderNav :global(.bx--header__nav) {
+.headerWithHeaderNav :global(.#{$prefix}--header__nav) {
   @include carbon--breakpoint('lg') {
     display: block;
     position: absolute;
@@ -30,17 +30,17 @@
 }
 
 // Aligns HeaderNav with 12 col grid
-.headerWithHeaderNav :global(.bx--header__menu-bar) {
+.headerWithHeaderNav :global(.#{$prefix}--header__menu-bar) {
   margin-left: 5px;
 }
 
 // Overrides upstream Carbon styles for header nav
-.headerWithHeaderNav :global(.bx--header__menu-item) {
+.headerWithHeaderNav :global(.#{$prefix}--header__menu-item) {
   font-size: 1rem;
 }
 
 // Overrides upstream Carbon styles for left nav in mobile.
-.header :global(.bx--header__action--menu) {
+.header :global(.#{$prefix}--header__action--menu) {
   border: none;
   top: 0.5px;
   position: relative;
@@ -51,7 +51,7 @@
 }
 
 // Overrides upstream Carbon styles for header nav
-.headerWithHeaderNav :global(.bx--header__nav::before) {
+.headerWithHeaderNav :global(.#{$prefix}--header__nav::before) {
   display: none;
 }
 
@@ -62,7 +62,7 @@
 }
 
 // Overrides upstream Carbon styles for left nav in mobile.
-.header :global(.bx--header__action--menu):focus {
+.header :global(.#{$prefix}--header__action--menu):focus {
   outline: 2px solid $carbon--white-0;
   outline-offset: -2px;
 }
@@ -78,7 +78,7 @@ header.header {
   z-index: 10000; /* old z('floating') #940 */
 }
 
-.header :global(.bx--header__action--menu.bx--header__action--active) {
+.header :global(.#{$prefix}--header__action--menu.#{$prefix}--header__action--active) {
   background-color: $carbon--gray-100;
   border-right: 1px solid $inverse-02;
 
@@ -87,7 +87,7 @@ header.header {
   }
 }
 
-.header :global(.bx--header__name):focus {
+.header :global(.#{$prefix}--header__name):focus {
   box-shadow: none;
 }
 
@@ -159,7 +159,7 @@ header.header {
 
 // Switcher button, extra specificity to override Carbon tooltip button styles
 // Hex values used pending shell theming
-.header :global(.bx--tooltip__trigger).header-button.switcher-button {
+.header :global(.#{$prefix}--tooltip__trigger).header-button.switcher-button {
   &:focus {
     box-shadow: none;
     border: none;
@@ -168,7 +168,7 @@ header.header {
   }
 }
 
-.header :global(a.bx--header__menu-item:hover) {
+.header :global(a.#{$prefix}--header__menu-item:hover) {
   color: $carbon--white-0;
 }
 

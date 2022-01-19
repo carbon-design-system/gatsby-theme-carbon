@@ -9,11 +9,11 @@ import {
   Error20,
   Email20,
 } from '@carbon/icons-react';
-import { settings } from 'carbon-components';
 import { Column } from '../Grid';
 import * as styles from './SquareCard.module.scss';
+import usePrefix from '../../util/hooks/usePrefix';
 
-const { prefix } = settings;
+const prefix = usePrefix();
 
 export default class SquareCard extends React.Component {
   render() {

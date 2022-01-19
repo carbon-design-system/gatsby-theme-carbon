@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { settings } from 'carbon-components';
 import { column } from './Grid.module.scss';
+import usePrefix from '../../util/hooks/usePrefix';
 
-const { prefix } = settings;
+const prefix = usePrefix();
 
 export const Grid = ({ children, className, ...rest }) => (
   <div className={cx(`${prefix}--grid`, className)} {...rest}>
