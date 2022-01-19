@@ -1,27 +1,27 @@
 // Base global
-@import './internal/global';
+@use './internal/global';
 
 // Global stylesheet to inject global dependencies via shadowing
-@import 'global';
+@use 'global';
 
 //---------------------------------------
 // Page styles
 //---------------------------------------
 
-@import './internal/page';
+@use './internal/page';
 
-@import '../components/Homepage/homepage.scss';
-@import '../components/PageTable/page-table.scss';
-@import '../components/DoDontExample/do-dont-example.scss';
-@import '../components/ResourceCard/resource-card.scss';
-@import '../components/ResourceCard/resource-card-group.scss';
-@import '../components/ArticleCard/article-card.scss';
-@import '../components/FeatureCard/feature-card.scss';
-@import '../components/ImageCard/image-card.scss';
+@use '../components/Homepage/homepage.scss';
+@use '../components/PageTable/page-table.scss';
+@use '../components/DoDontExample/do-dont-example.scss';
+@use '../components/ResourceCard/resource-card.scss';
+@use '../components/ResourceCard/resource-card-group.scss';
+@use '../components/ArticleCard/article-card.scss';
+@use '../components/FeatureCard/feature-card.scss';
+@use '../components/ImageCard/image-card.scss';
 
 //---------------------------------------
 // Included last to ensure that class
 // names take precedence over includes
 // inside component class names
 //---------------------------------------
-@include carbon--type-classes();
+// @include carbon--type-classes();

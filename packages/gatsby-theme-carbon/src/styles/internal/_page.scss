@@ -99,7 +99,7 @@ img {
   background: $ui-02;
 }
 
-.bx--website-switcher {
+.#{$prefix}--website-switcher {
   z-index: 10000; /* old z('floating') #940 */
 }
 
@@ -166,6 +166,6 @@ img {
 }
 
 // TODO: remove when fix is released. See https://github.com/carbon-design-system/carbon/issues/4804
-.bx--inline-notification--low-contrast:before {
+.#{$prefix}--inline-notification--low-contrast:before {
   pointer-events: none !important;
 }

@@ -1,4 +1,4 @@
-$prefix: 'bx';
+$prefix: 'cds';
 
 // Disable feature flag warning
 $did-warn-diverged-feature-flags: true;
@@ -12,15 +12,15 @@ $feature-flags: (
   enable-css-custom-properties: true,
 );
 
-// Carbon globals/helpers
-@import '~carbon-components/scss/globals/grid/grid';
-@import '~carbon-components/scss/globals/scss/layout';
-@import 'carbon-components';
+// Carbon styles
+@use '@carbon/react';
+@use '@carbon/react/scss/type';
 
 // Typography
-@include carbon--type-reset();
-@import '~@carbon/elements/scss/type/classes';
-@import 'plex';
+@use '@carbon/elements/scss/type/classes';
+@use 'plex';
+@include type.reset();
+
 
 //---------------------------------------
 // Global styles
