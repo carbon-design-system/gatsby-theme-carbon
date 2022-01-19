@@ -6,8 +6,8 @@ import {
   SkipToContent,
   HeaderGlobalBar,
   HeaderGlobalAction,
-} from 'carbon-components-react';
-import { Switcher20, Close20 } from '@carbon/icons-react';
+} from '@carbon/react';
+import { Switcher20, Close20 } from '@carbon/react/icons';
 import cx from 'classnames';
 
 import HeaderNav from '../HeaderNav/HeaderNav';

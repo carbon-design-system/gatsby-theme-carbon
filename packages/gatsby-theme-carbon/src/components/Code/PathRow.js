@@ -1,6 +1,6 @@
 import React from 'react';
-import { CopyButton } from 'carbon-components-react';
-import { Launch16 } from '@carbon/icons-react';
+import { CopyButton } from '@carbon/react';
+import { Launch16 } from '@carbon/react/icons';
 import copy from 'copy-to-clipboard';
 import cx from 'classnames';
 import * as styles from './Code.module.scss';

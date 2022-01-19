@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useEffect } from 'react';
-import { SideNav, SideNavItems } from 'carbon-components-react';
+import { SideNav, SideNavItems } from '@carbon/react';
 import { useNavItems } from '../../util/NavItems';
 
 import NavContext from '../../util/context/NavContext';

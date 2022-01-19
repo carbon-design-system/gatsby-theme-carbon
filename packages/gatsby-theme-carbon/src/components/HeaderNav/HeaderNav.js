@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { HeaderNavigation } from 'carbon-components-react';
+import { HeaderNavigation } from '@carbon/react';
 import HeaderNavItem from './HeaderNavItem';
 
 import { useNavItems } from '../../util/NavItems';

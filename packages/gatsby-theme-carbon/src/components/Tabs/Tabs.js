@@ -10,7 +10,7 @@ import React, {
   useRef,
   useCallback,
 } from 'react';
-import { Dropdown } from 'carbon-components-react';
+import { Dropdown } from '@carbon/react';
 import { useMedia } from 'use-media';
 import { breakpoints } from '@carbon/elements';
 import cx from 'classnames';
