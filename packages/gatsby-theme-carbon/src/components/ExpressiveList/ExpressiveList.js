@@ -15,13 +15,13 @@ const ExpressiveList = ({
   titleType,
 }) => {
   const ExpressiveListTitleClassNames = cx(styles.title, {
-    [styles.expressive_03]: titleType === 'expressive-03',
+    [styles.expressive_04]: titleType === 'expressive-04',
     [styles.expressive_02]: titleType === 'expressive-02',
   });
 
   if (!pictogram) {
     return (
-      <Row className={styles.listRow}>
+      <Row className={(cx(className), styles.listRow)}>
         <Column colMd={2} colLg={4} noGutterLgLeft>
           <h3 className={ExpressiveListTitleClassNames}>{title}</h3>
         </Column>
@@ -32,8 +32,8 @@ const ExpressiveList = ({
     );
   }
   return (
-    <Row className={styles.listRow}>
-      <Column colMd={2} colLg={1} noGutterLgLeft className={styles.pictogram}>
+    <Row className={(cx(className), styles.listRow)}>
+      <Column colMd={2} colLg={1} noGutterLgLeft>
         {pictogram}
       </Column>
       <Column colMd={6} colLg={7} className={styles.pictogramContent}>
