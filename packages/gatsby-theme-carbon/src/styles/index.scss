@@ -1,4 +1,5 @@
 // Base global
+@use '@carbon/react';
 @use './internal/global';
 
 // Global stylesheet to inject global dependencies via shadowing
@@ -9,7 +10,6 @@
 //---------------------------------------
 
 @use './internal/page';
-
 @use '../components/Homepage/homepage.scss';
 @use '../components/PageTable/page-table.scss';
 @use '../components/DoDontExample/do-dont-example.scss';

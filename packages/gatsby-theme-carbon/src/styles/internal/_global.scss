@@ -1,16 +1,8 @@
 $prefix: 'cds';
 
-// Disable feature flag warning
-$did-warn-diverged-feature-flags: true;
-
 //---------------------------------------
 // Carbon Components
 //---------------------------------------
-$feature-flags: (
-  ui-shell: true,
-  grid-columns-16: false,
-  enable-css-custom-properties: true,
-);
 
 // Carbon styles
 @use '@carbon/react';
@@ -20,7 +12,6 @@ $feature-flags: (
 @use '@carbon/elements/scss/type/classes';
 @use 'plex';
 @include type.reset();
-
 
 //---------------------------------------
 // Global styles
