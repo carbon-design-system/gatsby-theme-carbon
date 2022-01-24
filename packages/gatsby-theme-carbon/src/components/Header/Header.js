@@ -7,7 +7,7 @@ import {
   HeaderGlobalBar,
   HeaderGlobalAction,
 } from '@carbon/react';
-import { Switcher20, Close20 } from '@carbon/react/icons';
+import { Switcher, Close } from '@carbon/react/icons';
 import cx from 'classnames';
 
 import HeaderNav from '../HeaderNav/HeaderNav';
@@ -18,9 +18,8 @@ import useMetadata from '../../util/hooks/useMetadata';
 import * as styles from './Header.module.scss';
 import usePrefix from '../../util/hooks/usePrefix';
 
-const prefix = usePrefix();
-
 const Header = ({ children }) => {
+  const prefix = usePrefix();
   const {
     leftNavIsOpen,
     toggleNavState,
@@ -70,7 +69,7 @@ const Header = ({ children }) => {
               toggleNavState('searchIsOpen', 'close');
               toggleNavState('leftNavIsOpen', 'close');
             }}>
-            {switcherIsOpen ? <Close20 /> : <Switcher20 />}
+            {switcherIsOpen ? <Close size={20} /> : <Switcher size={20} />}
           </HeaderGlobalAction>
         )}
       </HeaderGlobalBar>

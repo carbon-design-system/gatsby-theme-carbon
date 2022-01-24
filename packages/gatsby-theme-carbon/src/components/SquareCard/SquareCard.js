@@ -1,19 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { Link, withPrefix } from 'gatsby';
+import { Link } from 'gatsby';
 import {
-  Launch20,
-  Download20,
-  ArrowRight20,
-  Error20,
-  Email20,
-} from '@carbon/icons-react';
+  Launch,
+  Download,
+  ArrowRight,
+  Error,
+  Email,
+} from '@carbon/react/icons';
 import { Column } from '../Grid';
 import * as styles from './SquareCard.module.scss';
-import usePrefix from '../../util/hooks/usePrefix';
-
-const prefix = usePrefix();
 
 export default class SquareCard extends React.Component {
   render() {
@@ -30,6 +27,8 @@ export default class SquareCard extends React.Component {
       color,
       ...rest
     } = this.props;
+
+    const prefix = 'cds';
 
     let isLink;
     if (href !== undefined) {
@@ -63,19 +62,19 @@ export default class SquareCard extends React.Component {
         {children ? <div className={styles.helperIcon}>{children}</div> : null}
         <div className={styles.actionIcon}>
           {actionIcon === 'arrowRight' && !disabled ? (
-            <ArrowRight20 aria-label="Open resource" />
+            <ArrowRight size={20} aria-label="Open resource" />
           ) : null}
           {actionIcon === 'launch' && !disabled ? (
-            <Launch20 aria-label="Open resource" />
+            <Launch size={20} aria-label="Open resource" />
           ) : null}
           {actionIcon === 'download' && !disabled ? (
-            <Download20 aria-label="Download" />
+            <Download size={20} aria-label="Download" />
           ) : null}
           {actionIcon === 'email' && !disabled ? (
-            <Email20 aria-label="Email" />
+            <Email size={20} aria-label="Email" />
           ) : null}
           {actionIcon === 'disabled' || disabled === true ? (
-            <Error20 aria-label="disabled" />
+            <Error size={20} aria-label="disabled" />
           ) : null}
         </div>
       </>

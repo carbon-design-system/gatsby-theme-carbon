@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { CheckmarkFilled24, Misuse24 } from '@carbon/icons-react';
-import usePrefix from '../../util/hooks/usePrefix';
-
-const prefix = usePrefix();
+import { CheckmarkFilled, Misuse } from '@carbon/react/icons';
 
 export default class DoDontExample extends React.Component {
   renderCaption = (caption, captionTitle) => {
+    const prefix = 'cds';
     if (caption || captionTitle) {
       return (
         <div className={`${prefix}--example__caption`}>
@@ -23,15 +21,9 @@ export default class DoDontExample extends React.Component {
   };
 
   render() {
-    const {
-      children,
-      caption,
-      captionTitle,
-      text,
-      aspectRatio,
-      color,
-      type,
-    } = this.props;
+    const { children, caption, captionTitle, text, aspectRatio, color, type } =
+      this.props;
+    const prefix = 'cds';
 
     const wrapperClassNames = cx(`${prefix}--example`, {
       [`${prefix}--example--square`]: aspectRatio === '1:1',
@@ -50,9 +42,9 @@ export default class DoDontExample extends React.Component {
         <div className={`${prefix}--example-card`}>
           <div className={`${prefix}--example-card__content`}>
             {type === 'do' ? (
-              <CheckmarkFilled24 className={iconClassNames} />
+              <CheckmarkFilled size={24} className={iconClassNames} />
             ) : (
-              <Misuse24 className={iconClassNames} />
+              <Misuse size={24} className={iconClassNames} />
             )}
             <div className={`${prefix}--example__content`}>
               {children}

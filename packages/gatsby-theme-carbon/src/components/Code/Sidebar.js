@@ -1,6 +1,6 @@
 import React from 'react';
 import { CopyButton } from '@carbon/react';
-import { Launch16 } from '@carbon/react/icons';
+import { Launch } from '@carbon/react/icons';
 import copy from 'copy-to-clipboard';
 import cx from 'classnames';
 import * as styles from './Code.module.scss';
@@ -36,7 +36,7 @@ const Sidebar = ({ src, path, children }) => {
           className={styles.button}
           href={src}
           style={{ zIndex: 200 }}>
-          <Launch16 alt="View source" />
+          <Launch alt="View source" />
         </a>
       )}
     </div>

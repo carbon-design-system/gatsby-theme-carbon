@@ -1,7 +1,7 @@
 import React from 'react';
 import useMedia from 'use-media';
 import { breakpoints } from '@carbon/elements';
-import { Link20 as Link } from '@carbon/icons-react';
+import { Link } from '@carbon/react/icons';
 import cx from 'classnames';
 import slugify from 'slugify';
 
@@ -23,7 +23,7 @@ const Anchor = ({ id, string, position }) => {
       className={anchorClasses}
       href={`#${id}`}
       aria-label={`${string} permalink`}>
-      <Link />
+      <Link size={20} />
     </a>
   );
 };

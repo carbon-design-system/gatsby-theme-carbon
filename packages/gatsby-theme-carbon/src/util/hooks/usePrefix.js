@@ -5,9 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-
-
+// for functional components only
 export default function usePrefix() {
   return 'cds';
 }

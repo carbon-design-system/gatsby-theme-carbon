@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import {
-  PlayOutline24,
-  PlayOutlineFilled24,
-  PauseOutline24,
-  PauseOutlineFilled24,
-} from '@carbon/icons-react';
+  PlayOutline,
+  PlayOutlineFilled,
+  PauseOutline,
+  PauseOutlineFilled,
+} from '@carbon/react/icons';
 import * as styles from './GifPlayer.module.scss';
 
 const Pause = ({ hovering }) =>
-  hovering ? <PauseOutlineFilled24 /> : <PauseOutline24 />;
+  hovering ? <PauseOutlineFilled size={24} /> : <PauseOutline size={24} />;
 
 const Play = ({ hovering }) =>
-  hovering ? <PlayOutlineFilled24 /> : <PlayOutline24 />;
+  hovering ? <PlayOutlineFilled size={24} /> : <PlayOutline size={24} />;
 
 const ToggleIcon = ({ paused, hovering }) =>
   paused ? <Play hovering={hovering} /> : <Pause hovering={hovering} />;

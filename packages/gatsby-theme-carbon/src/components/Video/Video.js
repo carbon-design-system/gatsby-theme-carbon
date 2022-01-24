@@ -1,4 +1,4 @@
-import { Play32, Pause32 } from '@carbon/icons-react';
+import { Play, Pause } from '@carbon/react/icons';
 import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -13,9 +13,8 @@ import {
 import usePathPrefix from '../../util/hooks/usePathprefix';
 import usePrefix from '../../util/hooks/usePrefix';
 
-const prefix = usePrefix();
-
 const Video = ({ autoPlay, vimeoId, title, src, poster, muted, ...props }) => {
+  const prefix = usePrefix();
   const [isPlaying, setIsPlaying] = useState(autoPlay);
   const pathPrefix = usePathPrefix();
   const videoRef = useRef(null);
@@ -116,7 +115,7 @@ const Video = ({ autoPlay, vimeoId, title, src, poster, muted, ...props }) => {
         onClick={onClick}
         onKeyDown={onKeyDown}
         tabIndex="0">
-        {isPlaying ? <Pause32 /> : <Play32 />}
+        {isPlaying ? <Pause size={32} /> : <Play size={32} />}
         <span className={`${prefix}--assistive-text`}>
           {isPlaying ? 'Pause' : 'Play'}
         </span>

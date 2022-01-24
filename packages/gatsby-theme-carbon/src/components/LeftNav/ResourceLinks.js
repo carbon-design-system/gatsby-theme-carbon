@@ -1,7 +1,7 @@
 import React from 'react';
 import { SideNavLink } from '@carbon/react';
 import { Link } from 'gatsby';
-import { Launch16 as LaunchIcon } from '@carbon/react/icons';
+import { Launch as LaunchIcon } from '@carbon/react/icons';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 

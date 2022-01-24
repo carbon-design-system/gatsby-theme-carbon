@@ -3,16 +3,13 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { Link, withPrefix } from 'gatsby';
 import {
-  ArrowRight20,
-  Calendar20,
-  Download20,
-  Email20,
-  Error20,
-  Launch20,
-} from '@carbon/icons-react';
-import usePrefix from '../../util/hooks/usePrefix';
-
-const prefix = usePrefix();
+  ArrowRight,
+  Calendar,
+  Download,
+  Email,
+  Error,
+  Launch,
+} from '@carbon/react/icons';
 
 export default class ResourceCard extends React.Component {
   render() {
@@ -28,6 +25,8 @@ export default class ResourceCard extends React.Component {
       className,
       ...rest
     } = this.props;
+
+    const prefix = 'cds';
 
     let isLink;
     if (href !== undefined && !rest.download) {
@@ -54,22 +53,22 @@ export default class ResourceCard extends React.Component {
         <div className={`${prefix}--resource-card__icon--img`}>{children}</div>
         <div className={`${prefix}--resource-card__icon--action`}>
           {actionIcon === 'launch' && !disabled ? (
-            <Launch20 aria-label="Open resource" />
+            <Launch size={20} aria-label="Open resource" />
           ) : null}
           {actionIcon === 'arrowRight' && !disabled ? (
-            <ArrowRight20 aria-label="Open resource" />
+            <ArrowRight size={20} aria-label="Open resource" />
           ) : null}
           {actionIcon === 'download' && !disabled ? (
-            <Download20 aria-label="Download" />
+            <Download size={20} aria-label="Download" />
           ) : null}
           {actionIcon === 'email' && !disabled ? (
-            <Email20 aria-label="Email" />
+            <Email size={20} aria-label="Email" />
           ) : null}
           {actionIcon === 'calendar' && !disabled ? (
-            <Calendar20 aria-label="Calendar" />
+            <Calendar size={20} aria-label="Calendar" />
           ) : null}
           {actionIcon === 'disabled' || disabled === true ? (
-            <Error20 aria-label="disabled" />
+            <Error size={20} aria-label="disabled" />
           ) : null}
         </div>
       </>

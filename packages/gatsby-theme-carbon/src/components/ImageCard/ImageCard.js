@@ -3,15 +3,12 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { Link } from 'gatsby';
 import {
-  Launch20,
-  Download20,
-  ArrowRight20,
-  Error20,
-  Email20,
-} from '@carbon/icons-react';
-import usePrefix from '../../util/hooks/usePrefix';
-
-const prefix = usePrefix();
+  Launch,
+  Download,
+  ArrowRight,
+  Error,
+  Email,
+} from '@carbon/react/icons';
 
 export default class ImageCard extends React.Component {
   render() {
@@ -30,6 +27,8 @@ export default class ImageCard extends React.Component {
       className,
       ...rest
     } = this.props;
+
+    const prefix = 'cds';
 
     let isLink;
     if (href !== undefined) {
@@ -75,19 +74,19 @@ export default class ImageCard extends React.Component {
         {title ? <h4 className={titleClassNames}>{title}</h4> : null}
         <div className={iconClassNames}>
           {actionIcon === 'launch' && !disabled ? (
-            <Launch20 aria-label="Open resource" />
+            <Launch size={20} aria-label="Open resource" />
           ) : null}
           {actionIcon === 'arrowRight' && !disabled ? (
-            <ArrowRight20 aria-label="Open resource" />
+            <ArrowRight size={20} aria-label="Open resource" />
           ) : null}
           {actionIcon === 'download' && !disabled ? (
-            <Download20 aria-label="Download" />
+            <Download size={20} aria-label="Download" />
           ) : null}
           {actionIcon === 'email' && !disabled ? (
-            <Email20 aria-label="Email" />
+            <Email size={20} aria-label="Email" />
           ) : null}
           {actionIcon === 'disabled' || disabled === true ? (
-            <Error20 aria-label="disabled" />
+            <Error size={20} aria-label="disabled" />
           ) : null}
         </div>
         <div className={`${prefix}--image-card__img`}>{children}</div>
