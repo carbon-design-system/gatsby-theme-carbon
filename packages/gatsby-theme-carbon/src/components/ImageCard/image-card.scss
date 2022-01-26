@@ -24,7 +24,7 @@
     height: calc(100% - 1px); // 1px to offset negative `top` positioning
     outline: 3px solid transparent;
     outline-offset: -3px;
-    transition: outline motion(standard, productive) $duration--fast-01;
+    transition: outline motion(standard, productive) $duration-fast-01;
   }
 }
 
@@ -37,7 +37,7 @@
 }
 
 .#{$prefix}--image-card__title {
-  @include carbon--type-style('productive-heading-03');
+  @include type-style('productive-heading-03');
   text-decoration: none;
   color: $text-04;
   position: relative;
@@ -45,7 +45,7 @@
 }
 
 .#{$prefix}--image-card__subtitle {
-  @include carbon--type-style('heading-01');
+  @include type-style('heading-01');
   font-weight: 400;
   text-decoration: none;
   color: $text-04;
@@ -65,7 +65,7 @@
 }
 
 .#{$prefix}--image-card__icon--action svg {
-  fill: $carbon--gray-10; //$icon-01 for grsay 90 theme
+  fill: $gray-10; //$icon-01 for grsay 90 theme
 }
 
 // Image
@@ -96,14 +96,14 @@
   height: 100%;
   background: hsla(0, 0%, 100%, 0.08);
   opacity: 0;
-  transition: opacity $duration--fast-01;
+  transition: opacity $duration-fast-01;
 }
 
 .#{$prefix}--image-card__spacing {
   margin-right: 1px;
   margin-bottom: 1px;
 
-  @include carbon--breakpoint-down('md') {
+  @include breakpoint-down('md') {
     margin-right: 0px;
   }
 }
@@ -149,16 +149,16 @@
 // Disabled dark
 .#{$prefix}--image-card--disabled .#{$prefix}--image-card__title--dark,
 .#{$prefix}--image-card--disabled .#{$prefix}--image-card__subtitle--dark {
-  color: $carbon--gray-50; //$disabled-03 for gray 90
+  color: $gray-50; //$disabled-03 for gray 90
 }
 
 .#{$prefix}--image-card--disabled
   .#{$prefix}--image-card__icon--action--dark
   svg {
-  fill: $carbon--gray-70; //$disabled-02 for gray 90
+  fill: $gray-70; //$disabled-02 for gray 90
 }
 
 // dark background
 .container--dark .#{$prefix}--image-card__img {
-  background: $carbon--gray-100;
+  background: $gray-100;
 }

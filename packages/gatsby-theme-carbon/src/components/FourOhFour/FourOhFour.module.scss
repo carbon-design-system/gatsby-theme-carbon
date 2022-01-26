@@ -1,5 +1,5 @@
 .four-oh-four {
-  @include carbon--type-style('display-02');
+  @include type-style('display-02');
   font-size: 144px;
   background: linear-gradient(35deg, #92eeee, #a66efa);
   display: inline-block;
@@ -7,33 +7,33 @@
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   margin: $spacing-08 0 10rem 0;
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     font-size: 25vw;
   }
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     font-size: 300px;
   }
   animation: gradient 2s ease infinite;
 }
 
 :global(.container--dark) .link {
-  color: $carbon--gray-10;
+  color: $gray-10;
 }
 
 .list .link {
-  @include carbon--type-style('body-short-02');
+  @include type-style('body-short-02');
   margin-bottom: $spacing-03;
   position: relative;
   display: inline-block;
-  transition: color $transition--base;
+  // transition: color $transition--base;
   color: $text-01;
   text-decoration: none;
   margin-left: $spacing-05;
 
   &:hover {
-    color: $carbon--blue-40;
+    color: $blue-40;
     &::before {
-      color: $carbon--blue-40;
+      color: $blue-40;
     }
   }
 
@@ -42,13 +42,13 @@
     position: absolute;
     left: -$spacing-05;
     color: $text-01;
-    transition: color $transition--base;
+    // transition: color $transition--base;
     cursor: pointer;
   }
 }
 
 .paragraph {
-  @include carbon--type-style('body-long-01');
+  @include type-style('body-long-01');
   font-size: 1.25rem;
   line-height: 1.5;
   max-width: 500px;
@@ -56,7 +56,7 @@
 }
 
 .heading {
-  @include carbon--type-style('expressive-heading-04', true);
+  @include type-style('expressive-heading-04', true);
   margin-bottom: $spacing-06;
   padding-top: $spacing-06;
 }
@@ -68,13 +68,13 @@
   padding-left: $spacing-07;
   padding-right: $spacing-07;
 
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     padding-left: calc(
       25% + 2rem
     ); //2rem to account for 2rem left padding default on grid
   }
 
-  @include carbon--breakpoint('max') {
+  @include breakpoint('max') {
     padding-left: 424px;
   }
 }

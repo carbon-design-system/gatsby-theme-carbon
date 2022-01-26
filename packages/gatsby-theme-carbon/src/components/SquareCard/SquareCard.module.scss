@@ -8,7 +8,7 @@
   border-top: 1px solid #e0e0e0;
   border-left: 1px solid transparent;
 
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     border-left: 1px solid #e0e0e0;
   }
 }
@@ -17,26 +17,26 @@
   border-top: 0 solid transparent;
 }
 :global(.square-card-group) .squareCard:nth-child(2) {
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     border-top: 0 solid transparent;
   }
 }
 :global(.square-card-group) .squareCard:nth-child(3) {
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     border-top: 0 solid transparent;
   }
 }
 :global(.square-card-group) .squareCard:nth-child(2n + 1) {
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     border-left: 1px solid transparent;
   }
 
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     border-left: 1px solid #e0e0e0;
   }
 }
 :global(.square-card-group) .squareCard:nth-child(3n + 1) {
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     border-left: 1px solid transparent;
   }
 }
@@ -56,7 +56,7 @@
     height: calc(100% - 1px); // 1px to offset negative `top` positioning
     outline: 3px solid transparent;
     outline-offset: -3px;
-    transition: outline motion(standard, productive) $duration--fast-01;
+    transition: outline motion(standard, productive) $duration-fast-01;
   }
 }
 
@@ -69,39 +69,39 @@
 }
 
 .title {
-  @include carbon--type-style('productive-heading-04');
+  @include type-style('productive-heading-04');
 
   text-decoration: none;
   position: relative;
   z-index: 1;
 
-  @include carbon--breakpoint-between('lg', 'xlg') {
-    @include carbon--type-style('productive-heading-03');
+  @include breakpoint-between('lg', 'xlg') {
+    @include type-style('productive-heading-03');
   }
 }
 
 .titleSmall {
-  @include carbon--type-style('productive-heading-03');
+  @include type-style('productive-heading-03');
 
-  @include carbon--breakpoint-between('lg', 'xlg') {
-    @include carbon--type-style('productive-heading-02');
+  @include breakpoint-between('lg', 'xlg') {
+    @include type-style('productive-heading-02');
   }
 }
 
 .body {
-  @include carbon--type-style('body-short-02');
+  @include type-style('body-short-02');
 
   padding-top: $spacing-05;
 }
 
 .titleSmall + .body {
-  @include carbon--breakpoint-between('lg', 'xlg') {
+  @include breakpoint-between('lg', 'xlg') {
     padding-top: 0;
   }
 }
 
 .helperText {
-  @include carbon--type-style('body-short-01');
+  @include type-style('body-short-01');
 
   position: absolute;
   bottom: 1rem;
@@ -132,11 +132,11 @@
 
 // Dark
 .darkMode :global(.#{$prefix}--tile) {
-  background: $carbon--gray-90; //$ui-background for gray 90 theme
+  background: $gray-90; //$ui-background for gray 90 theme
 }
 
 .darkMode :global(.#{$prefix}--tile:hover) {
-  background: $carbon--gray-80; //$hover-ui for gray 90 theme
+  background: $gray-80; //$hover-ui for gray 90 theme
 }
 
 .darkMode .title,
@@ -147,7 +147,7 @@
 
 .darkMode .actionIcon svg,
 .darkMode .helperIcon svg {
-  fill: $carbon--gray-10;
+  fill: $gray-10;
 }
 
 // Disabled

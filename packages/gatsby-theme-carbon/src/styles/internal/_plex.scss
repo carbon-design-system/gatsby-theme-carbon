@@ -160,8 +160,8 @@ body {
 }
 
 @supports (font-variation-settings: normal) {
-  // This rule includes both html and body to outgun the carbon--type-reset mixin 
-  // carbon--type-reset is being called inadvertantly when sites invoke the carbon--type-style mixin
+  // This rule includes both html and body to outgun the type-reset mixin
+  // type-reset is being called inadvertantly when sites invoke the type-style mixin
   // Without it both html and body, the font-family gets overridden with `IBM Plex Sans` (not the variable font)
   html body {
     font-family: 'IBM Plex Sans VF', 'Helvetica Neue', Arial, sans-serif;

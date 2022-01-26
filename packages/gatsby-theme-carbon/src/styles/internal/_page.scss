@@ -1,25 +1,25 @@
 .container {
-  background: $ui-background;
+  background: var(--cds-ui-background);
   width: 100%;
   margin-left: 0;
-  transition: $transition--base ease;
+  // transition: $transition--base ease;
   position: relative;
   min-height: calc(100vh - 48px);
-  margin-top: rem(48px);
+  margin-top: 2rem;
 }
 
 .container .#{$prefix}--grid {
   margin: 0;
 
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     padding-left: calc(
       25% + 1.5rem
     ); //2rem to account for 2rem left padding default on grid
     padding-right: 2rem;
   }
 
-  @include carbon--breakpoint('max') {
-    max-width: rem(1544px);
+  @include breakpoint('max') {
+    max-width: 96.5rem;
     padding-left: 424px;
     padding-right: 0;
   }
@@ -33,7 +33,7 @@
 // Header styles
 //---------------------------------------
 .#{$prefix}--header__menu-trigger {
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     display: none;
   }
 }
@@ -43,7 +43,7 @@
 //---------------------------------------
 .page-p,
 .component-docs p {
-  @include carbon--type-style('body-long-02');
+  @include type-style('body-long-02');
   padding: 0 0 $spacing-lg;
 
   &:empty {
@@ -54,11 +54,11 @@
 
 .page-content {
   > div > div:nth-child(2) h2:before {
-    padding-bottom: rem(80px);
+    padding-bottom: 5rem;
   }
 
   > div > div:nth-child(2) h3 {
-    margin-top: rem(48px);
+    margin-top: 2rem;
   }
 
   // HR dividers
@@ -112,14 +112,14 @@ img {
 
 // No gutter class names
 .container .#{$prefix}--no-gutter-lg {
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
 .container .#{$prefix}--no-gutter-md {
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     padding-left: 0;
     padding-right: 0;
   }
@@ -131,13 +131,13 @@ img {
 }
 
 .container .#{$prefix}--no-gutter-lg--left {
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     padding-left: 0;
   }
 }
 
 .container .#{$prefix}--no-gutter-md--left {
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     padding-left: 0;
   }
 }
@@ -147,7 +147,7 @@ img {
 }
 
 .container .#{$prefix}--gutter-lg {
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     padding-left: 1rem;
     padding-right: 1rem;
   }

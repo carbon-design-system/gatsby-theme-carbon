@@ -6,7 +6,7 @@
   border-bottom: 1px solid $ui-03;
   scrollbar-width: none;
   overflow-x: auto;
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     overflow: visible;
   }
 }
@@ -28,7 +28,7 @@
 }
 
 .tab {
-  @include carbon--type-style('body-short-01');
+  @include type-style('body-short-01');
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -41,8 +41,8 @@
   padding: $spacing-03 $spacing-05;
   white-space: nowrap;
   outline-color: transparent;
-  transition: color $duration--fast-02, background-color $duration--fast-02,
-    border-color $duration--fast-02, outline-color $duration--fast-02;
+  transition: color $duration-fast-02, background-color $duration-fast-02,
+    border-color $duration-fast-02, outline-color $duration-fast-02;
   border: none;
   margin: 0;
   border-right: 1px solid $ui-03;

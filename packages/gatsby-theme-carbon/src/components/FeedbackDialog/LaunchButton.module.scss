@@ -4,7 +4,7 @@
   border-radius: 50%;
   border-color: transparent;
   background: $interactive-02; //g60
-  transition: all $duration--fast-02;
+  transition: all $duration-fast-02;
   z-index: z('modal');
   padding-top: 0.325rem;
   cursor: pointer;
@@ -12,7 +12,7 @@
   bottom: 5rem;
   right: $spacing-05;
 
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     bottom: 6.5rem;
     right: $spacing-07;
   }
@@ -34,7 +34,7 @@
 
 [class*='container--dark'] {
   .button {
-    background: $carbon--gray-60;
+    background: $gray-60;
     &:hover {
       background: #606060;
     }

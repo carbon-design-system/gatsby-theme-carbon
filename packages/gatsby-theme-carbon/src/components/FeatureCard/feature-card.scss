@@ -9,7 +9,7 @@
 }
 
 .#{$prefix}--feature-card__row {
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -33,7 +33,7 @@
   .#{$prefix}--feature-card__link
   .#{$prefix}--resource-card--dark
   .#{$prefix}--tile {
-  background: $carbon--gray-80; //$hover-ui for gray 90 theme
+  background: $gray-80; //$hover-ui for gray 90 theme
 }
 
 .#{$prefix}--feature-card__link:focus {
@@ -47,18 +47,18 @@
 
 // Display image at square aspect ratio only on mobile
 .#{$prefix}--feature-card__img.#{$prefix}--aspect-ratio--1x1::before {
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     padding-top: 0;
   }
 }
 
 .#{$prefix}--feature-card__img .#{$prefix}--aspect-ratio--object {
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     position: static;
   }
 }
 
-@include carbon--breakpoint('sm') {
+@include breakpoint('sm') {
   .#{$prefix}--feature-card .gatsby-resp-image-wrapper {
     position: relative;
     display: block;

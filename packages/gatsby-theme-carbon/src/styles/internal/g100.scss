@@ -1,5 +1,6 @@
 // These resources get shared with every css module.
 // We only want to import variables/mixins/helpers, not things that generate css.
-@import '~@carbon/elements/scss/themes/theme-maps';
-
-$carbon--theme: $carbon--theme--g100;
+@use '@carbon/react/scss/compat/themes' as compat;
+@use '@carbon/react/scss/compat/theme' as * with (
+  $theme: compat.$g100
+);

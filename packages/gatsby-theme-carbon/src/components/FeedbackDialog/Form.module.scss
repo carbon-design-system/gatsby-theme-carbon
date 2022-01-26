@@ -6,13 +6,13 @@
   z-index: 10000; /* old z('floating') #940 */
   transform-origin: 100% 50%;
   transition-property: opacity, transform;
-  transition-duration: $duration--moderate-02;
-  @include carbon--breakpoint('md') {
+  transition-duration: $duration-moderate-02;
+  @include breakpoint('md') {
     transform-origin: 100% bottom;
     width: 320px;
     right: 2rem;
     bottom: 10rem;
-    transition-duration: $duration--fast-02;
+    transition-duration: $duration-fast-02;
   }
 }
 
@@ -47,14 +47,14 @@
 }
 
 .form-container h2 {
-  @include carbon--type-style('productive-heading-01');
+  @include type-style('productive-heading-01');
   padding-bottom: $spacing-03;
   border-bottom: 1px solid var(--cds-ui-03);
 }
 
 .form-container label,
 .form-container legend {
-  @include carbon--type-style('label-01');
+  @include type-style('label-01');
 }
 
 .form-container form > * {

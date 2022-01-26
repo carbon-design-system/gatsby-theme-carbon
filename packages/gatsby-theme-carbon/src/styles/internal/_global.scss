@@ -1,16 +1,12 @@
-$prefix: 'cds';
-
 //---------------------------------------
 // Carbon Components
 //---------------------------------------
-
-// Carbon styles
-@use '@carbon/react';
+@use '@carbon/react/scss/colors' as *;
+// @use '@carbon/react/scss/config' as *;
+@use '@carbon/react/scss/compat/theme' as *;
 @use '@carbon/react/scss/type';
-
-// Typography
-@use '@carbon/elements/scss/type/classes';
 @use 'plex';
+
 @include type.reset();
 
 //---------------------------------------
@@ -18,7 +14,7 @@ $prefix: 'cds';
 //---------------------------------------
 
 body {
-  background: $carbon--black-100;
+  background: $black-100;
   color: $text-01;
 }
 

@@ -3,9 +3,9 @@
   height: 100%;
   padding: 0;
   position: relative;
-  transition: background $duration--fast-01;
+  transition: background $duration-fast-01;
   text-decoration: none;
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     margin-bottom: var(--space);
   }
 }
@@ -19,13 +19,13 @@
 }
 
 .#{$prefix}--article-card__title {
-  @include carbon--type-style('body-short-02');
+  @include type-style('body-short-02');
   text-decoration: none;
   color: $text-01;
 }
 
 .#{$prefix}--article-card__subtitle {
-  @include carbon--type-style('heading-01');
+  @include type-style('heading-01');
   font-weight: 400;
   text-decoration: none;
   color: $text-01;
@@ -40,7 +40,7 @@
 }
 
 .#{$prefix}--article-card__info p {
-  @include carbon--type-style('caption-01');
+  @include type-style('caption-01');
 }
 
 // At the moment, we force 16:9 for medium posts, this
@@ -68,11 +68,11 @@
 
 // Dark
 .#{$prefix}--article-card--dark .#{$prefix}--article-card__tile {
-  background: $carbon--gray-90; //$ui-background for gray 90 theme
+  background: $gray-90; //$ui-background for gray 90 theme
 }
 
 .#{$prefix}--article-card--dark:hover .#{$prefix}--article-card__tile {
-  background: $carbon--gray-80; //$hover-ui for gray 90 theme
+  background: $gray-80; //$hover-ui for gray 90 theme
 }
 
 .#{$prefix}--article-card--dark .#{$prefix}--article-card__title,
@@ -81,11 +81,11 @@
 }
 
 .#{$prefix}--article-card--dark .#{$prefix}--article-card__info {
-  color: $carbon--gray-30; //$text-02 for gray 90 theme
+  color: $gray-30; //$text-02 for gray 90 theme
 }
 
 .#{$prefix}--article-card--dark .#{$prefix}--article-card__icon--action svg {
-  fill: $carbon--gray-10; //$icon-01 for grsay 90 theme
+  fill: $gray-10; //$icon-01 for grsay 90 theme
 }
 
 // Disabled
@@ -113,7 +113,7 @@
 // Disabled dark
 .#{$prefix}--article-card--disabled.#{$prefix}--article-card--dark
   .#{$prefix}--article-card__tile:hover {
-  background: $carbon--gray-90; //$ui-background for gray 90 theme
+  background: $gray-90; //$ui-background for gray 90 theme
 }
 
 .#{$prefix}--article-card--disabled.#{$prefix}--article-card--dark
@@ -122,11 +122,11 @@
   .#{$prefix}--article-card__subtitle,
 .#{$prefix}--article-card--disabled.#{$prefix}--article-card--dark
   .#{$prefix}--article-card__info {
-  color: $carbon--gray-50; //$disabled-03 for gray 90
+  color: $gray-50; //$disabled-03 for gray 90
 }
 
 .#{$prefix}--article-card--disabled.#{$prefix}--article-card--dark
   .#{$prefix}--article-card__icon--action
   svg {
-  fill: $carbon--gray-70; //$disabled-02 for gray 90
+  fill: $gray-70; //$disabled-02 for gray 90
 }

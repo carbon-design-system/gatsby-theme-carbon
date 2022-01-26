@@ -2,7 +2,7 @@
   width: 100%;
   --space: 32px;
 
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     width: 66.67%;
   }
 }
@@ -12,10 +12,10 @@
 }
 
 .link {
-  @include carbon--type-style('expressive-heading-03', true);
+  @include type-style('expressive-heading-03', true);
   position: relative;
   display: inline-block;
-  transition: color $transition--base;
+  // transition: color $transition--base;
   color: currentColor;
   text-decoration: none;
   margin-bottom: $spacing-03;
@@ -35,13 +35,13 @@
 }
 
 .list--small .link {
-  @include carbon--type-style('body-long-02');
+  @include type-style('body-long-02');
   margin-bottom: 0;
 }
 
 // Multiple Columns
 .multiple-columns {
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     column-count: 2;
   }
 }

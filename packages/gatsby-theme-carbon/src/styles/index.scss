@@ -3,7 +3,9 @@
 @use './internal/global';
 
 // Global stylesheet to inject global dependencies via shadowing
-@use 'global';
+@use 'global' as shadowGlobal;
+
+$prefix: 'cds';
 
 //---------------------------------------
 // Page styles
@@ -24,4 +26,4 @@
 // names take precedence over includes
 // inside component class names
 //---------------------------------------
-// @include carbon--type-classes();
+// @include react.type-classes();

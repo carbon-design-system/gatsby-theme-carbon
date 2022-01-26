@@ -3,8 +3,8 @@
   flex-direction: column;
   justify-content: center;
   background: $ui-01;
-  height: $layout-05;
-  transition: background $duration--fast-02;
+  height: $spacing-10;
+  transition: background $duration-fast-02;
 }
 
 .card:hover {
@@ -20,7 +20,7 @@
 }
 
 .title {
-  @include carbon--type-style('body-short-01');
+  @include type-style('body-short-01');
 }
 
 .image {

@@ -7,10 +7,11 @@
 }
 
 .notification :global(.#{$prefix}--inline-notification__subtitle p) {
-  @include carbon--type-style('body-short-01');
+  @include type-style('body-short-01');
 }
 
-.notification :global(.#{$prefix}--inline-notification__subtitle .#{$prefix}--row) {
+.notification
+  :global(.#{$prefix}--inline-notification__subtitle .#{$prefix}--row) {
   margin: 0;
 }
 
@@ -22,6 +23,6 @@ li .notification {
 
 // Remove this when Notifications are fixed upstream
 .darkMode {
-  background: $carbon--gray-90 !important;
-  color: $carbon--white-0;
+  background: $gray-90 !important;
+  color: $white-0;
 }

@@ -1,5 +1,5 @@
 .#{$prefix}--side-nav {
-  border-right: 1px solid $carbon--gray-80;
+  border-right: 1px solid $gray-80;
 }
 
 .#{$prefix}--side-nav--website .#{$prefix}--side-nav__item {
@@ -82,7 +82,7 @@
 
 .#{$prefix}--side-nav .#{$prefix}--side-nav__submenu,
 .#{$prefix}--side-nav__item > a.#{$prefix}--side-nav__link {
-  @include carbon--type-style('heading-01');
+  @include type-style('heading-01');
   color: $active-01;
 }
 
@@ -213,7 +213,7 @@
 .#{$prefix}--side-nav a.#{$prefix}--side-nav__link[aria-current='page'],
 .#{$prefix}--side-nav__menu a.#{$prefix}--side-nav__link--current,
 .#{$prefix}--side-nav__menu a.#{$prefix}--side-nav__link[aria-current='page'] {
-  background-color: $carbon--gray-80;
+  background-color: $gray-80;
 }
 
 .#{$prefix}--side-nav.#{$prefix}--side-nav--website--light
@@ -249,8 +249,8 @@ a.#{$prefix}--side-nav__link > .#{$prefix}--side-nav__icon {
   visibility: hidden;
   opacity: 0;
   will-change: opacity;
-  transition: $transition--expansion opacity $carbon--standard-easing,
-    $transition--expansion visibility $carbon--standard-easing;
+  transition: $transition--expansion opacity $standard-easing,
+    $transition--expansion visibility $standard-easing;
   background: $overlay-01;
   position: fixed;
   height: 100vh;
@@ -270,7 +270,7 @@ a.#{$prefix}--side-nav__link > .#{$prefix}--side-nav__icon {
     visibility: initial;
   }
 
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     & + div {
       position: inherit;
     }

@@ -1,6 +1,17 @@
 // These resources get shared with every css module.
 // We only want to import variables/mixins/helpers, not things that generate css.
 
-@import '~carbon-components/scss/globals/scss/vars';
-@import '~carbon-components/scss/globals/scss/layout';
-@import '~@carbon/elements/scss/type/type';
+// carbon--breakpoint
+@use '@carbon/react/scss/breakpoint' as *;
+// $carbon--white-0
+@use '@carbon/react/scss/colors' as *;
+// $prefix
+@use '@carbon/react/scss/config' as *;
+// $spacing-0X
+@use '@carbon/react/scss/spacing' as *;
+// carbon--type-style
+@use '@carbon/react/scss/type' as *;
+// $standard-easing $transition-x
+@use '@carbon/react/scss/motion' as *;
+// rem() em()
+// @use '@carbon/react/scss/utilities/convert' as *;
