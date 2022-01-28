@@ -12,7 +12,7 @@
 ## How do I use it?
 
 Check out our quick
-[getting started](https://gatsby-theme-carbon.now.sh/getting-started) guide and
+[getting started](https://gatsby.carbondesignsystem.com/getting-started) guide and
 video!
 
 `gatsby-theme-carbon` at it’s core relies on [mdx](https://mdxjs.com/) for page
@@ -28,4 +28,4 @@ You’re also free to make your own components and use them in your MDX pages.
 
 ## What’s Next?
 
-[Check out the docs!](https://gatsby-theme-carbon.now.sh)
+[Check out the docs!](https://gatsby.carbondesignsystem.com)
