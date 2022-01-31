@@ -7,8 +7,8 @@ The Gatsby Carbon theme includes all the configuration you need to build a beaut
 ## Resources
 
 - [Contribution guidelines](.github/CONTRIBUTING.md)
-- [Getting Started](https://gatsby-theme-carbon.now.sh/getting-started)
-- [Guides](https://gatsby-theme-carbon.now.sh/guides/configuration)
-- [Components](https://gatsby-theme-carbon.now.sh/components/markdown)
-- [Demo](https://gatsby-theme-carbon.now.sh/demo)
-- [Gallery](https://gatsby-theme-carbon.now.sh/gallery)
+- [Getting Started](https://gatsby.carbondesignsystem.com/getting-started)
+- [Guides](https://gatsby.carbondesignsystem.com/guides/configuration)
+- [Components](https://gatsby.carbondesignsystem.com/components/markdown)
+- [Demo](https://gatsby.carbondesignsystem.com/demo)
+- [Gallery](https://gatsby.carbondesignsystem.com/gallery)
