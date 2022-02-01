@@ -11,10 +11,10 @@ import {
   videoIsPlaying,
 } from './Video.module.scss';
 import usePathPrefix from '../../util/hooks/usePathprefix';
-import usePrefix from '../../util/hooks/usePrefix';
+// import usePrefix from '../../util/hooks/usePrefix';
 
 const Video = ({ autoPlay, vimeoId, title, src, poster, muted, ...props }) => {
-  const prefix = usePrefix();
+  // const prefix = usePrefix();
   const [isPlaying, setIsPlaying] = useState(autoPlay);
   const pathPrefix = usePathPrefix();
   const videoRef = useRef(null);
@@ -116,7 +116,7 @@ const Video = ({ autoPlay, vimeoId, title, src, poster, muted, ...props }) => {
         onKeyDown={onKeyDown}
         tabIndex="0">
         {isPlaying ? <Pause size={32} /> : <Play size={32} />}
-        <span className={`${prefix}--assistive-text`}>
+        <span className="cds--assistive-text">
           {isPlaying ? 'Pause' : 'Play'}
         </span>
       </div>

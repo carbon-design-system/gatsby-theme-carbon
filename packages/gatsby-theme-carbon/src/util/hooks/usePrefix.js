@@ -6,6 +6,6 @@
  */
 
 // for functional components only
-export default function usePrefix() {
-  return 'cds';
-}
+// export default function usePrefix() {
+//   return 'cds';
+// }

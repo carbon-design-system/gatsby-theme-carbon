@@ -41,7 +41,7 @@
   }
 }
 
-.squareCard :global(.#{$prefix}--tile) {
+.squareCard :global(.cds--tile) {
   height: 100%;
   padding: $spacing-05 15% $spacing-05 $spacing-05;
   position: relative;
@@ -60,7 +60,12 @@
   }
 }
 
-.squareCard :global(.#{$prefix}--tile:focus) {
+// Dark
+.darkMode :global(.cds--tile) {
+  background: $gray-90; //$ui-background for gray 90 theme
+}
+
+.squareCard :global(.cds--tile:focus) {
   outline: none;
 
   &::after {
@@ -130,12 +135,7 @@
   height: 20px;
 }
 
-// Dark
-.darkMode :global(.#{$prefix}--tile) {
-  background: $gray-90; //$ui-background for gray 90 theme
-}
-
-.darkMode :global(.#{$prefix}--tile:hover) {
+.darkMode :global(.cds--tile:hover) {
   background: $gray-80; //$hover-ui for gray 90 theme
 }
 
@@ -155,7 +155,7 @@
   cursor: not-allowed;
 }
 
-.disabled :global(.#{$prefix}--tile:hover) {
+.disabled :global(.cds--tile:hover) {
   background: $ui-01;
   cursor: not-allowed;
 }

@@ -5,16 +5,14 @@ import { CheckmarkFilled, Misuse } from '@carbon/react/icons';
 
 export default class DoDontExample extends React.Component {
   renderCaption = (caption, captionTitle) => {
-    const prefix = 'cds';
+    // const prefix = 'cds';
     if (caption || captionTitle) {
       return (
-        <div className={`${prefix}--example__caption`}>
+        <div className="cds--example__caption">
           {captionTitle && (
-            <p className={`${prefix}--example__title`}>{captionTitle}</p>
+            <p className="cds--example__title">{captionTitle}</p>
           )}
-          {caption && (
-            <p className={`${prefix}--example__description`}>{caption}</p>
-          )}
+          {caption && <p className="cds--example__description">{caption}</p>}
         </div>
       );
     }
@@ -23,34 +21,32 @@ export default class DoDontExample extends React.Component {
   render() {
     const { children, caption, captionTitle, text, aspectRatio, color, type } =
       this.props;
-    const prefix = 'cds';
+    // const prefix = 'cds';
 
-    const wrapperClassNames = cx(`${prefix}--example`, {
-      [`${prefix}--example--square`]: aspectRatio === '1:1',
-      [`${prefix}--example--correct`]: type === 'do',
-      [`${prefix}--example--incorrect`]: type !== 'do',
-      [`${prefix}--example--dark`]: color === 'dark',
+    const wrapperClassNames = cx(`cds--example`, {
+      [`cds--example--square`]: aspectRatio === '1:1',
+      [`cds--example--correct`]: type === 'do',
+      [`cds--example--incorrect`]: type !== 'do',
+      [`cds--example--dark`]: color === 'dark',
     });
 
-    const iconClassNames = cx(`${prefix}--example__icon`, {
-      [`${prefix}--example__icon--correct`]: type === 'do',
-      [`${prefix}--example__icon--incorrect`]: type !== 'do',
+    const iconClassNames = cx(`cds--example__icon`, {
+      [`cds--example__icon--correct`]: type === 'do',
+      [`cds--example__icon--incorrect`]: type !== 'do',
     });
 
     return (
       <div className={wrapperClassNames}>
-        <div className={`${prefix}--example-card`}>
-          <div className={`${prefix}--example-card__content`}>
+        <div className="cds--example-card">
+          <div className="cds--example-card__content">
             {type === 'do' ? (
               <CheckmarkFilled size={24} className={iconClassNames} />
             ) : (
               <Misuse size={24} className={iconClassNames} />
             )}
-            <div className={`${prefix}--example__content`}>
+            <div className="cds--example__content">
               {children}
-              {text ? (
-                <p className={`${prefix}--example__text`}>{text}</p>
-              ) : null}
+              {text ? <p className="cds--example__text">{text}</p> : null}
             </div>
           </div>
         </div>

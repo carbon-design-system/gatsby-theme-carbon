@@ -1,3 +1,16 @@
+// carbon--breakpoint
+@use '@carbon/react/scss/breakpoint' as *;
+// $carbon--white-0
+@use '@carbon/react/scss/colors' as *;
+// $spacing-0X
+@use '@carbon/react/scss/spacing' as *;
+// carbon--type-style
+@use '@carbon/react/scss/type' as *;
+// $standard-easing $transition-x
+@use '@carbon/react/scss/motion' as *;
+// color tokens
+@use '@carbon/react/scss/compat/theme' as *;
+
 .container {
   background: var(--cds-ui-background);
   width: 100%;
@@ -8,7 +21,7 @@
   margin-top: 2rem;
 }
 
-.container .#{$prefix}--grid {
+.container .cds--grid {
   margin: 0;
 
   @include breakpoint('lg') {
@@ -25,14 +38,14 @@
   }
 }
 
-.container .#{$prefix}--col-no-gutter {
+.container .cds--col-no-gutter {
   padding: 0;
 }
 
 //---------------------------------------
 // Header styles
 //---------------------------------------
-.#{$prefix}--header__menu-trigger {
+.cds--header__menu-trigger {
   @include breakpoint('lg') {
     display: none;
   }
@@ -44,7 +57,7 @@
 .page-p,
 .component-docs p {
   @include type-style('body-long-02');
-  padding: 0 0 $spacing-lg;
+  padding: 0 0 $spacing-06;
 
   &:empty {
     padding: 0;
@@ -66,12 +79,12 @@
     display: block;
     margin: 3rem 0;
     height: 1px;
-    background: $ui-03;
+    background: $layer-accent-01;
     border: 0px transparent;
   }
 }
 
-.#{$prefix}--platform-header {
+.cds--platform-header {
   z-index: 9999;
 }
 
@@ -96,10 +109,10 @@ img {
 //svg and gif images
 .page-content > div > img[src*='svg'],
 .page-content > div > img[src*='gif'] {
-  background: $ui-02;
+  background: $layer-02;
 }
 
-.#{$prefix}--website-switcher {
+.cds--website-switcher {
   z-index: 10000; /* old z('floating') #940 */
 }
 
@@ -111,42 +124,42 @@ img {
 // Grid style updates/overrides, moved over from deprecated addons pacakge
 
 // No gutter class names
-.container .#{$prefix}--no-gutter-lg {
+.container .cds--no-gutter-lg {
   @include breakpoint('lg') {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-.container .#{$prefix}--no-gutter-md {
+.container .cds--no-gutter-md {
   @include breakpoint('md') {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-.container .#{$prefix}--no-gutter-sm {
+.container .cds--no-gutter-sm {
   padding-left: 0;
   padding-right: 0;
 }
 
-.container .#{$prefix}--no-gutter-lg--left {
+.container .cds--no-gutter-lg--left {
   @include breakpoint('lg') {
     padding-left: 0;
   }
 }
 
-.container .#{$prefix}--no-gutter-md--left {
+.container .cds--no-gutter-md--left {
   @include breakpoint('md') {
     padding-left: 0;
   }
 }
 
-.container .#{$prefix}--no-gutter-sm--left {
+.container .cds--no-gutter-sm--left {
   padding-left: 0;
 }
 
-.container .#{$prefix}--gutter-lg {
+.container .cds--gutter-lg {
   @include breakpoint('lg') {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -154,18 +167,18 @@ img {
 }
 
 // Clears styles for nested grid components
-.container .#{$prefix}--row .#{$prefix}--row {
+.container .cds--row .cds--row {
   margin-left: 0;
   margin-right: 0;
 }
 
-.container .#{$prefix}--row .#{$prefix}--row > div {
+.container .cds--row .cds--row > div {
   margin: 0;
   max-width: 100%;
   flex: auto;
 }
 
 // TODO: remove when fix is released. See https://github.com/carbon-design-system/carbon/issues/4804
-.#{$prefix}--inline-notification--low-contrast:before {
+.cds--inline-notification--low-contrast:before {
   pointer-events: none !important;
 }

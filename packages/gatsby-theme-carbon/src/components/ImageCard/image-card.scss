@@ -1,15 +1,28 @@
+// carbon--breakpoint
+@use '@carbon/react/scss/breakpoint' as *;
+// $carbon--white-0
+@use '@carbon/react/scss/colors' as *;
+// $spacing-0X
+@use '@carbon/react/scss/spacing' as *;
+// carbon--type-style
+@use '@carbon/react/scss/type' as *;
+// $standard-easing $transition-x
+@use '@carbon/react/scss/motion' as *;
+
+@use '@carbon/react/scss/compat/theme' as *;
+
 // #906: We need to use the attribute selector here b.c. we don't control the column,
 // it's provided by the developers through MDX and we don't want to force an extra prop
 .image-card-group [class*='--column'] {
   --space: 0;
 }
 
-.#{$prefix}--image-card {
+.cds--image-card {
   //overrides global vertical spacing
   --space: 0;
 }
 
-.#{$prefix}--image-card .#{$prefix}--tile {
+.cds--image-card .cds--tile {
   height: 100%;
   padding: $spacing-05 25% $spacing-05 $spacing-05;
   position: relative;
@@ -28,7 +41,7 @@
   }
 }
 
-.#{$prefix}--image-card .#{$prefix}--tile:focus {
+.cds--image-card .cds--tile:focus {
   outline: none;
 
   &::after {
@@ -36,7 +49,7 @@
   }
 }
 
-.#{$prefix}--image-card__title {
+.cds--image-card__title {
   @include type-style('productive-heading-03');
   text-decoration: none;
   color: $text-04;
@@ -44,7 +57,7 @@
   z-index: 1;
 }
 
-.#{$prefix}--image-card__subtitle {
+.cds--image-card__subtitle {
   @include type-style('heading-01');
   font-weight: 400;
   text-decoration: none;
@@ -55,7 +68,7 @@
   z-index: 1;
 }
 
-.#{$prefix}--image-card__icon--action {
+.cds--image-card__icon--action {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -64,12 +77,12 @@
   z-index: 1;
 }
 
-.#{$prefix}--image-card__icon--action svg {
+.cds--image-card__icon--action svg {
   fill: $gray-10; //$icon-01 for grsay 90 theme
 }
 
 // Image
-.#{$prefix}--image-card__img {
+.cds--image-card__img {
   position: absolute;
   top: 0;
   left: 0;
@@ -78,16 +91,16 @@
   overflow: hidden;
 }
 
-.#{$prefix}--image-card__img .gatsby-resp-image-wrapper,
-.#{$prefix}--image-card__img img[src*='svg'],
-.#{$prefix}--image-card__img img[src*='gif'] {
+.cds--image-card__img .gatsby-resp-image-wrapper,
+.cds--image-card__img img[src*='svg'],
+.cds--image-card__img img[src*='gif'] {
   position: relative;
   width: 100%;
   height: 100%;
   max-width: 100% !important;
 }
 
-.#{$prefix}--image-card__img:after {
+.cds--image-card__img:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -99,7 +112,7 @@
   transition: opacity $duration-fast-01;
 }
 
-.#{$prefix}--image-card__spacing {
+.cds--image-card__spacing {
   margin-right: 1px;
   margin-bottom: 1px;
 
@@ -108,57 +121,53 @@
   }
 }
 
-.#{$prefix}--image-card
-  .#{$prefix}--tile:hover
-  .#{$prefix}--image-card__img:after {
+.cds--image-card--dark .cds--image-card__img:after {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.cds--image-card .cds--tile:hover .cds--image-card__img:after {
   opacity: 1;
 }
 
 // Dark
-.#{$prefix}--image-card__title--dark,
-.#{$prefix}--image-card__subtitle--dark {
+.cds--image-card__title--dark,
+.cds--image-card__subtitle--dark {
   color: $text-01;
 }
 
-.#{$prefix}--image-card__icon--action--dark svg {
+.cds--image-card__icon--action--dark svg {
   fill: $icon-01;
 }
 
-.#{$prefix}--image-card--dark .#{$prefix}--image-card__img:after {
-  background: rgba(0, 0, 0, 0.15);
-}
-
 // Disabled
-.#{$prefix}--image-card--disabled .#{$prefix}--tile:hover {
+.cds--image-card--disabled .cds--tile:hover {
   cursor: not-allowed;
 }
 
-.#{$prefix}--image-card--disabled .#{$prefix}--image-card__title,
-.#{$prefix}--image-card--disabled .#{$prefix}--image-card__subtitle {
+.cds--image-card--disabled .cds--image-card__title,
+.cds--image-card--disabled .cds--image-card__subtitle {
   color: $disabled-03;
 }
 
-.#{$prefix}--image-card--disabled .#{$prefix}--image-card__icon--action svg {
+.cds--image-card--disabled .cds--image-card__icon--action svg {
   fill: $disabled-02;
 }
 
-.#{$prefix}--image-card--disabled .#{$prefix}--image-card__img:after {
+.cds--image-card--disabled .cds--image-card__img:after {
   display: none;
 }
 
 // Disabled dark
-.#{$prefix}--image-card--disabled .#{$prefix}--image-card__title--dark,
-.#{$prefix}--image-card--disabled .#{$prefix}--image-card__subtitle--dark {
+.cds--image-card--disabled .cds--image-card__title--dark,
+.cds--image-card--disabled .cds--image-card__subtitle--dark {
   color: $gray-50; //$disabled-03 for gray 90
 }
 
-.#{$prefix}--image-card--disabled
-  .#{$prefix}--image-card__icon--action--dark
-  svg {
+.cds--image-card--disabled .cds--image-card__icon--action--dark svg {
   fill: $gray-70; //$disabled-02 for gray 90
 }
 
 // dark background
-.container--dark .#{$prefix}--image-card__img {
+.container--dark .cds--image-card__img {
   background: $gray-100;
 }

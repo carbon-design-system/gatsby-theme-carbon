@@ -8,7 +8,7 @@
   scrollbar-width: none;
   transform: translateX(-256px);
 
-  & :global(.#{$prefix}--side-nav) {
+  & :global(.cds--side-nav) {
     box-shadow: none !important;
   }
 
@@ -32,7 +32,7 @@
   }
 }
 
-.leftNavWrapper :global(.#{$prefix}--side-nav__navigation) {
+.leftNavWrapper :global(.cds--side-nav__navigation) {
   padding-top: 0;
   padding-bottom: 48px;
 }

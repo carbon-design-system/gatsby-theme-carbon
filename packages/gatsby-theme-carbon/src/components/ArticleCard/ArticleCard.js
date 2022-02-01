@@ -27,57 +27,50 @@ export default class ArticleCard extends React.Component {
       ...rest
     } = this.props;
 
-    const prefix = 'cds';
+    // const prefix = 'cds';
 
     let isLink;
     if (href !== undefined) {
       isLink = href.charAt(0) === '/';
     }
 
-    const ArticleCardClassNames = cx(className, `${prefix}--article-card`, {
-      [`${prefix}--article-card--disabled`]: disabled,
-      [`${prefix}--article-card--dark`]: color === 'dark',
+    const ArticleCardClassNames = cx(className, `cds--article-card`, {
+      [`cds--article-card--disabled`]: disabled,
+      [`cds--article-card--dark`]: color === 'dark',
     });
 
     const aspectRatioClassNames = cx(
-      [`${prefix}--aspect-ratio`],
-      [`${prefix}--aspect-ratio--2x1`]
+      [`cds--aspect-ratio`],
+      [`cds--aspect-ratio--2x1`]
     );
 
     const cardContentClassNames = cx(
-      [`${prefix}--tile`],
-      [`${prefix}--tile--clickable`],
-      [`${prefix}--article-card_content`]
+      [`cds--tile`],
+      [`cds--tile--clickable`],
+      [`cds--article-card_content`]
     );
 
     const cardContent = (
       <>
-        <div className={`${prefix}--article-card__img`}>{children}</div>
+        <div className="cds--article-card__img">{children}</div>
         <div className={aspectRatioClassNames}>
-          <div
-            className={`${prefix}--aspect-ratio--object ${prefix}--article-card__tile`}>
+          <div className="cds--aspect-ratio--object cds--article-card__tile">
             {subTitle ? (
-              <h5 className={`${prefix}--article-card__subtitle`}>
-                {subTitle}
-              </h5>
+              <h5 className="cds--article-card__subtitle">{subTitle}</h5>
             ) : null}
             {title ? (
-              <h4 className={`${prefix}--article-card__title`}>{title}</h4>
+              <h4 className="cds--article-card__title">{title}</h4>
             ) : null}
-            <div className={`${prefix}--article-card__info`}>
+            <div className="cds--article-card__info">
               {author ? (
-                <p className={`${prefix}--article-card__author`}>{author}</p>
+                <p className="cds--article-card__author">{author}</p>
               ) : null}
-              {date ? (
-                <p className={`${prefix}--article-card__date`}>{date}</p>
-              ) : null}
+              {date ? <p className="cds--article-card__date">{date}</p> : null}
               {readTime ? (
-                <p className={`${prefix}--article-card__read-time`}>
-                  {readTime}
-                </p>
+                <p className="cds--article-card__read-time">{readTime}</p>
               ) : null}
             </div>
-            <div className={`${prefix}--article-card__icon--action`}>
+            <div className="cds--article-card__icon--action">
               {actionIcon === 'launch' && !disabled ? (
                 <Launch size={20} aria-label="Open" />
               ) : null}

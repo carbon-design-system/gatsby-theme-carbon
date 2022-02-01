@@ -16,10 +16,10 @@ import NavContext from '../../util/context/NavContext';
 import useMetadata from '../../util/hooks/useMetadata';
 
 import * as styles from './Header.module.scss';
-import usePrefix from '../../util/hooks/usePrefix';
+// import usePrefix from '../../util/hooks/usePrefix';
 
 const Header = ({ children }) => {
-  const prefix = usePrefix();
+  // const prefix = usePrefix();
   const {
     leftNavIsOpen,
     toggleNavState,
@@ -37,7 +37,7 @@ const Header = ({ children }) => {
       })}>
       <SkipToContent href="#main-content" className={styles.skipToContent} />
       <HeaderMenuButton
-        className={cx(`${prefix}--header__action--menu`, styles.headerButton)}
+        className={cx(`cds--header__action--menu`, styles.headerButton)}
         aria-label="Open menu"
         onClick={() => {
           toggleNavState('leftNavIsOpen');

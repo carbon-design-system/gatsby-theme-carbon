@@ -1,6 +1,6 @@
-@import '~carbon-components/scss/globals/scss/layout';
+// @import '~carbon-components/scss/globals/scss/layout';
 
-:global(.#{$prefix}--header__global) {
+:global(.cds--header__global) {
   position: absolute;
   top: 0;
   right: 0;
@@ -17,8 +17,13 @@
   z-index: 2;
 }
 
+.header:global(.cds--header) {
+  background-color: $gray-100;
+  border-bottom: 1px solid $gray-80;
+}
+
 // Overrides upstream Carbon styles for header nav
-.headerWithHeaderNav :global(.#{$prefix}--header__nav) {
+.headerWithHeaderNav :global(.cds--header__nav) {
   @include breakpoint('lg') {
     display: block;
     position: absolute;
@@ -30,17 +35,17 @@
 }
 
 // Aligns HeaderNav with 12 col grid
-.headerWithHeaderNav :global(.#{$prefix}--header__menu-bar) {
+.headerWithHeaderNav :global(.cds--header__menu-bar) {
   margin-left: 5px;
 }
 
 // Overrides upstream Carbon styles for header nav
-.headerWithHeaderNav :global(.#{$prefix}--header__menu-item) {
+.headerWithHeaderNav :global(.cds--header__menu-item) {
   font-size: 1rem;
 }
 
 // Overrides upstream Carbon styles for left nav in mobile.
-.header :global(.#{$prefix}--header__action--menu) {
+.header :global(.cds--header__action--menu) {
   border: none;
   top: 0.5px;
   position: relative;
@@ -51,7 +56,7 @@
 }
 
 // Overrides upstream Carbon styles for header nav
-.headerWithHeaderNav :global(.#{$prefix}--header__nav::before) {
+.headerWithHeaderNav :global(.cds--header__nav::before) {
   display: none;
 }
 
@@ -62,7 +67,7 @@
 }
 
 // Overrides upstream Carbon styles for left nav in mobile.
-.header :global(.#{$prefix}--header__action--menu):focus {
+.header :global(.cds--header__action--menu):focus {
   outline: 2px solid $white-0;
   outline-offset: -2px;
 }
@@ -78,8 +83,7 @@ header.header {
   z-index: 10000; /* old z('floating') #940 */
 }
 
-.header
-  :global(.#{$prefix}--header__action--menu.#{$prefix}--header__action--active) {
+.header :global(.cds--header__action--menu.cds--header__action--active) {
   background-color: $gray-100;
   border-right: 1px solid $inverse-02;
 
@@ -88,7 +92,7 @@ header.header {
   }
 }
 
-.header :global(.#{$prefix}--header__name):focus {
+.header :global(.cds--header__name):focus {
   box-shadow: none;
 }
 
@@ -160,7 +164,7 @@ header.header {
 
 // Switcher button, extra specificity to override Carbon tooltip button styles
 // Hex values used pending shell theming
-.header :global(.#{$prefix}--tooltip__trigger).header-button.switcher-button {
+.header :global(.cds--tooltip__trigger).header-button.switcher-button {
   &:focus {
     box-shadow: none;
     border: none;
@@ -169,7 +173,7 @@ header.header {
   }
 }
 
-.header :global(a.#{$prefix}--header__menu-item:hover) {
+.header :global(a.cds--header__menu-item:hover) {
   color: $white-0;
 }
 

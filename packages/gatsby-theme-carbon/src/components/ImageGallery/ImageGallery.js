@@ -21,10 +21,10 @@ import {
   leftNav,
   addNoScroll,
 } from './ImageGallery.module.scss';
-import usePrefix from '../../util/hooks/usePrefix';
+// import usePrefix from '../../util/hooks/usePrefix';
 
 function ImageGallery({ children, className }) {
-  const prefix = usePrefix();
+  // const prefix = usePrefix();
   const [portalsNode, updateNode] = useState(null);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [activeImageIndex, updateActiveImageIndex] = useState(null);
@@ -149,7 +149,7 @@ function ImageGallery({ children, className }) {
                   </button>
                 </Column>
               </Row>
-              <Grid className={cx(`${prefix}--grid--full-width`, galleryGrid)}>
+              <Grid className={cx(`cds--grid--full-width`, galleryGrid)}>
                 <Row className={galleryRow}>
                   <Column colLg={3} className={navButtonsContainer}>
                     {activeImageIndex - 1 >= 0 && (

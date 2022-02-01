@@ -1,17 +1,17 @@
-.accordion :global(.#{$prefix}--accordion__content) {
+.accordion :global(.cds--accordion__content) {
   padding-right: 4rem;
 }
 
-.accordion :global(.#{$prefix}--accordion__heading) {
+.accordion :global(.cds--accordion__heading) {
   padding-top: $spacing-04;
   padding-bottom: $spacing-04;
 }
 
-.accordion :global(.#{$prefix}--accordion__title) {
+.accordion :global(.cds--accordion__title) {
   @include type-style('heading-02');
   padding-right: $spacing-07;
 }
 
-.accordion :global(.#{$prefix}--accordion__content) p {
+.accordion :global(.cds--accordion__content) p {
   @include type-style('body-long-02');
 }

@@ -1,13 +1,13 @@
 import React from 'react';
 import cx from 'classnames';
 import { list } from './Markdown.module.scss';
-import usePrefix from '../../util/hooks/usePrefix';
+// import usePrefix from '../../util/hooks/usePrefix';
 
-const prefix = usePrefix();
+// const prefix = usePrefix();
 
 const Ol = ({ children, nested, start, className, ...rest }) => {
-  const classNames = cx(className, `${prefix}--list--ordered--native`, list, {
-    [`${prefix}--list--nested`]: nested,
+  const classNames = cx(className, `cds--list--ordered--native`, list, {
+    [`cds--list--nested`]: nested,
   });
 
   return (

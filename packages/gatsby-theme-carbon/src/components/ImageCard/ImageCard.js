@@ -28,44 +28,44 @@ export default class ImageCard extends React.Component {
       ...rest
     } = this.props;
 
-    const prefix = 'cds';
+    // const prefix = 'cds';
 
     let isLink;
     if (href !== undefined) {
       isLink = href.charAt(0) === '/';
     }
 
-    const ImageCardClassNames = cx(className, `${prefix}--image-card`, {
-      [`${prefix}--image-card--disabled`]: disabled,
-      [`${prefix}--image-card--dark`]: hoverColor === 'dark',
+    const ImageCardClassNames = cx(className, `cds--image-card`, {
+      [`cds--image-card--disabled`]: disabled,
+      [`cds--image-card--dark`]: hoverColor === 'dark',
     });
 
     const aspectRatioClassNames = cx(
-      `${prefix}--aspect-ratio`,
-      `${prefix}--image-card__spacing`,
+      `cds--aspect-ratio`,
+      `cds--image-card__spacing`,
       {
-        [`${prefix}--aspect-ratio--2x1`]: aspectRatio === '2:1',
-        [`${prefix}--aspect-ratio--1x2`]: aspectRatio === '1:2',
-        [`${prefix}--aspect-ratio--1x1`]: aspectRatio === '1:1',
-        [`${prefix}--aspect-ratio--16x9`]: aspectRatio === '16:9',
-        [`${prefix}--aspect-ratio--4x3`]: aspectRatio === '4:3',
+        [`cds--aspect-ratio--2x1`]: aspectRatio === '2:1',
+        [`cds--aspect-ratio--1x2`]: aspectRatio === '1:2',
+        [`cds--aspect-ratio--1x1`]: aspectRatio === '1:1',
+        [`cds--aspect-ratio--16x9`]: aspectRatio === '16:9',
+        [`cds--aspect-ratio--4x3`]: aspectRatio === '4:3',
       }
     );
 
-    const carbonTileclassNames = cx(`${prefix}--tile`, {
-      [`${prefix}--tile--clickable`]: href !== undefined,
+    const carbonTileclassNames = cx(`cds--tile`, {
+      [`cds--tile--clickable`]: href !== undefined,
     });
 
-    const titleClassNames = cx(`${prefix}--image-card__title`, {
-      [`${prefix}--image-card__title--dark`]: titleColor === 'dark',
+    const titleClassNames = cx(`cds--image-card__title`, {
+      [`cds--image-card__title--dark`]: titleColor === 'dark',
     });
 
-    const subTitleClassNames = cx(`${prefix}--image-card__subtitle`, {
-      [`${prefix}--image-card__subtitle--dark`]: subTitleColor === 'dark',
+    const subTitleClassNames = cx(`cds--image-card__subtitle`, {
+      [`cds--image-card__subtitle--dark`]: subTitleColor === 'dark',
     });
 
-    const iconClassNames = cx(`${prefix}--image-card__icon--action`, {
-      [`${prefix}--image-card__icon--action--dark`]: iconColor === 'dark',
+    const iconClassNames = cx(`cds--image-card__icon--action`, {
+      [`cds--image-card__icon--action--dark`]: iconColor === 'dark',
     });
 
     const cardContent = (
@@ -89,7 +89,7 @@ export default class ImageCard extends React.Component {
             <Error size={20} aria-label="disabled" />
           ) : null}
         </div>
-        <div className={`${prefix}--image-card__img`}>{children}</div>
+        <div className="cds--image-card__img">{children}</div>
       </>
     );
 
@@ -113,9 +113,7 @@ export default class ImageCard extends React.Component {
     return (
       <div className={ImageCardClassNames} {...rest}>
         <div className={aspectRatioClassNames}>
-          <div className={`${prefix}--aspect-ratio--object`}>
-            {cardContainer}
-          </div>
+          <div className="cds--aspect-ratio--object">{cardContainer}</div>
         </div>
       </div>
     );

@@ -26,32 +26,30 @@ export default class ResourceCard extends React.Component {
       ...rest
     } = this.props;
 
-    const prefix = 'cds';
+    // const prefix = 'cds';
 
     let isLink;
     if (href !== undefined && !rest.download) {
       isLink = href.charAt(0) === '/';
     }
 
-    const ResourceCardClassNames = cx(className, `${prefix}--resource-card`, {
-      [`${prefix}--resource-card--disabled`]: disabled,
-      [`${prefix}--resource-card--dark`]: color === 'dark',
+    const ResourceCardClassNames = cx(className, `cds--resource-card`, {
+      [`cds--resource-card--disabled`]: disabled,
+      [`cds--resource-card--dark`]: color === 'dark',
     });
 
-    const carbonTileclassNames = cx([`${prefix}--tile`], {
-      [`${prefix}--tile--clickable`]: href !== undefined,
+    const carbonTileclassNames = cx([`cds--tile`], {
+      [`cds--tile--clickable`]: href !== undefined,
     });
 
     const cardContent = (
       <>
         {subTitle && (
-          <h5 className={`${prefix}--resource-card__subtitle`}>{subTitle}</h5>
+          <h5 className="cds--resource-card__subtitle">{subTitle}</h5>
         )}
-        {title && (
-          <h4 className={`${prefix}--resource-card__title`}>{title}</h4>
-        )}
-        <div className={`${prefix}--resource-card__icon--img`}>{children}</div>
-        <div className={`${prefix}--resource-card__icon--action`}>
+        {title && <h4 className="cds--resource-card__title">{title}</h4>}
+        <div className="cds--resource-card__icon--img">{children}</div>
+        <div className="cds--resource-card__icon--action">
           {actionIcon === 'launch' && !disabled ? (
             <Launch size={20} aria-label="Open resource" />
           ) : null}
@@ -104,12 +102,10 @@ export default class ResourceCard extends React.Component {
       <div className={ResourceCardClassNames}>
         <div
           className={cx(
-            `${prefix}--aspect-ratio`,
-            `${prefix}--aspect-ratio--${aspectRatio.replace(':', 'x')}`
+            `cds--aspect-ratio`,
+            `cds--aspect-ratio--${aspectRatio.replace(':', 'x')}`
           )}>
-          <div className={`${prefix}--aspect-ratio--object`}>
-            {cardContainer}
-          </div>
+          <div className="cds--aspect-ratio--object">{cardContainer}</div>
         </div>
       </div>
     );

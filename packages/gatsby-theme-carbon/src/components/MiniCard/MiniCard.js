@@ -12,7 +12,7 @@ import cx from 'classnames';
 import * as styles from './MiniCard.module.scss';
 import { Column } from '../Grid';
 
-import usePrefix from '../../util/hooks/usePrefix';
+// import usePrefix from '../../util/hooks/usePrefix';
 
 const getIcon = ({ actionIcon }) => {
   switch (actionIcon) {
@@ -38,7 +38,7 @@ const MiniCard = ({
   linkProps,
   ...rest
 }) => {
-  const prefix = usePrefix();
+  // const prefix = usePrefix();
   const cardContent = (
     <div className={cx(className, styles.card)}>
       <div className={styles.wrapper}>
@@ -58,11 +58,11 @@ const MiniCard = ({
   }
 
   const cardContainer = isLink ? (
-    <Link to={href} className={`${prefix}--tile--clickable`} {...linkProps}>
+    <Link to={href} className="cds--tile--clickable" {...linkProps}>
       {cardContent}
     </Link>
   ) : (
-    <a href={href} className={`${prefix}--tile--clickable`} {...linkProps}>
+    <a href={href} className="cds--tile--clickable" {...linkProps}>
       {cardContent}
     </a>
   );

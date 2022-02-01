@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { column } from './Grid.module.scss';
-import usePrefix from '../../util/hooks/usePrefix';
+// import usePrefix from '../../util/hooks/usePrefix';
 
-const prefix = usePrefix();
+// const prefix = usePrefix();
 
 export const Grid = ({ children, className, ...rest }) => (
-  <div className={cx(`${prefix}--grid`, className)} {...rest}>
+  <div className={cx(`cds--grid`, className)} {...rest}>
     {children}
   </div>
 );
@@ -22,7 +22,7 @@ Grid.propTypes = {
 };
 
 export const Row = ({ children, className, ...rest }) => (
-  <div className={cx(`${prefix}--row`, className)} {...rest}>
+  <div className={cx(`cds--row`, className)} {...rest}>
     {children}
   </div>
 );
@@ -63,27 +63,27 @@ export const Column = ({
   ...rest
 }) => {
   const colClasses = cx(column, {
-    [`${prefix}--no-gutter-sm`]: noGutterSm,
-    [`${prefix}--no-gutter-md`]: noGutterMd,
-    [`${prefix}--no-gutter-lg`]: noGutterLg,
-    [`${prefix}--no-gutter-xl`]: noGutterXl,
-    [`${prefix}--no-gutter-max`]: noGutterMax,
-    [`${prefix}--no-gutter-sm--left`]: noGutterSmLeft,
-    [`${prefix}--no-gutter-md--left`]: noGutterMdLeft,
-    [`${prefix}--no-gutter-lg--left`]: noGutterLgLeft,
-    [`${prefix}--no-gutter-xl--left`]: noGutterXlLeft,
-    [`${prefix}--no-gutter-max--left`]: noGutterMaxLeft,
-    [`${prefix}--offset-sm-${offsetSm}`]: offsetSm,
-    [`${prefix}--offset-md-${offsetMd}`]: offsetMd,
-    [`${prefix}--offset-lg-${offsetLg}`]: offsetLg,
-    [`${prefix}--offset-xl-${offsetXl}`]: offsetXl,
-    [`${prefix}--offset-max-${offsetMax}`]: offsetMax,
-    [`${prefix}--col-sm-${colSm}`]: colSm,
-    [`${prefix}--col-md-${colMd}`]: colMd,
-    [`${prefix}--col-lg-${colLg}`]: colLg,
-    [`${prefix}--col-xl-${colXl}`]: colXl,
-    [`${prefix}--col-max-${colMax}`]: colMax,
-    [`${prefix}--gutter-lg`]: gutterLg,
+    [`cds--no-gutter-sm`]: noGutterSm,
+    [`cds--no-gutter-md`]: noGutterMd,
+    [`cds--no-gutter-lg`]: noGutterLg,
+    [`cds--no-gutter-xl`]: noGutterXl,
+    [`cds--no-gutter-max`]: noGutterMax,
+    [`cds--no-gutter-sm--left`]: noGutterSmLeft,
+    [`cds--no-gutter-md--left`]: noGutterMdLeft,
+    [`cds--no-gutter-lg--left`]: noGutterLgLeft,
+    [`cds--no-gutter-xl--left`]: noGutterXlLeft,
+    [`cds--no-gutter-max--left`]: noGutterMaxLeft,
+    [`cds--offset-sm-${offsetSm}`]: offsetSm,
+    [`cds--offset-md-${offsetMd}`]: offsetMd,
+    [`cds--offset-lg-${offsetLg}`]: offsetLg,
+    [`cds--offset-xl-${offsetXl}`]: offsetXl,
+    [`cds--offset-max-${offsetMax}`]: offsetMax,
+    [`cds--col-sm-${colSm}`]: colSm,
+    [`cds--col-md-${colMd}`]: colMd,
+    [`cds--col-lg-${colLg}`]: colLg,
+    [`cds--col-xl-${colXl}`]: colXl,
+    [`cds--col-max-${colMax}`]: colMax,
+    [`cds--gutter-lg`]: gutterLg,
     [className]: className,
   });
 

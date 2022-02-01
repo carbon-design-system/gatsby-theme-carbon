@@ -1,3 +1,12 @@
+// carbon--breakpoint
+@use '@carbon/react/scss/breakpoint' as *;
+// $spacing-0X
+@use '@carbon/react/scss/spacing' as *;
+// carbon--type-style
+@use '@carbon/react/scss/type' as *;
+// color tokens
+@use '@carbon/react/scss/compat/theme' as *;
+
 .spacing-table td {
   vertical-align: top;
 }
@@ -15,7 +24,7 @@
     th {
       @include type-style('heading-01');
       color: $text-01;
-      padding: $spacing-md;
+      padding: $spacing-05;
       text-align: left;
       white-space: nowrap;
       background: $ui-01;
@@ -29,7 +38,7 @@
       td {
         @include type-style('body-short-01');
         color: $text-01;
-        padding: $spacing-md;
+        padding: $spacing-05;
 
         img[src$='checkmark--glyph.svg'] {
           width: 16px;

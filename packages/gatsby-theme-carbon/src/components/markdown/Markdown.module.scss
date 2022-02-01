@@ -25,14 +25,10 @@
   }
 }
 
-// If paragraph is inside a user specified row then allow the grid code to set the width and padding
-:global(.#{$prefix}--row .#{$prefix}--row) .paragraph {
+// responsive items in a list need to be full width
+.list-item .paragraph,
+.list-item :global(.cds--row) {
   width: 100%;
-  padding-left: 0;
-
-  @include breakpoint('md') {
-    padding-right: 0;
-  }
 }
 
 //---------------------------------------
@@ -83,19 +79,19 @@
 }
 
 //spacing exception for nested list items
-:global(.#{$prefix}--list--nested) {
+:global(.cds--list--nested) {
   --space: 0;
   width: 100%;
 }
 
-ul :global(.#{$prefix}--list--ordered--native),
-ul :global(.#{$prefix}--list--unordered) {
+ul :global(.cds--list--ordered--native),
+ul :global(.cds--list--unordered) {
   width: 100%;
   padding-right: $spacing-05;
 }
 
-:global(.#{$prefix}--list--ordered--native) .list-item,
-:global(.#{$prefix}--list--unordered) .list-item {
+:global(.cds--list--ordered--native) .list-item,
+:global(.cds--list--unordered) .list-item {
   @include type-style('body-long-02');
   padding-right: 0;
   width: 100%;
@@ -103,7 +99,7 @@ ul :global(.#{$prefix}--list--unordered) {
   padding-left: $spacing-02;
 }
 
-.list:not(:global(.#{$prefix}--list--nested)) > .list-item {
+.list:not(:global(.cds--list--nested)) > .list-item {
   padding-right: 2rem;
   @include breakpoint('md') {
     width: 75%;
@@ -114,30 +110,24 @@ ul :global(.#{$prefix}--list--unordered) {
 }
 
 // aligns UNnested ordered list item to body copy
-:global(.#{$prefix}--list--ordered--native:not(.#{$prefix}--list--nested)) {
+:global(.cds--list--ordered--native:not(.cds--list--nested)) {
   margin-left: 1ch;
 }
 
 // aligns NESTED ordered list item to parent list item text #993
-:global(.#{$prefix}--list--ordered--native.#{$prefix}--list--nested) {
+:global(.cds--list--ordered--native.cds--list--nested) {
   margin-left: 0.5rem;
 }
 
 //Safari only fixes to align unnested/nested ordered list to body copy #993
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  :global(.#{$prefix}--list--ordered:not(.#{$prefix}--list--nested)) {
+  :global(.cds--list--ordered:not(.cds--list--nested)) {
     padding-left: 0.5ch;
   }
 
-  :global(.#{$prefix}--list--ordered.#{$prefix}--list--nested) {
+  :global(.cds--list--ordered.cds--list--nested) {
     padding-left: 0.25rem;
   }
-}
-
-// responsive items in a list need to be full width
-.list-item .paragraph,
-.list-item :global(.#{$prefix}--row) {
-  width: 100%;
 }
 
 // Fix bleed when code snippets are used in a list
@@ -149,7 +139,7 @@ ul :global(.#{$prefix}--list--unordered) {
   }
 }
 
-:global(.container--dark) :global(.#{$prefix}--list__item) {
+:global(.container--dark) :global(.cds--list__item) {
   color: $white;
 }
 
@@ -191,7 +181,7 @@ ul :global(.#{$prefix}--list--unordered) {
 }
 
 // If quote is inside a user specified row then allow the grid code to set the width
-:global(.#{$prefix}--row) .blockquote .paragraph {
+:global(.cds--row) .blockquote .paragraph {
   @include breakpoint('md') {
     width: 100%;
   }
@@ -205,14 +195,25 @@ ul :global(.#{$prefix}--list--unordered) {
   text-indent: 0;
 }
 
-:global(.#{$prefix}--list--ordered:not(.#{$prefix}--list--nested)
-    > .#{$prefix}--list__item::before) {
+:global(.cds--list--ordered:not(.cds--list--nested)
+    > .cds--list__item::before) {
   display: none;
 }
 
-:global(.#{$prefix}--list--ordered:not(.#{$prefix}--list--nested)) .list-item {
+:global(.cds--list--ordered:not(.cds--list--nested)) .list-item {
   margin-left: 0.5rem;
 }
+
+// If paragraph is inside a user specified row then allow the grid code to set the width and padding
+:global(.cds--row .cds--row) .paragraph {
+  width: 100%;
+  padding-left: 0;
+
+  @include breakpoint('md') {
+    padding-right: 0;
+  }
+}
+
 //---------------------------------------
 // Headings
 //---------------------------------------
@@ -251,7 +252,7 @@ ul :global(.#{$prefix}--list--unordered) {
   font-feature-settings: 'sups' on;
 }
 
-.abbr:global(.#{$prefix}--tooltip--definition) button {
+.abbr:global(.cds--tooltip--definition) button {
   font-size: 1em;
 }
 //---------------------------------------

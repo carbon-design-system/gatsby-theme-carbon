@@ -28,7 +28,7 @@ export default class SquareCard extends React.Component {
       ...rest
     } = this.props;
 
-    const prefix = 'cds';
+    // const prefix = 'cds';
 
     let isLink;
     if (href !== undefined) {
@@ -44,14 +44,11 @@ export default class SquareCard extends React.Component {
       [styles.titleSmall]: smallTitle,
     });
 
-    const carbonTileclassNames = cx(
-      [`${prefix}--tile`],
-      [`${prefix}--tile--clickable`]
-    );
+    const carbonTileclassNames = cx([`cds--tile`], [`cds--tile--clickable`]);
 
     const aspectRatioClassNames = cx(
-      `${prefix}--aspect-ratio`,
-      `${prefix}--aspect-ratio--1x1`
+      `cds--aspect-ratio`,
+      `cds--aspect-ratio--1x1`
     );
 
     const cardContent = (
@@ -105,9 +102,7 @@ export default class SquareCard extends React.Component {
         className={SquareCardClassNames}
         {...rest}>
         <div className={aspectRatioClassNames}>
-          <div className={`${prefix}--aspect-ratio--object`}>
-            {cardContainer}
-          </div>
+          <div className="cds--aspect-ratio--object">{cardContainer}</div>
         </div>
       </Column>
     );

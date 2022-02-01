@@ -1,3 +1,10 @@
+// carbon--breakpoint
+@use '@carbon/react/scss/breakpoint' as *;
+// $carbon--white-0
+@use '@carbon/react/scss/colors' as *;
+
+@use '@carbon/react/scss/compat/theme' as *;
+
 // Card groups
 
 // #906: We need to use the attribute selector here b.c. we don't control the column,
@@ -7,59 +14,49 @@
 }
 
 // Set spacing to the right of the group
-.resource-card-group .#{$prefix}--col-lg-4:nth-child(2n) {
+.resource-card-group .cds--col-lg-4:nth-child(2n) {
   @include breakpoint('lg') {
     margin-right: 33%;
   }
 }
 
 // set border between cards
-.resource-card-group .#{$prefix}--resource-card {
+.resource-card-group .cds--resource-card {
   border-top: 1px solid $ui-03;
 }
 
-.resource-card-group .#{$prefix}--resource-card--dark {
+.resource-card-group .cds--resource-card--dark {
   border-color: transparent !important;
 }
 
-.resource-card-group
-  .#{$prefix}--col-lg-4:nth-child(2)
-  .#{$prefix}--resource-card {
+.resource-card-group .cds--col-lg-4:nth-child(2) .cds--resource-card {
   @include breakpoint('md') {
     border-top: 0px solid transparent;
   }
 }
 
-.resource-card-group
-  .#{$prefix}--col-lg-4:first-child
-  .#{$prefix}--resource-card {
+.resource-card-group .cds--col-lg-4:first-child .cds--resource-card {
   border-top: 0px solid transparent;
 }
 
-.resource-card-group
-  .#{$prefix}--col-lg-4:nth-child(odd)
-  .#{$prefix}--resource-card {
+.resource-card-group .cds--col-lg-4:nth-child(odd) .cds--resource-card {
   @include breakpoint('md') {
     border-left: 1px solid transparent;
   }
 }
 
-.resource-card-group
-  .#{$prefix}--col-lg-4:nth-child(even)
-  .#{$prefix}--resource-card {
+.resource-card-group .cds--col-lg-4:nth-child(even) .cds--resource-card {
   @include breakpoint('md') {
     border-left: 1px solid $ui-03;
   }
 }
 
-.resource-card-group
-  .#{$prefix}--col-lg-4:nth-child(even)
-  .#{$prefix}--resource-card--dark {
+.resource-card-group .cds--col-lg-4:nth-child(even) .cds--resource-card--dark {
   border-left-color: $ui-background;
 }
 
 // Set spacing to the right of the group
-.resource-card-group .#{$prefix}--col-lg-4:nth-child(2) {
+.resource-card-group .cds--col-lg-4:nth-child(2) {
   @include breakpoint('lg') {
     margin-right: 33%;
   }

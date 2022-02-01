@@ -17,6 +17,6 @@
 }
 
 // If caption is inside a user specified row then allow the grid code to set the width
-:global(.#{$prefix}--row) .caption {
+:global(.cds--row) .caption {
   width: 100%;
 }

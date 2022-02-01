@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import usePrefix from '../../util/hooks/usePrefix';
+// import usePrefix from '../../util/hooks/usePrefix';
 
-const prefix = usePrefix();
+// const prefix = usePrefix();
 
 export default class PageTable extends React.Component {
   render() {
@@ -16,14 +16,14 @@ export default class PageTable extends React.Component {
     }
 
     const classNames = cx({
-      [`${prefix}--col-lg-8 ${prefix}--col-md-6`]: gridSize < 4,
-      [`${prefix}--col-lg-12`]: gridSize > 3,
-      [` ${prefix}--col-no-gutter`]: true,
+      [`cds--col-lg-8 cds--col-md-6`]: gridSize < 4,
+      [`cds--col-lg-12`]: gridSize > 3,
+      [` cds--col-no-gutter`]: true,
       'page-table__container': true,
     });
 
     return (
-      <div className={`${prefix}--row`}>
+      <div className="cds--row">
         <div className={classNames}>
           <table className="page-table">{children}</table>
         </div>

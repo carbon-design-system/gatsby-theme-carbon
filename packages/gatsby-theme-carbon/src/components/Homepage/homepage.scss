@@ -1,3 +1,10 @@
+// carbon--breakpoint
+@use '@carbon/react/scss/breakpoint' as *;
+// $carbon--white-0
+@use '@carbon/react/scss/colors' as *;
+// carbon--type-style
+@use '@carbon/react/scss/type' as *;
+
 .container--dark {
   background: $gray-100;
   color: $gray-10;
@@ -13,11 +20,11 @@
   color: $gray-100;
 }
 
-.container--dark a.#{$prefix}--link,
-.container--dark a.#{$prefix}--link:hover,
-.container--dark a.#{$prefix}--link:active,
-.container--dark a.#{$prefix}--link:active:visited,
-.container--dark a.#{$prefix}--link:active:visited:hover {
+.container--dark a.cds--link,
+.container--dark a.cds--link:hover,
+.container--dark a.cds--link:active,
+.container--dark a.cds--link:active:visited,
+.container--dark a.cds--link:active:visited:hover {
   color: $blue-40;
 }
 
@@ -40,8 +47,8 @@
   }
 }
 
-.homepage--header .#{$prefix}--grid,
-.homepage--header .#{$prefix}--row {
+.homepage--header .cds--grid,
+.homepage--header .cds--row {
   height: 100%;
 }
 
@@ -68,7 +75,7 @@
   margin-top: -25%;
 }
 
-.container--homepage .#{$prefix}--grid {
+.container--homepage .cds--grid {
   margin: 0;
 
   @include breakpoint('lg') {
@@ -81,7 +88,7 @@
   }
 }
 
-.container--header--nav .#{$prefix}--grid {
+.container--header--nav .cds--grid {
   margin: 0;
 
   @include breakpoint('lg') {
@@ -93,11 +100,11 @@
   }
 }
 
-.container--homepage .#{$prefix}--col-no-gutter {
+.container--homepage .cds--col-no-gutter {
   padding: 0;
 }
 
-.#{$prefix}--side-nav__overlay-active {
+.cds--side-nav__overlay-active {
   //rel: https://github.com/carbon-design-system/carbon-website/pull/2187
   width: 100%;
 }
