@@ -51,6 +51,55 @@ and `<Column>` components to align them to the grid at the correct size.
 </Column>
 </Row>
 
+<Title>Aspect ratios</Title>
+
+<Row>
+
+<Column colMd={4} colLg={4}>
+
+<DoDontExample aspectRatio="4:3" text="4:3" />
+
+</Column>
+<Column colMd={4} colLg={4}>
+
+<DoDontExample aspectRatio="16:9" text="16:9" />
+
+</Column>
+<Column colMd={4} colLg={4}>
+
+<DoDontExample aspectRatio="2:1" text="2:1" />
+
+</Column>
+</Row>
+
+<Row>
+<Column colMd={4} colLg={4}>
+
+<DoDontExample aspectRatio="9:16" text="9:16" />
+
+</Column>
+
+<Column colMd={4} colLg={4}>
+
+<DoDontExample aspectRatio="1:2" text="1:2" />
+
+</Column>
+
+<Column colMd={4} colLg={4}>
+
+<DoDontExample aspectRatio="3:4" text="3:4" />
+
+</Column>
+</Row>
+
+<Row>
+<Column colMd={4} colLg={4}>
+
+<DoDontExample aspectRatio="1:1" text="1:1" />
+
+</Column>
+</Row>
+
 ## Code
 
 <Title>Image</Title>
@@ -82,6 +131,18 @@ and `<Column>` components to align them to the grid at the correct size.
 <DoDontExample type="do" caption="Caption" captionTitle="Caption title">
   <Video vimeoId="310583077" />
 </DoDontExample>
+```
+
+<Title>Aspect ratios</Title>
+
+```mdx path=components/DoDontExample/DoDontExample.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/DoDontExample
+<DoDontExample aspectRatio="4:3" text="4:3" />
+<DoDontExample aspectRatio="16:9" text="16:9" />
+<DoDontExample aspectRatio="2:1" text="2:1" />
+<DoDontExample aspectRatio="9:16" text="9:16" />
+<DoDontExample aspectRatio="1:2" text="1:2" />
+<DoDontExample aspectRatio="3:4" text="3:4" />
+<DoDontExample aspectRatio="1:1" text="1:1" />
 ```
 
 ### Props
