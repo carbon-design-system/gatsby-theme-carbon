@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import {
+  FlexGrid,
+  Row as CarbonRow,
+  Column as CarbonColumn,
+} from '@carbon/react';
 import { column } from './Grid.module.scss';
-// import usePrefix from '../../util/hooks/usePrefix';
-
-// const prefix = usePrefix();
 
 export const Grid = ({ children, className, ...rest }) => (
-  <div className={cx(`cds--grid`, className)} {...rest}>
+  <FlexGrid className={className} {...rest}>
     {children}
-  </div>
+  </FlexGrid>
 );
 
 Grid.propTypes = {
@@ -66,31 +68,33 @@ export const Column = ({
     [`cds--no-gutter-sm`]: noGutterSm,
     [`cds--no-gutter-md`]: noGutterMd,
     [`cds--no-gutter-lg`]: noGutterLg,
-    [`cds--no-gutter-xl`]: noGutterXl,
+    [`cds--no-gutter-xlg`]: noGutterXl,
     [`cds--no-gutter-max`]: noGutterMax,
     [`cds--no-gutter-sm--left`]: noGutterSmLeft,
     [`cds--no-gutter-md--left`]: noGutterMdLeft,
     [`cds--no-gutter-lg--left`]: noGutterLgLeft,
-    [`cds--no-gutter-xl--left`]: noGutterXlLeft,
+    [`cds--no-gutter-xlg--left`]: noGutterXlLeft,
     [`cds--no-gutter-max--left`]: noGutterMaxLeft,
     [`cds--offset-sm-${offsetSm}`]: offsetSm,
     [`cds--offset-md-${offsetMd}`]: offsetMd,
     [`cds--offset-lg-${offsetLg}`]: offsetLg,
-    [`cds--offset-xl-${offsetXl}`]: offsetXl,
+    [`cds--offset-xlg-${offsetXl}`]: offsetXl,
     [`cds--offset-max-${offsetMax}`]: offsetMax,
-    [`cds--col-sm-${colSm}`]: colSm,
-    [`cds--col-md-${colMd}`]: colMd,
-    [`cds--col-lg-${colLg}`]: colLg,
-    [`cds--col-xl-${colXl}`]: colXl,
-    [`cds--col-max-${colMax}`]: colMax,
     [`cds--gutter-lg`]: gutterLg,
     [className]: className,
   });
 
   return (
-    <div className={colClasses} {...rest}>
+    <CarbonColumn
+      sm={colSm}
+      md={colMd}
+      lg={colLg}
+      xlg={colXl}
+      max={colMax}
+      className={colClasses}
+      {...rest}>
       {children}
-    </div>
+    </CarbonColumn>
   );
 };
 

@@ -10,6 +10,7 @@ import {
   Error,
   Launch,
 } from '@carbon/react/icons';
+import { AspectRatio } from '@carbon/react';
 
 export default class ResourceCard extends React.Component {
   render() {
@@ -100,13 +101,9 @@ export default class ResourceCard extends React.Component {
 
     return (
       <div className={ResourceCardClassNames}>
-        <div
-          className={cx(
-            `cds--aspect-ratio`,
-            `cds--aspect-ratio--${aspectRatio.replace(':', 'x')}`
-          )}>
-          <div className="cds--aspect-ratio--object">{cardContainer}</div>
-        </div>
+        <AspectRatio ratio={`${aspectRatio.replace(':', 'x')}`}>
+          <div>{cardContainer}</div>
+        </AspectRatio>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 // Base global
 @use '@carbon/react';
+@use '@carbon/react/scss/grid';
 @use './internal/global';
 
 // Global stylesheet to inject global dependencies via shadowing

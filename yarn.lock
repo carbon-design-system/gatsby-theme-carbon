@@ -1519,30 +1519,30 @@
     "@carbon/telemetry" "0.0.0-alpha.6"
     prop-types "^15.7.2"
 
-"@carbon/react@^0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@carbon/react/-/react-0.12.0.tgz#b4f29d78e72516101a4e0617b2a921071c19a592"
-  integrity sha512-TPnLtCfhs3SA2Hw1SVqaGvGxAMSMo9HbBoB7ujdoZUZQW6taQ1M+lMsHh4USssBsoAqGpsD9tm30ed5XqHExKQ==
+"@carbon/react@^0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@carbon/react/-/react-0.13.0.tgz#18ef211429ad8786346f2eb793f2311a312f7abe"
+  integrity sha512-/BM90RSMrKKW6Gm8e9HmlK0IIEG7UI/5WSy8bTduwOxITTWNCXfZrOhKvh5Ewset5c592hpAJoHuQ1SbFltfZA==
   dependencies:
     "@carbon/feature-flags" "^0.7.0"
     "@carbon/icons-react" "^10.45.0"
-    "@carbon/styles" "^0.12.0"
+    "@carbon/styles" "^0.13.0"
     "@carbon/telemetry" "0.0.0-alpha.6"
-    carbon-components "^10.51.0"
-    carbon-components-react "^7.51.0"
+    carbon-components "^10.52.0"
+    carbon-components-react "^7.52.0"
     carbon-icons "^7.0.7"
 
-"@carbon/styles@^0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@carbon/styles/-/styles-0.12.0.tgz#40a50bcdc5d6e20141765d6b1606274833d07743"
-  integrity sha512-z1qZFt4xtdKq3LbnB0IW3PwPHRr6IEywXqSqNbhPu1r3YRe3xocw94PzkpSs4swxenR4xkbEyRq3t37q7T8Gog==
+"@carbon/styles@^0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@carbon/styles/-/styles-0.13.0.tgz#1f75c1eb3cda6fd82231478dd2f8a435e48b80c3"
+  integrity sha512-iYxCU/4lkJY4mv1F5b11h8uzobzvH6pFavAt/6v/IfAJgEOtX2nNpZH6NmTb2Ms+hJx2FjGW9ArSuBeqJFqb7Q==
   dependencies:
     "@carbon/colors" "^10.35.0"
     "@carbon/feature-flags" "^0.7.0"
     "@carbon/grid" "^10.40.0"
     "@carbon/layout" "^10.35.0"
     "@carbon/motion" "^10.27.0"
-    "@carbon/themes" "^10.49.0"
+    "@carbon/themes" "^10.50.0"
     "@carbon/type" "^10.40.0"
     "@ibm/plex" "6.0.0-next.6"
 
@@ -1572,10 +1572,10 @@
     "@carbon/type" "^10.37.0"
     color "^3.1.2"
 
-"@carbon/themes@^10.49.0":
-  version "10.49.0"
-  resolved "https://registry.yarnpkg.com/@carbon/themes/-/themes-10.49.0.tgz#9b08c9b2cc5039262d657e2f4c25b8822f6215da"
-  integrity sha512-+Oed5krJrj5WKSOysqeqxGFpLgK+EGhQLwSVYPlBcIPbJNSEfy/D3Ftsx/vYk0f7lsgye7keRa+xRpIJEDfXJg==
+"@carbon/themes@^10.50.0":
+  version "10.50.0"
+  resolved "https://registry.yarnpkg.com/@carbon/themes/-/themes-10.50.0.tgz#1ebe92e2b1d34db501dd1c0826e847892d4183c2"
+  integrity sha512-+sz/l7b7lORgLNlauFF1UMchq4u0hoo0gXtGvBHXx04tivs9rK9rwRdZ0uJtakk6dNmN+me5femm1SM6kr9ziw==
   dependencies:
     "@carbon/colors" "^10.35.0"
     "@carbon/layout" "^10.35.0"
@@ -5512,10 +5512,10 @@ caniuse-lite@^1.0.30001109:
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001228.tgz#bfdc5942cd3326fa51ee0b42fbef4da9d492a7fa"
   integrity sha512-QQmLOGJ3DEgokHbMSA8cj2a+geXqmnpyOFT0lhQV6P3/YOJvGDEwoedcwxEQ30gJIwIIunHIicunJ2rzK5gB2A==
 
-carbon-components-react@^7.51.0:
-  version "7.51.0"
-  resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.51.0.tgz#e934665ce1138b9b06321edafd25893db77ed902"
-  integrity sha512-lyTfOPQ04dMe51J/l1NtwsogW+64fp1/JPtQAOhJHEm7S/x8YqrBx/wjtrfOWz4N812UHQ/EkLNKapZcbxru4g==
+carbon-components-react@^7.52.0:
+  version "7.52.0"
+  resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.52.0.tgz#d8c1caea7d777f9608ec4524d36bd075540c549e"
+  integrity sha512-VBstCYnqGiekqkObwiN9x18opdTnYmEbIP1+YrA4uXQCmWFEMnUiIaeI1vqRVAl9TLOMSLIVv1BNl6KfUxIWfg==
   dependencies:
     "@babel/runtime" "^7.16.7"
     "@carbon/feature-flags" "^0.7.0"
@@ -5538,10 +5538,10 @@ carbon-components-react@^7.51.0:
     wicg-inert "^3.1.1"
     window-or-global "^1.0.1"
 
-carbon-components@^10.51.0:
-  version "10.51.0"
-  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.51.0.tgz#a09b259db12fa3ea7868489bbea6cb165d4f814a"
-  integrity sha512-TkcfsYdFioZBx5vasC6bMOxI4XqJPt6EM7AqWAjwOeS7HByfBREYALHbZ3pBslb9yauoSbxQFKO2JlK5l+Baag==
+carbon-components@^10.52.0:
+  version "10.52.0"
+  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.52.0.tgz#07db35dddbc5f9e5042e8621a781e9cb96fce0fa"
+  integrity sha512-itiG52GdDGxGh4IyuIV7gsuQCE1LLD2FCTEp5bPGhF/Onn042QzGendjl+yE7kfUk3FVlWmHN216dh/mA2sdZg==
   dependencies:
     "@carbon/telemetry" "0.0.0-alpha.6"
     flatpickr "4.6.1"

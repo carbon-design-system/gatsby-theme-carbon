@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { Link } from 'gatsby';
+import { AspectRatio } from '@carbon/react';
 import { Row, Column } from '../Grid';
 import ResourceCard from '../ResourceCard';
 // import usePrefix from '../../util/hooks/usePrefix';
@@ -34,11 +35,9 @@ export default class FeatureCard extends React.Component {
         <Row>
           {/* #906 */}
           <Column className="cds--feature-card__column" noGutterMdLeft>
-            <div className="cds--aspect-ratio cds--feature-card__img cds--aspect-ratio--1x1">
-              <div className="cds--aspect-ratio--object cds--feature-background">
-                {children}
-              </div>
-            </div>
+            <AspectRatio className="cds--feature-card__img" ratio="1x1">
+              <div className="cds--feature-background">{children}</div>
+            </AspectRatio>
           </Column>
         </Row>
         <Row className="cds--feature-card__row">
