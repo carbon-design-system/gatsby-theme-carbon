@@ -38,8 +38,22 @@ export default class DoDont extends React.Component {
     const wrapperClassNames = cx(className, styles.example, {
       [styles.correct]: type === 'do',
       [styles.incorrect]: type === 'dont',
-      [styles.square]: aspectRatio === '1:1',
       [styles.dark]: color === 'dark',
+      [styles.ratio]:
+        aspectRatio === '1:1' ||
+        aspectRatio === '2:1' ||
+        aspectRatio === '1:2' ||
+        aspectRatio === '4:3' ||
+        aspectRatio === '3:4' ||
+        aspectRatio === '9:16' ||
+        aspectRatio === '16:9',
+      [styles.ratio1x1]: aspectRatio === '1:1',
+      [styles.ratio2x1]: aspectRatio === '2:1',
+      [styles.ratio1x2]: aspectRatio === '1:2',
+      [styles.ratio4x3]: aspectRatio === '4:3',
+      [styles.ratio3x4]: aspectRatio === '3:4',
+      [styles.ratio9x16]: aspectRatio === '9:16',
+      [styles.ratio16x9]: aspectRatio === '16:9',
     });
 
     return (

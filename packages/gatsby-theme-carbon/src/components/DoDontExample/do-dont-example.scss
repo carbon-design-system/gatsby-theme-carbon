@@ -100,7 +100,7 @@
 }
 
 .#{$prefix}--example--correct .#{$prefix}--example-card::before {
-  background: $support-02;
+  background: #24a148;
 }
 
 .#{$prefix}--example--incorrect .#{$prefix}--example-card::before {
@@ -118,7 +118,7 @@
 }
 
 .#{$prefix}--example__icon--correct {
-  fill: $support-02;
+  fill: #24a148;
 }
 
 .#{$prefix}--example__icon--incorrect {
