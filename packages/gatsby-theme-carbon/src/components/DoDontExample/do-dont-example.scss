@@ -34,11 +34,37 @@
   position: relative;
 }
 
-.#{$prefix}--example--square .#{$prefix}--example-card {
+// Aspect Ratio
+
+.#{$prefix}--example--1x1 .#{$prefix}--example-card {
   padding-top: 100%;
 }
 
-.#{$prefix}--example--square .#{$prefix}--example-card__content {
+.#{$prefix}--example--4x3 .#{$prefix}--example-card {
+  padding-top: 75%;
+}
+
+.#{$prefix}--example--3x4 .#{$prefix}--example-card {
+  padding-top: 133.3333333333%;
+}
+
+.#{$prefix}--example--2x1 .#{$prefix}--example-card {
+  padding-top: 50%;
+}
+
+.#{$prefix}--example--1x2 .#{$prefix}--example-card {
+  padding-top: 150%;
+}
+
+.#{$prefix}--example--9x16 .#{$prefix}--example-card {
+  padding-top: 177.7777777778%;
+}
+
+.#{$prefix}--example--16x9 .#{$prefix}--example-card {
+  padding-top: 56.25%;
+}
+
+.#{$prefix}--example--ratio .#{$prefix}--example-card__content {
   position: absolute;
   top: 0;
   left: 0;

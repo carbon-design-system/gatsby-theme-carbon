@@ -27,7 +27,15 @@ and `<Column>` components to align them to the grid at the correct size.
 
 <Title>Text</Title>
 
-<DoDontExample type="dont" aspectRatio="1:1"  color="dark" captionTitle="Caption title" caption="Caption" text="This is some text" />
+<DoDontExample
+  type="dont"
+  aspectRatio="1:1"
+  color="dark"
+  captionTitle="Caption title"
+  caption="Caption"
+  text="This is some text"
+/>
+
 </Column>
 </Row>
 <Row>
@@ -40,6 +48,55 @@ and `<Column>` components to align them to the grid at the correct size.
 <Video title="Video example" vimeoId="310583077" />
 
 </DoDontExample>
+</Column>
+</Row>
+
+<Title>Aspect ratios</Title>
+
+<Row>
+
+<Column colMd={4} colLg={4}>
+
+<DoDontExample aspectRatio="4:3" text="4:3" />
+
+</Column>
+<Column colMd={4} colLg={4}>
+
+<DoDontExample aspectRatio="16:9" text="16:9" />
+
+</Column>
+<Column colMd={4} colLg={4}>
+
+<DoDontExample aspectRatio="2:1" text="2:1" />
+
+</Column>
+</Row>
+
+<Row>
+<Column colMd={4} colLg={4}>
+
+<DoDontExample aspectRatio="9:16" text="9:16" />
+
+</Column>
+
+<Column colMd={4} colLg={4}>
+
+<DoDontExample aspectRatio="1:2" text="1:2" />
+
+</Column>
+
+<Column colMd={4} colLg={4}>
+
+<DoDontExample aspectRatio="3:4" text="3:4" />
+
+</Column>
+</Row>
+
+<Row>
+<Column colMd={4} colLg={4}>
+
+<DoDontExample aspectRatio="1:1" text="1:1" />
+
 </Column>
 </Row>
 
@@ -76,14 +133,26 @@ and `<Column>` components to align them to the grid at the correct size.
 </DoDontExample>
 ```
 
+<Title>Aspect ratios</Title>
+
+```mdx path=components/DoDontExample/DoDontExample.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/DoDontExample
+<DoDontExample aspectRatio="4:3" text="4:3" />
+<DoDontExample aspectRatio="16:9" text="16:9" />
+<DoDontExample aspectRatio="2:1" text="2:1" />
+<DoDontExample aspectRatio="9:16" text="9:16" />
+<DoDontExample aspectRatio="1:2" text="1:2" />
+<DoDontExample aspectRatio="3:4" text="3:4" />
+<DoDontExample aspectRatio="1:1" text="1:1" />
+```
+
 ### Props
 
-| property     | propType | required | default | description                                                                                                                                                                                                                                      |
-| ------------ | -------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| children     | node     |          |         | child node, expects a markdown image or `<Video>` component                                                                                                                                                                                      |
-| text         | string   |          |         | text to display inside the component instead of an image or video                                                                                                                                                                                |
-| caption      | string   |          |         | caption                                                                                                                                                                                                                                          |
-| captionTitle | string   |          |         | caption title                                                                                                                                                                                                                                    |
-| type         | string   |          | dont    | set to `do` to show green check, otherwise shows pink X                                                                                                                                                                                          |
-| color        | string   |          | light   | set to `dark` for dark background card                                                                                                                                                                                                           |
-| aspectRatio  | string   |          |         | set to `1:1` to force square example <br/>_(We welcome [contributions](https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/DoDontExample) to add additional aspect ratio options)_ |
+| property     | propType | required | default | description                                                       |
+| ------------ | -------- | -------- | ------- | ----------------------------------------------------------------- |
+| children     | node     |          |         | child node, expects a markdown image or `<Video>` component       |
+| text         | string   |          |         | text to display inside the component instead of an image or video |
+| caption      | string   |          |         | caption                                                           |
+| captionTitle | string   |          |         | caption title                                                     |
+| type         | string   |          | dont    | set to `do` to show green check, otherwise shows pink X           |
+| color        | string   |          | light   | set to `dark` for dark background card                            |
+| aspectRatio  | string   |          |         | `1:1`,`1:2`,`2:1`,`3:4`,`4:3`,`16:9`,`9:16`                       |
