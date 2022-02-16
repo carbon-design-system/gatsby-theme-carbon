@@ -32,6 +32,7 @@ import Sup from '../markdown/Sup';
 import Abbr from '../markdown/Abbr';
 import SquareCard from '../SquareCard';
 import ExpressiveListContainer from '../ExpressiveListContainer';
+import ExpressiveList from '../ExpressiveList';
 
 const components = {
   wrapper: function Wrapper({ children, ...props }) {
@@ -85,6 +86,7 @@ const components = {
   CardGroup,
   SquareCard,
   ExpressiveListContainer,
+  ExpressiveList,
 };
 
 export default components;

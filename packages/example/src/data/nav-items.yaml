@@ -50,6 +50,8 @@
       path: /components/DoDontExample
     - title: DoDontRow
       path: /components/DoDontRow
+    - title: ExpressiveList
+      path: /components/ExpressiveList
     - title: ExpressiveListContainer
       path: /components/ExpressiveListContainer
     - title: FeatureCard

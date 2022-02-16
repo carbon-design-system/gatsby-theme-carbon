@@ -1,3 +1,15 @@
+## [2.2.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.6...v2.2.0) (2022-01-10)
+
+
+### Features
+
+* **switcher:** add carbon for ibm products remove ix ([#1205](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1205)) ([f9be700](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/f9be700ac5b6325eb73892f0211b59d177cf53fd))
+
+
+### Bug Fixes
+
+* aside docs ([#1202](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1202)) ([8a4dd50](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8a4dd50c4d81eef57b98891c14bd00b8c2d5dace))
+
 ### [2.1.6](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.5...v2.1.6) (2021-12-03)
 
 ### [2.1.5](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.4...v2.1.5) (2021-10-28)
