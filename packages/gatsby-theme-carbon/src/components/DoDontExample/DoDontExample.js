@@ -5,7 +5,6 @@ import { CheckmarkFilled, Misuse } from '@carbon/react/icons';
 
 export default class DoDontExample extends React.Component {
   renderCaption = (caption, captionTitle) => {
-    // const prefix = 'cds';
     if (caption || captionTitle) {
       return (
         <div className="cds--example__caption">
@@ -21,10 +20,23 @@ export default class DoDontExample extends React.Component {
   render() {
     const { children, caption, captionTitle, text, aspectRatio, color, type } =
       this.props;
-    // const prefix = 'cds';
 
     const wrapperClassNames = cx(`cds--example`, {
-      [`cds--example--square`]: aspectRatio === '1:1',
+      [`cds--example--ratio`]:
+        aspectRatio === '1:1' ||
+        aspectRatio === '2:1' ||
+        aspectRatio === '1:2' ||
+        aspectRatio === '4:3' ||
+        aspectRatio === '3:4' ||
+        aspectRatio === '9:16' ||
+        aspectRatio === '16:9',
+      [`cds--example--1x1`]: aspectRatio === '1:1',
+      [`cds--example--2x1`]: aspectRatio === '2:1',
+      [`cds--example--1x2`]: aspectRatio === '1:2',
+      [`cds--example--4x3`]: aspectRatio === '4:3',
+      [`cds--example--3x4`]: aspectRatio === '3:4',
+      [`cds--example--9x16`]: aspectRatio === '9:16',
+      [`cds--example--16x9`]: aspectRatio === '16:9',
       [`cds--example--correct`]: type === 'do',
       [`cds--example--incorrect`]: type !== 'do',
       [`cds--example--dark`]: color === 'dark',

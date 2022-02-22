@@ -377,3 +377,23 @@ array in the theme options.
     },
   ],
 ```
+
+## Adding new MDX layouts 
+
+`gatsby-plugin-mdx` and `gatsby-source-filesystem` can work together to automatically template MDX files in a given directory. See the [plugin documentation](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#default-layouts).
+
+The Carbon theme already comes with a default layout, but you can add your own with the `extraLayouts` option.
+
+```js
+ plugins: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        extraLayouts: {
+          posts: require.resolve('./src/layouts/postLayout.js')
+        }
+      },
+ ],
+```
+
+Note that the extra layouts do not inherit from theme default. Custom layouts start from a clean slate. If you want to iterate on the Carbon template, copy `/gatsby-theme-carbon/src/templates/Default.js` to your custom template as a starting point. When doing this, you may also need to change the import paths to the correct location.

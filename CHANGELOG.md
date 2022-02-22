@@ -1,3 +1,19 @@
+## [2.3.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.2.0...v2.3.0) (2022-02-17)
+
+
+### Features
+
+* **expressive-list-container:** adds expressive list container component ([#1198](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1198)) ([83b7914](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/83b7914cdf86fed6dbe9232e21b53cb7328c32ab))
+* add additional aspect ratios for do dont ([#1216](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1216)) ([efc5a30](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/efc5a3081cc9d8375cfd9ddb1793b046e7004771))
+* new config option to add default mdx layouts ([#1214](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1214)) ([81f8fe3](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/81f8fe31e95a6fc8cb19ee9414e9972a4ca56a1c))
+* **expressive-list:** creates the expressive content only list ([#1197](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1197)) ([17ec996](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/17ec996d147d02ffca0374a8e9e272869bd340f0))
+
+
+### Bug Fixes
+
+* do dont component updates ([#1220](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1220)) ([67fc11c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/67fc11c1df4a450fc6011d0696cc92fb2685e34b))
+* update the references to the new homepage ([#1212](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1212)) ([57d3e88](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/57d3e886b8ef260481414ef8b7d20c9668f81fc9))
+
 ## [2.2.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.6...v2.2.0) (2022-01-10)
 
 

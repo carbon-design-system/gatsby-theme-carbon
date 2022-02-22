@@ -103,8 +103,32 @@
   color: $white-0;
 }
 
-.square .card {
+.ratio1x1 .card {
   padding-top: 100%;
+}
+
+.ratio4x3 .card {
+  padding-top: 75%;
+}
+
+.ratio3x4 .card {
+  padding-top: 133.3333333333%;
+}
+
+.ratio2x1 .card {
+  padding-top: 50%;
+}
+
+.ratio1x2 .card {
+  padding-top: 150%;
+}
+
+.ratio9x16 .card {
+  padding-top: 177.7777777778%;
+}
+
+.ratio16x9 .card {
+  padding-top: 56.25%;
 }
 
 .card::before {
@@ -145,7 +169,7 @@
   position: relative;
 }
 
-.square .card-content {
+.ratio .card-content {
   position: absolute;
   top: 0;
   left: 0;

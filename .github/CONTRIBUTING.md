@@ -117,8 +117,7 @@ features, by not reporting duplicate issues.
    for more details on commit messages.
 
 7. Once ready for feedback from other contributors and maintainers, **push your
-   commits to your fork** (be sure to run `yarn ci-check` before pushing, to
-   make sure your code passes linting and unit tests):
+   commits to your fork** :
 
    ```
    $ git push origin { YOUR_BRANCH_NAME }

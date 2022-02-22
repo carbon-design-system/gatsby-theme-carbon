@@ -47,11 +47,37 @@
   position: relative;
 }
 
-.cds--example--square .cds--example-card {
+// Aspect Ratio
+
+.cds--example--1x1 .cds--example-card {
   padding-top: 100%;
 }
 
-.cds--example--square .cds--example-card__content {
+.cds--example--4x3 .cds--example-card {
+  padding-top: 75%;
+}
+
+.cds--example--3x4 .cds--example-card {
+  padding-top: 133.3333333333%;
+}
+
+.cds--example--2x1 .cds--example-card {
+  padding-top: 50%;
+}
+
+.cds--example--1x2 .cds--example-card {
+  padding-top: 150%;
+}
+
+.cds--example--9x16 .cds--example-card {
+  padding-top: 177.7777777778%;
+}
+
+.cds--example--16x9 .cds--example-card {
+  padding-top: 56.25%;
+}
+
+.cds--example--ratio .cds--example-card__content {
   position: absolute;
   top: 0;
   left: 0;
@@ -87,7 +113,7 @@
 }
 
 .cds--example--correct .cds--example-card::before {
-  background: $support-02;
+  background: $green-50;
 }
 
 .cds--example--incorrect .cds--example-card::before {
@@ -105,7 +131,7 @@
 }
 
 .cds--example__icon--correct {
-  fill: $support-02;
+  fill: $green-50;
 }
 
 .cds--example__icon--incorrect {
