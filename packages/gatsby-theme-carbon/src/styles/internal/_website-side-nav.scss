@@ -243,8 +243,8 @@ a.cds--side-nav__link > .cds--side-nav__icon {
   visibility: hidden;
   opacity: 0;
   will-change: opacity;
-  transition: $transition--expansion opacity $standard-easing,
-    $transition--expansion visibility $standard-easing;
+  transition: $transition-expansion opacity $standard-easing,
+    $transition-expansion visibility $standard-easing;
   background: $overlay-01;
   position: fixed;
   height: 100vh;

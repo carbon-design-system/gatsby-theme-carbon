@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import * as styles from './PageHeader.module.scss';
-// import usePrefix from '../../util/hooks/usePrefix';
-
-// const prefix = usePrefix();
 
 const PageHeader = ({ title, theme, tabs = [] }) => (
   <div

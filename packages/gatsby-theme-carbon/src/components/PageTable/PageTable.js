@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-// import usePrefix from '../../util/hooks/usePrefix';
-
-// const prefix = usePrefix();
 
 export default class PageTable extends React.Component {
   render() {

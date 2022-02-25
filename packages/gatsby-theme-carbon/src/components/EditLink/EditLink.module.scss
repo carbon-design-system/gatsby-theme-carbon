@@ -1,6 +1,6 @@
 .link {
   @include type-style('body-short-01');
-  // transition: color $transition--base;
+  transition: color $transition-base;
   color: currentColor;
 
   &:hover {

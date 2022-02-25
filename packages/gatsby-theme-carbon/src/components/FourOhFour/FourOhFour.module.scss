@@ -25,7 +25,7 @@
   margin-bottom: $spacing-03;
   position: relative;
   display: inline-block;
-  // transition: color $transition--base;
+  transition: color $transition-base;
   color: $text-01;
   text-decoration: none;
   margin-left: $spacing-05;
@@ -42,7 +42,7 @@
     position: absolute;
     left: -$spacing-05;
     color: $text-01;
-    // transition: color $transition--base;
+    transition: color $transition-base;
     cursor: pointer;
   }
 }

@@ -2,11 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { ArrowRight, Information } from '@carbon/react/icons';
-// import usePrefix from '../util/hooks/usePrefix';
 
 const AlertBanner = ({ alertText, buttonText }) => (
-  // const prefix = usePrefix();
-
   <aside aria-label="alert banner" className="website-alert">
     <Information size={20} className="website-alert__icon" />
     <p className="website-alert__text">{alertText}</p>

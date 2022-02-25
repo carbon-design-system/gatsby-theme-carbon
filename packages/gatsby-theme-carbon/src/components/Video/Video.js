@@ -11,10 +11,8 @@ import {
   videoIsPlaying,
 } from './Video.module.scss';
 import usePathPrefix from '../../util/hooks/usePathprefix';
-// import usePrefix from '../../util/hooks/usePrefix';
 
 const Video = ({ autoPlay, vimeoId, title, src, poster, muted, ...props }) => {
-  // const prefix = usePrefix();
   const [isPlaying, setIsPlaying] = useState(autoPlay);
   const pathPrefix = usePathPrefix();
   const videoRef = useRef(null);

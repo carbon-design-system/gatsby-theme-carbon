@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import slugify from 'slugify';
 import cx from 'classnames';
-// import usePrefix from '../../util/hooks/usePrefix';
-
-// const prefix = usePrefix();
 
 import {
   tabsContainer,

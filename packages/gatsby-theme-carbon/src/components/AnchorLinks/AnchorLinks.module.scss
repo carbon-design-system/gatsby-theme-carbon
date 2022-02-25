@@ -15,7 +15,7 @@
   @include type-style('expressive-heading-03', true);
   position: relative;
   display: inline-block;
-  // transition: color $transition--base;
+  transition: color $transition-base;
   color: currentColor;
   text-decoration: none;
   margin-bottom: $spacing-03;

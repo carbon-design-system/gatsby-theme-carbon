@@ -5,9 +5,6 @@ import { Link } from 'gatsby';
 import { AspectRatio } from '@carbon/react';
 import { Row, Column } from '../Grid';
 import ResourceCard from '../ResourceCard';
-// import usePrefix from '../../util/hooks/usePrefix';
-
-// const prefix = usePrefix();
 
 export default class FeatureCard extends React.Component {
   render() {

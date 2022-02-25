@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import { link, row } from './EditLink.module.scss';
-// import usePrefix from '../../util/hooks/usePrefix';
-
-// const prefix = usePrefix();
 
 const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
   const {

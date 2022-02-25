@@ -16,10 +16,8 @@ import NavContext from '../../util/context/NavContext';
 import useMetadata from '../../util/hooks/useMetadata';
 
 import * as styles from './Header.module.scss';
-// import usePrefix from '../../util/hooks/usePrefix';
 
 const Header = ({ children }) => {
-  // const prefix = usePrefix();
   const {
     leftNavIsOpen,
     toggleNavState,

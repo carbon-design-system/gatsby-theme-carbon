@@ -15,7 +15,7 @@
   background: var(--cds-ui-background);
   width: 100%;
   margin-left: 0;
-  // transition: $transition--base ease;
+  transition: $transition-base ease;
   position: relative;
   min-height: calc(100vh - 48px);
   margin-top: 2rem;

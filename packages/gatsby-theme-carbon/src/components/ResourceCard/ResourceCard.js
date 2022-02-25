@@ -27,8 +27,6 @@ export default class ResourceCard extends React.Component {
       ...rest
     } = this.props;
 
-    // const prefix = 'cds';
-
     let isLink;
     if (href !== undefined && !rest.download) {
       isLink = href.charAt(0) === '/';

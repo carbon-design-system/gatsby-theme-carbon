@@ -12,8 +12,6 @@ import cx from 'classnames';
 import * as styles from './MiniCard.module.scss';
 import { Column } from '../Grid';
 
-// import usePrefix from '../../util/hooks/usePrefix';
-
 const getIcon = ({ actionIcon }) => {
   switch (actionIcon) {
     case 'arrowRight':
@@ -38,7 +36,6 @@ const MiniCard = ({
   linkProps,
   ...rest
 }) => {
-  // const prefix = usePrefix();
   const cardContent = (
     <div className={cx(className, styles.card)}>
       <div className={styles.wrapper}>

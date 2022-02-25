@@ -20,10 +20,9 @@ const InlineNotification = ({ children, className, kind = 'info' }) => {
           lowContrast
           hideCloseButton
           kind={kind}
-          title=""
-          subtitle={children}
-          className={interiorTheme === 'dark' && styles.darkMode}
-        />
+          className={interiorTheme === 'dark' && styles.darkMode}>
+          {children}
+        </CarbonInlineNotification>
       </Column>
     </Row>
   );

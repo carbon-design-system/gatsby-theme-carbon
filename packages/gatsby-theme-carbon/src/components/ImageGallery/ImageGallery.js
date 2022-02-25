@@ -21,10 +21,8 @@ import {
   leftNav,
   addNoScroll,
 } from './ImageGallery.module.scss';
-// import usePrefix from '../../util/hooks/usePrefix';
 
 function ImageGallery({ children, className }) {
-  // const prefix = usePrefix();
   const [portalsNode, updateNode] = useState(null);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [activeImageIndex, updateActiveImageIndex] = useState(null);

@@ -28,8 +28,6 @@ export default class SquareCard extends React.Component {
       ...rest
     } = this.props;
 
-    // const prefix = 'cds';
-
     let isLink;
     if (href !== undefined) {
       isLink = href.charAt(0) === '/';
