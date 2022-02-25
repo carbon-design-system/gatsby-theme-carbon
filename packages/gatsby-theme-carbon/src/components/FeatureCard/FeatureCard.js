@@ -33,7 +33,9 @@ export default class FeatureCard extends React.Component {
           {/* #906 */}
           <Column className="cds--feature-card__column" noGutterMdLeft>
             <AspectRatio className="cds--feature-card__img" ratio="1x1">
-              <div className="cds--feature-background">{children}</div>
+              <div className="cds--aspect-ratio--object cds--feature-background">
+                {children}
+              </div>
             </AspectRatio>
           </Column>
         </Row>

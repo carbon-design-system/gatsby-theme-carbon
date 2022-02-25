@@ -100,7 +100,7 @@ export default class ResourceCard extends React.Component {
     return (
       <div className={ResourceCardClassNames}>
         <AspectRatio ratio={`${aspectRatio.replace(':', 'x')}`}>
-          <div>{cardContainer}</div>
+          <div className="cds--aspect-ratio--object">{cardContainer}</div>
         </AspectRatio>
       </div>
     );

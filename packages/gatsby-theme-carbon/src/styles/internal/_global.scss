@@ -41,3 +41,13 @@ body em {
 body button {
   font-family: inherit;
 }
+
+// fix needed for v11 aspect ratio migration
+// to-do: refactor to use AspectRatio component in the future
+.cds--aspect-ratio--object {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
