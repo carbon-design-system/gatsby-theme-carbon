@@ -1,0 +1,35 @@
+.container {
+  border-top: 1px solid $ui-04;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+}
+
+.title {
+  @include carbon--type-style('expressive-heading-03', true);
+
+  padding-right: 2rem;
+}
+
+.expressive_04 {
+  @include carbon--type-style('expressive-heading-04', true);
+
+  @include carbon--breakpoint-down('lg') {
+    padding: 1rem;
+  }
+
+  @include carbon--breakpoint-down('md') {
+    @include carbon--type-style('expressive-heading-03', true);
+  }
+}
+
+.expressive_02 {
+  @include carbon--type-style('expressive-heading-02', true);
+}
+
+.content {
+  @include carbon--type-style('body-long-02');
+}
+
+.text {
+  padding-right: 2rem;
+}
