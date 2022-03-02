@@ -1524,17 +1524,17 @@
     "@carbon/telemetry" "0.0.0-alpha.6"
     prop-types "^15.7.2"
 
-"@carbon/react@^0.15.0":
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/@carbon/react/-/react-0.15.0.tgz#e0160463d3feb0e1d0b62860fcc463983493fa83"
-  integrity sha512-ZpsVSXStzaaLIO2QzQ6SxiD0D+9L1hEtwgNd+LvB3XdzdT12jdJqQyVbMAhor5Fuf6YMPpEdbNbhRMhIU7+b8g==
+"@carbon/react@^0.15.1":
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/@carbon/react/-/react-0.15.1.tgz#f7f047f23b276a1d21b24c11c588f5c47308cb35"
+  integrity sha512-G1B/MwjWUUZMpdEbisqIxl8uC4YcaSco6sVq+ypsZ7MEVk2rZzA/r+NDofj1q88Nd8GIvSxdtTT84MUNNJS1Ig==
   dependencies:
     "@carbon/feature-flags" "^0.7.0"
     "@carbon/icons-react" "^10.47.0"
     "@carbon/styles" "^0.15.0"
     "@carbon/telemetry" "0.0.0-alpha.6"
     carbon-components "^10.54.0"
-    carbon-components-react "^7.54.0"
+    carbon-components-react "^7.54.1"
     carbon-icons "^7.0.7"
 
 "@carbon/styles@^0.15.0":
@@ -5517,10 +5517,10 @@ caniuse-lite@^1.0.30001109:
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001228.tgz#bfdc5942cd3326fa51ee0b42fbef4da9d492a7fa"
   integrity sha512-QQmLOGJ3DEgokHbMSA8cj2a+geXqmnpyOFT0lhQV6P3/YOJvGDEwoedcwxEQ30gJIwIIunHIicunJ2rzK5gB2A==
 
-carbon-components-react@^7.54.0:
-  version "7.54.0"
-  resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.54.0.tgz#bfe0907089548e37aeb491c99551902ec84b9646"
-  integrity sha512-U55tFKRpvFN9DtoB0++RZYB8zMPkufUIJz7Y7UGI4CTyNVShg9jFyhtk9/8SeEhIgLE3hOdMCd2fg7BtlEva8w==
+carbon-components-react@^7.54.1:
+  version "7.54.1"
+  resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.54.1.tgz#a81dd4ae90cd2df5c8460dd048be7f0a4330db47"
+  integrity sha512-+jzV9d0qpv+0Pmm25IB1hRIpT9HsZlwBVKK9VLetV5pRpmR7JFUaaRwcdpzUwjmFdqON3OM/f39FmWoGRe7+Rg==
   dependencies:
     "@babel/runtime" "^7.16.7"
     "@carbon/feature-flags" "^0.7.0"
