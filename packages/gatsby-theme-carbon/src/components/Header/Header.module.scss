@@ -141,6 +141,13 @@ header.header {
 .header .header-button {
   flex-shrink: 0;
   transition: background-color $duration-fast-02 $standard-easing;
+  svg {
+    fill: #fff !important;
+  }
+
+  &:hover {
+    background-color: $gray-80;
+  }
 }
 
 .header .header-button.switcher-button {
@@ -148,6 +155,7 @@ header.header {
   border: none;
   border-color: transparent;
   border-bottom: 1px solid $gray-80;
+
   &:hover {
     background-color: $gray-80;
   }
