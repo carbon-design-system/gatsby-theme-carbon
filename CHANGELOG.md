@@ -1,3 +1,10 @@
+## [3.0.0-next.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.1...v3.0.0-next.2) (2022-03-03)
+
+
+### Features
+
+* V11 migration for gatsby-theme ([#1209](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1209)) ([9a4c2c8](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9a4c2c8171cbc38d11dc4f8460b4c9ae2874b233)), closes [#1176](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1176) [#1185](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1185) [#1176](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1176) [#1181](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1181) [#1190](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1190) [#1193](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1193) [#1192](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1192) [#1196](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1196)
+
 ## [3.0.0-next.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.0...v3.0.0-next.1) (2022-01-10)
 
 ## [3.0.0-next.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.4...v3.0.0-next.0) (2021-10-22)
