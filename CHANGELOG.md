@@ -1,4 +1,43 @@
+## [2.3.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.2.0...v2.3.0) (2022-02-17)
+
+
+### Features
+
+* **expressive-list-container:** adds expressive list container component ([#1198](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1198)) ([83b7914](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/83b7914cdf86fed6dbe9232e21b53cb7328c32ab))
+* add additional aspect ratios for do dont ([#1216](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1216)) ([efc5a30](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/efc5a3081cc9d8375cfd9ddb1793b046e7004771))
+* new config option to add default mdx layouts ([#1214](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1214)) ([81f8fe3](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/81f8fe31e95a6fc8cb19ee9414e9972a4ca56a1c))
+* **expressive-list:** creates the expressive content only list ([#1197](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1197)) ([17ec996](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/17ec996d147d02ffca0374a8e9e272869bd340f0))
+
+
+### Bug Fixes
+
+* do dont component updates ([#1220](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1220)) ([67fc11c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/67fc11c1df4a450fc6011d0696cc92fb2685e34b))
+* update the references to the new homepage ([#1212](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1212)) ([57d3e88](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/57d3e886b8ef260481414ef8b7d20c9668f81fc9))
+
 ## [3.0.0-next.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.0...v3.0.0-next.1) (2022-01-10)
+
+## [2.2.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.6...v2.2.0) (2022-01-10)
+
+
+### Features
+
+* **switcher:** add carbon for ibm products remove ix ([#1205](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1205)) ([f9be700](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/f9be700ac5b6325eb73892f0211b59d177cf53fd))
+
+
+### Bug Fixes
+
+* aside docs ([#1202](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1202)) ([8a4dd50](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8a4dd50c4d81eef57b98891c14bd00b8c2d5dace))
+
+### [2.1.6](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.5...v2.1.6) (2021-12-03)
+
+### [2.1.5](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.4...v2.1.5) (2021-10-28)
+
+
+### Bug Fixes
+
+* grid alignment at max breakpoint ([#1181](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1181)) ([9a44a87](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9a44a87b8958c5a790e1c5726a341e31e4a5ae63))
+* medium post image aspect ratio closes [#1176](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1176) ([#1185](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1185)) ([566cfe7](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/566cfe77f4a7489e5f300eb0e94f64aebf3ee2f6))
+>>>>>>> 5257408683f56b4a9709111325455e201c4f0584
 
 ## [3.0.0-next.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.4...v3.0.0-next.0) (2021-10-22)
 

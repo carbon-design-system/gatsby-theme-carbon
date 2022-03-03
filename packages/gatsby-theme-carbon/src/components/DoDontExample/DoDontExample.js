@@ -23,18 +23,25 @@ export default class DoDontExample extends React.Component {
   };
 
   render() {
-    const {
-      children,
-      caption,
-      captionTitle,
-      text,
-      aspectRatio,
-      color,
-      type,
-    } = this.props;
+    const { children, caption, captionTitle, text, aspectRatio, color, type } =
+      this.props;
 
     const wrapperClassNames = cx(`${prefix}--example`, {
-      [`${prefix}--example--square`]: aspectRatio === '1:1',
+      [`${prefix}--example--ratio`]:
+        aspectRatio === '1:1' ||
+        aspectRatio === '2:1' ||
+        aspectRatio === '1:2' ||
+        aspectRatio === '4:3' ||
+        aspectRatio === '3:4' ||
+        aspectRatio === '9:16' ||
+        aspectRatio === '16:9',
+      [`${prefix}--example--1x1`]: aspectRatio === '1:1',
+      [`${prefix}--example--2x1`]: aspectRatio === '2:1',
+      [`${prefix}--example--1x2`]: aspectRatio === '1:2',
+      [`${prefix}--example--4x3`]: aspectRatio === '4:3',
+      [`${prefix}--example--3x4`]: aspectRatio === '3:4',
+      [`${prefix}--example--9x16`]: aspectRatio === '9:16',
+      [`${prefix}--example--16x9`]: aspectRatio === '16:9',
       [`${prefix}--example--correct`]: type === 'do',
       [`${prefix}--example--incorrect`]: type !== 'do',
       [`${prefix}--example--dark`]: color === 'dark',
