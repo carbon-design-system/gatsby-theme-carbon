@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import {
-  FaceDissatisfied32,
-  FaceNeutral32,
-  FaceSatisfied32,
-  FaceDissatisfiedFilled32,
-  FaceNeutralFilled32,
-  FaceSatisfiedFilled32,
-} from '@carbon/icons-react';
+  FaceDissatisfied,
+  FaceNeutral,
+  FaceSatisfied,
+  FaceDissatisfiedFilled,
+  FaceNeutralFilled,
+  FaceSatisfiedFilled,
+} from '@carbon/react/icons';
 import cx from 'classnames';
 
 import * as styles from './Experience.module.scss';
@@ -42,9 +42,9 @@ const Experience = React.forwardRef(function Experience(props, ref) {
           />
           <span>Negative</span>
           {selected === NEGATIVE ? (
-            <FaceDissatisfiedFilled32 />
+            <FaceDissatisfiedFilled size={32} />
           ) : (
-            <FaceDissatisfied32 />
+            <FaceDissatisfied size={32} />
           )}
         </label>
 
@@ -63,7 +63,11 @@ const Experience = React.forwardRef(function Experience(props, ref) {
             value="Neutral"
           />
           <span>Neutral</span>
-          {selected === NEUTRAL ? <FaceNeutralFilled32 /> : <FaceNeutral32 />}
+          {selected === NEUTRAL ? (
+            <FaceNeutralFilled size={32} />
+          ) : (
+            <FaceNeutral size={32} />
+          )}
         </label>
 
         <label
@@ -82,9 +86,9 @@ const Experience = React.forwardRef(function Experience(props, ref) {
           />
           <span>Positive</span>
           {selected === POSITIVE ? (
-            <FaceSatisfiedFilled32 />
+            <FaceSatisfiedFilled size={32} />
           ) : (
-            <FaceSatisfied32 />
+            <FaceSatisfied size={32} />
           )}
         </label>
       </div>

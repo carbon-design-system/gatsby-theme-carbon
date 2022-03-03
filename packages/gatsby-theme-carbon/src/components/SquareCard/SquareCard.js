@@ -1,19 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { Link, withPrefix } from 'gatsby';
+import { Link } from 'gatsby';
 import {
-  Launch20,
-  Download20,
-  ArrowRight20,
-  Error20,
-  Email20,
-} from '@carbon/icons-react';
-import { settings } from 'carbon-components';
+  Launch,
+  Download,
+  ArrowRight,
+  Error,
+  Email,
+} from '@carbon/react/icons';
 import { Column } from '../Grid';
 import * as styles from './SquareCard.module.scss';
-
-const { prefix } = settings;
 
 export default class SquareCard extends React.Component {
   render() {
@@ -45,14 +42,11 @@ export default class SquareCard extends React.Component {
       [styles.titleSmall]: smallTitle,
     });
 
-    const carbonTileclassNames = cx(
-      [`${prefix}--tile`],
-      [`${prefix}--tile--clickable`]
-    );
+    const carbonTileclassNames = cx([`cds--tile`], [`cds--tile--clickable`]);
 
     const aspectRatioClassNames = cx(
-      `${prefix}--aspect-ratio`,
-      `${prefix}--aspect-ratio--1x1`
+      `cds--aspect-ratio`,
+      `cds--aspect-ratio--1x1`
     );
 
     const cardContent = (
@@ -63,19 +57,19 @@ export default class SquareCard extends React.Component {
         {children ? <div className={styles.helperIcon}>{children}</div> : null}
         <div className={styles.actionIcon}>
           {actionIcon === 'arrowRight' && !disabled ? (
-            <ArrowRight20 aria-label="Open resource" />
+            <ArrowRight size={20} aria-label="Open resource" />
           ) : null}
           {actionIcon === 'launch' && !disabled ? (
-            <Launch20 aria-label="Open resource" />
+            <Launch size={20} aria-label="Open resource" />
           ) : null}
           {actionIcon === 'download' && !disabled ? (
-            <Download20 aria-label="Download" />
+            <Download size={20} aria-label="Download" />
           ) : null}
           {actionIcon === 'email' && !disabled ? (
-            <Email20 aria-label="Email" />
+            <Email size={20} aria-label="Email" />
           ) : null}
           {actionIcon === 'disabled' || disabled === true ? (
-            <Error20 aria-label="disabled" />
+            <Error size={20} aria-label="disabled" />
           ) : null}
         </div>
       </>
@@ -106,9 +100,7 @@ export default class SquareCard extends React.Component {
         className={SquareCardClassNames}
         {...rest}>
         <div className={aspectRatioClassNames}>
-          <div className={`${prefix}--aspect-ratio--object`}>
-            {cardContainer}
-          </div>
+          <div className="cds--aspect-ratio--object">{cardContainer}</div>
         </div>
       </Column>
     );

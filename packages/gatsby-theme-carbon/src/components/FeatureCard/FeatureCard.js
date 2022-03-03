@@ -2,11 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { Link } from 'gatsby';
-import { settings } from 'carbon-components';
+import { AspectRatio } from '@carbon/react';
 import { Row, Column } from '../Grid';
 import ResourceCard from '../ResourceCard';
-
-const { prefix } = settings;
 
 export default class FeatureCard extends React.Component {
   render() {
@@ -27,30 +25,28 @@ export default class FeatureCard extends React.Component {
       isLink = href.charAt(0) === '/';
     }
 
-    const FeatureCardClassNames = cx(`${prefix}--feature-card`, className);
+    const FeatureCardClassNames = cx(`cds--feature-card`, className);
 
     const cardContent = (
       <>
         <Row>
           {/* #906 */}
-          <Column className={`${prefix}--feature-card__column`} noGutterMdLeft>
-            <div
-              className={`${prefix}--aspect-ratio ${prefix}--feature-card__img ${prefix}--aspect-ratio--1x1`}>
-              <div
-                className={`${prefix}--aspect-ratio--object ${prefix}--feature-background`}>
+          <Column className="cds--feature-card__column" noGutterMdLeft>
+            <AspectRatio className="cds--feature-card__img" ratio="1x1">
+              <div className="cds--aspect-ratio--object cds--feature-background">
                 {children}
               </div>
-            </div>
+            </AspectRatio>
           </Column>
         </Row>
-        <Row className={`${prefix}--feature-card__row`}>
+        <Row className="cds--feature-card__row">
           <Column
             colMd={4}
             colLg={4}
             offsetLg={8}
             offsetMd={4}
             noGutterMdLeft
-            className={`${prefix}--feature-card__column`}>
+            className="cds--feature-card__column">
             <ResourceCard
               title={title}
               subTitle={subTitle}
@@ -70,14 +66,14 @@ export default class FeatureCard extends React.Component {
       cardContainer = <div>{cardContent}</div>;
     } else if (isLink === true && !disabled) {
       cardContainer = (
-        <Link className={`${prefix}--feature-card__link`} to={href}>
+        <Link className="cds--feature-card__link" to={href}>
           {cardContent}
         </Link>
       );
     } else {
       cardContainer = (
         <a
-          className={`${prefix}--feature-card__link`}
+          className="cds--feature-card__link"
           href={href}
           {...resourceCardProps}>
           {cardContent}

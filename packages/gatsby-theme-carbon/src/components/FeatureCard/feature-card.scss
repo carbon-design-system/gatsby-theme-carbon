@@ -1,15 +1,25 @@
-.#{$prefix}--feature-card {
+@use '@carbon/react/scss/compat/theme' as *;
+// carbon--breakpoint
+@use '@carbon/react/scss/breakpoint' as *;
+// $carbon--white-0
+@use '@carbon/react/scss/colors' as *;
+// $spacing-0X
+@use '@carbon/react/scss/spacing' as *;
+
+@use '@carbon/react/scss/compat/theme' as *;
+
+.cds--feature-card {
   position: relative;
   --space: #{$spacing-07};
 }
 
 // #906
-.#{$prefix}--feature-card .#{$prefix}--feature-card__column {
+.cds--feature-card .cds--feature-card__column {
   --space: 0;
 }
 
-.#{$prefix}--feature-card__row {
-  @include carbon--breakpoint('md') {
+.cds--feature-card__row {
+  @include breakpoint('md') {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -19,47 +29,45 @@
   }
 }
 
-.#{$prefix}--feature-card__img {
+.cds--feature-card__img {
   position: relative;
 }
 
-.#{$prefix}--feature-card:hover
-  .#{$prefix}--feature-card__link
-  .#{$prefix}--tile {
+.cds--feature-card:hover .cds--feature-card__link .cds--tile {
   background: $hover-ui;
 }
 
-.#{$prefix}--feature-card:hover
-  .#{$prefix}--feature-card__link
-  .#{$prefix}--resource-card--dark
-  .#{$prefix}--tile {
-  background: $carbon--gray-80; //$hover-ui for gray 90 theme
+.cds--feature-card:hover
+  .cds--feature-card__link
+  .cds--resource-card--dark
+  .cds--tile {
+  background: $gray-80; //$hover-ui for gray 90 theme
 }
 
-.#{$prefix}--feature-card__link:focus {
+.cds--feature-card__link:focus {
   outline: none;
 
-  .#{$prefix}--feature-background > * {
+  .cds--feature-background > * {
     outline: 2px solid $focus;
     outline-offset: 2px;
   }
 }
 
 // Display image at square aspect ratio only on mobile
-.#{$prefix}--feature-card__img.#{$prefix}--aspect-ratio--1x1::before {
-  @include carbon--breakpoint('md') {
+.cds--feature-card__img.cds--aspect-ratio--1x1::before {
+  @include breakpoint('md') {
     padding-top: 0;
   }
 }
 
-.#{$prefix}--feature-card__img .#{$prefix}--aspect-ratio--object {
-  @include carbon--breakpoint('md') {
+.cds--feature-card__img .cds--aspect-ratio--object {
+  @include breakpoint('md') {
     position: static;
   }
 }
 
-@include carbon--breakpoint('sm') {
-  .#{$prefix}--feature-card .gatsby-resp-image-wrapper {
+@include breakpoint('sm') {
+  .cds--feature-card .gatsby-resp-image-wrapper {
     position: relative;
     display: block;
     margin-left: -1rem;
@@ -69,11 +77,11 @@
     height: 100%;
   }
 
-  .#{$prefix}--feature-card .gatsby-resp-image-background-image {
+  .cds--feature-card .gatsby-resp-image-background-image {
     padding-bottom: 100%;
   }
 
-  .#{$prefix}--feature-card .gatsby-resp-image-image {
+  .cds--feature-card .gatsby-resp-image-image {
     width: auto !important;
     left: auto !important;
     right: 0;
@@ -82,7 +90,7 @@
 }
 
 // overrides for larger breakpoints
-.#{$prefix}--feature-card .gatsby-resp-image-wrapper {
+.cds--feature-card .gatsby-resp-image-wrapper {
   margin-left: 0;
   margin-right: 0;
 }

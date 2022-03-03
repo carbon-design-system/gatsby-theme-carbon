@@ -3,11 +3,11 @@
 //---------------------------------------
 
 .paragraph {
-  @include carbon--type-style('body-long-02');
+  @include type-style('body-long-02');
   padding-left: $spacing-05;
   padding-right: $spacing-05;
 
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     padding-right: $spacing-07;
   }
 }
@@ -15,24 +15,20 @@
 // Responsive by default
 .paragraph--responsive {
   // 8 col
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     width: 75%;
   }
 
   // 8 col
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     width: 66.667%;
   }
 }
 
-// If paragraph is inside a user specified row then allow the grid code to set the width and padding
-:global(.#{$prefix}--row .#{$prefix}--row) .paragraph {
+// responsive items in a list need to be full width
+.list-item .paragraph,
+.list-item :global(.cds--row) {
   width: 100%;
-  padding-left: 0;
-
-  @include carbon--breakpoint('md') {
-    padding-right: 0;
-  }
 }
 
 //---------------------------------------
@@ -49,14 +45,14 @@
   margin-right: 0;
   margin-left: 0;
 
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     width: 75%;
     padding-right: $spacing-07;
     margin-right: 0;
     margin-left: 0;
   }
 
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     width: 66.667%;
   }
 }
@@ -70,87 +66,81 @@
   margin-right: 0;
   margin-left: 0;
 
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     width: 100%;
     padding-right: $spacing-07;
     margin-right: 0;
     margin-left: 0;
   }
 
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     width: 66.667%;
   }
 }
 
 //spacing exception for nested list items
-:global(.bx--list--nested) {
+:global(.cds--list--nested) {
   --space: 0;
   width: 100%;
 }
 
-ul :global(.bx--list--ordered--native),
-ul :global(.bx--list--unordered) {
+ul :global(.cds--list--ordered--native),
+ul :global(.cds--list--unordered) {
   width: 100%;
   padding-right: $spacing-05;
 }
 
-:global(.bx--list--ordered--native) .list-item,
-:global(.bx--list--unordered) .list-item {
-  @include carbon--type-style('body-long-02');
+:global(.cds--list--ordered--native) .list-item,
+:global(.cds--list--unordered) .list-item {
+  @include type-style('body-long-02');
   padding-right: 0;
   width: 100%;
   margin-left: $spacing-05;
   padding-left: $spacing-02;
 }
 
-.list:not(:global(.bx--list--nested)) > .list-item {
+.list:not(:global(.cds--list--nested)) > .list-item {
   padding-right: 2rem;
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     width: 75%;
   }
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     width: 100%;
   }
 }
 
 // aligns UNnested ordered list item to body copy
-:global(.bx--list--ordered--native:not(.bx--list--nested)) {
+:global(.cds--list--ordered--native:not(.cds--list--nested)) {
   margin-left: 1ch;
 }
 
 // aligns NESTED ordered list item to parent list item text #993
-:global(.bx--list--ordered--native.bx--list--nested) {
+:global(.cds--list--ordered--native.cds--list--nested) {
   margin-left: 0.5rem;
 }
 
 //Safari only fixes to align unnested/nested ordered list to body copy #993
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  :global(.bx--list--ordered:not(.bx--list--nested)) {
+  :global(.cds--list--ordered:not(.cds--list--nested)) {
     padding-left: 0.5ch;
   }
 
-  :global(.bx--list--ordered.bx--list--nested) {
+  :global(.cds--list--ordered.cds--list--nested) {
     padding-left: 0.25rem;
   }
-}
-
-// responsive items in a list need to be full width
-.list-item .paragraph,
-.list-item :global(.bx--row) {
-  width: 100%;
 }
 
 // Fix bleed when code snippets are used in a list
 .list-item > pre {
   margin-left: 1rem;
   margin-top: $spacing-05;
-  @include carbon--breakpoint('md') {
-    margin-right: -$spacing-05;
+  @include breakpoint('md') {
+    margin-right: $spacing-05 * -1;
   }
 }
 
-:global(.container--dark) :global(.bx--list__item) {
-  color: $carbon--white-0;
+:global(.container--dark) :global(.cds--list__item) {
+  color: $white;
 }
 
 //spacing for content within list item
@@ -170,14 +160,14 @@ ul :global(.bx--list--unordered) {
   color: $text-01;
   margin-left: $spacing-05;
   padding-left: 1ch;
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     margin-left: $spacing-08;
   }
 }
 
 .blockquote .paragraph {
   position: relative;
-  @include carbon--type-style('expressive-heading-03', true);
+  @include type-style('expressive-heading-03', true);
   font-style: italic;
   margin-bottom: 0;
   width: 100%;
@@ -185,33 +175,45 @@ ul :global(.bx--list--unordered) {
 
 .blockquote .paragraph--responsive {
   // 8 col
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     width: calc(66.667% - 3rem);
   }
 }
 
 // If quote is inside a user specified row then allow the grid code to set the width
-:global(.#{$prefix}--row) .blockquote .paragraph {
-  @include carbon--breakpoint('md') {
+:global(.cds--row) .blockquote .paragraph {
+  @include breakpoint('md') {
     width: 100%;
   }
 }
 
 .blockquote cite {
-  @include carbon--type-style('body-long-01');
+  @include type-style('body-long-01');
   font-style: italic;
   display: block;
   margin-top: $spacing-02;
   text-indent: 0;
 }
 
-:global(.bx--list--ordered:not(.bx--list--nested) > .bx--list__item::before) {
+:global(.cds--list--ordered:not(.cds--list--nested)
+    > .cds--list__item::before) {
   display: none;
 }
 
-:global(.bx--list--ordered:not(.bx--list--nested)) .list-item {
+:global(.cds--list--ordered:not(.cds--list--nested)) .list-item {
   margin-left: 0.5rem;
 }
+
+// If paragraph is inside a user specified row then allow the grid code to set the width and padding
+:global(.cds--row .cds--row) .paragraph {
+  width: 100%;
+  padding-left: 0;
+
+  @include breakpoint('md') {
+    padding-right: 0;
+  }
+}
+
 //---------------------------------------
 // Headings
 //---------------------------------------
@@ -219,38 +221,38 @@ ul :global(.bx--list--unordered) {
 .h1 {
   --space: #{$spacing-12};
   margin-top: var(--space);
-  @include carbon--type-style('expressive-heading-05', true);
+  @include type-style('expressive-heading-05', true);
 }
 
 .h2 {
   --space: #{$spacing-11};
   margin-top: var(--space);
-  @include carbon--type-style('expressive-heading-04', true);
+  @include type-style('expressive-heading-04', true);
 }
 
 .h3 {
   --space: #{$spacing-10};
   margin-top: var(--space);
-  @include carbon--type-style('expressive-heading-03', true);
+  @include type-style('expressive-heading-03', true);
 }
 
 .h4 {
   --space: #{$spacing-07};
   margin-top: var(--space);
-  @include carbon--type-style('heading-02');
+  @include type-style('heading-02');
 }
 
 .h5,
 .h6 {
   --space: 0;
-  @include carbon--type-style('heading-01');
+  @include type-style('heading-01');
 }
 
 .sup {
   font-feature-settings: 'sups' on;
 }
 
-.abbr:global(.bx--tooltip--definition) button {
+.abbr:global(.cds--tooltip--definition) button {
   font-size: 1em;
 }
 //---------------------------------------

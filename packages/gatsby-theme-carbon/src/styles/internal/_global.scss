@@ -1,33 +1,19 @@
-$prefix: 'bx';
-
-// Disable feature flag warning
-$did-warn-diverged-feature-flags: true;
-
 //---------------------------------------
 // Carbon Components
 //---------------------------------------
-$feature-flags: (
-  ui-shell: true,
-  grid-columns-16: false,
-  enable-css-custom-properties: true,
-);
+@use '@carbon/react/scss/colors' as *;
+@use '@carbon/react/scss/compat/theme' as *;
+@use '@carbon/react/scss/type';
+@use 'plex';
 
-// Carbon globals/helpers
-@import '~carbon-components/scss/globals/grid/grid';
-@import '~carbon-components/scss/globals/scss/layout';
-@import 'carbon-components';
-
-// Typography
-@include carbon--type-reset();
-@import '~@carbon/elements/scss/type/classes';
-@import 'plex';
+@include type.reset();
 
 //---------------------------------------
 // Global styles
 //---------------------------------------
 
 body {
-  background: $carbon--black-100;
+  background: $black-100;
   color: $text-01;
 }
 
@@ -54,4 +40,14 @@ body em {
 
 body button {
   font-family: inherit;
+}
+
+// fix needed for v11 aspect ratio migration
+// to-do: refactor to use AspectRatio component in the future
+.cds--aspect-ratio--object {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }

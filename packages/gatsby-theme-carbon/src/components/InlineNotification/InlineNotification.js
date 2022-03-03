@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { InlineNotification as CarbonInlineNotification } from 'carbon-components-react';
+import { InlineNotification as CarbonInlineNotification } from '@carbon/react';
 import { Row, Column } from '../Grid';
 import useMetadata from '../../util/hooks/useMetadata';
 
@@ -20,10 +20,9 @@ const InlineNotification = ({ children, className, kind = 'info' }) => {
           lowContrast
           hideCloseButton
           kind={kind}
-          title=""
-          subtitle={children}
-          className={interiorTheme === 'dark' && styles.darkMode}
-        />
+          className={interiorTheme === 'dark' && styles.darkMode}>
+          {children}
+        </CarbonInlineNotification>
       </Column>
     </Row>
   );

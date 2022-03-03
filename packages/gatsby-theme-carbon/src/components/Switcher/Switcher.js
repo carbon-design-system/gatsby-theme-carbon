@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useEffect, useState } from 'react';
 import cx from 'classnames';
 import useMedia from 'use-media';
-import { Locked16 } from '@carbon/icons-react';
+import { Locked } from '@carbon/react/icons';
 import NavContext from '../../util/context/NavContext';
 import { nav, open, divider, link, linkDisabled } from './Switcher.module.scss';
 
@@ -75,7 +75,7 @@ export const SwitcherLink = ({
         href={href}
         {...rest}>
         {children}
-        {isInternal && <Locked16 />}
+        {isInternal && <Locked />}
       </a>
     </li>
   );

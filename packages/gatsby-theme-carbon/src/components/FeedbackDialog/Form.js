@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Button } from 'carbon-components-react';
+import { Button } from '@carbon/react';
 import { CSSTransition } from 'react-transition-group';
 
 import Checkmark from './Checkmark';

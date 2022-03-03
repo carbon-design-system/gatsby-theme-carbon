@@ -1,4 +1,4 @@
-import { Play32, Pause32 } from '@carbon/icons-react';
+import { Play, Pause } from '@carbon/react/icons';
 import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -113,8 +113,8 @@ const Video = ({ autoPlay, vimeoId, title, src, poster, muted, ...props }) => {
         onClick={onClick}
         onKeyDown={onKeyDown}
         tabIndex="0">
-        {isPlaying ? <Pause32 /> : <Play32 />}
-        <span className="bx--assistive-text">
+        {isPlaying ? <Pause size={32} /> : <Play size={32} />}
+        <span className="cds--assistive-text">
           {isPlaying ? 'Pause' : 'Play'}
         </span>
       </div>

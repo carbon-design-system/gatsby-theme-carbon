@@ -1,3 +1,6 @@
+## [3.0.0-next.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.0...v3.0.0-next.1) (2022-01-10)
+
+## [3.0.0-next.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.4...v3.0.0-next.0) (2021-10-22)
 ## [2.3.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.2.0...v2.3.0) (2022-02-17)
 
 
@@ -13,8 +16,6 @@
 
 * do dont component updates ([#1220](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1220)) ([67fc11c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/67fc11c1df4a450fc6011d0696cc92fb2685e34b))
 * update the references to the new homepage ([#1212](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1212)) ([57d3e88](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/57d3e886b8ef260481414ef8b7d20c9668f81fc9))
-
-## [3.0.0-next.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.0...v3.0.0-next.1) (2022-01-10)
 
 ## [2.2.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.6...v2.2.0) (2022-01-10)
 
@@ -37,9 +38,6 @@
 
 * grid alignment at max breakpoint ([#1181](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1181)) ([9a44a87](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9a44a87b8958c5a790e1c5726a341e31e4a5ae63))
 * medium post image aspect ratio closes [#1176](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1176) ([#1185](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1185)) ([566cfe7](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/566cfe77f4a7489e5f300eb0e94f64aebf3ee2f6))
->>>>>>> 5257408683f56b4a9709111325455e201c4f0584
-
-## [3.0.0-next.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.4...v3.0.0-next.0) (2021-10-22)
 
 ### [2.1.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.4-next.0...v2.1.4) (2021-10-19)
 

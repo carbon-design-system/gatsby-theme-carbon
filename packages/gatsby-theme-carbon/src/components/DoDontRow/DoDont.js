@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { CheckmarkFilled24, Misuse24 } from '@carbon/icons-react';
+import { CheckmarkFilled, Misuse } from '@carbon/react/icons';
 import { Column } from '../Grid';
 import * as styles from './DoDontRow.module.scss';
 
@@ -62,9 +62,9 @@ export default class DoDont extends React.Component {
           <div className={styles.card}>
             <div className={styles.cardContent}>
               {type === 'do' ? (
-                <CheckmarkFilled24 className={iconClassNames} />
+                <CheckmarkFilled size={24} className={iconClassNames} />
               ) : (
-                <Misuse24 className={iconClassNames} />
+                <Misuse size={24} className={iconClassNames} />
               )}
               <div className={styles.content}>
                 {children}
