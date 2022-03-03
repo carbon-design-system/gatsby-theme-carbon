@@ -1253,11 +1253,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-<<<<<<< HEAD
-"@babel/runtime@^7.16.7":
-=======
-"@babel/runtime@^7.16.3", "@babel/runtime@^7.9.2":
->>>>>>> b5e704d1a412846ce678e73777d354fb18a9b332
+"@babel/runtime@^7.16.3", "@babel/runtime@^7.16.7", "@babel/runtime@^7.9.2":
   version "7.16.7"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.7.tgz#03ff99f64106588c9c403c6ecb8c3bafbbdff1fa"
   integrity sha512-9E9FJowqAsytyOY6LG+1KuueckRL+aQW+mKvXRXnuFGyRAyepJPmEo9vgMfXUA6O9u3IeEdv9MAkppFcaQwogQ==
@@ -4335,22 +4331,10 @@ alphanum-sort@^1.0.2:
   resolved "https://registry.npmjs.org/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
 
-<<<<<<< HEAD
-anser@^2.0.1:
-  version "2.0.2"
-  resolved "https://registry.npmjs.org/anser/-/anser-2.0.2.tgz#12bd6fd23a9ff08605b83972a10f97fd1970a32b"
-  integrity sha512-4T2MOoBvX1Gjroo1esGpMmNNIsH+vEw0zQEcskj1bt6Ydhp59qRL9GAThdMPYgEwnIyTNqT9LkCTPSEM/J/blQ==
-=======
-amdefine@>=0.0.4:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
-  integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
-
 anser@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/anser/-/anser-2.1.0.tgz#a7309c9f29886f19af56cb30c79fc60ea483944e"
   integrity sha512-zqC6MjuKg2ASofHsYE4orC7uGZQVbfJT1NiDDAzPtwc8XkWsAOSPAfqGFB/SG/PLybgeZ+LjVXvwfAWAEPXzuQ==
->>>>>>> b5e704d1a412846ce678e73777d354fb18a9b332
 
 ansi-align@^3.0.0:
   version "3.0.1"
@@ -5547,22 +5531,15 @@ caniuse-lite@^1.0.30001109:
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001228.tgz#bfdc5942cd3326fa51ee0b42fbef4da9d492a7fa"
   integrity sha512-QQmLOGJ3DEgokHbMSA8cj2a+geXqmnpyOFT0lhQV6P3/YOJvGDEwoedcwxEQ30gJIwIIunHIicunJ2rzK5gB2A==
 
-<<<<<<< HEAD
-carbon-components-react@^7.54.1:
-  version "7.54.1"
-  resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.54.1.tgz#a81dd4ae90cd2df5c8460dd048be7f0a4330db47"
-  integrity sha512-+jzV9d0qpv+0Pmm25IB1hRIpT9HsZlwBVKK9VLetV5pRpmR7JFUaaRwcdpzUwjmFdqON3OM/f39FmWoGRe7+Rg==
-=======
 caniuse-lite@^1.0.30001286, caniuse-lite@^1.0.30001297:
   version "1.0.30001297"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001297.tgz#ea7776ccc4992956582cae5b8fea127fbebde430"
   integrity sha512-6bbIbowYG8vFs/Lk4hU9jFt7NknGDleVAciK916tp6ft1j+D//ZwwL6LbF1wXMQ32DMSjeuUV8suhh6dlmFjcA==
 
-carbon-components-react@^7.39.0:
-  version "7.45.0"
-  resolved "https://registry.npmjs.org/carbon-components-react/-/carbon-components-react-7.45.0.tgz#e7f603ea5ec5bd7704d67a0fd43447e32f5877e0"
-  integrity sha512-1KoPSsOGEULhFzc5yjJECSwmawH5QRmY6BhQuKHfsLpnx2O8mQdfYXry3kOh8M9/+T91HWDA1YhHSUIo/1/IzA==
->>>>>>> b5e704d1a412846ce678e73777d354fb18a9b332
+carbon-components-react@^7.54.1:
+  version "7.54.1"
+  resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.54.1.tgz#a81dd4ae90cd2df5c8460dd048be7f0a4330db47"
+  integrity sha512-+jzV9d0qpv+0Pmm25IB1hRIpT9HsZlwBVKK9VLetV5pRpmR7JFUaaRwcdpzUwjmFdqON3OM/f39FmWoGRe7+Rg==
   dependencies:
     "@babel/runtime" "^7.16.7"
     "@carbon/feature-flags" "^0.7.0"
@@ -10069,11 +10046,7 @@ glob-to-regexp@^0.4.1:
   resolved "https://registry.npmjs.org/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz#c75297087c851b9a578bd217dd59a92f59fe546e"
   integrity sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==
 
-<<<<<<< HEAD
-glob@^7.0.0, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.6, glob@^7.1.7:
-=======
-glob@^7.0.0, glob@^7.0.3, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.6, glob@^7.1.7, glob@^7.2.0:
->>>>>>> b5e704d1a412846ce678e73777d354fb18a9b332
+glob@^7.0.0, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.6, glob@^7.1.7, glob@^7.2.0:
   version "7.2.0"
   resolved "https://registry.npmjs.org/glob/-/glob-7.2.0.tgz#d15535af7732e02e948f4c41628bd910293f6023"
   integrity sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==
@@ -13290,14 +13263,11 @@ nanoid@^3.1.28:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.2.0.tgz#62667522da6673971cca916a6d3eff3f415ff80c"
   integrity sha512-fmsZYa9lpn69Ad5eDn7FMcnnSR+8R34W9qJEijxYhTbfOWzr22n1QxCMzXLK+ODyW2973V3Fux959iQoUxzUIA==
-<<<<<<< HEAD
-=======
 
 nanoid@^3.1.30:
   version "3.1.30"
   resolved "https://registry.npmjs.org/nanoid/-/nanoid-3.1.30.tgz#63f93cc548d2a113dc5dfbc63bfa09e2b9b64362"
   integrity sha512-zJpuPDwOv8D2zq2WRoMe1HsfZthVewpel9CAvTfc/2mBD1uUT/agc5f7GHGWXlYkFvi1mVxe4IjvP2HNrop7nQ==
->>>>>>> b5e704d1a412846ce678e73777d354fb18a9b332
 
 nanomatch@^1.2.9:
   version "1.2.13"
@@ -13505,35 +13475,11 @@ node-releases@^1.1.61, node-releases@^1.1.71, node-releases@^1.1.77:
   resolved "https://registry.npmjs.org/node-releases/-/node-releases-1.1.77.tgz#50b0cfede855dd374e7585bf228ff34e57c1c32e"
   integrity sha512-rB1DUFUNAN4Gn9keO2K1efO35IDK7yKHCdCaIMvFO7yUYmmZYeDjnGKle26G4rwj+LKRQpjyUUvMkPglwGCYNQ==
 
-<<<<<<< HEAD
-=======
 node-releases@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.1.tgz#3d1d395f204f1f2f29a54358b9fb678765ad2fc5"
   integrity sha512-CqyzN6z7Q6aMeF/ktcMVTzhAHCEpf8SOarwpzpf8pNBY2k5/oM34UHldUwp8VKI7uxct2HxSRdJjBaZeESzcxA==
 
-node-sass@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-6.0.1.tgz#cad1ccd0ce63e35c7181f545d8b986f3a9a887fe"
-  integrity sha512-f+Rbqt92Ful9gX0cGtdYwjTrWAaGURgaK5rZCWOgCNyGWusFYHhbqCCBoFBeat+HKETOU02AyTxNhJV0YZf2jQ==
-  dependencies:
-    async-foreach "^0.1.3"
-    chalk "^1.1.1"
-    cross-spawn "^7.0.3"
-    gaze "^1.0.0"
-    get-stdin "^4.0.1"
-    glob "^7.0.3"
-    lodash "^4.17.15"
-    meow "^9.0.0"
-    nan "^2.13.2"
-    node-gyp "^7.1.0"
-    npmlog "^4.0.0"
-    request "^2.88.0"
-    sass-graph "2.2.5"
-    stdout-stream "^1.4.0"
-    "true-case-path" "^1.0.2"
-
->>>>>>> b5e704d1a412846ce678e73777d354fb18a9b332
 nopt@^4.0.1:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-4.0.3.tgz#a375cad9d02fd921278d954c2254d5aa57e15e48"
@@ -14918,14 +14864,11 @@ postcss-value-parser@^4.0.2, postcss-value-parser@^4.1.0:
   resolved "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.1.0.tgz#443f6a20ced6481a2bda4fa8532a6e55d789a2cb"
   integrity sha512-97DXOFbQJhk71ne5/Mt6cOu6yxsSfM0QGQyl0L25Gca4yGWEGJaig7l7gbCX623VqTBNGLRLaVUCnNkcedlRSQ==
 
-<<<<<<< HEAD
-=======
 postcss-value-parser@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz#723c09920836ba6d3e5af019f92bc0971c02e514"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
->>>>>>> b5e704d1a412846ce678e73777d354fb18a9b332
 postcss@7.0.36, postcss@^7.0.14, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.26, postcss@^7.0.32, postcss@^7.0.35, postcss@^7.0.6:
   version "7.0.36"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.36.tgz#056f8cffa939662a8f5905950c07d5285644dfcb"
@@ -14935,11 +14878,7 @@ postcss@7.0.36, postcss@^7.0.14, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.2
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-<<<<<<< HEAD
-postcss@^8.2.15, postcss@^8.2.9, postcss@^8.3.5:
-=======
 postcss@^8.2.15, postcss@^8.2.9:
->>>>>>> b5e704d1a412846ce678e73777d354fb18a9b332
   version "8.3.9"
   resolved "https://registry.npmjs.org/postcss/-/postcss-8.3.9.tgz#98754caa06c4ee9eb59cc48bd073bb6bd3437c31"
   integrity sha512-f/ZFyAKh9Dnqytx5X62jgjhhzttjZS7hMsohcI7HEI5tjELX/HxCy3EFhsRxyzGvrzFF+82XPvCS8T9TFleVJw==
@@ -15017,15 +14956,6 @@ prettier-linter-helpers@^1.0.0:
   integrity sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==
   dependencies:
     fast-diff "^1.1.2"
-
-<<<<<<< HEAD
-prettier@^2.3.2:
-=======
-prettier@^2.0.2:
->>>>>>> b5e704d1a412846ce678e73777d354fb18a9b332
-  version "2.4.1"
-  resolved "https://registry.npmjs.org/prettier/-/prettier-2.4.1.tgz#671e11c89c14a4cfc876ce564106c4a6726c9f5c"
-  integrity sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==
 
 prettier@^2.5.1:
   version "2.5.1"
