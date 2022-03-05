@@ -1414,42 +1414,29 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@carbon/colors@^10.33.0":
-  version "10.33.0"
-  resolved "https://registry.npmjs.org/@carbon/colors/-/colors-10.33.0.tgz#c3fc0da44b1f6f6582e138540b71a1b0f756e1f2"
-  integrity sha512-szmYimpNNSeCazLFoBzT1XvcUpO3oY3zJMJtA8BaSBFos3eY7cxIEhU7pNWKs7sW5CED/0LMuuYyRjOL+KGkCA==
-
 "@carbon/colors@^10.37.0":
   version "10.37.0"
   resolved "https://registry.yarnpkg.com/@carbon/colors/-/colors-10.37.0.tgz#44081ff9d8e412861596bc37d16b847638456530"
   integrity sha512-N0w5u7bcnhC/k7RqvdHoPvD9j4c1chyGpwrim5Zrpusksr4EJz9/M3+UoBdInmweTxvwx4UGPICmuSWRXpKLpg==
 
-"@carbon/elements@^10.38.0":
-  version "10.44.0"
-  resolved "https://registry.npmjs.org/@carbon/elements/-/elements-10.44.0.tgz#f269b3b30164312fce490fbb8a260d610066bc38"
-  integrity sha512-zxFlC8NRR+W3LW2VwxigPU39n4NSWdsLttCF9x+bTZvx+k4ReiGNxOddsIX4IYrFRae6FsnajzX+AmXz01FXcw==
+"@carbon/elements@^10.53.0":
+  version "10.53.0"
+  resolved "https://registry.yarnpkg.com/@carbon/elements/-/elements-10.53.0.tgz#e8c79a2f25cb772b579021439c41e82296b1bbc5"
+  integrity sha512-k5RBxvW62vj87YnZBj8J7NRe73q/B+8zDrIlIxwTBJ7eTcs6klM6FoJwP4U7b6oo6akAJdcX0+PCN7c0Wsl30Q==
   dependencies:
-    "@carbon/colors" "^10.33.0"
-    "@carbon/grid" "^10.37.0"
-    "@carbon/icons" "^10.40.0"
-    "@carbon/import-once" "^10.6.0"
-    "@carbon/layout" "^10.33.0"
-    "@carbon/motion" "^10.25.0"
-    "@carbon/themes" "^10.44.0"
-    "@carbon/type" "^10.37.0"
+    "@carbon/colors" "^10.37.0"
+    "@carbon/grid" "^10.42.0"
+    "@carbon/icons" "^10.47.0"
+    "@carbon/import-once" "^10.7.0"
+    "@carbon/layout" "^10.37.0"
+    "@carbon/motion" "^10.29.0"
+    "@carbon/themes" "^10.52.0"
+    "@carbon/type" "^10.42.0"
 
 "@carbon/feature-flags@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@carbon/feature-flags/-/feature-flags-0.7.0.tgz#fe8068b482439ae7af519ccdbf627f31373bb646"
   integrity sha512-nxVvnSMC6Ia/xn0j02FHPATfB/Iv6nnkZAQ6GrEdPLivSF1T2oaTvgawUsXBO8RBX7wQBq5l7uW8qH/0WfjIFw==
-
-"@carbon/grid@^10.37.0":
-  version "10.37.0"
-  resolved "https://registry.npmjs.org/@carbon/grid/-/grid-10.37.0.tgz#0ab86ae6c71a4d6245d6dc77b5559e6e6d42d194"
-  integrity sha512-knpYPRnT2R7Hfr9OCh4skU0vbgDrkpH3AEBtVG9iekvxH6H7CH8Bmr+sTCqkcBd8BcihNC6sxT/wwQ/hAs/aaQ==
-  dependencies:
-    "@carbon/import-once" "^10.6.0"
-    "@carbon/layout" "^10.33.0"
 
 "@carbon/grid@^10.42.0":
   version "10.42.0"
@@ -1458,11 +1445,6 @@
   dependencies:
     "@carbon/import-once" "^10.7.0"
     "@carbon/layout" "^10.37.0"
-
-"@carbon/icon-helpers@^10.24.0":
-  version "10.24.0"
-  resolved "https://registry.npmjs.org/@carbon/icon-helpers/-/icon-helpers-10.24.0.tgz#2f3fbc8b0b64090c21833cd81eabadc41d56b684"
-  integrity sha512-kmzN2Zjyp4EmCAlGu561+dJVABH96n5+RnjmsPdv4wrSx+FNyzbxnKYV1x2FYrTxtZ9LB+pd3EofEyVuQM6V0Q==
 
 "@carbon/icon-helpers@^10.28.0":
   version "10.28.0"
@@ -1478,69 +1460,52 @@
     "@carbon/telemetry" "0.0.0-alpha.6"
     prop-types "^15.7.2"
 
-"@carbon/icons@^10.40.0":
-  version "10.40.0"
-  resolved "https://registry.npmjs.org/@carbon/icons/-/icons-10.40.0.tgz#f08e923aa587251539ff38c2fca8ca9a6ea461cb"
-  integrity sha512-oGMTUR6OXXIvkGJWt5+aIGIuA0nJIRsygTIEB7yya20VqZ0z3dMU8wT20ZvxHQ/+NGxEWhJHi0F6fKiu+vqi+A==
-  dependencies:
-    svgson "^5.2.1"
-
-"@carbon/import-once@^10.6.0":
-  version "10.6.0"
-  resolved "https://registry.npmjs.org/@carbon/import-once/-/import-once-10.6.0.tgz#a8fb846d9dc3eea9d45d9131a235e898d0f8db1e"
-  integrity sha512-vi0lnmZot9J5uW2p9chtyLBwe3nCTY4HrDWuglLOZVOHu7dbLQiRjD/r3uOjB4lr5qduRwk2hblBXKBhpVDBpg==
+"@carbon/icons@^10.47.0":
+  version "10.47.0"
+  resolved "https://registry.yarnpkg.com/@carbon/icons/-/icons-10.47.0.tgz#58f55a15b7f58e25db2e714eaea051bc092ba94d"
+  integrity sha512-I1HhB/YGuUoFVp4/hithMuBDtv3z+fVFG9Q169NQ8gzkwE1PMxjUoHlgrKR3kLcRstzC60e5y30uWSRhOBGWBw==
 
 "@carbon/import-once@^10.7.0":
   version "10.7.0"
   resolved "https://registry.yarnpkg.com/@carbon/import-once/-/import-once-10.7.0.tgz#3e66e1308cad78272e2d9d9ea3741dd073860263"
   integrity sha512-KoqbfzGKjO89iUPabN6zNpXpcjxgQYgpHmesZ/DXc/zeV0PyHrnAOC8Q3J0cRPf1zYpGRHN2Tbw1ttTjonzbjg==
 
-"@carbon/layout@^10.33.0":
-  version "10.33.0"
-  resolved "https://registry.npmjs.org/@carbon/layout/-/layout-10.33.0.tgz#15fa1db6f80f02f76c84aa1665c67751bb0ec472"
-  integrity sha512-3yHf/5tPVkvGUYC4ueUSoo5Tw1UxpKxAmigVZCf7MRe9dc06z68xyxrz+mZ5bIPBzbbfLYfz/y6FaD3Toeo30g==
-
 "@carbon/layout@^10.37.0":
   version "10.37.0"
   resolved "https://registry.yarnpkg.com/@carbon/layout/-/layout-10.37.0.tgz#be647c207186d56813fb024372525278febb4496"
   integrity sha512-6Oyinqc72MQsV9OKT5SYPHHkQh1WrQU+lyV7dSHucMKrHJ9RAQLbno7pBD9oOcwoLfq4u9D9KSdXf8SntChphw==
-
-"@carbon/motion@^10.25.0":
-  version "10.25.0"
-  resolved "https://registry.npmjs.org/@carbon/motion/-/motion-10.25.0.tgz#e4a83eb73be33eaa8bd1e4e42ace25e1554e5370"
-  integrity sha512-q6dMkLyeUkdQa5JljWT+TQn/qY0+i67qwkm0jnYQvBRwoxF6CfNedY/wQM2KcuHnRVjCjCmdrRxAcP+yQRvQyw==
 
 "@carbon/motion@^10.29.0":
   version "10.29.0"
   resolved "https://registry.yarnpkg.com/@carbon/motion/-/motion-10.29.0.tgz#1e78c70d396ad3b9363f7a0c7e36ce9bac3d5702"
   integrity sha512-b8Cc9vgMlkQfLQAwq9Zt1/UfsrtGcWQpf0kK5gCamAuSmNSFWYJSwqbY9MeodxM2xNfXrxFcEFwqwy/E7egxUw==
 
-"@carbon/pictograms-react@^11.14.0":
-  version "11.19.0"
-  resolved "https://registry.npmjs.org/@carbon/pictograms-react/-/pictograms-react-11.19.0.tgz#2254d7770328765fb084cc07034ae720033d11c1"
-  integrity sha512-ey0/RaGHuIhkO7M3nsscbeNVKkpVtHDMdbC3exnioIJf4+Kr5LVsLvzveLCMTrbpwyxG+LlguQ4IK//8E+HwnQ==
+"@carbon/pictograms-react@^11.23.0":
+  version "11.23.0"
+  resolved "https://registry.yarnpkg.com/@carbon/pictograms-react/-/pictograms-react-11.23.0.tgz#f7dfaba7e5e9bc9884c0b7c5701a1286c55f1017"
+  integrity sha512-TcTDc3jdVOF7e6Bk0LOoeN9q+xAb9KCXfnFxfz/w50xZrABL0JNY5DgRH7LURH4M1vbEqEk8ix8R11m6gCpb2Q==
   dependencies:
-    "@carbon/icon-helpers" "^10.24.0"
+    "@carbon/icon-helpers" "^10.28.0"
     "@carbon/telemetry" "0.0.0-alpha.6"
     prop-types "^15.7.2"
 
-"@carbon/react@^0.15.1":
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/@carbon/react/-/react-0.15.1.tgz#f7f047f23b276a1d21b24c11c588f5c47308cb35"
-  integrity sha512-G1B/MwjWUUZMpdEbisqIxl8uC4YcaSco6sVq+ypsZ7MEVk2rZzA/r+NDofj1q88Nd8GIvSxdtTT84MUNNJS1Ig==
+"@carbon/react@^0.15.2":
+  version "0.15.2"
+  resolved "https://registry.yarnpkg.com/@carbon/react/-/react-0.15.2.tgz#7ef14ec8531cdee6fac104de29f28c84e03451f4"
+  integrity sha512-F9UGszFfcqzPmPWeOKerwJ90KplZuQdhuG+/xAIzEBg349/w2vv92XCMbPsx3DXOr0//NenAu9T741dFye06+w==
   dependencies:
     "@carbon/feature-flags" "^0.7.0"
     "@carbon/icons-react" "^10.47.0"
-    "@carbon/styles" "^0.15.0"
+    "@carbon/styles" "^0.15.1"
     "@carbon/telemetry" "0.0.0-alpha.6"
     carbon-components "^10.54.0"
-    carbon-components-react "^7.54.1"
+    carbon-components-react "^7.54.2"
     carbon-icons "^7.0.7"
 
-"@carbon/styles@^0.15.0":
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/@carbon/styles/-/styles-0.15.0.tgz#50a514976ec65019bb15d7882c2bb66e84e8836a"
-  integrity sha512-jz2e1VHRH3iagzojFsS7/ab92bi9+yZ8SAVWxViOSeSvNeuhxhWvLqGLDJRdasEyzZ5MIrCEsyAWGx6uPZtU2w==
+"@carbon/styles@^0.15.1":
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/@carbon/styles/-/styles-0.15.1.tgz#2ba23cc42582268567d48ca1d3be8fd74ea5dad7"
+  integrity sha512-ttGR6rZAvva7+9RGKGsTyCnHMZZqH8yQmRuaTxdkvhXubsYvYHBExoFywYS0n8CqJDJ9QktrkWBn3NcQ+M55iQ==
   dependencies:
     "@carbon/colors" "^10.37.0"
     "@carbon/feature-flags" "^0.7.0"
@@ -1567,16 +1532,6 @@
     winston "^3.3.3"
     yargs "^16.1.1"
 
-"@carbon/themes@^10.38.0", "@carbon/themes@^10.44.0":
-  version "10.44.0"
-  resolved "https://registry.npmjs.org/@carbon/themes/-/themes-10.44.0.tgz#29b34566c85ca2df3ef99ffaff2fa022aa48bb4b"
-  integrity sha512-tmOqH+/ocChLeeuEwWPfEliqDYMi58/sibLpzfS2WQsCPhqZN1B78g6UiwB0hYCiSUFWnBWNEIjTHx/Fbh62bw==
-  dependencies:
-    "@carbon/colors" "^10.33.0"
-    "@carbon/layout" "^10.33.0"
-    "@carbon/type" "^10.37.0"
-    color "^3.1.2"
-
 "@carbon/themes@^10.52.0":
   version "10.52.0"
   resolved "https://registry.yarnpkg.com/@carbon/themes/-/themes-10.52.0.tgz#417d539d2b89c1564f8a34713447c9f8ef5da493"
@@ -1586,14 +1541,6 @@
     "@carbon/layout" "^10.37.0"
     "@carbon/type" "^10.42.0"
     color "^3.1.2"
-
-"@carbon/type@^10.37.0":
-  version "10.37.0"
-  resolved "https://registry.npmjs.org/@carbon/type/-/type-10.37.0.tgz#639e2bfebb73eb847e1ca653575e3fe60022dfaf"
-  integrity sha512-OT8W9ySdj8PX/EuydcKRV02gdre3qcGVY2uUcXYTj/sIUTnx8f8xQKJLfeo1eLKCah2qF5VklKHFrB2eJs0KHA==
-  dependencies:
-    "@carbon/import-once" "^10.6.0"
-    "@carbon/layout" "^10.33.0"
 
 "@carbon/type@^10.42.0":
   version "10.42.0"
@@ -5536,10 +5483,10 @@ caniuse-lite@^1.0.30001286, caniuse-lite@^1.0.30001297:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001297.tgz#ea7776ccc4992956582cae5b8fea127fbebde430"
   integrity sha512-6bbIbowYG8vFs/Lk4hU9jFt7NknGDleVAciK916tp6ft1j+D//ZwwL6LbF1wXMQ32DMSjeuUV8suhh6dlmFjcA==
 
-carbon-components-react@^7.54.1:
-  version "7.54.1"
-  resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.54.1.tgz#a81dd4ae90cd2df5c8460dd048be7f0a4330db47"
-  integrity sha512-+jzV9d0qpv+0Pmm25IB1hRIpT9HsZlwBVKK9VLetV5pRpmR7JFUaaRwcdpzUwjmFdqON3OM/f39FmWoGRe7+Rg==
+carbon-components-react@^7.54.2:
+  version "7.54.2"
+  resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.54.2.tgz#22f0453800d58d6d80dbaf37a9be4b2cdc10e18e"
+  integrity sha512-eOThqnY9bWZvBYRDx6ODFddLzjTbbzKJQwMg4lXFWCa17U6W/IlSqBVSV9dsEJbirCDWCr1HMV0V6XXzz5JuVg==
   dependencies:
     "@babel/runtime" "^7.16.7"
     "@carbon/feature-flags" "^0.7.0"
@@ -5995,10 +5942,18 @@ color-name@^1.0.0, color-name@~1.1.4:
   resolved "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
-color-string@^1.5.2, color-string@^1.6.0:
+color-string@^1.5.2:
   version "1.6.0"
   resolved "https://registry.npmjs.org/color-string/-/color-string-1.6.0.tgz#c3915f61fe267672cb7e1e064c9d692219f6c312"
   integrity sha512-c/hGS+kRWJutUBEngKKmk4iH3sD59MBkoxVapS/0wgpCz2u7XsNloxknyvBhzwEs1IbV36D9PwqLPJ2DTu3vMA==
+  dependencies:
+    color-name "^1.0.0"
+    simple-swizzle "^0.2.2"
+
+color-string@^1.6.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/color-string/-/color-string-1.9.0.tgz#63b6ebd1bec11999d1df3a79a7569451ac2be8aa"
+  integrity sha512-9Mrz2AQLefkH1UvASKj6v6hj/7eWgjnT/cVsR8CumieLoT+g900exWeNogqtweI8dxloXN9BDQTYro1oWu/5CQ==
   dependencies:
     color-name "^1.0.0"
     simple-swizzle "^0.2.2"
@@ -6013,7 +5968,7 @@ color@3.0.x:
 
 color@^3.1.2:
   version "3.2.1"
-  resolved "https://registry.npmjs.org/color/-/color-3.2.1.tgz#3544dc198caf4490c3ecc9a790b54fe9ff45e164"
+  resolved "https://registry.yarnpkg.com/color/-/color-3.2.1.tgz#3544dc198caf4490c3ecc9a790b54fe9ff45e164"
   integrity sha512-aBl7dZI9ENN6fUGC7mWpMTPNHmWUSNan9tuWN6ahh5ZLNk9baLJOnSMlrQkHcrfFgz2/RigjUVAjdx36VcemKA==
   dependencies:
     color-convert "^1.9.3"
@@ -7157,14 +7112,6 @@ deep-is@~0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
   integrity sha1-s2nW+128E+7PUk+RsHD+7cNXzzQ=
-
-deep-rename-keys@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.npmjs.org/deep-rename-keys/-/deep-rename-keys-0.2.1.tgz#ede78537d7a66a2be61517e2af956d7f58a3f1d8"
-  integrity sha1-7eeFN9emaivmFRfir5Vtf1ij8dg=
-  dependencies:
-    kind-of "^3.0.2"
-    rename-keys "^1.1.2"
 
 deepmerge@^4.0.0, deepmerge@^4.2.2:
   version "4.2.2"
@@ -8384,11 +8331,6 @@ event-target-shim@^5.0.0:
   version "5.0.1"
   resolved "https://registry.npmjs.org/event-target-shim/-/event-target-shim-5.0.1.tgz#5d4d3ebdf9583d63a5333ce2deb7480ab2b05789"
   integrity sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==
-
-eventemitter3@^2.0.0:
-  version "2.0.3"
-  resolved "https://registry.npmjs.org/eventemitter3/-/eventemitter3-2.0.3.tgz#b5e1079b59fb5e1ba2771c0a993be060a58c99ba"
-  integrity sha1-teEHm1n7XhuidxwKmTvgYKWMmbo=
 
 eventemitter3@^3.1.0:
   version "3.1.2"
@@ -11125,7 +11067,7 @@ is-arrayish@^0.2.1:
 
 is-arrayish@^0.3.1:
   version "0.3.2"
-  resolved "https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.3.2.tgz#4574a2ae56f7ab206896fb431eaeed066fdf8f03"
+  resolved "https://registry.yarnpkg.com/is-arrayish/-/is-arrayish-0.3.2.tgz#4574a2ae56f7ab206896fb431eaeed066fdf8f03"
   integrity sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==
 
 is-bigint@^1.0.1:
@@ -11422,7 +11364,7 @@ is-plain-obj@^2.0.0:
   resolved "https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-2.1.0.tgz#45e42e37fccf1f40da8e5f76ee21515840c09287"
   integrity sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==
 
-is-plain-object@^2.0.1, is-plain-object@^2.0.3, is-plain-object@^2.0.4:
+is-plain-object@^2.0.3, is-plain-object@^2.0.4:
   version "2.0.4"
   resolved "https://registry.npmjs.org/is-plain-object/-/is-plain-object-2.0.4.tgz#2c163b3fafb1b606d9d17928f05c2a1c38e07677"
   integrity sha512-h5PpgXkWitc38BBMYawTYMWJHFZJVnBquFE57xFpjB8pJFiF6gZ+bU+WyI/yqXiFR5mdLsgYNaPe8uao6Uv9Og==
@@ -13785,14 +13727,6 @@ omggif@^1.0.10, omggif@^1.0.9:
   resolved "https://registry.npmjs.org/omggif/-/omggif-1.0.10.tgz#ddaaf90d4a42f532e9e7cb3a95ecdd47f17c7b19"
   integrity sha512-LMJTtvgc/nugXj0Vcrrs68Mn2D1r0zf630VNtqtpI1FEO7e+O9FP4gqs9AcnBaSEeoHIPm28u6qgPR0oyEpGSw==
 
-omit-deep@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.npmjs.org/omit-deep/-/omit-deep-0.3.0.tgz#21c8af3499bcadd29651a232cbcacbc52445ebec"
-  integrity sha1-IcivNJm8rdKWUaIyy8rLxSRF6+w=
-  dependencies:
-    is-plain-object "^2.0.1"
-    unset-value "^0.1.1"
-
 on-finished@^2.3.0, on-finished@~2.3.0:
   version "2.3.0"
   resolved "https://registry.npmjs.org/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
@@ -15963,11 +15897,6 @@ remove-trailing-separator@^1.0.1:
   resolved "https://registry.npmjs.org/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz#c24bce2a283adad5bc3f58e0d48249b92379d8ef"
   integrity sha1-wkvOKig62tW8P1jg1IJJuSN52O8=
 
-rename-keys@^1.1.2:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/rename-keys/-/rename-keys-1.2.0.tgz#be602fb0b750476b513ebe85ba4465d03254f0a3"
-  integrity sha512-U7XpAktpbSgHTRSNRrjKSrjYkZKuhUukfoBlXWXUExCAqhzh1TU3BDRAfJmarcl5voKS+pbKU9MvyLWKZ4UEEg==
-
 renderkid@^2.0.4:
   version "2.0.7"
   resolved "https://registry.npmjs.org/renderkid/-/renderkid-2.0.7.tgz#464f276a6bdcee606f4a15993f9b29fc74ca8609"
@@ -16694,7 +16623,7 @@ simple-get@^3.0.3, simple-get@^3.1.0:
 
 simple-swizzle@^0.2.2:
   version "0.2.2"
-  resolved "https://registry.npmjs.org/simple-swizzle/-/simple-swizzle-0.2.2.tgz#a4da6b635ffcccca33f70d17cb92592de95e557a"
+  resolved "https://registry.yarnpkg.com/simple-swizzle/-/simple-swizzle-0.2.2.tgz#a4da6b635ffcccca33f70d17cb92592de95e557a"
   integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   dependencies:
     is-arrayish "^0.3.1"
@@ -17655,15 +17584,6 @@ svgo@^2.3.0:
     csso "^4.2.0"
     nanocolors "^0.1.12"
     stable "^0.1.8"
-
-svgson@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.npmjs.org/svgson/-/svgson-5.2.1.tgz#7481fb1af4a58be542a6bd2020c168c6b71381cb"
-  integrity sha512-nbM6QuyZiKzQ0Uo51VDta93YJAr96ikyT40PsgJRrzynOGsOlnmJ6zAK5hUFyE5gnxcg7yuOPUWbUlmV9K0+Dg==
-  dependencies:
-    deep-rename-keys "^0.2.1"
-    omit-deep "0.3.0"
-    xml-reader "2.4.3"
 
 swap-case@^1.1.0:
   version "1.1.2"
@@ -18630,14 +18550,6 @@ unquote@~1.1.1:
   resolved "https://registry.npmjs.org/unquote/-/unquote-1.1.1.tgz#8fded7324ec6e88a0ff8b905e7c098cdc086d544"
   integrity sha1-j97XMk7G6IoP+LkF58CYzcCG1UQ=
 
-unset-value@^0.1.1:
-  version "0.1.2"
-  resolved "https://registry.npmjs.org/unset-value/-/unset-value-0.1.2.tgz#506810b867f27c2a5a6e9b04833631f6de58d310"
-  integrity sha1-UGgQuGfyfCpabpsEgzYx9t5Y0xA=
-  dependencies:
-    has-value "^0.3.1"
-    isobject "^3.0.0"
-
 unset-value@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/unset-value/-/unset-value-1.0.0.tgz#8376873f7d2335179ffb1e6fc3a8ed0dfc8ab559"
@@ -19511,25 +19423,10 @@ xhr@^2.0.1:
     parse-headers "^2.0.0"
     xtend "^4.0.0"
 
-xml-lexer@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.npmjs.org/xml-lexer/-/xml-lexer-0.2.2.tgz#518193a4aa334d58fc7d248b549079b89907e046"
-  integrity sha1-UYGTpKozTVj8fSSLVJB5uJkH4EY=
-  dependencies:
-    eventemitter3 "^2.0.0"
-
 xml-parse-from-string@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/xml-parse-from-string/-/xml-parse-from-string-1.0.1.tgz#a9029e929d3dbcded169f3c6e28238d95a5d5a28"
   integrity sha1-qQKekp09vN7RafPG4oI42VpdWig=
-
-xml-reader@2.4.3:
-  version "2.4.3"
-  resolved "https://registry.npmjs.org/xml-reader/-/xml-reader-2.4.3.tgz#9f810caf7c425a5aafb848b1c45103c9e71d7530"
-  integrity sha1-n4EMr3xCWlqvuEixxFEDyecddTA=
-  dependencies:
-    eventemitter3 "^2.0.0"
-    xml-lexer "^0.2.2"
 
 xml2js@^0.4.19, xml2js@^0.4.5:
   version "0.4.23"
