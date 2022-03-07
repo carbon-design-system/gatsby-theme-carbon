@@ -1,5 +1,3 @@
-@import '~carbon-components/scss/globals/scss/helper-mixins';
-
 .container {
   position: relative;
   display: flex;
@@ -55,7 +53,7 @@
 }
 
 .label {
-  @include hidden;
+  @include visually-hidden;
 }
 
 .list {

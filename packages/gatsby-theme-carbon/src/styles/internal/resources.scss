@@ -13,5 +13,8 @@
 @use '@carbon/react/scss/type' as *;
 // $standard-easing $transition-x
 @use '@carbon/react/scss/motion' as *;
+// @include visually-hidden;
+@use '@carbon/react/scss/utilities/visually-hidden' as *;
 // rem() em()
 // @use '@carbon/react/scss/utilities/convert' as *;
+@use '@carbon/react/scss/compat/theme' as *;
