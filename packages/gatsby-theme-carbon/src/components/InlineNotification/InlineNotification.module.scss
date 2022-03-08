@@ -6,11 +6,11 @@
   margin-top: 0;
 }
 
-.notification :global(.cds--inline-notification__subtitle p) {
+.notification :global(.cds--inline-notification__content p) {
   @include type-style('body-short-01');
 }
 
-.notification :global(.cds--inline-notification__subtitle .cds--row) {
+.notification :global(.cds--inline-notification__content .cds--row) {
   margin: 0;
 }
 
