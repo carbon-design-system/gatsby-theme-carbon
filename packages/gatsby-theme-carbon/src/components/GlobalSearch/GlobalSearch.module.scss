@@ -53,7 +53,19 @@
 }
 
 .label {
-  @include visually-hidden;
+  // TODO - this can instead use the visually-hidden helper mixin from @carbon/react once it's provided
+  // @include visually-hidden;
+
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  visibility: inherit;
+  white-space: nowrap;
 }
 
 .list {
