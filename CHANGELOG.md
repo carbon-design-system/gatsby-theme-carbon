@@ -1,3 +1,10 @@
+## [3.0.0-next.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.3...v3.0.0-next.4) (2022-03-08)
+
+
+### Bug Fixes
+
+* **inlinenotification:** re-enable inline links ([#1231](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1231)) ([9118c88](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9118c88c46f955497212afe9e5165cd5724bd30c))
+
 ## [3.0.0-next.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.2...v3.0.0-next.3) (2022-03-07)
 
 ## [3.0.0-next.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.2...v3.0.0-next.3) (2022-03-03)
