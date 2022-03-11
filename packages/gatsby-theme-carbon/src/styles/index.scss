@@ -1,6 +1,68 @@
 // Base global
-$flex-grid-columns: 12;
-@use '@carbon/react';
+// $flex-grid-columns: 12;
+// @forward '@carbon/react';
+
+// @use '@carbon/react/scss/config';
+// @use '@carbon/react/scss/colors' hide $white;
+// @use '@carbon/react/scss/grid';
+// @use '@carbon/react/scss/motion';
+// @use '@carbon/react/scss/type';
+// @use '@carbon/react/scss/themes';
+// @use '@carbon/react/scss/theme';
+
+// $flex-grid-columns: 12;
+
+@use '@carbon/react/scss/reset';
+@use '@carbon/grid/scss/modules/flex-grid';
+@use '@carbon/react/scss/fonts';
+@use '@carbon/react/scss/layer';
+@use '@carbon/react/scss/zone';
+@use '@carbon/react/scss/components/accordion';
+@use '@carbon/react/scss/components/aspect-ratio';
+@use '@carbon/react/scss/components/breadcrumb';
+@use '@carbon/react/scss/components/button';
+@use '@carbon/react/scss/components/checkbox';
+@use '@carbon/react/scss/components/code-snippet';
+@use '@carbon/react/scss/components/combo-box';
+@use '@carbon/react/scss/components/content-switcher';
+@use '@carbon/react/scss/components/copy-button';
+@use '@carbon/react/scss/components/data-table';
+@use '@carbon/react/scss/components/date-picker';
+@use '@carbon/react/scss/components/dropdown';
+@use '@carbon/react/scss/components/file-uploader';
+@use '@carbon/react/scss/components/form';
+@use '@carbon/react/scss/components/inline-loading';
+@use '@carbon/react/scss/components/link';
+@use '@carbon/react/scss/components/list';
+@use '@carbon/react/scss/components/loading';
+@use '@carbon/react/scss/components/menu';
+@use '@carbon/react/scss/components/modal';
+@use '@carbon/react/scss/components/multiselect';
+@use '@carbon/react/scss/components/notification';
+@use '@carbon/react/scss/components/number-input';
+@use '@carbon/react/scss/components/overflow-menu';
+@use '@carbon/react/scss/components/pagination';
+@use '@carbon/react/scss/components/pagination-nav';
+// @use '@carbon/react/scss/components/progress-bar';
+@use '@carbon/react/scss/components/progress-indicator';
+@use '@carbon/react/scss/components/radio-button';
+@use '@carbon/react/scss/components/search';
+@use '@carbon/react/scss/components/select';
+// @use '@carbon/react/scss/components/skeleton-styles';
+@use '@carbon/react/scss/components/slider';
+@use '@carbon/react/scss/components/stack';
+@use '@carbon/react/scss/components/structured-list';
+@use '@carbon/react/scss/components/tabs';
+@use '@carbon/react/scss/components/tag';
+@use '@carbon/react/scss/components/text-area';
+@use '@carbon/react/scss/components/text-input';
+@use '@carbon/react/scss/components/tile';
+@use '@carbon/react/scss/components/time-picker';
+// @use '@carbon/react/scss/components/toggletip';
+@use '@carbon/react/scss/components/toggle';
+@use '@carbon/react/scss/components/tooltip';
+@use '@carbon/react/scss/components/treeview';
+@use '@carbon/react/scss/components/ui-shell';
 
 @use './internal/global';
 
@@ -20,6 +82,8 @@ $flex-grid-columns: 12;
 @use '../components/ArticleCard/article-card.scss';
 @use '../components/FeatureCard/feature-card.scss';
 @use '../components/ImageCard/image-card.scss';
+
+@include flex-grid.flex-grid();
 
 //---------------------------------------
 // Included last to ensure that class

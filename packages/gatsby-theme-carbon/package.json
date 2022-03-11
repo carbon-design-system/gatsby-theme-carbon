@@ -24,8 +24,9 @@
   "dependencies": {
     "@babel/core": "^7.14.6",
     "@carbon/elements": "^10.53.0",
+    "@carbon/grid": "^10.43.0",
     "@carbon/pictograms-react": "^11.23.0",
-    "@carbon/react": "^0.15.2",
+    "@carbon/react": "^0.16.1",
     "@carbon/themes": "^10.52.0",
     "@mdx-js/mdx": "^1.5.5",
     "@mdx-js/react": "^1.5.5",
