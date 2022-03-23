@@ -1,11 +1,16 @@
-//---------------------------------------
-// Carbon Components
-//---------------------------------------
+@use '@carbon/grid/scss/modules/flex-grid';
+@use '@carbon/react/scss/type';
 @use '@carbon/react/scss/colors' as *;
 @use '@carbon/react/scss/compat/theme' as *;
-@use '@carbon/react/scss/type';
+@use '@carbon/react/scss/reset' as *;
+@use '@carbon/react/scss/layer' as *;
+@use '@carbon/react/scss/zone' as *;
+
+@use '@carbon/react/scss/components';
+
 @use 'plex';
 
+@include flex-grid.flex-grid();
 @include type.reset();
 
 //---------------------------------------
