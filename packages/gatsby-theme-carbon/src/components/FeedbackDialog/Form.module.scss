@@ -41,15 +41,15 @@
 .form-container {
   padding: $spacing-05;
   padding-bottom: $spacing-08;
-  background-color: var(--cds-ui-background);
-  color: var(--cds-text-02);
+  background-color: var(--cds-background);
+  color: var(--cds-text-secondary);
   width: 100%;
 }
 
 .form-container h2 {
   @include type-style('productive-heading-01');
   padding-bottom: $spacing-03;
-  border-bottom: 1px solid var(--cds-ui-03);
+  border-bottom: 1px solid var(--cds-border-subtle-01);
 }
 
 .form-container label,

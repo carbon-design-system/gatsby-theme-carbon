@@ -19,7 +19,7 @@
 }
 
 .button svg {
-  fill: $icon-03;
+  fill: var(--cds-icon-on-color);
 }
 
 .button:hover {
