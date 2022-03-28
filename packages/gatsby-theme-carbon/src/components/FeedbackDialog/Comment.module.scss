@@ -14,8 +14,8 @@
   pointer-events: none;
   position: absolute;
   bottom: 1px;
-  left: $spacing-03;
-  right: $spacing-05;
+  left: 0;
+  right: 0;
   transition: opacity $duration-fast-02 motion(standard, productive);
   opacity: 1;
   background: linear-gradient(rgba(57, 57, 57, 0), rgba(57, 57, 57, 1));

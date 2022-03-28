@@ -3,7 +3,7 @@
   height: $spacing-09;
   border-radius: 50%;
   border-color: transparent;
-  background: var(--cds-button-secondary);
+  background: $interactive-02;
   transition: all $duration-fast-02;
   z-index: z('modal');
   padding-top: 0.325rem;
@@ -19,16 +19,16 @@
 }
 
 .button svg {
-  fill: var(--cds-icon-on-color);
+  fill: $icon-03;
 }
 
 .button:hover {
-  background: var(--cds-button-secondary-hover);
+  background: $hover-secondary;
 }
 
 .button:focus {
   outline: none;
-  border: 2px solid var(--cds-focus-inverse);
+  border: 2px solid $inverse-focus-ui;
   box-shadow: inset 0 0 0 1px $focus-inset;
 }
 

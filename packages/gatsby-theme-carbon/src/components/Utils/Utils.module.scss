@@ -1,12 +1,12 @@
-@use '@carbon/react/scss/themes';
-@use '@carbon/react/scss/theme';
-@use '@carbon/react/scss/motion';
-@use '@carbon/react/scss/spacing';
+// @use '@carbon/react/scss/themes';
+// @use '@carbon/react/scss/theme';
+// @use '@carbon/react/scss/motion';
+// @use '@carbon/react/scss/spacing';
 
 .container {
-  @include theme.theme(themes.$g90);
-  transition-duration: motion.$duration-fast-02;
-  transition-timing-function: motion.motion(standard, productive);
+  @include theme(compat.$g90);
+  transition-duration: $duration-fast-02;
+  transition-timing-function: motion(standard, productive);
   transition-property: opacity;
   opacity: 1;
   visibility: visible;
@@ -17,7 +17,7 @@
     border: 0;
   }
 
-  margin-top: spacing.$spacing-03;
+  margin-top: $spacing-03;
 }
 
 .container.hidden {
