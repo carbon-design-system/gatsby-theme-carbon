@@ -4,3 +4,4 @@
 @use '@carbon/react/scss/compat/theme' as * with (
   $theme: compat.$g90
 );
+@use '@carbon/styles/scss/utilities' as *;

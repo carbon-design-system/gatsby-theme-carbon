@@ -1,7 +1,4 @@
 // Base global
-$flex-grid-columns: 12;
-@use '@carbon/react';
-
 @use './internal/global';
 
 // Global stylesheet to inject global dependencies via shadowing

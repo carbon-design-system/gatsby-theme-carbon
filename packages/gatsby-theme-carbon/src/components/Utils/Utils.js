@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useWindowScroll } from 'beautiful-react-hooks';
 import cx from 'classnames';
+import { Layer } from '@carbon/react';
 import FeedbackDialog from '../FeedbackDialog';
 import BackToTopBtn from '../BackToTopBtn';
 
@@ -23,7 +24,9 @@ const Utils = () => {
     <div
       aria-label="This section contains utilities"
       className={cx(styles.container, { [styles.hidden]: hidden })}>
-      <FeedbackDialog />
+      <Layer>
+        <FeedbackDialog />
+      </Layer>
       <BackToTopBtn />
     </div>
   );

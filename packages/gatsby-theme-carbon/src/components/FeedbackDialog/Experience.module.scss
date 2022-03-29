@@ -1,6 +1,6 @@
 .experience-container {
   display: flex;
-  background: var(--cds-ui-01);
+  background: var(--cds-layer-01);
   margin-top: $spacing-03;
 }
 
@@ -12,19 +12,19 @@
   position: relative;
   height: 96px;
   width: 100%;
-  border-right: 1px solid var(--cds-ui-background);
+  border-right: 1px solid var(--cds-background);
 
   &:last-of-type {
     border-right: none;
   }
 
   &:hover {
-    background: var(--cds-hover-ui);
+    background: var(--cds-background-hover);
   }
 }
 
 .experience svg {
-  fill: var(--cds-icon-02);
+  fill: var(--cds-icon-secondary);
   pointer-events: none;
 }
 
@@ -43,20 +43,20 @@
   appearance: none;
   margin: 0;
   &:checked {
-    outline: 1px solid var(--cds-ui-05);
+    outline: 1px solid var(--cds-border-inverse);
     z-index: 1;
   }
   &:focus {
-    outline: 2px solid var(--cds-ui-05);
+    outline: 2px solid var(--cds-border-inverse);
   }
 }
 
 .selected svg,
 .experience:hover svg {
-  fill: var(--cds-icon-01);
+  fill: var(--cds-icon-primary);
 }
 
 .selected,
 .experience:hover {
-  color: var(--cds-icon-01);
+  color: var(--cds-icon-primary);
 }

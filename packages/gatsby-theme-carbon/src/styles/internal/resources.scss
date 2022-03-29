@@ -1,17 +1,17 @@
 // These resources get shared with every css module.
-// We only want to import variables/mixins/helpers, not things that generate css.
+// We only want to @use variables/mixins/helpers, not things that generate/output css.
+// These are not provided to the internal index/global/component stylesheet(s)
 
-// carbon--breakpoint
-@use '@carbon/react/scss/breakpoint' as *;
-// $carbon--white-0
-@use '@carbon/react/scss/colors' as *;
-// $prefix
 @use '@carbon/react/scss/config' as *;
-// $spacing-0X
-@use '@carbon/react/scss/spacing' as *;
-// carbon--type-style
-@use '@carbon/react/scss/type' as *;
-// $standard-easing $transition-x
+@use '@carbon/react/scss/colors' as *;
+@use '@carbon/grid/scss/modules/config' with (
+  $flex-grid-columns: 12
+);
+@use '@carbon/grid/scss/modules/flex-grid';
 @use '@carbon/react/scss/motion' as *;
-// theme()
-@use '@carbon/react/scss/compat/theme' as *;
+@use '@carbon/react/scss/type' as *;
+// ARe these needed? We load the themes via the sass-resources-loader right?
+// @use '@carbon/react/scss/themes' as *; unsure if this is needed. did we provide it to all modules in the previous/current version?
+// @use '@carbon/react/scss/compat/theme' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/spacing' as *;

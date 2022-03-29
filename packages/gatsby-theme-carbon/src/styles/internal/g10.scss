@@ -6,3 +6,4 @@
 @use '@carbon/react/scss/compat/theme' as * with (
   $theme: compat.$g10
 );
+@use '@carbon/styles/scss/utilities' as *;
