@@ -1,3 +1,10 @@
+## [3.0.0-next.7](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.6...v3.0.0-next.7) (2022-03-29)
+
+
+### Bug Fixes
+
+* **codeblock:** use correct font-family ([dc74868](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/dc74868498109a44c4a90b1ae56ab2c243ceb7a1))
+
 ## [3.0.0-next.6](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.5...v3.0.0-next.6) (2022-03-29)
 
 
