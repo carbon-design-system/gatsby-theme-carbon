@@ -1,3 +1,10 @@
+## [3.0.0-next.6](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.5...v3.0.0-next.6) (2022-03-29)
+
+
+### Bug Fixes
+
+* **overlays:** correct z-index for backtotop and launch buttons ([c92c364](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c92c364e086cc605bde9dd051c9395adb9e754b6))
+
 ## [3.0.0-next.5](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.4...v3.0.0-next.5) (2022-03-29)
 
 ## [3.0.0-next.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.3...v3.0.0-next.4) (2022-03-08)
