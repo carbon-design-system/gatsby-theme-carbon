@@ -5,7 +5,7 @@
   border-color: transparent;
   background: $interactive-02;
   transition: all $duration-fast-02;
-  z-index: z('modal');
+  z-index: 9000;
   padding-top: 0.325rem;
   cursor: pointer;
   position: fixed;
