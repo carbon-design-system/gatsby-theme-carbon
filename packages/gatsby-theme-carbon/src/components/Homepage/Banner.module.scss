@@ -1,5 +1,5 @@
 .column {
-  @include type-style('display-01');
+  @include type-style('display-01', true);
   color: $white-0;
   display: flex;
   flex-direction: column;

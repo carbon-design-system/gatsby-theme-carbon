@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import {
-  FlexGrid,
+  unstable_FlexGrid as FlexGrid,
   Row as CarbonRow,
   Column as CarbonColumn,
 } from '@carbon/react';

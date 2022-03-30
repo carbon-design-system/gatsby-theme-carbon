@@ -2,12 +2,11 @@
 // We only want to @use variables/mixins/helpers, not things that generate/output css.
 // These are not provided to the internal index/global/component stylesheet(s)
 
-@use '@carbon/react/scss/config' as *;
-@use '@carbon/react/scss/colors' as *;
-@use '@carbon/grid/scss/modules/config' with (
+@use '@carbon/react/scss/config' as * with (
   $flex-grid-columns: 12
 );
-@use '@carbon/grid/scss/modules/flex-grid';
+@use '@carbon/react/scss/colors' as *;
+@use '@carbon/grid/scss/flex-grid';
 @use '@carbon/react/scss/motion' as *;
 @use '@carbon/react/scss/type' as *;
 // ARe these needed? We load the themes via the sass-resources-loader right?

@@ -1,5 +1,5 @@
 .four-oh-four {
-  @include type-style('display-02');
+  @include type-style('display-02', true);
   font-size: 144px;
   background: linear-gradient(35deg, #92eeee, #a66efa);
   display: inline-block;

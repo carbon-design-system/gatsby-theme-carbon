@@ -91,7 +91,7 @@
 }
 
 .description {
-  @include type-style('caption-01');
+  @include type-style('label-01');
   text-transform: lowercase;
   color: $gray-30;
 }
