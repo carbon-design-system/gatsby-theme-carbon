@@ -1,3 +1,5 @@
+@use '@carbon/react/scss/type' as *;
+
 // Base global
 @use './internal/global';
 
@@ -23,4 +25,4 @@
 // names take precedence over includes
 // inside component class names
 //---------------------------------------
-// @include react.type-classes();
+@include type-classes();
