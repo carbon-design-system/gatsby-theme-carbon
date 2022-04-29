@@ -1,3 +1,10 @@
+## [3.0.0-next.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.9...v3.0.0-next.10) (2022-04-29)
+
+
+### Features
+
+* **type:** update carbon deps, ensure type-classes are emitted with proper prefix ([9669ada](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9669adaad87e1534411a7f9a61acab0b01f07ff7))
+
 ## [3.0.0-next.9](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.8...v3.0.0-next.9) (2022-03-31)
 
 ## [3.0.0-next.8](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.7...v3.0.0-next.8) (2022-03-30)
