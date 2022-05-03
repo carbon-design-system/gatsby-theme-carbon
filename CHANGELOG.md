@@ -1,3 +1,11 @@
+### [2.3.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.3.0...v2.3.1) (2022-05-03)
+
+
+### Bug Fixes
+
+* **expressive-list-container:** remove margin-top from first content element ([#1240](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1240)) ([86ad4ab](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/86ad4ab99f956c260247f47bc843edef1b404f9b))
+* **link:** correct link to Cirrus getting started ([#1237](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1237)) ([e83a793](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/e83a793861c495ca160d5209957e0078a40688be))
+
 ## [2.3.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.2.0...v2.3.0) (2022-02-17)
 
 
