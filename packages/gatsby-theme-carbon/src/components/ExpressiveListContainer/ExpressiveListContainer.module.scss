@@ -33,3 +33,8 @@
 .text {
   padding-right: 2rem;
 }
+
+.text > *:first-child,
+.text:empty + *:nth-child(2) {
+  margin-top: 0;
+}
