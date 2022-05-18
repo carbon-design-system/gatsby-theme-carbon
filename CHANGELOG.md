@@ -1,3 +1,10 @@
+## [3.0.0-next.11](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.10...v3.0.0-next.11) (2022-05-18)
+
+
+### Bug Fixes
+
+* **grid:** add _grid.scss and move over flex grid for precedence ([#1242](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1242)) ([4d3c1ad](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/4d3c1ad6e699c7bbf5013f7cf0daea0153bed469))
+
 ## [3.0.0-next.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.9...v3.0.0-next.10) (2022-04-29)
 
 
