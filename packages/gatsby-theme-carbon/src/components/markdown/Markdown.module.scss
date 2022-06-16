@@ -144,7 +144,7 @@ ul :global(.cds--list--unordered) {
 }
 
 //spacing for content within list item
-.list-item > * + * {
+.list-item > * + *:not(:global(.cds--link)) {
   margin-top: var(--space);
 
   &:last-child {
