@@ -1,3 +1,10 @@
+## [3.0.0-next.12](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.11...v3.0.0-next.12) (2022-06-16)
+
+
+### Bug Fixes
+
+* **markdown:** ensure links within lists do not have padding ([#1246](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1246)) ([a319516](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/a319516454199c1415e4df3296f4b96d83f9291c))
+
 ## [3.0.0-next.11](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.10...v3.0.0-next.11) (2022-05-18)
 
 
