@@ -60,8 +60,9 @@ equivalent if your project uses `npm` as its package manager.
 
 ## Carbon v11 migration guide
 
-In this section we'll cover the areas that will need to be updated to use Carbon
-v11.
+As part of this release, the theme has been updated to use Carbon v11. In this
+section we'll cover the areas that will need to be updated in relation to this
+dependency upgrade.
 
 1. Update your color, motion, and type tokens where appropriate. Use
    [the migration guide from Github](https://github.com/carbon-design-system/carbon/blob/main/docs/migration/v11.md)
@@ -77,7 +78,65 @@ page to find/replace with the corresponding v11 token.
 
 </InlineNotification>
 
-2. Remove any prefix imports. Replace the following in your classnames:
+2. Update icon usage
+
+As part of v11, the usage pattern for icons has changed. Icons are no longer
+imported by size, instead size is configured via the `size` prop. Full details
+can be found in the
+[Carbon v11 migration guide](https://github.com/carbon-design-system/carbon/blob/main/docs/migration/v11.md#changes-to-size).
+
+<!-- prettier-ignore-start -->
+```md path=Before
+import { Add32, Add24, Add20, Add16 } from '@carbon/icons-react';
+
+function MyComponent() {
+  return (
+    <>
+      <Add32 />
+      <Add24 />
+      <Add20 />
+      <Add16 />
+    </>
+  );
+}
+```
+
+```md path=After
+import { Add } from '@carbon/icons-react';
+
+function MyComponent() {
+  return (
+    <>
+      <Add size={32} />
+      <Add size={24} />
+      <Add size={20} />
+      <Add />
+    </>
+  );
+}
+```
+<!-- prettier-ignore-end -->
+
+A very easy way to make this change is to use the automated migration tool
+available from the
+[Carbon Upgrade CLI](https://github.com/carbon-design-system/carbon/blob/main/packages/upgrade/README.md#usage).
+You can run a test of this automated migration against your codebase with the
+following command. When ready to write the changes, additionally pass the `-w`
+flag
+
+```
+npx @carbon/upgrade migrate icons-react-size-prop
+```
+
+<InlineNotification>
+
+This automated migration will not rewrite imports in `.mdx` files. Search all
+your `.mdx` files for `@carbon/icons-react` and manually update their import.
+Additionally update their usage to include the appropriate `size` prop.
+
+</InlineNotification>
+
+3. Remove any prefix imports. Replace the following in your classnames:
 
 ```md path=Before
 <div className={`${prefix}--fancy-class`}>
