@@ -1,0 +1,88 @@
+---
+title: V2.0 Migration
+description: Guide for migrating to v2.0 of the theme
+---
+
+<PageDescription>
+
+This update introduces several big improvements to Gatsby sites including
+incremental builds, fast refresh, and image processing. The major version change
+comes with the potential for breaking changes, this guide aims to cover the most
+likely issues a site built with the Carbon Gatsby theme might encounter.
+
+</PageDescription>
+
+## Breaking changes
+
+1. Bumped minimum version of Gatsby to `v3`
+2. Removed the `emotion` theme provider and its dependenices.
+   - This impacts sites styling their project using `emotion` and depending on
+     theme values supplied by the theme
+   - If this applies to your project, you can recreate the theme's emotion
+     integration installing `emotion` and replicating the
+     [`ThemeProvider`](https://github.com/carbon-design-system/gatsby-theme-carbon/blob/857abf691590d86b9384a8f35256e8f54fad299e/packages/gatsby-theme-carbon/src/components/ThemeProvider.js)
+     component and
+     [`theme.js`](https://github.com/carbon-design-system/gatsby-theme-carbon/blob/main/packages/gatsby-theme-carbon/src/util/theme.js).
+     Finally, you'll want to shadow
+     [`wrap-root-element.js`](https://github.com/carbon-design-system/gatsby-theme-carbon/blob/857abf691590d86b9384a8f35256e8f54fad299e/packages/gatsby-theme-carbon/src/util/wrap-root-element.js#L1)
+     to add back the `ThemeProvider` wrapper.
+
+## Migration guide
+
+In this section we'll cover the most likely issues site's built with the Carbon
+gatsby theme might encounter when migrating. If you encounter any issues, or
+your site leverages more advanced gatsby configuration, check to see if it's
+covered in the
+[official Gatsby v3 migration guide](https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/).
+
+<InlineNotification>
+
+Note: We'll use yarn for the shell commands here. Replace them with the `npm`
+equivalent if your project uses `npm` as its package manager.
+
+</InlineNotification>
+
+1. Update Gatsby to v3
+   ```
+   yarn add gatsby@latest-v3
+   ```
+2. Update gatsby plugins (including the theme)
+   ```
+   yarn upgrade-interactive --latest
+   ```
+3. Check to see if you're using `sizes` or `resolutions` with `gatsby-image`. Do
+   a project wide search for `gatsby-image`. Check to make sure that you're not
+   using these
+   [deprecated props](https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#removal-of-sizes--resolutions-for-image-queries)
+4. Check your Sass (and potentially JSON) to ensure they're imported as ES
+   Modules. "Default exports" are no longer supported.
+
+   ```js path=Before
+   import styles from './MySpan.module.scss';
+   import metadata from './metadata.json';
+   const MySpan = () => <span className={styles.mySpan} />;
+   ```
+
+   ```js path=After
+   import { mySpan } from './MySpan.module.scss';
+   // Or import * as styles from './MySpan.module.scss'
+   import * as metadata from './metadata.json';
+   const MySpan = () => <span className={mySpan} />;
+   ```
+
+5. Make sure to update the path of your shadowed components (Footer and Header).
+   - Create a folder each for `Footer` and `Header`.
+   - Change the file name to `index.js` inside each corresponding folder. More
+     info can be found in the
+     [shadowing docs](https://gatsby-theme-carbon.vercel.app/guides/shadowing/#shadowing-basics)
+6. If you have a custom webpack config, be sure your config is compatible with
+   [Webpack 5](https://webpack.js.org/migrate/5/) (the version Gatsby 3 uses)
+7. Run `npx gatsby clean` to delete your projects development bundle
+8. Run `yarn dev`
+
+## Troubleshooting
+
+- Try deleting your node_modules, running `yarn cache clean` and `yarn install`
+  (or `npm cache clean --force` and npm install)
+- Feel free to reach out in the #gatsby-theme-carbon slack channel or open an
+  issue on GitHub
