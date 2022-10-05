@@ -1,3 +1,10 @@
+## [3.0.0-next.13](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.12...v3.0.0-next.13) (2022-10-05)
+
+
+### Features
+
+* **gtc:** upgrade to v4 Gatsby, v11 Carbon, and associated docs ([#1261](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1261)) ([8bece93](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8bece9302c6851dc8f3a7d3ddc2fe78af3719efe))
+
 ## [3.0.0-next.13](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.12...v3.0.0-next.13) (2022-06-16)
 
 ## [3.0.0-next.12](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.11...v3.0.0-next.12) (2022-06-16)
