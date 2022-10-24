@@ -9,8 +9,8 @@
 }
 
 .row {
-  padding-top: $layout-05;
-  padding-bottom: $layout-05;
+  padding-top: $spacing-10;
+  padding-bottom: $spacing-10;
   max-width: 1152px;
 }
 
@@ -20,16 +20,16 @@
 }
 
 .firstColumn {
-  @include carbon--type-style('expressive-heading-03', true);
+  @include type-style('expressive-heading-03', true);
   margin-bottom: $spacing-07;
 }
 
 .firstColumn p {
-  @include carbon--type-style('expressive-heading-03', true);
+  @include type-style('expressive-heading-03', true);
   margin-top: $spacing-02;
 }
 
 .secondColumn,
 .secondColumn p {
-  @include carbon--type-style('expressive-paragraph-01', true);
+  @include type-style('expressive-paragraph-01', true);
 }

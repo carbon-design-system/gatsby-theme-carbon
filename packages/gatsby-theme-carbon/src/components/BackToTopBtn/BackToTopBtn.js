@@ -1,5 +1,5 @@
 import React from 'react';
-import { UpToTop20 } from '@carbon/icons-react';
+import { UpToTop } from '@carbon/react/icons';
 import { button } from './BackToTopBtn.module.scss';
 
 const BackToTopBtn = () => (
@@ -8,7 +8,7 @@ const BackToTopBtn = () => (
     className={button}
     type="button"
     aria-label="Back to Top">
-    <UpToTop20 />
+    <UpToTop size={20} />
   </button>
 );
 

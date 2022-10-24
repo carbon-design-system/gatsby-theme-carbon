@@ -8,31 +8,31 @@
   scrollbar-width: none;
   transform: translateX(-256px);
 
-  & :global(.bx--side-nav) {
+  & :global(.cds--side-nav) {
     box-shadow: none !important;
   }
 
   // LeftNav default style in desktop view.
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     transform: translateX(0px);
   }
 }
 
 // HeaderNavigation default style in desktop view (hide LeftNav).
 .useHeaderNavStyles.leftNavWrapper {
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     transform: translateX(-256px);
   }
 }
 
 // Transition expanded LeftNav in mobile back to HeaderNavigation in desktop view.
 .useHeaderNavStyles.expanded {
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     transform: translateX(-256px);
   }
 }
 
-.leftNavWrapper :global(.bx--side-nav__navigation) {
+.leftNavWrapper :global(.cds--side-nav__navigation) {
   padding-top: 0;
   padding-bottom: 48px;
 }
@@ -42,7 +42,7 @@
   transform: translateX(0px);
 
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     box-shadow: none;
   }
 }

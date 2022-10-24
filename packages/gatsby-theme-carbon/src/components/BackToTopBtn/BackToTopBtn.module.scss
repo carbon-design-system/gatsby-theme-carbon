@@ -4,22 +4,22 @@
   border-radius: 50%;
   border-color: transparent;
   background: $interactive-02; //g60
-  transition: all $duration--fast-02;
-  z-index: z('modal');
+  transition: all $duration-fast-02;
+  z-index: 9000;
   padding-top: 0.325rem;
   cursor: pointer;
   position: fixed;
   bottom: $spacing-06;
   right: $spacing-05;
 
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     bottom: $spacing-09;
     right: $spacing-07;
   }
 }
 
 .button svg {
-  fill: $icon-03;
+  fill: var(--cds-icon-on-color);
 }
 
 .button:hover {
@@ -34,7 +34,7 @@
 
 [class*='container--dark'] {
   .button {
-    background: $carbon--gray-60;
+    background: $gray-60;
     &:hover {
       background: #606060;
     }

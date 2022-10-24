@@ -1,28 +1,35 @@
+// carbon--breakpoint
+@use '@carbon/react/scss/breakpoint' as *;
+// $carbon--white-0
+@use '@carbon/react/scss/colors' as *;
+// carbon--type-style
+@use '@carbon/react/scss/type' as *;
+
 .container--dark {
-  background: $carbon--gray-100;
-  color: $carbon--gray-10;
+  background: $gray-100;
+  color: $gray-10;
 }
 
 .container--white {
-  background: $carbon--white-0;
-  color: $carbon--gray-100;
+  background: $white-0;
+  color: $gray-100;
 }
 
 .container--g10 {
-  background: $carbon--gray-10;
-  color: $carbon--gray-100;
+  background: $gray-10;
+  color: $gray-100;
 }
 
-.container--dark a.#{$prefix}--link,
-.container--dark a.#{$prefix}--link:hover,
-.container--dark a.#{$prefix}--link:active,
-.container--dark a.#{$prefix}--link:active:visited,
-.container--dark a.#{$prefix}--link:active:visited:hover {
-  color: $carbon--blue-40;
+.container--dark a.cds--link,
+.container--dark a.cds--link:hover,
+.container--dark a.cds--link:active,
+.container--dark a.cds--link:active:visited,
+.container--dark a.cds--link:active:visited:hover {
+  color: $blue-40;
 }
 
 .container--dark a:focus {
-  outline-color: $carbon--blue-40;
+  outline-color: $blue-40;
 }
 
 // Homepage image header area
@@ -34,19 +41,19 @@
   position: relative;
 
   // Match max height at lg breakpoint
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     padding: 0;
     height: 560px;
   }
 }
 
-.homepage--header .#{$prefix}--grid,
-.homepage--header .#{$prefix}--row {
+.homepage--header .cds--grid,
+.homepage--header .cds--row {
   height: 100%;
 }
 
 .container--homepage h3.homepage--header__title {
-  @include carbon--type-style('expressive-heading-03', true);
+  @include type-style('expressive-heading-03', true);
   display: none;
   font-weight: 600;
   position: absolute;
@@ -55,7 +62,7 @@
   margin-bottom: 0;
   z-index: 3;
 
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     display: block;
   }
 }
@@ -68,36 +75,36 @@
   margin-top: -25%;
 }
 
-.container--homepage .#{$prefix}--grid {
+.container--homepage .cds--grid {
   margin: 0;
 
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     padding-left: calc(25% + 1.5rem);
   }
 
-  @include carbon--breakpoint('max') {
+  @include breakpoint('max') {
     padding-left: 424px;
     padding-right: 0;
   }
 }
 
-.container--header--nav .#{$prefix}--grid {
+.container--header--nav .cds--grid {
   margin: 0;
 
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     padding-left: 2rem;
   }
 
-  @include carbon--breakpoint('max') {
+  @include breakpoint('max') {
     padding-left: 2%;
   }
 }
 
-.container--homepage .#{$prefix}--col-no-gutter {
+.container--homepage .cds--col-no-gutter {
   padding: 0;
 }
 
-.bx--side-nav__overlay-active {
+.cds--side-nav__overlay-active {
   //rel: https://github.com/carbon-design-system/carbon-website/pull/2187
   width: 100%;
 }

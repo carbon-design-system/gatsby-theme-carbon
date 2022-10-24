@@ -1,4 +1,4 @@
-.notification :global(.bx--inline-notification) {
+.notification :global(.cds--inline-notification) {
   margin: 0;
   max-width: 100%;
   box-shadow: none;
@@ -6,11 +6,11 @@
   margin-top: 0;
 }
 
-.notification :global(.bx--inline-notification__subtitle p) {
-  @include carbon--type-style('body-short-01');
+.notification :global(.cds--inline-notification__content p) {
+  @include type-style('body-short-01');
 }
 
-.notification :global(.bx--inline-notification__subtitle .bx--row) {
+.notification :global(.cds--inline-notification__content .cds--row) {
   margin: 0;
 }
 
@@ -22,6 +22,6 @@ li .notification {
 
 // Remove this when Notifications are fixed upstream
 .darkMode {
-  background: $carbon--gray-90 !important;
-  color: $carbon--white-0;
+  background: $gray-90 !important;
+  color: $white-0;
 }

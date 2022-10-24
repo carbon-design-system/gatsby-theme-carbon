@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as CarbonLink } from 'carbon-components-react';
+import { Link as CarbonLink } from '@carbon/react';
 import cx from 'classnames';
 import { link } from './Link.module.scss';
 

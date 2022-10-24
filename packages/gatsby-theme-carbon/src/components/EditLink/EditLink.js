@@ -28,8 +28,8 @@ const EditLink = ({ relativePagePath, repository: repositoryProp }) => {
   const href = `${baseUrl}/edit/${branch}${subDirectory}/src/pages${relativePagePath}`;
 
   return baseUrl ? (
-    <div className={`bx--row ${row}`}>
-      <div className="bx--col">
+    <div className={`cds--row ${row}`}>
+      <div className="cds--col">
         <a className={link} href={href}>
           Edit this page on GitHub
         </a>

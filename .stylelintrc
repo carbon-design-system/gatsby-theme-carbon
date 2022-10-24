@@ -17,6 +17,7 @@
           "composes"
         ]
       }
-    ]
+    ],
+    "no-descending-specificity": null
   }
 }

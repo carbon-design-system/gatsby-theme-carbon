@@ -8,7 +8,7 @@ import {
   SideNavLink,
   SideNavMenu,
   SideNavMenuItem,
-} from 'carbon-components-react';
+} from '@carbon/react';
 
 import * as styles from './LeftNav.module.scss';
 

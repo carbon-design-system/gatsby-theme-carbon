@@ -1,3 +1,12 @@
+// carbon--breakpoint
+@use '@carbon/react/scss/breakpoint' as *;
+// $spacing-0X
+@use '@carbon/react/scss/spacing' as *;
+// carbon--type-style
+@use '@carbon/react/scss/type' as *;
+// color tokens
+@use '@carbon/react/scss/compat/theme' as *;
+
 .spacing-table td {
   vertical-align: top;
 }
@@ -7,15 +16,15 @@
   line-height: 1.25;
   width: calc(100%);
 
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     min-width: calc(67.3%);
   }
 
   thead {
     th {
-      @include carbon--type-style('heading-01');
+      @include type-style('heading-01');
       color: $text-01;
-      padding: $spacing-md;
+      padding: $spacing-05;
       text-align: left;
       white-space: nowrap;
       background: $ui-01;
@@ -27,9 +36,9 @@
       border-bottom: 1px solid $ui-03;
 
       td {
-        @include carbon--type-style('body-short-01');
+        @include type-style('body-short-01');
         color: $text-01;
-        padding: $spacing-md;
+        padding: $spacing-05;
 
         img[src$='checkmark--glyph.svg'] {
           width: 16px;
@@ -41,12 +50,12 @@
           font-weight: font-weight('semibold');
         }
 
-        @include carbon--breakpoint('lg') {
-          min-width: rem(100px);
+        @include breakpoint('lg') {
+          min-width: 6.25rem;
         }
 
-        @include carbon--breakpoint('xlg') {
-          min-width: rem(150px);
+        @include breakpoint('xlg') {
+          min-width: 9.375rem;
         }
       }
     }
@@ -54,11 +63,11 @@
 }
 
 .component-docs p {
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     max-width: 75%;
   }
 
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     max-width: 55%;
   }
 }
@@ -66,13 +75,13 @@
 .component-docs table {
   width: calc(100% + 2rem);
   margin-left: -1rem;
-  margin-top: rem(16px);
+  margin-top: 1rem;
 
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     max-width: 75%;
   }
 
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     max-width: 50%;
   }
 }

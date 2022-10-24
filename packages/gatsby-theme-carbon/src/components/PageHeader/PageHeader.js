@@ -9,9 +9,9 @@ const PageHeader = ({ title, theme, tabs = [] }) => (
       [styles.withTabs]: tabs.length,
       [styles.darkMode]: theme === 'dark',
     })}>
-    <div className="bx--grid">
-      <div className="bx--row">
-        <div className="bx--col-lg-12">
+    <div className="cds--grid">
+      <div className="cds--row">
+        <div className="cds--col-lg-12">
           <h1 id="page-title" className={styles.text}>
             {title}
           </h1>

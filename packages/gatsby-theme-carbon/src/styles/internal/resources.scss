@@ -1,6 +1,16 @@
 // These resources get shared with every css module.
-// We only want to import variables/mixins/helpers, not things that generate css.
+// We only want to @use variables/mixins/helpers, not things that generate/output css.
+// These are not provided to the internal index/global/component stylesheet(s)
 
-@import '~carbon-components/scss/globals/scss/vars';
-@import '~carbon-components/scss/globals/scss/layout';
-@import '~@carbon/elements/scss/type/type';
+@use '@carbon/react/scss/config' as * with (
+  $flex-grid-columns: 12
+);
+@use '@carbon/react/scss/colors' as *;
+@use '@carbon/grid/scss/flex-grid';
+@use '@carbon/react/scss/motion' as *;
+@use '@carbon/react/scss/type' as *;
+// ARe these needed? We load the themes via the sass-resources-loader right?
+// @use '@carbon/react/scss/themes' as *; unsure if this is needed. did we provide it to all modules in the previous/current version?
+// @use '@carbon/react/scss/compat/theme' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/spacing' as *;

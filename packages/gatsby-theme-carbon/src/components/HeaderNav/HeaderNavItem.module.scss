@@ -1,10 +1,10 @@
 // Overrides the style from upstream Carbon for non-accordion menu items
-.currentPage :global(.bx--header__menu-item--current) {
-  color: $carbon--white-0;
+.currentPage :global(.cds--header__menu-item--current) {
+  color: $white-0;
 }
 
-.currentPage :global(.bx--header__menu-item--current)::after {
-  border-bottom: 3px solid $carbon--blue-60;
+.currentPage :global(.cds--header__menu-item--current)::after {
+  border-bottom: 3px solid $blue-60;
   width: calc(100% + 4px);
   left: -2px;
 }
@@ -18,12 +18,12 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  border-bottom: 3px solid $carbon--blue-60;
+  border-bottom: 3px solid $blue-60;
   content: '';
 }
 
 // Removes the blue line that sits under an active item in menu.
-.currentPageAccordion :global(.bx--header__menu-item--current)::after {
+.currentPageAccordion :global(.cds--header__menu-item--current)::after {
   display: none;
 }
 
@@ -33,7 +33,7 @@
   left: 1rem;
   width: calc(100% - 2rem);
   content: '';
-  border-bottom: 1px solid $carbon--gray-80;
+  border-bottom: 1px solid $gray-80;
 }
 
 .menuItem:hover::after {
@@ -48,9 +48,9 @@
   display: none;
 }
 
-.menuItem :global(.bx--header__menu-item--current) {
-  background-color: $carbon--gray-80;
-  color: $carbon--white-0;
+.menuItem :global(.cds--header__menu-item--current) {
+  background-color: $gray-80;
+  color: $white-0;
 }
 
 //

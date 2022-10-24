@@ -5,15 +5,14 @@ description: Guide for migrating to v2.0 of the theme
 
 <PageDescription>
 
-Earlier this year, Gatsby released `v3` of their library. This update introduces
-several big improvements to Gatsby sites including incremental builds, fast
-refresh, and image processing. The major version change comes with the potential
-for breaking changes, this guide aims to cover the most likely issues a site
-built with the Carbon Gatsby theme might encounter.
+This update introduces several big improvements to Gatsby sites including
+incremental builds, fast refresh, and image processing. The major version change
+comes with the potential for breaking changes, this guide aims to cover the most
+likely issues a site built with the Carbon Gatsby theme might encounter.
 
 </PageDescription>
 
-## Breaking Changes
+## Breaking changes
 
 1. Bumped minimum version of Gatsby to `v3`
 2. Removed the `emotion` theme provider and its dependenices.
@@ -61,24 +60,25 @@ equivalent if your project uses `npm` as its package manager.
    ```js path=Before
    import styles from './MySpan.module.scss';
    import metadata from './metadata.json';
-
    const MySpan = () => <span className={styles.mySpan} />;
    ```
 
    ```js path=After
    import { mySpan } from './MySpan.module.scss';
    // Or import * as styles from './MySpan.module.scss'
-
    import * as metadata from './metadata.json';
-
    const MySpan = () => <span className={mySpan} />;
    ```
-4. Make sure to update the path of your shadowed components (Footer and Header). 
+
+5. Make sure to update the path of your shadowed components (Footer and Header).
    - Create a folder each for `Footer` and `Header`.
-   - Change the file name to `index.js` inside each corresponding folder. More info can be found in the [shadowing docs](https://gatsby-theme-carbon.vercel.app/guides/shadowing/#shadowing-basics)
-5. If you have a custom webpack config, be sure your config is compatible with [Webpack 5](https://webpack.js.org/migrate/5/) (the version Gatsby 3 uses)
-6. Run `npx gatsby clean` to delete your projects development bundle
-7. Run `yarn dev`
+   - Change the file name to `index.js` inside each corresponding folder. More
+     info can be found in the
+     [shadowing docs](https://gatsby-theme-carbon.vercel.app/guides/shadowing/#shadowing-basics)
+6. If you have a custom webpack config, be sure your config is compatible with
+   [Webpack 5](https://webpack.js.org/migrate/5/) (the version Gatsby 3 uses)
+7. Run `npx gatsby clean` to delete your projects development bundle
+8. Run `yarn dev`
 
 ## Troubleshooting
 

@@ -4,7 +4,7 @@
 
 .anchor {
   opacity: 0;
-  transition: opacity $duration--fast-01 $carbon--standard-easing;
+  transition: opacity $duration-fast-01 $standard-easing;
 
   &:hover,
   &:active,
@@ -32,7 +32,7 @@
   margin-left: $spacing-03;
 }
 
-@include carbon--breakpoint('md') {
+@include breakpoint('md') {
   .header:hover .anchor {
     opacity: 1;
   }

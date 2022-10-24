@@ -1,11 +1,8 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import cx from 'classnames';
-import { settings } from 'carbon-components';
 import { Row, Column } from '../Grid';
 import * as styles from './ExpressiveList.module.scss';
-
-const { prefix } = settings;
 
 const ExpressiveList = ({
   children,

@@ -10,7 +10,7 @@ import React, {
   useRef,
   useCallback,
 } from 'react';
-import { Dropdown } from 'carbon-components-react';
+import { Dropdown } from '@carbon/react';
 import { useMedia } from 'use-media';
 import { breakpoints } from '@carbon/elements';
 import cx from 'classnames';
@@ -33,7 +33,7 @@ const Select = ({ children, _id }) => {
   return (
     <div className={styles.dropdownWrapper}>
       <Dropdown
-        size="xl"
+        size="lg"
         onChange={({ selectedItem }) => setActiveTab(selectedItem.index)}
         initialSelectedItem={items[0]}
         label="tab selection"

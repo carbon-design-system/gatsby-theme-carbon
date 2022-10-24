@@ -1,5 +1,5 @@
 .wrapper {
-  background: $carbon--gray-90;
+  background: $gray-90;
   color: $text-04;
 }
 
@@ -13,11 +13,11 @@
 
 .link {
   padding: 0;
-  transition: background $duration--fast-02 $carbon--standard-easing;
+  transition: background $duration-fast-02 $standard-easing;
 
   &:hover {
-    color: $carbon--white-0;
-    background: $carbon--gray-80;
+    color: $white-0;
+    background: $gray-80;
   }
 }
 
@@ -26,16 +26,16 @@
   text-decoration: none;
   display: block;
   height: 100%;
-  color: $carbon--white-0;
+  color: $white-0;
   outline-offset: -2px; //needed for focus state to be visible
 }
 
 .direction {
-  @include carbon--type-style('body-short-01');
+  @include type-style('body-short-01');
 }
 
 .name {
-  @include carbon--type-style('expressive-heading-03', true);
+  @include type-style('expressive-heading-03', true);
   padding-bottom: $spacing-05;
 }
 

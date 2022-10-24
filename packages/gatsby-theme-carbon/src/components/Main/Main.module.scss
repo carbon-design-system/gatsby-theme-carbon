@@ -21,7 +21,7 @@
 .padded {
   min-height: calc(100vh - 40rem);
   padding-top: 80px;
-  padding-bottom: $layout-07;
+  padding-bottom: $spacing-13;
   & > :first-child {
     margin-top: 0;
   }
