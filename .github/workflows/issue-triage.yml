@@ -1,0 +1,13 @@
+name: Issue Triage
+on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+jobs:
+  issue-triage:
+    uses: carbon-design-system/carbon/.github/workflows/issue-triage.yml@main
+    secrets:
+      APP_ID: ${{ secrets.APP_ID }}
+      APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
+      ADD_TO_PROJECT_PAT: ${{ secrets.ADD_TO_PROJECT_PAT }}
