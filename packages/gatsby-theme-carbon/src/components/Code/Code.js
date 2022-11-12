@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import { ChevronDown16, ChevronUp16 } from '@carbon/icons-react';
+import { ChevronDown, ChevronUp } from '@carbon/react/icons';
 
 import cx from 'classnames';
 
@@ -86,12 +86,12 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
           {shouldShowMore ? (
             <>
               <span>Show less</span>
-              <ChevronUp16 />
+              <ChevronUp />
             </>
           ) : (
             <>
               <span>Show more</span>
-              <ChevronDown16 />
+              <ChevronDown />
             </>
           )}
         </button>

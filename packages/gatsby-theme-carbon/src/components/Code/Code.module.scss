@@ -7,7 +7,7 @@
   p > code,
   li > code,
   td > code {
-    @include carbon--type-style('code-01');
+    @include type-style('code-01');
     position: relative;
     display: inline;
     padding: 0 0.5em;
@@ -30,12 +30,12 @@
 
 .row {
   position: relative;
+  color: $white-0;
+  @include type-style('code-02');
   font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
     'Bitstream Vera Sans Mono', Courier, monospace;
-  color: $carbon--white-0;
-  @include carbon--type-style('code-02');
   width: calc(100% + 2rem);
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     width: calc(67% + 1.15rem);
   }
 }
@@ -45,7 +45,7 @@
 }
 
 .row svg {
-  fill: $carbon--white-0;
+  fill: $white-0;
 }
 
 li .row {
@@ -69,7 +69,7 @@ li .row {
 }
 
 // feedback tooltip adjustments
-.container :global(.bx--btn--copy__feedback) {
+.container :global(.cds--btn--copy__feedback) {
   position: absolute;
   &::before {
     left: $spacing-07;
@@ -92,12 +92,12 @@ li .row {
   background: $ui-05;
   padding-left: $spacing-05;
   padding-right: $spacing-03;
-  border-bottom: 1px solid $carbon--gray-80;
+  border-bottom: 1px solid $gray-80;
 }
 
 .path-row.dark {
-  background: $carbon--gray-90;
-  border-bottom: 1px solid $carbon--gray-70;
+  background: $gray-90;
+  border-bottom: 1px solid $gray-70;
 }
 
 .path {
@@ -107,21 +107,21 @@ li .row {
 }
 
 .show-more-button {
-  @include carbon--type-style('body-short-01');
+  @include type-style('body-short-01');
   font-family: 'IBM Plex Sans VF', sans-serif;
   position: absolute;
   right: $spacing-03;
   bottom: $spacing-03;
-  background: $carbon--gray-100;
+  background: $gray-100;
   border: none;
-  color: $carbon--white-0;
+  color: $white-0;
   cursor: pointer;
   padding: $spacing-03;
   padding-left: $spacing-05;
   display: inline-flex;
-  transition: background-color $duration--fast-02;
+  transition: background-color $duration-fast-02;
   &:hover {
-    background-color: $carbon--gray-80;
+    background-color: $gray-80;
   }
 
   &:focus {
@@ -131,9 +131,9 @@ li .row {
 }
 
 .show-more-button.dark {
-  background: $carbon--gray-90;
+  background: $gray-90;
   &:hover {
-    background: $carbon--gray-80;
+    background: $gray-80;
   }
 }
 
@@ -152,19 +152,11 @@ li .row {
   flex-direction: column;
   align-items: center;
   overflow: visible;
-  background: linear-gradient(
-    90deg,
-    rgba(22, 22, 22, 0) 0%,
-    $carbon--gray-100 24px
-  );
+  background: linear-gradient(90deg, rgba(22, 22, 22, 0) 0%, $gray-100 24px);
 }
 
 .sidebar.dark {
-  background: linear-gradient(
-    90deg,
-    rgba(35, 35, 35, 0) 0%,
-    $carbon--gray-90 24px
-  );
+  background: linear-gradient(90deg, rgba(35, 35, 35, 0) 0%, $gray-90 24px);
 }
 
 // Copy button and src button
@@ -177,12 +169,12 @@ li .row {
   justify-content: center;
   align-items: center;
   background: transparent;
-  transition: background $duration--fast-02;
+  transition: background $duration-fast-02;
   outline-offset: -2px;
   z-index: 1000;
   font-size: 0;
   &:hover {
-    background-color: $carbon--gray-80;
+    background-color: $gray-80;
   }
 }
 

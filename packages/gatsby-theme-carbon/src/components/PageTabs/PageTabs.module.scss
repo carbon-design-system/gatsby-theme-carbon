@@ -1,7 +1,7 @@
 .tabs-container {
   margin: 0;
   width: 100%;
-  background: $carbon--black-100;
+  background: $black-100;
   position: sticky;
   top: calc(3rem - 1px);
   z-index: 6000; /* old z('header') #940 */
@@ -22,36 +22,36 @@
 }
 
 .link {
-  @include carbon--type-style('body-short-02');
+  @include type-style('body-short-02');
   padding: 13px $spacing-05 0 $spacing-05;
   text-decoration: none;
   line-height: 1;
-  color: $carbon--white-0;
+  color: $white-0;
   white-space: nowrap;
   border-top: 3px solid transparent; // 3px accessibility minimum
   height: 3rem;
   outline-offset: -2px; // needed for focus state to be visible
-  transition: background $duration--moderate-01 $carbon--standard-easing,
-    border-top $duration--moderate-01 $carbon--standard-easing; //transitioning all creates a bug on focus bc of outline transition
+  transition: background $duration-moderate-01 $standard-easing,
+    border-top $duration-moderate-01 $standard-easing; //transitioning all creates a bug on focus bc of outline transition
 
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     padding-right: $spacing-09;
   }
 
   &:hover {
-    background: $carbon--gray-80;
+    background: $gray-80;
   }
 }
 
 .selected-item .link {
-  border-top: 3px solid $brand-01; // 3px accessibility minimum
-  background: $carbon--gray-80;
+  border-top: 3px solid $interactive-01; // 3px accessibility minimum
+  background: $gray-80;
 }
 
 .list-item:not(.selected-item) .link {
-  color: $carbon--white-0;
+  color: $white-0;
 
   &:hover {
-    color: $carbon--white-0;
+    color: $white-0;
   }
 }

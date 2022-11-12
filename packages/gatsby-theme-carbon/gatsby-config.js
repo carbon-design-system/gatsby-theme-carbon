@@ -94,12 +94,6 @@ module.exports = (themeOptions) => {
       `gatsby-transformer-yaml`,
       `gatsby-plugin-catch-links`,
       {
-        resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
-        options: {
-          disable: !process.env.ANALYZE,
-        },
-      },
-      {
         resolve: 'gatsby-plugin-lunr',
         options: lunrOptions,
       },
@@ -138,8 +132,8 @@ module.exports = (themeOptions) => {
         resolve: `gatsby-plugin-sass-resources`,
         options: {
           resources: [
-            carbonThemes[theme.interior],
             require.resolve('./src/styles/internal/resources.scss'),
+            carbonThemes[theme.interior],
           ],
         },
       },

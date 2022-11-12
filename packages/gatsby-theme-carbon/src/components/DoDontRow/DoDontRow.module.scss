@@ -4,13 +4,13 @@
 
 .do-dont-row + .do-dont-row {
   --space: 0;
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     --space: #{$spacing-07};
   }
 }
 
 .do-dont-row [class*='--col'] {
-  @include carbon--breakpoint-down('lg') {
+  @include breakpoint-down('lg') {
     --space: #{$spacing-07};
   }
 }
@@ -20,17 +20,17 @@
 //---------------------------------------
 .caption {
   padding: $spacing-05 0 0 0;
-  @include carbon--breakpoint('sm') {
+  @include breakpoint('sm') {
     width: 100%;
   }
 
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     width: 75%;
   }
 }
 
 .title {
-  @include carbon--type-style('body-short-01');
+  @include type-style('body-short-01');
   font-weight: 600;
   margin: 0;
 
@@ -38,19 +38,19 @@
     padding: 0 25% 0 0;
   }
 
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     padding: 0 25% 0 0;
   }
 }
 
 .description {
-  @include carbon--type-style('body-short-01');
+  @include type-style('body-short-01');
   margin: 0;
   padding: 0;
 }
 
 [class*='--col'] .caption {
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     width: 100%;
   }
 }
@@ -69,16 +69,16 @@
 }
 
 .icon-correct {
-  fill: $carbon--green-50;
+  fill: $green-50;
 }
 
 .icon-incorrect {
-  fill: $carbon--red-60;
+  fill: $red-60;
 }
 
 .icon path[dataIconPath='inner-path'],
 .icon path[data-icon-path='inner-path'] {
-  fill: $carbon--white-0;
+  fill: $white-0;
   opacity: 1;
 }
 
@@ -93,14 +93,14 @@
 // Example card
 //---------------------------------------
 .card {
-  background: $carbon--white-0;
+  background: $white-0;
   width: 100%;
   position: relative;
 }
 
 .dark .card {
-  background: $carbon--gray-90;
-  color: $carbon--white-0;
+  background: $gray-90;
+  color: $white-0;
 }
 
 .ratio1x1 .card {
@@ -142,11 +142,11 @@
 }
 
 .correct .card::before {
-  background: $carbon--green-50;
+  background: $green-50;
 }
 
 .incorrect .card::before {
-  background: $carbon--red-60;
+  background: $red-60;
 }
 
 //---------------------------------------

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 // eslint doesn't know about TextArea labeling
 import React, { useState } from 'react';
-import { TextArea } from 'carbon-components-react';
+import { TextArea } from '@carbon/react';
 import cx from 'classnames';
 import * as styles from './Comment.module.scss';
 

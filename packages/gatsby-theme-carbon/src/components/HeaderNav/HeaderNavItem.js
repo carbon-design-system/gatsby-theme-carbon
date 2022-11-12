@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { Location } from '@reach/router';
 import cx from 'classnames';
 
-import { HeaderMenu, HeaderMenuItem } from 'carbon-components-react';
+import { HeaderMenu, HeaderMenuItem } from '@carbon/react';
 import * as styles from './HeaderNavItem.module.scss';
 
 import NavContext from '../../util/context/NavContext';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TooltipDefinition } from 'carbon-components-react';
+import { Tooltip as TooltipDefinition } from '@carbon/react';
 import cx from 'classnames';
 import { abbr } from './Markdown.module.scss';
 

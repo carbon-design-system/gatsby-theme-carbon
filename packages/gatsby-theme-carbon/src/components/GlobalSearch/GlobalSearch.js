@@ -11,7 +11,7 @@ import React, {
   useMemo,
   useCallback,
 } from 'react';
-import { Close20, Search20 } from '@carbon/icons-react';
+import { Close, Search } from '@carbon/react/icons';
 import _throttle from 'lodash.throttle';
 import { navigate } from 'gatsby';
 import cx from 'classnames';
@@ -58,12 +58,8 @@ const GlobalSearchInput = () => {
   const [inputIsFocused, setInputIsFocused] = useState(false);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
-  const {
-    toggleNavState,
-    searchIsOpen,
-    isManagingFocus,
-    setIsManagingFocus,
-  } = useContext(NavContext);
+  const { toggleNavState, searchIsOpen, isManagingFocus, setIsManagingFocus } =
+    useContext(NavContext);
 
   const clearAndClose = useCallback(() => {
     setQuery('');
@@ -181,7 +177,7 @@ const GlobalSearchInput = () => {
               toggleNavState('searchIsOpen', 'open');
               toggleNavState('switcherIsOpen', 'close');
             }}>
-            <Search20 description="Open search" />
+            <Search size={20} description="Open search" />
           </button>
           <input
             autoComplete="off"
@@ -211,7 +207,7 @@ const GlobalSearchInput = () => {
             type="button"
             aria-label="Clear search"
             onClick={clearAndClose}>
-            <Close20 description="Clear search" />
+            <Close size={20} description="Clear search" />
           </button>
         </div>
         <Menu onKeyDown={onKeyDown} results={results} />

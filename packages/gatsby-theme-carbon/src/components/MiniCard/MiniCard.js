@@ -1,32 +1,29 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  ArrowRight20,
-  Calendar20,
-  Download20,
-  Email20,
-  Launch20,
-} from '@carbon/icons-react';
-import { settings } from 'carbon-components';
+  ArrowRight,
+  Calendar,
+  Download,
+  Email,
+  Launch,
+} from '@carbon/react/icons';
 import cx from 'classnames';
 
 import * as styles from './MiniCard.module.scss';
 import { Column } from '../Grid';
 
-const { prefix } = settings;
-
 const getIcon = ({ actionIcon }) => {
   switch (actionIcon) {
     case 'arrowRight':
-      return <ArrowRight20 aria-label="Open resource" />;
+      return <ArrowRight size={20} aria-label="Open resource" />;
     case 'download':
-      return <Download20 aria-label="Download" />;
+      return <Download size={20} aria-label="Download" />;
     case 'email':
-      return <Email20 aria-label="Email" />;
+      return <Email size={20} aria-label="Email" />;
     case 'calendar':
-      return <Calendar20 aria-label="Calendar" />;
+      return <Calendar size={20} aria-label="Calendar" />;
     default:
-      return <Launch20 aria-label="Open resource" />;
+      return <Launch size={20} aria-label="Open resource" />;
   }
 };
 
@@ -58,11 +55,11 @@ const MiniCard = ({
   }
 
   const cardContainer = isLink ? (
-    <Link to={href} className={`${prefix}--tile--clickable`} {...linkProps}>
+    <Link to={href} className="cds--tile--clickable" {...linkProps}>
       {cardContent}
     </Link>
   ) : (
-    <a href={href} className={`${prefix}--tile--clickable`} {...linkProps}>
+    <a href={href} className="cds--tile--clickable" {...linkProps}>
       {cardContent}
     </a>
   );

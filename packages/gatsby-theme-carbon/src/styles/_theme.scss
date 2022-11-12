@@ -1,0 +1,4 @@
+@use '@carbon/react/scss/themes';
+@forward '@carbon/react/scss/theme' with (
+  $theme: themes.$g10
+);

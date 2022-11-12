@@ -20,3 +20,4 @@ export { default as ExpressiveListContainer } from './src/components/ExpressiveL
 export { default as ExpressiveList } from './src/components/ExpressiveList';
 // Homepage Template Components
 export { HomepageCallout, HomepageBanner } from './src/components/Homepage';
+export { MiniCard } from './src/components/MiniCard';

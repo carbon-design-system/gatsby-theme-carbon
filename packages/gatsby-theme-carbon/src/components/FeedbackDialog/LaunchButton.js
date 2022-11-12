@@ -1,5 +1,4 @@
 import React from 'react';
-import cx from 'classnames';
 import { button } from './LaunchButton.module.scss';
 
 function LaunchButton({ onClick, icon: RegularIcon }) {
@@ -10,7 +9,7 @@ function LaunchButton({ onClick, icon: RegularIcon }) {
       className={button}
       onClick={onClick}
       aria-label="This launches a modal form to give website feedback.">
-      <RegularIcon />
+      <RegularIcon size={20} />
     </button>
   );
 }

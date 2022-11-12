@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import { Accordion as CarbonAccordion } from 'carbon-components-react';
+import { Accordion as CarbonAccordion } from '@carbon/react';
 import { accordion } from './Accordion.module.scss';
 import { Row, Column } from '../Grid';
 

@@ -1,9 +1,9 @@
-.link:global(.bx--link) {
+.link:global(.cds--link) {
   font-size: inherit;
   text-decoration: underline;
 
   &:hover {
-    color: $carbon--blue-80;
+    color: $blue-80;
   }
 
   &:visited {

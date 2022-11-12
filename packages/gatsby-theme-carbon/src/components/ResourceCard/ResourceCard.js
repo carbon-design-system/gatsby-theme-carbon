@@ -3,16 +3,14 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { Link, withPrefix } from 'gatsby';
 import {
-  ArrowRight20,
-  Calendar20,
-  Download20,
-  Email20,
-  Error20,
-  Launch20,
-} from '@carbon/icons-react';
-import { settings } from 'carbon-components';
-
-const { prefix } = settings;
+  ArrowRight,
+  Calendar,
+  Download,
+  Email,
+  Error,
+  Launch,
+} from '@carbon/react/icons';
+import { AspectRatio } from '@carbon/react';
 
 export default class ResourceCard extends React.Component {
   render() {
@@ -34,42 +32,40 @@ export default class ResourceCard extends React.Component {
       isLink = href.charAt(0) === '/';
     }
 
-    const ResourceCardClassNames = cx(className, `${prefix}--resource-card`, {
-      [`${prefix}--resource-card--disabled`]: disabled,
-      [`${prefix}--resource-card--dark`]: color === 'dark',
+    const ResourceCardClassNames = cx(className, `cds--resource-card`, {
+      [`cds--resource-card--disabled`]: disabled,
+      [`cds--resource-card--dark`]: color === 'dark',
     });
 
-    const carbonTileclassNames = cx([`${prefix}--tile`], {
-      [`${prefix}--tile--clickable`]: href !== undefined,
+    const carbonTileclassNames = cx([`cds--tile`], {
+      [`cds--tile--clickable`]: href !== undefined,
     });
 
     const cardContent = (
       <>
         {subTitle && (
-          <h5 className={`${prefix}--resource-card__subtitle`}>{subTitle}</h5>
+          <h5 className="cds--resource-card__subtitle">{subTitle}</h5>
         )}
-        {title && (
-          <h4 className={`${prefix}--resource-card__title`}>{title}</h4>
-        )}
-        <div className={`${prefix}--resource-card__icon--img`}>{children}</div>
-        <div className={`${prefix}--resource-card__icon--action`}>
+        {title && <h4 className="cds--resource-card__title">{title}</h4>}
+        <div className="cds--resource-card__icon--img">{children}</div>
+        <div className="cds--resource-card__icon--action">
           {actionIcon === 'launch' && !disabled ? (
-            <Launch20 aria-label="Open resource" />
+            <Launch size={20} aria-label="Open resource" />
           ) : null}
           {actionIcon === 'arrowRight' && !disabled ? (
-            <ArrowRight20 aria-label="Open resource" />
+            <ArrowRight size={20} aria-label="Open resource" />
           ) : null}
           {actionIcon === 'download' && !disabled ? (
-            <Download20 aria-label="Download" />
+            <Download size={20} aria-label="Download" />
           ) : null}
           {actionIcon === 'email' && !disabled ? (
-            <Email20 aria-label="Email" />
+            <Email size={20} aria-label="Email" />
           ) : null}
           {actionIcon === 'calendar' && !disabled ? (
-            <Calendar20 aria-label="Calendar" />
+            <Calendar size={20} aria-label="Calendar" />
           ) : null}
           {actionIcon === 'disabled' || disabled === true ? (
-            <Error20 aria-label="disabled" />
+            <Error size={20} aria-label="disabled" />
           ) : null}
         </div>
       </>
@@ -103,15 +99,9 @@ export default class ResourceCard extends React.Component {
 
     return (
       <div className={ResourceCardClassNames}>
-        <div
-          className={cx(
-            `${prefix}--aspect-ratio`,
-            `${prefix}--aspect-ratio--${aspectRatio.replace(':', 'x')}`
-          )}>
-          <div className={`${prefix}--aspect-ratio--object`}>
-            {cardContainer}
-          </div>
-        </div>
+        <AspectRatio ratio={`${aspectRatio.replace(':', 'x')}`}>
+          <div className="cds--aspect-ratio--object">{cardContainer}</div>
+        </AspectRatio>
       </div>
     );
   }

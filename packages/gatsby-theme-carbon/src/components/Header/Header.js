@@ -6,8 +6,8 @@ import {
   SkipToContent,
   HeaderGlobalBar,
   HeaderGlobalAction,
-} from 'carbon-components-react';
-import { Switcher20, Close20 } from '@carbon/icons-react';
+} from '@carbon/react';
+import { Switcher, Close } from '@carbon/react/icons';
 import cx from 'classnames';
 
 import HeaderNav from '../HeaderNav/HeaderNav';
@@ -35,7 +35,7 @@ const Header = ({ children }) => {
       })}>
       <SkipToContent href="#main-content" className={styles.skipToContent} />
       <HeaderMenuButton
-        className={cx('bx--header__action--menu', styles.headerButton)}
+        className={cx(`cds--header__action--menu`, styles.headerButton)}
         aria-label="Open menu"
         onClick={() => {
           toggleNavState('leftNavIsOpen');
@@ -67,7 +67,7 @@ const Header = ({ children }) => {
               toggleNavState('searchIsOpen', 'close');
               toggleNavState('leftNavIsOpen', 'close');
             }}>
-            {switcherIsOpen ? <Close20 /> : <Switcher20 />}
+            {switcherIsOpen ? <Close size={20} /> : <Switcher size={20} />}
           </HeaderGlobalAction>
         )}
       </HeaderGlobalBar>

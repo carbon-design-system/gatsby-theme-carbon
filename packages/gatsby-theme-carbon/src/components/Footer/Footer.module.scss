@@ -1,8 +1,8 @@
 .footer {
-  @include carbon--type-style('body-short-01');
+  @include type-style('body-short-01');
   width: 100%;
-  background: $carbon--black-100;
-  color: $carbon--gray-10;
+  background: $black-100;
+  color: $gray-10;
   position: relative;
   z-index: 2;
 }
@@ -22,9 +22,9 @@
   position: relative;
 
   &:after {
-    @include carbon--breakpoint('sm') {
+    @include breakpoint('sm') {
       content: '';
-      background: $carbon--gray-80;
+      background: $gray-80;
       width: 100%;
       height: 1px;
       display: block;
@@ -32,7 +32,7 @@
       bottom: 0;
     }
 
-    @include carbon--breakpoint('md') {
+    @include breakpoint('md') {
       display: none;
     }
   }
@@ -41,48 +41,48 @@
 .listItem {
   display: block;
 
-  @include carbon--breakpoint('sm') {
+  @include breakpoint('sm') {
     margin: 0 0 $spacing-03 0;
   }
 
-  @include carbon--breakpoint('lg') {
+  @include breakpoint('lg') {
     margin: 0;
   }
 }
 
 .footer .content a {
   text-decoration: underline;
-  color: $carbon--gray-10;
+  color: $gray-10;
 }
 
 .footer .listItem a {
-  @include carbon--type-style('body-long-01');
-  color: $carbon--gray-10 !important; //needed to get the color correct on the homepage, we are setting all homepage links to a light blue in the homepage sass file.
+  @include type-style('body-long-01');
+  color: $gray-10 !important; //needed to get the color correct on the homepage, we are setting all homepage links to a light blue in the homepage sass file.
   text-decoration: none;
-  transition: $duration--fast-01 motion(standard, productive);
+  transition: $duration-fast-01 motion(standard, productive);
 
   &:hover {
-    color: $carbon--gray-10;
+    color: $gray-10;
     text-decoration: underline;
   }
 
   &:active,
   &:active:visited {
-    color: $carbon--gray-10;
+    color: $gray-10;
     text-decoration: underline;
   }
 }
 
 .footer p {
-  @include carbon--type-style('body-short-01');
+  @include type-style('body-short-01');
   padding-bottom: $spacing-05;
 }
 
 .footer p:last-child {
-  padding-bottom: rem(48px);
+  padding-bottom: 3rem;
 }
 
 .logo {
-  fill: $carbon--gray-10;
+  fill: $gray-10;
   margin-top: $spacing-07;
 }

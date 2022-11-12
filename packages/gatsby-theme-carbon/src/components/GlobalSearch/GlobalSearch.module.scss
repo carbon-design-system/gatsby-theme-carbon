@@ -1,52 +1,50 @@
-@import '~carbon-components/scss/globals/scss/helper-mixins';
-
 .container {
   position: relative;
   display: flex;
   max-width: 100%;
   width: 100%;
   height: 3rem;
-  background-color: $carbon--gray-80;
-  color: $carbon--white-0;
-  transition: max-width $duration--fast-02 $carbon--standard-easing,
-    background $duration--fast-02 $carbon--standard-easing;
-  
-  @include carbon--breakpoint('lg') {
+  background-color: $gray-80;
+  color: $white-0;
+  transition: max-width $duration-fast-02 $standard-easing,
+    background $duration-fast-02 $standard-easing;
+
+  @include breakpoint('lg') {
     max-width: 28rem;
   }
 }
 
 .container.inputFocusWithin {
-  outline: 2px solid $carbon--white-0;
+  outline: 2px solid $white-0;
   outline-offset: -2px;
 }
 
 .container.hidden {
   max-width: 3rem;
-  background-color: $carbon--gray-100;
+  background-color: $gray-100;
 }
 
 .container svg {
-  fill: $carbon--white-0;
+  fill: $white-0;
 }
 
 .inputWrapper {
   display: flex;
   flex-grow: 1;
-  border-bottom: 1px solid $carbon--gray-80;
+  border-bottom: 1px solid $gray-80;
 }
 
 .input {
-  @include carbon--type-style('body-short-02');
-  color: $carbon--white-0;
-  caret-color: $carbon--white-0;
+  @include type-style('body-short-02');
+  color: $white-0;
+  caret-color: $white-0;
   background-color: transparent;
   border: none;
   outline: none;
   width: 100%;
   height: 3rem;
   padding: 0;
-  transition: opacity $duration--fast-02 $carbon--standard-easing;
+  transition: opacity $duration-fast-02 $standard-easing;
 }
 
 .input.hidden {
@@ -55,7 +53,19 @@
 }
 
 .label {
-  @include hidden;
+  // TODO - this can instead use the visually-hidden helper mixin from @carbon/react once it's provided
+  // @include visually-hidden;
+
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  visibility: inherit;
+  white-space: nowrap;
 }
 
 .list {
@@ -65,8 +75,8 @@
   left: 0;
   right: 0;
   top: 3rem;
-  background-color: $carbon--gray-100;
-  border: 1px solid $carbon--gray-80;
+  background-color: $gray-100;
+  border: 1px solid $gray-80;
   border-top: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
@@ -81,28 +91,28 @@
 }
 
 .description {
-  @include carbon--type-style('caption-01');
+  @include type-style('label-01');
   text-transform: lowercase;
-  color: $carbon--gray-30;
+  color: $gray-30;
 }
 
 .link {
   padding: 6px $spacing-05;
   cursor: pointer;
-  @include carbon--type-style('heading-01');
-  transition: all $duration--fast-01 motion(standard, productive);
+  @include type-style('heading-01');
+  transition: all $duration-fast-01 motion(standard, productive);
   display: block;
   text-decoration: none;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: $carbon--gray-30;
+  color: $gray-30;
 
   &:hover {
     background-color: #353535;
-    color: $carbon--gray-10;
+    color: $gray-10;
     .description {
-      color: $carbon--gray-10;
+      color: $gray-10;
     }
   }
 }
@@ -118,8 +128,8 @@
   padding: 0;
   flex-shrink: 0;
   opacity: 1;
-  transition: background-color $duration--fast-02 $carbon--standard-easing,
-    opacity $duration--fast-02 $carbon--standard-easing;
+  transition: background-color $duration-fast-02 $standard-easing,
+    opacity $duration-fast-02 $standard-easing;
   // Hex values used pending shell theming
   &:hover {
     cursor: pointer;
@@ -130,7 +140,7 @@
   }
   &:focus {
     // shell header button's don't present focus on mobile
-    outline: 2px solid $carbon--white-0;
+    outline: 2px solid $white-0;
     outline-offset: -2px;
   }
 }
@@ -154,9 +164,9 @@
 
 .link.active {
   background-color: #353535;
-  color: $carbon--gray-10;
+  color: $gray-10;
   outline: 0;
   .description {
-    color: $carbon--gray-10;
+    color: $gray-10;
   }
 }

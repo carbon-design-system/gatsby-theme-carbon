@@ -7,7 +7,7 @@
   },
   "license": "Apache 2.0",
   "engines": {
-    "node": "12.x || 14.x || 16.x"
+    "node": "14.x || 16.x"
   },
   "workspaces": [
     "packages/*"
@@ -17,7 +17,6 @@
     "dev:clean": "yarn workspace example dev:clean",
     "build": "yarn workspace example build",
     "build:clean": "yarn workspace example build:clean",
-    "build:analyze": "ANALYZE=true yarn workspace example build",
     "build:prefix": "yarn workspace example build --prefix-paths",
     "serve": "yarn build && yarn workspace example serve",
     "serve:prefix": "yarn build:prefix && yarn workspace example serve --prefix-paths",
@@ -93,7 +92,7 @@
     "husky": "^4.2.3",
     "lerna": "^3.22.1",
     "lint-staged": "^10.0.9",
-    "prettier": "^2.0.2",
+    "prettier": "^2.5.1",
     "prettier-config-carbon": "^0.2.0",
     "release-it": "^14.6.1",
     "release-it-yarn-workspaces": "^2.0.1",
@@ -102,5 +101,5 @@
     "stylelint-scss": "^3.16.0",
     "yarn": "^1.22.4"
   },
-  "version": "2.3.1"
+  "version": "3.0.0"
 }

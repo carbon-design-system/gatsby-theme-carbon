@@ -35,9 +35,9 @@ export default class PageTabs extends React.Component {
 
     return (
       <div className={tabsContainer}>
-        <div className="bx--grid">
-          <div className="bx--row">
-            <div className="bx--col-lg-12 bx--col-no-gutter">
+        <div className="cds--grid">
+          <div className="cds--row">
+            <div className="cds--col-lg-12 cds--col-no-gutter">
               <nav aria-label={title}>
                 <ul className={list}>{pageTabs}</ul>
               </nav>

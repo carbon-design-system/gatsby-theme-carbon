@@ -29,7 +29,7 @@ import MediumPosts from '../MediumPosts';
 import Title from '../Title';
 import { MiniCard, CardGroup } from '../MiniCard';
 import Sup from '../markdown/Sup';
-import Abbr from '../markdown/Abbr';
+// import Abbr from '../markdown/Abbr';
 import SquareCard from '../SquareCard';
 import ExpressiveListContainer from '../ExpressiveListContainer';
 import ExpressiveList from '../ExpressiveList';
@@ -54,7 +54,7 @@ const components = {
   table: PageTable,
   a: Link,
   sup: Sup,
-  abbr: Abbr,
+  // abbr: Abbr,
   ArtDirection,
   PageDescription,
   Accordion,

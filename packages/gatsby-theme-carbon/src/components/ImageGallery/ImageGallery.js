@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Children } from 'react';
 import ReactDOM from 'react-dom';
 import { breakpoints } from '@carbon/elements';
-import { ChevronRight32, ChevronLeft32, Close32 } from '@carbon/icons-react';
+import { ChevronRight, ChevronLeft, Close } from '@carbon/react/icons';
 import cx from 'classnames';
 import FocusTrap from 'focus-trap-react';
 import useMedia from 'use-media';
@@ -143,11 +143,11 @@ function ImageGallery({ children, className }) {
                     type="button"
                     className={closeButton}
                     onClick={closeGallery}>
-                    <Close32 className={icon} />
+                    <Close size={32} className={icon} />
                   </button>
                 </Column>
               </Row>
-              <Grid className={cx('bx--grid--full-width', galleryGrid)}>
+              <Grid className={cx(`cds--grid--full-width`, galleryGrid)}>
                 <Row className={galleryRow}>
                   <Column colLg={3} className={navButtonsContainer}>
                     {activeImageIndex - 1 >= 0 && (
@@ -155,7 +155,7 @@ function ImageGallery({ children, className }) {
                         type="button"
                         className={leftNavButton}
                         onClick={selectPrevImage}>
-                        <ChevronLeft32 className={icon} />
+                        <ChevronLeft size={32} className={icon} />
                       </button>
                     )}
                   </Column>
@@ -178,7 +178,7 @@ function ImageGallery({ children, className }) {
                         type="button"
                         className={rightNavButton}
                         onClick={selectNextImage}>
-                        <ChevronRight32 className={icon} />
+                        <ChevronRight size={32} className={icon} />
                       </button>
                     )}
                   </Column>

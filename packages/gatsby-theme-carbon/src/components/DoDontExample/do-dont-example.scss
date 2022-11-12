@@ -1,70 +1,83 @@
+// carbon--breakpoint
+@use '@carbon/react/scss/breakpoint' as *;
+// $carbon--white-0
+@use '@carbon/react/scss/colors' as *;
+// $prefix
+@use '@carbon/react/scss/config' as *;
+// $spacing-0X
+@use '@carbon/react/scss/spacing' as *;
+// carbon--type-style
+@use '@carbon/react/scss/type' as *;
+// color tokens
+@use '@carbon/react/scss/compat/theme' as *;
+
 // Example
-.#{$prefix}--example {
+.cds--example {
   width: 100%;
 }
 
-.#{$prefix}--example--dark .#{$prefix}--example-card {
-  background: $carbon--gray-90;
-  color: $carbon--white-0;
+.cds--example-card {
+  background: $white-0;
+  width: 100%;
+  position: relative;
 }
 
-.#{$prefix}--example__content {
+.cds--example--dark .cds--example-card {
+  background: $gray-90;
+  color: $white-0;
+}
+
+.cds--example__content {
   font-size: 1.25rem;
   font-weight: 300;
   width: 100%;
 }
 
-.#{$prefix}--example__content .gatsby-resp-image-link {
+.cds--example__content .gatsby-resp-image-link {
   width: 100%;
 }
 
-.#{$prefix}--example__content img {
+.cds--example__content img {
   display: block;
   margin-bottom: 0;
   width: 100%;
 }
 
-.#{$prefix}--example-card {
-  background: $carbon--white-0;
-  width: 100%;
-  position: relative;
-}
-
-.#{$prefix}--example .#{$prefix}--example-card__content {
+.cds--example .cds--example-card__content {
   position: relative;
 }
 
 // Aspect Ratio
 
-.#{$prefix}--example--1x1 .#{$prefix}--example-card {
+.cds--example--1x1 .cds--example-card {
   padding-top: 100%;
 }
 
-.#{$prefix}--example--4x3 .#{$prefix}--example-card {
+.cds--example--4x3 .cds--example-card {
   padding-top: 75%;
 }
 
-.#{$prefix}--example--3x4 .#{$prefix}--example-card {
+.cds--example--3x4 .cds--example-card {
   padding-top: 133.3333333333%;
 }
 
-.#{$prefix}--example--2x1 .#{$prefix}--example-card {
+.cds--example--2x1 .cds--example-card {
   padding-top: 50%;
 }
 
-.#{$prefix}--example--1x2 .#{$prefix}--example-card {
+.cds--example--1x2 .cds--example-card {
   padding-top: 150%;
 }
 
-.#{$prefix}--example--9x16 .#{$prefix}--example-card {
+.cds--example--9x16 .cds--example-card {
   padding-top: 177.7777777778%;
 }
 
-.#{$prefix}--example--16x9 .#{$prefix}--example-card {
+.cds--example--16x9 .cds--example-card {
   padding-top: 56.25%;
 }
 
-.#{$prefix}--example--ratio .#{$prefix}--example-card__content {
+.cds--example--ratio .cds--example-card__content {
   position: absolute;
   top: 0;
   left: 0;
@@ -75,21 +88,21 @@
   justify-content: center;
 }
 
-.#{$prefix}--example__text {
+.cds--example__text {
   padding: 10%;
   font-weight: 300;
-  font-size: rem(24px);
+  font-size: 1.5rem;
   line-height: 1.25;
 }
 
-.#{$prefix}--example-image {
+.cds--example-image {
   display: block;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-.#{$prefix}--example-card::before {
+.cds--example-card::before {
   content: '';
   position: absolute;
   left: 0;
@@ -99,15 +112,15 @@
   z-index: 1;
 }
 
-.#{$prefix}--example--correct .#{$prefix}--example-card::before {
-  background: $carbon--green-50;
+.cds--example--correct .cds--example-card::before {
+  background: $green-50;
 }
 
-.#{$prefix}--example--incorrect .#{$prefix}--example-card::before {
+.cds--example--incorrect .cds--example-card::before {
   background: $support-01;
 }
 
-.#{$prefix}--example__icon {
+.cds--example__icon {
   display: block;
   position: absolute;
   left: calc(1rem - 1px);
@@ -117,33 +130,33 @@
   height: 24px;
 }
 
-.#{$prefix}--example__icon--correct {
-  fill: $carbon--green-50;
+.cds--example__icon--correct {
+  fill: $green-50;
 }
 
-.#{$prefix}--example__icon--incorrect {
+.cds--example__icon--incorrect {
   fill: $support-01;
 }
 
-.#{$prefix}--example__icon path[dataIconPath='inner-path'],
-.#{$prefix}--example__icon path[data-icon-path='inner-path'] {
-  fill: $carbon--white-0;
+.cds--example__icon path[dataIconPath='inner-path'],
+.cds--example__icon path[data-icon-path='inner-path'] {
+  fill: $white-0;
   opacity: 1;
 }
 
-.#{$prefix}--example__caption {
+.cds--example__caption {
   padding: $spacing-05 0 0 0;
-  @include carbon--breakpoint('sm') {
+  @include breakpoint('sm') {
     width: 100%;
   }
 
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     width: 75%;
   }
 }
 
-.#{$prefix}--example__title {
-  @include carbon--type-style('body-short-01');
+.cds--example__title {
+  @include type-style('body-short-01');
   font-weight: 600;
   margin: 0;
 
@@ -151,29 +164,29 @@
     padding: 0 25% 0 0;
   }
 
-  @include carbon--breakpoint('md') {
+  @include breakpoint('md') {
     padding: 0 25% 0 0;
   }
 }
 
-.#{$prefix}--example__description {
-  @include carbon--type-style('body-short-01');
+.cds--example__description {
+  @include type-style('body-short-01');
   margin: 0;
   padding: 0;
 }
 
-.#{$prefix}--col-lg-4 .#{$prefix}--example__caption {
-  @include carbon--breakpoint('md') {
+.cds--col-lg-4 .cds--example__caption {
+  @include breakpoint('md') {
     width: 100%;
   }
 }
 
-.#{$prefix}--example span.gatsby-resp-image-wrapper {
+.cds--example span.gatsby-resp-image-wrapper {
   max-width: 100% !important; // marked !important to overcome inline styles inserted by gatsby.
   margin-bottom: 0;
 }
 
 //Video
-.#{$prefix}--example [class^='Video-module--video-container'] {
+.cds--example [class^='Video-module--video-container'] {
   margin-bottom: 0;
 }
