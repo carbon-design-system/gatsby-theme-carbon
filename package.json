@@ -98,8 +98,8 @@
     "release-it-yarn-workspaces": "^2.0.1",
     "stylelint": "^13.2.1",
     "stylelint-config-recommended-scss": "^4.2.0",
-    "stylelint-scss": "^3.16.0",
-    "yarn": "^1.22.4"
+    "stylelint-scss": "^3.16.0"
   },
-  "version": "3.0.0"
+  "version": "3.0.0",
+  "packageManager": "yarn@3.3.0"
 }
