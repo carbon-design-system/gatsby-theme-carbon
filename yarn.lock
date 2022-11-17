@@ -93,7 +93,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.14.0, @babel/core@npm:^7.14.6, @babel/core@npm:^7.15.5, @babel/core@npm:^7.17.9":
+"@babel/core@npm:^7.14.0, @babel/core@npm:^7.15.5, @babel/core@npm:^7.17.9, @babel/core@npm:^7.20.2":
   version: 7.20.2
   resolution: "@babel/core@npm:7.20.2"
   dependencies:
@@ -1536,7 +1536,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/elements@npm:^11.8.0":
+"@carbon/elements@npm:^11.14.0":
   version: 11.14.0
   resolution: "@carbon/elements@npm:11.14.0"
   dependencies:
@@ -1558,7 +1558,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/grid@npm:^11.5.0, @carbon/grid@npm:^11.7.0":
+"@carbon/grid@npm:^11.7.0":
   version: 11.7.0
   resolution: "@carbon/grid@npm:11.7.0"
   dependencies:
@@ -1608,7 +1608,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/pictograms-react@npm:^11.30.0":
+"@carbon/pictograms-react@npm:^11.34.0":
   version: 11.34.0
   resolution: "@carbon/pictograms-react@npm:11.34.0"
   dependencies:
@@ -1621,7 +1621,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/react@npm:^1.11.0":
+"@carbon/react@npm:^1.17.0":
   version: 1.17.0
   resolution: "@carbon/react@npm:1.17.0"
   dependencies:
@@ -1681,7 +1681,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/themes@npm:^11.12.0, @carbon/themes@npm:^11.7.0":
+"@carbon/themes@npm:^11.12.0":
   version: 11.12.0
   resolution: "@carbon/themes@npm:11.12.0"
   dependencies:
@@ -3308,7 +3308,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/mdx@npm:^1.5.5":
+"@mdx-js/mdx@npm:^1.6.22":
   version: 1.6.22
   resolution: "@mdx-js/mdx@npm:1.6.22"
   dependencies:
@@ -3335,7 +3335,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/react@npm:^1.5.5":
+"@mdx-js/react@npm:^1.6.22":
   version: 1.6.22
   resolution: "@mdx-js/react@npm:1.6.22"
   peerDependencies:
@@ -4089,7 +4089,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@reach/router@npm:^1.2.1":
+"@reach/router@npm:^1.3.4":
   version: 1.3.4
   resolution: "@reach/router@npm:1.3.4"
   dependencies:
@@ -4104,7 +4104,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@release-it/conventional-changelog@npm:^2.0.0":
+"@release-it/conventional-changelog@npm:^2.0.1":
   version: 2.0.1
   resolution: "@release-it/conventional-changelog@npm:2.0.1"
   dependencies:
@@ -4767,7 +4767,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vimeo/player@npm:^2.9.1":
+"@vimeo/player@npm:^2.18.0":
   version: 2.18.0
   resolution: "@vimeo/player@npm:2.18.0"
   dependencies:
@@ -6919,7 +6919,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:2.3.2, classnames@npm:^2.2.6":
+"classnames@npm:2.3.2, classnames@npm:^2.3.2":
   version: 2.3.2
   resolution: "classnames@npm:2.3.2"
   checksum: 2c62199789618d95545c872787137262e741f9db13328e216b093eea91c85ef2bfb152c1f9e63027204e2559a006a92eb74147d46c800a9f96297ae1d9f96f4e
@@ -7754,7 +7754,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"copy-to-clipboard@npm:^3.2.0, copy-to-clipboard@npm:^3.3.1":
+"copy-to-clipboard@npm:^3.2.0, copy-to-clipboard@npm:^3.3.1, copy-to-clipboard@npm:^3.3.3":
   version: 3.3.3
   resolution: "copy-to-clipboard@npm:3.3.3"
   dependencies:
@@ -9357,7 +9357,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-airbnb@npm:^18.1.0":
+"eslint-config-airbnb@npm:^18.2.1":
   version: 18.2.1
   resolution: "eslint-config-airbnb@npm:18.2.1"
   dependencies:
@@ -9374,7 +9374,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^6.10.1":
+"eslint-config-prettier@npm:^6.15.0":
   version: 6.15.0
   resolution: "eslint-config-prettier@npm:6.15.0"
   dependencies:
@@ -9466,7 +9466,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-html@npm:^6.0.0":
+"eslint-plugin-html@npm:^6.2.0":
   version: 6.2.0
   resolution: "eslint-plugin-html@npm:6.2.0"
   dependencies:
@@ -9475,7 +9475,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:^2.17.2, eslint-plugin-import@npm:^2.26.0":
+"eslint-plugin-import@npm:^2.26.0":
   version: 2.26.0
   resolution: "eslint-plugin-import@npm:2.26.0"
   dependencies:
@@ -9498,7 +9498,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsx-a11y@npm:^6.2.1, eslint-plugin-jsx-a11y@npm:^6.6.1":
+"eslint-plugin-jsx-a11y@npm:^6.6.1":
   version: 6.6.1
   resolution: "eslint-plugin-jsx-a11y@npm:6.6.1"
   dependencies:
@@ -9521,7 +9521,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:^3.0.1":
+"eslint-plugin-prettier@npm:^3.4.1":
   version: 3.4.1
   resolution: "eslint-plugin-prettier@npm:3.4.1"
   dependencies:
@@ -9554,7 +9554,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:^7.19.0, eslint-plugin-react@npm:^7.30.1":
+"eslint-plugin-react@npm:^7.30.1, eslint-plugin-react@npm:^7.31.10":
   version: 7.31.10
   resolution: "eslint-plugin-react@npm:7.31.10"
   dependencies:
@@ -9875,7 +9875,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "example@workspace:packages/example"
   dependencies:
-    gatsby: ^4.21.1
+    gatsby: ^4.24.8
     gatsby-theme-carbon: ^3.0.0
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -10493,7 +10493,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"focus-trap-react@npm:^8.4.2":
+"focus-trap-react@npm:^8.11.3":
   version: 8.11.3
   resolution: "focus-trap-react@npm:8.11.3"
   dependencies:
@@ -10955,7 +10955,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-catch-links@npm:^4.21.0":
+"gatsby-plugin-catch-links@npm:^4.24.0":
   version: 4.24.0
   resolution: "gatsby-plugin-catch-links@npm:4.24.0"
   dependencies:
@@ -10978,7 +10978,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-manifest@npm:^4.21.0":
+"gatsby-plugin-manifest@npm:^4.24.0":
   version: 4.24.0
   resolution: "gatsby-plugin-manifest@npm:4.24.0"
   dependencies:
@@ -11045,7 +11045,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-offline@npm:^5.21.0":
+"gatsby-plugin-offline@npm:^5.24.0":
   version: 5.24.0
   resolution: "gatsby-plugin-offline@npm:5.24.0"
   dependencies:
@@ -11086,7 +11086,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-react-helmet@npm:^5.21.0":
+"gatsby-plugin-react-helmet@npm:^5.24.0":
   version: 5.24.0
   resolution: "gatsby-plugin-react-helmet@npm:5.24.0"
   dependencies:
@@ -11111,7 +11111,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-sass@npm:5.9":
+"gatsby-plugin-sass@npm:5.9.0":
   version: 5.9.0
   resolution: "gatsby-plugin-sass@npm:5.9.0"
   dependencies:
@@ -11125,7 +11125,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-sharp@npm:^4.21.0":
+"gatsby-plugin-sharp@npm:^4.24.0":
   version: 4.24.0
   resolution: "gatsby-plugin-sharp@npm:4.24.0"
   dependencies:
@@ -11204,7 +11204,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-copy-linked-files@npm:^5.21.0":
+"gatsby-remark-copy-linked-files@npm:^5.24.0":
   version: 5.24.0
   resolution: "gatsby-remark-copy-linked-files@npm:5.24.0"
   dependencies:
@@ -11222,7 +11222,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-images@npm:^6.21.0":
+"gatsby-remark-images@npm:^6.24.0":
   version: 6.24.0
   resolution: "gatsby-remark-images@npm:6.24.0"
   dependencies:
@@ -11244,7 +11244,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-responsive-iframe@npm:^5.21.0":
+"gatsby-remark-responsive-iframe@npm:^5.24.0":
   version: 5.24.0
   resolution: "gatsby-remark-responsive-iframe@npm:5.24.0"
   dependencies:
@@ -11259,7 +11259,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-smartypants@npm:^5.21.0":
+"gatsby-remark-smartypants@npm:^5.24.0":
   version: 5.24.0
   resolution: "gatsby-remark-smartypants@npm:5.24.0"
   dependencies:
@@ -11306,7 +11306,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-source-filesystem@npm:^4.21.1":
+"gatsby-source-filesystem@npm:^4.24.0":
   version: 4.24.0
   resolution: "gatsby-source-filesystem@npm:4.24.0"
   dependencies:
@@ -11362,28 +11362,28 @@ __metadata:
   dependencies:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
-    "@release-it/conventional-changelog": ^2.0.0
+    "@release-it/conventional-changelog": ^2.0.1
     babel-eslint: ^10.1.0
     eslint: ^6.8.0
-    eslint-config-airbnb: ^18.1.0
-    eslint-config-prettier: ^6.10.1
+    eslint-config-airbnb: ^18.2.1
+    eslint-config-prettier: ^6.15.0
     eslint-config-wesbos: 0.0.19
-    eslint-plugin-html: ^6.0.0
-    eslint-plugin-import: ^2.17.2
-    eslint-plugin-jsx-a11y: ^6.2.1
-    eslint-plugin-prettier: ^3.0.1
-    eslint-plugin-react: ^7.19.0
+    eslint-plugin-html: ^6.2.0
+    eslint-plugin-import: ^2.26.0
+    eslint-plugin-jsx-a11y: ^6.6.1
+    eslint-plugin-prettier: ^3.4.1
+    eslint-plugin-react: ^7.31.10
     eslint-plugin-react-hooks: ^2.5.1
-    husky: ^4.2.3
+    husky: ^4.3.8
     lerna: ^3.22.1
-    lint-staged: ^10.0.9
-    prettier: ^2.5.1
+    lint-staged: ^10.5.4
+    prettier: ^2.7.1
     prettier-config-carbon: ^0.2.0
-    release-it: ^14.6.1
+    release-it: ^14.14.3
     release-it-yarn-workspaces: ^2.0.1
-    stylelint: ^13.2.1
-    stylelint-config-recommended-scss: ^4.2.0
-    stylelint-scss: ^3.16.0
+    stylelint: ^13.13.1
+    stylelint-config-recommended-scss: ^4.3.0
+    stylelint-scss: ^3.21.0
   languageName: unknown
   linkType: soft
 
@@ -11391,51 +11391,51 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@carbon/elements": ^11.8.0
-    "@carbon/grid": ^11.5.0
-    "@carbon/pictograms-react": ^11.30.0
-    "@carbon/react": ^1.11.0
-    "@carbon/themes": ^11.7.0
-    "@mdx-js/mdx": ^1.5.5
-    "@mdx-js/react": ^1.5.5
-    "@reach/router": ^1.2.1
-    "@vimeo/player": ^2.9.1
+    "@babel/core": ^7.20.2
+    "@carbon/elements": ^11.14.0
+    "@carbon/grid": ^11.7.0
+    "@carbon/pictograms-react": ^11.34.0
+    "@carbon/react": ^1.17.0
+    "@carbon/themes": ^11.12.0
+    "@mdx-js/mdx": ^1.6.22
+    "@mdx-js/react": ^1.6.22
+    "@reach/router": ^1.3.4
+    "@vimeo/player": ^2.18.0
     beautiful-react-hooks: ^0.23.1
-    classnames: ^2.2.6
-    copy-to-clipboard: ^3.2.0
-    focus-trap-react: ^8.4.2
-    gatsby: ^4.21.1
-    gatsby-plugin-catch-links: ^4.21.0
+    classnames: ^2.3.2
+    copy-to-clipboard: ^3.3.3
+    focus-trap-react: ^8.11.3
+    gatsby: ^4.24.8
+    gatsby-plugin-catch-links: ^4.24.0
     gatsby-plugin-lunr: ^1.5.2
-    gatsby-plugin-manifest: ^4.21.0
+    gatsby-plugin-manifest: ^4.24.0
     gatsby-plugin-mdx: 3.20.0
-    gatsby-plugin-offline: ^5.21.0
-    gatsby-plugin-react-helmet: ^5.21.0
-    gatsby-plugin-sass: 5.9
+    gatsby-plugin-offline: ^5.24.0
+    gatsby-plugin-react-helmet: ^5.24.0
+    gatsby-plugin-sass: 5.9.0
     gatsby-plugin-sass-resources: ^3.0.1
-    gatsby-plugin-sharp: ^4.21.0
-    gatsby-remark-copy-linked-files: ^5.21.0
-    gatsby-remark-images: ^6.21.0
-    gatsby-remark-responsive-iframe: ^5.21.0
-    gatsby-remark-smartypants: ^5.21.0
+    gatsby-plugin-sharp: ^4.24.0
+    gatsby-remark-copy-linked-files: ^5.24.0
+    gatsby-remark-images: ^6.24.0
+    gatsby-remark-responsive-iframe: ^5.24.0
+    gatsby-remark-smartypants: ^5.24.0
     gatsby-remark-unwrap-images: ^1.0.2
-    gatsby-source-filesystem: ^4.21.1
+    gatsby-source-filesystem: ^4.24.0
     gatsby-source-medium-feed: ^1.0.6
-    gatsby-transformer-yaml: ^4.21.0
+    gatsby-transformer-yaml: ^4.24.0
     lodash.startcase: ^4.4.0
     lodash.throttle: ^4.1.1
-    mkdirp: ^1.0.3
-    prism-react-renderer: ^1.2.1
-    prop-types: ^15.7.2
+    mkdirp: ^1.0.4
+    prism-react-renderer: ^1.3.5
+    prop-types: ^15.8.1
     react: ^17.0.2
     react-dom: ^17.0.2
-    react-helmet: ^6.0.0-beta
-    react-transition-group: ^4.4.2
-    react-use: ^15.3.4
-    remark-slug: ^6.0.0
-    sass: ^1.52.3
-    slugify: ^1.3.4
+    react-helmet: ^6.1.0
+    react-transition-group: ^4.4.5
+    react-use: ^15.3.8
+    remark-slug: ^6.1.0
+    sass: ^1.56.1
+    slugify: ^1.6.5
     smooth-scroll: ^16.1.3
     use-media: ^1.4.0
   peerDependencies:
@@ -11445,7 +11445,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-transformer-yaml@npm:^4.21.0":
+"gatsby-transformer-yaml@npm:^4.24.0":
   version: 4.24.0
   resolution: "gatsby-transformer-yaml@npm:4.24.0"
   dependencies:
@@ -11469,7 +11469,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby@npm:^4.21.1":
+"gatsby@npm:^4.24.8":
   version: 4.24.8
   resolution: "gatsby@npm:4.24.8"
   dependencies:
@@ -12798,7 +12798,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^4.2.3":
+"husky@npm:^4.3.8":
   version: 4.3.8
   resolution: "husky@npm:4.3.8"
   dependencies:
@@ -14383,7 +14383,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^10.0.9":
+"lint-staged@npm:^10.5.4":
   version: 10.5.4
   resolution: "lint-staged@npm:10.5.4"
   dependencies:
@@ -18167,7 +18167,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.5.1":
+"prettier@npm:^2.7.1":
   version: 2.7.1
   resolution: "prettier@npm:2.7.1"
   bin:
@@ -18193,7 +18193,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prism-react-renderer@npm:^1.2.1":
+"prism-react-renderer@npm:^1.3.5":
   version: 1.3.5
   resolution: "prism-react-renderer@npm:1.3.5"
   peerDependencies:
@@ -18641,7 +18641,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-helmet@npm:^6.0.0-beta":
+"react-helmet@npm:^6.1.0":
   version: 6.1.0
   resolution: "react-helmet@npm:6.1.0"
   dependencies:
@@ -18706,7 +18706,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-transition-group@npm:^4.4.2":
+"react-transition-group@npm:^4.4.5":
   version: 4.4.5
   resolution: "react-transition-group@npm:4.4.5"
   dependencies:
@@ -18731,7 +18731,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-use@npm:^15.3.4":
+"react-use@npm:^15.3.8":
   version: 15.3.8
   resolution: "react-use@npm:15.3.8"
   dependencies:
@@ -19164,7 +19164,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"release-it@npm:^14.6.1":
+"release-it@npm:^14.14.3":
   version: 14.14.3
   resolution: "release-it@npm:14.14.3"
   dependencies:
@@ -19293,7 +19293,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-slug@npm:^6.0.0":
+"remark-slug@npm:^6.1.0":
   version: 6.1.0
   resolution: "remark-slug@npm:6.1.0"
   dependencies:
@@ -19948,7 +19948,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.52.3":
+"sass@npm:^1.56.1":
   version: 1.56.1
   resolution: "sass@npm:1.56.1"
   dependencies:
@@ -20419,7 +20419,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slugify@npm:^1.3.4, slugify@npm:^1.4.4, slugify@npm:^1.6.1":
+"slugify@npm:^1.4.4, slugify@npm:^1.6.1, slugify@npm:^1.6.5":
   version: 1.6.5
   resolution: "slugify@npm:1.6.5"
   checksum: a955a1b600201030f4c1daa9bb74a17d4402a0693fc40978bbd17e44e64fd72dad3bac4037422aa8aed55b5170edd57f3f4cd8f59ba331f5cf0f10f1a7795609
@@ -21353,7 +21353,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-config-recommended-scss@npm:^4.2.0":
+"stylelint-config-recommended-scss@npm:^4.3.0":
   version: 4.3.0
   resolution: "stylelint-config-recommended-scss@npm:4.3.0"
   dependencies:
@@ -21374,7 +21374,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-scss@npm:^3.16.0":
+"stylelint-scss@npm:^3.21.0":
   version: 3.21.0
   resolution: "stylelint-scss@npm:3.21.0"
   dependencies:
@@ -21389,7 +21389,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^13.2.1":
+"stylelint@npm:^13.13.1":
   version: 13.13.1
   resolution: "stylelint@npm:13.13.1"
   dependencies:
