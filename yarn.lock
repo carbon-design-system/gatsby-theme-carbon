@@ -11111,9 +11111,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-sass@npm:5.9.0":
-  version: 5.9.0
-  resolution: "gatsby-plugin-sass@npm:5.9.0"
+"gatsby-plugin-sass@npm:5.24.0":
+  version: 5.24.0
+  resolution: "gatsby-plugin-sass@npm:5.24.0"
   dependencies:
     "@babel/runtime": ^7.15.4
     resolve-url-loader: ^3.1.4
@@ -11121,7 +11121,7 @@ __metadata:
   peerDependencies:
     gatsby: ^4.0.0-next
     sass: ^1.30.0
-  checksum: 2fb9c4ac6e18afd356dbbe14806dd4a6a8b30d0d75181f7c8696938773bccd8a8b5d2d474d9cdc1d1045418efa5d2c45e3cdf33efb8809a05a7b5cf4d0fa7cfe
+  checksum: 3200379d0b4251ef25d5c2ead8a4346cd3e9a06b43ffd2592982d460f0b2937c346e1a03f501a3d04b6c27c07b3e390c026ad76503e56273f1b54063d5d5c2bf
   languageName: node
   linkType: hard
 
@@ -11412,7 +11412,7 @@ __metadata:
     gatsby-plugin-mdx: 3.20.0
     gatsby-plugin-offline: ^5.24.0
     gatsby-plugin-react-helmet: ^5.24.0
-    gatsby-plugin-sass: 5.9.0
+    gatsby-plugin-sass: 5.24.0
     gatsby-plugin-sass-resources: ^3.0.1
     gatsby-plugin-sharp: ^4.24.0
     gatsby-remark-copy-linked-files: ^5.24.0
