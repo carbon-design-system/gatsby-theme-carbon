@@ -1,4 +1,6 @@
-## My pull request is failing! What Gives?
+# commitlint
+
+### My pull request is failing! What Gives?
 
 We use a tool called
 [commitlint](https://github.com/conventional-changelog/commitlint/#what-is-commitlint)
@@ -8,12 +10,12 @@ packages based on the type of commit.
 If you're here, odds are your pull request or a subsequent commit didn't adhere
 to our guidelines.
 
-## So what do I do about it?!
+### So what do I do about it?
 
 We need a commit message that describes what's happening in your commit, let's
 build one.
 
-### Type
+#### Type
 
 Commit messages need a type, pick the one below that best matches your commit:
 
@@ -34,7 +36,7 @@ Commit messages need a type, pick the one below that best matches your commit:
 
 Commit messages should look like this:
 
-### Structure
+#### Structure
 
 Your commit should look like this (keep everything lowercase, even React
 components):
@@ -45,7 +47,7 @@ type(scope): subject # scope is optional, it refers to a particular component/fe
 
 The `subject` is just a short summary of the code changes
 
-### Examples
+#### Examples
 
 ```bash
 feat: add RTL support
@@ -55,7 +57,7 @@ feat: add RTL support
 fix(aside): remove aside margin
 ```
 
-### Fixing the PR
+#### Fixing the PR
 
 1. On the command line, navigate to the repository that contains the commit you
    want to amend
