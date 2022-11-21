@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "gatsby-theme-carbon",
+  "alias": "gatsby-theme-carbon",
+  "public": true,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "packages/example/public"
+      }
+    },
+    {
+      "src": "fonts/**/*.{woff2,ttf}",
+      "use": "@now/static"
+    }
+  ]
+}
