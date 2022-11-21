@@ -1,0 +1,3 @@
+[build]
+  command = "yarn build && cp -r ./fonts ./packages/example/public"
+  publish = "packages/example/public/"
