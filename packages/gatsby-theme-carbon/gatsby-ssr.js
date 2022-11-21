@@ -32,10 +32,10 @@ export const onRenderBody = ({ setHeadComponents, setBodyAttributes }) => {
     <link
       key="sans"
       rel="preload"
-      href="/fonts/IBMPlexSansLatin-VF.woff2"
+      href="https://gatsby.carbondesignsystem.com/fonts/IBMPlexSansLatin-VF.woff2"
       as="font"
       type="font/woff2"
-      crossOrigin="anonymous"
+      crossOrigin=""
     />,
     <script
       key="scroll-loader-script"
