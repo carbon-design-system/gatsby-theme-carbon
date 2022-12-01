@@ -1,6 +1,4 @@
-# Development principles
-
-## What should be a feature?
+# What should be a feature?
 
 When determining whether a not a new feature should be added to the theme, we
 should run the feature through the following heuristic. The term `siteland`
@@ -15,7 +13,7 @@ If any of the above are false, we recommend building a solution in `siteland`
 for the project that needs it most. This ensures we bring in mature, solutions
 that have the largest likelihood of solving more problems than it causes.
 
-## What constitutes a breaking change?
+# What constitutes a breaking change?
 
 A breaking change for the theme is one in which, after upgrading, a site is
 unable to build.
