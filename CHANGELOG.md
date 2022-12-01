@@ -1,3 +1,22 @@
+## [4.0.0-next.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0...v4.0.0-next.0) (2022-12-01)
+
+
+### Features
+
+* **deps:** update node to 18 ([#1278](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1278)) ([3ac2df9](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/3ac2df9696b7f0d1ef8aa614a01a4b96a1b8f0be))
+* **yarn:** upgrade to v2 ([#1276](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1276)) ([2ce1f9e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/2ce1f9ed966a493ba1ef18034e1401067be3ce63)), closes [#1275](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1275)
+
+
+### Bug Fixes
+
+* **font:** use gatsby for static file hosting ([#1281](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1281)) ([d012c62](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/d012c62592e31b92a7f30dbf65eb95647cee7ac4))
+* **minicard:** export from root index.js ([#1272](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1272)) ([e2b2039](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/e2b20393e008fbf27a35884c4de4592e44a14803))
+
+
+### Reverts
+
+* Revert "fix(font): use gatsby for static file hosting (#1281)" (#1283) ([db7aea5](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/db7aea5dc09ac61d7a79c57ae6c7436891cd5654)), closes [#1281](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1281) [#1283](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1283)
+
 ## [3.0.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.3.2...v3.0.0) (2022-10-24)
 
 ## [3.0.0-next.13](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.12...v3.0.0-next.13) (2022-10-05)
