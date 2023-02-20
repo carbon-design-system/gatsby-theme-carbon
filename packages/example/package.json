@@ -14,7 +14,7 @@
   "dependencies": {
     "gatsby": "^4.24.8",
     "gatsby-theme-carbon": "^4.0.0-next.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
