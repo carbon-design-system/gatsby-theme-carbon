@@ -12,7 +12,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby": "^4.25.5",
+    "gatsby": "^5.6.1",
     "gatsby-theme-carbon": "^4.0.0-next.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
