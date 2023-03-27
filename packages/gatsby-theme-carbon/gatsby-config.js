@@ -74,6 +74,7 @@ module.exports = (themeOptions) => {
   ];
 
   return {
+    trailingSlash: `always`,
     siteMetadata: {
       isSearchEnabled,
       navigationStyle,
