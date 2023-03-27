@@ -113,7 +113,9 @@ module.exports = (themeOptions) => {
             ...defaultRemarkPlugins,
             ...gatsbyRemarkPlugins,
           ],
-          remarkPlugins,
+          mdxOptions: {
+            remarkPlugins,
+          },
           defaultLayouts: {
             default: require.resolve('./src/templates/Default.js'),
             home: require.resolve('./src/templates/Homepage.js'),
@@ -167,7 +169,6 @@ module.exports = (themeOptions) => {
             : require.resolve('./src/images/favicon.svg'),
         },
       },
-      `gatsby-plugin-react-helmet`,
     ].concat(optionalPlugins),
   };
 };
