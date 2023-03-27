@@ -195,8 +195,9 @@ ul :global(.cds--list--unordered) {
   text-indent: 0;
 }
 
-:global(.cds--list--ordered:not(.cds--list--nested)
-    > .cds--list__item::before) {
+:global(
+    .cds--list--ordered:not(.cds--list--nested) > .cds--list__item::before
+  ) {
   display: none;
 }
 

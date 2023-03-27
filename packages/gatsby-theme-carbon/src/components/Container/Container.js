@@ -7,9 +7,8 @@ import useMetadata from '../../util/hooks/useMetadata';
 import { overlay, visible } from './Container.module.scss';
 
 const Container = ({ children, homepage, theme }) => {
-  const { leftNavIsOpen, switcherIsOpen, toggleNavState } = useContext(
-    NavContext
-  );
+  const { leftNavIsOpen, switcherIsOpen, toggleNavState } =
+    useContext(NavContext);
   const windowSize = useWindowSize();
   const lastWindowSize = useRef(windowSize);
   const { navigationStyle } = useMetadata();
