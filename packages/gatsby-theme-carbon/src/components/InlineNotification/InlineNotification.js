@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { InlineNotification as CarbonInlineNotification } from '@carbon/react';
+// import { InlineNotification as CarbonInlineNotification } from '@carbon/react';
 import {
   ErrorFilled,
   CheckmarkFilled,

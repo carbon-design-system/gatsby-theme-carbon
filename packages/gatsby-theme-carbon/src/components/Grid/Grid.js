@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import {
   FlexGrid,
-  Row as CarbonRow,
+  // Row as CarbonRow,
   Column as CarbonColumn,
 } from '@carbon/react';
 import { column } from './Grid.module.scss';
