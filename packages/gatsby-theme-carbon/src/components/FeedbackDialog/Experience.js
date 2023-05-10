@@ -15,7 +15,9 @@ const NEGATIVE = 'feedback-form-negative';
 const NEUTRAL = 'feedback-form-neutral';
 const POSITIVE = 'feedback-form-positive';
 
-const Experience = React.forwardRef(function Experience(props, ref) {
+const Experience = React.forwardRef((props, ref) => {
+  'Experience';
+
   const [selected, setSelected] = useState(NEUTRAL);
 
   const onExperienceChange = (e) => {

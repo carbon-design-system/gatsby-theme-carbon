@@ -6,7 +6,7 @@ import { Column } from '../Grid';
 import * as styles from './DoDontRow.module.scss';
 
 export default class DoDont extends React.Component {
-  renderCaption = (caption, captionTitle) => {
+  static renderCaption = (caption, captionTitle) => {
     if (caption || captionTitle) {
       return (
         <div className={styles.caption}>
@@ -72,7 +72,7 @@ export default class DoDont extends React.Component {
               </div>
             </div>
           </div>
-          {this.renderCaption(caption, captionTitle)}
+          {DoDont.renderCaption(caption, captionTitle)}
         </div>
       </Column>
     );

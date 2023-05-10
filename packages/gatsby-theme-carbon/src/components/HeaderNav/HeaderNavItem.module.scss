@@ -8,7 +8,6 @@
   width: calc(100% + 4px);
   left: -2px;
 }
-//
 
 // Creates the blue line under the active accordion menu item
 .currentPageAccordion::after {
@@ -52,5 +51,3 @@
   background-color: $gray-80;
   color: $white-0;
 }
-
-//
