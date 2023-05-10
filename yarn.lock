@@ -10101,7 +10101,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "example@workspace:packages/example"
   dependencies:
-    gatsby: ^5.8.0
+    gatsby: ^5.9.1
     gatsby-theme-carbon: ^4.0.0-next.2
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -11174,7 +11174,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-catch-links@npm:^5.8.0":
+"gatsby-plugin-catch-links@npm:^5.9.0":
   version: 5.9.0
   resolution: "gatsby-plugin-catch-links@npm:5.9.0"
   dependencies:
@@ -11197,7 +11197,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-manifest@npm:^5.8.0":
+"gatsby-plugin-manifest@npm:^5.9.0":
   version: 5.9.0
   resolution: "gatsby-plugin-manifest@npm:5.9.0"
   dependencies:
@@ -11212,7 +11212,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-mdx@npm:^5.8.0":
+"gatsby-plugin-mdx@npm:^5.9.0":
   version: 5.9.0
   resolution: "gatsby-plugin-mdx@npm:5.9.0"
   dependencies:
@@ -11245,7 +11245,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-offline@npm:^6.8.0":
+"gatsby-plugin-offline@npm:^6.9.0":
   version: 6.9.0
   resolution: "gatsby-plugin-offline@npm:6.9.0"
   dependencies:
@@ -11299,9 +11299,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-sass@npm:6.8.0":
-  version: 6.8.0
-  resolution: "gatsby-plugin-sass@npm:6.8.0"
+"gatsby-plugin-sass@npm:6.9.0":
+  version: 6.9.0
+  resolution: "gatsby-plugin-sass@npm:6.9.0"
   dependencies:
     "@babel/runtime": ^7.20.13
     resolve-url-loader: ^3.1.5
@@ -11309,11 +11309,11 @@ __metadata:
   peerDependencies:
     gatsby: ^5.0.0-next
     sass: ^1.30.0
-  checksum: 2f2ed8f87c1cddd8c53b6c87b425f7dd849c9535f9d16e08b34457a8966e62260095a5fdc08a3ac9005102a1f1ed71d7f270d8a944b88f4f8376f3890761bbc2
+  checksum: 877ab67ad642934ebe9848e7934dd53be1fc389ad056a8dfb30f8c316d614d2fbb360226539c4009d9639bf1319cc9f24835157b67b18ec02f4822d897333319
   languageName: node
   linkType: hard
 
-"gatsby-plugin-sharp@npm:^5.8.0":
+"gatsby-plugin-sharp@npm:^5.9.0":
   version: 5.9.0
   resolution: "gatsby-plugin-sharp@npm:5.9.0"
   dependencies:
@@ -11386,7 +11386,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-copy-linked-files@npm:^6.8.0":
+"gatsby-remark-copy-linked-files@npm:^6.9.0":
   version: 6.9.0
   resolution: "gatsby-remark-copy-linked-files@npm:6.9.0"
   dependencies:
@@ -11404,7 +11404,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-images@npm:^7.8.0":
+"gatsby-remark-images@npm:^7.9.0":
   version: 7.9.0
   resolution: "gatsby-remark-images@npm:7.9.0"
   dependencies:
@@ -11425,7 +11425,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-responsive-iframe@npm:^6.8.0":
+"gatsby-remark-responsive-iframe@npm:^6.9.0":
   version: 6.9.0
   resolution: "gatsby-remark-responsive-iframe@npm:6.9.0"
   dependencies:
@@ -11440,7 +11440,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-smartypants@npm:^6.8.0":
+"gatsby-remark-smartypants@npm:^6.9.0":
   version: 6.9.0
   resolution: "gatsby-remark-smartypants@npm:6.9.0"
   dependencies:
@@ -11487,7 +11487,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-source-filesystem@npm:^5.8.0":
+"gatsby-source-filesystem@npm:^5.9.0":
   version: 5.9.0
   resolution: "gatsby-source-filesystem@npm:5.9.0"
   dependencies:
@@ -11585,23 +11585,23 @@ __metadata:
     classnames: ^2.3.2
     copy-to-clipboard: ^3.3.3
     focus-trap-react: ^8.11.3
-    gatsby: ^5.8.0
-    gatsby-plugin-catch-links: ^5.8.0
+    gatsby: ^5.9.1
+    gatsby-plugin-catch-links: ^5.9.0
     gatsby-plugin-lunr: ^1.5.2
-    gatsby-plugin-manifest: ^5.8.0
-    gatsby-plugin-mdx: ^5.8.0
-    gatsby-plugin-offline: ^6.8.0
-    gatsby-plugin-sass: 6.8.0
+    gatsby-plugin-manifest: ^5.9.0
+    gatsby-plugin-mdx: ^5.9.0
+    gatsby-plugin-offline: ^6.9.0
+    gatsby-plugin-sass: 6.9.0
     gatsby-plugin-sass-resources: ^3.0.1
-    gatsby-plugin-sharp: ^5.8.0
-    gatsby-remark-copy-linked-files: ^6.8.0
-    gatsby-remark-images: ^7.8.0
-    gatsby-remark-responsive-iframe: ^6.8.0
-    gatsby-remark-smartypants: ^6.8.0
+    gatsby-plugin-sharp: ^5.9.0
+    gatsby-remark-copy-linked-files: ^6.9.0
+    gatsby-remark-images: ^7.9.0
+    gatsby-remark-responsive-iframe: ^6.9.0
+    gatsby-remark-smartypants: ^6.9.0
     gatsby-remark-unwrap-images: ^1.0.2
-    gatsby-source-filesystem: ^5.8.0
+    gatsby-source-filesystem: ^5.9.0
     gatsby-source-medium-feed: ^1.0.6
-    gatsby-transformer-yaml: ^5.8.0
+    gatsby-transformer-yaml: ^5.9.0
     lodash.startcase: ^4.4.0
     lodash.throttle: ^4.1.1
     mkdirp: ^1.0.4
@@ -11624,7 +11624,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-transformer-yaml@npm:^5.8.0":
+"gatsby-transformer-yaml@npm:^5.9.0":
   version: 5.9.0
   resolution: "gatsby-transformer-yaml@npm:5.9.0"
   dependencies:
@@ -11649,7 +11649,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby@npm:^5.8.0":
+"gatsby@npm:^5.9.1":
   version: 5.9.1
   resolution: "gatsby@npm:5.9.1"
   dependencies:
