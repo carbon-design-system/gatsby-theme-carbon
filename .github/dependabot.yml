@@ -1,4 +1,3 @@
-
 version: 2
 updates:
   - package-ecosystem: "npm"
@@ -10,3 +9,11 @@ updates:
     allow:
       - dependency-name: "@carbon"
       - dependency-name: "carbon"
+    reviewers:
+      - "eng618"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    reviewers:
+      - "eng618"
