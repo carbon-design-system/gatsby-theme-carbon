@@ -34,7 +34,6 @@ module.exports = (themeOptions) => {
     gatsbyPluginSharpOptions = {},
     isServiceWorkerEnabled = false,
     isSwitcherEnabled = true,
-    extraLayouts = {},
   } = themeOptions;
 
   const theme = { ...defaultTheme, ...themeOption };
@@ -119,7 +118,6 @@ module.exports = (themeOptions) => {
           defaultLayouts: {
             default: require.resolve('./src/templates/Default.js'),
             home: require.resolve('./src/templates/Homepage.js'),
-            ...extraLayouts,
           },
         },
       },
