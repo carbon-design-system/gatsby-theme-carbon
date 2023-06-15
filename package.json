@@ -77,12 +77,12 @@
     ]
   },
   "dependencies": {
-    "@babel/core": "^7.21.8",
-    "@babel/eslint-parser": "^7.21.8",
-    "@commitlint/cli": "^17.6.3",
-    "@commitlint/config-conventional": "^17.6.3",
+    "@babel/core": "^7.22.5",
+    "@babel/eslint-parser": "^7.22.5",
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
     "@release-it/conventional-changelog": "^5.1.1",
-    "eslint": "^8.40.0",
+    "eslint": "^8.42.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-wesbos": "3.2.3",
@@ -96,11 +96,11 @@
     "lerna": "^6.6.2",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
-    "prettier-config-carbon": "^0.9.0",
-    "release-it": "^15.10.3",
+    "prettier-config-carbon": "^0.11.0",
+    "release-it": "^15.11.0",
     "release-it-yarn-workspaces": "^3.0.0",
-    "stylelint": "^15.6.1",
-    "stylelint-config-recommended-scss": "^11.0.0",
-    "stylelint-scss": "^5.0.0"
+    "stylelint": "^15.7.0",
+    "stylelint-config-recommended-scss": "^12.0.0",
+    "stylelint-scss": "^5.0.1"
   }
 }
