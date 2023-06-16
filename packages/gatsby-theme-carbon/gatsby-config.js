@@ -166,7 +166,6 @@ module.exports = (themeOptions) => {
             : require.resolve('./src/images/favicon.svg'),
         },
       },
-      `gatsby-plugin-react-helmet`,
     ].concat(optionalPlugins),
   };
 };
