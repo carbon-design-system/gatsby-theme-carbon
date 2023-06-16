@@ -130,7 +130,7 @@ module.exports = (themeOptions) => {
         },
       },
       {
-        resolve: `gatsby-plugin-sass-resources`,
+        resolve: `@garcia-enterprise/gatsby-plugin-sass-resources`,
         options: {
           resources: [
             require.resolve('./src/styles/internal/resources.scss'),
