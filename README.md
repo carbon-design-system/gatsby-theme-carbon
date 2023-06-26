@@ -2,7 +2,11 @@
   Gatsby Theme Carbon
 </h1>
 
-The Gatsby Carbon theme includes all the configuration you need to build a beautiful site inspired by the [Carbon Design System](https://www.carbondesignsystem.com).
+> :exclamation:  This project is no longer managed by the Carbon Design System team 
+> and is currently maintained by community contributions.
+
+The Gatsby Carbon theme includes all the configuration you need to build a beautiful 
+site inspired by the [Carbon Design System](https://www.carbondesignsystem.com).
 
 ## Resources
 

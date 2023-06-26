@@ -74,3 +74,6 @@ public
 .vercel
 # Local Netlify folder
 .netlify
+
+# Jetbrains
+.idea
