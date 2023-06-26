@@ -55,8 +55,9 @@ const Layout = ({
       />
       <div className={banner} role="contentinfo">
         <span className={bannerText}>
-          <Information size={16} className={bannerIcon} /> This project is no longer managed by the
-          Carbon Design System team and is currently maintained by community contributions.
+          <Information size={16} className={bannerIcon} /> This project is maintained by
+            community contributions. The original contributor, Carbon Design System, is
+            no longer involved in maintaining this project.
         </span>
       </div>
       <Header isSwitcherEnabled={isSwitcherEnabled} />

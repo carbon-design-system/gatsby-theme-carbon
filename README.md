@@ -2,8 +2,8 @@
   Gatsby Theme Carbon
 </h1>
 
-> :exclamation:  This project is no longer managed by the Carbon Design System team 
-> and is currently maintained by community contributions.
+> :exclamation: This project is maintained by community contributions. The original
+> contributor, Carbon Design System, is no longer involved in maintaining this project.
 
 The Gatsby Carbon theme includes all the configuration you need to build a beautiful 
 site inspired by the [Carbon Design System](https://www.carbondesignsystem.com).

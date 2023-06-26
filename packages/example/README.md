@@ -1,7 +1,7 @@
 # Gatsby Theme Carbon Starter
 
-> :exclamation:  This project is no longer managed by the Carbon Design System team 
-> and is currently maintained by community contributions.
+> :exclamation: This project is maintained by community contributions. The original 
+> contributor, Carbon Design System, is no longer involved in maintaining this project.
 
 ## What is this?
 
