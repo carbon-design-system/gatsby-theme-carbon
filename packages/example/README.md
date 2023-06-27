@@ -1,5 +1,8 @@
 # Gatsby Theme Carbon Starter
 
+> :exclamation: This project is maintained by community contributions. The original 
+> contributor, Carbon Design System, is no longer involved in maintaining this project.
+
 ## What is this?
 
 > Gatsby [themes](https://www.gatsbyjs.org/docs/themes/) encapsulate all of the
