@@ -32,6 +32,8 @@
       path: /guides/v2-migration
     - title: v3.0 Migration
       path: /guides/v3-migration
+    - title: v4.0 Migration
+      path: /guides/v4-migration
 - title: Components
   pages:
     - title: Accordion

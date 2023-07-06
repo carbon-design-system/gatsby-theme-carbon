@@ -1,0 +1,61 @@
+---
+title: V4.0 Migration
+description: Guide for migrating to v3.0 of the theme
+---
+
+<PageDescription>
+
+Carbon's Gatsby Theme uses version 5 of the Gatsby library. This update combines
+the control and scalability of server-side rendering with the performance of
+static-site generation. The major version change comes with the potential for
+breaking changes, this guide aims to cover the most likely issues a site built
+with the Carbon Gatsby theme might encounter. To have the smoothest possible
+experience, we recommend [upgrading to v4](/guides/v3-migration) of Carbon's
+Gatsby Theme first if you haven't already done so.
+
+</PageDescription>
+
+## Breaking changes
+
+1. Bumped minimum version of Gatsby to `v5`
+1. TBD...
+
+## Gatsby migration guide
+
+In this section we'll cover the most likely issues site's built with the Carbon
+Gatsby theme might encounter when migrating. If you encounter any issues, or
+your site leverages more advanced Gatsby configuration, check to see if it's
+covered in the
+[official Gatsby v5 migration guide](https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v4-to-v5/).
+To facilitate an easy upgrade path, we recommend
+[upgrading to v3](/guides/v3-migration) of Carbon's Gatsby Theme first if you
+haven't already done so.
+
+<InlineNotification>
+
+Note: We'll use yarn for the shell commands here. Replace them with the `npm`
+equivalent if your project uses `npm` as its package manager.
+
+</InlineNotification>
+
+1. Update Gatsby to v5
+   ```
+   yarn add gatsby@latest-v5
+   ```
+2. Update Gatsby plugins (including the theme)
+
+   ```
+   yarn upgrade-interactive --latest
+   ```
+
+3. Run `yarn dev:clean` to delete and rebuild your project's development bundle
+
+## Troubleshooting
+
+---
+
+<InlineNotification kind="warning">
+
+The following is still being updated.
+
+</InlineNotification>
