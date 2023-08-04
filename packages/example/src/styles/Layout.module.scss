@@ -1,0 +1,87 @@
+.layout :global {
+  .cds--header {
+    top: 4.5rem;
+
+    @include breakpoint("md") {
+      top: 3rem;
+    }
+  }
+  [class*="leftNavWrapper"] {
+    top: 2rem;
+  }
+  [class*="Switcher-module--nav"] {
+    top: 7.5rem;
+
+    @include breakpoint("md") {
+      top: 6rem;
+    }
+  }
+  [class*="PageTabs-module--tabs-container"] {
+    top: 5rem;
+  }
+  [class*="filter-row"] {
+    top: 9rem;
+  }
+  .color-token-table .cds--sticky-container-visible {
+    top: 9rem;
+  }
+}
+
+.layout-no-banner :global {
+  .cds--header {
+    top: 0;
+  }
+  [class*="leftNavWrapper"] {
+    top: 0;
+    // Prevents left nav jitter on page change
+    transition: none;
+  }
+  [class*="Switcher-module--nav"] {
+    top: 3rem;
+  }
+  [class*="PageTabs-module--tabs-container"] {
+    top: 3rem;
+  }
+  [class*="filter-row"] {
+    top: 7rem;
+  }
+  .color-token-table .cds--sticky-container-visible {
+    top: 7rem;
+  }
+  .cds--typeset-style-container .cds--sticky-container-visible {
+    top: 4rem;
+  }
+}
+
+.banner {
+  @include type-style("heading-01");
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: z("floating");
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: $spacing-05;
+  color: $text-04;
+  background: $blue-90;
+  min-height: 4.5rem;
+
+  @include breakpoint("md") {
+    min-height: 3rem;
+  }
+}
+
+.banner-text {
+  display: inline-flex;
+  align-items: center;
+}
+
+.banner-icon {
+  margin-right: $spacing-05;
+  fill: currentColor;
+
+  @include breakpoint-down("md") {
+    display: none !important;
+  }
+}

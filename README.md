@@ -2,6 +2,9 @@
   Gatsby Theme Carbon
 </h1>
 
+> :exclamation: This project is maintained by community contributions. The original
+> contributor, Carbon Design System, is no longer involved in maintaining this project.
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/62b47d2d-8b1e-4b21-994e-312b463d27de/deploy-status)](https://app.netlify.com/sites/gatsby-theme-carbon/deploys)
 
 The Gatsby Carbon theme includes all the configuration you need to build a beautiful site inspired by the [Carbon Design System](https://www.carbondesignsystem.com).

@@ -1,4 +1,13 @@
 ## [4.0.0-next.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.0-next.1...v4.0.0-next.2) (2023-02-05)
+### [3.1.5](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.4...v3.1.5) (2023-08-04)
+
+### [3.1.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.3...v3.1.4) (2023-07-25)
+
+### [3.1.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.3...v3.1.4) (2023-07-17)
+
+### [3.1.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.2...v3.1.3) (2023-07-17)
+
+### [3.1.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.1...v3.1.2) (2023-07-06)
 
 ### [3.1.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.0...v3.1.1) (2023-05-10)
 
