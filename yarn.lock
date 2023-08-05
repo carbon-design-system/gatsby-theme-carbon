@@ -11997,7 +11997,7 @@ __metadata:
     gatsby-transformer-yaml: ^4.25.0
     lodash.startcase: ^4.4.0
     lodash.throttle: ^4.1.1
-    mkdirp: ^1.0.4
+    mkdirp: ^3.0.1
     prism-react-renderer: ^1.3.5
     prop-types: ^15.8.1
     react: ^17.0.2
@@ -16505,6 +16505,15 @@ __metadata:
   bin:
     mkdirp: bin/cmd.js
   checksum: 0c91b721bb12c3f9af4b77ebf73604baf350e64d80df91754dc509491ae93bf238581e59c7188360cec7cb62fc4100959245a42cfe01834efedc5e9d068376c2
+  languageName: node
+  linkType: hard
+
+"mkdirp@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "mkdirp@npm:3.0.1"
+  bin:
+    mkdirp: dist/cjs/src/bin.js
+  checksum: 972deb188e8fb55547f1e58d66bd6b4a3623bf0c7137802582602d73e6480c1c2268dcbafbfb1be466e00cc7e56ac514d7fd9334b7cf33e3e2ab547c16f83a8d
   languageName: node
   linkType: hard
 
