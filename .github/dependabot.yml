@@ -1,12 +1,33 @@
-
 version: 2
 updates:
+  # Update Carbon packages
   - package-ecosystem: "npm"
     directory: "/packages/gatsby-theme-carbon"
     schedule:
       interval: "daily"
-      time: "17:29"
-      timezone: "America/Chicago"
+      time: "13:00"
+      timezone: "America/New_York"
+    labels:
+      - ""
     allow:
-      - dependency-name: "@carbon"
-      - dependency-name: "carbon"
+      - dependency-name: "@carbon*"
+    reviewers:
+      - "eng618"
+  # Update all deps monthly
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      time: "13:00"
+      timezone: "America/New_York"
+    reviewers:
+      - "eng618"
+  # Update github actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      time: "13:00"
+      timezone: "America/New_York"
+    reviewers:
+      - "eng618"
