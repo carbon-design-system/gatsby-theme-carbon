@@ -29,7 +29,7 @@
     "@carbon/react": "^1.35.0",
     "@carbon/themes": "^11.23.0",
     "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
+    "@mdx-js/react": "^2.3.0",
     "@reach/router": "^1.3.4",
     "@vimeo/player": "^2.20.1",
     "beautiful-react-hooks": "^0.23.1",
