@@ -5,7 +5,7 @@
 > :exclamation: This project is maintained by community contributions. The original
 > contributor, Carbon Design System, is no longer involved in maintaining this project.
 
-The Gatsby Carbon theme includes all the configuration you need to build a beautiful 
+The Gatsby Carbon theme includes all the configuration you need to build a beautiful
 site inspired by the [Carbon Design System](https://www.carbondesignsystem.com).
 
 ## Resources
