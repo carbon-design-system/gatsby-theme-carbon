@@ -19,12 +19,6 @@ jobs:
           node-version: 18.x
           registry-url: https://registry.npmjs.org
 
-      - name: Configure npm
-        run: |
-          npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
@@ -41,12 +35,20 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: git config
+      - name: Initialize Git user
         run: |
-          git config user.name "eng618"
-          git config user.email "eng618@garciaericn.com"
+          git config --global user.name "Eric N. Garcia"
+          git config --global user.email "eng618@garciaericn.com"
+
+      - name: Initialize the NPM config
+        run: |
+          npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Run release command
         run: yarn release:ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
