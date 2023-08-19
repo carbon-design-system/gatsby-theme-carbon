@@ -27,7 +27,6 @@ module.exports = (themeOptions) => {
     imageQuality = 75,
     lunrOptions = defaultLunrOptions,
     repository,
-    pngCompressionSpeed = 4, // default for gatsby-plugin-sharp
     mediumAccount = '',
     gatsbyRemarkPlugins = [],
     remarkPlugins = [],
@@ -64,7 +63,6 @@ module.exports = (themeOptions) => {
         linkImagesToOriginal: false,
         quality: imageQuality,
         withWebp,
-        pngCompressionSpeed,
         ...gatsbyPluginSharpOptions,
       },
     },
