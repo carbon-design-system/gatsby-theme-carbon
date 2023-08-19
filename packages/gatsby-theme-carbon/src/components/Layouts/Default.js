@@ -2,15 +2,16 @@ import React from 'react';
 import slugify from 'slugify';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Utils from '../components/Utils';
-import Layout from '../components/Layout';
-import PageHeader from '../components/PageHeader';
-import EditLink from '../components/EditLink';
-import NextPrevious from '../components/NextPrevious';
-import PageTabs from '../components/PageTabs';
-import Main from '../components/Main';
-import useMetadata from '../util/hooks/useMetadata';
-import LastModifiedDate from '../components/LastModifiedDate';
+import Utils from '../Utils';
+import Layout from '../Layout';
+import PageHeader from '../PageHeader';
+import EditLink from '../EditLink';
+import NextPrevious from '../NextPrevious';
+import PageTabs from '../PageTabs';
+import { useMetadata } from '../../util/hooks';
+import Main from '../Main';
+
+import LastModifiedDate from '../LastModifiedDate';
 
 const Default = ({ pageContext, children, location, Title }) => {
   const { frontmatter = {}, relativePagePath, titleType } = pageContext;
@@ -23,7 +24,7 @@ const Default = ({ pageContext, children, location, Title }) => {
     date,
   } = frontmatter;
 
-  const { interiorTheme } = useMetadata();
+  const { interiorTheme } = useMetadata;
 
   // get the path prefix if it exists
   const {

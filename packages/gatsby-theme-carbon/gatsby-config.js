@@ -115,10 +115,10 @@ module.exports = (themeOptions) => {
           mdxOptions: {
             remarkPlugins,
           },
-          defaultLayouts: {
-            default: require.resolve('./src/templates/Default.js'),
-            home: require.resolve('./src/templates/Homepage.js'),
-          },
+          // defaultLayouts: {
+          //   default: require.resolve('./src/templates/Default.js'),
+          //   home: require.resolve('./src/templates/Homepage.js'),
+          // },
         },
       },
       {
