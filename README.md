@@ -5,7 +5,20 @@
 > :exclamation: This project is maintained by community contributions. The original
 > contributor, Carbon Design System, is no longer involved in maintaining this project.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/62b47d2d-8b1e-4b21-994e-312b463d27de/deploy-status)](https://app.netlify.com/sites/gatsby-theme-carbon/deploys)
+[![release-it](https://github.com/carbon-design-system/gatsby-theme-carbon/actions/workflows/release.yml/badge.svg)](https://github.com/carbon-design-system/gatsby-theme-carbon/actions/workflows/release.yml)
+
+<!-- NPM info -->
+
+![npm (scoped)](https://img.shields.io/npm/v/gatsby-theme-carbon)
+![npm](https://img.shields.io/npm/dt/gatsby-theme-carbon)
+![npm](https://img.shields.io/npm/dw/gatsby-theme-carbon)
+
+<!-- GitHub -->
+
+![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/carbon-design-system/gatsby-theme-carbon)
+![GitHub Repo stars](https://img.shields.io/github/stars/carbon-design-system/gatsby-theme-carbon)
+![GitHub watchers](https://img.shields.io/github/watchers/carbon-design-system/gatsby-theme-carbon)
+![GitHub issues](https://img.shields.io/github/issues/carbon-design-system/gatsby-theme-carbon)
 
 The Gatsby Carbon theme includes all the configuration you need to build a beautiful site inspired by the [Carbon Design System](https://www.carbondesignsystem.com).
 
