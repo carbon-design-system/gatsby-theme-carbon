@@ -1,4 +1,4 @@
-/* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-extraneous-dependencies */
 import React, { useEffect } from 'react';
 
 import { Information } from '@carbon/icons-react';

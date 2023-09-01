@@ -128,7 +128,9 @@
 .cds--side-nav__item:not(.cds--side-nav__item--active):hover
   > .cds--side-nav__submenu,
 .cds--side-nav__menu
-  a.cds--side-nav__link:not(.cds--side-nav__link--current):not([aria-current='page']):hover,
+  a.cds--side-nav__link:not(.cds--side-nav__link--current):not(
+    [aria-current='page']
+  ):hover,
 .cds--side-nav__item:not(.cds--side-nav__item--active):hover
   > .cds--side-nav__link {
   background-color: #353535;
@@ -148,7 +150,9 @@
   > .cds--side-nav__submenu,
 .cds--side-nav--website--light
   .cds--side-nav__menu
-  a.cds--side-nav__link:not(.cds--side-nav__link--current):not([aria-current='page']):hover,
+  a.cds--side-nav__link:not(.cds--side-nav__link--current):not(
+    [aria-current='page']
+  ):hover,
 .cds--side-nav--website--light
   .cds--side-nav__item:not(.cds--side-nav__item--active):hover
   > .cds--side-nav__link {

@@ -22,12 +22,16 @@
     "serve:prefix": "yarn build:prefix && yarn workspace example serve --prefix-paths",
     "now-build": "yarn workspace example build",
     "format": "prettier --write \"**/*.{css,scss,json,html,yaml,mdx}\"",
+    "format:ci": "prettier --check \"**/*.{css,scss,json,html,yaml,mdx}\"",
+    "lint": "eslint . && stylelint \"packages/**/*.scss\"",
+    "lint:fix": "yarn lint:js && yarn lint:scss",
     "lint:js": "eslint . --fix",
     "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
     "release": "release-it",
     "release:pre": "release-it --preRelease=next",
     "release:ci": "release-it --ci",
-    "release:dry": "release-it --dry-run"
+    "release:dry": "release-it --dry-run",
+    "validate": "yarn format:ci && yarn lint"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -96,9 +100,9 @@
     "prettier-config-carbon": "^0.11.0",
     "release-it": "^14.14.3",
     "release-it-yarn-workspaces": "^2.0.1",
-    "stylelint": "^15.10.3",
+    "stylelint": "^13.13.1",
     "stylelint-config-recommended-scss": "^4.3.0",
-    "stylelint-scss": "^5.1.0"
+    "stylelint-scss": "^3.21.0"
   },
   "version": "3.1.14",
   "packageManager": "yarn@3.3.0"

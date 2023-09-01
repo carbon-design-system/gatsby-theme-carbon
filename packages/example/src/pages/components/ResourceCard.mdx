@@ -5,13 +5,11 @@ description: Usage instructions for the ResourceCard component
 
 <PageDescription>
 
-
 The `<ResourceCard>` component should be wrapped with a `<Column>` inside of
 `<Row className="resource-card-group">`. This allows the correct border
 placement between a group of cards.
 
 </PageDescription>
-
 
 ## Example
 
@@ -25,7 +23,6 @@ placement between a group of cards.
       href="https://gatsby.carbondesignsystem.com"
       >
 
-
 ![Adobe Acrobat icon](/images/adobe-icon.svg)
 
   </ResourceCard>
@@ -37,7 +34,6 @@ placement between a group of cards.
       aspectRatio="2:1"
       href="https://gatsby.carbondesignsystem.com"
       >
-
 
 ![Mural icon](/images/mural-icon.png)
 
@@ -53,7 +49,6 @@ placement between a group of cards.
       href="https://gatsby.carbondesignsystem.com"
       >
 
-
 ![Sketch icon](/images/sketch-icon.png)
 
   </ResourceCard>
@@ -66,13 +61,11 @@ placement between a group of cards.
       href="https://gatsby.carbondesignsystem.com"
       >
 
-
 ![Sketch icon](/images/sketch-icon.png)
 
   </ResourceCard>
 </Column>
 </Row>
-
 
 ## Code
 
@@ -85,7 +78,6 @@ placement between a group of cards.
       subTitle="Carbon Design System"
       href="https://www.carbondesignsystem.com">
 
-
 ![Github icon](/images/github-icon.png)
 
     </ResourceCard>
@@ -96,14 +88,12 @@ placement between a group of cards.
       subTitle="Carbon Design System"
       href="https://www.carbondesignsystem.com">
 
-
 ![Github icon](/images/github-icon.png)
 
     </ResourceCard>
 
   </Column>
 </Row>
-
 ```
 
 <Title>With title</Title>
@@ -117,12 +107,10 @@ placement between a group of cards.
     actionIcon="arrowRight"
     href="https://gatsby.carbondesignsystem.com">
 
-
 ![Adobe Acrobat icon](/images/adobe-icon.svg)
 
   </ResourceCard>
 </Column>
-
 ```
 
 <Title>Only subtitle</Title>
@@ -135,12 +123,10 @@ placement between a group of cards.
     aspectRatio="2:1"
     href="https://gatsby.carbondesignsystem.com">
 
-
 ![Mural icon](/images/mural-icon.png)
 
   </ResourceCard>
 </Column>
-
 ```
 
 <Title>Dark</Title>
@@ -155,12 +141,10 @@ placement between a group of cards.
     actionIcon="email"
     href="https://gatsby.carbondesignsystem.com">
 
-
 ![Sketch icon](/images/sketch-icon.png)
 
   </ResourceCard>
 </Column>
-
 ```
 
 <Title>Disabled</Title>
@@ -178,14 +162,14 @@ placement between a group of cards.
 
 ### Props
 
-| property    | propType | required | default  | description                                                                                                     |
-| ----------- | -------- | -------- | -------- | --------------------------------------------------------------------------------------------------------------- |
-| children    | node     |          |          | Use 32x32 image as child, will display in bottom left of card                                                   |
-| href        | string   |          |          | Set url for card                                                                                                |
-| subTitle    | string   |          |          | Smaller title                                                                                                   |
-| title       | string   |          |          | Large title                                                                                                     |
+| property    | propType | required | default  | description                                                                                                            |
+| ----------- | -------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------- |
+| children    | node     |          |          | Use 32x32 image as child, will display in bottom left of card                                                          |
+| href        | string   |          |          | Set url for card                                                                                                       |
+| subTitle    | string   |          |          | Smaller title                                                                                                          |
+| title       | string   |          |          | Large title                                                                                                            |
 | actionIcon  | string   |          | `launch` | Action icon, default is launch, options are `launch`, `arrowRight`, `download`, `disabled`, `email`, `calendar`,`none` |
-| aspectRatio | string   |          | 2:1      | Set card aspect ratio, default is 2:1, options are 1:1, 16:9, 4:3                                               |
-| color       | string   |          | light    | Set to `dark` for dark background                                                                               |
-| disabled    | bool     |          | false    | Set for disabled card                                                                                           |
-| className   | string   |          |          | Add custom class name                                                                                           |
+| aspectRatio | string   |          | 2:1      | Set card aspect ratio, default is 2:1, options are 1:1, 16:9, 4:3                                                      |
+| color       | string   |          | light    | Set to `dark` for dark background                                                                                      |
+| disabled    | bool     |          | false    | Set for disabled card                                                                                                  |
+| className   | string   |          |          | Add custom class name                                                                                                  |

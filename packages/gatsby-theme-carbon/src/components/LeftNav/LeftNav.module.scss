@@ -64,8 +64,9 @@ nav.side-nav--dark :global(svg) {
 
 // Background for selected top level accordion when *not* hovering
 .side-nav--dark
-  :global(.cds--side-nav__item--active
-    .cds--side-nav__submenu[aria-expanded='false']) {
+  :global(
+    .cds--side-nav__item--active .cds--side-nav__submenu[aria-expanded='false']
+  ) {
   background: $gray-80;
 }
 
@@ -78,8 +79,9 @@ nav.side-nav--dark :global(svg) {
 
 // Background color for nested accordion items
 .side-nav--dark.side-nav--dark
-  :global(.cds--side-nav__menu
-    .cds--side-nav__link.cds--side-nav__link--current) {
+  :global(
+    .cds--side-nav__menu .cds--side-nav__link.cds--side-nav__link--current
+  ) {
   background: $gray-80;
 }
 

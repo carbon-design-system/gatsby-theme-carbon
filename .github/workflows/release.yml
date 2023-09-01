@@ -1,6 +1,11 @@
 name: release-it
 
 on:
+  workflow_run:
+    workflows: ['Validate']
+    branches: [main]
+    types:
+      - completed
   push:
     branches:
       - main
