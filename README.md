@@ -8,6 +8,7 @@
 The Gatsby Carbon theme includes all the configuration you need to build a beautiful
 site inspired by the [Carbon Design System](https://www.carbondesignsystem.com).
 
+[![Validate](https://github.com/carbon-design-system/gatsby-theme-carbon/actions/workflows/validate-and-build.yaml/badge.svg)](https://github.com/carbon-design-system/gatsby-theme-carbon/actions/workflows/validate-and-build.yaml)
 [![release-it](https://github.com/carbon-design-system/gatsby-theme-carbon/actions/workflows/release.yml/badge.svg)](https://github.com/carbon-design-system/gatsby-theme-carbon/actions/workflows/release.yml)
 
 <!-- NPM info -->
