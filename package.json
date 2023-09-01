@@ -22,12 +22,15 @@
     "serve:prefix": "yarn build:prefix && yarn workspace example serve --prefix-paths",
     "now-build": "yarn workspace example build",
     "format": "prettier --write \"**/*.{css,scss,json,html,yaml,mdx}\"",
+    "format:ci": "prettier --check \"**/*.{css,scss,json,html,yaml,mdx}\"",
+    "lint": "eslint . && stylelint \"packages/**/*.scss\" ",
     "lint:js": "eslint . --fix",
     "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
     "release": "release-it",
     "release:pre": "release-it --preRelease=next",
     "release:ci": "release-it --ci",
-    "release:dry": "release-it --dry-run"
+    "release:dry": "release-it --dry-run",
+    "test": "yarn format:ci && yarn lint"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
