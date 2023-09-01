@@ -104,6 +104,6 @@
     "stylelint-config-recommended-scss": "^4.3.0",
     "stylelint-scss": "^3.21.0"
   },
-  "version": "3.1.14",
+  "version": "3.1.15",
   "packageManager": "yarn@3.3.0"
 }
