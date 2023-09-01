@@ -1,11 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import {
-  FlexGrid,
-  Row as CarbonRow,
-  Column as CarbonColumn,
-} from '@carbon/react';
+import { FlexGrid, Column as CarbonColumn } from '@carbon/react';
 import { column } from './Grid.module.scss';
 
 export const Grid = ({ children, className, ...rest }) => (
