@@ -2,10 +2,9 @@ name: release-it
 
 on:
   workflow_run:
-    workflows: ['validate-and-build']
+    workflows: ['Validate']
     branches: [main]
-    types:
-      - completed
+    types: [completed]
 
 jobs:
   release:
