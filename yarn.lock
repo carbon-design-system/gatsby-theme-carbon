@@ -10037,15 +10037,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react-hooks@npm:^2.5.1":
-  version: 2.5.1
-  resolution: "eslint-plugin-react-hooks@npm:2.5.1"
-  peerDependencies:
-    eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
-  checksum: a787ea0c665304f3f7249f5528ff1054bd8cfd6b188b95d048ff527b7e54ab7fb10d72254dba1738966e1a8fc4bd2d9fdf8ceb78d205fecbc7f660a334cd512e
-  languageName: node
-  linkType: hard
-
 "eslint-plugin-react-hooks@npm:^4.6.0":
   version: 4.6.0
   resolution: "eslint-plugin-react-hooks@npm:4.6.0"
@@ -10379,7 +10370,7 @@ __metadata:
   resolution: "example@workspace:packages/example"
   dependencies:
     gatsby: ^4.25.7
-    gatsby-theme-carbon: ^3.1.12
+    gatsby-theme-carbon: ^3.1.13
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -11883,7 +11874,7 @@ __metadata:
     eslint-plugin-jsx-a11y: ^6.7.1
     eslint-plugin-prettier: ^3.4.1
     eslint-plugin-react: ^7.33.2
-    eslint-plugin-react-hooks: ^2.5.1
+    eslint-plugin-react-hooks: ^4.6.0
     husky: ^4.3.8
     lerna: ^3.22.1
     lint-staged: ^10.5.4
@@ -11897,7 +11888,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@^3.1.12, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@^3.1.13, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
