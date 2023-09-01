@@ -4,11 +4,7 @@ import { Location } from '@reach/router';
 import cx from 'classnames';
 import useNetwork from 'react-use/lib/useNetwork';
 
-import {
-  SideNavLink,
-  SideNavMenu,
-  SideNavMenuItem,
-} from '@carbon/react';
+import { SideNavLink, SideNavMenu, SideNavMenuItem } from '@carbon/react';
 
 import * as styles from './LeftNav.module.scss';
 

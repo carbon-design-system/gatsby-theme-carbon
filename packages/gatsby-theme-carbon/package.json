@@ -22,7 +22,7 @@
     "react-dom": "^17.0.2"
   },
   "dependencies": {
-    "@babel/core": "^7.22.10",
+    "@babel/core": "^7.22.11",
     "@carbon/elements": "^11.29.0",
     "@carbon/grid": "^11.19.0",
     "@carbon/pictograms-react": "^11.48.0",
@@ -61,7 +61,7 @@
     "react-transition-group": "^4.4.5",
     "react-use": "^15.3.8",
     "remark-slug": "^6.1.0",
-    "sass": "^1.66.0",
+    "sass": "^1.66.1",
     "slugify": "^1.6.6",
     "smooth-scroll": "^16.1.3",
     "use-media": "^1.4.0"
