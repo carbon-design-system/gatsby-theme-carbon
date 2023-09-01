@@ -1643,7 +1643,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.14.8":
+"@babel/runtime@npm:^7.14.8, @babel/runtime@npm:^7.20.13":
   version: 7.22.11
   resolution: "@babel/runtime@npm:7.22.11"
   dependencies:
@@ -10370,7 +10370,7 @@ __metadata:
   resolution: "example@workspace:packages/example"
   dependencies:
     gatsby: ^4.25.7
-    gatsby-theme-carbon: ^3.1.13
+    gatsby-theme-carbon: ^3.1.14
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -11619,17 +11619,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-sass@npm:5.25.0":
-  version: 5.25.0
-  resolution: "gatsby-plugin-sass@npm:5.25.0"
+"gatsby-plugin-sass@npm:6.12.0":
+  version: 6.12.0
+  resolution: "gatsby-plugin-sass@npm:6.12.0"
   dependencies:
-    "@babel/runtime": ^7.15.4
-    resolve-url-loader: ^3.1.4
-    sass-loader: ^10.1.1
+    "@babel/runtime": ^7.20.13
+    resolve-url-loader: ^3.1.5
+    sass-loader: ^10.4.1
   peerDependencies:
-    gatsby: ^4.0.0-next
+    gatsby: ^5.0.0-next
     sass: ^1.30.0
-  checksum: f8e52521c62a3c86147e8ccbf621e355968490ec9198b5850d23ccc56bf62403625cce4ee83fb2a21b42566f47ce7fd34e6314423ec0678fb5d0e38ccbfb02d4
+  checksum: 9fb31523bf37d3a7c9cbce3e468ce6a716a5b754dbfc8e8978e316ca2babc88a3a5d69234ba09aa199e25b4993e308110f9248865038c1da0cb8e3df63cc75cb
   languageName: node
   linkType: hard
 
@@ -11888,7 +11888,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@^3.1.13, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@^3.1.14, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
@@ -11912,7 +11912,7 @@ __metadata:
     gatsby-plugin-manifest: ^4.25.0
     gatsby-plugin-mdx: 3.20.0
     gatsby-plugin-offline: ^5.25.0
-    gatsby-plugin-sass: 5.25.0
+    gatsby-plugin-sass: 6.12.0
     gatsby-plugin-sass-resources: ^3.0.1
     gatsby-plugin-sharp: ^4.25.1
     gatsby-remark-copy-linked-files: ^5.25.0
@@ -20125,7 +20125,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve-url-loader@npm:^3.1.4":
+"resolve-url-loader@npm:^3.1.5":
   version: 3.1.5
   resolution: "resolve-url-loader@npm:3.1.5"
   dependencies:
@@ -20497,7 +20497,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:^10.1.1":
+"sass-loader@npm:^10.4.1":
   version: 10.4.1
   resolution: "sass-loader@npm:10.4.1"
   dependencies:
