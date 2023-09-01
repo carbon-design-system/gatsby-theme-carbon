@@ -31,7 +31,7 @@
     "release:pre": "release-it --preRelease=next",
     "release:ci": "release-it --ci",
     "release:dry": "release-it --dry-run",
-    "test": "yarn format:ci && yarn lint"
+    "validate": "yarn format:ci && yarn lint"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
