@@ -10370,7 +10370,7 @@ __metadata:
   resolution: "example@workspace:packages/example"
   dependencies:
     gatsby: ^4.25.7
-    gatsby-theme-carbon: ^3.1.19
+    gatsby-theme-carbon: ^3.1.20
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -11888,7 +11888,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@^3.1.19, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@^3.1.20, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
@@ -22008,16 +22008,17 @@ __metadata:
   linkType: hard
 
 "stylelint-scss@npm:^5.0.0, stylelint-scss@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "stylelint-scss@npm:5.1.0"
+  version: 5.2.1
+  resolution: "stylelint-scss@npm:5.2.1"
   dependencies:
+    known-css-properties: ^0.28.0
     postcss-media-query-parser: ^0.2.3
     postcss-resolve-nested-selector: ^0.1.1
     postcss-selector-parser: ^6.0.13
     postcss-value-parser: ^4.2.0
   peerDependencies:
     stylelint: ^14.5.1 || ^15.0.0
-  checksum: 9ddcb78cef194ff084890a96bcbb4ad056e5a9d795bf4d62f1244be89e1bdf8ff534b45a5fa77ca1a506ad5cd508f96749d77ff41df9d8846d2a10bd70ec96ca
+  checksum: 50fdff1f6af66b5f4afbb3e4dff0cfe9fbb58fe4649d71eb3feeca206706743f63779ee1f07063e33473f4e0c52389d3ea59b5282e47d90b21fd53ad8967e6a0
   languageName: node
   linkType: hard
 
