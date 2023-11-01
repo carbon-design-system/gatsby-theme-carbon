@@ -1,7 +1,5 @@
 import React from 'react';
 import Layout from '../Layout';
-// import { HomepageBanner, HomepageCallout } from '../components/Homepage';
-// import Carbon from '../images/carbon.jpg';
 import Main from '../Main';
 import useMetadata from '../../util/hooks/useMetadata';
 import Utils from '../Utils';

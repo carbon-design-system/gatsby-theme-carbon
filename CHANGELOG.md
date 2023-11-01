@@ -1,4 +1,35 @@
 ## [4.0.0-next.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.0-next.1...v4.0.0-next.2) (2023-02-05)
+
+### [3.1.26](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.25...v3.1.26) (2023-11-01)
+
+### [3.1.25](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.24...v3.1.25) (2023-11-01)
+
+### [3.1.24](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.23...v3.1.24) (2023-11-01)
+
+### [3.1.23](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.22...v3.1.23) (2023-10-27)
+
+### [3.1.22](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.21...v3.1.22) (2023-10-13)
+
+### [3.1.21](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.20...v3.1.21) (2023-10-02)
+
+### [3.1.20](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.19...v3.1.20) (2023-10-02)
+
+### [3.1.19](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.18...v3.1.19) (2023-09-27)
+
+### [3.1.18](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.17...v3.1.18) (2023-09-15)
+
+### [3.1.17](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.16...v3.1.17) (2023-09-01)
+
+### [3.1.16](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.15...v3.1.16) (2023-09-01)
+
+### [3.1.15](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.14...v3.1.15) (2023-09-01)
+
+### [3.1.14](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.13...v3.1.14) (2023-09-01)
+
+### [3.1.13](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.12...v3.1.13) (2023-09-01)
+
+### [3.1.12](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.11...v3.1.12) (2023-09-01)
+
 ### [3.1.11](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.10...v3.1.11) (2023-08-31)
 
 ### [3.1.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.9...v3.1.10) (2023-08-31)
