@@ -23,10 +23,10 @@
   },
   "dependencies": {
     "@babel/core": "^7.23.2",
-    "@carbon/elements": "^11.32.2",
+    "@carbon/elements": "^11.33.0-rc.0",
     "@carbon/grid": "^11.21.1",
-    "@carbon/pictograms-react": "^11.51.2",
-    "@carbon/react": "^1.41.2",
+    "@carbon/pictograms-react": "^11.52.0-rc.0",
+    "@carbon/react": "^1.42.0-rc.0",
     "@carbon/themes": "^11.26.1",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
