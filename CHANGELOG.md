@@ -1,3 +1,21 @@
+### [3.1.31](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.30...v3.1.31) (2023-11-07)
+
+### [3.1.30](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.29...v3.1.30) (2023-11-01)
+
+### [3.1.29](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.28...v3.1.29) (2023-11-01)
+
+### [3.1.28](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.27...v3.1.28) (2023-11-01)
+
+### [3.1.27](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.26...v3.1.27) (2023-11-01)
+
+### [3.1.26](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.25...v3.1.26) (2023-11-01)
+
+### [3.1.25](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.24...v3.1.25) (2023-11-01)
+
+### [3.1.24](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.23...v3.1.24) (2023-11-01)
+
+### [3.1.23](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.22...v3.1.23) (2023-10-27)
+
 ### [3.1.22](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.21...v3.1.22) (2023-10-13)
 
 ### [3.1.21](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.20...v3.1.21) (2023-10-02)
