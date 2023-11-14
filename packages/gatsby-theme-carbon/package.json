@@ -24,7 +24,7 @@
   "dependencies": {
     "@babel/core": "^7.23.2",
     "@carbon/elements": "^11.33.0",
-    "@carbon/grid": "^11.21.1",
+    "@carbon/grid": "^11.21.0",
     "@carbon/pictograms-react": "^11.52.0",
     "@carbon/react": "^1.42.0",
     "@carbon/themes": "^11.27.0",
