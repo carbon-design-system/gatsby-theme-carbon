@@ -110,7 +110,10 @@
   }
 }
 
-.resource-card-group-3-across .cds--col-lg-4 .cds--resource-card {
+.resource-card-group-3-across .cds--col-lg-4:nth-child(3n) .cds--resource-card,
+.resource-card-group-3-across
+  .cds--col-lg-4:nth-child(3n-1)
+  .cds--resource-card {
   @include breakpoint('lg') {
     border-left: 1px solid $ui-03;
   }
