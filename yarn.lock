@@ -1831,7 +1831,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/elements@npm:^11.34.0":
+"@carbon/elements@npm:^11.35.0":
   version: 11.35.0
   resolution: "@carbon/elements@npm:11.35.0"
   dependencies:
@@ -1916,7 +1916,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/react@npm:^1.44.0":
+"@carbon/react@npm:^1.45.0":
   version: 1.45.0
   resolution: "@carbon/react@npm:1.45.0"
   dependencies:
@@ -9729,7 +9729,7 @@ __metadata:
   resolution: "example@workspace:packages/example"
   dependencies:
     gatsby: ^4.25.7
-    gatsby-theme-carbon: ^3.1.34
+    gatsby-theme-carbon: ^3.1.35
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -11167,15 +11167,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@^3.1.34, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@^3.1.35, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
     "@babel/core": ^7.23.2
-    "@carbon/elements": ^11.34.0
+    "@carbon/elements": ^11.35.0
     "@carbon/grid": ^11.21.0
     "@carbon/pictograms-react": ^11.54.0
-    "@carbon/react": ^1.44.0
+    "@carbon/react": ^1.45.0
     "@carbon/themes": ^11.28.0
     "@mdx-js/mdx": ^1.6.22
     "@mdx-js/react": ^1.6.22
