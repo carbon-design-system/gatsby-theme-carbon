@@ -1,3 +1,10 @@
+## [3.2.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.37...v3.2.0) (2023-12-11)
+
+
+### Features
+
+* add option for 3 across ResourceCard group ([#1376](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1376)) ([97a458b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/97a458b158b1f4200834939dac3e7a5496a7492b))
+
 ### [3.1.37](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.36...v3.1.37) (2023-12-11)
 
 ### [3.1.36](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.35...v3.1.36) (2023-12-08)
