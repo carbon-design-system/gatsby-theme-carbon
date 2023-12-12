@@ -1,3 +1,11 @@
+### [3.2.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.2.1...v3.2.2) (2023-12-12)
+
+
+### Bug Fixes
+
+* **a11y:** add labels for input controls ([0969a44](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0969a4470d025a8a20bbf515c9fc3dba2dff3c90))
+* **yarn:** update lock file ([33bbbb2](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/33bbbb23968fc441aa9bfa6f709f345c99666034))
+
 ### [3.2.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.2.0...v3.2.1) (2023-12-12)
 
 ## [3.2.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.37...v3.2.0) (2023-12-11)
