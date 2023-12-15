@@ -44,7 +44,7 @@
     "gatsby-plugin-sass": "5.25.0",
     "gatsby-plugin-sass-resources": "^3.0.1",
     "gatsby-plugin-sharp": "^4.25.1",
-    "gatsby-remark-copy-linked-files": "^5.25.0",
+    "gatsby-remark-copy-linked-files": "^6.12.0",
     "gatsby-remark-images": "^6.25.0",
     "gatsby-remark-responsive-iframe": "^5.25.0",
     "gatsby-remark-smartypants": "^5.25.0",

@@ -1800,21 +1800,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.23.2":
+  version: 7.23.6
+  resolution: "@babel/runtime@npm:7.23.6"
+  dependencies:
+    regenerator-runtime: ^0.14.0
+  checksum: 1a8eaf3d3a103ef5227b60ca7ab5c589118c36ca65ef2d64e65380b32a98a3f3b5b3ef96660fa0471b079a18b619a8317f3e7f03ab2b930c45282a8b69ed9a16
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.22.15":
   version: 7.23.1
   resolution: "@babel/runtime@npm:7.23.1"
   dependencies:
     regenerator-runtime: ^0.14.0
   checksum: 0cd0d43e6e7dc7f9152fda8c8312b08321cda2f56ef53d6c22ebdd773abdc6f5d0a69008de90aa41908d00e2c1facb24715ff121274e689305c858355ff02c70
-  languageName: node
-  linkType: hard
-
-"@babel/runtime@npm:^7.23.2":
-  version: 7.23.6
-  resolution: "@babel/runtime@npm:7.23.6"
-  dependencies:
-    regenerator-runtime: ^0.14.0
-  checksum: 1a8eaf3d3a103ef5227b60ca7ab5c589118c36ca65ef2d64e65380b32a98a3f3b5b3ef96660fa0471b079a18b619a8317f3e7f03ab2b930c45282a8b69ed9a16
   languageName: node
   linkType: hard
 
@@ -9923,7 +9923,7 @@ __metadata:
   resolution: "example@workspace:packages/example"
   dependencies:
     gatsby: ^4.25.7
-    gatsby-theme-carbon: ^3.2.2
+    gatsby-theme-carbon: ^3.2.3
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -11179,21 +11179,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-copy-linked-files@npm:^5.25.0":
-  version: 5.25.0
-  resolution: "gatsby-remark-copy-linked-files@npm:5.25.0"
+"gatsby-remark-copy-linked-files@npm:^6.12.0":
+  version: 6.12.0
+  resolution: "gatsby-remark-copy-linked-files@npm:6.12.0"
   dependencies:
-    "@babel/runtime": ^7.15.4
+    "@babel/runtime": ^7.20.13
     cheerio: ^1.0.0-rc.10
-    fs-extra: ^10.1.0
+    fs-extra: ^11.1.1
     is-relative-url: ^3.0.0
     lodash: ^4.17.21
     path-is-inside: ^1.0.2
     probe-image-size: ^7.2.3
     unist-util-visit: ^2.0.3
   peerDependencies:
-    gatsby: ^4.0.0-next
-  checksum: 6dac4df2cb13c677f87bb9a077e4a5eaff08dc8dc026faca57d16090d9c8fcdce5c22cb85fbcc62f2ab75ccae9bbf251750338e60b4116830cd975f7b551b656
+    gatsby: ^5.0.0-next
+  checksum: e602bdeb0a5260dd558edca19e9af6e080bbdeae09c7f8924ea4c256e73d47f6a9ad15cab5c90e342d114d52861ccc5f6375886be610245b33f0844249bff535
   languageName: node
   linkType: hard
 
@@ -11361,7 +11361,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@^3.2.2, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@^3.2.3, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
@@ -11388,7 +11388,7 @@ __metadata:
     gatsby-plugin-sass: 5.25.0
     gatsby-plugin-sass-resources: ^3.0.1
     gatsby-plugin-sharp: ^4.25.1
-    gatsby-remark-copy-linked-files: ^5.25.0
+    gatsby-remark-copy-linked-files: ^6.12.0
     gatsby-remark-images: ^6.25.0
     gatsby-remark-responsive-iframe: ^5.25.0
     gatsby-remark-smartypants: ^5.25.0
