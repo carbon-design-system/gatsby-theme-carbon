@@ -2010,18 +2010,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/react@npm:^1.46.0":
-  version: 1.46.0
-  resolution: "@carbon/react@npm:1.46.0"
+"@carbon/react@npm:^1.47.0":
+  version: 1.47.0
+  resolution: "@carbon/react@npm:1.47.0"
   dependencies:
     "@babel/runtime": ^7.18.3
     "@carbon/feature-flags": ^0.16.0
     "@carbon/icons-react": ^11.33.0
     "@carbon/layout": ^11.20.0
-    "@carbon/styles": ^1.46.0
-    classnames: 2.3.2
+    "@carbon/styles": ^1.47.0
+    "@ibm/telemetry-js": ^1.1.0
+    classnames: 2.5.0
     copy-to-clipboard: ^3.3.1
-    downshift: 8.2.3
+    downshift: 8.2.4
     flatpickr: 4.6.9
     invariant: ^2.2.3
     lodash.debounce: ^4.0.8
@@ -2038,13 +2039,13 @@ __metadata:
     react: ^16.8.6 || ^17.0.1 || ^18.2.0
     react-dom: ^16.8.6 || ^17.0.1 || ^18.2.0
     sass: ^1.33.0
-  checksum: 9f776f8eb1d40c069b1e4fe4723845ceaf0c262e822fbb5f9efbe7d8c273833da28a849e6c66420cb0f2be318359cc742ec9dbd3eee8743d47d1992f9f30a8fd
+  checksum: 93fb96dda5683f276161c0a861ca0f075ad29cd8bd78076f06f3508fa212166519bc6d390fe6edc57ba04aa97a02d3f7dff081351fec6eb5766e701f7b4f3ec0
   languageName: node
   linkType: hard
 
-"@carbon/styles@npm:^1.46.0":
-  version: 1.46.0
-  resolution: "@carbon/styles@npm:1.46.0"
+"@carbon/styles@npm:^1.47.0":
+  version: 1.47.0
+  resolution: "@carbon/styles@npm:1.47.0"
   dependencies:
     "@carbon/colors": ^11.20.0
     "@carbon/feature-flags": ^0.16.0
@@ -2059,7 +2060,7 @@ __metadata:
   peerDependenciesMeta:
     sass:
       optional: true
-  checksum: 854d1c8d61f3df4f11e6cefce0baa92f2f1d547e7fb05ac17936c9500f277842561c8ebe04f561321e0eb653eb5ae0ddc4b3d4480e58b01a37237b489eb54577
+  checksum: 29dd2d1728bcff844632e242d4743706a74268c1b33e0b54b1f12f2811b86b5317a2a7022fa69c08a1eb494140d7d20e5c432db1b18bde6754a445d7bf857083
   languageName: node
   linkType: hard
 
@@ -2702,6 +2703,15 @@ __metadata:
   version: 6.0.0-next.6
   resolution: "@ibm/plex@npm:6.0.0-next.6"
   checksum: cb7bece0f8688cf92a3fa37ab47c5921f22a2eb5e40dd72a3d6bbcd715910b0d79f9d160e229514a0c78c70679676746a93f4791a57407fc6aa636105aa11891
+  languageName: node
+  linkType: hard
+
+"@ibm/telemetry-js@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@ibm/telemetry-js@npm:1.1.0"
+  bin:
+    ibmtelemetry: dist/collect.js
+  checksum: aeec7caec4acb044c09e738571a4fbeb70aef93f9a00233006bcc3b4b25248fa4017c6e70a8578faa028edb614fe19a66a9e6f32d0bf1fcdeb61c61839b324bc
   languageName: node
   linkType: hard
 
@@ -6867,7 +6877,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:2.3.2, classnames@npm:^2.3.2":
+"classnames@npm:2.5.0":
+  version: 2.5.0
+  resolution: "classnames@npm:2.5.0"
+  checksum: 7805e0ed49790dd11da5da4d8509dbad2d9ed8ec817bfa01d3b69d40dc752ee4df757b9e845371a42547989863db76c463619c446aa24cdbd253d65ef927455e
+  languageName: node
+  linkType: hard
+
+"classnames@npm:^2.3.2":
   version: 2.3.2
   resolution: "classnames@npm:2.3.2"
   checksum: 2c62199789618d95545c872787137262e741f9db13328e216b093eea91c85ef2bfb152c1f9e63027204e2559a006a92eb74147d46c800a9f96297ae1d9f96f4e
@@ -8751,9 +8768,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"downshift@npm:8.2.3":
-  version: 8.2.3
-  resolution: "downshift@npm:8.2.3"
+"downshift@npm:8.2.4":
+  version: 8.2.4
+  resolution: "downshift@npm:8.2.4"
   dependencies:
     "@babel/runtime": ^7.22.15
     compute-scroll-into-view: ^3.0.3
@@ -8762,7 +8779,7 @@ __metadata:
     tslib: ^2.6.2
   peerDependencies:
     react: ">=16.12.0"
-  checksum: d218096d0b8488b6504553e2dd4199e24da96ffcba43e2d97bf9e87a3ed30a8a626bcc191e3c800981f52f2d7673d50bfe5fb34e091d1338e9df0f08a34fc658
+  checksum: 411b3a2e781694f7f7012a99e37309551a28e9b1de70c59909a7e2ff7fc0bea04f5a2f2e71ed07560db3dd4d5a627acdf8f0e842fce962ff7a82c1105b18d126
   languageName: node
   linkType: hard
 
@@ -9923,7 +9940,7 @@ __metadata:
   resolution: "example@workspace:packages/example"
   dependencies:
     gatsby: ^4.25.7
-    gatsby-theme-carbon: ^3.2.2
+    gatsby-theme-carbon: ^3.2.3
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -11361,7 +11378,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@^3.2.2, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@^3.2.3, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
@@ -11369,7 +11386,7 @@ __metadata:
     "@carbon/elements": ^11.36.0
     "@carbon/grid": ^11.21.0
     "@carbon/pictograms-react": ^11.55.0
-    "@carbon/react": ^1.46.0
+    "@carbon/react": ^1.47.0
     "@carbon/themes": ^11.28.0
     "@mdx-js/mdx": ^1.6.22
     "@mdx-js/react": ^1.6.22
