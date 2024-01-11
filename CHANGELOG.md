@@ -1,3 +1,10 @@
+## [3.3.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.2.4...v3.3.0) (2024-01-11)
+
+
+### Features
+
+* add font files for plex 6.3 release ([#1392](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1392)) ([512832f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/512832f2cc77a6378554948298755d1fa26f32dc))
+
 ### [3.2.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.2.3...v3.2.4) (2024-01-05)
 
 ### [3.2.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.2.2...v3.2.3) (2023-12-15)
