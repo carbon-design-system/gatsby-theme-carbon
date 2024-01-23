@@ -1,3 +1,10 @@
+## [3.4.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.3.2...v3.4.0) (2024-01-23)
+
+
+### Features
+
+* update plex to 6.3 ([#1395](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1395)) ([3e1be75](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/3e1be751c02220cacc9019938762315b5afa1e8c))
+
 ### [3.3.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.3.1...v3.3.2) (2024-01-23)
 
 ### [3.3.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.3.0...v3.3.1) (2024-01-22)
