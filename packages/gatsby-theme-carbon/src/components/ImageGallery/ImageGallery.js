@@ -142,6 +142,7 @@ function ImageGallery({ children, className }) {
                   <button
                     type="button"
                     className={closeButton}
+                    aria-label="Close gallery"
                     onClick={closeGallery}>
                     <Close size={32} className={icon} />
                   </button>
@@ -154,6 +155,7 @@ function ImageGallery({ children, className }) {
                       <button
                         type="button"
                         className={leftNavButton}
+                        aria-label="Previous image"
                         onClick={selectPrevImage}>
                         <ChevronLeft size={32} className={icon} />
                       </button>
@@ -177,6 +179,7 @@ function ImageGallery({ children, className }) {
                       <button
                         type="button"
                         className={rightNavButton}
+                        aria-label="Next image"
                         onClick={selectNextImage}>
                         <ChevronRight size={32} className={icon} />
                       </button>

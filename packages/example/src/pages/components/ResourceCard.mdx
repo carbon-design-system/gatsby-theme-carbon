@@ -6,12 +6,15 @@ description: Usage instructions for the ResourceCard component
 <PageDescription>
 
 The `<ResourceCard>` component should be wrapped with a `<Column>` inside of
-`<Row className="resource-card-group">`. This allows the correct border
-placement between a group of cards.
+`<Row className="resource-card-group">` or
+`<Row className="resource-card-group-3-across">`. This allows the correct border
+placement between a group of cards spanning 2 or 3 across.
 
 </PageDescription>
 
 ## Example
+
+### Group two across
 
 <Row className="resource-card-group">
 <Column colMd={4} colLg={4} noGutterSm>
@@ -67,9 +70,88 @@ placement between a group of cards.
 </Column>
 </Row>
 
+### Group three across
+
+<Row className="resource-card-group-3-across">
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="With subtitle"
+      title="Title"
+      aspectRatio="2:1"
+      actionIcon="arrowRight"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Adobe Acrobat icon](/images/adobe-icon.svg)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Only subtitle"
+      actionIcon="download"
+      aspectRatio="2:1"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Mural icon](/images/mural-icon.png)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Only subtitle"
+      aspectRatio="2:1"
+      actionIcon="email"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Sketch icon](/images/sketch-icon.png)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      title="Disabled card"
+      aspectRatio="2:1"
+      disabled
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Sketch icon](/images/sketch-icon.png)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="With subtitle"
+      title="Title"
+      aspectRatio="2:1"
+      actionIcon="arrowRight"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Adobe Acrobat icon](/images/adobe-icon.svg)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Only subtitle"
+      actionIcon="download"
+      aspectRatio="2:1"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Mural icon](/images/mural-icon.png)
+
+  </ResourceCard>
+</Column>
+</Row>
+
 ## Code
 
-<Title>Group</Title>
+<Title>Group two across</Title>
 
 ```mdx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/ResourceCard
 <Row className="resource-card-group">
@@ -93,6 +175,50 @@ placement between a group of cards.
     </ResourceCard>
 
   </Column>
+</Row>
+```
+
+<Title>Group three across</Title>
+
+```mdx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/ResourceCard
+<Row className="resource-card-group-3-across">
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="With subtitle"
+      title="Title"
+      aspectRatio="2:1"
+      actionIcon="arrowRight"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Adobe Acrobat icon](/images/adobe-icon.svg)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Only subtitle"
+      actionIcon="download"
+      aspectRatio="2:1"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Mural icon](/images/mural-icon.png)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Only subtitle"
+      aspectRatio="2:1"
+      actionIcon="email"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Sketch icon](/images/sketch-icon.png)
+
+  </ResourceCard>
+</Column>
 </Row>
 ```
 
