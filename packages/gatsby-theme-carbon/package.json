@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-carbon",
-  "version": "3.3.1",
+  "version": "3.3.2",
   "main": "index.js",
   "author": "vpicone <vp@vincepic.one> (@vpicone)",
   "repository": {
@@ -35,7 +35,7 @@
     "beautiful-react-hooks": "^0.23.1",
     "classnames": "^2.3.2",
     "copy-to-clipboard": "^3.3.3",
-    "focus-trap-react": "^8.11.3",
+    "focus-trap-react": "^10.2.3",
     "gatsby-plugin-catch-links": "^4.25.0",
     "gatsby-plugin-lunr": "^1.5.2",
     "gatsby-plugin-manifest": "^4.25.0",
