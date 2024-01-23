@@ -9940,7 +9940,7 @@ __metadata:
   resolution: "example@workspace:packages/example"
   dependencies:
     gatsby: ^4.25.7
-    gatsby-theme-carbon: ^3.3.0
+    gatsby-theme-carbon: ^3.3.1
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -10500,25 +10500,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"focus-trap-react@npm:^8.11.3":
-  version: 8.11.3
-  resolution: "focus-trap-react@npm:8.11.3"
+"focus-trap-react@npm:^10.2.3":
+  version: 10.2.3
+  resolution: "focus-trap-react@npm:10.2.3"
   dependencies:
-    focus-trap: ^6.9.4
+    focus-trap: ^7.5.4
+    tabbable: ^6.2.0
   peerDependencies:
     prop-types: ^15.8.1
-    react: ">=16.0.0"
-    react-dom: ">=16.0.0"
-  checksum: d293b0645b91b2e7c4dee2329ab4aaab50c09d2f935478702f5049f1801db5ac647e6547e96af5e57475b63f3ee7d1fa86026a4539ac98175f5da0d61d8ac89f
+    react: ">=16.3.0"
+    react-dom: ">=16.3.0"
+  checksum: 5efbde5af1cdd5873b1a58f04832099b10f4acdaab6d144f03b7414c77f71e54b68907e790349043d8faa89375c85186b6565b3b35d8e1c98efff8fece301c70
   languageName: node
   linkType: hard
 
-"focus-trap@npm:^6.9.4":
-  version: 6.9.4
-  resolution: "focus-trap@npm:6.9.4"
+"focus-trap@npm:^7.5.4":
+  version: 7.5.4
+  resolution: "focus-trap@npm:7.5.4"
   dependencies:
-    tabbable: ^5.3.3
-  checksum: 0b4cebcc11010bd9397731092bd59a981e838c710c6497374ba70571875a14ab27c0db7d60f36005ec01bdabc3b9cfeda11d30ddf5b8874596dcc95e18913b3b
+    tabbable: ^6.2.0
+  checksum: 9589ae0c8ad2f0bb0610c23e949571ef956424f1e7f7e1981c0d95ce518ea97b8bdd3d43b68c6113cbbcf35c9d36d521ffc2841610f7d5cc1746e2aa84faf578
   languageName: node
   linkType: hard
 
@@ -11378,7 +11379,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@^3.3.0, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@^3.3.1, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
@@ -11395,7 +11396,7 @@ __metadata:
     beautiful-react-hooks: ^0.23.1
     classnames: ^2.3.2
     copy-to-clipboard: ^3.3.3
-    focus-trap-react: ^8.11.3
+    focus-trap-react: ^10.2.3
     gatsby: ^4.25.7
     gatsby-plugin-catch-links: ^4.25.0
     gatsby-plugin-lunr: ^1.5.2
@@ -21136,10 +21137,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tabbable@npm:^5.3.2, tabbable@npm:^5.3.3":
-  version: 5.3.3
-  resolution: "tabbable@npm:5.3.3"
-  checksum: 1aa56e1bb617cc10616c407f4e756f0607f3e2d30f9803664d70b85db037ca27e75918ed1c71443f3dc902e21dc9f991ce4b52d63a538c9b69b3218d3babcd70
+"tabbable@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "tabbable@npm:6.2.0"
+  checksum: f8440277d223949272c74bb627a3371be21735ca9ad34c2570f7e1752bd646ccfc23a9d8b1ee65d6561243f4134f5fbbf1ad6b39ac3c4b586554accaff4a1300
   languageName: node
   linkType: hard
 
