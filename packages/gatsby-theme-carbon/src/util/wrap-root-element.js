@@ -1,10 +1,13 @@
 import React from 'react';
 import { NavContextProvider } from './context/NavContext';
 import MDXProvider from '../components/MDXProvider';
+import Default from '../components/Layouts/Default';
 
 const wrapRootElement = ({ element }) => (
   <NavContextProvider>
-    <MDXProvider element={element} />
+    <Default>
+      <MDXProvider element={element} />
+    </Default>
   </NavContextProvider>
 );
 
