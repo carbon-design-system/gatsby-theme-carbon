@@ -1,5 +1,64 @@
 ## [4.0.0-next.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.0-next.1...v4.0.0-next.2) (2023-02-05)
 
+### [3.4.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.0...v3.4.1) (2024-01-31)
+
+## [3.4.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.3.2...v3.4.0) (2024-01-23)
+
+### Features
+
+* update plex to 6.3 ([#1395](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1395)) ([3e1be75](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/3e1be751c02220cacc9019938762315b5afa1e8c))
+
+### [3.3.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.3.1...v3.3.2) (2024-01-23)
+
+### [3.3.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.3.0...v3.3.1) (2024-01-22)
+
+## [3.3.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.2.4...v3.3.0) (2024-01-11)
+
+### Features
+
+* add font files for plex 6.3 release ([#1392](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1392)) ([512832f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/512832f2cc77a6378554948298755d1fa26f32dc))
+
+### [3.2.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.2.3...v3.2.4) (2024-01-05)
+
+### [3.2.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.2.2...v3.2.3) (2023-12-15)
+
+### [3.2.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.2.1...v3.2.2) (2023-12-12)
+
+### Bug Fixes
+
+* **a11y:** add labels for input controls ([0969a44](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0969a4470d025a8a20bbf515c9fc3dba2dff3c90))
+* **yarn:** update lock file ([33bbbb2](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/33bbbb23968fc441aa9bfa6f709f345c99666034))
+
+### [3.2.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.2.0...v3.2.1) (2023-12-12)
+
+## [3.2.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.37...v3.2.0) (2023-12-11)
+
+### Features
+
+* add option for 3 across ResourceCard group ([#1376](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1376)) ([97a458b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/97a458b158b1f4200834939dac3e7a5496a7492b))
+
+### [3.1.37](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.36...v3.1.37) (2023-12-11)
+
+### [3.1.36](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.35...v3.1.36) (2023-12-08)
+
+### [3.1.35](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.34...v3.1.35) (2023-12-08)
+
+### [3.1.34](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.33...v3.1.34) (2023-11-30)
+
+### [3.1.33](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.32...v3.1.33) (2023-11-15)
+
+### [3.1.32](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.31...v3.1.32) (2023-11-13)
+
+### [3.1.31](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.30...v3.1.31) (2023-11-07)
+
+### [3.1.30](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.29...v3.1.30) (2023-11-01)
+
+### [3.1.29](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.28...v3.1.29) (2023-11-01)
+
+### [3.1.28](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.27...v3.1.28) (2023-11-01)
+
+### [3.1.27](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.26...v3.1.27) (2023-11-01)
+
 ### [3.1.26](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.25...v3.1.26) (2023-11-01)
 
 ### [3.1.25](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.24...v3.1.25) (2023-11-01)

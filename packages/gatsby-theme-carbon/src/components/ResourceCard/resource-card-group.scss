@@ -9,6 +9,8 @@
 
 // #906: We need to use the attribute selector here b.c. we don't control the column,
 // it's provided by the developers through MDX and we don't want to force an extra prop
+
+// Default 2 across
 .resource-card-group [class*='--column'] {
   --space: 0;
 }
@@ -59,5 +61,72 @@
 .resource-card-group .cds--col-lg-4:nth-child(2) {
   @include breakpoint('lg') {
     margin-right: 33%;
+  }
+}
+
+// 3 across
+.resource-card-group-3-across [class*='--column'] {
+  --space: 0;
+}
+
+// set border between cards
+.resource-card-group-3-across .cds--resource-card {
+  border-top: 1px solid $ui-03;
+}
+
+.resource-card-group-3-across .cds--resource-card--dark {
+  border-color: transparent !important;
+}
+
+.resource-card-group-3-across .cds--col-lg-4:nth-child(2) .cds--resource-card {
+  @include breakpoint('md') {
+    border-top: 0px solid transparent;
+  }
+}
+
+.resource-card-group-3-across .cds--col-lg-4:nth-child(3) .cds--resource-card {
+  @include breakpoint('lg') {
+    border-top: 0px solid transparent;
+  }
+}
+
+.resource-card-group-3-across .cds--col-lg-4:first-child .cds--resource-card {
+  border-top: 0px solid transparent;
+}
+
+.resource-card-group-3-across
+  .cds--col-lg-4:nth-child(odd)
+  .cds--resource-card {
+  @include breakpoint('md') {
+    border-left: 1px solid transparent;
+  }
+}
+
+.resource-card-group-3-across
+  .cds--col-lg-4:nth-child(even)
+  .cds--resource-card {
+  @include breakpoint('md') {
+    border-left: 1px solid $ui-03;
+  }
+}
+
+.resource-card-group-3-across .cds--col-lg-4:nth-child(3n) .cds--resource-card,
+.resource-card-group-3-across
+  .cds--col-lg-4:nth-child(3n-1)
+  .cds--resource-card {
+  @include breakpoint('lg') {
+    border-left: 1px solid $ui-03;
+  }
+}
+
+.resource-card-group-3-across .cds--col-lg-4 .cds--resource-card--dark {
+  border-left-color: $ui-background;
+}
+
+.resource-card-group-3-across
+  .cds--col-lg-4:nth-child(3n + 1)
+  .cds--resource-card {
+  @include breakpoint('lg') {
+    border-left: 1px solid transparent;
   }
 }
