@@ -1,3 +1,10 @@
+### [3.4.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.3...v3.4.4) (2024-02-01)
+
+
+### Bug Fixes
+
+* **yarn:** update lock file ([b81e486](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/b81e486592a36493d8b27827946c060a38528f31))
+
 ### [3.4.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.2...v3.4.3) (2024-02-01)
 
 
