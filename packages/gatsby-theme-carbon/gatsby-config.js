@@ -127,8 +127,17 @@ module.exports = (themeOptions) => {
           },
         },
       },
+      // {
+      //   resolve: `@garcia-enterprise/gatsby-plugin-sass-resources`,
+      //   options: {
+      //     resources: [
+      //       require.resolve('./src/styles/internal/resources.scss'),
+      //       carbonThemes[theme.interior],
+      //     ],
+      //   },
+      // },
       {
-        resolve: `@garcia-enterprise/gatsby-plugin-sass-resources`,
+        resolve: `gatsby-plugin-sass-resources`,
         options: {
           resources: [
             require.resolve('./src/styles/internal/resources.scss'),
