@@ -25,15 +25,16 @@ const Content = ({ buildTime }) => (
 
 const links = {
   firstCol: [
-    { href: 'https://ibm.com/design', linkText: 'Shadowed link' },
-    { href: 'https://ibm.com/design', linkText: 'Shadowed link' },
-    { href: 'https://ibm.com/design', linkText: 'Shadowed link' },
+    {
+      href: 'https://www.ibm.com/contact',
+      linkText: 'Contact IBM',
+    },
+    { href: 'https://www.ibm.com/privacy', linkText: 'Privacy' },
+    { href: 'https://www.ibm.com/legal', linkText: 'Terms of use' },
   ],
   secondCol: [
-    { href: 'https://ibm.com/design', linkText: 'Shadowed link' },
-    { href: 'https://ibm.com/design', linkText: 'Shadowed link' },
-    { href: 'https://ibm.com/design', linkText: 'Shadowed link' },
-    { href: 'https://ibm.com/design', linkText: 'Shadowed link' },
+    { href: 'https://www.ibm.com/able', linkText: 'Accessibility' },
+    { href: 'https://www.ibm.com/', linkText: 'IBM.com' },
   ],
 };
 
