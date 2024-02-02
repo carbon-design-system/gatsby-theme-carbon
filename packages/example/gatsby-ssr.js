@@ -11,7 +11,7 @@ export const onRenderBody = ({ setPostBodyComponents }) => {
       },
       pageInfo: {
         ibm: {
-          siteID: 'GASBY_THEME_CARBON',
+          siteID: 'GATSBY_THEME_CARBON',
           country: 'US',
           industry: 'Design',
           owner: 'carbon@us.ibm.com',
