@@ -24,7 +24,7 @@ const Default = ({ pageContext, children, location, Title }) => {
     date,
   } = frontmatter;
 
-  const { interiorTheme } = useMetadata;
+  const { interiorTheme } = useMetadata();
 
   // get the path prefix if it exists
   const {
