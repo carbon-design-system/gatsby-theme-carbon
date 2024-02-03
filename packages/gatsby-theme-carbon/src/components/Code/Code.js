@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Highlight, defaultProps } from 'prism-react-renderer';
 import { ChevronDown, ChevronUp } from '@carbon/react/icons';
 
@@ -17,6 +17,12 @@ import useMetadata from '../../util/hooks/useMetadata';
 const Code = ({ children, className: classNameProp = '', path, src }) => {
   const [hasMoreThanNineLines, setHasMoreThanNineLines] = useState(false);
   const [shouldShowMore, setShouldShowMore] = useState(false);
+  const [isInlineCode, setIsInlineCode] = useState(false);
+  useEffect(() => {
+    if (!classNameProp) {
+      setIsInlineCode(true);
+    }
+  }, [classNameProp]);
 
   const { interiorTheme } = useMetadata();
 
@@ -46,6 +52,9 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
     return withoutTrailingEmpty ? withoutTrailingEmpty.slice(0, 9) : [];
   };
 
+  if (isInlineCode) {
+    return <code>{children}</code>;
+  }
   return (
     <Row className={cx(styles.row)}>
       <PathRow src={src} path={path}>
