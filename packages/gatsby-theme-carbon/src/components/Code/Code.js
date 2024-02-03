@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Highlight, themes } from "prism-react-renderer"
+import { Highlight, themes } from 'prism-react-renderer';
 import { ChevronDown, ChevronUp } from '@carbon/react/icons';
 
 import cx from 'classnames';

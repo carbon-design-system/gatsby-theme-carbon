@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { Location } from '@reach/router';
 import cx from 'classnames';
-import {useNetworkState} from 'react-use';
+import { useNetworkState } from 'react-use';
 
 import { SideNavLink, SideNavMenu, SideNavMenuItem } from '@carbon/react';
 
