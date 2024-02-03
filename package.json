@@ -44,8 +44,9 @@
         "skipChecks": true
       },
       "@release-it/conventional-changelog": {
-        "preset": "conventionalcommits",
-        "infile": "CHANGELOG.md"
+        "infile": "CHANGELOG.md",
+        "header": "# Changelog",
+        "preset": "conventionalcommits"
       }
     },
     "github": {
