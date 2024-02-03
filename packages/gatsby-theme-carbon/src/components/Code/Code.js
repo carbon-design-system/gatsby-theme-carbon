@@ -19,6 +19,8 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
   const [shouldShowMore, setShouldShowMore] = useState(false);
   const [isInlineCode, setIsInlineCode] = useState(false);
   useEffect(() => {
+
+    // Inline code blocks don't have a className prop
     if (!classNameProp) {
       setIsInlineCode(true);
     }
