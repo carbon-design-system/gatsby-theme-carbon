@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Highlight, themes } from 'prism-react-renderer';
+import { Highlight, defaultProps } from 'prism-react-renderer';
 import { ChevronDown, ChevronUp } from '@carbon/react/icons';
 
 import cx from 'classnames';
@@ -52,7 +52,7 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
         {children}
       </PathRow>
       <Highlight
-        // {...defaultProps}
+        {...defaultProps}
         code={children}
         language={language}
         theme={getTheme(interiorTheme)}>
