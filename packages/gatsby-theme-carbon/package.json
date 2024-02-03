@@ -12,14 +12,15 @@
   },
   "license": "Apache 2.0",
   "peerDependencies": {
-    "gatsby": "^5.9.1",
+    "gatsby": "^5.13.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "gatsby": "^5.13.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sass-resources-loader": "^2.2.5"
   },
   "dependencies": {
     "@babel/core": "^7.23.9",
@@ -43,8 +44,7 @@
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-mdx": "^5.13.1",
     "gatsby-plugin-offline": "^6.13.1",
-    "gatsby-plugin-sass": "5.25.0",
-    "gatsby-plugin-sass-resources": "^3.0.1",
+    "gatsby-plugin-sass": "^6.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-remark-copy-linked-files": "^6.13.1",
     "gatsby-remark-images": "^7.13.1",

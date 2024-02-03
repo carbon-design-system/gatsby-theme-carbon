@@ -117,3 +117,24 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 
   createTypes(typeDefs);
 };
+
+exports.onCreateWebpackConfig = ({
+  actions
+}, options) => {
+  console.log("Here in config");
+  actions.setWebpackConfig({
+    module: {
+      rules: [{
+        test: /\.s[ac]ss$/,
+        loader: "sass-resources-loader",
+        options: {
+          resources: [
+            require.resolve('./src/styles/internal/resources.scss'),
+            require.resolve('./src/styles/internal/g10.scss'),
+          ],
+          hoistUseStatements:false
+        }
+      }]
+    }
+  });
+};

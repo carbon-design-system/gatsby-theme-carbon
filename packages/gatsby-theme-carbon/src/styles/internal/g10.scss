@@ -2,8 +2,8 @@
 // We only want to import variables/mixins/helpers, not things that generate css.
 // https://github.com/carbon-design-system/carbon/blob/main/packages/styles/docs/sass.md#compatibility
 
-@use '@carbon/react/scss/compat/themes' as compat;
-@use '@carbon/react/scss/compat/theme' as * with (
+@use '~@carbon/react/scss/compat/themes' as compat;
+@use '~@carbon/react/scss/compat/theme' as * with (
   $theme: compat.$g10
 );
-@use '@carbon/styles/scss/utilities' as *;
+@use '~@carbon/styles/scss/utilities' as *;

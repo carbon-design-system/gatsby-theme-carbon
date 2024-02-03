@@ -4,11 +4,15 @@ import MDXProvider from '../components/MDXProvider';
 import Default from '../components/Layouts/Default';
 
 const wrapRootElement = ({ element }) => (
-  <NavContextProvider>
-    <Default>
+  <>
+    {console.log("element", element)}
+    <NavContextProvider>
+      {/* <Default> */}
       <MDXProvider element={element} />
-    </Default>
-  </NavContextProvider>
+      {/* </Default> */}
+    </NavContextProvider>
+  </>
+
 );
 
 export default wrapRootElement;

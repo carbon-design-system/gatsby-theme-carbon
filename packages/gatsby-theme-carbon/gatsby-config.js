@@ -86,6 +86,9 @@ module.exports = (themeOptions) => {
       lang: 'en',
       repository: { ...repositoryDefault, ...repository },
     },
+    flags: {
+      DEV_SSR: true
+    },
     plugins: [
       `gatsby-plugin-sharp`,
       `gatsby-remark-images`,
@@ -123,26 +126,8 @@ module.exports = (themeOptions) => {
         resolve: 'gatsby-plugin-sass',
         options: {
           sassOptions: {
-            includePaths: [path.resolve(__dirname, 'node_modules')],
+            includePaths: [path.resolve(__dirname, '../../node_modules')],
           },
-        },
-      },
-      // {
-      //   resolve: `@garcia-enterprise/gatsby-plugin-sass-resources`,
-      //   options: {
-      //     resources: [
-      //       require.resolve('./src/styles/internal/resources.scss'),
-      //       carbonThemes[theme.interior],
-      //     ],
-      //   },
-      // },
-      {
-        resolve: `gatsby-plugin-sass-resources`,
-        options: {
-          resources: [
-            require.resolve('./src/styles/internal/resources.scss'),
-            carbonThemes[theme.interior],
-          ],
         },
       },
       {

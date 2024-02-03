@@ -14,6 +14,7 @@ import Main from '../Main';
 import LastModifiedDate from '../LastModifiedDate';
 
 const Default = ({ pageContext, children, location, Title }) => {
+  console.log("pageContext",pageContext);
   const { frontmatter = {}, relativePagePath, titleType } = pageContext;
   const {
     tabs,
