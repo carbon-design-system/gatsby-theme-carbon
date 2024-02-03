@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Highlight, { defaultProps } from 'prism-react-renderer';
+import { Highlight, themes } from "prism-react-renderer"
 import { ChevronDown, ChevronUp } from '@carbon/react/icons';
 
 import cx from 'classnames';
@@ -23,17 +23,19 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
   const language = classNameProp.replace(/language-/, '').replace('mdx', 'jsx');
 
   const removeTrailingEmptyLine = (lines) => {
-    const [lastLine] = lines.splice(-1);
-    if (lastLine[0].empty) {
-      return lines;
+    if (lines && lines.length) {
+      const [lastLine] = lines.splice(-1);
+      if (lastLine[0].empty) {
+        return lines;
+      }
+      return [...lines, lastLine];
     }
-    return [...lines, lastLine];
   };
 
   const getLines = (lines) => {
     const withoutTrailingEmpty = removeTrailingEmptyLine(lines);
 
-    if (withoutTrailingEmpty.length > 9) {
+    if (withoutTrailingEmpty && withoutTrailingEmpty.length > 9) {
       setHasMoreThanNineLines(true);
     }
 
@@ -41,7 +43,7 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
       return withoutTrailingEmpty;
     }
 
-    return withoutTrailingEmpty.slice(0, 9);
+    return withoutTrailingEmpty ? withoutTrailingEmpty.slice(0, 9) : [];
   };
 
   return (
@@ -50,7 +52,7 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
         {children}
       </PathRow>
       <Highlight
-        {...defaultProps}
+        // {...defaultProps}
         code={children}
         language={language}
         theme={getTheme(interiorTheme)}>
