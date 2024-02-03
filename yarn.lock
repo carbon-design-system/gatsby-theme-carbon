@@ -11393,6 +11393,8 @@ __metadata:
     lodash.startcase: "npm:^4.4.0"
     lodash.throttle: "npm:^4.1.1"
     mkdirp: "npm:^3.0.1"
+    postcss: "npm:^8.4.33"
+    postcss-loader: "npm:^8.1.0"
     prism-react-renderer: "npm:^2.3.1"
     prop-types: "npm:^15.8.1"
     react: "npm:^18.2.0"
@@ -13946,7 +13948,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jiti@npm:^1.19.1":
+"jiti@npm:^1.19.1, jiti@npm:^1.20.0":
   version: 1.21.0
   resolution: "jiti@npm:1.21.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fjiti%2F-%2Fjiti-1.21.0.tgz"
   bin:
@@ -18383,6 +18385,26 @@ __metadata:
     postcss: ^7.0.0 || ^8.0.1
     webpack: ^5.0.0
   checksum: 10/972a753a41ff5d19e9f0ad98f9c288d167616dfa72d0c4af07c01019e1959857ed18bd2b43edc4cb6e9aee8083338a008a9a57b1474616a37cccaa9c1dd90643
+  languageName: node
+  linkType: hard
+
+"postcss-loader@npm:^8.1.0":
+  version: 8.1.0
+  resolution: "postcss-loader@npm:8.1.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fpostcss-loader%2F-%2Fpostcss-loader-8.1.0.tgz"
+  dependencies:
+    cosmiconfig: "npm:^9.0.0"
+    jiti: "npm:^1.20.0"
+    semver: "npm:^7.5.4"
+  peerDependencies:
+    "@rspack/core": 0.x || 1.x
+    postcss: ^7.0.0 || ^8.0.1
+    webpack: ^5.0.0
+  peerDependenciesMeta:
+    "@rspack/core":
+      optional: true
+    webpack:
+      optional: true
+  checksum: 10/06040d1b3819bae0c1d6b209646e1e9c1924d7a6acb7dd8bde2fc6e57b0b330e5386eb11a62f81f6f80de15e57cdab49191125ab464debb721e94e6d39c1da2e
   languageName: node
   linkType: hard
 

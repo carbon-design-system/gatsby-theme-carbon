@@ -126,14 +126,20 @@ exports.onCreateWebpackConfig = ({
     module: {
       rules: [{
         test: /\.s[ac]ss$/,
-        loader: "sass-resources-loader",
-        options: {
-          resources: [
-            require.resolve('./src/styles/internal/resources.scss'),
-            require.resolve('./src/styles/internal/g10.scss'),
-          ],
-          hoistUseStatements:false
-        }
+        use: [
+          'postcss-loader',
+          'sass-loader',
+          {
+            loader: "sass-resources-loader",
+            options: {
+              resources: [
+                path.resolve('../gatsby-theme-carbon/src/styles/internal/resources.scss'),
+                path.resolve('../gatsby-theme-carbon/src/styles/internal/g100.scss'),
+              ],
+              hoistUseStatements: false
+            }
+          }
+        ],
       }]
     }
   });
