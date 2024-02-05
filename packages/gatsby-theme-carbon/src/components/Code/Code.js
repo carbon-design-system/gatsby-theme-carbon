@@ -19,7 +19,6 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
   const [shouldShowMore, setShouldShowMore] = useState(false);
   const [isInlineCode, setIsInlineCode] = useState(false);
   useEffect(() => {
-
     // Inline code blocks don't have a className prop
     if (!classNameProp) {
       setIsInlineCode(true);
@@ -54,6 +53,8 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
     return withoutTrailingEmpty ? withoutTrailingEmpty.slice(0, 9) : [];
   };
 
+  // TODO - remove this once we have a better way of handling inline code. This seems like a hack
+  // This might be the result of upgrade of prism-react-renderer
   if (isInlineCode) {
     return <code>{children}</code>;
   }
