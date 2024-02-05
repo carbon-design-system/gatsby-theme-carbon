@@ -43,7 +43,7 @@ and _underscores_**. Strikethrough uses two tildes. ~~Scratch this.~~
 
 ## Headers
 
-**Note:** It’s generally considered
+**Note:** It's generally considered
 [best practice](https://webaim.org/techniques/semanticstructure/#contentstructure)
 to include just one `h1` heading per page. This heading signals the title or
 primary subject matter of the content to your audience. Because the title
@@ -89,15 +89,15 @@ recommend using `h2` tags for section headings within your content.
 1. First ordered list item
 2. Item with a nested item
    1. Nested list item
-3. In markdown, the actual numbers don’t matter, just that it’s a number
-4. In markdown, the actual numbers don’t matter, just that it’s a number
-5. In markdown, the actual numbers don’t matter, just that it’s a number
-6. In markdown, the actual numbers don’t matter, just that it’s a number
-7. In markdown, the actual numbers don’t matter, just that it’s a number
-8. In markdown, the actual numbers don’t matter, just that it’s a number
-9. In markdown, the actual numbers don’t matter, just that it’s a number
-10. In markdown, the actual numbers don’t matter, just that it’s a number
-11. In markdown, the actual numbers don’t matter, just that it’s a number
+3. In markdown, the actual numbers don't matter, just that it's a number
+4. In markdown, the actual numbers don't matter, just that it's a number
+5. In markdown, the actual numbers don't matter, just that it's a number
+6. In markdown, the actual numbers don't matter, just that it's a number
+7. In markdown, the actual numbers don't matter, just that it's a number
+8. In markdown, the actual numbers don't matter, just that it's a number
+9. In markdown, the actual numbers don't matter, just that it's a number
+10. In markdown, the actual numbers don't matter, just that it's a number
+11. In markdown, the actual numbers don't matter, just that it's a number
 
 **Nested lists**
 
@@ -125,37 +125,40 @@ recommend using `h2` tags for section headings within your content.
 1. First ordered list item
 2. Item with a nested item
    1. Nested list item
-3. In markdown, the actual numbers don’t matter, just that it’s a number
-4. In markdown, the actual numbers don’t matter, just that it’s a number
+3. In markdown, the actual numbers don't matter, just that it's a number
+4. In markdown, the actual numbers don't matter, just that it's a number
 ```
 
 ```markdown src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/markdown
 1. First ordered list item
 1. Item with a nested item
    1. Nested list item
-1. In markdown, the actual numbers don’t matter, just that it’s a number
+1. In markdown, the actual numbers don't matter, just that it's a number
 ```
 
 ## Links
 
-[I’m a local link](/components/demo)
+[I'm a local link](/components/demo)
 
-[I’m a markdown link](https://www.carbondesignsystem.com)
+[I'm a markdown link](https://www.carbondesignsystem.com)
 
-[I’m a markdown link with title](https://www.carbondesignsystem.com 'Carbon’s Homepage')
+[I'm a markdown link with title](https://www.carbondesignsystem.com 'Carbon's
+Homepage')
 
 URLs and URLs in angle brackets will automatically get turned into links.
 `http://www.example.com` or `<http://www.example.com>` and sometimes example.com
-(but not on Github, for example).
+(but not on GitHub, for example).
+
 
 ### Code
 
 ```markdown src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/markdown
-[I’m a markdown link](https://www.carbondesignsystem.com)
+[I'm a markdown link](https://www.carbondesignsystem.com)
 
-[I’m a markdown link with title](https://www.carbondesignsystem.com 'Google’s Homepage')
+[I'm a markdown link with title](https://www.carbondesignsystem.com 'Google's
+Homepage')
 
-[I’m a local link](/components/demo)
+[I'm a local link](/components/demo)
 
 URLs and URLs in angle brackets will automatically get turned into links.
 http://www.example.com or <http://www.example.com> and sometimes example.com
@@ -196,7 +199,7 @@ block
 Inline `code` has `back-ticks around` it.
 
 ```markdown Title
-Blocks have three back-ticks above and below. Pretend the backslashes aren’t
+Blocks have three back-ticks above and below. Pretend the backslashes aren't
 there.
 ```
 ````
@@ -214,7 +217,7 @@ Colons can be used to align columns.
 | col 2 is |   centered    |    2 |
 
 There must be at least 3 dashes separating each header cell. The outer pipes (|)
-are optional, and you don’t need to make the raw Markdown line up prettily. You
+are optional, and you don't need to make the raw Markdown line up prettily. You
 can also use inline Markdown.
 
 | Markdown | Less      | Pretty     |
@@ -234,7 +237,7 @@ Colons can be used to align columns.
 | zebra stripes |   are neat    |    \$1 |
 
 There must be at least 3 dashes separating each header cell. The outer pipes (|)
-are optional, and you don’t need to make the raw Markdown line up prettily. You
+are optional, and you don't need to make the raw Markdown line up prettily. You
 can also use inline Markdown.
 
 | Markdown | Less      | Pretty     |
@@ -276,5 +279,5 @@ the markdown source.
 Comments can be added that will not display on the page, but will be visible in
 the markdown source.
 
-<!-- Comments like this are visible in code, but are not visible on the page -->
+{/* Comments like this are visible in code, but are not visible on the page */}
 ```
