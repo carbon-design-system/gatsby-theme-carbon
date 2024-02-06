@@ -6,7 +6,8 @@
   height: 3rem;
   background-color: $gray-80;
   color: $white-0;
-  transition: max-width $duration-fast-02 $standard-easing,
+  transition:
+    max-width $duration-fast-02 $standard-easing,
     background $duration-fast-02 $standard-easing;
 
   @include breakpoint('lg') {
@@ -128,7 +129,8 @@
   padding: 0;
   flex-shrink: 0;
   opacity: 1;
-  transition: background-color $duration-fast-02 $standard-easing,
+  transition:
+    background-color $duration-fast-02 $standard-easing,
     opacity $duration-fast-02 $standard-easing;
   // Hex values used pending shell theming
   &:hover {
