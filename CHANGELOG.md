@@ -1,18 +1,18 @@
 ## [4.0.0-next.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.0-next.1...v4.0.0-next.2) (2023-02-05)
 
+### [3.4.7](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.6...v3.4.7) (2024-02-06)
+
 ### [3.4.6](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.5...v3.4.6) (2024-02-05)
 
 ### [3.4.5](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.4...v3.4.5) (2024-02-02)
 
 ### [3.4.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.3...v3.4.4) (2024-02-01)
 
-
 ### Bug Fixes
 
 * **yarn:** update lock file ([b81e486](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/b81e486592a36493d8b27827946c060a38528f31))
 
 ### [3.4.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.2...v3.4.3) (2024-02-01)
-
 
 ### Reverts
 
