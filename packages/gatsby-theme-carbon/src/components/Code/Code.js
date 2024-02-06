@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Highlight, { defaultProps } from 'prism-react-renderer';
+import React, { useEffect, useState } from 'react';
+import { Highlight, defaultProps } from 'prism-react-renderer';
 import { ChevronDown, ChevronUp } from '@carbon/react/icons';
 
 import cx from 'classnames';
@@ -17,23 +17,32 @@ import useMetadata from '../../util/hooks/useMetadata';
 const Code = ({ children, className: classNameProp = '', path, src }) => {
   const [hasMoreThanNineLines, setHasMoreThanNineLines] = useState(false);
   const [shouldShowMore, setShouldShowMore] = useState(false);
+  const [isInlineCode, setIsInlineCode] = useState(false);
+  useEffect(() => {
+    // Inline code blocks don't have a className prop
+    if (!classNameProp) {
+      setIsInlineCode(true);
+    }
+  }, [classNameProp]);
 
   const { interiorTheme } = useMetadata();
 
   const language = classNameProp.replace(/language-/, '').replace('mdx', 'jsx');
 
   const removeTrailingEmptyLine = (lines) => {
-    const [lastLine] = lines.splice(-1);
-    if (lastLine[0].empty) {
-      return lines;
+    if (lines && lines.length) {
+      const [lastLine] = lines.splice(-1);
+      if (lastLine[0].empty) {
+        return lines;
+      }
+      return [...lines, lastLine];
     }
-    return [...lines, lastLine];
   };
 
   const getLines = (lines) => {
     const withoutTrailingEmpty = removeTrailingEmptyLine(lines);
 
-    if (withoutTrailingEmpty.length > 9) {
+    if (withoutTrailingEmpty && withoutTrailingEmpty.length > 9) {
       setHasMoreThanNineLines(true);
     }
 
@@ -41,9 +50,14 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
       return withoutTrailingEmpty;
     }
 
-    return withoutTrailingEmpty.slice(0, 9);
+    return withoutTrailingEmpty ? withoutTrailingEmpty.slice(0, 9) : [];
   };
 
+  // TODO - remove this once we have a better way of handling inline code. This seems like a hack
+  // This might be the result of upgrade of prism-react-renderer.
+  if (isInlineCode) {
+    return <code>{children}</code>;
+  }
   return (
     <Row className={cx(styles.row)}>
       <PathRow src={src} path={path}>

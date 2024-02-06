@@ -1,12 +1,12 @@
-@use '@carbon/react/scss/compat/theme' as *;
+@use '~@carbon/react/scss/compat/theme' as *;
 // carbon--breakpoint
-@use '@carbon/react/scss/breakpoint' as *;
+@use '~@carbon/react/scss/breakpoint' as *;
 // $carbon--white-0
-@use '@carbon/react/scss/colors' as *;
+@use '~@carbon/react/scss/colors' as *;
 // $spacing-0X
-@use '@carbon/react/scss/spacing' as *;
+@use '~@carbon/react/scss/spacing' as *;
 
-@use '@carbon/react/scss/compat/theme' as *;
+@use '~@carbon/react/scss/compat/theme' as *;
 
 .cds--feature-card {
   position: relative;

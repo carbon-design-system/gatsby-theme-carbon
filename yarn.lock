@@ -1651,7 +1651,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/icons-react@npm:^11.35.0":
+"@carbon/icons-react@npm:^11.34.1, @carbon/icons-react@npm:^11.35.0":
   version: 11.35.0
   resolution: "@carbon/icons-react@npm:11.35.0"
   dependencies:
@@ -9724,7 +9724,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "example@workspace:packages/example"
   dependencies:
-    "@carbon/icons-react": "npm:^11.35.0"
+    "@carbon/icons-react": "npm:^11.34.1"
     gatsby: "npm:^5.13.3"
     gatsby-theme-carbon: "npm:^4.0.0-next.2"
     react: "npm:^18.2.0"
