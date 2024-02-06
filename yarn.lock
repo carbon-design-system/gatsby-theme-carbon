@@ -9509,7 +9509,7 @@ __metadata:
   resolution: "example@workspace:packages/example"
   dependencies:
     gatsby: "npm:^4.25.8"
-    gatsby-theme-carbon: "npm:^3.4.7"
+    gatsby-theme-carbon: "npm:^3.4.8"
     react: "npm:^17.0.2"
     react-dom: "npm:^17.0.2"
   languageName: unknown
@@ -10884,14 +10884,14 @@ __metadata:
     prettier: "npm:^2.8.8"
     prettier-config-carbon: "npm:^0.11.0"
     release-it: "npm:^14.14.3"
-    release-it-yarn-workspaces: "npm:^2.0.1"
+    release-it-yarn-workspaces: "npm:^3.0.0"
     stylelint: "npm:^15.11.0"
     stylelint-config-recommended-scss: "npm:^12.0.0"
     stylelint-scss: "npm:^5.3.2"
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@npm:^3.4.7, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@npm:^3.4.8, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
@@ -18264,9 +18264,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"release-it-yarn-workspaces@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "release-it-yarn-workspaces@npm:2.0.1"
+"release-it-yarn-workspaces@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "release-it-yarn-workspaces@npm:3.0.0"
   dependencies:
     detect-indent: "npm:^6.0.0"
     detect-newline: "npm:^3.1.0"
@@ -18275,8 +18275,8 @@ __metadata:
     validate-peer-dependencies: "npm:^1.0.0"
     walk-sync: "npm:^2.0.2"
   peerDependencies:
-    release-it: ^14.0.0
-  checksum: 10/fd416c63fadfe7f56b173862f9b5eba383f65d072c76229f3554807f11c5a28800d1d4812d422fde4698771db696a07d79b451ddb5a588e7066cb73407f568c4
+    release-it: ^14.0.0 || ^15.1.3
+  checksum: 10/72d64eb82c905fdc22da1cf062826d92363e8558b7d149a75c7babe47ab63ea5f02796eff25ccb24e23ba9e97173a4aa9ccdcb469ce68a6bdba695fd1feadc69
   languageName: node
   linkType: hard
 
