@@ -1,15 +1,15 @@
 // carbon--breakpoint
-@use '~@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/breakpoint' as *;
 // $carbon--white-0
-@use '~@carbon/react/scss/colors' as *;
+@use '@carbon/react/scss/colors' as *;
 // $prefix
-@use '~@carbon/react/scss/config' as *;
+@use '@carbon/react/scss/config' as *;
 // $spacing-0X
-@use '~@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/spacing' as *;
 // carbon--type-style
-@use '~@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/type' as *;
 // color tokens
-@use '~@carbon/react/scss/compat/theme' as *;
+@use '@carbon/react/scss/compat/theme' as *;
 
 // Example
 .cds--example {

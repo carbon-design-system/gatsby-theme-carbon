@@ -1,7 +1,7 @@
 // These resources get shared with every css module.
 // We only want to import variables/mixins/helpers, not things that generate css.
-@use '~@carbon/react/scss/compat/themes' as compat;
-@use '~@carbon/react/scss/compat/theme' as * with (
+@use '@carbon/react/scss/compat/themes' as compat;
+@use '@carbon/react/scss/compat/theme' as * with (
   $theme: compat.$white
 );
-@use '~@carbon/styles/scss/utilities' as *;
+@use '@carbon/styles/scss/utilities' as *;

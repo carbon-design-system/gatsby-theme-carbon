@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { Location } from '@reach/router';
 import cx from 'classnames';
-import { useNetworkState } from 'react-use';
+import useNetwork from 'react-use/lib/useNetwork';
 
 import { SideNavLink, SideNavMenu, SideNavMenuItem } from '@carbon/react';
 
@@ -18,7 +18,7 @@ const LeftNavItem = (props) => {
   const { items, category, hasDivider } = props;
   const { toggleNavState } = useContext(NavContext);
   const { isServiceWorkerEnabled } = useMetadata();
-  const isOnline = useNetworkState();
+  const isOnline = useNetwork();
 
   const handleClick = (event, to) => {
     toggleNavState('leftNavIsOpen', 'close');

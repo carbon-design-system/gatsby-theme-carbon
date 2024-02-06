@@ -1,15 +1,15 @@
 // carbon--breakpoint
-@use '~@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/breakpoint' as *;
 // $carbon--white-0
-@use '~@carbon/react/scss/colors' as *;
+@use '@carbon/react/scss/colors' as *;
 // $spacing-0X
-@use '~@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/spacing' as *;
 // carbon--type-style
-@use '~@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/type' as *;
 // $standard-easing $transition-x
-@use '~@carbon/react/scss/motion' as *;
+@use '@carbon/react/scss/motion' as *;
 
-@use '~@carbon/react/scss/compat/theme' as *;
+@use '@carbon/react/scss/compat/theme' as *;
 
 // #906: We need to use the attribute selector here b.c. we don't control the column,
 // it's provided by the developers through MDX and we don't want to force an extra prop
