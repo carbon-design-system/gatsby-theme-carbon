@@ -54,7 +54,7 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
   };
 
   // TODO - remove this once we have a better way of handling inline code. This seems like a hack
-  // This might be the result of upgrade of prism-react-renderer
+  // This might be the result of upgrade of prism-react-renderer.
   if (isInlineCode) {
     return <code>{children}</code>;
   }
