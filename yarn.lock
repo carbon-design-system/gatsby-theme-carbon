@@ -8343,7 +8343,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"domhandler@npm:^4.0.0, domhandler@npm:^4.2.0, domhandler@npm:^4.2.2, domhandler@npm:^4.3.1":
+"domhandler@npm:^4.0.0, domhandler@npm:^4.2.0, domhandler@npm:^4.3.1":
   version: 4.3.1
   resolution: "domhandler@npm:4.3.1"
   dependencies:
@@ -8665,13 +8665,6 @@ __metadata:
   version: 2.2.0
   resolution: "entities@npm:2.2.0"
   checksum: 10/2c765221ee324dbe25e1b8ca5d1bf2a4d39e750548f2e85cbf7ca1d167d709689ddf1796623e66666ae747364c11ed512c03b48c5bbe70968d30f2a4009509b7
-  languageName: node
-  linkType: hard
-
-"entities@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "entities@npm:3.0.1"
-  checksum: 10/3706e0292ea3f3679720b3d3b1ed6290b164aaeb11116691a922a3acea144503871e0de2170b47671c3b735549b8b7f4741d0d3c2987e8f985ccaa0dd3762eba
   languageName: node
   linkType: hard
 
@@ -9106,12 +9099,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-html@npm:^6.2.0":
-  version: 6.2.0
-  resolution: "eslint-plugin-html@npm:6.2.0"
+"eslint-plugin-html@npm:^7.1.0":
+  version: 7.1.0
+  resolution: "eslint-plugin-html@npm:7.1.0"
   dependencies:
-    htmlparser2: "npm:^7.1.2"
-  checksum: 10/9fce9f044e9ca2013ba25e984b4eb0d2db7fcb9622d000dc759d1bb6cf8e711c919847442efd9b74280cba3427120f02111fcf6632afe60f099640353fb81c67
+    htmlparser2: "npm:^8.0.1"
+  checksum: 10/f19a5fda32056c38c4bf75fcb37ae2e495e004220de0fa1c6249c92438f191dba0011cf677834242da4939c80b06260f39d7968bf8f22fba9a160dba9bff7ebf
   languageName: node
   linkType: hard
 
@@ -9509,7 +9502,7 @@ __metadata:
   resolution: "example@workspace:packages/example"
   dependencies:
     gatsby: "npm:^4.25.8"
-    gatsby-theme-carbon: "npm:^3.4.7"
+    gatsby-theme-carbon: "npm:^3.4.8"
     react: "npm:^17.0.2"
     react-dom: "npm:^17.0.2"
   languageName: unknown
@@ -10872,7 +10865,7 @@ __metadata:
     eslint-config-airbnb: "npm:^18.2.1"
     eslint-config-prettier: "npm:^6.15.0"
     eslint-config-wesbos: "npm:0.0.19"
-    eslint-plugin-html: "npm:^6.2.0"
+    eslint-plugin-html: "npm:^7.1.0"
     eslint-plugin-import: "npm:^2.29.1"
     eslint-plugin-jsx-a11y: "npm:^6.8.0"
     eslint-plugin-prettier: "npm:^3.4.1"
@@ -10891,7 +10884,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@npm:^3.4.7, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@npm:^3.4.8, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
@@ -12055,18 +12048,6 @@ __metadata:
     domutils: "npm:^2.5.2"
     entities: "npm:^2.0.0"
   checksum: 10/c9c34b0b722f5923c4ae05e59268aeb768582152969e3338a1cd3342b87f8dd2c0420f4745e46d2fd87f1b677ea2f314c3a93436ed8831905997e6347e081a5d
-  languageName: node
-  linkType: hard
-
-"htmlparser2@npm:^7.1.2":
-  version: 7.2.0
-  resolution: "htmlparser2@npm:7.2.0"
-  dependencies:
-    domelementtype: "npm:^2.0.1"
-    domhandler: "npm:^4.2.2"
-    domutils: "npm:^2.8.0"
-    entities: "npm:^3.0.1"
-  checksum: 10/fd097e19c01fb4ac8f44e432ae2908a606a382ccfec90efc91354a5b153540feade679ab8dca5fdebbe4f27c5a700743e2a0794f5a7a1beae9cc59d47e0f24b5
   languageName: node
   linkType: hard
 
