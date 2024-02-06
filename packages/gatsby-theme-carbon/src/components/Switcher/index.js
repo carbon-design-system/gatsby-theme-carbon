@@ -1,1 +1,1 @@
-export { default, SwitcherDivider, SwitcherLink } from './Switcher';
+export { default as Switcher, SwitcherDivider, SwitcherLink } from './Switcher';
