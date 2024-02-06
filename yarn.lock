@@ -1651,6 +1651,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@carbon/icons-react@npm:^11.34.1":
+  version: 11.35.0
+  resolution: "@carbon/icons-react@npm:11.35.0"
+  dependencies:
+    "@carbon/icon-helpers": "npm:^10.46.0"
+    "@carbon/telemetry": "npm:0.1.0"
+    prop-types: "npm:^15.7.2"
+  peerDependencies:
+    react: ">=16"
+  checksum: 10/d3d431efa008691024de90180ead77acb05dd77a1a352604d5b732bfbeb81a079928b6c81ca01d7dc3cdf55c26bd823b98f2717094b7a6a5cf4f39ffd8ddea74
+  languageName: node
+  linkType: hard
+
 "@carbon/icons-react@npm:^11.35.0":
   version: 11.35.0
   resolution: "@carbon/icons-react@npm:11.35.0"
@@ -9724,7 +9737,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "example@workspace:packages/example"
   dependencies:
-    "@carbon/icons-react": "npm:^11.35.0"
+    "@carbon/icons-react": "npm:^11.34.1"
     gatsby: "npm:^5.13.3"
     gatsby-theme-carbon: "npm:^4.0.0-next.2"
     react: "npm:^18.2.0"
