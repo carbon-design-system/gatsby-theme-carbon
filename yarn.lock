@@ -4001,6 +4001,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@release-it-plugins/workspaces@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "@release-it-plugins/workspaces@npm:4.2.0"
+  dependencies:
+    detect-indent: "npm:^6.0.0"
+    detect-newline: "npm:^3.1.0"
+    semver: "npm:^7.1.3"
+    url-join: "npm:^4.0.1"
+    validate-peer-dependencies: "npm:^1.0.0"
+    walk-sync: "npm:^2.0.2"
+    yaml: "npm:^2.1.1"
+  peerDependencies:
+    release-it: ^14.0.0 || ^15.2.0 || ^16.0.0 || ^17.0.0
+  checksum: 10/e14c32758064a61b60a53174f4971bca02bd4861b2646f7140f5d2ccab70dd98a7773a63e7d5d6ca0f617fe500adea3b9dcdc691638e669ca83ff54586bcd212
+  languageName: node
+  linkType: hard
+
 "@release-it/conventional-changelog@npm:^8.0.1":
   version: 8.0.1
   resolution: "@release-it/conventional-changelog@npm:8.0.1"
@@ -11110,6 +11127,7 @@ __metadata:
     "@babel/eslint-parser": "npm:^7.23.10"
     "@commitlint/cli": "npm:^18.6.0"
     "@commitlint/config-conventional": "npm:^18.6.0"
+    "@release-it-plugins/workspaces": "npm:^4.2.0"
     "@release-it/conventional-changelog": "npm:^8.0.1"
     babel-eslint: "npm:^10.1.0"
     eslint: "npm:^8.56.0"
@@ -11128,7 +11146,6 @@ __metadata:
     prettier: "npm:^3.2.5"
     prettier-config-carbon: "npm:^0.11.0"
     release-it: "npm:^17.0.3"
-    release-it-yarn-workspaces: "npm:^3.0.0"
     stylelint: "npm:^16.2.1"
     stylelint-config-recommended-scss: "npm:^14.0.0"
     stylelint-scss: "npm:^6.1.0"
@@ -19421,22 +19438,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"release-it-yarn-workspaces@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "release-it-yarn-workspaces@npm:3.0.0"
-  dependencies:
-    detect-indent: "npm:^6.0.0"
-    detect-newline: "npm:^3.1.0"
-    semver: "npm:^7.1.3"
-    url-join: "npm:^4.0.1"
-    validate-peer-dependencies: "npm:^1.0.0"
-    walk-sync: "npm:^2.0.2"
-  peerDependencies:
-    release-it: ^14.0.0 || ^15.1.3
-  checksum: 10/72d64eb82c905fdc22da1cf062826d92363e8558b7d149a75c7babe47ab63ea5f02796eff25ccb24e23ba9e97173a4aa9ccdcb469ce68a6bdba695fd1feadc69
-  languageName: node
-  linkType: hard
-
 "release-it@npm:^17.0.3":
   version: 17.0.3
   resolution: "release-it@npm:17.0.3"
@@ -23581,7 +23582,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:2.3.4, yaml@npm:^2.0.0":
+"yaml@npm:2.3.4, yaml@npm:^2.0.0, yaml@npm:^2.1.1":
   version: 2.3.4
   resolution: "yaml@npm:2.3.4"
   checksum: 10/f8207ce43065a22268a2806ea6a0fa3974c6fde92b4b2fa0082357e487bc333e85dc518910007e7ac001b532c7c84bd3eccb6c7757e94182b564028b0008f44b
