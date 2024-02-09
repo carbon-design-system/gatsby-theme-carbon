@@ -1,15 +1,12 @@
-import path from 'path';
+import path, { dirname } from 'path';
 import { gray100 } from '@carbon/elements';
-import defaultLunrOptions from './config/lunr-options.js';
 /*
-This file has been ported to ES module just because of remark-gfm plugin
-More info - https://www.reddit.com/r/gatsbyjs/comments/107nnj2/gatsby_5_mdx2_support_for_tables/
-Also we have tied the version to be 3.0.1 as the latest version will uses markdown 3 is not fully supported by gatsby v5 at the moment
+We have tied the version to be 3.0.1 as the latest version will uses markdown 3 is not fully supported by gatsby v5 at the moment
 More info - https://github.com/mdx-js/mdx/issues/2379#issuecomment-1933035305
 */
 import remarkGfm from 'remark-gfm';
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import defaultLunrOptions from './config/lunr-options.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const carbonThemes = {
@@ -177,4 +174,3 @@ export default (themeOptions) => {
     ].concat(optionalPlugins),
   };
 };
-
