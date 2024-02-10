@@ -7,7 +7,7 @@ More info - https://github.com/mdx-js/mdx/issues/2379#issuecomment-1933035305
 */
 import remarkGfm from 'remark-gfm';
 import { fileURLToPath } from 'url';
-import defaultLunrOptions from './config/lunr-options.js';
+import defaultLunrOptions from './config/lunr-options.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const carbonThemes = {
