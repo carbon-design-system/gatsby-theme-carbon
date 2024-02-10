@@ -1,5 +1,6 @@
 import path, { dirname } from 'path';
 import { gray100 } from '@carbon/elements';
+
 /*
 We have tied the version to be 3.0.1 as the latest version will uses markdown 3 is not fully supported by gatsby v5 at the moment
 More info - https://github.com/mdx-js/mdx/issues/2379#issuecomment-1933035305
