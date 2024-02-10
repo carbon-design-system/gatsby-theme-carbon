@@ -117,7 +117,7 @@ export default (themeOptions) => {
             ...gatsbyRemarkPlugins,
           ],
           mdxOptions: {
-            remarkPlugins: [...remarkPlugins, remarkGfm],
+            remarkPlugins: [remarkGfm, ...remarkPlugins],
           },
           // defaultLayouts: {
           //   default: require.resolve('./src/templates/Default.js'),
