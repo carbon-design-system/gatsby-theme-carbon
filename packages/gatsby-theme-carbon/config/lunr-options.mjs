@@ -1,4 +1,4 @@
-module.exports = {
+const defaultLunrOptions = {
   languages: [
     {
       name: 'en',
@@ -26,3 +26,4 @@ module.exports = {
     },
   },
 };
+export default defaultLunrOptions;
