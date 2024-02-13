@@ -1,14 +1,18 @@
 # Changelog
 
-## [4.0.0-next.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.0-next.3...v4.0.0-next.4) (2024-02-07)
+### [3.4.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.9...v3.4.10) (2024-02-09)
 
-## [4.0.0-next.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.0-next.1...v4.0.0-next.2) (2023-02-05)
+### [3.4.9](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.8...v3.4.9) (2024-02-08)
+
+## [4.0.0-next.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.0-next.3...v4.0.0-next.4) (2024-02-07)
 
 ### [3.4.8](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.7...v3.4.8) (2024-02-06)
 
 ### Reverts
 
 * Revert "chore(release): update carbon deps" (#1413) ([0ad65c6](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0ad65c647744af72954bce4d8a890ea202166534)), closes [#1413](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1413) [#1411](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1411)
+
+## [4.0.0-next.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.0-next.1...v4.0.0-next.2) (2023-02-05)
 
 ### [3.4.7](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.6...v3.4.7) (2024-02-06)
 
