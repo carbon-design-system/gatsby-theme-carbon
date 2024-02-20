@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Highlight, defaultProps } from 'prism-react-renderer';
+import { Highlight } from 'prism-react-renderer';
 import { ChevronDown, ChevronUp } from '@carbon/react/icons';
 
 import cx from 'classnames';
@@ -26,31 +26,28 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
   }, [classNameProp]);
 
   const { interiorTheme } = useMetadata();
-
   const language = classNameProp.replace(/language-/, '').replace('mdx', 'jsx');
 
   const removeTrailingEmptyLine = (lines) => {
-    if (lines && lines.length) {
-      const [lastLine] = lines.splice(-1);
-      if (lastLine[0].empty) {
-        return lines;
-      }
-      return [...lines, lastLine];
+    const [lastLine] = lines[lines.length - 1];
+
+    // empty is a boolean property coming inside the lastLine object
+    if (lastLine.empty) {
+      lines.splice(-1);
+      return lines;
     }
+    return [...lines];
   };
 
   const getLines = (lines) => {
-    const withoutTrailingEmpty = removeTrailingEmptyLine(lines);
-
-    if (withoutTrailingEmpty && withoutTrailingEmpty.length > 9) {
+    const withoutTrailingEmptyLines = removeTrailingEmptyLine(lines);
+    if (withoutTrailingEmptyLines && withoutTrailingEmptyLines.length > 9) {
       setHasMoreThanNineLines(true);
     }
-
     if (shouldShowMore) {
-      return withoutTrailingEmpty;
+      return withoutTrailingEmptyLines;
     }
-
-    return withoutTrailingEmpty ? withoutTrailingEmpty.slice(0, 9) : [];
+    return withoutTrailingEmptyLines.slice(0, 9);
   };
 
   // TODO - remove this once we have a better way of handling inline code. This seems like a hack
@@ -64,7 +61,6 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
         {children}
       </PathRow>
       <Highlight
-        {...defaultProps}
         code={children}
         language={language}
         theme={getTheme(interiorTheme)}>
