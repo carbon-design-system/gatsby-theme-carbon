@@ -14,7 +14,13 @@ import Sidebar from './Sidebar';
 
 import useMetadata from '../../util/hooks/useMetadata';
 
-const Code = ({ children, className: classNameProp = '', path, src }) => {
+const Code = ({
+  children,
+  className: classNameProp = '',
+  path,
+  src,
+  hideCode = false,
+}) => {
   const [hasMoreThanNineLines, setHasMoreThanNineLines] = useState(false);
   const [shouldShowMore, setShouldShowMore] = useState(false);
   const [isInlineCode, setIsInlineCode] = useState(false);
@@ -44,7 +50,7 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
     if (withoutTrailingEmptyLines && withoutTrailingEmptyLines.length > 9) {
       setHasMoreThanNineLines(true);
     }
-    if (shouldShowMore) {
+    if (shouldShowMore || !hideCode) {
       return withoutTrailingEmptyLines;
     }
     return withoutTrailingEmptyLines.slice(0, 9);
@@ -86,7 +92,7 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
           </div>
         )}
       </Highlight>
-      {hasMoreThanNineLines && (
+      {hideCode && hasMoreThanNineLines && (
         <button
           className={cx(styles.showMoreButton, {
             [styles.dark]: interiorTheme === 'dark',
