@@ -1,3 +1,10 @@
+### [3.4.16](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.15...v3.4.16) (2024-02-28)
+
+
+### Bug Fixes
+
+* add https to carbon for cloud link ([#1430](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1430)) ([0a23c7a](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0a23c7a0f342336df28ee160ea1676d9dc23af18))
+
 ### [3.4.15](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.14...v3.4.15) (2024-02-28)
 
 ### [3.4.14](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.13...v3.4.14) (2024-02-28)
