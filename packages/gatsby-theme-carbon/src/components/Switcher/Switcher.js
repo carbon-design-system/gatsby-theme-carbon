@@ -99,7 +99,7 @@ const DefaultChildren = () => (
     <SwitcherLink href="http://ibm.biz/carbon4ibmproducts" isInternal>
       Carbon for IBM Products
     </SwitcherLink>
-    <SwitcherLink href="ibm.biz/carbon4cloud" isInternal>
+    <SwitcherLink href="https://ibm.biz/carbon4cloud" isInternal>
       Carbon for Cloud
     </SwitcherLink>
     <SwitcherLink href="https://www.ibm.com/standards/carbon/">
