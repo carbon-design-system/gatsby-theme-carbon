@@ -155,28 +155,30 @@ ul :global(.cds--list--unordered) {
 //---------------------------------------
 // Blockquote
 //---------------------------------------
-.blockquote {
-  margin: $spacing-08 0;
-  color: $text-01;
-  margin-left: $spacing-05;
-  padding-left: 1ch;
-  @include breakpoint('md') {
-    margin-left: $spacing-08;
+div {
+  .blockquote {
+    margin: $spacing-08 0;
+    color: $text-01;
+    margin-left: $spacing-05;
+    padding-left: 1ch;
+    @include breakpoint('md') {
+      margin-left: $spacing-08;
+    }
   }
-}
 
-.blockquote .paragraph {
-  position: relative;
-  @include type-style('expressive-heading-03', true);
-  font-style: italic;
-  margin-bottom: 0;
-  width: 100%;
-}
+  .blockquote .paragraph {
+    position: relative;
+    @include type-style('expressive-heading-03', true);
+    font-style: italic;
+    margin-bottom: 0;
+    width: 100%;
+  }
 
-.blockquote .paragraph--responsive {
-  // 8 col
-  @include breakpoint('lg') {
-    width: calc(66.667% - 3rem);
+  .blockquote .paragraph--responsive {
+    // 8 col
+    @include breakpoint('lg') {
+      width: calc(66.667% - 3rem);
+    }
   }
 }
 
