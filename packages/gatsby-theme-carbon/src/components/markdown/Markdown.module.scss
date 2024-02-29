@@ -264,3 +264,7 @@ ul :global(.cds--list--unordered) {
 img {
   display: block;
 }
+
+span:has(:global(.gatsby-resp-image-wrapper)) {
+  display: block;
+}
