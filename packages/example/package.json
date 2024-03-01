@@ -12,7 +12,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@carbon/icons-react": "^11.35.0",
+    "@carbon/icons-react": "^11.37.0",
     "gatsby": "^5.13.3",
     "gatsby-theme-carbon": "^4.0.0-next.4",
     "react": "^18.2.0",
