@@ -16,24 +16,20 @@
   animation: gradient 2s ease infinite;
 }
 
-:global(.container--dark) .link {
-  color: $gray-10;
-}
-
 .list .link {
   @include type-style('body-short-02');
   margin-bottom: $spacing-03;
   position: relative;
   display: inline-block;
   transition: color $transition-base;
-  color: $text-01;
+  color: $link-primary;
   text-decoration: none;
   margin-left: $spacing-05;
 
   &:hover {
-    color: $blue-40;
+    color: $link-primary-hover;
     &::before {
-      color: $blue-40;
+      color: $link-primary-hover;
     }
   }
 
@@ -41,7 +37,7 @@
     content: '\21B3'; //"↳"
     position: absolute;
     left: -$spacing-05;
-    color: $text-01;
+    color: $link-primary;
     transition: color $transition-base;
     cursor: pointer;
   }
@@ -62,6 +58,8 @@
 }
 
 .container {
+  background-color: $background;
+  color: $text-primary;
   margin: 0;
   max-width: 100%;
   min-height: calc(100vh - 455px);

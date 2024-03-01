@@ -1,5 +1,25 @@
 # Changelog
 
+### [3.4.16](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.15...v3.4.16) (2024-02-28)
+
+### Bug Fixes
+
+* add https to carbon for cloud link ([#1430](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1430)) ([0a23c7a](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0a23c7a0f342336df28ee160ea1676d9dc23af18))
+
+### [3.4.15](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.14...v3.4.15) (2024-02-28)
+
+### [3.4.14](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.13...v3.4.14) (2024-02-28)
+
+### [3.4.13](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.12...v3.4.13) (2024-02-19)
+
+### [3.4.12](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.11...v3.4.12) (2024-02-15)
+
+### Bug Fixes
+
+* **404:** use color tokens in FourOhFour styles ([#1317](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1317)) ([b9fca83](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/b9fca83a0233ddbbccf9b1e22de845a37616c7e7)), closes [#1309](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1309)
+
+### [3.4.11](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.10...v3.4.11) (2024-02-15)
+
 ### [3.4.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.9...v3.4.10) (2024-02-09)
 
 ### [3.4.9](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.8...v3.4.9) (2024-02-08)
