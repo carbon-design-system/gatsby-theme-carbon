@@ -11291,7 +11291,7 @@ __metadata:
     react-helmet: "npm:^6.1.0"
     react-transition-group: "npm:^4.4.5"
     react-use: "npm:^17.5.0"
-    rehype-mdx-fenced-code-meta-support: "npm:^1.0.0"
+    rehype-mdx-fenced-code-meta-support: "npm:^1.0.4"
     remark-gfm: "npm:3.0.1"
     sass: "npm:^1.71.1"
     slugify: "npm:^1.6.6"
@@ -19718,12 +19718,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rehype-mdx-fenced-code-meta-support@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "rehype-mdx-fenced-code-meta-support@npm:1.0.0"
+"rehype-mdx-fenced-code-meta-support@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "rehype-mdx-fenced-code-meta-support@npm:1.0.4"
   dependencies:
     unist-util-visit: "npm:^5.0.0"
-  checksum: 10/678daf25871ce1c75107497c29c6a79bad65ca9f6b49689e12a5d5bb8585a0a502a00c723922409d2f2ea28b2efb01cf5b04464763541cd1f1b9b2faa907fb13
+  checksum: 10/8292b57d980e460c1f3258840f950d5043ab6aa66bf2120df170482c521b1d1e954d976a4e2cdfa17f39c04e53261102c6f444030564a9b1896f03fddd074561
   languageName: node
   linkType: hard
 
