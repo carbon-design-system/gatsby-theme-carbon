@@ -7,7 +7,7 @@ description: Usage instructions for the Code blocks component
 
 When authoring markdown using the Carbon Gatsby theme, code blocks have some
 extra super powers you can take advantage of. We provide carbon-themed syntax
-highlighting as well as optional `path` and `src` features.
+highlighting as well as optional `path`, `src` and `hideCode` features.
 
 </PageDescription>
 
@@ -26,8 +26,8 @@ This example overflows to demonstrate the text fading out under the side bar.
 
 <Title>Vertical overflow</Title>
 
-```markdown path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com
-## Path and src w/ overflow
+```markdown path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com hideCode=true
+## Path, src, hideCode w/ overflow
 
 This example demonstrates the show more button. This example demonstrates the
 show more button. This example demonstrates the show more button. This example
@@ -36,7 +36,9 @@ button. This example demonstrates the show more button. This example
 demonstrates the show more button. This example demonstrates the show more
 button. This example demonstrates the show more button. This example
 demonstrates the show more button. This example demonstrates the show more
-button. This example demonstrates the show more button.
+button. This example demonstrates the show more button. This example demonstrates the show more button. 
+This example demonstrates the show more button. This example demonstrates the show more button. 
+This example demonstrates the show more button. This example demonstrates the show more button. 
 ```
 
 ## Code
@@ -56,3 +58,4 @@ This code snippet provides both a `path` and a `src`.
 | language | string   | [Available languages.](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js) |
 | src      | string   | The full url of a relevant link (source)                                                                                    |
 | path     | string   | A string indicating the filename or path. Due to markdown limitations this can only be a single word                        |
+| hideCode     | boolean   | A boolean indicating if the code block should have a Show More button. Code block should have more than 9 lines to display the button. Default value = `false`|

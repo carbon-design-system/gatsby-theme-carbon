@@ -9,6 +9,16 @@ import remarkGfm from 'remark-gfm';
 import { fileURLToPath } from 'url';
 import defaultLunrOptions from './config/lunr-options.mjs';
 
+/*
+  This is a rehype plugin that adds support for metadata to the fenced code block
+  For eg: 
+  ```jsx path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com
+  const a = 10;
+  ```
+  A metaData prop of format path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com is added to the code block
+*/
+import rehypeAddCodeMetaData from 'rehype-mdx-fenced-code-meta-support';
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const carbonThemes = {
   white: './src/styles/internal/white.scss',
@@ -119,6 +129,7 @@ export default (themeOptions) => {
           ],
           mdxOptions: {
             remarkPlugins: [remarkGfm, ...remarkPlugins],
+            rehypePlugins: [rehypeAddCodeMetaData],
           },
           // defaultLayouts: {
           //   default: require.resolve('./src/templates/Default.js'),

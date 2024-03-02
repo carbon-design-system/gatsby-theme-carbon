@@ -14,13 +14,10 @@ import Sidebar from './Sidebar';
 
 import useMetadata from '../../util/hooks/useMetadata';
 
-const Code = ({
-  children,
-  className: classNameProp = '',
-  path,
-  src,
-  hideCode = false,
-}) => {
+const Code = ({ children, className: classNameProp = '', metaData }) => {
+  const [path, setPath] = useState('');
+  const [src, setSrc] = useState('');
+  const [hideCode, setHideCode] = useState(false);
   const [hasMoreThanNineLines, setHasMoreThanNineLines] = useState(false);
   const [shouldShowMore, setShouldShowMore] = useState(false);
   const [isInlineCode, setIsInlineCode] = useState(false);
@@ -30,6 +27,29 @@ const Code = ({
       setIsInlineCode(true);
     }
   }, [classNameProp]);
+
+  useEffect(() => {
+    // metaData string is of format: path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com
+    if (metaData) {
+      const metaDataObject = metaData.split(' ').reduce((obj, item) => {
+        const [key, value] = item.split('=');
+        obj[key] = value;
+        return obj;
+      }, {});
+
+      if (metaDataObject.path) {
+        setPath(metaDataObject.path);
+      }
+
+      if (metaDataObject.src) {
+        setSrc(metaDataObject.src);
+      }
+
+      if (metaDataObject.hideCode) {
+        setHideCode(true);
+      }
+    }
+  }, [metaData]);
 
   const { interiorTheme } = useMetadata();
   const language = classNameProp.replace(/language-/, '').replace('mdx', 'jsx');
