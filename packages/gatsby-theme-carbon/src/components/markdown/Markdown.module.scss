@@ -149,7 +149,8 @@ div {
   @include type-style('expressive-heading-05', true);
 }
 
-.h2 {
+.h2,
+h2.h2 {
   --space: #{$spacing-11};
   margin-top: var(--space);
   @include type-style('expressive-heading-04', true);
