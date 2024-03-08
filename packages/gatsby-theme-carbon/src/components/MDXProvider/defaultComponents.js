@@ -47,8 +47,6 @@ const components = {
   ol: Ol,
   ul: Ul,
   li: Li,
-  'li.ul': (props) => <Ul nested {...props} />,
-  'li.ol': (props) => <Ol nested {...props} />,
   blockquote: Blockquote,
   code: Code,
   table: PageTable,
