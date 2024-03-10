@@ -5007,13 +5007,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vimeo/player@npm:^2.21.0":
-  version: 2.21.0
-  resolution: "@vimeo/player@npm:2.21.0"
+"@vimeo/player@npm:^2.22.0":
+  version: 2.22.0
+  resolution: "@vimeo/player@npm:2.22.0"
   dependencies:
     native-promise-only: "npm:0.8.1"
     weakmap-polyfill: "npm:2.0.4"
-  checksum: 10/8eb6688cb30f0df37edb6ccb01f6e6489d2a8f14c051a38b904a1793abd110040a0439624adaf67252ceeee16ec3b3ae46f67eca4c4a36df961a73cde05e3672
+  checksum: 10/e7bc21de4de93754a75319de7110f555d33fe59426561f8d949f5683d0a05b03e45b871133c1b96919656d12dfa67d7ca42d53e17f20e9a2f30427201ddee076
   languageName: node
   linkType: hard
 
@@ -5662,6 +5662,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"array.prototype.findlast@npm:^1.2.4":
+  version: 1.2.4
+  resolution: "array.prototype.findlast@npm:1.2.4"
+  dependencies:
+    call-bind: "npm:^1.0.5"
+    define-properties: "npm:^1.2.1"
+    es-abstract: "npm:^1.22.3"
+    es-errors: "npm:^1.3.0"
+    es-shim-unscopables: "npm:^1.0.2"
+  checksum: 10/1711e48058cabbad24cb694fa3721b760e56004758142c439880a19b9b206e3584b94bbad41e5f68e0da8785db1d09250061a46769baa90a0d2e09c05987c82d
+  languageName: node
+  linkType: hard
+
 "array.prototype.findlastindex@npm:^1.2.3":
   version: 1.2.4
   resolution: "array.prototype.findlastindex@npm:1.2.4"
@@ -5712,7 +5725,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"array.prototype.tosorted@npm:^1.1.1":
+"array.prototype.toreversed@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "array.prototype.toreversed@npm:1.1.2"
+  dependencies:
+    call-bind: "npm:^1.0.2"
+    define-properties: "npm:^1.2.0"
+    es-abstract: "npm:^1.22.1"
+    es-shim-unscopables: "npm:^1.0.0"
+  checksum: 10/b4076d687ddc22c191863ce105d320cc4b0e1435bfda9ffeeff681682fe88fa6fe30e0d2ae94fa4b2d7fad901e1954ea4f75c1cab217db4848da84a2b5889192
+  languageName: node
+  linkType: hard
+
+"array.prototype.tosorted@npm:^1.1.1, array.prototype.tosorted@npm:^1.1.3":
   version: 1.1.3
   resolution: "array.prototype.tosorted@npm:1.1.3"
   dependencies:
@@ -9106,7 +9131,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-iterator-helpers@npm:^1.0.12, es-iterator-helpers@npm:^1.0.15":
+"es-iterator-helpers@npm:^1.0.12, es-iterator-helpers@npm:^1.0.15, es-iterator-helpers@npm:^1.0.17":
   version: 1.0.17
   resolution: "es-iterator-helpers@npm:1.0.17"
   dependencies:
@@ -9548,6 +9573,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-react@npm:^7.34.0":
+  version: 7.34.0
+  resolution: "eslint-plugin-react@npm:7.34.0"
+  dependencies:
+    array-includes: "npm:^3.1.7"
+    array.prototype.findlast: "npm:^1.2.4"
+    array.prototype.flatmap: "npm:^1.3.2"
+    array.prototype.toreversed: "npm:^1.1.2"
+    array.prototype.tosorted: "npm:^1.1.3"
+    doctrine: "npm:^2.1.0"
+    es-iterator-helpers: "npm:^1.0.17"
+    estraverse: "npm:^5.3.0"
+    jsx-ast-utils: "npm:^2.4.1 || ^3.0.0"
+    minimatch: "npm:^3.1.2"
+    object.entries: "npm:^1.1.7"
+    object.fromentries: "npm:^2.0.7"
+    object.hasown: "npm:^1.1.3"
+    object.values: "npm:^1.1.7"
+    prop-types: "npm:^15.8.1"
+    resolve: "npm:^2.0.0-next.5"
+    semver: "npm:^6.3.1"
+    string.prototype.matchall: "npm:^4.0.10"
+  peerDependencies:
+    eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
+  checksum: 10/e09623d715e25e012cc442648616ea5f8029c17a397e7b4f54c47da7cc4edb0ffec91af3269c259c1a92b8d83802b10f9c7148280a0c8d7659b15724ee8b50d8
+  languageName: node
+  linkType: hard
+
 "eslint-scope@npm:5.1.1, eslint-scope@npm:^5.1.1":
   version: 5.1.1
   resolution: "eslint-scope@npm:5.1.1"
@@ -9953,7 +10006,7 @@ __metadata:
   dependencies:
     "@carbon/icons-react": "npm:^11.37.0"
     gatsby: "npm:^5.13.3"
-    gatsby-theme-carbon: "npm:^4.0.0-next.4"
+    gatsby-theme-carbon: "npm:^4.0.0-next.5.0"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
   languageName: unknown
@@ -11230,7 +11283,7 @@ __metadata:
     eslint-plugin-import: "npm:^2.29.1"
     eslint-plugin-jsx-a11y: "npm:^6.8.0"
     eslint-plugin-prettier: "npm:^5.1.3"
-    eslint-plugin-react: "npm:^7.33.2"
+    eslint-plugin-react: "npm:^7.34.0"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     husky: "npm:^9.0.11"
     lerna: "npm:^8.1.2"
@@ -11240,11 +11293,11 @@ __metadata:
     release-it: "npm:^17.1.1"
     stylelint: "npm:^16.2.1"
     stylelint-config-recommended-scss: "npm:^14.0.0"
-    stylelint-scss: "npm:^6.1.0"
+    stylelint-scss: "npm:^6.2.1"
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@npm:^4.0.0-next.4, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@npm:^4.0.0-next.5.0, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
@@ -11260,7 +11313,7 @@ __metadata:
     "@mdx-js/mdx": "npm:^3.0.1"
     "@mdx-js/react": "npm:^3.0.1"
     "@reach/router": "npm:^1.3.4"
-    "@vimeo/player": "npm:^2.21.0"
+    "@vimeo/player": "npm:^2.22.0"
     beautiful-react-hooks: "npm:^5.0.1"
     classnames: "npm:^2.5.1"
     copy-to-clipboard: "npm:^3.3.3"
@@ -17489,7 +17542,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object.hasown@npm:^1.1.2":
+"object.hasown@npm:^1.1.2, object.hasown@npm:^1.1.3":
   version: 1.1.3
   resolution: "object.hasown@npm:1.1.3"
   dependencies:
@@ -20009,7 +20062,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@npm:^2.0.0-next.4":
+"resolve@npm:^2.0.0-next.4, resolve@npm:^2.0.0-next.5":
   version: 2.0.0-next.5
   resolution: "resolve@npm:2.0.0-next.5"
   dependencies:
@@ -20035,7 +20088,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@npm%3A^2.0.0-next.4#optional!builtin<compat/resolve>":
+"resolve@patch:resolve@npm%3A^2.0.0-next.4#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^2.0.0-next.5#optional!builtin<compat/resolve>":
   version: 2.0.0-next.5
   resolution: "resolve@patch:resolve@npm%3A2.0.0-next.5#optional!builtin<compat/resolve>::version=2.0.0-next.5&hash=c3c19d"
   dependencies:
@@ -21284,7 +21337,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"string.prototype.matchall@npm:^4.0.8":
+"string.prototype.matchall@npm:^4.0.10, string.prototype.matchall@npm:^4.0.8":
   version: 4.0.10
   resolution: "string.prototype.matchall@npm:4.0.10"
   dependencies:
@@ -21577,7 +21630,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-scss@npm:^6.0.0, stylelint-scss@npm:^6.1.0":
+"stylelint-scss@npm:^6.0.0":
   version: 6.1.0
   resolution: "stylelint-scss@npm:6.1.0"
   dependencies:
@@ -21589,6 +21642,21 @@ __metadata:
   peerDependencies:
     stylelint: ^16.0.2
   checksum: 10/d1a37af38e6793f60ad3d836741ed624a7a07a56bea094750e72ed6e549243f966efcbe247940c6f1337328db700b1004f49e2119ff421235c979b2574995426
+  languageName: node
+  linkType: hard
+
+"stylelint-scss@npm:^6.2.1":
+  version: 6.2.1
+  resolution: "stylelint-scss@npm:6.2.1"
+  dependencies:
+    known-css-properties: "npm:^0.29.0"
+    postcss-media-query-parser: "npm:^0.2.3"
+    postcss-resolve-nested-selector: "npm:^0.1.1"
+    postcss-selector-parser: "npm:^6.0.15"
+    postcss-value-parser: "npm:^4.2.0"
+  peerDependencies:
+    stylelint: ^16.0.2
+  checksum: 10/87a7af5775cb7b361b3ac143c5fe1dd59c25466f3255b501dd1bff3084d3af25cc7c6e00ec4a0bda18c30be481c885ff13255fdaa8245576aa44f38bfcfe4f70
   languageName: node
   linkType: hard
 
