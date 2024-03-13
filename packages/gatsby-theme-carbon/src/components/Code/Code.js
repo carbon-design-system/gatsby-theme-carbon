@@ -17,7 +17,7 @@ import useMetadata from '../../util/hooks/useMetadata';
 const Code = ({ children, className: classNameProp = '', metaData }) => {
   const [path, setPath] = useState('');
   const [src, setSrc] = useState('');
-  const [hideCode, setHideCode] = useState(false);
+  const [hideCode, setHideCode] = useState(true);
   const [hasMoreThanNineLines, setHasMoreThanNineLines] = useState(false);
   const [shouldShowMore, setShouldShowMore] = useState(false);
   const [isInlineCode, setIsInlineCode] = useState(false);
