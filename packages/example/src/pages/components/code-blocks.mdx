@@ -13,51 +13,61 @@ highlighting as well as optional `path`, `src` and `hideCode` features.
 
 ## Example
 
-<Title>Horizontal overflow</Title>
+````markdown path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com
+## Path and src
+
+This code snippet provides a `path` and a `src` prop.
 
 ```markdown path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com
-## Path and src w/ overflow
-
-This example overflows to demonstrate the text fading out under the side bar.
-This example overflows to demonstrate the text fading out under the side bar.
-This example overflows to demonstrate the text fading out under the side bar.
-This example overflows to demonstrate the text fading out under the side bar.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis bibendum fermentum
+aliquet. Aenean non ante in est placerat iaculis. Pellentesque pellentesque
+feugiat turpis, nec porttitor magna.
 ```
+````
 
-<Title>Vertical overflow</Title>
+````markdown path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com
+## Path and src
+
+This code snippet provides a `path` and a `src` prop.
 
 ```markdown path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com
-## Path, src, hideCode w/ overflow
-
-This example demonstrates the show more button. This example demonstrates the
-show more button. This example demonstrates the show more button. This example
-demonstrates the show more button. This example demonstrates the show more
-button. This example demonstrates the show more button. This example
-demonstrates the show more button. This example demonstrates the show more
-button. This example demonstrates the show more button. This example
-demonstrates the show more button. This example demonstrates the show more
-button. This example demonstrates the show more button. This example
-demonstrates the show more button. This example demonstrates the show more
-button. This example demonstrates the show more button. This example
-demonstrates the show more button. This example demonstrates the show more
-button.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis bibendum fermentum
+aliquet. Aenean non ante in est placerat iaculis. Pellentesque pellentesque
+feugiat turpis, nec porttitor magna. Nullam tempor dapibus elit. In sapien
+risus, aliquam non ullamcorper ac, porta vel magna. Pellentesque habitant morbi
+tristique senectus et netus et malesuada fames ac turpis egestas. Donec
+scelerisque felis vitae diam dignissim efficitur. Aenean non ante in est
+placerat iaculis. Duis bibendum fermentum aliquet.
 ```
+````
 
-## Code
-
-````mdx
-```markdown path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com hideCode=false
-### Path, src and hideCode
+````markdown path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com hideCode=false
+## Path, src, hideCode
 
 This code snippet provides a `path`, a `src` and `hideCode` prop.
+
+```markdown path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com  hideCode=false
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis bibendum fermentum
+aliquet. Aenean non ante in est placerat iaculis. Pellentesque pellentesque
+feugiat turpis, nec porttitor magna. Nullam tempor dapibus elit. In sapien
+risus, aliquam non ullamcorper ac, porta vel magna. Pellentesque habitant morbi
+tristique senectus et netus et malesuada fames ac turpis egestas. Donec
+scelerisque felis vitae diam dignissim efficitur. Aenean non ante in est
+placerat iaculis. Duis bibendum fermentum aliquet. Pellentesque pellentesque
+feugiat turpis, nec porttitor magna. Nullam tempor dapibus elit. In sapien
+risus, aliquam non ullamcorper ac, porta vel magna. Pellentesque habitant morbi
+tristique senectus et netus et malesuada fames ac turpis egestas. Donec
+scelerisque felis vitae diam dignissim efficitur. Aenean non ante in est
+placerat iaculis. Duis bibendum fermentum aliquet.
 ```
 ````
 
 ### Props
 
-| property | propType | description                                                                                                                                                    |
-| -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| language | string   | [Available languages.](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js)                                    |
-| src      | string   | The full url of a relevant link (source)                                                                                                                       |
-| path     | string   | A string indicating the filename or path. Due to markdown limitations this can only be a single word                                                           |
-| hideCode | boolean  | A boolean indicating if the code block should have a Show More button. Code block should have more than 9 lines to display the button. Default value = `true` |
+| property | propType | required | default | description                                                                                                                                |
+| -------- | -------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| language | string   |          |         | [Available languages.](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js)                |
+| src      | string   |          |         | The full url of a relevant link (source)                                                                                                   |
+| path     | string   |          |         | A string indicating the filename or path. Due to markdown limitations this can only be a single word                                       |
+| hideCode | boolean  |          | true    | A boolean indicating if the code block should have a Show More button. The button will only display if a code block has more than 9 lines. |
