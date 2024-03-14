@@ -45,8 +45,11 @@ const Code = ({ children, className: classNameProp = '', metaData }) => {
         setSrc(metaDataObject.src);
       }
 
-      if (metaDataObject.hideCode) {
-        setHideCode(true);
+      if (
+        metaDataObject.hideCode === 'false' ||
+        metaDataObject.hideCode === '0'
+      ) {
+        setHideCode(false);
       }
     }
   }, [metaData]);
