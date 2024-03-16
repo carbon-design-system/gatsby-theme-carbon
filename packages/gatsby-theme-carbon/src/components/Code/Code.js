@@ -17,7 +17,7 @@ import useMetadata from '../../util/hooks/useMetadata';
 const Code = ({ children, className: classNameProp = '', metaData }) => {
   const [path, setPath] = useState('');
   const [src, setSrc] = useState('');
-  const [hideCode, setHideCode] = useState(true);
+  const [showAll, setShowAll] = useState(false);
   const [hasMoreThanNineLines, setHasMoreThanNineLines] = useState(false);
   const [shouldShowMore, setShouldShowMore] = useState(false);
   const [isInlineCode, setIsInlineCode] = useState(false);
@@ -33,7 +33,16 @@ const Code = ({ children, className: classNameProp = '', metaData }) => {
     if (metaData) {
       const metaDataObject = metaData.split(' ').reduce((obj, item) => {
         const [key, value] = item.split('=');
-        obj[key] = value;
+
+        // Checking for boolean values coming as string or not coming like in showAll prop
+        if (value === 'true' || !value) {
+          obj[key] = true;
+        } else if (value === 'false') {
+          obj[key] = false;
+        } else {
+          // else setting what is passed after =
+          obj[key] = value;
+        }
         return obj;
       }, {});
 
@@ -45,11 +54,8 @@ const Code = ({ children, className: classNameProp = '', metaData }) => {
         setSrc(metaDataObject.src);
       }
 
-      if (
-        metaDataObject.hideCode === 'false' ||
-        metaDataObject.hideCode === '0'
-      ) {
-        setHideCode(false);
+      if (metaDataObject.showAll) {
+        setShowAll(true);
       }
     }
   }, [metaData]);
@@ -73,7 +79,7 @@ const Code = ({ children, className: classNameProp = '', metaData }) => {
     if (withoutTrailingEmptyLines && withoutTrailingEmptyLines.length > 9) {
       setHasMoreThanNineLines(true);
     }
-    if (shouldShowMore || !hideCode) {
+    if (shouldShowMore || showAll) {
       return withoutTrailingEmptyLines;
     }
     return withoutTrailingEmptyLines.slice(0, 9);
@@ -115,7 +121,7 @@ const Code = ({ children, className: classNameProp = '', metaData }) => {
           </div>
         )}
       </Highlight>
-      {hideCode && hasMoreThanNineLines && (
+      {hasMoreThanNineLines && !showAll && (
         <button
           className={cx(styles.showMoreButton, {
             [styles.dark]: interiorTheme === 'dark',
