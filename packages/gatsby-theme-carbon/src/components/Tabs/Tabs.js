@@ -9,6 +9,7 @@ import React, {
   useEffect,
   useRef,
   useCallback,
+  useMemo,
 } from 'react';
 import { Dropdown } from '@carbon/react';
 import { useMedia } from 'use-media';
@@ -131,9 +132,16 @@ export const Tabs = (props) => {
   // clear tablist when unmounted (switching between Select and TabList)
   useEffect(() => () => (tabList.current = []));
 
+  const value = useMemo(
+    () => ({
+      setActiveTab,
+      activeTab,
+      tabList: tabList.current,
+    }),
+    [setActiveTab, activeTab, tabList.current]
+  );
   return (
-    <TabContext.Provider
-      value={{ setActiveTab, activeTab, tabList: tabList.current }}>
+    <TabContext.Provider value={value}>
       {isMobile ? (
         <Select _id={id}>{props.children}</Select>
       ) : (

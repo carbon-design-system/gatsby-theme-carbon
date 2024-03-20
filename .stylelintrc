@@ -4,18 +4,13 @@
     "selector-pseudo-class-no-unknown": [
       true,
       {
-        "ignorePseudoClasses": [
-          "global",
-          "local"
-        ]
+        "ignorePseudoClasses": ["global", "local"]
       }
     ],
     "property-no-unknown": [
       true,
       {
-        "ignoreProperties": [
-          "composes"
-        ]
+        "ignoreProperties": ["composes"]
       }
     ],
     "no-descending-specificity": null

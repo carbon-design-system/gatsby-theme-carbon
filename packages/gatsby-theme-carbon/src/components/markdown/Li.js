@@ -1,11 +1,20 @@
 import React from 'react';
-import cx from 'classnames';
-import { listItem } from './Markdown.module.scss';
+import { ListItem } from '@carbon/react';
 
-const Li = ({ children, className, ...rest }) => (
-  <li className={cx(className, `cds--list__item`, listItem)} {...rest}>
-    {children}
-  </li>
-);
+const { Provider, Consumer: LiConsumer } = React.createContext({
+  hasListItemParent: false,
+});
 
-export default Li;
+const Li = ({ children, ...rest }) =>
+  React.createElement(
+    ListItem,
+    { ...rest },
+    React.createElement(
+      Provider,
+      { value: { hasListItemParent: true } },
+      children
+    )
+  );
+
+// eslint-disable-next-line no-restricted-exports
+export { Li as default, LiConsumer };

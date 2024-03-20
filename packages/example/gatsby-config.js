@@ -1,4 +1,5 @@
 module.exports = {
+  trailingSlash: `always`,
   siteMetadata: {
     title: 'Gatsby Theme Carbon',
     description: 'A Gatsby theme for the carbon design system',

@@ -3,6 +3,11 @@
   --space: #{$spacing-05};
 }
 
+div .caption * {
+  @include type-style('body-short-01');
+  display: inline;
+}
+
 // Responsive by default
 .caption-responsive {
   // 6/8 columns

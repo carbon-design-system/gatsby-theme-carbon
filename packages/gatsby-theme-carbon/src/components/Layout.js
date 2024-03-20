@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import Meta from './Meta';
 import LeftNav from './LeftNav';
 import Header from './Header';
-import Switcher from './Switcher';
+import { Switcher } from './Switcher';
 import Footer from './Footer';
 import Container from './Container';
 import useMetadata from '../util/hooks/useMetadata';

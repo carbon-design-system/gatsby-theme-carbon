@@ -1,11 +1,11 @@
 // carbon--breakpoint
-@use '@carbon/react/scss/breakpoint' as *;
+@use '~@carbon/react/scss/breakpoint' as *;
 // $spacing-0X
-@use '@carbon/react/scss/spacing' as *;
+@use '~@carbon/react/scss/spacing' as *;
 // carbon--type-style
-@use '@carbon/react/scss/type' as *;
+@use '~@carbon/react/scss/type' as *;
 // color tokens
-@use '@carbon/react/scss/compat/theme' as *;
+@use '~@carbon/react/scss/compat/theme' as *;
 
 .spacing-table td {
   vertical-align: top;

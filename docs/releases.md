@@ -1,4 +1,6 @@
-# When does the theme publish releases?
+# Releases
+
+## When does the theme publish releases?
 
 At the moment, we intentionally publish releases manually. We want each release
 to have meaning and reduce constant release churn. For that reason we release
@@ -12,7 +14,7 @@ when any of the following conditions are true:
 If a patch is narrow in scope(impacting a small subset of sites) we'll hold off
 on releasing the patch for the reasons mentioned above.
 
-# How to publish a new theme version
+## How to publish a new theme version
 
 We publish to npm, create a GitHub release, and generate changelogs by using
 [release-it](https://www.npmjs.com/package/release-it). To practice, use
@@ -27,7 +29,7 @@ not actually do anything.
 4. Complete the prompts
 5. 🚀 You did it! 🥳
 
-# Updating the starter
+## Updating the starter
 
 If there's been a feature release/substantial change to the example project, you
 should update the gatsby starter kit

@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react';
+import React, { useMemo, useReducer, useState } from 'react';
 
 const NavContext = React.createContext({
   leftNavIsOpen: false,
@@ -36,17 +36,30 @@ export const NavContextProvider = ({ children }) => {
 
   const [isManagingFocus, setIsManagingFocus] = useState(false);
 
-  const value = {
-    leftNavIsOpen,
-    searchIsOpen,
-    switcherIsOpen,
-    toggleNavState,
-    isManagingFocus,
-    setIsManagingFocus,
-    leftNavScrollOffset,
-    leftNavScrollTop,
-    setLeftNavScrollTop,
-  };
+  const value = useMemo(
+    () => ({
+      leftNavIsOpen,
+      searchIsOpen,
+      switcherIsOpen,
+      toggleNavState,
+      isManagingFocus,
+      setIsManagingFocus,
+      leftNavScrollOffset,
+      leftNavScrollTop,
+      setLeftNavScrollTop,
+    }),
+    [
+      leftNavIsOpen,
+      searchIsOpen,
+      switcherIsOpen,
+      toggleNavState,
+      isManagingFocus,
+      setIsManagingFocus,
+      leftNavScrollOffset,
+      leftNavScrollTop,
+      setLeftNavScrollTop,
+    ]
+  );
 
   return <NavContext.Provider value={value}>{children}</NavContext.Provider>;
 };

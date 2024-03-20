@@ -1,4 +1,6 @@
-# This script is used to update the a repository containing the starter kit 
+#!/bin/bash
+
+# This script is used to update the a repository containing the starter kit
 # https://github.com/carbon-design-system/gatsby-starter-carbon-theme
 # This project should be located in the same directory as the starter project
 

@@ -55,13 +55,13 @@ ligula tempor.
 
 <Title>AccordionItem</Title>
 
-| property        | propType | required | default                        | description                                                                         |
-| --------------- | -------- | -------- | ------------------------------ | ----------------------------------------------------------------------------------- |
-| title           | node     |          | 'title'                        | The accordion title                                                                 |
-| renderExpando   | func     |          | props => <button {...props} /> | The callback function to render the expando button. Can be a React component class. |
-| iconDescription | string   |          | 'Expand/Collapse'              | The description of the expando icon                                                 |
-| open            | bool     |          | false                          | `true` to open the expando                                                          |
-| onClick         | func     |          | () => {}                       | The handler of the massaged `click` event.                                          |
-| onHeadingClick  | func     |          | () => {}                       | The handler of the massaged `click` event on the heading.                           |
-| children        | node     |          |                                | Provide the contents of your AccordionItem                                          |
-| className       | string   |          |                                | Specify an optional className to be applied to the container node                   |
+| property        | propType | required | default                          | description                                                                         |
+| --------------- | -------- | -------- | -------------------------------- | ----------------------------------------------------------------------------------- |
+| title           | node     |          | 'title'                          | The accordion title                                                                 |
+| renderExpando   | func     |          | `props => <button {...props} />` | The callback function to render the expando button. Can be a React component class. |
+| iconDescription | string   |          | 'Expand/Collapse'                | The description of the expando icon                                                 |
+| open            | bool     |          | false                            | `true` to open the expando                                                          |
+| onClick         | func     |          | () => {}                         | The handler of the massaged `click` event.                                          |
+| onHeadingClick  | func     |          | () => {}                         | The handler of the massaged `click` event on the heading.                           |
+| children        | node     |          |                                  | Provide the contents of your AccordionItem                                          |
+| className       | string   |          |                                  | Specify an optional className to be applied to the container node                   |

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useWindowScroll } from 'beautiful-react-hooks';
+import useWindowScroll from 'beautiful-react-hooks/useWindowScroll';
 import cx from 'classnames';
 import { Layer } from '@carbon/react';
 import FeedbackDialog from '../FeedbackDialog';

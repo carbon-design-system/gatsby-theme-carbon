@@ -7,8 +7,8 @@ import { image, cardContainer } from './MediumPosts.module.scss';
 
 const MediumPosts = ({ postLimit = 3, cardProps, ...rest }) => {
   const data = useStaticQuery(graphql`
-    query {
-      allMediumFeed(sort: { fields: date, order: DESC }, limit: 10) {
+    {
+      allMediumFeed(sort: { date: DESC }, limit: 10) {
         edges {
           node {
             author

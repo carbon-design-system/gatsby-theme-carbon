@@ -1,7 +1,7 @@
-// @use '@carbon/react/scss/themes';
-// @use '@carbon/react/scss/theme';
-// @use '@carbon/react/scss/motion';
-// @use '@carbon/react/scss/spacing';
+// @use '~@carbon/react/scss/themes';
+// @use '~@carbon/react/scss/theme';
+// @use '~@carbon/react/scss/motion';
+// @use '~@carbon/react/scss/spacing';
 
 .container {
   @include theme(compat.$g90);

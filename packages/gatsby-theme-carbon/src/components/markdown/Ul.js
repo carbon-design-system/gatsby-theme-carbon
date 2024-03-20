@@ -1,16 +1,31 @@
 import React from 'react';
-import cx from 'classnames';
-import { list } from './Markdown.module.scss';
+import { UnorderedList } from '@carbon/react';
+import { LiConsumer } from './Li.js';
+import { unordered } from './Markdown.module.scss';
 
-const Ul = ({ children, nested, className, ...rest }) => {
-  const classNames = cx(className, `cds--list--unordered`, list, {
-    [`cds--list--nested`]: nested,
+const Ul = ({ children, className, ...rest }) =>
+  React.createElement(LiConsumer, null, (value) => {
+    if (value.hasListItemParent) {
+      return React.createElement(
+        UnorderedList,
+        {
+          isExpressive: true,
+          nested: true,
+          ...rest,
+        },
+        children
+      );
+    }
+    return React.createElement(
+      UnorderedList,
+      {
+        isExpressive: true,
+        nested: false,
+        className: unordered,
+        ...rest,
+      },
+      children
+    );
   });
-  return (
-    <ul className={classNames} {...rest}>
-      {children}
-    </ul>
-  );
-};
 
 export default Ul;

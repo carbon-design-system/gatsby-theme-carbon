@@ -1,5 +1,7 @@
 .leftNavWrapper {
-  transition: transform 0.15s cubic-bezier(0.2, 0.2, 0.38, 0.9), top 110ms;
+  transition:
+    transform 0.15s cubic-bezier(0.2, 0.2, 0.38, 0.9),
+    top 110ms;
   width: 256px;
   position: fixed;
   top: 0px;
