@@ -1,5 +1,14 @@
 # Changelog
 
+## [4.0.0-next.8](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.7...4.0.0-next.8) (2024-03-20)
+
+
+### Bug Fixes
+
+* caption styles ([#1451](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1451)) ([3511ce6](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/3511ce602109fa3c90fd373c8ecc15ea2fd4416d))
+* feedback form button style ([dc1bbb1](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/dc1bbb137b3d392550460b9c2375e38a28028be3))
+* warnings ([#1450](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1450)) ([ba2e9af](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ba2e9af6573d38b294a48692335e6c02fc87bad2))
+
 ## [4.0.0-next.7](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.6...4.0.0-next.7) (2024-03-15)
 
 ## [4.0.0-next.5.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.16...v4.0.0-next.5.0) (2024-03-09)
