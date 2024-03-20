@@ -1,10 +1,10 @@
-const path = require('path');
-const fs = require('fs');
-const mkdirp = require('mkdirp');
-const startCase = require('lodash.startcase');
-const FilterWarningsPlugin = require('webpack-filter-warnings-plugin');
+import path from 'path';
+import fs from 'fs';
+import * as mkdirp from 'mkdirp';
+import startCase from 'lodash.startcase';
+import FilterWarningsPlugin from 'webpack-filter-warnings-plugin';
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+export const onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     plugins: [
       new FilterWarningsPlugin({
@@ -15,7 +15,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   });
 };
 
-exports.onPreBootstrap = ({ store, reporter }) => {
+export const onPreBootstrap = ({ store, reporter }) => {
   const { program } = store.getState();
 
   const dirs = [
@@ -34,7 +34,7 @@ exports.onPreBootstrap = ({ store, reporter }) => {
 // We need to provide the actual file that created a specific page to append links for EditLink.
 // We can't do page queries from MDX templates, so we'll add the page's relative path to context after it's created.
 // The context object **is** supplied to MDX templates through the pageContext prop.
-exports.onCreatePage = (
+export const onCreatePage = (
   { page, actions, getNodesByType, ...rest },
   pluginOptions
 ) => {
@@ -94,7 +94,7 @@ exports.onCreatePage = (
 // NavItemsYaml we can allow the title to be nullable, which fixes this issue.
 
 // Create medium feed schema incase the plugin isn't used or you're on an ✈️
-exports.createSchemaCustomization = ({ actions, schema }) => {
+export const createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions;
 
   const typeDefs = [
