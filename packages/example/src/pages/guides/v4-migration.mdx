@@ -42,12 +42,12 @@ equivalent if your project uses `npm` as its package manager.
 
 1. Update Gatsby to v5
    ```
-   yarn add gatsby@latest-v5
+   yarn add gatsby@latest
    ```
 2. Update Gatsby plugins (including the theme)
 
    ```
-   yarn upgrade-interactive --latest
+   yarn upgrade-interactive
    ```
 
 3. Run `yarn dev:clean` to delete and rebuild your project's development bundle
@@ -62,17 +62,77 @@ The following is still being updated.
 
 </InlineNotification>
 
+If you are shadowing the homepage you need to update the file path
+`packages/example/src/components/Homepage.js`
+
+```jsx
+// Before
+import HomepageTemplate from 'gatsby-theme-carbon/src/templates/Homepage';
+// After
+import HomepageTemplate from 'gatsby-theme-carbon/src/components/Layouts/Homepage';
+```
+
+Similarly if you are importing any layouts you need to update the file path
+
+```jsx
+// Before
+import Layout from 'gatsby-theme-carbon/src/templates/Default';
+// After
+import Layout from 'gatsby-theme-carbon/src/components/Layouts/Default';
+```
+
+Update file path inside the shadowed Layout
+`packages/example/src/gatsby-theme-carbon/components/Layout.js`
+
+```jsx
+// Before
+import Switcher from 'gatsby-theme-carbon/src/components/Switcher';
+// After
+import { Switcher } from 'gatsby-theme-carbon/src/components/Switcher';
+```
+
+Move the shadowed homepage file to
+
 Markdown link with title needs double quotes
 
-this works
-
-```
+```jsx
+// Before
 [I'm a markdown link with title](https://www.carbondesignsystem.com "Carbon's Homepage")
+// After
+[I'm a markdown link with title](https://www.carbondesignsystem.com 'Carbon's Homepage')
 ```
 
-this does not
+Comments
 
+```jsx
+// Before
+<!-- Place comments here -->
+// After
+{/* Place comments here */}
 ```
-[I'm a markdown link with title](https://www.carbondesignsystem.com 'Carbon's
-Homepage')
+
+Prettier ignore
+
+```jsx
+// Before
+<!-- prettier-ignore-start -->
+### MDX you want prettier to ignore
+<!-- prettier-ignore-end -->
+// After
+{/* prettier-ignore-start */}
+
+### MDX you want prettier to ignore
+
+{/* prettier-ignore-end */}
+```
+
+Fix mdx/markdown errors
+
+```jsx
+(specifically, files with permissions <`400`)
+(specifically, files with permissions &lt;`400`)
+
+
+<carbon@us.ibm.com>
+[carbon@us.ibm.com](mailto:carbon@us.ibm.com)
 ```
