@@ -2,6 +2,18 @@ import path from 'path';
 import fs from 'fs';
 import * as mkdirp from 'mkdirp';
 import startCase from 'lodash.startcase';
+import FilterWarningsPlugin from 'webpack-filter-warnings-plugin';
+
+export const onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    plugins: [
+      new FilterWarningsPlugin({
+        exclude:
+          /mini-css-extract-plugin[^]*Conflicting order. Following module has been added:/,
+      }),
+    ],
+  });
+};
 
 export const onPreBootstrap = ({ store, reporter }) => {
   const { program } = store.getState();
