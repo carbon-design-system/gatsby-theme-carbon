@@ -1612,6 +1612,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.20.13":
+  version: 7.24.4
+  resolution: "@babel/runtime@npm:7.24.4"
+  dependencies:
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 10/8ec8ce2c145bc7e31dd39ab66df124f357f65c11489aefacb30f431bae913b9aaa66aa5efe5321ea2bf8878af3fcee338c87e7599519a952e3a6f83aa1b03308
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.12.7, @babel/template@npm:^7.16.7, @babel/template@npm:^7.22.15, @babel/template@npm:^7.23.9":
   version: 7.23.9
   resolution: "@babel/template@npm:7.23.9"
@@ -9584,7 +9593,7 @@ __metadata:
   resolution: "example@workspace:packages/example"
   dependencies:
     gatsby: "npm:^4.25.8"
-    gatsby-theme-carbon: "npm:^3.4.17"
+    gatsby-theme-carbon: "npm:^3.4.18"
     react: "npm:^17.0.2"
     react-dom: "npm:^17.0.2"
   languageName: unknown
@@ -10784,21 +10793,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-copy-linked-files@npm:^5.25.0":
-  version: 5.25.0
-  resolution: "gatsby-remark-copy-linked-files@npm:5.25.0"
+"gatsby-remark-copy-linked-files@npm:^6.13.1":
+  version: 6.13.1
+  resolution: "gatsby-remark-copy-linked-files@npm:6.13.1"
   dependencies:
-    "@babel/runtime": "npm:^7.15.4"
+    "@babel/runtime": "npm:^7.20.13"
     cheerio: "npm:^1.0.0-rc.10"
-    fs-extra: "npm:^10.1.0"
+    fs-extra: "npm:^11.1.1"
     is-relative-url: "npm:^3.0.0"
     lodash: "npm:^4.17.21"
     path-is-inside: "npm:^1.0.2"
     probe-image-size: "npm:^7.2.3"
     unist-util-visit: "npm:^2.0.3"
   peerDependencies:
-    gatsby: ^4.0.0-next
-  checksum: 10/e70f9d8ed7900e4e939d425bb5087d2ec4c2ebc67bb6107d405236260e1794bd971b8da7905ca9422fa1856b7c907b254624b37481c88ec30ed0fb3e9d883052
+    gatsby: ^5.0.0-next
+  checksum: 10/6096a88e2dc68a5057af03f5dfc7695bc88a62b104fbfa1ca60b6ffff44c92300f3bf262e7b20596f45cc77284d1016758655d132c161372a1ce4f6a6722703c
   languageName: node
   linkType: hard
 
@@ -10966,7 +10975,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@npm:^3.4.17, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@npm:^3.4.18, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
@@ -10993,7 +11002,7 @@ __metadata:
     gatsby-plugin-sass: "npm:5.25.0"
     gatsby-plugin-sass-resources: "npm:^3.0.1"
     gatsby-plugin-sharp: "npm:^4.25.1"
-    gatsby-remark-copy-linked-files: "npm:^5.25.0"
+    gatsby-remark-copy-linked-files: "npm:^6.13.1"
     gatsby-remark-images: "npm:^6.25.0"
     gatsby-remark-responsive-iframe: "npm:^5.25.0"
     gatsby-remark-smartypants: "npm:^5.25.0"
