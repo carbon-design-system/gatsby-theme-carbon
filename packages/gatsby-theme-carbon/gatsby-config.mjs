@@ -7,7 +7,6 @@ More info - https://github.com/mdx-js/mdx/issues/2379#issuecomment-1933035305
 */
 import remarkGfm from 'remark-gfm';
 import { fileURLToPath } from 'url';
-import defaultLunrOptions from './config/lunr-options.mjs';
 
 /*
   This is a rehype plugin that adds support for metadata to the fenced code block
@@ -43,7 +42,6 @@ export default (themeOptions) => {
     iconPath,
     mdxExtensions = ['.mdx', '.md'],
     imageQuality = 75,
-    lunrOptions = defaultLunrOptions,
     repository,
     mediumAccount = '',
     gatsbyRemarkPlugins = [],
@@ -108,10 +106,6 @@ export default (themeOptions) => {
       `gatsby-remark-images`,
       `gatsby-transformer-yaml`,
       `gatsby-plugin-catch-links`,
-      {
-        resolve: 'gatsby-plugin-lunr',
-        options: lunrOptions,
-      },
       {
         resolve: `gatsby-source-filesystem`,
         name: `Nav`,
@@ -181,6 +175,67 @@ export default (themeOptions) => {
           icon: iconPath
             ? path.resolve(iconPath)
             : path.resolve('./src/images/favicon.svg'),
+        },
+      },
+      {
+        resolve: 'gatsby-plugin-local-search',
+        options: {
+          // A unique name for the search index. This should be descriptive of
+          // what the index contains. This is required.
+          name: 'pages',
+
+          // Set the search engine to create the index. This is required.
+          // The following engines are supported: flexsearch, lunr
+          engine: 'lunr',
+
+          // Provide options to the engine. This is optional and only recommended
+          // for advanced users.
+          //
+          // Note: Only the flexsearch engine supports options.
+          engineOptions: 'default',
+
+          // GraphQL query used to fetch all data for the search index. This is
+          // required.
+          query: `
+          {
+            allMdx {
+              nodes {
+                id
+                frontmatter {
+                  description
+                  title
+                }
+                body
+              }
+            }
+          }
+          `,
+
+          // Field used as the reference value for each document.
+          // Default: 'id'.
+          ref: 'id',
+
+          // List of keys to index. The values of the keys are taken from the
+          // normalizer function below.
+          // Default: all fields
+          index: ['title', 'body'],
+
+          // List of keys to store and make available in your UI. The values of
+          // the keys are taken from the normalizer function below.
+          // Default: all fields
+          store: ['id', 'description', 'title'],
+
+          // Function used to map the result from the GraphQL query. This should
+          // return an array of items to index in the form of flat objects
+          // containing properties to index. The objects must contain the `ref`
+          // field above (default: 'id'). This is required.
+          normalizer: ({ data }) =>
+            data.allMdx.nodes.map((node) => ({
+              id: node.id,
+              description: node.frontmatter.description,
+              title: node.frontmatter.title,
+              body: node.body,
+            })),
         },
       },
     ].concat(optionalPlugins),

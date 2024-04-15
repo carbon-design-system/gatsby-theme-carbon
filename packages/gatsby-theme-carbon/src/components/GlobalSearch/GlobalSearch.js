@@ -11,9 +11,10 @@ import React, {
   useMemo,
   useCallback,
 } from 'react';
+import { useLunr } from 'react-lunr';
 import { Close, Search } from '@carbon/react/icons';
 import _throttle from 'lodash.throttle';
-import { navigate } from 'gatsby';
+import { graphql, navigate, useStaticQuery } from 'gatsby';
 import cx from 'classnames';
 import NavContext from '../../util/context/NavContext';
 import { useOnClickOutside } from '../../util/hooks';
@@ -34,22 +35,34 @@ import Menu, { MenuContext } from './Menu';
 
 const MAX_RESULT_LIST_SIZE = 8;
 
-const search = _throttle((queryString) => {
-  if (window.__LUNR__) {
-    try {
-      const lunrIndex = window.__LUNR__.en;
-      const searchResults = lunrIndex.index
-        .search(`${queryString}*`)
-        .slice(0, MAX_RESULT_LIST_SIZE);
-      return searchResults.map(({ ref }) => lunrIndex.store[ref]);
-    } catch {
-      console.error(`Lunr is having issues querying for '${queryString}'`);
-    }
-  }
-}, 150);
+// const search = _throttle((queryString) => {
+//   if (window.__LUNR__) {
+//     try {
+//       const lunrIndex = window.__LUNR__.en;
+//       const searchResults = lunrIndex.index
+//         .search(`${queryString}*`)
+//         .slice(0, MAX_RESULT_LIST_SIZE);
+//       return searchResults.map(({ ref }) => lunrIndex.store[ref]);
+//     } catch {
+//       console.error(`Lunr is having issues querying for '${queryString}'`);
+//     }
+//   }
+// }, 150);
 
 // TODO pass magnifying ref for escape/close? keep focus within outline for input,
 const GlobalSearchInput = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      localSearchPages {
+        index
+        store
+      }
+    }
+  `);
+
+  const index = data.localSearchPages.index;
+  const store = data.localSearchPages.store;
+
   const optionsRef = useRef([]);
   const [focusedItem, setFocusedItem] = useState(0);
   const inputRef = useRef(null);
@@ -57,7 +70,7 @@ const GlobalSearchInput = () => {
   const openButtonRef = useRef(null);
   const [inputIsFocused, setInputIsFocused] = useState(false);
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState([]);
+  const results = useLunr(query, index, store);
   const { toggleNavState, searchIsOpen, isManagingFocus, setIsManagingFocus } =
     useContext(NavContext);
 
@@ -86,17 +99,17 @@ const GlobalSearchInput = () => {
     setQuery('');
   });
 
-  useEffect(() => {
-    if (query) {
-      const searchResults = search(query) || [];
-      setResults(searchResults);
-    } else {
-      setResults([]);
-    }
-    return () => {
-      setResults([]);
-    };
-  }, [query]);
+  // useEffect(() => {
+  //   if (query) {
+  //     const searchResults = search(query) || [];
+  //     setResults(searchResults);
+  //   } else {
+  //     setResults([]);
+  //   }
+  //   return () => {
+  //     setResults([]);
+  //   };
+  // }, [query]);
 
   const onKeyDown = (e) => {
     switch (e.key) {
