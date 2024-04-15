@@ -1,6 +1,6 @@
 ---
 title: V4.0 Migration
-description: Guide for migrating to v3.0 of the theme
+description: Guide for migrating to v4.0 of the theme
 ---
 
 <PageDescription>
@@ -10,7 +10,7 @@ the control and scalability of server-side rendering with the performance of
 static-site generation. The major version change comes with the potential for
 breaking changes, this guide aims to cover the most likely issues a site built
 with the Carbon Gatsby theme might encounter. To have the smoothest possible
-experience, we recommend [upgrading to v4](/guides/v3-migration) of Carbon's
+experience, we recommend [upgrading to v3](/guides/v3-migration) of Carbon's
 Gatsby Theme first if you haven't already done so.
 
 </PageDescription>
@@ -44,13 +44,22 @@ equivalent if your project uses `npm` as its package manager.
    ```
    yarn add gatsby@latest-v5
    ```
-2. Update Gatsby plugins (including the theme)
+1. Update Gatsby plugins (including the theme)
 
    ```
    yarn upgrade-interactive --latest
    ```
 
-3. Run `yarn dev:clean` to delete and rebuild your project's development bundle
+1. Run the codemods to modify any graphql queries that have schema changes
+
+   ```shell
+   npx gatsby-codemods@latest sort-and-aggr-graphql .
+   ```
+
+   Sourced from the
+   [gatsby migration guide](https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v4-to-v5/#graphql-schema-changes-to-sort-and-aggregation-fields)
+
+1. Run `yarn dev:clean` to delete and rebuild your project's development bundle
 
 ## Troubleshooting
 

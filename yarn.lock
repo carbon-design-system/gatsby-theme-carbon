@@ -1548,7 +1548,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.22.15, @babel/runtime@npm:^7.22.5, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.3.4, @babel/runtime@npm:^7.4.3, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.22.15, @babel/runtime@npm:^7.22.5, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.3.4, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7, @babel/runtime@npm:^7.9.2":
   version: 7.24.0
   resolution: "@babel/runtime@npm:7.24.0"
   dependencies:
@@ -10006,7 +10006,7 @@ __metadata:
   dependencies:
     "@carbon/icons-react": "npm:^11.37.0"
     gatsby: "npm:^5.13.3"
-    gatsby-theme-carbon: "npm:^4.0.0-next.7"
+    gatsby-theme-carbon: "npm:^4.0.0-next.8"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
   languageName: unknown
@@ -10508,6 +10508,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"flexsearch@npm:^0.6.22, flexsearch@npm:^0.6.32":
+  version: 0.6.32
+  resolution: "flexsearch@npm:0.6.32"
+  checksum: 10/aa260b2eb530be070018a02e31f19343e69ebbd5006e534d1a6162ba150f4f580be9bd5fc2453d0441c32b7edef0b972eff3f1890146f55d47246a3d1d604e0b
+  languageName: node
+  linkType: hard
+
 "focus-trap-react@npm:^10.2.3":
   version: 10.2.3
   resolution: "focus-trap-react@npm:10.2.3"
@@ -10928,14 +10935,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-lunr@npm:^1.5.2":
-  version: 1.5.2
-  resolution: "gatsby-plugin-lunr@npm:1.5.2"
+"gatsby-plugin-local-search@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "gatsby-plugin-local-search@npm:2.0.1"
   dependencies:
-    "@babel/runtime": "npm:^7.4.3"
-    lunr: "npm:^2.3.6"
-    lunr-languages: "npm:^1.1.0"
-  checksum: 10/3513e46c649780f5f3e141817524bfb5b4c73f6a5cb5927e90c84029e85197a4ffdb36457ab86d6e1c0d70e4307b343ee67edd97b9f9d66ac1a57499abe5a72c
+    flexsearch: "npm:^0.6.32"
+    lodash: "npm:^4.17.19"
+    lunr: "npm:^2.3.8"
+    pascal-case: "npm:^3.1.1"
+  peerDependencies:
+    gatsby: ">= 2.20.0"
+  checksum: 10/13b2c6e19b30392b3b35f65eb3d6a005ed08236ab5ee4cf321ce06ee21b06fb4966cd8ec55708b9dcd39030550a9bf0f6b6ac13ae2b34adc41dc0d480e7a151d
   languageName: node
   linkType: hard
 
@@ -11297,7 +11307,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@npm:^4.0.0-next.7, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@npm:^4.0.0-next.8, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
@@ -11320,7 +11330,7 @@ __metadata:
     focus-trap-react: "npm:^10.2.3"
     gatsby: "npm:^5.13.3"
     gatsby-plugin-catch-links: "npm:^5.13.1"
-    gatsby-plugin-lunr: "npm:^1.5.2"
+    gatsby-plugin-local-search: "npm:^2.0.1"
     gatsby-plugin-manifest: "npm:^5.13.1"
     gatsby-plugin-mdx: "npm:^5.13.1"
     gatsby-plugin-offline: "npm:^6.13.1"
@@ -11344,6 +11354,7 @@ __metadata:
     react-helmet: "npm:^6.1.0"
     react-transition-group: "npm:^4.4.5"
     react-use: "npm:^17.5.0"
+    react-use-flexsearch: "npm:^0.1.1"
     rehype-mdx-fenced-code-meta-support: "npm:^1.0.4"
     remark-gfm: "npm:3.0.1"
     sass: "npm:^1.71.1"
@@ -14887,14 +14898,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lunr-languages@npm:^1.1.0":
-  version: 1.14.0
-  resolution: "lunr-languages@npm:1.14.0"
-  checksum: 10/bb17d7e481efcf262de930b2e0980e0b33790c80a0aec1aeb102f4a32ad4418971efeae2bb1b6841825c1b055fca68dea37aea871524e9d84a451a113076d933
-  languageName: node
-  linkType: hard
-
-"lunr@npm:^2.3.6":
+"lunr@npm:^2.3.8":
   version: 2.3.9
   resolution: "lunr@npm:2.3.9"
   checksum: 10/f2f6db34c046f5a767782fe2454e6dd69c75ba3c5cf5c1cb9cacca2313a99c2ba78ff8fa67dac866fb7c4ffd5f22e06684793f5f15ba14bddb598b94513d54bf
@@ -18125,7 +18129,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pascal-case@npm:^3.1.2":
+"pascal-case@npm:^3.1.1, pascal-case@npm:^3.1.2":
   version: 3.1.2
   resolution: "pascal-case@npm:3.1.2"
   dependencies:
@@ -19374,6 +19378,17 @@ __metadata:
     react: "*"
     tslib: "*"
   checksum: 10/bded7a34f5e44223495a095b6c29fa3ea6c8338a166d0f307d21443c20c9fa54a95bdae11d05ab3e6f61a7fa1eaa027f6fbe7ca064a2fb2af46539653ebcb308
+  languageName: node
+  linkType: hard
+
+"react-use-flexsearch@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "react-use-flexsearch@npm:0.1.1"
+  dependencies:
+    flexsearch: "npm:^0.6.22"
+  peerDependencies:
+    react: ">=16.8"
+  checksum: 10/72284420584e13227007b09dfc2ca86d6e609b6bf86c17fef8a53516e4416335c18cf0f28ec49690fe2af6c3814dcec47bba39c2b05395284fdd11f923141035
   languageName: node
   linkType: hard
 

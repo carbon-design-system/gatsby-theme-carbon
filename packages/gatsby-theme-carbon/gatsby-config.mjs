@@ -7,17 +7,16 @@ More info - https://github.com/mdx-js/mdx/issues/2379#issuecomment-1933035305
 */
 import remarkGfm from 'remark-gfm';
 import { fileURLToPath } from 'url';
-import defaultLunrOptions from './config/lunr-options.mjs';
-
-/*
-  This is a rehype plugin that adds support for metadata to the fenced code block
-  For eg: 
-  ```jsx path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com
-  const a = 10;
-  ```
-  A metaData prop of format path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com is added to the code block
-*/
+/**
+ * This is a rehype plugin that adds support for metadata to the fenced code block
+ * For eg:
+ * ```jsx path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com
+ * const a = 10;
+ * ```
+ * A metaData prop of format path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com is added to the code block
+ */
 import rehypeAddCodeMetaData from 'rehype-mdx-fenced-code-meta-support';
+import defaultLocalSearchOptions from './config/local-search-options.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const carbonThemes = {
@@ -43,7 +42,7 @@ export default (themeOptions) => {
     iconPath,
     mdxExtensions = ['.mdx', '.md'],
     imageQuality = 75,
-    lunrOptions = defaultLunrOptions,
+    localSearchOptions = defaultLocalSearchOptions,
     repository,
     mediumAccount = '',
     gatsbyRemarkPlugins = [],
@@ -109,8 +108,8 @@ export default (themeOptions) => {
       `gatsby-transformer-yaml`,
       `gatsby-plugin-catch-links`,
       {
-        resolve: 'gatsby-plugin-lunr',
-        options: lunrOptions,
+        resolve: 'gatsby-plugin-local-search',
+        options: localSearchOptions,
       },
       {
         resolve: `gatsby-source-filesystem`,

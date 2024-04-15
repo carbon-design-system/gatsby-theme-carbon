@@ -12,9 +12,9 @@ import React, {
   useCallback,
 } from 'react';
 import { Close, Search } from '@carbon/react/icons';
-import _throttle from 'lodash.throttle';
-import { navigate } from 'gatsby';
+import { navigate, useStaticQuery, graphql } from 'gatsby';
 import cx from 'classnames';
+import { useFlexSearch } from 'react-use-flexsearch';
 import NavContext from '../../util/context/NavContext';
 import { useOnClickOutside } from '../../util/hooks';
 
@@ -32,22 +32,6 @@ import {
 
 import Menu, { MenuContext } from './Menu';
 
-const MAX_RESULT_LIST_SIZE = 8;
-
-const search = _throttle((queryString) => {
-  if (window.__LUNR__) {
-    try {
-      const lunrIndex = window.__LUNR__.en;
-      const searchResults = lunrIndex.index
-        .search(`${queryString}*`)
-        .slice(0, MAX_RESULT_LIST_SIZE);
-      return searchResults.map(({ ref }) => lunrIndex.store[ref]);
-    } catch {
-      console.error(`Lunr is having issues querying for '${queryString}'`);
-    }
-  }
-}, 150);
-
 // TODO pass magnifying ref for escape/close? keep focus within outline for input,
 const GlobalSearchInput = () => {
   const optionsRef = useRef([]);
@@ -60,6 +44,23 @@ const GlobalSearchInput = () => {
   const [results, setResults] = useState([]);
   const { toggleNavState, searchIsOpen, isManagingFocus, setIsManagingFocus } =
     useContext(NavContext);
+
+  const data = useStaticQuery(graphql`
+    query {
+      localSearchPages {
+        index
+        store
+        publicIndexURL
+        publicStoreURL
+      }
+    }
+  `);
+
+  const search = useFlexSearch(
+    query,
+    data.localSearchPages.index,
+    data.localSearchPages.store
+  );
 
   const clearAndClose = useCallback(() => {
     setQuery('');
@@ -88,8 +89,7 @@ const GlobalSearchInput = () => {
 
   useEffect(() => {
     if (query) {
-      const searchResults = search(query) || [];
-      setResults(searchResults);
+      setResults(search);
     } else {
       setResults([]);
     }
