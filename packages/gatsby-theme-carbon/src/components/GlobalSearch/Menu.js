@@ -77,8 +77,26 @@ const MenuItem = ({ page, index, onKeyDown, id }) => {
     [active]: focusedItem === index,
   });
 
+  function convertFilePathToUrl(filePath) {
+    const pagesIndex = filePath.lastIndexOf('/pages/');
+    if (filePath.lastIndexOf('/pages/') === -1) return null;
+
+    const fileName = filePath.slice(
+      pagesIndex + '/pages/'.length,
+      -'.mdx'.length
+    );
+    const normalizedFileName = fileName.endsWith('/index')
+      ? fileName.slice(0, -'/index'.length)
+      : fileName;
+    const urlPath = `/${normalizedFileName.split('/').join('/')}/`;
+
+    return urlPath;
+  }
+
+  const url = convertFilePathToUrl(page.path);
+
   return (
-    <li role="none" key={page.path}>
+    <li role="none" key={page.id}>
       <Link
         onClick={clearAndClose}
         onKeyDown={onKeyDown}
@@ -86,9 +104,11 @@ const MenuItem = ({ page, index, onKeyDown, id }) => {
         id={id}
         role="menuitem"
         className={className}
-        to={page.path}>
+        to={url}>
         {page.title}&nbsp;
-        {page.tab && <span className={tab}>→ {page.tab} </span>}
+        {page.tab && (
+          <span className={tab}>→ {page.tab.replace(/\.mdx$/, '')} </span>
+        )}
         {page.description && (
           <span className={description}>– {page.description}</span>
         )}
