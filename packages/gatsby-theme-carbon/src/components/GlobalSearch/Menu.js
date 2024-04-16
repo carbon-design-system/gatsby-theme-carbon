@@ -79,12 +79,16 @@ const MenuItem = ({ page, index, onKeyDown, id }) => {
 
   function convertFilePathToUrl(filePath) {
     const pagesIndex = filePath.lastIndexOf('/pages/');
-    if (pagesIndex === -1) return null;
+    if (filePath.lastIndexOf('/pages/') === -1) return null;
 
-    const fileName = filePath
-      .substring(pagesIndex + '/pages/'.length)
-      .replace('.mdx', '');
-    const urlPath = '/' + fileName.split('/').join('/') + '/';
+    const fileName = filePath.slice(
+      pagesIndex + '/pages/'.length,
+      -'.mdx'.length
+    );
+    const normalizedFileName = fileName.endsWith('/index')
+      ? fileName.slice(0, -'/index'.length)
+      : fileName;
+    const urlPath = '/' + normalizedFileName.split('/').join('/') + '/';
 
     return urlPath;
   }
