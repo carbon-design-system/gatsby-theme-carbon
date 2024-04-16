@@ -88,7 +88,7 @@ const MenuItem = ({ page, index, onKeyDown, id }) => {
     const normalizedFileName = fileName.endsWith('/index')
       ? fileName.slice(0, -'/index'.length)
       : fileName;
-    const urlPath = '/' + normalizedFileName.split('/').join('/') + '/';
+    const urlPath = `/${normalizedFileName.split('/').join('/')}/`;
 
     return urlPath;
   }
@@ -106,7 +106,9 @@ const MenuItem = ({ page, index, onKeyDown, id }) => {
         className={className}
         to={url}>
         {page.title}&nbsp;
-        {page.tab && <span className={tab}>→ {page.tab} </span>}
+        {page.tab && (
+          <span className={tab}>→ {page.tab.replace(/\.mdx$/, '')} </span>
+        )}
         {page.description && (
           <span className={description}>– {page.description}</span>
         )}
