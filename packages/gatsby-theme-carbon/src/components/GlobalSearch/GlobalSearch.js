@@ -35,20 +35,6 @@ import Menu, { MenuContext } from './Menu';
 
 const MAX_RESULT_LIST_SIZE = 8;
 
-// const search = _throttle((queryString) => {
-//   if (window.__LUNR__) {
-//     try {
-//       const lunrIndex = window.__LUNR__.en;
-//       const searchResults = lunrIndex.index
-//         .search(`${queryString}*`)
-//         .slice(0, MAX_RESULT_LIST_SIZE);
-//       return searchResults.map(({ ref }) => lunrIndex.store[ref]);
-//     } catch {
-//       console.error(`Lunr is having issues querying for '${queryString}'`);
-//     }
-//   }
-// }, 150);
-
 // TODO pass magnifying ref for escape/close? keep focus within outline for input,
 const GlobalSearchInput = () => {
   const data = useStaticQuery(graphql`
@@ -98,18 +84,6 @@ const GlobalSearchInput = () => {
     toggleNavState('searchIsOpen', 'close');
     setQuery('');
   });
-
-  // useEffect(() => {
-  //   if (query) {
-  //     const searchResults = search(query) || [];
-  //     setResults(searchResults);
-  //   } else {
-  //     setResults([]);
-  //   }
-  //   return () => {
-  //     setResults([]);
-  //   };
-  // }, [query]);
 
   const onKeyDown = (e) => {
     switch (e.key) {
