@@ -78,21 +78,12 @@ const MenuItem = ({ page, index, onKeyDown, id }) => {
   });
 
   function convertFilePathToUrl(filePath) {
-    // Find the index of the last occurrence of '/pages/'
     const pagesIndex = filePath.lastIndexOf('/pages/');
+    if (pagesIndex === -1) return null;
 
-    if (pagesIndex === -1) {
-      // '/pages/' not found in the filePath
-      return null; // or handle this case as needed
-    }
-
-    // Extract the part of the path after '/pages/'
-    const relativePath = filePath.substring(pagesIndex + '/pages/'.length);
-
-    // Remove the file extension (.mdx in this case)
-    const fileName = relativePath.replace('.mdx', '');
-
-    // Replace directory separators with URL-friendly separators
+    const fileName = filePath
+      .substring(pagesIndex + '/pages/'.length)
+      .replace('.mdx', '');
     const urlPath = '/' + fileName.split('/').join('/') + '/';
 
     return urlPath;
