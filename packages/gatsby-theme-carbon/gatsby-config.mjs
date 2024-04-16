@@ -206,6 +206,9 @@ export default (themeOptions) => {
                   title
                 }
                 body
+                internal {
+                  contentFilePath
+                }
               }
             }
           }
@@ -223,7 +226,7 @@ export default (themeOptions) => {
           // List of keys to store and make available in your UI. The values of
           // the keys are taken from the normalizer function below.
           // Default: all fields
-          store: ['id', 'description', 'title'],
+          store: ['id', 'description', 'title', 'path'],
 
           // Function used to map the result from the GraphQL query. This should
           // return an array of items to index in the form of flat objects
@@ -235,6 +238,7 @@ export default (themeOptions) => {
               description: node.frontmatter.description,
               title: node.frontmatter.title,
               body: node.body,
+              path: node.internal.contentFilePath,
             })),
         },
       },
