@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.0-next.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.9...4.0.0-next.10) (2024-04-17)
+
+
+### Features
+
+* add max results to search ([#1466](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1466)) ([6b36135](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/6b361356cfc9952501943c65282eca226a686545))
+
 ## [4.0.0-next.9](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.8...4.0.0-next.9) (2024-04-17)
 
 
