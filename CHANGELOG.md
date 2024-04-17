@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.0-next.9](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.8...4.0.0-next.9) (2024-04-17)
+
+
+### Features
+
+* **next:** add gatsby-plugin-local-search  ([#1464](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1464)) ([cdee553](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/cdee553fe48fb67d3ee8bef2025e942db082cf90))
+
 ## [4.0.0-next.8](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.7...4.0.0-next.8) (2024-03-20)
 
 
