@@ -33,9 +33,8 @@ import {
 
 import Menu, { MenuContext } from './Menu';
 
-const MAX_RESULT_LIST_SIZE = 8;
+const MAX_RESULT_LIST_SIZE = 12;
 
-// TODO pass magnifying ref for escape/close? keep focus within outline for input,
 const GlobalSearchInput = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -46,8 +45,8 @@ const GlobalSearchInput = () => {
     }
   `);
 
-  const index = data.localSearchPages.index;
-  const store = data.localSearchPages.store;
+  const { index } = data.localSearchPages;
+  const { store } = data.localSearchPages;
 
   const optionsRef = useRef([]);
   const [focusedItem, setFocusedItem] = useState(0);
@@ -59,6 +58,8 @@ const GlobalSearchInput = () => {
   const results = useLunr(query, index, store);
   const { toggleNavState, searchIsOpen, isManagingFocus, setIsManagingFocus } =
     useContext(NavContext);
+
+  const trimmedResults = results.slice(0, MAX_RESULT_LIST_SIZE);
 
   const clearAndClose = useCallback(() => {
     setQuery('');
@@ -197,7 +198,7 @@ const GlobalSearchInput = () => {
             <Close size={20} description="Clear search" />
           </button>
         </div>
-        <Menu onKeyDown={onKeyDown} results={results} />
+        <Menu onKeyDown={onKeyDown} results={trimmedResults} />
       </div>
     </MenuContext.Provider>
   );
