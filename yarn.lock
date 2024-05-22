@@ -1632,7 +1632,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-react@npm:^7.18.6, @babel/preset-react@npm:^7.23.3":
+"@babel/preset-react@npm:^7.18.6, @babel/preset-react@npm:^7.23.3, @babel/preset-react@npm:^7.24.1":
   version: 7.24.1
   resolution: "@babel/preset-react@npm:7.24.1"
   dependencies:
@@ -11544,6 +11544,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:^7.24.5"
     "@babel/eslint-parser": "npm:^7.24.5"
+    "@babel/preset-react": "npm:^7.24.1"
     "@commitlint/cli": "npm:^18.6.1"
     "@commitlint/config-conventional": "npm:^18.6.3"
     "@release-it-plugins/workspaces": "npm:^4.2.0"
