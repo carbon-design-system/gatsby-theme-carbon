@@ -1,6 +1,6 @@
 ---
 title: V4.0 Migration
-description: Guide for migrating to v3.0 of the theme
+description: Guide for migrating to v4.0 of the theme
 ---
 
 <PageDescription>
@@ -10,7 +10,7 @@ the control and scalability of server-side rendering with the performance of
 static-site generation. The major version change comes with the potential for
 breaking changes, this guide aims to cover the most likely issues a site built
 with the Carbon Gatsby theme might encounter. To have the smoothest possible
-experience, we recommend [upgrading to v4](/guides/v3-migration) of Carbon's
+experience, we recommend [upgrading to v3](/guides/v3-migration) of Carbon's
 Gatsby Theme first if you haven't already done so.
 
 </PageDescription>
@@ -41,38 +41,46 @@ equivalent if your project uses `npm` as its package manager.
 </InlineNotification>
 
 1. Update Gatsby to v5
-   ```
+
+   ```shell
    yarn add gatsby@latest-v5
    ```
-2. Update Gatsby plugins (including the theme)
 
-   ```
+1. Update Gatsby plugins (including the theme)
+
+   ```shell
    yarn upgrade-interactive --latest
    ```
 
-3. Run `yarn dev:clean` to delete and rebuild your project's development bundle
+1. Update graphql queries using the codemod:
+
+   ```shell
+   npx gatsby-codemods@latest sort-and-aggr-graphql
+   ```
+
+1. Homepage and default layouts have been moved from **templates** to **layout**
+   components. Update any shadowing or links to template layouts.
+1. Run `yarn dev:clean` to delete and rebuild your project's development bundle
 
 ## Troubleshooting
 
----
+<Accordion>
+  <AccordionItem
+    title="Markdown link with title needs double quotes"
+    open={true}>
+this works:
 
-<InlineNotification kind="warning">
-
-The following is still being updated.
-
-</InlineNotification>
-
-Markdown link with title needs double quotes
-
-this works
-
-```
+```mdx
 [I'm a markdown link with title](https://www.carbondesignsystem.com "Carbon's Homepage")
 ```
 
-this does not
+this does not:
 
-```
+```mdx
 [I'm a markdown link with title](https://www.carbondesignsystem.com 'Carbon's
 Homepage')
 ```
+
+    </AccordionItem>
+
+</Accordion>
