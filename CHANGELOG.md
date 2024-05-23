@@ -1,3 +1,11 @@
+### [3.4.22](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.21...v3.4.22) (2024-05-23)
+
+
+### Bug Fixes
+
+* remove vimeo examples ([#1460](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1460)) ([73db2e9](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/73db2e954b543c8c7589994d9781456e5ab74158))
+* **yarn:** update lock file ([ff64a31](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ff64a31d951882dd7b02f90a498cc1b69060df57))
+
 ### [3.4.21](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.20...v3.4.21) (2024-05-22)
 
 ### [3.4.20](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.19...v3.4.20) (2024-05-21)
