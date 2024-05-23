@@ -5,22 +5,53 @@ description: Guide for migrating to v4.0 of the theme
 
 <PageDescription>
 
-Carbon's Gatsby Theme uses version 5 of the Gatsby library. This update combines
-the control and scalability of server-side rendering with the performance of
-static-site generation. The major version change comes with the potential for
-breaking changes, this guide aims to cover the most likely issues a site built
-with the Carbon Gatsby theme might encounter. To have the smoothest possible
-experience, we recommend [upgrading to v3](/guides/v3-migration) of Carbon's
-Gatsby Theme first if you haven't already done so.
+Version 4 of the Carbon Gatsby Theme uses version 5 of the Gatsby library.
+Please read through the
+[release](https://www.gatsbyjs.com/docs/reference/release-notes/v5.0/) notes in
+the Gatsby documentation for more details.
+
+The major version change comes with the potential for breaking changes, this
+guide aims to cover the most likely issues a site built with the Carbon Gatsby
+theme might encounter. To have the smoothest possible experience, we recommend
+[upgrading to v3](/guides/v3-migration) of the Carbon Gatsby Theme first if you
+haven't already done so.
 
 </PageDescription>
 
 ## Breaking changes
 
-1. Bumped minimum version of Gatsby to `v5`
-1. Gatsby files (i.e. gatsby-config.js and gatsby-node.js), need to be converted
-   to **.mjs** (node modules) files.
-1. TBD...
+1. You will need to convert your `gatsby-config.js` and `gatsby-node.js` to
+   **.mjs** (node modules) files.
+
+2. HTML-style comments will no longer work inside of mdx files, you will need to
+   use JavaScript-style comments with curly braces:
+
+```jsx
+// Before
+<!-- Place comments here -->
+// After
+{/* Place comments here */}
+```
+
+4. Homepage and default layouts have been moved from **templates** to **layout**
+   components. Update any shadowing or links to template layouts.
+
+```jsx
+// Before
+import Layout from 'gatsby-theme-carbon/src/templates/Default';
+// After
+import Layout from 'gatsby-theme-carbon/src/components/Layouts/Default';
+```
+
+5. If you are shadowing the homepage you need to update the file path
+   `packages/example/src/components/Homepage.js`
+
+```jsx
+// Before
+import HomepageTemplate from 'gatsby-theme-carbon/src/templates/Homepage';
+// After
+import HomepageTemplate from 'gatsby-theme-carbon/src/components/Layouts/Homepage';
+```
 
 ## Gatsby migration guide
 
@@ -42,25 +73,25 @@ equivalent if your project uses `npm` as its package manager.
 
 1. Update Gatsby to v5
 
-   ```shell
-   yarn add gatsby@latest-v5
-   ```
+```shell
+yarn add gatsby@latest-v5
+```
 
-1. Update Gatsby plugins (including the theme)
+2. Update Gatsby plugins (including the theme)
 
-   ```shell
-   yarn upgrade-interactive --latest
-   ```
+```shell
+yarn upgrade-interactive --latest
+```
 
-1. Update graphql queries using the codemod:
+3. Update graphql queries using the codemod:
 
-   ```shell
-   npx gatsby-codemods@latest sort-and-aggr-graphql
-   ```
+```shell
+npx gatsby-codemods@latest sort-and-aggr-graphql
+```
 
-1. Homepage and default layouts have been moved from **templates** to **layout**
-   components. Update any shadowing or links to template layouts.
-1. Run `yarn dev:clean` to delete and rebuild your project's development bundle
+4. Update any files related to [breaking changes](#breaking-changes) listed
+   above.
+5. Run `yarn dev:clean` to delete and rebuild your project's development bundle
 
 ## Troubleshooting
 
@@ -68,17 +99,12 @@ equivalent if your project uses `npm` as its package manager.
   <AccordionItem
     title="Markdown link with title needs double quotes"
     open={true}>
-this works:
 
-```mdx
-[I'm a markdown link with title](https://www.carbondesignsystem.com "Carbon's Homepage")
-```
-
-this does not:
-
-```mdx
-[I'm a markdown link with title](https://www.carbondesignsystem.com 'Carbon's
-Homepage')
+```jsx
+// Before
+[Link](https://www.carbondesignsystem.com "Carbon")
+// After
+[Link](https://www.carbondesignsystem.com 'Carbon')
 ```
 
     </AccordionItem>
