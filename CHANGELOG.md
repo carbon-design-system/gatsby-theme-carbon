@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.4.22](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.21...v3.4.22) (2024-05-23)
+
+### Bug Fixes
+
+* remove vimeo examples ([#1460](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1460)) ([73db2e9](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/73db2e954b543c8c7589994d9781456e5ab74158))
+* **yarn:** update lock file ([ff64a31](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ff64a31d951882dd7b02f90a498cc1b69060df57))Ks
+
 ## [4.0.0-next.11](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.10...4.0.0-next.11) (2024-05-22)
 
 ## [4.0.0-next.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.10...4.0.0-next.11) (2024-04-17)
@@ -17,9 +24,6 @@
 * **next:** add gatsby-plugin-local-search  ([#1464](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1464)) ([cdee553](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/cdee553fe48fb67d3ee8bef2025e942db082cf90))
 
 ## [4.0.0-next.8](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.10...4.0.0-next.11) (2024-03-20)
-
-
-### Bug Fixes
 
 * caption styles ([#1451](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1451)) ([3511ce6](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/3511ce602109fa3c90fd373c8ecc15ea2fd4416d))
 * feedback form button style ([dc1bbb1](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/dc1bbb137b3d392550460b9c2375e38a28028be3))
