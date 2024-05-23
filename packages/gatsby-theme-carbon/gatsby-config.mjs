@@ -127,10 +127,6 @@ export default (themeOptions) => {
             remarkPlugins: [remarkGfm, ...remarkPlugins],
             rehypePlugins: [rehypeAddCodeMetaData],
           },
-          // defaultLayouts: {
-          //   default: require.resolve('./src/templates/Default.js'),
-          //   home: require.resolve('./src/templates/Homepage.js'),
-          // },
         },
       },
       {
