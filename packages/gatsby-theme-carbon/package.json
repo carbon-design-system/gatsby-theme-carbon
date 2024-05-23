@@ -36,7 +36,7 @@
     "classnames": "^2.5.1",
     "copy-to-clipboard": "^3.3.3",
     "focus-trap-react": "^10.2.3",
-    "gatsby-plugin-catch-links": "^4.25.0",
+    "gatsby-plugin-catch-links": "^5.13.1",
     "gatsby-plugin-lunr": "^1.5.2",
     "gatsby-plugin-manifest": "^4.25.0",
     "gatsby-plugin-mdx": "3.20.0",

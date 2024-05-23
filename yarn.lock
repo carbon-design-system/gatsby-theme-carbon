@@ -1612,6 +1612,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.20.13":
+  version: 7.24.5
+  resolution: "@babel/runtime@npm:7.24.5"
+  dependencies:
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 10/e0f4f4d4503f7338749d1dd92361ad132d683bde64e6b61d6c855e100dcd01592295fcfdcc960c946b85ef7908dc2f501080da58447c05812cf3cd80c599bb62
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.12.7, @babel/template@npm:^7.16.7, @babel/template@npm:^7.22.15, @babel/template@npm:^7.23.9":
   version: 7.23.9
   resolution: "@babel/template@npm:7.23.9"
@@ -9584,7 +9593,7 @@ __metadata:
   resolution: "example@workspace:packages/example"
   dependencies:
     gatsby: "npm:^4.25.8"
-    gatsby-theme-carbon: "npm:^3.4.21"
+    gatsby-theme-carbon: "npm:^3.4.22"
     react: "npm:^17.0.2"
     react-dom: "npm:^17.0.2"
   languageName: unknown
@@ -10553,15 +10562,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-catch-links@npm:^4.25.0":
-  version: 4.25.0
-  resolution: "gatsby-plugin-catch-links@npm:4.25.0"
+"gatsby-plugin-catch-links@npm:^5.13.1":
+  version: 5.13.1
+  resolution: "gatsby-plugin-catch-links@npm:5.13.1"
   dependencies:
-    "@babel/runtime": "npm:^7.15.4"
+    "@babel/runtime": "npm:^7.20.13"
     escape-string-regexp: "npm:^1.0.5"
   peerDependencies:
-    gatsby: ^4.0.0-next
-  checksum: 10/b5a02b080938ce01f302deb5283c040bdda86ac6b148b7fd65e03c9bbf741ad0b8dae436f4fd0641d574ea2e96ac4ff5fa3663580552d709dbf9886e25461657
+    gatsby: ^5.0.0-next
+  checksum: 10/eb8887810656fde10f213e8b7edf786ef1084476b60e5c64a71810a8553f1e6b698bfc8c69518554b23b4e2042edd9fe31ab79c0e15e480163d89259904c23ba
   languageName: node
   linkType: hard
 
@@ -10966,7 +10975,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@npm:^3.4.21, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@npm:^3.4.22, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
@@ -10985,7 +10994,7 @@ __metadata:
     copy-to-clipboard: "npm:^3.3.3"
     focus-trap-react: "npm:^10.2.3"
     gatsby: "npm:^4.25.8"
-    gatsby-plugin-catch-links: "npm:^4.25.0"
+    gatsby-plugin-catch-links: "npm:^5.13.1"
     gatsby-plugin-lunr: "npm:^1.5.2"
     gatsby-plugin-manifest: "npm:^4.25.0"
     gatsby-plugin-mdx: "npm:3.20.0"
