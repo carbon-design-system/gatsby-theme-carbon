@@ -59,7 +59,7 @@
     "prop-types": "^15.8.1",
     "react-helmet": "^6.1.0",
     "react-transition-group": "^4.4.5",
-    "react-use": "^15.3.8",
+    "react-use": "^17.5.0",
     "remark-slug": "^6.1.0",
     "sass": "^1.70.0",
     "slugify": "^1.6.6",

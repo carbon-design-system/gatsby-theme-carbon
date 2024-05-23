@@ -4355,10 +4355,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/js-cookie@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@types/js-cookie@npm:2.2.6"
-  checksum: 10/97c50ff6cd0a27409b028aad94b0c4eb5cc43623532a1bdbbcccdb200539593eff3cc7f0d874b6b9bee586167638e3a10093c811ff6603ff2a9639564c82b3b1
+"@types/js-cookie@npm:^2.2.6":
+  version: 2.2.7
+  resolution: "@types/js-cookie@npm:2.2.7"
+  checksum: 10/851f47e94ca1fc43661d8f51614d67a613e7810c91b876d0a3b311ce72f7df800107fd02a08cb6948184e12c120b4f058edca2f50424d8798bdcffd6627281e3
   languageName: node
   linkType: hard
 
@@ -4859,7 +4859,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xobotyi/scrollbar-width@npm:1.9.5":
+"@xobotyi/scrollbar-width@npm:^1.9.5":
   version: 1.9.5
   resolution: "@xobotyi/scrollbar-width@npm:1.9.5"
   checksum: 10/026ccd174ec3ce032f42794c7e2ee9dab3cfee4f8f9d6ce4f2b4a2fe50cbf8be7406583fb2e203707c699690c5d40a13ee1611f1f67f6ceb01ac2a543acadc30
@@ -7459,7 +7459,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"copy-to-clipboard@npm:^3.2.0, copy-to-clipboard@npm:^3.3.1, copy-to-clipboard@npm:^3.3.3":
+"copy-to-clipboard@npm:^3.3.1, copy-to-clipboard@npm:^3.3.3":
   version: 3.3.3
   resolution: "copy-to-clipboard@npm:3.3.3"
   dependencies:
@@ -9584,7 +9584,7 @@ __metadata:
   resolution: "example@workspace:packages/example"
   dependencies:
     gatsby: "npm:^4.25.8"
-    gatsby-theme-carbon: "npm:^3.4.21"
+    gatsby-theme-carbon: "npm:^3.4.22"
     react: "npm:^17.0.2"
     react-dom: "npm:^17.0.2"
   languageName: unknown
@@ -10966,7 +10966,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@npm:^3.4.21, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@npm:^3.4.22, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
@@ -11010,7 +11010,7 @@ __metadata:
     react-dom: "npm:^17.0.2"
     react-helmet: "npm:^6.1.0"
     react-transition-group: "npm:^4.4.5"
-    react-use: "npm:^15.3.8"
+    react-use: "npm:^17.5.0"
     remark-slug: "npm:^6.1.0"
     sass: "npm:^1.70.0"
     slugify: "npm:^1.6.6"
@@ -15293,7 +15293,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nano-css@npm:^5.2.1":
+"nano-css@npm:^5.6.1":
   version: 5.6.1
   resolution: "nano-css@npm:5.6.1"
   dependencies:
@@ -17908,28 +17908,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-use@npm:^15.3.8":
-  version: 15.3.8
-  resolution: "react-use@npm:15.3.8"
+"react-use@npm:^17.5.0":
+  version: 17.5.0
+  resolution: "react-use@npm:17.5.0"
   dependencies:
-    "@types/js-cookie": "npm:2.2.6"
-    "@xobotyi/scrollbar-width": "npm:1.9.5"
-    copy-to-clipboard: "npm:^3.2.0"
+    "@types/js-cookie": "npm:^2.2.6"
+    "@xobotyi/scrollbar-width": "npm:^1.9.5"
+    copy-to-clipboard: "npm:^3.3.1"
     fast-deep-equal: "npm:^3.1.3"
     fast-shallow-equal: "npm:^1.0.0"
     js-cookie: "npm:^2.2.1"
-    nano-css: "npm:^5.2.1"
+    nano-css: "npm:^5.6.1"
     react-universal-interface: "npm:^0.6.2"
     resize-observer-polyfill: "npm:^1.5.1"
-    screenfull: "npm:^5.0.0"
+    screenfull: "npm:^5.1.0"
     set-harmonic-interval: "npm:^1.0.1"
-    throttle-debounce: "npm:^2.1.0"
+    throttle-debounce: "npm:^3.0.1"
     ts-easing: "npm:^0.2.0"
-    tslib: "npm:^2.0.0"
+    tslib: "npm:^2.1.0"
   peerDependencies:
-    react: ^16.8.0  || ^17.0.0
-    react-dom: ^16.8.0  || ^17.0.0
-  checksum: 10/ea493db38d8aa94917b547f7dfbc6dc5abee4a8d56e7c386df4409b9215c53cac37235ae5b5bcc6e63bf36933d69572baeb60667831e7561098a0493ac038a12
+    react: "*"
+    react-dom: "*"
+  checksum: 10/5d81fe0902303d3ed7810cdd56c6cae12b08124a3d4fcbfa3924327105b81447b039ea9d6aff20aac3c13999f949000870a7a2fa29fe20ed844ac26606462fa0
   languageName: node
   linkType: hard
 
@@ -19082,7 +19082,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"screenfull@npm:^5.0.0":
+"screenfull@npm:^5.1.0":
   version: 5.2.0
   resolution: "screenfull@npm:5.2.0"
   checksum: 10/b8b4b8010f48889341ad1981ca9e6e02db1f10dec686244d95bd2bfde47451059f5ba4c744449913b10f021f14f79d374987a873b6086eb488295962ba50381e
@@ -20708,10 +20708,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"throttle-debounce@npm:^2.1.0":
-  version: 2.3.0
-  resolution: "throttle-debounce@npm:2.3.0"
-  checksum: 10/efed4a2d0528ece05d95cb7b4d1e11e501bfd55853746ab6eae02df38ea3220fc1be9746621db46b733edd61a12774684c137f5b40d71728bf0ea553d6a7e693
+"throttle-debounce@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "throttle-debounce@npm:3.0.1"
+  checksum: 10/c2b591bc881c595d44d5ee82cc607747569a84cd9652e7d9613d92759d84ffd61eab1ca56c6a294316b8c9978ff6d46c2c94ed95de5847f3de4b6c30342cb947
   languageName: node
   linkType: hard
 
@@ -20937,7 +20937,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.0, tslib@npm:^2.0.1, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.4.0, tslib@npm:^2.6.2":
+"tslib@npm:^2.0.1, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.4.0, tslib@npm:^2.6.2":
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: 10/bd26c22d36736513980091a1e356378e8b662ded04204453d353a7f34a4c21ed0afc59b5f90719d4ba756e581a162ecbf93118dc9c6be5acf70aa309188166ca
