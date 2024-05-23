@@ -40,9 +40,11 @@ equivalent if your project uses `npm` as its package manager.
 </InlineNotification>
 
 1. Update Gatsby to v4
+
    ```
    yarn add gatsby@latest-v4
    ```
+
 2. Update gatsby plugins (including the theme)
 
    ```
@@ -85,7 +87,7 @@ imported by size, instead size is configured via the `size` prop. Full details
 can be found in the
 [Carbon v11 migration guide](https://github.com/carbon-design-system/carbon/blob/main/docs/migration/v11.md#changes-to-size).
 
-<!-- prettier-ignore-start -->
+{/* prettier-ignore-start */}
 ```md path=Before
 import { Add32, Add24, Add20, Add16 } from '@carbon/icons-react';
 
@@ -115,7 +117,7 @@ function MyComponent() {
   );
 }
 ```
-<!-- prettier-ignore-end -->
+{/* prettier-ignore-end */}
 
 A very easy way to make this change is to use the automated migration tool
 available from the

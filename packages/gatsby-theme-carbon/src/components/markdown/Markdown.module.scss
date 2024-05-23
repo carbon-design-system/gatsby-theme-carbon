@@ -25,10 +25,33 @@
   }
 }
 
-// responsive items in a list need to be full width
-.list-item .paragraph,
-.list-item :global(.cds--row) {
-  width: 100%;
+//---------------------------------------
+// Lists OL and UL
+//---------------------------------------
+
+ol.ordered {
+  margin-left: $spacing-06;
+  width: calc(100% - $spacing-05);
+
+  @include breakpoint('md') {
+    width: calc(75% - $spacing-07);
+  }
+
+  @include breakpoint('lg') {
+    width: calc(66.667% - $spacing-07);
+  }
+}
+
+ul.unordered {
+  width: calc(100% - $spacing-05);
+
+  @include breakpoint('md') {
+    width: calc(75% - $spacing-07);
+  }
+
+  @include breakpoint('lg') {
+    width: calc(66.667% - $spacing-07);
+  }
 }
 
 //---------------------------------------
@@ -61,122 +84,33 @@
   --space: 0;
 }
 
-.list {
-  padding-right: $spacing-05;
-  margin-right: 0;
-  margin-left: 0;
-
-  @include breakpoint('md') {
-    width: 100%;
-    padding-right: $spacing-07;
-    margin-right: 0;
-    margin-left: 0;
-  }
-
-  @include breakpoint('lg') {
-    width: 66.667%;
-  }
-}
-
-//spacing exception for nested list items
-:global(.cds--list--nested) {
-  --space: 0;
-  width: 100%;
-}
-
-ul :global(.cds--list--ordered--native),
-ul :global(.cds--list--unordered) {
-  width: 100%;
-  padding-right: $spacing-05;
-}
-
-:global(.cds--list--ordered--native) .list-item,
-:global(.cds--list--unordered) .list-item {
-  @include type-style('body-long-02');
-  padding-right: 0;
-  width: 100%;
-  margin-left: $spacing-05;
-  padding-left: $spacing-02;
-}
-
-.list:not(:global(.cds--list--nested)) > .list-item {
-  padding-right: 2rem;
-  @include breakpoint('md') {
-    width: 75%;
-  }
-  @include breakpoint('lg') {
-    width: 100%;
-  }
-}
-
-// aligns UNnested ordered list item to body copy
-:global(.cds--list--ordered--native:not(.cds--list--nested)) {
-  margin-left: 1ch;
-}
-
-// aligns NESTED ordered list item to parent list item text #993
-:global(.cds--list--ordered--native.cds--list--nested) {
-  margin-left: 0.5rem;
-}
-
-//Safari only fixes to align unnested/nested ordered list to body copy #993
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  :global(.cds--list--ordered:not(.cds--list--nested)) {
-    padding-left: 0.5ch;
-  }
-
-  :global(.cds--list--ordered.cds--list--nested) {
-    padding-left: 0.25rem;
-  }
-}
-
-// Fix bleed when code snippets are used in a list
-.list-item > pre {
-  margin-left: 1rem;
-  margin-top: $spacing-05;
-  @include breakpoint('md') {
-    margin-right: $spacing-05 * -1;
-  }
-}
-
-:global(.container--dark) :global(.cds--list__item) {
-  color: $white;
-}
-
-//spacing for content within list item
-.list-item > * + *:not(:global(.cds--link)) {
-  margin-top: var(--space);
-
-  &:last-child {
-    margin-bottom: var(--space);
-  }
-}
-
 //---------------------------------------
 // Blockquote
 //---------------------------------------
-.blockquote {
-  margin: $spacing-08 0;
-  color: $text-01;
-  margin-left: $spacing-05;
-  padding-left: 1ch;
-  @include breakpoint('md') {
-    margin-left: $spacing-08;
+div {
+  .blockquote {
+    margin: $spacing-08 0;
+    color: $text-01;
+    margin-left: $spacing-05;
+    padding-left: 1ch;
+    @include breakpoint('md') {
+      margin-left: $spacing-08;
+    }
   }
-}
 
-.blockquote .paragraph {
-  position: relative;
-  @include type-style('expressive-heading-03', true);
-  font-style: italic;
-  margin-bottom: 0;
-  width: 100%;
-}
+  .blockquote .paragraph {
+    position: relative;
+    @include type-style('expressive-heading-03', true);
+    font-style: italic;
+    margin-bottom: 0;
+    width: 100%;
+  }
 
-.blockquote .paragraph--responsive {
-  // 8 col
-  @include breakpoint('lg') {
-    width: calc(66.667% - 3rem);
+  .blockquote .paragraph--responsive {
+    // 8 col
+    @include breakpoint('lg') {
+      width: calc(66.667% - 3rem);
+    }
   }
 }
 
@@ -193,16 +127,6 @@ ul :global(.cds--list--unordered) {
   display: block;
   margin-top: $spacing-02;
   text-indent: 0;
-}
-
-:global(
-    .cds--list--ordered:not(.cds--list--nested) > .cds--list__item::before
-  ) {
-  display: none;
-}
-
-:global(.cds--list--ordered:not(.cds--list--nested)) .list-item {
-  margin-left: 0.5rem;
 }
 
 // If paragraph is inside a user specified row then allow the grid code to set the width and padding
@@ -225,7 +149,8 @@ ul :global(.cds--list--unordered) {
   @include type-style('expressive-heading-05', true);
 }
 
-.h2 {
+.h2,
+h2.h2 {
   --space: #{$spacing-11};
   margin-top: var(--space);
   @include type-style('expressive-heading-04', true);
@@ -262,5 +187,9 @@ ul :global(.cds--list--unordered) {
 
 //needed for proper spacing for image with caption
 img {
+  display: block;
+}
+
+span:has(:global(.gatsby-resp-image-wrapper)) {
   display: block;
 }

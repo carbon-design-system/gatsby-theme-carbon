@@ -1,10 +1,10 @@
 import React from 'react';
-import Layout from '../components/Layout';
-import Main from '../components/Main';
-import useMetadata from '../util/hooks/useMetadata';
-import Utils from '../components/Utils';
+import Layout from '../Layout';
+import Main from '../Main';
+import useMetadata from '../../util/hooks/useMetadata';
+import Utils from '../Utils';
 
-import NextPrevious from '../components/NextPrevious';
+import NextPrevious from '../NextPrevious';
 
 const Homepage = ({
   children,

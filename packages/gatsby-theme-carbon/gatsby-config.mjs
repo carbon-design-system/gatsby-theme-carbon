@@ -1,22 +1,40 @@
-const path = require('path');
-const { gray100 } = require('@carbon/elements');
-const defaultLunrOptions = require('./config/lunr-options');
+import path, { dirname } from 'path';
+import { gray100 } from '@carbon/elements';
 
+/*
+We have tied the version to be 3.0.1 as the latest version will uses markdown 3 is not fully supported by gatsby v5 at the moment
+More info - https://github.com/mdx-js/mdx/issues/2379#issuecomment-1933035305
+*/
+import remarkGfm from 'remark-gfm';
+import { fileURLToPath } from 'url';
+
+/*
+  This is a rehype plugin that adds support for metadata to the fenced code block
+  For eg: 
+  ```jsx path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com
+  const a = 10;
+  ```
+  A metaData prop of format path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com is added to the code block
+*/
+import rehypeAddCodeMetaData from 'rehype-mdx-fenced-code-meta-support';
+import defaultLocalSearchOptions from './config/local-search-options.mjs';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const carbonThemes = {
-  white: require.resolve('./src/styles/internal/white.scss'),
-  g10: require.resolve('./src/styles/internal/g10.scss'),
-  dark: require.resolve('./src/styles/internal/g100.scss'),
+  white: './src/styles/internal/white.scss',
+  g10: './src/styles/internal/g10.scss',
+  dark: './src/styles/internal/g100.scss',
 };
 
-module.exports = (themeOptions) => {
-  const repositoryDefault = {
-    baseUrl: '',
-    subDirectory: '',
-    branch: 'main',
-  };
+const repositoryDefault = {
+  baseUrl: '',
+  subDirectory: '',
+  branch: 'main',
+};
 
-  const defaultTheme = { homepage: 'dark', interior: 'g10' };
+const defaultTheme = { homepage: 'dark', interior: 'g10' };
 
+export default (themeOptions) => {
   const {
     theme: themeOption,
     isSearchEnabled = true,
@@ -25,20 +43,17 @@ module.exports = (themeOptions) => {
     iconPath,
     mdxExtensions = ['.mdx', '.md'],
     imageQuality = 75,
-    lunrOptions = defaultLunrOptions,
+    localSearchOptions = defaultLocalSearchOptions,
     repository,
-    pngCompressionSpeed = 4, // default for gatsby-plugin-sharp
     mediumAccount = '',
     gatsbyRemarkPlugins = [],
     remarkPlugins = [],
     gatsbyPluginSharpOptions = {},
     isServiceWorkerEnabled = false,
     isSwitcherEnabled = true,
-    extraLayouts = {},
   } = themeOptions;
 
   const theme = { ...defaultTheme, ...themeOption };
-
   const optionalPlugins = [];
 
   if (mediumAccount) {
@@ -65,7 +80,6 @@ module.exports = (themeOptions) => {
         linkImagesToOriginal: false,
         quality: imageQuality,
         withWebp,
-        pngCompressionSpeed,
         ...gatsbyPluginSharpOptions,
       },
     },
@@ -74,6 +88,7 @@ module.exports = (themeOptions) => {
   ];
 
   return {
+    trailingSlash: `always`,
     siteMetadata: {
       isSearchEnabled,
       navigationStyle,
@@ -94,10 +109,6 @@ module.exports = (themeOptions) => {
       `gatsby-transformer-yaml`,
       `gatsby-plugin-catch-links`,
       {
-        resolve: 'gatsby-plugin-lunr',
-        options: lunrOptions,
-      },
-      {
         resolve: `gatsby-source-filesystem`,
         name: `Nav`,
         options: {
@@ -112,11 +123,9 @@ module.exports = (themeOptions) => {
             ...defaultRemarkPlugins,
             ...gatsbyRemarkPlugins,
           ],
-          remarkPlugins,
-          defaultLayouts: {
-            default: require.resolve('./src/templates/Default.js'),
-            home: require.resolve('./src/templates/Homepage.js'),
-            ...extraLayouts,
+          mdxOptions: {
+            remarkPlugins: [remarkGfm, ...remarkPlugins],
+            rehypePlugins: [rehypeAddCodeMetaData],
           },
         },
       },
@@ -129,11 +138,11 @@ module.exports = (themeOptions) => {
         },
       },
       {
-        resolve: `gatsby-plugin-sass-resources`,
+        resolve: `@garcia-enterprise/gatsby-plugin-sass-resources`,
         options: {
           resources: [
-            require.resolve('./src/styles/internal/resources.scss'),
-            carbonThemes[theme.interior],
+            path.resolve(__dirname, `./src/styles/internal/resources.scss`),
+            path.resolve(__dirname, carbonThemes[theme.interior]),
           ],
         },
       },
@@ -163,8 +172,12 @@ module.exports = (themeOptions) => {
           display: 'browser',
           icon: iconPath
             ? path.resolve(iconPath)
-            : require.resolve('./src/images/favicon.svg'),
+            : path.resolve('./src/images/favicon.svg'),
         },
+      },
+      {
+        resolve: 'gatsby-plugin-local-search',
+        options: localSearchOptions,
       },
     ].concat(optionalPlugins),
   };

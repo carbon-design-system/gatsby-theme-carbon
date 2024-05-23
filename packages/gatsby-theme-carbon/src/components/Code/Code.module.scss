@@ -62,6 +62,7 @@ li .row {
   position: relative;
   overflow: auto;
   width: 100%;
+  text-wrap: wrap;
 }
 
 .sideBarMinHeight {
@@ -173,6 +174,11 @@ li .row {
   outline-offset: -2px;
   z-index: 1000;
   font-size: 0;
+
+  svg {
+    fill: $icon-on-color;
+  }
+
   &:hover {
     background-color: $gray-80;
   }

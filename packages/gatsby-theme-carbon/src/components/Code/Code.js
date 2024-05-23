@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Highlight, { defaultProps } from 'prism-react-renderer';
+import React, { useEffect, useState } from 'react';
+import { Highlight } from 'prism-react-renderer';
 import { ChevronDown, ChevronUp } from '@carbon/react/icons';
 
 import cx from 'classnames';
@@ -14,43 +14,88 @@ import Sidebar from './Sidebar';
 
 import useMetadata from '../../util/hooks/useMetadata';
 
-const Code = ({ children, className: classNameProp = '', path, src }) => {
+const Code = ({ children, className: classNameProp = '', metaData }) => {
+  const [path, setPath] = useState('');
+  const [src, setSrc] = useState('');
+  const [showAll, setShowAll] = useState(false);
   const [hasMoreThanNineLines, setHasMoreThanNineLines] = useState(false);
   const [shouldShowMore, setShouldShowMore] = useState(false);
+  const [isInlineCode, setIsInlineCode] = useState(false);
+  useEffect(() => {
+    // Inline code blocks don't have a className prop
+    if (!classNameProp) {
+      setIsInlineCode(true);
+    }
+  }, [classNameProp]);
+
+  useEffect(() => {
+    // metaData string is of format: path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com
+    if (metaData) {
+      const metaDataObject = metaData.split(' ').reduce((obj, item) => {
+        const [key, value] = item.split('=');
+
+        // Checking for boolean values coming as string or not coming like in showAll prop
+        if (value === 'true' || !value) {
+          obj[key] = true;
+        } else if (value === 'false') {
+          obj[key] = false;
+        } else {
+          // else setting what is passed after =
+          obj[key] = value;
+        }
+        return obj;
+      }, {});
+
+      if (metaDataObject.path) {
+        setPath(metaDataObject.path);
+      }
+
+      if (metaDataObject.src) {
+        setSrc(metaDataObject.src);
+      }
+
+      if (metaDataObject.showAll) {
+        setShowAll(true);
+      }
+    }
+  }, [metaData]);
 
   const { interiorTheme } = useMetadata();
-
   const language = classNameProp.replace(/language-/, '').replace('mdx', 'jsx');
 
   const removeTrailingEmptyLine = (lines) => {
-    const [lastLine] = lines.splice(-1);
-    if (lastLine[0].empty) {
+    const [lastLine] = lines[lines.length - 1];
+
+    // empty is a boolean property coming inside the lastLine object
+    if (lastLine.empty) {
+      lines.splice(-1);
       return lines;
     }
-    return [...lines, lastLine];
+    return [...lines];
   };
 
   const getLines = (lines) => {
-    const withoutTrailingEmpty = removeTrailingEmptyLine(lines);
-
-    if (withoutTrailingEmpty.length > 9) {
+    const withoutTrailingEmptyLines = removeTrailingEmptyLine(lines);
+    if (withoutTrailingEmptyLines && withoutTrailingEmptyLines.length > 9) {
       setHasMoreThanNineLines(true);
     }
-
-    if (shouldShowMore) {
-      return withoutTrailingEmpty;
+    if (shouldShowMore || showAll) {
+      return withoutTrailingEmptyLines;
     }
-
-    return withoutTrailingEmpty.slice(0, 9);
+    return withoutTrailingEmptyLines.slice(0, 9);
   };
 
+  // TODO - remove this once we have a better way of handling inline code. This seems like a hack
+  // This might be the result of upgrade of prism-react-renderer.
+  if (isInlineCode) {
+    return <code>{children}</code>;
+  }
   return (
     <Row className={cx(styles.row)}>
       <PathRow src={src} path={path}>
         {children}
       </PathRow>
       <Highlight
-        {...defaultProps}
         code={children}
         language={language}
         theme={getTheme(interiorTheme)}>
@@ -76,7 +121,7 @@ const Code = ({ children, className: classNameProp = '', path, src }) => {
           </div>
         )}
       </Highlight>
-      {hasMoreThanNineLines && (
+      {hasMoreThanNineLines && !showAll && (
         <button
           className={cx(styles.showMoreButton, {
             [styles.dark]: interiorTheme === 'dark',

@@ -20,6 +20,10 @@ $z-02: 2;
   width: 100%;
   background: rgba(0, 0, 0, 0.9);
   overflow: hidden;
+
+  span {
+    width: 100%;
+  }
 }
 
 .gallery-grid {

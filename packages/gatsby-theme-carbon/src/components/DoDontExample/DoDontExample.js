@@ -4,7 +4,7 @@ import cx from 'classnames';
 import { CheckmarkFilled, Misuse } from '@carbon/react/icons';
 
 export default class DoDontExample extends React.Component {
-  renderCaption = (caption, captionTitle) => {
+  static renderCaption = (caption, captionTitle) => {
     if (caption || captionTitle) {
       return (
         <div className="cds--example__caption">
@@ -62,7 +62,7 @@ export default class DoDontExample extends React.Component {
             </div>
           </div>
         </div>
-        {this.renderCaption(caption, captionTitle)}
+        {DoDontExample.renderCaption(caption, captionTitle)}
       </div>
     );
   }

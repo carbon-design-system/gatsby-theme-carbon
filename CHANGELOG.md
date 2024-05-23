@@ -1,10 +1,88 @@
-### [3.4.22](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.21...v3.4.22) (2024-05-23)
+# Changelog
 
+### [3.4.22](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.21...v3.4.22) (2024-05-23)
 
 ### Bug Fixes
 
 * remove vimeo examples ([#1460](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1460)) ([73db2e9](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/73db2e954b543c8c7589994d9781456e5ab74158))
-* **yarn:** update lock file ([ff64a31](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ff64a31d951882dd7b02f90a498cc1b69060df57))
+* **yarn:** update lock file ([ff64a31](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ff64a31d951882dd7b02f90a498cc1b69060df57))Ks
+
+## [4.0.0-next.11](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.10...4.0.0-next.11) (2024-05-22)
+
+## [4.0.0-next.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.10...4.0.0-next.11) (2024-04-17)
+
+
+### Features
+
+* add max results to search ([#1466](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1466)) ([6b36135](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/6b361356cfc9952501943c65282eca226a686545))
+
+## [4.0.0-next.9](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.10...4.0.0-next.11) (2024-04-17)
+
+
+### Features
+
+* **next:** add gatsby-plugin-local-search  ([#1464](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1464)) ([cdee553](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/cdee553fe48fb67d3ee8bef2025e942db082cf90))
+
+## [4.0.0-next.8](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.10...4.0.0-next.11) (2024-03-20)
+
+* caption styles ([#1451](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1451)) ([3511ce6](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/3511ce602109fa3c90fd373c8ecc15ea2fd4416d))
+* feedback form button style ([dc1bbb1](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/dc1bbb137b3d392550460b9c2375e38a28028be3))
+* warnings ([#1450](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1450)) ([ba2e9af](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ba2e9af6573d38b294a48692335e6c02fc87bad2))
+
+## [4.0.0-next.7](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.10...4.0.0-next.11) (2024-03-15)
+
+## [4.0.0-next.6](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.10...4.0.0-next.11) (2024-03-15)
+
+
+### Bug Fixes
+
+* copy button color token ([#1441](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1441)) ([69eb948](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/69eb94836f15f77ce3648ef1bc4dc901a460510e))
+* regression in code blocks - default prop ([#1442](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1442)) ([09f2ee0](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/09f2ee0579cbf3c0cfc1ec7333436290b98a2249))
+* release ([9ce7b5b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9ce7b5b213ed01067f6247e4832e3d81b082b85b))
+
+## [4.0.0-next.5.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.10...4.0.0-next.11) (2024-03-09)
+
+
+### Bug Fixes
+
+* code blocks in mdx + issues/868 ([#1422](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1422)) ([7aa23ec](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/7aa23ec57534460459480c4b17004099a4096005))
+* heading spacing ([21d02d1](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/21d02d13b4cf6188509ab8edbf855e5a2da2d7e4))
+* nested list styling for v5 ([#1438](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1438)) ([37fb939](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/37fb939bc05429cf8620d33573b2262e1ac7bc14))
+* v5 issues ([#1431](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1431)) ([c6f49be](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c6f49be1d78d6a2af15008991ecad9f0a002a937))
+* **yarn:** revert lock file changes ([d45b3e0](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/d45b3e09b194c81c28cc73649b761948984cfb93))
+
+## [4.0.0-next.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.10...4.0.0-next.11) (2024-02-07)
+
+## [4.0.0-next.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.10...4.0.0-next.11) (2024-02-07)
+
+
+### Features
+
+* **deps:** update node to 18 ([#1278](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1278)) ([8faa49f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8faa49f8fefcf7b304b92b0c7461d5370b06929f))
+* **layouts:** start converting to use layouts ([5dbfef3](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/5dbfef39f8c0ef12c9e71e0cd148cdff164fc46d))
+* update [@commitlint](https://github.com/commitlint) ([a12ea4c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/a12ea4ce5a3cc939c9b81414f6e287164bcd1b1c))
+* update release-it ([c86d58e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c86d58eb9d6c81bd1b926c1f23a3aeee528fa688))
+
+
+### Bug Fixes
+
+* **format:** run prettier ([1e80c1a](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/1e80c1a68ea56449b9c38008db8bcf32d307e53e))
+* linting,imports in code ([#1414](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1414)) ([43d67cb](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/43d67cbbf93e0334a3bb1932d99c2e2b99dd4c67))
+* **lint:** update wesbos ([c5359c6](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c5359c6842d92121a851df69a36257f57d484641))
+* **path:** update layout path ([18344af](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/18344afc5d173f2dc49e9058892562d28339bbf0))
+* remove extraLayouts ([6c4c0dd](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/6c4c0dd84a349c181a083dbbf2369ff6547d5c26))
+* run gatsby codemods ([44cdc5e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/44cdc5e03bacc963ca613398a204dae91433945f))
+* **scss:** import + other minor fixes ([#1410](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1410)) ([ffa7fbc](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ffa7fbc746da6eb4a1f0345d1b340b31a1bab135))
+
+## [3.4.21](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.10...4.0.0-next.11) (2024-05-22)
+
+## [3.4.20](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.10...4.0.0-next.11) (2024-05-21)
+
+## [3.4.19](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.10...4.0.0-next.11) (2024-04-25)
+
+## [3.4.18](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.10...4.0.0-next.11) (2024-04-11)
+
+## [3.4.17](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.10...4.0.0-next.11) (2024-04-01)
 
 ### [3.4.21](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.20...v3.4.21) (2024-05-22)
 
@@ -18,6 +96,66 @@
 
 ### [3.4.16](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.15...v3.4.16) (2024-02-28)
 
+## [4.0.0-next.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.9...4.0.0-next.10) (2024-04-17)
+
+
+### Features
+
+* add max results to search ([#1466](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1466)) ([6b36135](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/6b361356cfc9952501943c65282eca226a686545))
+
+## [4.0.0-next.9](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.8...4.0.0-next.9) (2024-04-17)
+
+
+### Features
+
+* **next:** add gatsby-plugin-local-search  ([#1464](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1464)) ([cdee553](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/cdee553fe48fb67d3ee8bef2025e942db082cf90))
+
+## [4.0.0-next.8](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.7...4.0.0-next.8) (2024-03-20)
+
+
+### Bug Fixes
+
+* caption styles ([#1451](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1451)) ([3511ce6](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/3511ce602109fa3c90fd373c8ecc15ea2fd4416d))
+* feedback form button style ([dc1bbb1](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/dc1bbb137b3d392550460b9c2375e38a28028be3))
+* warnings ([#1450](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1450)) ([ba2e9af](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ba2e9af6573d38b294a48692335e6c02fc87bad2))
+
+## [4.0.0-next.7](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/4.0.0-next.6...4.0.0-next.7) (2024-03-15)
+
+## [4.0.0-next.5.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.16...v4.0.0-next.5.0) (2024-03-09)
+
+
+### Bug Fixes
+
+* code blocks in mdx + issues/868 ([#1422](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1422)) ([7aa23ec](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/7aa23ec57534460459480c4b17004099a4096005))
+* heading spacing ([21d02d1](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/21d02d13b4cf6188509ab8edbf855e5a2da2d7e4))
+* nested list styling for v5 ([#1438](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1438)) ([37fb939](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/37fb939bc05429cf8620d33573b2262e1ac7bc14))
+* v5 issues ([#1431](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1431)) ([c6f49be](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c6f49be1d78d6a2af15008991ecad9f0a002a937))
+* **yarn:** revert lock file changes ([d45b3e0](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/d45b3e09b194c81c28cc73649b761948984cfb93))
+
+## [4.0.0-next.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.16...v4.0.0-next.5.0) (2024-02-07)
+
+## [4.0.0-next.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.16...v4.0.0-next.5.0) (2024-02-07)
+
+
+### Features
+
+* **deps:** update node to 18 ([#1278](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1278)) ([8faa49f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8faa49f8fefcf7b304b92b0c7461d5370b06929f))
+* **layouts:** start converting to use layouts ([5dbfef3](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/5dbfef39f8c0ef12c9e71e0cd148cdff164fc46d))
+* update [@commitlint](https://github.com/commitlint) ([a12ea4c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/a12ea4ce5a3cc939c9b81414f6e287164bcd1b1c))
+* update release-it ([c86d58e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c86d58eb9d6c81bd1b926c1f23a3aeee528fa688))
+
+
+### Bug Fixes
+
+* **format:** run prettier ([1e80c1a](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/1e80c1a68ea56449b9c38008db8bcf32d307e53e))
+* linting,imports in code ([#1414](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1414)) ([43d67cb](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/43d67cbbf93e0334a3bb1932d99c2e2b99dd4c67))
+* **lint:** update wesbos ([c5359c6](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c5359c6842d92121a851df69a36257f57d484641))
+* **path:** update layout path ([18344af](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/18344afc5d173f2dc49e9058892562d28339bbf0))
+* remove extraLayouts ([6c4c0dd](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/6c4c0dd84a349c181a083dbbf2369ff6547d5c26))
+* run gatsby codemods ([44cdc5e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/44cdc5e03bacc963ca613398a204dae91433945f))
+* **scss:** import + other minor fixes ([#1410](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1410)) ([ffa7fbc](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ffa7fbc746da6eb4a1f0345d1b340b31a1bab135))
+
+### [3.4.16](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.15...v3.4.16) (2024-02-28)
 
 ### Bug Fixes
 
@@ -31,7 +169,6 @@
 
 ### [3.4.12](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.11...v3.4.12) (2024-02-15)
 
-
 ### Bug Fixes
 
 * **404:** use color tokens in FourOhFour styles ([#1317](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1317)) ([b9fca83](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/b9fca83a0233ddbbccf9b1e22de845a37616c7e7)), closes [#1309](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1309)
@@ -42,12 +179,15 @@
 
 ### [3.4.9](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.8...v3.4.9) (2024-02-08)
 
-### [3.4.8](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.7...v3.4.8) (2024-02-06)
+## [4.0.0-next.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.0-next.3...v4.0.0-next.4) (2024-02-07)
 
+### [3.4.8](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.7...v3.4.8) (2024-02-06)
 
 ### Reverts
 
 * Revert "chore(release): update carbon deps" (#1413) ([0ad65c6](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0ad65c647744af72954bce4d8a890ea202166534)), closes [#1413](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1413) [#1411](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1411)
+
+## [4.0.0-next.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.0-next.1...v4.0.0-next.2) (2023-02-05)
 
 ### [3.4.7](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.6...v3.4.7) (2024-02-06)
 
@@ -57,13 +197,11 @@
 
 ### [3.4.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.3...v3.4.4) (2024-02-01)
 
-
 ### Bug Fixes
 
 * **yarn:** update lock file ([b81e486](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/b81e486592a36493d8b27827946c060a38528f31))
 
 ### [3.4.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.4.2...v3.4.3) (2024-02-01)
-
 
 ### Reverts
 
@@ -75,7 +213,6 @@
 
 ## [3.4.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.3.2...v3.4.0) (2024-01-23)
 
-
 ### Features
 
 * update plex to 6.3 ([#1395](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1395)) ([3e1be75](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/3e1be751c02220cacc9019938762315b5afa1e8c))
@@ -85,7 +222,6 @@
 ### [3.3.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.3.0...v3.3.1) (2024-01-22)
 
 ## [3.3.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.2.4...v3.3.0) (2024-01-11)
-
 
 ### Features
 
@@ -97,7 +233,6 @@
 
 ### [3.2.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.2.1...v3.2.2) (2023-12-12)
 
-
 ### Bug Fixes
 
 * **a11y:** add labels for input controls ([0969a44](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0969a4470d025a8a20bbf515c9fc3dba2dff3c90))
@@ -106,7 +241,6 @@
 ### [3.2.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.2.0...v3.2.1) (2023-12-12)
 
 ## [3.2.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.1.37...v3.2.0) (2023-12-11)
-
 
 ### Features
 
@@ -190,27 +324,27 @@
 
 ## [3.1.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0...v3.1.0) (2022-12-01)
 
+## [4.0.0-next.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.0-next.0...v4.0.0-next.1) (2022-12-01)
+
+## [4.0.0-next.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0...v4.0.0-next.0) (2022-12-01)
 
 ### Features
 
+* **deps:** update node to 18 ([#1278](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1278)) ([3ac2df9](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/3ac2df9696b7f0d1ef8aa614a01a4b96a1b8f0be))
 * **yarn:** upgrade to v2 ([#1276](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1276)) ([2ce1f9e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/2ce1f9ed966a493ba1ef18034e1401067be3ce63)), closes [#1275](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1275)
-
 
 ### Bug Fixes
 
 * **font:** use gatsby for static file hosting ([#1281](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1281)) ([d012c62](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/d012c62592e31b92a7f30dbf65eb95647cee7ac4))
 * **minicard:** export from root index.js ([#1272](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1272)) ([e2b2039](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/e2b20393e008fbf27a35884c4de4592e44a14803))
 
-
 ### Reverts
 
-* Revert "build(deps): update node to 18 (#1278)" (#1284) ([cb4ab05](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/cb4ab05066b81a0aa7f790741ac92ea278fbe4dd)), closes [#1278](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1278) [#1284](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1284)
 * Revert "fix(font): use gatsby for static file hosting (#1281)" (#1283) ([db7aea5](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/db7aea5dc09ac61d7a79c57ae6c7436891cd5654)), closes [#1281](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1281) [#1283](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1283)
 
 ## [3.0.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.3.2...v3.0.0) (2022-10-24)
 
 ## [3.0.0-next.13](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.12...v3.0.0-next.13) (2022-10-05)
-
 
 ### Features
 
@@ -220,20 +354,17 @@
 
 ## [3.0.0-next.12](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.11...v3.0.0-next.12) (2022-06-16)
 
-
 ### Bug Fixes
 
 * **markdown:** ensure links within lists do not have padding ([#1246](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1246)) ([a319516](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/a319516454199c1415e4df3296f4b96d83f9291c))
 
 ## [3.0.0-next.11](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.10...v3.0.0-next.11) (2022-05-18)
 
-
 ### Bug Fixes
 
 * **grid:** add _grid.scss and move over flex grid for precedence ([#1242](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1242)) ([4d3c1ad](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/4d3c1ad6e699c7bbf5013f7cf0daea0153bed469))
 
 ## [3.0.0-next.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.9...v3.0.0-next.10) (2022-04-29)
-
 
 ### Features
 
@@ -245,13 +376,11 @@
 
 ## [3.0.0-next.7](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.6...v3.0.0-next.7) (2022-03-29)
 
-
 ### Bug Fixes
 
 * **codeblock:** use correct font-family ([dc74868](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/dc74868498109a44c4a90b1ae56ab2c243ceb7a1))
 
 ## [3.0.0-next.6](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.5...v3.0.0-next.6) (2022-03-29)
-
 
 ### Bug Fixes
 
@@ -260,7 +389,6 @@
 ## [3.0.0-next.5](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.4...v3.0.0-next.5) (2022-03-29)
 
 ## [3.0.0-next.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.3...v3.0.0-next.4) (2022-03-08)
-
 
 ### Bug Fixes
 
@@ -272,7 +400,6 @@
 
 ## [3.0.0-next.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.1...v3.0.0-next.2) (2022-03-03)
 
-
 ### Features
 
 * V11 migration for gatsby-theme ([#1209](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1209)) ([9a4c2c8](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9a4c2c8171cbc38d11dc4f8460b4c9ae2874b233)), closes [#1176](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1176) [#1185](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1185) [#1176](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1176) [#1181](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1181) [#1190](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1190) [#1193](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1193) [#1192](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1192) [#1196](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1196)
@@ -280,8 +407,8 @@
 ## [3.0.0-next.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v3.0.0-next.0...v3.0.0-next.1) (2022-01-10)
 
 ## [3.0.0-next.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.4...v3.0.0-next.0) (2021-10-22)
-## [2.3.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.2.0...v2.3.0) (2022-02-17)
 
+## [2.3.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.2.0...v2.3.0) (2022-02-17)
 
 ### Features
 
@@ -290,7 +417,6 @@
 * new config option to add default mdx layouts ([#1214](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1214)) ([81f8fe3](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/81f8fe31e95a6fc8cb19ee9414e9972a4ca56a1c))
 * **expressive-list:** creates the expressive content only list ([#1197](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1197)) ([17ec996](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/17ec996d147d02ffca0374a8e9e272869bd340f0))
 
-
 ### Bug Fixes
 
 * do dont component updates ([#1220](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1220)) ([67fc11c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/67fc11c1df4a450fc6011d0696cc92fb2685e34b))
@@ -298,11 +424,9 @@
 
 ## [2.2.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.6...v2.2.0) (2022-01-10)
 
-
 ### Features
 
 * **switcher:** add carbon for ibm products remove ix ([#1205](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1205)) ([f9be700](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/f9be700ac5b6325eb73892f0211b59d177cf53fd))
-
 
 ### Bug Fixes
 
@@ -311,7 +435,6 @@
 ### [2.1.6](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.5...v2.1.6) (2021-12-03)
 
 ### [2.1.5](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.4...v2.1.5) (2021-10-28)
-
 
 ### Bug Fixes
 
@@ -322,18 +445,15 @@
 
 ### [2.1.4-next.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.3...v2.1.4-next.0) (2021-10-19)
 
-
 ### Features
 
 * add node 16 support ([#1178](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1178)) ([c142740](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c14274094c4c07d57181a2df54ba6948e7c735e0))
-
 
 ### Bug Fixes
 
 * switcher repairs ([#1179](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1179)) ([bed3705](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/bed3705782bbc8ffbd54c749e465bd117b699188))
 
 ### [2.1.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.2...v2.1.3) (2021-10-12)
-
 
 ### Bug Fixes
 
@@ -342,7 +462,6 @@
 ### [2.1.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.1...v2.1.2) (2021-10-12)
 
 ### [2.1.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.1.0...v2.1.1) (2021-10-07)
-
 
 ### Bug Fixes
 
@@ -353,13 +472,11 @@
 
 ## [2.1.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.0.0...v2.1.0) (2021-09-28)
 
-
 ### Features
 
 * **minicard:** support transferring props to Gatsby Links and anchors ([#1160](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1160)) ([23e589d](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/23e589d5c9c6cc8ddbb727adb7f2333657bcc45e))
 * **shadowing:** update guidelines for shadowing header and footer ([#1148](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1148)) ([33b0493](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/33b04937e77cf2421ea28e431d5daa0aca3f05be))
 * **square-card:** add new square card component ([#1151](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1151)) ([8438c05](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8438c0525f211c74895dda13d6ff86526be4053d))
-
 
 ### Bug Fixes
 
@@ -371,7 +488,6 @@
 
 ### [1.30.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.30.0...v1.30.1) (2021-06-21)
 
-
 ### Bug Fixes
 
 * sass module import ([a0c3bcc](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/a0c3bcc0006b3be31b0beb48b5f4bf5e57c99a85))
@@ -380,17 +496,16 @@
 ## [2.0.0-next.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v2.0.0-next.0...v2.0.0-next.1) (2021-04-20)
 
 ## [2.0.0-next.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.29.0...v2.0.0-next.0) (2021-04-19)
+
 * cover gap between page tabs and shell ([0bccf8f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0bccf8f9039f368434a307a7f405ba66e2c6fa97))
 
 ## [1.30.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.29.2...v1.30.0) (2021-06-15)
-
 
 ### Features
 
 * add option to remove site switcher from header ([#1132](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1132)) ([06ab644](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/06ab644f557cef4716b1372eba61587141bb89f6))
 
 ### [1.29.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.29.1...v1.29.2) (2021-05-17)
-
 
 ### Bug Fixes
 
@@ -402,18 +517,15 @@
 
 ## [1.29.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.28.0...v1.29.0) (2021-04-19)
 
-
 ### Features
 
 * adding workplace design into switcher ([#1117](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1117)) ([c6d755e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c6d755eba5f3cf7d61729b9b8fad3f835e44f9ab))
 
 ## [1.28.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.27.3...v1.28.0) (2021-04-01)
 
-
 ### Features
 
 * date in frontmatter resolves last modifed date on page ([#1094](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1094)) ([17947ce](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/17947ceb4d37ef9a6f09e1c38ce4e1b9367fe179))
-
 
 ### Bug Fixes
 
@@ -424,7 +536,6 @@
 
 ### [1.27.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.27.2...v1.27.3) (2021-01-22)
 
-
 ### Bug Fixes
 
 * 404 link color and config branch as main ([#1085](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1085)) ([659ea89](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/659ea8925048d31909c5b2959eadc79ec4eb779a))
@@ -433,14 +544,12 @@
 
 ### [1.27.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.27.1...v1.27.2) (2021-01-06)
 
-
 ### Bug Fixes
 
 * un-minify homepage image to remove jank ([#1071](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1071)) ([cef5a5c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/cef5a5c4e7e80513c1eb9cce5c9ba15e35dc1028))
 * **global search:** 1989-aat-avt1-gs-about-carbon-aria-expanded ([#1064](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1064)) ([7520c0b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/7520c0b98d3dd507232c58ac97a8ae23bbb0ca04))
 
 ### [1.27.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.27.0...v1.27.1) (2020-11-23)
-
 
 ### Bug Fixes
 
@@ -453,7 +562,6 @@
 
 ## [1.27.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.18...v1.27.0) (2020-10-22)
 
-
 ### Features
 
 * **Aside:** add option to hide hanging rule from Aside component ([#1014](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1014)) ([d416901](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/d416901985f00162149bf4e58b54082c43a490a1))
@@ -464,42 +572,28 @@
 
 ## [1.26.17](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-10-10)
 
-
 ### Bug Fixes
 
 * homepage default text color should be gray-10 closes [#535](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/535) ([9bc8696](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9bc8696ef43de428b4e2783c668e15d9c18ac320))
 
-
-
 ## [1.26.16](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-10-09)
-
-
 
 ## [1.26.15](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-10-09)
 
-
-
 ## [1.26.14](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-10-09)
-
 
 ### Bug Fixes
 
 * down with tabs ([5369937](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/5369937652c8aa32b4e9c146308f220dab0e348e))
 * remove target blank ([c2bdecd](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c2bdecddedcefbf4882c20a3acf986a96fe7112a))
 
-
-
 ## [1.26.13](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-10-08)
-
 
 ### Bug Fixes
 
 * replace old preload with new ([36422d7](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/36422d7c38cbd58633c740bd665968122bff6a68))
 
-
-
 ## [1.26.12](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-10-06)
-
 
 ### Bug Fixes
 
@@ -507,10 +601,7 @@
 * remove tabs testing pages ([202bde5](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/202bde58ac361053f5c905af58792d12ceeff9ef))
 * **PageTabs:** update current tab regex  ([#1003](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1003)) ([5fb8ba3](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/5fb8ba3ee7247b1c2df9812f3762ccd04b17f48c))
 
-
-
 ## [1.26.11](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-09-24)
-
 
 ### Bug Fixes
 
@@ -522,15 +613,11 @@
 * update backtotop/feedback btn colors ([1034b2f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/1034b2fbf69cae40be3c18a3a302e48fde7e1e48))
 * use tokens ([33ebcb7](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/33ebcb7c8e86650432e61d7fed0ddf0fa79a18b4))
 
-
 ### Features
 
 * make service worker optional and disabled by default ([e2db595](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/e2db59509e5491557b18205428374826a8c6bf6d))
 
-
-
 ## [1.26.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-09-17)
-
 
 ### Bug Fixes
 
@@ -544,29 +631,20 @@
 * small typo ([2f04dfa](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/2f04dfa04de62b97f01508de71737b750fe343a0))
 * update safari fixes and nested ordered align ([870ccad](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/870ccadce2eda4d43c5097c50651b9966e8164ff))
 
-
-
 ## [1.26.9](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-08-16)
-
 
 ### Bug Fixes
 
 * cleanup example, remove inline styles ([c54f83b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c54f83bdf4eeac1bac597493200aea47d1578692))
 * default ([bae72fb](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/bae72fbdfb95a345a19de10f5b864cbb3f977cc8))
 
-
-
 ## [1.26.8](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-08-14)
-
 
 ### Bug Fixes
 
 * **GlobalSearch:** add conditional set to aria-activedescendent ([#961](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/961)) ([009b6ef](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/009b6efd981b75fc21be9943c24a3e689168d207))
 
-
-
 ## [1.26.7](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-08-04)
-
 
 ### Bug Fixes
 
@@ -576,37 +654,25 @@
 * handle headers in containers ([5402bce](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/5402bce0d0d2767218f5be18278636ab9084d22a))
 * header spacing ([2968363](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/2968363d24ed1199c15d7e2b166c79c78297bee6))
 
-
-
 ## [1.26.6](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-07-24)
-
 
 ### Bug Fixes
 
 * z-index changes upstream from carbon ([302e10d](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/302e10dd9ec8dda2cdbb63bebea188cd504fbe1a))
 
-
-
 ## [1.26.5](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-07-22)
-
 
 ### Bug Fixes
 
 * test poster is not prefixed before prefixing ([3a7d08e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/3a7d08e16055f9b5b285e4078101debf923ba4b9))
 
-
-
 ## [1.26.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-07-21)
-
 
 ### Bug Fixes
 
 * copy label ([97a4f7b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/97a4f7b13284b3c2273e35b1c4bb50baf8a053d9))
 
-
-
 ## [1.26.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-07-21)
-
 
 ### Bug Fixes
 
@@ -620,28 +686,19 @@
 * **lists:** correct right margin in nested lists ([242012a](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/242012a99462929463db90b32b8bf26a5bce070c)), closes [carbon-design-system/gatsby-theme-carbon#832](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/832)
 * **nest list:** another fix for paragraphs in list ([2979861](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/2979861b5c3abeb4a323de36ebd12921e28e96d6))
 
-
-
 ## [1.26.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-07-17)
-
 
 ### Bug Fixes
 
 * account for anchor link items margin-bottom closes [#879](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/879) ([5f26db6](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/5f26db661e6988fc3c28bc9aa66d655343b1b1c0))
 
-
-
 ## [1.26.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-07-16)
-
 
 ### Bug Fixes
 
 * add undefined check to minicard ([25cba05](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/25cba059a67a832eb33f00c0c247ee296305f90e))
 
-
-
 # [1.26.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-07-16)
-
 
 ### Bug Fixes
 
@@ -651,40 +708,28 @@
 * updated video component to check src for pathPrefix ([9aa857d](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9aa857dd3477562c2d2a02e40154b505292eaaea))
 * use sass variables ([43d1942](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/43d1942380d2fc88ce32ba19ccac27b2cc49af46))
 
-
 ### Features
 
 * add example ([f049af1](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/f049af1686c795e109b6e7700853a7042fd95e31))
 * ol add start attribute ([dacbb02](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/dacbb0244e8812c0b92a2db2935a89fad68b2711))
 * ol use native style instead of pseudocode ([6499fb8](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/6499fb88d912958e82a654e40b8494350b0306bc))
 
-
-
 ## [1.17.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-11-21)
 
-
-
 ## [1.25.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-07-11)
-
 
 ### Bug Fixes
 
 * **ResourceCard:** download attribute, fixes [#871](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/871) ([#895](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/895)) ([ca5e8f9](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ca5e8f9a295d4f7c001d98de6d054cd8a69d71c4))
 * **ResourceCard-FeatureCard:** icon was the wrong color ([#891](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/891)) ([ccd0a46](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ccd0a46760a7a353a17eea73493d2c304564fd91))
 
-
-
 ## [1.25.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-07-01)
-
 
 ### Bug Fixes
 
 * **header-nav:** update import to carbon-components-react ([#894](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/894)) ([cfe88f6](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/cfe88f6e4992383603e9e9d18d8129f9c9952994))
 
-
-
 # [1.25.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-06-26)
-
 
 ### Bug Fixes
 
@@ -692,17 +737,13 @@
 * **404:** header ([#890](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/890)) ([1aadb73](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/1aadb73f3a658ea423e4964352ce4458b625482d))
 * **image-card:** move subtitle to top left corner ([#866](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/866)) ([4c453fc](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/4c453fcb9e4e95f63f5dee3caa24f3c463bfe1c8))
 
-
 ### Features
 
 * 791-header-shell-links-removing-left-nav ([#848](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/848)) ([38a9a2b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/38a9a2b50f5a3a3eca3d6f7e5d9260bb0c77bd52))
 * ability to add divider to side nav ([#885](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/885)) ([a9bb04e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/a9bb04ee11ca2c37dd8d335fb1e4d43857ecd5be))
 * **switcher:** automate max height, closes on bg click, update disabled tab index ([#870](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/870)) ([5f3dcb5](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/5f3dcb5d1e9b11d6998849840062703c5faf985d))
 
-
-
 ## [1.24.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-06-12)
-
 
 ### Bug Fixes
 
@@ -710,95 +751,66 @@
 * links and buttons focus state ([#862](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/862)) ([87d733f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/87d733f5c74b70d705e8de4d569166b014141286))
 * **switcher:** max-height style ([#861](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/861)) ([e6291e9](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/e6291e9cfecdcec83498dd1b198740a0c92d51e8))
 
-
 ### Features
 
 * add able site to switcher ([#855](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/855)) ([128ed90](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/128ed900e6b0a04ae27c543839aaab20b0d98d04))
 
-
-
 ## [1.24.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-05-28)
-
 
 ### Bug Fixes
 
 * ImageGalleryImage - change margin bottom of images from 1.5 rem to -07 (32px) ([#850](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/850)) ([e082d15](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/e082d156bd299b982278b2bb7978f232562201c1))
 * left nav duplicate active selection and jumping scroll ([#819](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/819)) ([5aa20b9](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/5aa20b99f370213c141b639bc613778d933a0dd1))
 
-
-
 ## [1.24.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-05-12)
-
 
 ### Bug Fixes
 
 * **anchor-links:** use react children api to handle anchorlink children ([#842](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/842)) ([9895328](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/98953282aa4dc31beaf5426fa6072662cc900a5b))
 
-
-
 ## [1.24.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-04-30)
-
 
 ### Bug Fixes
 
 * remove listbox overrides ([#830](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/830)) ([a997357](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/a997357859e5cad88edb788040232b1aaa47260a))
 
-
-
 # [1.24.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-04-24)
-
 
 ### Bug Fixes
 
 * nextprev logic with pathPrefix ([#823](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/823)) ([5099ba4](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/5099ba46aa20f71dc083bdc28061b63a6a41f00c))
 
-
 ### Features
 
 * add remarkPlugins theme option ([#821](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/821)) ([279bad4](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/279bad475bd5b6bc3ac622c2499cf14b1514364b))
 
-
-
 ## [1.23.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-04-17)
-
 
 ### Bug Fixes
 
 * add back arrows to default subset ([97cbaba](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/97cbaba2f81f7694506e12d2a680e31ffa07ce11))
 * ImageGalleryImage: button bug & appended images - closes [#808](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/808) ([#810](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/810)) ([92b5c6a](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/92b5c6a845976c9364105bd07170bd1036fa6d67))
 
-
 ### Features
 
 * **comments:** add docs for markdown comments ([#815](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/815)) ([36ca719](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/36ca7198986216926889d0a95eb0e0906d7ac49a))
 
-
-
 ## [1.23.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-04-17)
 
-
-
 # [1.23.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-04-17)
-
 
 ### Bug Fixes
 
 * encompass all characters with subsetting ([#816](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/816)) ([0c522cc](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0c522ccfa6802ea12454786835d246eb0050c53b))
 * other-subset group ([#817](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/817)) ([35c2f49](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/35c2f49bc84429d497f91908d355a8ac5dfa1ecc))
 
-
-
 ## [1.22.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-03-18)
-
 
 ### Bug Fixes
 
 * change icon name ([#788](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/788)) ([1d09c34](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/1d09c3404730125326b00bac907cb0ddf21afb0c))
 
-
-
 # [1.22.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-03-18)
-
 
 ### Bug Fixes
 
@@ -809,16 +821,12 @@
 * update default favicon ([#781](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/781)) ([5474c9b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/5474c9bead4993f850f775c3eb6ee514f3a6d003))
 * **NextPrev:** offset and hompage conditions ([#765](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/765)) ([2f8dbf3](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/2f8dbf30ea5e3b6c4ba9e55cd59992613893dc68))
 
-
 ### Features
 
 * add the ability to filter pages from search ([#776](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/776)) ([8755c25](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8755c25233ab7d0dd6801e94916bc10566204c6c))
 * Feedback dialog ([#772](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/772)) ([cb12399](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/cb123996079008e538081da252e583935a48f935))
 
-
-
 ## [1.21.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-03-05)
-
 
 ### Bug Fixes
 
@@ -826,19 +834,13 @@
 * yarn lock ci ([#757](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/757)) ([eccc10b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/eccc10b9ead3fd2e55bc08050ba0949deaeefcf6))
 * yarn script ([#759](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/759)) ([3f19826](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/3f19826c96e211a84c3f6106ffe49ca82414c993))
 
-
-
 ## [1.21.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-02-20)
-
 
 ### Bug Fixes
 
 * next-prev click target too small regression ([#734](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/734)) ([fbf6f46](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/fbf6f46fc072d9fa8aeecd58f324c04676d7f93e))
 
-
-
 # [1.21.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-02-19)
-
 
 ### Bug Fixes
 
@@ -848,43 +850,33 @@
 * enhance mediumposts component closes [#692](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/692), closes [#593](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/593) ([#710](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/710)) ([62778c7](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/62778c708bb997169ce61807b2766369dcd148cc))
 * **inlineNotification:** remove extra border and update width at… ([#719](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/719)) ([b431b4d](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/b431b4d1bc1fce656bd0527b349de2b078435b29))
 
-
 ### Features
 
 * add bundle analyzer ([#704](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/704)) ([bb770ff](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/bb770ff762b81db4cd09cc7d7d29eb41e1bb224d))
-
 
 ### Reverts
 
 * Revert "chore: add pre-release workflow action" (#712) ([60fbfb3](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/60fbfb354bbf9d226b369625af624ebd853d25a4)), closes [#712](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/712)
 
-
-
 ## [1.20.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-01-31)
-
 
 ### Bug Fixes
 
 * broken MDX link, under guides now ([#693](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/693)) ([b42c7ed](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/b42c7ed8cc95bfce924613b6db3b578fc8c0dd9a))
 * remove visited link styles closes [#696](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/696) ([#697](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/697)) ([6b8e944](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/6b8e9441a52985d791b11e5f4d10f52e30c149d9))
 
-
 ### Features
 
 * **GifPlayer:** adds component to pause and play gifs for a11y  ([#676](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/676)) ([27d356c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/27d356c19a31a32edb05dca41b0ce258c6ba9d34))
 
-
-
 # [1.20.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-01-23)
-
 
 ### Bug Fixes
 
 * **homepage:** use blue40 for links on dark homepage container ([#661](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/661)) ([a0d7ce2](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/a0d7ce2e56350b21740e6efeb0e9cd5bf40d622b))
-*  compress sample images ([#657](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/657)) ([bd32c57](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/bd32c5712f0edac26db214d42e13f54e74af1063))
+* compress sample images ([#657](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/657)) ([bd32c57](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/bd32c5712f0edac26db214d42e13f54e74af1063))
 * ignore rule exceptions ([#650](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/650)) ([40baa1a](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/40baa1a7dfb614db76fe686fa137ac7854ad14a8))
 * Update width of next/prev component, resolves [#569](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/569) ([#648](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/648)) ([0d3133c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0d3133c1a45bd7937a777339274dfa972a895223))
-
 
 ### Features
 
@@ -892,10 +884,7 @@
 * add title component ([#647](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/647)) ([298b43a](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/298b43af42967cdd5f57556ab6c725c408c5f4f7))
 * trade 5% image quality for 8x image processing speed ([#659](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/659)) ([09b9971](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/09b99711732607defbe6b4f7e22f416620ec1b6a))
 
-
-
 # [1.19.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2020-01-13)
-
 
 ### Bug Fixes
 
@@ -912,27 +901,20 @@
 * use whitespace to ensure smart quotes get replaced in text ([#610](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/610)) ([8a75d38](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8a75d389be839e2d076af717c80fd2ba460371c2)), closes [#600](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/600)
 * **skip-to-content:** add explicit href to component, add id to… ([#607](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/607)) ([068fec5](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/068fec57533210e5d9cf558a55e6ac7544a1cfe7))
 
-
 ### Features
 
 * add better subsetting for variable fonts, use zeit for static api ([#641](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/641)) ([cfc1399](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/cfc1399cc66c9d4affee297d373f530c756a399f))
 * add build-time to footer content component closes [#552](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/552) ([#616](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/616)) ([75c5713](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/75c571329b2654ed30b615901a2cebb1d6022171))
 * use theme font src ([#646](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/646)) ([d761ddd](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/d761ddd2a6ba85c5ba2a956c37deac138eb89414))
 
-
-
 ## [1.18.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-12-11)
-
 
 ### Bug Fixes
 
 * update carbon and patch list styles ([#603](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/603)) ([0a0fb0f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0a0fb0fe99f84cab5b8eda768bc6362dbe0a20c4))
 * **autolink-headers:** set opacity to 1 when links are focussed ([#602](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/602)) ([20f318c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/20f318c2805796f8d467d7db09e06420bbec8f60))
 
-
-
 ## [1.18.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-12-11)
-
 
 ### Bug Fixes
 
@@ -942,10 +924,7 @@
 * update right spacing for paragraphs and lists ([#583](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/583)) ([94fe3d7](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/94fe3d7c13742d533f95a4c85425c26db891cf69))
 * **aside:** add spread prop, update docs with accessibility labe… ([#567](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/567)) ([4ab990c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/4ab990c29e00fa999db0450f2e69e379b4ffdd6d))
 
-
-
 # [1.18.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-12-03)
-
 
 ### Bug Fixes
 
@@ -957,39 +936,27 @@
 * **resource-card:** do not render empty headings if no title or… ([#562](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/562)) ([4f321f9](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/4f321f91dd6b5978b4c8f37a3bef5134273434a0))
 * **skip-to-content:** make link text white to meet AA contrast ([#571](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/571)) ([f8881ed](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/f8881edb13a831d53e392b6bc6b7440deb97ecd2))
 
-
 ### Features
 
 * **html:** add default lang to site metadata, pass to helmet ([#558](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/558)) ([f7ea316](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/f7ea316cbbd8cf0298c08a6b3fe64843d7076c59))
 * **nav:** Enable override of nav item list via shadowing ([#560](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/560)) ([ce6a9b3](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ce6a9b30dcf8ef7a7a59b44f41f1316be58c96b3))
 * Add remark plugins option to global configuration, resolves [#576](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/576) ([#577](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/577)) ([dc770ba](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/dc770ba0855edc5f0f1c52d95c11201fcd2f38ff))
 
-
-
 ## [1.17.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-11-21)
 
-
-
 ## [1.17.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-11-21)
-
 
 ### Bug Fixes
 
 * **spacing:** spacing issues with ImageCard, list items, and cap… ([#550](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/550)) ([233cacc](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/233caccb22cff7368fb61e8676acd360d39c39a0))
 
-
 ### Features
 
 * **video:** add autoPlay prop to set initial isPlaying state ([#553](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/553)) ([d95e964](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/d95e9641f311f44ecd81a69d45c4b7002aaf5abd))
 
-
-
 ## [1.17.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-11-20)
 
-
-
 # [1.17.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-11-19)
-
 
 ### Bug Fixes
 
@@ -1001,91 +968,60 @@
 * update dont color ([#538](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/538)) ([d40e44f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/d40e44f825bc83b310fed8f75102fc68b13ef417))
 * **image-card:** render as div if no href is provided ([#515](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/515)) ([cb3769b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/cb3769bec3877c35581907ae787d5a0900afd18b))
 
-
 ### Features
 
 * **MediumPosts:** Component to automatically generate latest Medium posts on build time. ([#482](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/482)) ([19b5e70](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/19b5e70f6d0d2678e5557b2e863d98c72eb61900))
 
-
-
 ## [1.16.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-11-06)
-
 
 ### Bug Fixes
 
 * add margin-top to nested elements within columns ([#501](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/501)) ([7ad684f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/7ad684f52441975d4452d33d96cfd3093f7733b6))
 
-
-
 ## [1.16.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-11-02)
-
 
 ### Bug Fixes
 
 * image gallery spacing ([#491](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/491)) ([9379fca](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9379fca953c9018d2dc542f1730d6d94d3a7b9a5))
 * remove extra margin on inline notification ([#488](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/488)) ([668b949](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/668b9494809565752a063ef8bbd3f19d2257fe11))
 
-
-
 ## [1.16.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-11-02)
-
 
 ### Features
 
 * enable carbon custom properties ([#490](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/490)) ([4021e5f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/4021e5f144507d0b891b7c24f02ee0fe67dd0169))
 
-
-
 # [1.16.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-11-01)
-
-
 
 # [1.16.0-alpha.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-11-01)
 
-
-
 # [1.16.0-alpha.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-11-01)
-
 
 ### Bug Fixes
 
 * text-decoration on links ([#485](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/485)) ([60f4588](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/60f45883187d96a3b42ff36520d1e8dbad47adcb))
 
-
-
 ## [1.15.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-10-30)
-
 
 ### Bug Fixes
 
 * **ImageCard:** add focus border ([#468](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/468)) ([cb4d6a8](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/cb4d6a8faf6699d22281d1925d15cdf2f6bd6c0f))
 
-
 ### Features
 
 * **Grid:** Added xl and max ([#472](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/472)) ([721c8ee](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/721c8eefd67e5f87416c40c97d9acfbf697adf6a))
 
-
-
 ## [1.15.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-10-22)
 
-
-
 ## [1.15.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-10-21)
-
 
 ### Bug Fixes
 
 * **EditLink:** Adds branch option to edit url ([#458](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/458)) ([291ceaf](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/291ceaf563be80e1ce6a9e165952f4d779facd7a)), closes [carbon-design-system/gatsby-theme-carbon#455](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/455)
 
-
-
 ## [1.14.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-10-03)
 
-
-
 ## [1.14.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-09-25)
-
 
 ### Bug Fixes
 
@@ -1094,60 +1030,41 @@
 * **ArticleCard:** add missing styles for subtitle on dark cards ([#439](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/439)) ([7719fba](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/7719fbac36f4fde616666f20c8cba86b04cf2ac0))
 * **navigation:** fix page tabs replace bug ([#437](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/437)) ([38fe06b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/38fe06b994efb56bf18182d07252dc8b6e1fc54d))
 
-
-
 ## [1.14.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-09-19)
-
 
 ### Bug Fixes
 
 * remove default title from notification ([c88449f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c88449f35318892111a936be49e8462e0b2796f3))
 
-
-
 # [1.14.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-09-19)
-
 
 ### Bug Fixes
 
 * **paragraph:** add right padding for mobile sizes ([#426](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/426)) ([2932016](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/293201672d19ff150a7884acb6281881bdfc3397))
 
-
 ### Features
 
 * add InlineNotification component ([#429](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/429)) ([68fcf61](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/68fcf613674fe4d2a726214b90cb0b926448b3c0))
 
-
-
 # [1.13.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-09-16)
-
 
 ### Features
 
 * export custom Title component from MDX ([#420](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/420)) ([7438608](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/7438608d47384d4bd26b4c786ffbb02ec199d42c))
 
-
-
 ## [1.12.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-09-12)
-
 
 ### Bug Fixes
 
 * remove theme controls from vimeo videos ([#418](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/418)) ([15e1395](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/15e139526cfadfda5a1c307f6f022a481b973e05))
 
-
-
 ## [1.12.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-09-11)
-
 
 ### Bug Fixes
 
 * update list alignment styles ([#402](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/402)) ([26b1b4c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/26b1b4c32f8581e660d4f0dfe2d4178ddb7c75fc))
 
-
-
 # [1.12.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-09-11)
-
 
 ### Bug Fixes
 
@@ -1156,43 +1073,30 @@
 * manage focus with escape clear ([#415](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/415)) ([740476c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/740476ce1b85fc29588ba26f52504934dd5b00d0))
 * typo on art direction component page ([#393](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/393)) ([7a78abd](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/7a78abd9266803f6cc86fe0fbfd9a2eedea2ea2e))
 
-
 ### Features
 
 * 🔥 native global search (client side) 🔥 ([#384](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/384)) ([6576679](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/65766796275eea1a28c70e0cbc863582fba49250))
 * add prepend option to titleType ([#404](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/404)) ([c54111f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c54111f9dd15fc3dbb3d333ff6ab31c9612d5703))
 
-
-
 ## [1.11.6](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-08-29)
-
 
 ### Bug Fixes
 
 * also prefix poster assets ([#385](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/385)) ([25d44f6](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/25d44f68c28761e1293cad75fc1337c0ee3ca867))
 
-
-
 ## [1.11.5](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-08-29)
-
 
 ### Bug Fixes
 
 * prefix video sources in production ([#383](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/383)) ([131a970](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/131a9707e6347ffb9caf5ec4387659e7e72163ba))
 
-
-
 ## [1.11.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-08-28)
-
 
 ### Bug Fixes
 
 * nested row margins ([#382](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/382)) ([6b91fb0](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/6b91fb0c10656b0363747c35a29bc4d3fc2fb92d))
 
-
-
 ## [1.11.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-08-28)
-
 
 ### Bug Fixes
 
@@ -1201,33 +1105,23 @@
 * **ImageGallery:** prevent page autoscroll on overlay open ([#378](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/378)) ([ba1f5fb](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ba1f5fba0c86ad2ca49f9af9904343974e0a84ed))
 * **Switcher:** change width and border-bottom ([#372](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/372)) ([252f441](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/252f4416290a0f4c0cc9e2350b05e94087fc4423))
 
-
-
 ## [1.11.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-08-26)
-
 
 ### Bug Fixes
 
 * article card type style and caption spacing ([#368](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/368)) ([a91814b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/a91814bb6a1088667b1a19834fdfa5abe4ffdf07))
 
-
-
 # [1.11.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-08-22)
-
 
 ### Bug Fixes
 
 * don't hide header at any viewport size ([#364](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/364)) ([e1e0728](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/e1e072840a3d97f4ec7e86ac0988d2b24a8adc17))
 
-
 ### Features
 
 * IBM Plex Sans Variable ([#329](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/329)) ([e5d53b0](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/e5d53b0b523cead88f1065e1acd54f3f6d928b61))
 
-
-
 # [1.10.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-08-21)
-
 
 ### Bug Fixes
 
@@ -1235,15 +1129,11 @@
 * remove extra content ([#360](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/360)) ([5bb5244](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/5bb52442931a51e063b6e969e80ca3d4076606a9))
 * spacing updates / fixes  ([#350](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/350)) ([eb09950](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/eb099501351c7e03fd48543ba52e9d6220b846f0))
 
-
 ### Features
 
 * **ImageGallery:** adds ImageGallery and ImageGalleryImage component ([#315](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/315)) ([eb31926](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/eb3192620192211c4972d316aca1135470928012))
 
-
-
 # [1.9.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-08-18)
-
 
 ### Bug Fixes
 
@@ -1253,35 +1143,25 @@
 * list spacing ([#351](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/351)) ([05a753a](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/05a753a3ab8ce2323040f3398c2ce6cc3e98f554))
 * use correct focus color on dark side nav ([#354](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/354)) ([0c0d53a](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0c0d53a50552350e9a9bfc551e87a888ae807d53))
 
-
 ### Features
 
 * add carbon components styles ([#353](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/353)) ([e66a9a1](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/e66a9a1d6c1733ffd668cd60136b325ba07223b8))
 * update switcher at lg+ sizes ([#339](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/339)) ([f6b8e77](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/f6b8e775e8c1c0e68d4f0acda6afae93e20f673e))
 
-
-
 ## [1.8.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-08-15)
-
 
 ### Bug Fixes
 
 * update header hide only at mobile ([#342](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/342)) ([8f92774](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8f92774a188f0fd15ce46b2437f031a8fa33f463))
 
-
-
 ## [1.8.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-08-14)
-
 
 ### Bug Fixes
 
 * remove extra spacing in aside component ([#325](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/325)) ([9841346](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9841346e750c253c6b37536eef1e760a552f16c6))
 * update callout header to expressive heading 03 ([#335](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/335)) ([d657d24](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/d657d240bd3c192bc65feca9233278d08ca5f38d))
 
-
-
 # [1.8.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-08-08)
-
 
 ### Bug Fixes
 
@@ -1290,15 +1170,11 @@
 * **DoDontExample:** changed targeted class so video button is no longer off center ([#319](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/319)) ([95c5b22](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/95c5b2228b312291fe871c7a8ff158832778abfa))
 * update type token for blockquote to be responsive ([#313](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/313)) ([88864ac](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/88864acc1751b56c9b951acf7809cbdbd1066173))
 
-
 ### Features
 
 * add support for dark mode pages ([#283](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/283)) ([55237ad](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/55237ad6262807f8b4ae960f743a85b17e44090b))
 
-
-
 ## [1.7.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-08-06)
-
 
 ### Bug Fixes
 
@@ -1306,10 +1182,7 @@
 * feature cards at max width ([#307](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/307)) ([d2748c1](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/d2748c14d667363de48aaf55e8c51cfa4c624240))
 * update switcher link for Enterprise Design Thinking ([#303](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/303)) ([bf1b6a2](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/bf1b6a258ee947ce2318fde2263ee768468836ce))
 
-
-
 # [1.7.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-08-02)
-
 
 ### Bug Fixes
 
@@ -1318,40 +1191,28 @@
 * extra space below images in dodont ([#295](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/295)) ([fe4dde7](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/fe4dde716e96cc1b0f6436d5d61121f1c22e10a0))
 * homepage style bugs ([#296](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/296)) ([dfdd85c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/dfdd85c75ec6e8f6bd19c3919191591a2f2adecc))
 
-
 ### Features
 
 * add ArtDirection component ([#294](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/294)) ([78171d5](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/78171d5e2ebc1796908c7726dc1b21242f53c169))
 * pass MDX frontmatter title into page `<title>` ([#292](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/292)) ([8c6bd01](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8c6bd01983436c8cff2fdefb9c54ccafa4f343a8))
 
-
-
 ## [1.6.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-07-30)
 
-
-
 ## [1.6.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-07-30)
-
 
 ### Bug Fixes
 
 * closes [#284](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/284) ([#285](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/285)) ([a563c41](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/a563c41da8a28dfce27c9a77ffd8ddee9fbb0b51))
 * update icon sizing for resource cards ([#273](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/273)) ([c8db707](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c8db707985327971a4bec2327eb6813df4d23307))
 
-
-
 ## [1.6.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-07-29)
-
 
 ### Bug Fixes
 
 * remove janky :active class from tabs component ([#280](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/280)) ([46b0fe5](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/46b0fe5d526061857c21ee16cc67f74c9571ef1d))
 * use elements instead of @carbon/themes ([#281](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/281)) ([343b1af](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/343b1af28e9465dc68c0c5af2a377df2fc0f66a1))
 
-
-
 ## [1.6.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-07-25)
-
 
 ### Bug Fixes
 
@@ -1359,10 +1220,7 @@
 * banner width ([#268](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/268)) ([cd31fee](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/cd31feecc353cba86b85ea67f9e9048584ddb834))
 * update page tabs spacing at mobile ([#274](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/274)) ([c48929c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c48929c5c70ce0d74e9b253899cf719c712935de))
 
-
-
 # [1.6.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-07-18)
-
 
 ### Bug Fixes
 
@@ -1378,7 +1236,6 @@
 * update list styles ([de3cca1](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/de3cca1dcd26a0393ed203eb8273520df913fc09))
 * update margin, add language list ([8df2418](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8df24187b03813e83402ef775ad810980dfa1ea1))
 
-
 ### Features
 
 * add copy button and path styles ([0ed54a8](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0ed54a8c6c9533878f75744b00df3ba2cc68e4e0))
@@ -1388,23 +1245,15 @@
 * refactor Footer to css modules with correct styling ([0f129d6](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0f129d62f554f1b36bbd3dd2ac01159776544954))
 * **editlink:** add to default template, style updates, associated documentation ([be023f4](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/be023f422e4977a4071bc290ab79390348b19575))
 
-
-
 # [1.5.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-07-11)
-
 
 ### Bug Fixes
 
 * update icons-react ([3041a7c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/3041a7c140278a60cbe7e4952d8ca1d931f17d28))
 
-
-
 ## [1.4.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-07-10)
 
-
-
 # [1.4.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-07-09)
-
 
 ### Bug Fixes
 
@@ -1421,29 +1270,20 @@
 * **accordionItem:** fixed naming for accordionItem component ([e806604](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/e8066048746689c39d8cb73fad62c07e029117f0))
 * **accordionItem:** fixed naming for accordionItem component ([8d0cec9](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8d0cec9bf8a7de886a868a0847ae707d2d89ae3f))
 
-
 ### Features
 
 * add resources injection ([49bc470](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/49bc4705d1e7df37799d8c9f50a37c0e74d9d224))
 * **accordion:** add accordion to theme components and example ([16d2a4b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/16d2a4bc5e375edfac097faa6c82b6d620bbe492))
 
-
-
 ## [1.3.5](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-07-01)
-
 
 ### Bug Fixes
 
 * list width ([#205](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/205)) ([0be49b2](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0be49b210a3b601f37f133f2a0772d16a1a8635e))
 
-
-
 ## [1.3.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-06-27)
 
-
-
 ## [1.3.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-06-27)
-
 
 ### Bug Fixes
 
@@ -1453,14 +1293,9 @@
 * remove carbon specific homepage styles ([b01e9f3](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/b01e9f3654afd07bdc88b081e2681e690fc99d19))
 * resource card images/icons ([d4f6c93](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/d4f6c93d9fb148d078fb1171ef7f661f2ec06bb4))
 
-
-
 ## [1.3.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-06-26)
 
-
-
 ## [1.3.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-06-25)
-
 
 ### Bug Fixes
 
@@ -1468,39 +1303,28 @@
 * update lefnav icon logic ([#196](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/196)) ([2d39cbf](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/2d39cbf97ca02710804f4308dc56c42425070d35)), closes [#195](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/195)
 * use remark to generate slugs per page ([#186](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/186)) ([d5e97f8](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/d5e97f872767b1ff29c544811d41e42862f25ba5))
 
-
 ### Features
 
 * allow for dynamic positioning of banner background ([#194](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/194)) ([b908aa6](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/b908aa60afd06fb8d9ac805172b305885b460735))
 
-
-
 # [1.3.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-06-20)
-
 
 ### Bug Fixes
 
 * add first-child rule and add back h1 styles w/ docs ([#181](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/181)) ([1b94e85](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/1b94e85998e09a97d9d11d775e42ee1573a77a66))
 * update various markdown widths ([#185](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/185)) ([7e829b3](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/7e829b33aece45bea6dc8303ffaba17d6d0aac6d)), closes [#182](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/182) [#172](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/172) [#177](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/177)
 
-
 ### Features
 
 * add new global scss file to inject global imports into theme ([#183](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/183)) ([76bfdd0](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/76bfdd0f13bfc317fcb02e3c89b1df919540a0d4))
 
-
-
 ## [1.2.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-06-17)
-
 
 ### Bug Fixes
 
 * update margin bottom for do-dont and tabs ([#176](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/176)) ([7090d7e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/7090d7ea3ac91a09baed1c3604929720934bc6c1))
 
-
-
 # [1.2.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-06-14)
-
 
 ### Bug Fixes
 
@@ -1509,47 +1333,32 @@
 * update active state logic for tabs ([#167](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/167)) ([84cd8e5](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/84cd8e55e6f3e979352001bafb5b11979583e401))
 * **DoDont:** fix for images that aren't square or are smaller ([#164](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/164)) ([3a28950](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/3a28950f16b2e2591be284a6ffc3b4a9298229ce))
 
-
 ### Features
 
 * extend Video component / image/caption spacing fix ([#160](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/160)) ([721029d](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/721029d17c53d74cf071ad57619503290064b16a))
 
-
-
 ## [1.1.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-06-10)
-
 
 ### Bug Fixes
 
 * update active nav item logic ([#155](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/155)) ([60daa3f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/60daa3fee670ee2fc4bdb43781f2dd98fc47bb58))
 * various small fixes (Aside, DoDont & switcher icons) ([#156](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/156)) ([cb21665](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/cb216656db76d9e4e6ea56cc92a24e5b2a8224df))
 
-
-
 ## [1.1.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-06-07)
 
-
-
 # [1.1.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-06-07)
-
 
 ### Bug Fixes
 
 * **page-tabs:** set overflow-x to auto ([#146](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/146)) ([2763463](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/2763463b1bc87954c61df7ded5a519614dedc966))
 
-
-
 ## [1.0.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-06-04)
-
 
 ### Bug Fixes
 
 * use more intelligent active state inference for sidenav ([#144](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/144)) ([1b55582](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/1b55582bf857f21f4b155139e5436f30ee19ca82))
 
-
-
 # [1.0.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-06-03)
-
 
 ### Bug Fixes
 
@@ -1560,16 +1369,12 @@
 * paragraph length closes [#99](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/99) ([63d9a5b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/63d9a5b95a95bd404f6e0731ac08845c1013d939))
 * trim transparent edges from feature example image ([32f39f0](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/32f39f0f27a55e03690dc945b4484183af5d2fcb))
 
-
 ### Features
 
 * add link component and update theme config ([6a2978b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/6a2978b3f6d932d152632cacd35b15835838024f))
 * automatically supply meta-data to head ([b50e7cf](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/b50e7cfab592cca266dd886dcb18e58c96a36b5f))
 
-
-
 # [1.0.0-alpha.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-05-31)
-
 
 ### Bug Fixes
 
@@ -1582,7 +1387,6 @@
 * specificity ([ac1ffef](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ac1ffefd305414d63fa3b11586ba03f808931e3d))
 * update feature-card styles ([b70e38f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/b70e38f1f6fe74293f12dcea8071420882c69f8d))
 
-
 ### Features
 
 * add all components globally ([eb2c775](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/eb2c7750846637c6eeb8ac16b170b7d3fe42f312))
@@ -1590,10 +1394,7 @@
 * add tabs to mdxprovider ([f94eede](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/f94eedeb7e8a894576fc4713326067f2dc75f66b))
 * add webp support ([8afb393](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8afb393cf29b22679ae791d5fa141dfe6bb6c2d1))
 
-
-
 # [0.7.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-05-28)
-
 
 ### Bug Fixes
 
@@ -1620,7 +1421,6 @@
 * **ResourceCard:** mobile border styles, resource-card-group ([596dde0](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/596dde0eb598191eb769b130efe1d9da4b0780ea))
 * use fragment for children ([173288d](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/173288d7ed516e4a213e6d036054bd4e91b3e20f))
 
-
 ### Features
 
 * add 404 page with shadowable links ([058f3b5](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/058f3b5cd94b099c81d18ef0e7a8bc0a1d0e2689))
@@ -1632,25 +1432,18 @@
 * add initial 404 ([cffa06a](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/cffa06a02af6dc3722a77e07bfb34c4bd03688c8))
 * disable global search ([01baedb](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/01baedb5a2c3eaa82696fbfb60e7bfac5952ae3c))
 
-
-
 ## [0.6.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-05-22)
-
 
 ### Bug Fixes
 
 * **featureCard:** update mobile breakpoint styles ([697cdbc](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/697cdbc86b69bb9bcb28671770a2b5ec92e3e505))
 * re-order sass imports ([ca7b806](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ca7b806ed1dac2d4329203c7ae365c27781e093e))
 
-
 ### Features
 
 * switch font-loading to prefetch. Add font weight option ([1c2a610](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/1c2a610aa365a84cfaa26ff8f3df183127ca8489))
 
-
-
 # [0.6.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-05-20)
-
 
 ### Bug Fixes
 
@@ -1664,7 +1457,6 @@
 * fix token name ([5a71a99](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/5a71a99a378de12080f5284852c80844f11cb998))
 * resource tile style bugs ([525429e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/525429e8c9a5b8218e2528c886aa779e724197ba))
 
-
 ### Features
 
 * **FeatureCard:** add feature card component ([2c46bff](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/2c46bff292446dceb0ad41bc54069d21ce8d194b))
@@ -1675,10 +1467,7 @@
 * add sticky tab feature ([380b1b0](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/380b1b08bc0bb535516424c782f934d568054345))
 * **doDontExample:** make the component better and add docs ([99449da](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/99449da2bc58deac097c2a301c2d7d68acc6d125))
 
-
-
 ## [0.5.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-05-13)
-
 
 ### Bug Fixes
 
@@ -1686,20 +1475,14 @@
 * use sass ([7a37b19](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/7a37b19f6467838690e4d0cbf6f74f51a5907f8a))
 * window build check ([b8fc224](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/b8fc224c004c271ffe8fce4e213d8a8bfda31754))
 
-
-
 ## [0.5.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-05-13)
-
 
 ### Bug Fixes
 
 * allow for path prefix ([efa491b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/efa491b38ad46d32d6d187f66ef6d04b73ca7998))
 * next-previous path-prefix ([720e4d0](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/720e4d0930b15c942ca6c2029bde548dc3e5067f))
 
-
-
 # [0.5.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-05-10)
-
 
 ### Bug Fixes
 
@@ -1717,17 +1500,13 @@
 * use spacing token and nudge anchor ([bf9bd6a](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/bf9bd6a8c85fbcadf21932ed2ee02f65260a98f4))
 * use spacing tokens and add fluid type ([8f8ef16](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8f8ef16150e35fc57ff0a47d8ffc8708007cd39e))
 
-
 ### Features
 
 * add anchor tags and smooth scroll ([1d62d47](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/1d62d477c8bfd6a721832b144d683080c72d57c0))
 * add code component (moved from addons) ([2ea0a8e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/2ea0a8ea9640aaf40f1243af2421ea3e0660b84d))
 * add next-previous component ([00ae59d](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/00ae59dd52332a8353af9a2a0497cb978fbaa345))
 
-
-
 # [0.4.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-05-07)
-
 
 ### Bug Fixes
 
@@ -1738,7 +1517,6 @@
 * update exports and fix console errors ([0ebfd10](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0ebfd10d2a0d91b847ecd6eb018e8ee6a41e4ee4))
 * update templates for easier shadowing ([c18d7b8](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c18d7b8ec4bf51fd4341f1c65d63dcc05f18106a))
 
-
 ### Features
 
 * add internal link ability for article card component ([c3cd709](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c3cd7090c15df92ce4a21f9be5e4b97f746ef720))
@@ -1746,28 +1524,19 @@
 * Add homepage customization components ([400559e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/400559eff6d518ce454d8b6359e19f7101a5202a))
 * export banner and callout components ([2479ea5](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/2479ea559062137ecb37740ac524f41e4d831666))
 
-
-
 # [0.3.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-05-06)
 
-
-
 ## [0.3.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-05-07)
-
 
 ### Bug Fixes
 
 * remove size-by-density remark image feature ([982163e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/982163e18485eba0e609ef96f8cfa8948da5de41))
 
-
-
 # [0.3.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-05-06)
-
 
 ### Bug Fixes
 
 * use slashes to allow for prefixes ([db2f303](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/db2f3038cef6a2b7c76323cb2fb2db9de3521fcb))
-
 
 ### Features
 
@@ -1777,19 +1546,13 @@
 * remove markdown rows ([9c9e9d7](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9c9e9d7de741eb45662c5018749a0dc876728d90))
 * rename tile to card ([15f1827](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/15f1827557ce080aa0382424d946cf55b023d27b))
 
-
-
 ## [0.2.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-05-01)
-
 
 ### Bug Fixes
 
 * set defaultExpanded to true ([b7500d4](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/b7500d4f36b2727822aacdf317260bd4e429cb88))
 
-
-
 ## [0.2.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-05-01)
-
 
 ### Bug Fixes
 
@@ -1802,27 +1565,17 @@
 * update gatsby deps ([fdedd9a](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/fdedd9af9ffe662a2d1efedd29698e5a8da2d397))
 * various style updates ([8730052](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8730052a85cd69a33113299208f19b55943425c8))
 
-
 ### Features
 
 * add overlay and better on-click-outside logic ([2aceb17](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/2aceb17e638e5a73cbaa4acfa67bdcbe4f9b9937))
 
-
-
 ## [0.2.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-04-28)
-
-
 
 ## [0.2.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-04-27)
 
-
-
 # [0.2.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-04-27)
 
-
-
 # [0.1.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v1.26.16...v1.26.17) (2019-04-27)
-
 
 ### Bug Fixes
 
@@ -1834,7 +1587,6 @@
 * update side nav items ([36fad34](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/36fad34db3e0e70e592080d4e6d2ec1123446651))
 * update urls ([2afeb3f](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/2afeb3f9f02e651a3066e8c345d62fd456664898))
 
-
 ### Features
 
 * add build and config ([9a09a8d](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9a09a8db12b9661501cfb0eb3d635e364b3df7d4))
@@ -1845,4 +1597,3 @@
 * flexible resource links ([822a66c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/822a66ca014ffd1d68baa580154778d30c047886))
 * make footer shadowable and add example ([dd7ccfb](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/dd7ccfb642f00848f7b60129b91c71eed0560af4))
 * update anchor links ([f83d0a1](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/f83d0a1b714800726f00fd1441446f0883dad659))
-

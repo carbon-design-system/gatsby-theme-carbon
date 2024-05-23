@@ -6,53 +6,67 @@ description: Usage instructions for the Code blocks component
 <PageDescription>
 
 When authoring markdown using the Carbon Gatsby theme, code blocks have some
-extra super powers you can take advantage of. We provide carbon-themed syntax
-highlighting as well as optional `path` and `src` features.
+extra superpowers you can take advantage of. We provide carbon-themed syntax
+highlighting as well as optional `path`, `src` and `showAll` features.
 
 </PageDescription>
 
 ## Example
 
-<Title>Horizontal overflow</Title>
+````markdown path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com
+## Path and src
+
+This code snippet provides a `path` and a `src` prop.
 
 ```markdown path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com
-## Path and src w/ overflow
-
-This example overflows to demonstrate the text fading out under the side bar.
-This example overflows to demonstrate the text fading out under the side bar.
-This example overflows to demonstrate the text fading out under the side bar.
-This example overflows to demonstrate the text fading out under the side bar.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis bibendum fermentum
+aliquet. Aenean non ante in est placerat iaculis. Pellentesque pellentesque
+feugiat turpis, nec porttitor magna.
 ```
-
-<Title>Vertical overflow</Title>
-
-```markdown path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com
-## Path and src w/ overflow
-
-This example demonstrates the show more button. This example demonstrates the
-show more button. This example demonstrates the show more button. This example
-demonstrates the show more button. This example demonstrates the show more
-button. This example demonstrates the show more button. This example
-demonstrates the show more button. This example demonstrates the show more
-button. This example demonstrates the show more button. This example
-demonstrates the show more button. This example demonstrates the show more
-button. This example demonstrates the show more button.
-```
-
-## Code
-
 ````
-```markdown path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com
-### Path and src
 
-This code snippet provides both a `path` and a `src`.
+````markdown path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com
+## Path and src
+
+This code snippet provides a `path` and a `src` prop.
+
+```markdown path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis bibendum fermentum
+aliquet. Aenean non ante in est placerat iaculis. Pellentesque pellentesque
+feugiat turpis, nec porttitor magna. Nullam tempor dapibus elit. In sapien
+risus, aliquam non ullamcorper ac, porta vel magna. Pellentesque habitant morbi
+tristique senectus et netus et malesuada fames ac turpis egestas. Donec
+scelerisque felis vitae diam dignissim efficitur. Aenean non ante in est
+placerat iaculis. Duis bibendum fermentum aliquet.
+```
+````
+
+````markdown path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com showAll
+## Path, src, showAll
+
+This code snippet provides a `path`, a `src` and `showAll` prop.
+
+```markdown path=/directory/file.mdx src=https://gatsby.carbondesignsystem.com  showAll
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis bibendum fermentum
+aliquet. Aenean non ante in est placerat iaculis. Pellentesque pellentesque
+feugiat turpis, nec porttitor magna. Nullam tempor dapibus elit. In sapien
+risus, aliquam non ullamcorper ac, porta vel magna. Pellentesque habitant morbi
+tristique senectus et netus et malesuada fames ac turpis egestas. Donec
+scelerisque felis vitae diam dignissim efficitur. Aenean non ante in est
+placerat iaculis. Duis bibendum fermentum aliquet. Pellentesque pellentesque
+feugiat turpis, nec porttitor magna. Nullam tempor dapibus elit. In sapien
+risus, aliquam non ullamcorper ac, porta vel magna. Pellentesque habitant morbi
+tristique senectus et netus et malesuada fames ac turpis egestas. Donec
+scelerisque felis vitae diam dignissim efficitur. Aenean non ante in est
+placerat iaculis. Duis bibendum fermentum aliquet.
 ```
 ````
 
 ### Props
 
-| property | propType | description                                                                                                                 |
-| -------- | -------- | --------------------------------------------------------------------------------------------------------------------------- |
-| language | string   | [Available languages.](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js) |
-| src      | string   | The full url of a relevant link (source)                                                                                    |
-| path     | string   | A string indicating the filename or path. Due to markdown limitations this can only be a single word                        |
+| property | propType | required | default | description                                                                                                                                                               |
+| -------- | -------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| language | string   |          |         | [Available languages.](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js)                                               |
+| src      | string   |          |         | The full url of a relevant link (source)                                                                                                                                  |
+| path     | string   |          |         | A string indicating the filename or path. Due to markdown limitations this can only be a single word                                                                      |
+| showAll  | boolean  |          | false   | A boolean indicating if the code block should show all the code at once. If not set, a "Show more" button will be displayed (only if a code block has more than 9 lines.) |

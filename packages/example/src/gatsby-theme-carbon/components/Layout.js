@@ -6,7 +6,7 @@ import { Information } from '@carbon/icons-react';
 import Meta from 'gatsby-theme-carbon/src/components/Meta';
 import LeftNav from 'gatsby-theme-carbon/src/components/LeftNav';
 import Header from 'gatsby-theme-carbon/src/components/Header';
-import Switcher from 'gatsby-theme-carbon/src/components/Switcher';
+import { Switcher } from 'gatsby-theme-carbon/src/components/Switcher';
 import Container from 'gatsby-theme-carbon/src/components/Container';
 import useMetadata from 'gatsby-theme-carbon/src/util/hooks/useMetadata';
 import Footer from './Footer';
