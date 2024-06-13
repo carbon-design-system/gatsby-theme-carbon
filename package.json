@@ -80,9 +80,9 @@
     ]
   },
   "dependencies": {
-    "@babel/core": "^7.24.5",
-    "@babel/eslint-parser": "^7.24.5",
-    "@babel/preset-react": "^7.24.1",
+    "@babel/core": "^7.24.7",
+    "@babel/eslint-parser": "^7.24.7",
+    "@babel/preset-react": "^7.24.7",
     "@commitlint/cli": "^18.6.1",
     "@commitlint/config-conventional": "^18.6.3",
     "@release-it-plugins/workspaces": "^4.2.0",
@@ -96,16 +96,16 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react": "^7.34.2",
     "eslint-plugin-react-hooks": "^4.6.2",
     "husky": "^9.0.11",
-    "lerna": "^8.1.3",
-    "lint-staged": "^15.2.4",
-    "prettier": "^3.2.5",
+    "lerna": "^8.1.4",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.2",
     "prettier-config-carbon": "^0.11.0",
     "release-it": "^17.3.0",
-    "stylelint": "^16.5.0",
+    "stylelint": "^16.6.1",
     "stylelint-config-recommended-scss": "^14.0.0",
-    "stylelint-scss": "^6.3.0"
+    "stylelint-scss": "^6.3.1"
   }
 }

@@ -12,8 +12,8 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@carbon/icons-react": "^11.42.0",
-    "gatsby": "^5.13.5",
+    "@carbon/icons-react": "^11.43.0",
+    "gatsby": "^5.13.6",
     "gatsby-theme-carbon": "^4.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
