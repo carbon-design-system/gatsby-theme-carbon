@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.3...v4.0.4) (2024-07-05)
+
+
+### Bug Fixes
+
+* apply formatting ([fb7dfac](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/fb7dfaca909ed9b7b3327ca8842678eb0e7a6688))
+
 ## [4.0.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.2...v4.0.3) (2024-07-05)
 
 ## [4.0.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.1...v4.0.2) (2024-06-13)
