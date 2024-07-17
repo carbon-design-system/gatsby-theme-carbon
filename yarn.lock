@@ -2092,9 +2092,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/react@npm:^1.61.0":
-  version: 1.61.0
-  resolution: "@carbon/react@npm:1.61.0"
+"@carbon/react@npm:^1.62.0":
+  version: 1.62.0
+  resolution: "@carbon/react@npm:1.62.0"
   dependencies:
     "@babel/runtime": "npm:^7.18.3"
     "@carbon/feature-flags": "npm:^0.20.0"
@@ -2122,7 +2122,7 @@ __metadata:
     react: ^16.8.6 || ^17.0.1 || ^18.2.0
     react-dom: ^16.8.6 || ^17.0.1 || ^18.2.0
     sass: ^1.33.0
-  checksum: 10/7ff8f62788a2c681ce6b6bbe003550569e703c1703437ab9ed779d8e34acf8010a1389d26892e3428aff3176689cbd3dd960401a4093e508ed63224490dca994
+  checksum: 10/7b82d33055713921ff7508f88c00004815c0f1cfff1947d895d4a2d4abbbcbe717c56264e1245734bf13698455a2fbedf8dce7e9695f9110c6f3fc62229f7ea1
   languageName: node
   linkType: hard
 
@@ -10553,7 +10553,7 @@ __metadata:
   dependencies:
     "@carbon/icons-react": "npm:^11.43.0"
     gatsby: "npm:^5.13.6"
-    gatsby-theme-carbon: "npm:^4.0.3"
+    gatsby-theme-carbon: "npm:^4.0.4"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
   languageName: unknown
@@ -11863,7 +11863,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@npm:^4.0.3, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@npm:^4.0.4, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
@@ -11873,7 +11873,7 @@ __metadata:
     "@carbon/elements": "npm:^11.49.0"
     "@carbon/grid": "npm:11.24.0"
     "@carbon/pictograms-react": "npm:11.63.0"
-    "@carbon/react": "npm:^1.61.0"
+    "@carbon/react": "npm:^1.62.0"
     "@carbon/themes": "npm:11.37.0"
     "@garcia-enterprise/gatsby-plugin-sass-resources": "npm:^4.0.2"
     "@mdx-js/mdx": "npm:^3.0.1"
