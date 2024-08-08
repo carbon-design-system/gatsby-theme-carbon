@@ -103,9 +103,14 @@ export const createSchemaCustomization = ({ actions, schema }) => {
       title: String
       path: String!
     }
+    type NavItemsSubLevelYaml {
+      title: String
+      path: String
+      pages: [NavItemsYamlPage]
+    }
     type NavItemsYaml implements Node {
       title: String!
-      pages: [NavItemsYamlPage]!
+      pages: [NavItemsSubLevelYaml]!
       hasDivider: Boolean
     }`,
     schema.buildObjectType({

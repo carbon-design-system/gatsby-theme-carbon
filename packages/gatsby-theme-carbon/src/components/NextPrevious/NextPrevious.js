@@ -17,6 +17,10 @@ const useNavigationList = () => {
             pages {
               title
               path
+              pages {
+                path
+                title
+              }
             }
           }
         }
@@ -75,7 +79,7 @@ const useNavigationItems = ({ tabs, location }) => {
     : unPrefixedPathname.replace(/\/$/, ''); // removes the last syalash
 
   const navIndex = navigationList.findIndex((item) =>
-    item.path.includes(currentNavigationItem)
+    item.path?.includes(currentNavigationItem)
   );
 
   return {
