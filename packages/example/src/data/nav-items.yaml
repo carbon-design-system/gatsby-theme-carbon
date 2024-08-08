@@ -4,6 +4,18 @@
 - title: Demo
   pages:
     - path: /demo
+- title: Level two
+  pages:
+    - title: Page one
+      path: /level-two/page-one
+    - title: Page two
+      path: /level-two/page-two
+    - title: Level three
+      pages:
+        - title: Page three
+          path: /level-two/page-three
+        - title: Page four
+          path: /level-two/page-four
 - title: Gallery
   pages:
     - path: /gallery
