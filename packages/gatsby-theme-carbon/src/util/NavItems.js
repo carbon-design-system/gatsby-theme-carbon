@@ -12,6 +12,10 @@ export function useNavItems() {
             pages {
               title
               path
+              pages {
+                path
+                title
+              }
             }
             hasDivider
           }
