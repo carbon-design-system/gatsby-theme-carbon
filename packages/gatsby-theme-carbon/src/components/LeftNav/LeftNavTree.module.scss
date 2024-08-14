@@ -5,9 +5,15 @@
 @use '@carbon/react/scss/utilities/convert' as convert;
 
 .container {
-  height: 100% !important;
+  height: 100%;
   margin: spacing.$spacing-10 0;
-  background-color: white !important; //theme.$layer-02;
+  background-color: theme.$layer-01;
+
+  :global(.cds--tree) {
+    overflow: scroll;
+    height: calc(100% - spacing.$spacing-10);
+    background-color: theme.$layer-01;
+  }
 
   // fix left alignment because we are hiding the left icon
   :global(.cds--tree-leaf-node) {
@@ -130,5 +136,21 @@
     > * > :global(.cds--tree-parent-node__toggle::after) {
       transform: rotate(180deg);
     }
+  }
+
+  .divider {
+    position: relative;
+    padding-bottom: spacing.$spacing-05;
+    margin-bottom: spacing.$spacing-05;
+  }
+
+  .divider::after {
+    content: '';
+    position: absolute;
+    left: spacing.$spacing-05;
+    right: spacing.$spacing-05;
+    bottom: 0;
+    height: 1px;
+    background-color: var(--cds-ui-03, #e0e0e0);
   }
 }

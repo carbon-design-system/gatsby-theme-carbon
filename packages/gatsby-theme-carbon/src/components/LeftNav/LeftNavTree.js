@@ -9,6 +9,7 @@ import * as styles from './LeftNavTree.module.scss';
 import { dfs } from '../../util/NavTree';
 
 import slugify from 'slugify';
+import LeftNavResourceLinks from './ResourceLinks';
 
 const LeftNavTree = ({ items }) => {
   const [itemNodes, setItemNodes] = useState([]);
@@ -123,6 +124,7 @@ const LeftNavTree = ({ items }) => {
           className={clsx({
             'cds--tree-node--active': node.id === treeActiveItem?.id,
             'cds--tree-node--selected': node.id === treeActiveItem?.id,
+            [styles.divider]: node.hasDivider,
           })}
           onSelect={() => {
             node.path && setTreeActiveItem(node);
@@ -140,6 +142,7 @@ const LeftNavTree = ({ items }) => {
     <Theme className={styles.container} theme="g10">
       <TreeView label="Side navigation" hideLabel>
         {renderTree({ nodes: itemNodes })}
+        <LeftNavResourceLinks />
       </TreeView>
     </Theme>
   );

@@ -40,6 +40,11 @@ const LeftNav = (props) => {
         if (levelTwoNavItem.pages && levelTwoNavItem.pages.length > 1) {
           nestedLevels = true;
         }
+        // if it is branch node with only one leaf node, convert it to a leaf node
+        else if (levelTwoNavItem.pages && levelTwoNavItem.pages.length) {
+          levelTwoNavItem.path = levelTwoNavItem.pages[0].path;
+          levelTwoNavItem.pages = null;
+        }
       });
     });
     return nestedLevels;
@@ -94,7 +99,6 @@ const LeftNav = (props) => {
       {isTreeView ? (
         <>
           <LeftNavTree items={navItems}></LeftNavTree>
-          {/* <LeftNavResourceLinks /> */}
         </>
       ) : (
         <SideNav

@@ -32,12 +32,25 @@ const useNavigationList = () => {
   `);
 
   return [
-    edges.flatMap(({ node }) =>
-      node.pages.map((page) => ({
-        ...page,
-        category: node.title,
-      }))
-    ),
+    edges.flatMap(({ node }) => {
+      let navArr = [];
+      node.pages.map((page) => {
+        if (page.pages?.length) {
+          page.pages.forEach((sublevelPage) => {
+            navArr.push({
+              ...sublevelPage,
+              category: `${node.title}: ${page.title}`,
+            });
+          });
+        } else {
+          navArr.push({
+            ...page,
+            category: node.title,
+          });
+        }
+      });
+      return navArr;
+    }),
     pathPrefix,
   ];
 };
