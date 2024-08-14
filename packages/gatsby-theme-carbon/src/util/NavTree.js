@@ -11,10 +11,9 @@ export const dfs = (nodes, returnFunction) => {
     node = stack.pop();
     if (returnFunction(node)) {
       return node;
-    } else {
-      node.pages?.forEach((item) => {
-        stack.push(item);
-      });
     }
+    node.pages?.forEach((item) => {
+      stack.push(item);
+    });
   }
 };

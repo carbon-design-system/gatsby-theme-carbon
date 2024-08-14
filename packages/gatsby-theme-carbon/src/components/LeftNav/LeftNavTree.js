@@ -3,12 +3,12 @@ import { useLocation } from '@reach/router';
 import { Theme, TreeNode, TreeView } from '@carbon/react';
 import { Link } from 'gatsby';
 
-import clsx from 'clsx';
+import cx from 'classnames';
+import slugify from 'slugify';
 import PropTypes from 'prop-types';
 import * as styles from './LeftNavTree.module.scss';
 import { dfs } from '../../util/NavTree';
 
-import slugify from 'slugify';
 import LeftNavResourceLinks from './ResourceLinks';
 
 const LeftNavTree = ({ items }) => {
@@ -24,9 +24,7 @@ const LeftNavTree = ({ items }) => {
       // branch node with more than 1 leaf nodes
       if (item.pages && item.pages.length > 1) {
         item.isBranch = true;
-        item.pages.forEach((SubNavItem, i) => {
-          return assignNodeType(SubNavItem);
-        });
+        item.pages.forEach((SubNavItem, i) => assignNodeType(SubNavItem));
       }
       // if it is branch node with only one leaf node, convert it to a leaf node
       else if (item.pages && item.pages.length) {
@@ -64,23 +62,18 @@ const LeftNavTree = ({ items }) => {
   }, [items]);
 
   useEffect(() => {
-    const stripTrailingSlash = (str) => {
-      return str.endsWith('/') ? str.slice(0, -1) : str;
-    };
-
+    const stripTrailingSlash = (str) =>
+      str.endsWith('/') ? str.slice(0, -1) : str;
     setActivePath(stripTrailingSlash(location.pathname));
   }, [location.pathname]);
 
-  const getItemPath = (item) => {
-    return item.path || slugify(item.title, { lower: true, strict: true });
-  };
+  const getItemPath = (item) =>
+    item.path || slugify(item.title, { lower: true, strict: true });
 
   const removeHashAndQuery = (path) => path?.split('?')?.[0]?.split('#')?.[0];
 
   const isTreeNodeActive = useCallback(
-    (node) => {
-      return getItemPath(node) === removeHashAndQuery(activePath);
-    },
+    (node) => getItemPath(node) === removeHashAndQuery(activePath),
     [activePath]
   );
 
@@ -89,11 +82,10 @@ const LeftNavTree = ({ items }) => {
     setTreeActiveItem(activeNode);
   }, [isTreeNodeActive, itemNodes]);
 
-  const isTreeNodeExpanded = (node) => {
-    return !!dfs([node], (evalNode) =>
+  const isTreeNodeExpanded = (node) =>
+    !!dfs([node], (evalNode) =>
       evalNode.pages?.some((page) => page.id === treeActiveItem?.id)
     );
-  };
 
   function renderTree({ nodes }) {
     if (!nodes) {
@@ -121,7 +113,7 @@ const LeftNavTree = ({ items }) => {
           label={label}
           value={node.title}
           isExpanded={isTreeNodeExpanded(node)}
-          className={clsx({
+          className={cx({
             'cds--tree-node--active': node.id === treeActiveItem?.id,
             'cds--tree-node--selected': node.id === treeActiveItem?.id,
             [styles.divider]: node.hasDivider,

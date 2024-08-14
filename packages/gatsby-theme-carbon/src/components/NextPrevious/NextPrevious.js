@@ -33,8 +33,8 @@ const useNavigationList = () => {
 
   return [
     edges.flatMap(({ node }) => {
-      let navArr = [];
-      node.pages.map((page) => {
+      const navArr = [];
+      node.pages.forEach((page) => {
         if (page.pages?.length) {
           page.pages.forEach((sublevelPage) => {
             navArr.push({
