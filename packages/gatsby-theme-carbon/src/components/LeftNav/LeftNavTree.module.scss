@@ -11,7 +11,7 @@
   background-color: theme.$background;
 
   :global(.cds--tree) {
-    overflow: scroll;
+    overflow: auto;
     height: calc(100% - spacing.$spacing-10);
     background-color: theme.$background;
   }
@@ -127,7 +127,8 @@
     display: block;
     width: convert.rem(16px);
     height: convert.rem(16px);
-    background-image: url("data:image/svg+xml,%3Csvg focusable='false' preserveAspectRatio='xMidYMid meet' xmlns='http://www.w3.org/2000/svg' fill='currentColor' width='16' height='16' viewBox='0 0 16 16' aria-hidden='true' class='cds--tree-node__icon'%3E%3Cpath d='M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z'%3E%3C/path%3E%3C/svg%3E%0A");
+    background-color: theme.$icon-primary;
+    mask: url("data:image/svg+xml,%3Csvg focusable='false' preserveAspectRatio='xMidYMid meet' xmlns='http://www.w3.org/2000/svg' fill='currentColor' width='16' height='16' viewBox='0 0 16 16' aria-hidden='true' class='cds--tree-node__icon'%3E%3Cpath d='M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z'%3E%3C/path%3E%3C/svg%3E%0A");
     content: '';
   }
 
