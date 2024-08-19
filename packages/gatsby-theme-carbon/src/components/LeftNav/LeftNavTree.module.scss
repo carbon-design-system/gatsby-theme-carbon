@@ -3,16 +3,21 @@
 @use '@carbon/react/scss/theme' as theme;
 @use '@carbon/react/scss/type' as type;
 @use '@carbon/react/scss/utilities/convert' as convert;
+@use '@carbon/react/scss/zone';
 
 .container {
   height: 100%;
   margin: spacing.$spacing-10 0;
-  background-color: theme.$layer-01;
+  background-color: theme.$background;
 
   :global(.cds--tree) {
     overflow: scroll;
     height: calc(100% - spacing.$spacing-10);
-    background-color: theme.$layer-01;
+    background-color: theme.$background;
+  }
+
+  :global(.cds--tree-node) {
+    background-color: theme.$background;
   }
 
   // fix left alignment because we are hiding the left icon
@@ -138,6 +143,7 @@
     }
   }
 
+  // divider styles
   .divider {
     position: relative;
     padding-bottom: spacing.$spacing-05;

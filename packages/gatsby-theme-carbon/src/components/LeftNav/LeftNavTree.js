@@ -11,11 +11,13 @@ import { dfs } from '../../util/NavTree';
 
 import LeftNavResourceLinks from './ResourceLinks';
 
-const LeftNavTree = ({ items }) => {
+const LeftNavTree = ({ items, theme }) => {
   const [itemNodes, setItemNodes] = useState([]);
   const [treeActiveItem, setTreeActiveItem] = useState({});
   const [activePath, setActivePath] = useState('');
   const location = useLocation();
+
+  const themeValue = theme === 'dark' ? 'g100' : theme;
 
   useEffect(() => {
     const newItemNodeArray = [];
@@ -131,7 +133,7 @@ const LeftNavTree = ({ items }) => {
   }
 
   return (
-    <Theme className={styles.container} theme="g10">
+    <Theme className={styles.container} theme={themeValue}>
       <TreeView label="Side navigation" hideLabel>
         {renderTree({ nodes: itemNodes })}
         <LeftNavResourceLinks />

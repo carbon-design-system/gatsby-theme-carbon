@@ -97,7 +97,7 @@ const LeftNav = (props) => {
       onClick={closeSwitcher}
       onKeyPress={closeSwitcher}>
       {isTreeView ? (
-        <LeftNavTree items={navItems} />
+        <LeftNavTree items={navItems} theme={props.theme} />
       ) : (
         <SideNav
           ref={sideNavRef}
