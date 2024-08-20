@@ -1,4 +1,10 @@
-import React, { useContext, useRef, useEffect } from 'react';
+import React, {
+  useContext,
+  useRef,
+  useEffect,
+  useCallback,
+  useState,
+} from 'react';
 import { SideNav, SideNavItems } from '@carbon/react';
 import { useNavItems } from '../../util/NavItems';
 
@@ -9,6 +15,7 @@ import LeftNavResourceLinks from './ResourceLinks';
 import LeftNavWrapper from './LeftNavWrapper';
 import * as styles from './LeftNav.module.scss';
 import useMetadata from '../../util/hooks/useMetadata';
+import LeftNavTree from './LeftNavTree';
 
 const LeftNav = (props) => {
   const {
@@ -18,24 +25,57 @@ const LeftNav = (props) => {
     toggleNavState,
   } = useContext(NavContext);
 
+  const [isTreeView, setIsTreeView] = useState();
+
   const sideNavRef = useRef();
   const sideNavListRef = useRef();
 
-  useEffect(() => {
-    sideNavListRef.current = sideNavRef.current.querySelector('.sidenav-list');
-  }, []);
+  const navItems = useNavItems();
 
-  useEffect(() => {
-    sideNavListRef.current.addEventListener('scroll', (e) => {
-      setLeftNavScrollTop(e.target.scrollTop);
+  const hasNestedLevels = useCallback(() => {
+    let nestedLevels = false;
+
+    navItems.forEach((navItem) => {
+      navItem.pages?.forEach((levelTwoNavItem) => {
+        if (levelTwoNavItem.pages && levelTwoNavItem.pages.length > 1) {
+          nestedLevels = true;
+        }
+        // if it is branch node with only one leaf node, convert it to a leaf node
+        else if (levelTwoNavItem.pages && levelTwoNavItem.pages.length) {
+          levelTwoNavItem.path = levelTwoNavItem.pages[0].path;
+          levelTwoNavItem.pages = null;
+        }
+      });
     });
-  }, [setLeftNavScrollTop]);
+    return nestedLevels;
+  }, [navItems]);
 
   useEffect(() => {
-    if (leftNavScrollTop >= 0 && !sideNavListRef?.current.scrollTop) {
-      sideNavListRef.current.scrollTop = leftNavScrollTop;
+    setIsTreeView(hasNestedLevels());
+  }, [navItems]);
+
+  useEffect(() => {
+    if (!isTreeView) {
+      sideNavListRef.current =
+        sideNavRef.current.querySelector('.sidenav-list');
     }
-  }, [leftNavScrollTop]);
+  }, [isTreeView]);
+
+  useEffect(() => {
+    if (!isTreeView) {
+      sideNavListRef.current.addEventListener('scroll', (e) => {
+        setLeftNavScrollTop(e.target.scrollTop);
+      });
+    }
+  }, [setLeftNavScrollTop, isTreeView]);
+
+  useEffect(() => {
+    if (!isTreeView) {
+      if (leftNavScrollTop >= 0 && !sideNavListRef?.current.scrollTop) {
+        sideNavListRef.current.scrollTop = leftNavScrollTop;
+      }
+    }
+  }, [leftNavScrollTop, isTreeView]);
 
   const getLeftNavClassNames = () => {
     if (props.theme === 'dark') {
@@ -44,7 +84,6 @@ const LeftNav = (props) => {
     return styles.sideNavWhite;
   };
 
-  const navItems = useNavItems();
   const { navigationStyle } = useMetadata();
 
   const closeSwitcher = () => {
@@ -57,25 +96,30 @@ const LeftNav = (props) => {
       expanded={leftNavIsOpen}
       onClick={closeSwitcher}
       onKeyPress={closeSwitcher}>
-      <SideNav
-        ref={sideNavRef}
-        aria-label="Side navigation"
-        expanded={navigationStyle ? leftNavIsOpen : true}
-        defaultExpanded={!navigationStyle}
-        isPersistent={!navigationStyle}
-        className={getLeftNavClassNames()}>
-        <SideNavItems className="sidenav-list">
-          {navItems.map((item, i) => (
-            <LeftNavItem
-              items={item.pages}
-              category={item.title}
-              key={i}
-              hasDivider={item.hasDivider}
-            />
-          ))}
-          <LeftNavResourceLinks />
-        </SideNavItems>
-      </SideNav>
+      {isTreeView ? (
+        <LeftNavTree items={navItems} theme={props.theme} />
+      ) : (
+        <SideNav
+          ref={sideNavRef}
+          aria-label="Side navigation"
+          expanded={navigationStyle ? leftNavIsOpen : true}
+          defaultExpanded={!navigationStyle}
+          isPersistent={!navigationStyle}
+          className={getLeftNavClassNames()}>
+          <SideNavItems className="sidenav-list">
+            {typeof isTreeView !== 'undefined' &&
+              navItems.map((item, i) => (
+                <LeftNavItem
+                  items={item.pages}
+                  category={item.title}
+                  key={i}
+                  hasDivider={item.hasDivider}
+                />
+              ))}
+            <LeftNavResourceLinks />
+          </SideNavItems>
+        </SideNav>
+      )}
     </LeftNavWrapper>
   );
 };

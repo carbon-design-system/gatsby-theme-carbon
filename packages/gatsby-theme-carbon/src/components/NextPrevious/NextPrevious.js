@@ -17,6 +17,10 @@ const useNavigationList = () => {
             pages {
               title
               path
+              pages {
+                path
+                title
+              }
             }
           }
         }
@@ -28,12 +32,25 @@ const useNavigationList = () => {
   `);
 
   return [
-    edges.flatMap(({ node }) =>
-      node.pages.map((page) => ({
-        ...page,
-        category: node.title,
-      }))
-    ),
+    edges.flatMap(({ node }) => {
+      const navArr = [];
+      node.pages.forEach((page) => {
+        if (page.pages?.length) {
+          page.pages.forEach((sublevelPage) => {
+            navArr.push({
+              ...sublevelPage,
+              category: `${node.title}: ${page.title}`,
+            });
+          });
+        } else {
+          navArr.push({
+            ...page,
+            category: node.title,
+          });
+        }
+      });
+      return navArr;
+    }),
     pathPrefix,
   ];
 };
@@ -75,7 +92,7 @@ const useNavigationItems = ({ tabs, location }) => {
     : unPrefixedPathname.replace(/\/$/, ''); // removes the last syalash
 
   const navIndex = navigationList.findIndex((item) =>
-    item.path.includes(currentNavigationItem)
+    item.path?.includes(currentNavigationItem)
   );
 
   return {

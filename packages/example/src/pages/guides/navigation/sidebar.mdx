@@ -90,3 +90,37 @@ export function useNavItems() {
   });
 }
 ```
+
+## Nested Navigation
+
+With the new nested navigation feature, you can now organize and access
+hierarchical content more effectively within your Gatsby application. This
+enhancement supports tree navigation with a depth of up to two levels. The
+following is a sample YAML configuration for implementing nested navigation.
+
+```yaml
+- title: Getting started
+  pages:
+    - path: /getting-started
+- title: Demo
+  pages:
+    - path: /demo
+- title: Demo level 1
+  pages:
+    - title: Demo page 1
+      path: /demo-level-1/demo-page-1
+    - title: Demo page 2
+      path: /demo-level-1/demo-page-2
+    - title: Demo level 2
+      pages:
+        - title: Demo page 1
+          path: /demo-level-1/demo-level-2/demo-page-1
+        - title: Demo page 2
+          path: /demo-level-1/demo-level-2/demo-page-2
+- title: Gallery
+  pages:
+    - path: /gallery
+```
+
+Dividers can only be use with top-level nav items. Sub-level nav items doesn't
+support `hasDivider: true` property.
