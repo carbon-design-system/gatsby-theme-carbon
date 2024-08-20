@@ -88,7 +88,7 @@
     "@release-it-plugins/workspaces": "^4.2.0",
     "@release-it/conventional-changelog": "^8.0.1",
     "babel-eslint": "^10.1.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.9.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-wesbos": "4.0.1",
