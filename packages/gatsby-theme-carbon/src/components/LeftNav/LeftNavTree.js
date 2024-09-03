@@ -79,8 +79,23 @@ const LeftNavTree = ({ items, theme }) => {
     [activePath]
   );
 
+  const isTabActive = useCallback(
+    (node) => {
+      const pathname = removeHashAndQuery(activePath);
+      const isActive =
+        `${node.path?.split('/')[1]}/${node.path?.split('/')[2]}` ===
+        `${pathname.split('/')[1]}/${pathname.split('/')[2]}`;
+
+      return isActive;
+    },
+    [activePath]
+  );
+
   useEffect(() => {
-    const activeNode = dfs(itemNodes, isTreeNodeActive);
+    let activeNode = dfs(itemNodes, isTreeNodeActive);
+    if (!activeNode) {
+      activeNode = dfs(itemNodes, isTabActive);
+    }
     setTreeActiveItem(activeNode);
   }, [isTreeNodeActive, itemNodes]);
 
