@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.8](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.7...v4.0.8) (2024-09-05)
+
+
+### Bug Fixes
+
+* **leftnavtree:** hightlight nav item for tabbed pages ([#1506](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1506)) ([ca64e21](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ca64e21bfb09bdc29e5e333bcb9e8b07facc1962))
+
 ## [4.0.7](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.6...v4.0.7) (2024-08-20)
 
 ## [4.0.6](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.5...v4.0.6) (2024-08-14)
