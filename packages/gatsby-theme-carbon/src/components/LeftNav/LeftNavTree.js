@@ -67,7 +67,7 @@ const LeftNavTree = ({ items, theme }) => {
     const stripTrailingSlash = (str) =>
       str.endsWith('/') ? str.slice(0, -1) : str;
     const base = process.env.PATH_PREFIX
-      ? location.pathname.split(`${process.env.PATH_PREFIX}`)[1]
+      ? location.pathname.split(process.env.PATH_PREFIX)[1]
       : location.pathname;
     setActivePath(stripTrailingSlash(base));
   }, [location.pathname]);
