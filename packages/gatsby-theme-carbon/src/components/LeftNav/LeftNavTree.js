@@ -66,10 +66,9 @@ const LeftNavTree = ({ items, theme }) => {
   useEffect(() => {
     const stripTrailingSlash = (str) =>
       str.endsWith('/') ? str.slice(0, -1) : str;
-    const base =
-      process.env.NODE_ENV === 'development'
-        ? location.pathname
-        : location.pathname.split('/carbon/ibm-products')[1]; // account for domain url
+    const base = process.env.PATH_PREFIX
+      ? location.pathname.split(`${process.env.PATH_PREFIX}`)[1]
+      : location.pathname;
     setActivePath(stripTrailingSlash(base));
   }, [location.pathname]);
 
