@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.9](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.8...v4.0.9) (2024-09-11)
+
+
+### Bug Fixes
+
+* **leftnavtree:** menu is not activated when the URL has pathprefix ([#1509](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1509)) ([3e112df](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/3e112df191e449351fd717f63fa80e0b77dbc4e0))
+
 ## [4.0.8](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.7...v4.0.8) (2024-09-05)
 
 
