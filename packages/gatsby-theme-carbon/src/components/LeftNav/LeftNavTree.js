@@ -131,7 +131,7 @@ const LeftNavTree = ({ items, theme }) => {
           id={node.id}
           key={node.id}
           label={label}
-          value={`${node.title} hello`}
+          value={node.title}
           isExpanded={isTreeNodeExpanded(node)}
           className={cx({
             'cds--tree-node--active': node.id === treeActiveItem?.id,
