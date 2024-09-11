@@ -10,14 +10,12 @@ import * as styles from './LeftNavTree.module.scss';
 import { dfs } from '../../util/NavTree';
 
 import LeftNavResourceLinks from './ResourceLinks';
-import usePathprefix from '../../util/hooks/usePathprefix';
 
-const LeftNavTree = ({ items, theme }) => {
+const LeftNavTree = ({ items, theme, pathPrefix }) => {
   const [itemNodes, setItemNodes] = useState([]);
   const [treeActiveItem, setTreeActiveItem] = useState({});
   const [activePath, setActivePath] = useState('');
   const location = useLocation();
-  const pathPrefix = usePathprefix();
 
   const themeValue = theme === 'dark' ? 'g100' : theme;
 
@@ -68,12 +66,11 @@ const LeftNavTree = ({ items, theme }) => {
   useEffect(() => {
     const stripTrailingSlash = (str) =>
       str.endsWith('/') ? str.slice(0, -1) : str;
-
     const base = pathPrefix
       ? location.pathname.replace(pathPrefix, '')
       : location.pathname;
     setActivePath(stripTrailingSlash(base));
-  }, [location.pathname]);
+  }, [location.pathname, pathPrefix]);
 
   const getItemPath = (item) =>
     item.path || slugify(item.title, { lower: true, strict: true });
@@ -103,7 +100,7 @@ const LeftNavTree = ({ items, theme }) => {
       activeNode = dfs(itemNodes, isTabActive);
     }
     setTreeActiveItem(activeNode);
-  }, [isTreeNodeActive, itemNodes]);
+  }, [isTreeNodeActive, itemNodes, isTabActive]);
 
   const isTreeNodeExpanded = (node) =>
     !!dfs([node], (evalNode) =>

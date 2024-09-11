@@ -1,4 +1,5 @@
 import React, { useMemo, useReducer, useState } from 'react';
+import usePathprefix from '../hooks/usePathprefix';
 
 const NavContext = React.createContext({
   leftNavIsOpen: false,
@@ -19,6 +20,7 @@ const reducer = (state, action) => {
   }
 };
 export const NavContextProvider = ({ children }) => {
+  const pathPrefix = usePathprefix();
   const [
     { leftNavIsOpen, searchIsOpen, switcherIsOpen, leftNavScrollOffset },
     dispatch,
@@ -47,6 +49,7 @@ export const NavContextProvider = ({ children }) => {
       leftNavScrollOffset,
       leftNavScrollTop,
       setLeftNavScrollTop,
+      pathPrefix,
     }),
     [
       leftNavIsOpen,
@@ -58,6 +61,7 @@ export const NavContextProvider = ({ children }) => {
       leftNavScrollOffset,
       leftNavScrollTop,
       setLeftNavScrollTop,
+      pathPrefix,
     ]
   );
 
