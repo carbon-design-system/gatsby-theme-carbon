@@ -10,12 +10,14 @@ import * as styles from './LeftNavTree.module.scss';
 import { dfs } from '../../util/NavTree';
 
 import LeftNavResourceLinks from './ResourceLinks';
+import usePathprefix from '../../util/hooks/usePathprefix';
 
 const LeftNavTree = ({ items, theme }) => {
   const [itemNodes, setItemNodes] = useState([]);
   const [treeActiveItem, setTreeActiveItem] = useState({});
   const [activePath, setActivePath] = useState('');
   const location = useLocation();
+  const pathPrefix = usePathprefix();
 
   const themeValue = theme === 'dark' ? 'g100' : theme;
 
@@ -66,7 +68,11 @@ const LeftNavTree = ({ items, theme }) => {
   useEffect(() => {
     const stripTrailingSlash = (str) =>
       str.endsWith('/') ? str.slice(0, -1) : str;
-    setActivePath(stripTrailingSlash(location.pathname));
+
+    const base = pathPrefix
+      ? location.pathname.replace(pathPrefix, '')
+      : location.pathname;
+    setActivePath(stripTrailingSlash(base));
   }, [location.pathname]);
 
   const getItemPath = (item) =>
