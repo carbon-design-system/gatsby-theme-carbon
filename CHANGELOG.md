@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.9...v4.0.10) (2024-09-11)
+
+
+### Bug Fixes
+
+* prevent nav from collapsing during local development ([#1510](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1510)) ([b907d88](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/b907d887db00ecff8a34f9ea1f36dc103cf6881c))
+
 ## [4.0.9](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.8...v4.0.9) (2024-09-11)
 
 
