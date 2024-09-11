@@ -69,8 +69,6 @@ const LeftNavTree = ({ items, theme }) => {
     const stripTrailingSlash = (str) =>
       str.endsWith('/') ? str.slice(0, -1) : str;
 
-    console.log(pathPrefix);
-
     let base = pathPrefix
       ? location.pathname.replace(pathPrefix, '')
       : location.pathname;
