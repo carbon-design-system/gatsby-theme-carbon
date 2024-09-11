@@ -11,7 +11,7 @@ import { dfs } from '../../util/NavTree';
 
 import LeftNavResourceLinks from './ResourceLinks';
 
-const LeftNavTree = ({ items, theme }) => {
+const LeftNavTree = ({ items, theme, pathPrefix }) => {
   const [itemNodes, setItemNodes] = useState([]);
   const [treeActiveItem, setTreeActiveItem] = useState({});
   const [activePath, setActivePath] = useState('');
@@ -66,11 +66,11 @@ const LeftNavTree = ({ items, theme }) => {
   useEffect(() => {
     const stripTrailingSlash = (str) =>
       str.endsWith('/') ? str.slice(0, -1) : str;
-    const base = process.env.PATH_PREFIX
-      ? location.pathname.split(process.env.PATH_PREFIX)[1]
+    const base = pathPrefix
+      ? location.pathname.replace(pathPrefix, '')
       : location.pathname;
     setActivePath(stripTrailingSlash(base));
-  }, [location.pathname]);
+  }, [location.pathname, pathPrefix]);
 
   const getItemPath = (item) =>
     item.path || slugify(item.title, { lower: true, strict: true });

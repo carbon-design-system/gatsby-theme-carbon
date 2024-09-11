@@ -23,6 +23,7 @@ const LeftNav = (props) => {
     leftNavScrollTop,
     setLeftNavScrollTop,
     toggleNavState,
+    pathPrefix,
   } = useContext(NavContext);
 
   const [isTreeView, setIsTreeView] = useState();
@@ -97,7 +98,11 @@ const LeftNav = (props) => {
       onClick={closeSwitcher}
       onKeyPress={closeSwitcher}>
       {isTreeView ? (
-        <LeftNavTree items={navItems} theme={props.theme} />
+        <LeftNavTree
+          items={navItems}
+          theme={props.theme}
+          pathPrefix={pathPrefix}
+        />
       ) : (
         <SideNav
           ref={sideNavRef}
