@@ -1,5 +1,7 @@
 # Changelog
 
+## [4.0.11](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.10...v4.0.11) (2024-09-12)
+
 ## [4.0.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.9...v4.0.10) (2024-09-11)
 
 
