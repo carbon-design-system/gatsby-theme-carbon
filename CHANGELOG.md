@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.11...v4.1.0) (2024-09-12)
+
+
+### Features
+
+* add Tag styles for PageDescription and ResourceCard ([#1513](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1513)) ([50125c4](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/50125c450f28e849b7970d98259da142d20c510f))
+
 ## [4.0.11](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.10...v4.0.11) (2024-09-12)
 
 ## [4.0.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.9...v4.0.10) (2024-09-11)
