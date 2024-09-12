@@ -16,3 +16,9 @@
   font-size: 0.75em;
   line-height: 1.25;
 }
+
+// with tag
+.page-description :global(.cds--tag) {
+  position: absolute;
+  margin-top: -$spacing-09;
+}
