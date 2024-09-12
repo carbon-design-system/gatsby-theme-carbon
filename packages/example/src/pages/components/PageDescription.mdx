@@ -3,7 +3,11 @@ title: PageDescription
 description: Usage instructions for the PageDescription component
 ---
 
+import { Tag } from '@carbon/react';
+
 <PageDescription>
+
+<Tag type="green">Optional Tag</Tag>
 
 This is a `<PageDescription>` component. It is generally used for intro text at
 the top of the page using the
@@ -25,6 +29,21 @@ should be consice – one sentence, or maybe two short ones at most.
 
 ```markup path=components/PageDescription/PageDescription.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/PageDescription
 <PageDescription>
+
+
+Lorem ipsum dolor sit amet, **consectetur adipiscing elit**, sed do eiusmod tempor _incididunt_ ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+</PageDescription>
+```
+
+#### With optional Carbon Tag
+
+```markup path=components/PageDescription/PageDescription.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/PageDescription
+import { Tag } from '@carbon/react';
+
+<PageDescription>
+
+<Tag type="green">Optional Tag</Tag>
 
 Lorem ipsum dolor sit amet, **consectetur adipiscing elit**, sed do eiusmod tempor _incididunt_ ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
