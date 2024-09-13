@@ -96,12 +96,14 @@ const LeftNavTree = ({ items, theme, pathPrefix }) => {
   );
 
   useEffect(() => {
-    let activeNode = dfs(itemNodes, isTreeNodeActive);
-    if (!activeNode) {
-      activeNode = dfs(itemNodes, isTabActive);
+    if (activePath) {
+      let activeNode = dfs(itemNodes, isTreeNodeActive);
+      if (!activeNode) {
+        activeNode = dfs(itemNodes, isTabActive);
+      }
+      setTreeActiveItem(activeNode);
     }
-    setTreeActiveItem(activeNode);
-  }, [isTreeNodeActive, itemNodes, isTabActive]);
+  }, [isTreeNodeActive, itemNodes, isTabActive, activePath]);
 
   const isTreeNodeExpanded = (node) =>
     !!dfs([node], (evalNode) =>
