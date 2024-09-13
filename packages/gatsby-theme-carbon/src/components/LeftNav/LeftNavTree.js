@@ -85,9 +85,10 @@ const LeftNavTree = ({ items, theme, pathPrefix }) => {
   const isTabActive = useCallback(
     (node) => {
       const pathname = removeHashAndQuery(activePath);
+      const tabRootPath = pathname.split('/').slice(0, -1).join('/');
+
       const isActive =
-        `${node.path?.split('/')[1]}/${node.path?.split('/')[2]}` ===
-        `${pathname.split('/')[1]}/${pathname.split('/')[2]}`;
+        node.path?.split('/').slice(0, -1).join('/') === tabRootPath;
 
       return isActive;
     },
@@ -95,12 +96,14 @@ const LeftNavTree = ({ items, theme, pathPrefix }) => {
   );
 
   useEffect(() => {
-    let activeNode = dfs(itemNodes, isTreeNodeActive);
-    if (!activeNode) {
-      activeNode = dfs(itemNodes, isTabActive);
+    if (activePath) {
+      let activeNode = dfs(itemNodes, isTreeNodeActive);
+      if (!activeNode) {
+        activeNode = dfs(itemNodes, isTabActive);
+      }
+      setTreeActiveItem(activeNode);
     }
-    setTreeActiveItem(activeNode);
-  }, [isTreeNodeActive, itemNodes, isTabActive]);
+  }, [isTreeNodeActive, itemNodes, isTabActive, activePath]);
 
   const isTreeNodeExpanded = (node) =>
     !!dfs([node], (evalNode) =>
