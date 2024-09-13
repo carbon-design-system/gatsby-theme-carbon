@@ -15,7 +15,9 @@
         - title: Demo page 1
           path: /demo-level-1/demo-level-2/demo-page-1
         - title: Demo page 2
-          path: /demo-level-1/demo-level-2/demo-page-2
+          path: /demo-level-1/demo-level-2/demo-page-2/tab-1
+        - title: Demo page 3
+          path: /demo-level-1/demo-level-2/demo-page-3
 - title: Gallery
   pages:
     - path: /gallery
