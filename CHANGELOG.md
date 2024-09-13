@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.0...v4.1.1) (2024-09-13)
+
+
+### Bug Fixes
+
+* **leftnavtree:** highlight nav menu item for tabbed pages in level2 ([#1514](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1514)) ([0d5f9d5](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0d5f9d58cc4dace2e7942d5beb00c3e39cad9823))
+
 ## [4.1.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.11...v4.1.0) (2024-09-12)
 
 
