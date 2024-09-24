@@ -7,17 +7,19 @@
 
 .container {
   height: 100%;
+  width: 100%;
+  position: absolute;
   margin: spacing.$spacing-10 0;
-  background-color: theme.$background;
+  background-color: theme.$text-inverse;
 
   :global(.cds--tree) {
     overflow: auto;
     height: calc(100% - spacing.$spacing-10);
-    background-color: theme.$background;
+    background-color: theme.$text-inverse;
   }
 
   :global(.cds--tree-node) {
-    background-color: theme.$background;
+    background-color: theme.$text-inverse;
   }
 
   // fix left alignment because we are hiding the left icon
@@ -147,8 +149,8 @@
   // divider styles
   .divider {
     position: relative;
-    padding-bottom: spacing.$spacing-05;
-    margin-bottom: spacing.$spacing-05;
+    padding-bottom: spacing.$spacing-03;
+    margin-bottom: spacing.$spacing-03;
   }
 
   .divider::after {
@@ -158,6 +160,6 @@
     right: spacing.$spacing-05;
     bottom: 0;
     height: 1px;
-    background-color: var(--cds-ui-03, #e0e0e0);
+    background-color: theme.$border-subtle-00;
   }
 }

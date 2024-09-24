@@ -1,6 +1,6 @@
 import React, { memo, useCallback, useEffect, useState } from 'react';
 import { useLocation } from '@reach/router';
-import { Theme, TreeNode, TreeView } from '@carbon/react';
+import { TreeNode, TreeView } from '@carbon/react';
 import { Link } from 'gatsby';
 
 import cx from 'classnames';
@@ -11,13 +11,11 @@ import { dfs } from '../../util/NavTree';
 
 import LeftNavResourceLinks from './ResourceLinks';
 
-const LeftNavTree = ({ items, theme, pathPrefix }) => {
+const LeftNavTree = ({ items, pathPrefix }) => {
   const [itemNodes, setItemNodes] = useState([]);
   const [treeActiveItem, setTreeActiveItem] = useState({});
   const [activePath, setActivePath] = useState('');
   const location = useLocation();
-
-  const themeValue = theme === 'dark' ? 'g100' : theme;
 
   useEffect(() => {
     const newItemNodeArray = [];
@@ -154,12 +152,12 @@ const LeftNavTree = ({ items, theme, pathPrefix }) => {
   }
 
   return (
-    <Theme className={styles.container} theme={themeValue}>
+    <nav className={styles.container}>
       <TreeView label="Side navigation" hideLabel>
         {renderTree({ nodes: itemNodes })}
         <LeftNavResourceLinks />
       </TreeView>
-    </Theme>
+    </nav>
   );
 };
 

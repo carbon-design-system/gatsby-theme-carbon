@@ -48,6 +48,7 @@
       path: /guides/v3-migration
     - title: v4.0 Migration
       path: /guides/v4-migration
+  hasDivider: true
 - title: Components
   pages:
     - title: Accordion
