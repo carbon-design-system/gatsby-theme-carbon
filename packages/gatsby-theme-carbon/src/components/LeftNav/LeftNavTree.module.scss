@@ -10,16 +10,16 @@
   width: 100%;
   position: absolute;
   margin: spacing.$spacing-10 0;
-  background-color: theme.$text-inverse;
+  background-color: theme.$background;
+  border-right: 1px solid theme.$border-subtle-00;
 
   :global(.cds--tree) {
     overflow: auto;
     height: calc(100% - spacing.$spacing-10);
-    background-color: theme.$text-inverse;
   }
 
   :global(.cds--tree-node) {
-    background-color: theme.$text-inverse;
+    background-color: theme.$background;
   }
 
   // fix left alignment because we are hiding the left icon
@@ -161,5 +161,25 @@
     bottom: 0;
     height: 1px;
     background-color: theme.$border-subtle-00;
+  }
+}
+
+// style overrides for g10 theme
+.container_g10 {
+  background-color: $white-0;
+  border-right: 1px solid $gray-20;
+
+  :global(.cds--tree-node) {
+    background-color: $white-0;
+  }
+}
+
+// style overrides for g90 theme
+.container_g90 {
+  background-color: $gray-100;
+  border-right: 1px solid $gray-80;
+
+  :global(.cds--tree-node) {
+    background-color: $gray-100;
   }
 }

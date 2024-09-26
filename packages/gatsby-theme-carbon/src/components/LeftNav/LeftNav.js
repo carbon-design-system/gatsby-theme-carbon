@@ -100,7 +100,11 @@ const LeftNav = (props) => {
       onKeyPress={closeSwitcher}>
       <Theme theme={themeValue}>
         {isTreeView ? (
-          <LeftNavTree items={navItems} pathPrefix={pathPrefix} />
+          <LeftNavTree
+            items={navItems}
+            pathPrefix={pathPrefix}
+            theme={themeValue}
+          />
         ) : (
           <SideNav
             ref={sideNavRef}
