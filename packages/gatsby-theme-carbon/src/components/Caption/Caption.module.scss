@@ -1,6 +1,7 @@
 .caption {
   @include type-style('body-short-01');
   --space: #{$spacing-05};
+  margin-top: var(--space);
 }
 
 div .caption * {
