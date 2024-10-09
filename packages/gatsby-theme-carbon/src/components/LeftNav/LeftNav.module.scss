@@ -1,3 +1,5 @@
+@use '@carbon/react/scss/theme' as theme;
+
 // White theme
 
 nav.side-nav--white {
@@ -8,7 +10,6 @@ nav.side-nav--white {
 // Dark theme
 
 nav.side-nav--dark {
-  --cds-ui-03: #{$gray-80};
   padding-top: $spacing-05;
   background-color: $gray-100;
   border-right: 1px solid $gray-80;
@@ -100,14 +101,14 @@ nav.side-nav--dark a.current-item {
 
 .divider {
   margin: $spacing-03 $spacing-05;
-  border-color: var(--cds-ui-03, #e0e0e0);
+  border-color: theme.$border-subtle-00;
   border-style: solid;
   border-bottom: none;
 }
 
 .divider-space {
-  margin-top: $spacing-05;
-  margin-bottom: $spacing-05;
+  margin-top: $spacing-03;
+  margin-bottom: $spacing-03;
 }
 
 // Moves icons to the right

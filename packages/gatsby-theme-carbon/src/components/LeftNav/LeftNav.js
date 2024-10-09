@@ -5,7 +5,7 @@ import React, {
   useCallback,
   useState,
 } from 'react';
-import { SideNav, SideNavItems } from '@carbon/react';
+import { SideNav, SideNavItems, Theme } from '@carbon/react';
 import { useNavItems } from '../../util/NavItems';
 
 import NavContext from '../../util/context/NavContext';
@@ -32,6 +32,7 @@ const LeftNav = (props) => {
   const sideNavListRef = useRef();
 
   const navItems = useNavItems();
+  const themeValue = props.theme === 'dark' ? 'g100' : props.theme;
 
   const hasNestedLevels = useCallback(() => {
     let nestedLevels = false;
@@ -97,34 +98,36 @@ const LeftNav = (props) => {
       expanded={leftNavIsOpen}
       onClick={closeSwitcher}
       onKeyPress={closeSwitcher}>
-      {isTreeView ? (
-        <LeftNavTree
-          items={navItems}
-          theme={props.theme}
-          pathPrefix={pathPrefix}
-        />
-      ) : (
-        <SideNav
-          ref={sideNavRef}
-          aria-label="Side navigation"
-          expanded={navigationStyle ? leftNavIsOpen : true}
-          defaultExpanded={!navigationStyle}
-          isPersistent={!navigationStyle}
-          className={getLeftNavClassNames()}>
-          <SideNavItems className="sidenav-list">
-            {typeof isTreeView !== 'undefined' &&
-              navItems.map((item, i) => (
-                <LeftNavItem
-                  items={item.pages}
-                  category={item.title}
-                  key={i}
-                  hasDivider={item.hasDivider}
-                />
-              ))}
-            <LeftNavResourceLinks />
-          </SideNavItems>
-        </SideNav>
-      )}
+      <Theme theme={themeValue}>
+        {isTreeView ? (
+          <LeftNavTree
+            items={navItems}
+            pathPrefix={pathPrefix}
+            theme={themeValue}
+          />
+        ) : (
+          <SideNav
+            ref={sideNavRef}
+            aria-label="Side navigation"
+            expanded={navigationStyle ? leftNavIsOpen : true}
+            defaultExpanded={!navigationStyle}
+            isPersistent={!navigationStyle}
+            className={getLeftNavClassNames()}>
+            <SideNavItems className="sidenav-list">
+              {typeof isTreeView !== 'undefined' &&
+                navItems.map((item, i) => (
+                  <LeftNavItem
+                    items={item.pages}
+                    category={item.title}
+                    key={i}
+                    hasDivider={item.hasDivider}
+                  />
+                ))}
+              <LeftNavResourceLinks />
+            </SideNavItems>
+          </SideNav>
+        )}
+      </Theme>
     </LeftNavWrapper>
   );
 };
