@@ -1,7 +1,7 @@
 import React, { memo, useCallback, useEffect, useState } from 'react';
 import { useLocation } from '@reach/router';
 import { Theme, TreeNode, TreeView } from '@carbon/react';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 
 import cx from 'classnames';
 import slugify from 'slugify';
@@ -110,6 +110,13 @@ const LeftNavTree = ({ items, theme, pathPrefix }) => {
       evalNode.pages?.some((page) => page.id === treeActiveItem?.id)
     );
 
+  const handleKeyDownEvent = (event, path) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      navigate(path);
+    }
+  };
+
   function renderTree({ nodes }) {
     if (!nodes) {
       return;
@@ -136,6 +143,7 @@ const LeftNavTree = ({ items, theme, pathPrefix }) => {
           label={label}
           value={node.title}
           isExpanded={isTreeNodeExpanded(node)}
+          onKeyDown={(event) => handleKeyDownEvent(event, node.path)}
           className={cx({
             'cds--tree-node--active': node.id === treeActiveItem?.id,
             'cds--tree-node--selected': node.id === treeActiveItem?.id,
