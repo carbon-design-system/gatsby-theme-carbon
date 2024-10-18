@@ -32,7 +32,7 @@ export const onRenderBody = ({ setHeadComponents, setBodyAttributes }) => {
     <link
       key="sans"
       rel="preload"
-      href="https://gatsby.carbondesignsystem.com/fonts/6.3/IBMPlexSansVar-Roman.woff2"
+      href="https://1.www.s81c.com/common/carbon/plex/fonts/IBM-Plex-Sans-Variable/fonts/complete/woff2/IBM%20Plex%20Sans%20Var-Roman.woff2"
       as="font"
       type="font/woff2"
       crossOrigin=""

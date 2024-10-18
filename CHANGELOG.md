@@ -1,5 +1,18 @@
 # Changelog
 
+## [4.1.6](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.5...v4.1.6) (2024-10-16)
+
+## [4.1.5](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.4...v4.1.5) (2024-10-09)
+
+## [4.1.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.3...v4.1.4) (2024-09-26)
+
+## [4.1.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.2...v4.1.3) (2024-09-23)
+
+
+### Bug Fixes
+
+* page description with tag spacing ([#1519](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1519)) ([27452cf](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/27452cfc9abdb22a7203e35704ac21a1cceeec3c))
+
 ## [4.1.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.1...v4.1.2) (2024-09-18)
 
 ## [4.1.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.0...v4.1.1) (2024-09-13)
