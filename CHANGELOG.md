@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.11](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.10...v4.1.11) (2024-11-01)
+
+
+### Bug Fixes
+
+* **leftnavtree:** style updates ([#1520](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1520)) ([2f258ed](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/2f258ed9573b01f5f6521b28e0a306e7e51ec7c8))
+
 ## [4.1.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.9...v4.1.10) (2024-11-01)
 
 ## [4.1.9](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.8...v4.1.9) (2024-10-24)
