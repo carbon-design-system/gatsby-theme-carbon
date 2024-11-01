@@ -1,0 +1,129 @@
+---
+title: Inline notification
+description: Usage instructions for the Inline notification component
+---
+
+<PageDescription>
+
+The `<InlineNotification>` component is used to communicate important
+information to a user.
+
+</PageDescription>
+
+## Example
+
+<Title>Info</Title>
+
+<InlineNotification>
+
+**Lorem ipsum:** dolor sit amet,
+[consectetur adipiscing](/components/InlineNotification) elit. Curabitur ac odio
+arcu. Vestibulum egestas eleifend porttitor. Quisque malesuada pulvinar
+pellentesque. Nunc dictum odio eu enim venenatis fringilla. Nunc finibus enim
+dui, a tempus quam commodo vitae. Donec non eros gravida dolor porta suscipit
+non vel quam.
+
+</InlineNotification>
+
+<Title>Error</Title>
+
+<InlineNotification kind="error">
+
+**Error:** dolor sit amet,
+[consectetur adipiscing](/components/InlineNotification) elit. Curabitur ac odio
+arcu. Vestibulum egestas eleifend porttitor. Quisque malesuada pulvinar
+pellentesque. Nunc dictum odio eu enim venenatis fringilla. Nunc finibus enim
+dui, a tempus quam commodo vitae. Donec non eros gravida dolor porta suscipit
+non vel quam.
+
+</InlineNotification>
+
+<Title>Success</Title>
+
+<InlineNotification kind="success">
+
+**Success:** dolor sit amet,
+[consectetur adipiscing](/components/InlineNotification) elit. Curabitur ac odio
+arcu. Vestibulum egestas eleifend porttitor. Quisque malesuada pulvinar
+pellentesque. Nunc dictum odio eu enim venenatis fringilla. Nunc finibus enim
+dui, a tempus quam commodo vitae. Donec non eros gravida dolor porta suscipit
+non vel quam.
+
+</InlineNotification>
+
+<Title>Warning</Title>
+
+<InlineNotification kind="warning">
+
+**Warning:** dolor sit amet,
+[consectetur adipiscing](/components/InlineNotification) elit. Curabitur ac odio
+arcu. Vestibulum egestas eleifend porttitor. Quisque malesuada pulvinar
+pellentesque. Nunc dictum odio eu enim venenatis fringilla. Nunc finibus enim
+dui, a tempus quam commodo vitae. Donec non eros gravida dolor porta suscipit
+non vel quam.
+
+</InlineNotification>
+
+## Code
+
+```mdx path=components/InlineNotification/InlineNotification.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/InlineNotification
+// Info
+
+<InlineNotification>
+
+**Lorem ipsum:** dolor sit amet,
+[consectetur adipiscing](/components/InlineNotification) elit. Curabitur ac odio
+arcu. Vestibulum egestas eleifend porttitor. Quisque malesuada pulvinar
+pellentesque. Nunc dictum odio eu enim venenatis fringilla. Nunc finibus enim
+dui, a tempus quam commodo vitae. Donec non eros gravida dolor porta suscipit
+non vel quam.
+
+</InlineNotification>
+
+// Error
+
+<InlineNotification kind="error">
+
+**Error:** dolor sit amet,
+[consectetur adipiscing](/components/InlineNotification) elit. Curabitur ac odio
+arcu. Vestibulum egestas eleifend porttitor. Quisque malesuada pulvinar
+pellentesque. Nunc dictum odio eu enim venenatis fringilla. Nunc finibus enim
+dui, a tempus quam commodo vitae. Donec non eros gravida dolor porta suscipit
+non vel quam.
+
+</InlineNotification>
+
+// Success
+
+<InlineNotification kind="success">
+
+**Success:** dolor sit amet,
+[consectetur adipiscing](/components/InlineNotification) elit. Curabitur ac odio
+arcu. Vestibulum egestas eleifend porttitor. Quisque malesuada pulvinar
+pellentesque. Nunc dictum odio eu enim venenatis fringilla. Nunc finibus enim
+dui, a tempus quam commodo vitae. Donec non eros gravida dolor porta suscipit
+non vel quam.
+
+</InlineNotification>
+
+// Warning
+
+<InlineNotification kind="warning">
+
+**Warning:** dolor sit amet,
+[consectetur adipiscing](/components/InlineNotification) elit. Curabitur ac odio
+arcu. Vestibulum egestas eleifend porttitor. Quisque malesuada pulvinar
+pellentesque. Nunc dictum odio eu enim venenatis fringilla. Nunc finibus enim
+dui, a tempus quam commodo vitae. Donec non eros gravida dolor porta suscipit
+non vel quam.
+
+</InlineNotification>
+```
+
+### Props
+
+| property  | propType | required | default | description                                                        |
+| --------- | -------- | -------- | ------- | ------------------------------------------------------------------ |
+| children  | node     |          |         | Pass in the children that will be rendered within the notification |
+| className | string   |          |         | Specify an optional className to be applied to the container node  |
+| kind      | string   | yes      | `info`  | `error`, `info`, `success`, `warning`                              |

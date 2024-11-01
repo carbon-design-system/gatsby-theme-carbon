@@ -1,0 +1,126 @@
+---
+title: Navigation
+tabs: ['Sidebar', 'Tabs']
+description: guide for adding and maintaining the sidebar entries
+---
+
+<PageDescription>
+
+One of the most important pieces of making a working site is to define your
+navigation items. This allows the theme to inform the SideNav component as well
+as the next/previous components at the bottom of each page.
+
+</PageDescription>
+
+## Yaml data
+
+Unfortunately, genenerating left nav contents purely from the pages directory
+has some fatal flaws. It makes it very difficult to establish the order of items
+or to hide items all together. In `src/data/nav-items.yaml`, you’ll list your
+nav items in order.
+
+```yaml
+- title: Menu
+  pages:
+    - title: Page 1
+      path: /menu/Page-1
+    - title: Page 2
+      path: /menu/Page-2
+- title: Single Page
+  pages:
+    - path: /single-page
+```
+
+Some important things to note here:
+
+- You only need to link to the first tab if using page tabs
+- The `title` refers to the menu and item text, it’s allowed to have spaces
+- The `path` refer to the relative path to the mdx file in your pages
+- You can make a `Page/index.mdx` file if you’d prefer to have assets in a
+  folder. The path would still just look like `/Page`
+
+## Adding a divider
+
+You can insert a divider below any top-level nav item by adding the
+`hasDivider: true` property to it's configuration under
+`src/data/nav-items.yaml`. **Note:** dividers can only be use with top-level nav
+items and are incompatible with the
+[header navigation style](/guides/configuration#navigation-style).
+
+When shadowed, the `ResourceLinks` component can optionally receive an
+`includeDividerSpace` prop. Set this to false if you want to remove the margin
+above and below the `ResourceLinks` divider.
+
+```yaml
+- title: Menu
+  pages:
+    - title: Page 1
+      path: /menu/Page-1
+    - title: Page 2
+      path: /menu/Page-2
+  hasDivider: true
+- title: Single Page
+  pages:
+    - path: /single-page
+```
+
+In the example above, a divider will appear between **Menu** and **Single
+Page**.
+
+## Customizing
+
+The nav item list can be customized using Gatsby theme
+[shadowing](/guides/shadowing). Simply provide your own implementation of
+`/src/util/NavItems.js` which can augment or replace the nav items read from
+`src/data/nav-items.yaml`.
+
+```javascript
+// /src/util/NavItems.js
+import { useNavItems as themeUseNavItems } from 'gatsby-theme-carbon/src/util/NavItems';
+
+// add nav items
+export function useNavItems() {
+  const navItems = themeUseNavItems();
+  return navItems.concat({
+    title: 'Additional Nav Item',
+    pages: [
+      { path: '/page1', title: 'New Page 1' },
+      { path: '/page2', title: 'New Page 2' },
+    ],
+  });
+}
+```
+
+## Nested Navigation
+
+With the new nested navigation feature, you can now organize and access
+hierarchical content more effectively within your Gatsby application. This
+enhancement supports tree navigation with a depth of up to two levels. The
+following is a sample YAML configuration for implementing nested navigation.
+
+```yaml
+- title: Getting started
+  pages:
+    - path: /getting-started
+- title: Demo
+  pages:
+    - path: /demo
+- title: Demo level 1
+  pages:
+    - title: Demo page 1
+      path: /demo-level-1/demo-page-1
+    - title: Demo page 2
+      path: /demo-level-1/demo-page-2
+    - title: Demo level 2
+      pages:
+        - title: Demo page 1
+          path: /demo-level-1/demo-level-2/demo-page-1
+        - title: Demo page 2
+          path: /demo-level-1/demo-level-2/demo-page-2
+- title: Gallery
+  pages:
+    - path: /gallery
+```
+
+Dividers can only be use with top-level nav items. Sub-level nav items doesn't
+support `hasDivider: true` property.

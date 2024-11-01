@@ -1,0 +1,112 @@
+---
+title: V4.0 Migration
+description: Guide for migrating to v4.0 of the theme
+---
+
+<PageDescription>
+
+Version 4 of the Carbon Gatsby Theme uses version 5 of the Gatsby library.
+Please read through the
+[release](https://www.gatsbyjs.com/docs/reference/release-notes/v5.0/) notes in
+the Gatsby documentation for more details.
+
+The major version change comes with the potential for breaking changes, this
+guide aims to cover the most likely issues a site built with the Carbon Gatsby
+theme might encounter. To have the smoothest possible experience, we recommend
+[upgrading to v3](/guides/v3-migration) of the Carbon Gatsby Theme first if you
+haven't already done so.
+
+</PageDescription>
+
+## Breaking changes
+
+1. You will need to convert your `gatsby-config.js` and `gatsby-node.js` to
+   **.mjs** (node modules) files.
+
+2. HTML-style comments will no longer work inside of mdx files, you will need to
+   use JavaScript-style comments with curly braces:
+
+```jsx
+// Before
+<!-- Place comments here -->
+// After
+{/* Place comments here */}
+```
+
+4. Homepage and default layouts have been moved from **templates** to **layout**
+   components. Update any shadowing or links to template layouts.
+
+```jsx
+// Before
+import Layout from 'gatsby-theme-carbon/src/templates/Default';
+// After
+import Layout from 'gatsby-theme-carbon/src/components/Layouts/Default';
+```
+
+5. If you are shadowing the homepage you need to update the file path
+   `packages/example/src/components/Homepage.js`
+
+```jsx
+// Before
+import HomepageTemplate from 'gatsby-theme-carbon/src/templates/Homepage';
+// After
+import HomepageTemplate from 'gatsby-theme-carbon/src/components/Layouts/Homepage';
+```
+
+## Gatsby migration guide
+
+In this section we'll cover the most likely issues site's built with the Carbon
+Gatsby theme might encounter when migrating. If you encounter any issues, or
+your site leverages more advanced Gatsby configuration, check to see if it's
+covered in the
+[official Gatsby v5 migration guide](https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v4-to-v5/).
+To facilitate an easy upgrade path, we recommend
+[upgrading to v3](/guides/v3-migration) of Carbon's Gatsby Theme first if you
+haven't already done so.
+
+<InlineNotification>
+
+Note: We'll use yarn for the shell commands here. Replace them with the `npm`
+equivalent if your project uses `npm` as its package manager.
+
+</InlineNotification>
+
+1. Update Gatsby to v5
+
+```shell
+yarn add gatsby@latest-v5
+```
+
+2. Update Gatsby plugins (including the theme)
+
+```shell
+yarn upgrade-interactive --latest
+```
+
+3. Update graphql queries using the codemod:
+
+```shell
+npx gatsby-codemods@latest sort-and-aggr-graphql
+```
+
+4. Update any files related to [breaking changes](#breaking-changes) listed
+   above.
+5. Run `yarn dev:clean` to delete and rebuild your project's development bundle
+
+## Troubleshooting
+
+<Accordion>
+  <AccordionItem
+    title="Markdown link with title needs double quotes"
+    open={true}>
+
+```jsx
+// Before
+[Link](https://www.carbondesignsystem.com "Carbon")
+// After
+[Link](https://www.carbondesignsystem.com 'Carbon')
+```
+
+    </AccordionItem>
+
+</Accordion>

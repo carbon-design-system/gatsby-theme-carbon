@@ -1,0 +1,203 @@
+---
+title: ExpressiveList
+description: Usage instructions for the FeatureCard component
+---
+
+import { Connect } from '@carbon/pictograms-react';
+
+<PageDescription>
+
+The `<ExpressiveList>` component is meant to be used with the
+`expressive-content-list-group` className when grouped together. This component
+is only intended for paragraph content and not meant to nest other components
+within it. This can be used with a pictogram by importing a pictogram from our
+library and passing it into the `pictogram` prop as a node.
+
+</PageDescription>
+
+## Example
+
+<Title>Content only</Title>
+
+<div className="expressive-content-list-group">
+  <ExpressiveList title="Short Title" background={true}>
+    Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus
+    suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum
+    vulputate. Orci ac auctor augue mauris augue neque. Nullam ac tortor vitae
+    purus faucibus ornare suspendisse sed.
+  </ExpressiveList>
+  <ExpressiveList title="Short Title" background={true}>
+    Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus
+    suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum
+    vulputate. Orci ac auctor augue mauris augue neque. Nullam ac tortor vitae
+    purus faucibus ornare suspendisse sed.
+  </ExpressiveList>
+  <ExpressiveList title="Short Title" background={true}>
+    Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus
+    suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum
+    vulputate. Orci ac auctor augue mauris augue neque. Nullam ac tortor vitae
+    purus faucibus ornare suspendisse sed.
+  </ExpressiveList>
+</div>
+
+Using `titleType=expressive-04` _please check props section for more info on
+usage_
+
+<div className="expressive-content-list-group">
+  <ExpressiveList
+    title="Short Title"
+    titleType="expressive-04"
+    background={true}>
+    Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus
+    suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum
+    vulputate. Orci ac auctor augue mauris augue neque. Nullam ac tortor vitae
+    purus faucibus ornare suspendisse sed.
+  </ExpressiveList>
+</div>
+
+Using `titleType=expressive-02` _please check props section for more info on
+usage_
+
+<div className="expressive-content-list-group">
+  <ExpressiveList
+    title="Short Title"
+    titleType="expressive-02"
+    background={true}>
+    Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus
+    suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum
+    vulputate. Orci ac auctor augue mauris augue neque. Nullam ac tortor vitae
+    purus faucibus ornare suspendisse sed.
+  </ExpressiveList>
+</div>
+
+<Title>With pictograms</Title>
+
+<div className="expressive-content-list-group">
+  <ExpressiveList
+    title="Short Title"
+    background={true}
+    pictogram={<Connect aria-label="Add" className="my-custom-class" />}>
+    Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus
+    suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum
+    vulputate. Orci ac auctor augue mauris augue neque. Nullam ac tortor vitae
+    purus faucibus ornare suspendisse sed.
+  </ExpressiveList>
+  <ExpressiveList
+    title="Short Title"
+    background={true}
+    pictogram={<Connect aria-label="Add" className="my-custom-class" />}>
+    Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus
+    suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum
+    vulputate. Orci ac auctor augue mauris augue neque. Nullam ac tortor vitae
+    purus faucibus ornare suspendisse sed.
+  </ExpressiveList>
+  <ExpressiveList
+    title="Short Title"
+    background={true}
+    pictogram={<Connect aria-label="Add" className="my-custom-class" />}>
+    Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus
+    suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum
+    vulputate. Orci ac auctor augue mauris augue neque. Nullam ac tortor vitae
+    purus faucibus ornare suspendisse sed.
+  </ExpressiveList>
+</div>
+
+Using `titleType=expressive-04` _please check props section for more info on
+usage_
+
+<div className="expressive-content-list-group">
+  <ExpressiveList
+    title="Short Title"
+    titleType="expressive-04"
+    background={true}
+    pictogram={<Connect aria-label="Add" className="my-custom-class" />}>
+    Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus
+    suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum
+    vulputate. Orci ac auctor augue mauris augue neque. Nullam ac tortor vitae
+    purus faucibus ornare suspendisse sed.
+  </ExpressiveList>
+</div>
+
+Using `titleType=expressive-02` _please check props section for more info on
+usage_
+
+<div className="expressive-content-list-group">
+  <ExpressiveList
+    title="Short Title"
+    titleType="expressive-02"
+    background={true}
+    pictogram={<Connect aria-label="Add" className="my-custom-class" />}>
+    Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus
+    suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum
+    vulputate. Orci ac auctor augue mauris augue neque. Nullam ac tortor vitae
+    purus faucibus ornare suspendisse sed.
+  </ExpressiveList>
+</div>
+
+## Code
+
+<Title>Content only</Title>
+
+```mdx path=components/ExpressiveList/ExpressiveList.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/ExpressiveList
+<div className="expressive-content-list-group">
+  <ExpressiveList 
+    title="Short Title"
+    background="true">
+  Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum vulputate.
+  </ExpressiveList>
+
+  <ExpressiveList 
+    title="Short Title"
+    background="true">
+  Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum vulputate.
+  </ExpressiveList>
+    
+  <ExpressiveList 
+    title="Short Title"
+    background="true">
+  Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum vulputate.
+  </ExpressiveList>
+</div>
+```
+
+<Title>With pictograms</Title>
+
+```mdx path=components/ExpressiveList/ExpressiveList.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/ExpressiveList
+import { Connect } from '@carbon/pictograms-react';
+
+<div className="expressive-content-list-group">
+  <ExpressiveList 
+    title="Short Title"
+    background="true"
+    pictogram={<Connect className="my-custom-class" />}
+    >
+  Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum vulputate.
+  </ExpressiveList>
+
+  <ExpressiveList 
+    title="Short Title"
+    background="true"
+    pictogram={<Connect className="my-custom-class" />}
+    >
+  Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum vulputate.
+  </ExpressiveList>
+    
+  <ExpressiveList 
+    title="Short Title"
+    background="true"
+    pictogram={<Connect className="my-custom-class" />}
+    >
+  Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum vulputate.
+  </ExpressiveList>
+</div>
+```
+
+### Props
+
+| property  | propType | required | default | description                                                                                                               |
+| --------- | -------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------- |
+| children  | string   |          |         | Use to add the content. Takes in text content only                                                                        |
+| className | string   |          |         | Use to declare custom class name. This will be added on the outmost div                                                   |
+| picogram  | node     |          |         | Takes in a custom pictogram node from `carbon components` that is imported to the top of the page.                        |
+| title     | string   |          |         | Prop used for a short title                                                                                               |
+| titleType | string   |          |         | Optional prop used for type options - default is `expressive-03`. Optional types are: `expressive-04` and `expressive-02` |

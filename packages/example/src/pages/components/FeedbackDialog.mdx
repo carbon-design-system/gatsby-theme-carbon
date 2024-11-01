@@ -1,0 +1,64 @@
+---
+title: FeedbackDialog
+description: Allow visitors to your website to provide feedback through a dialog
+---
+
+<PageDescription>
+
+The `<FeedbackDialog>` component is a non-modal dialog that allows your users to
+provide low-friction, anonymous feedback for a specific page.
+
+</PageDescription>
+
+## Activating the dialog
+
+The Feedback button only becomes visible once you've supplied an `onSubmit`
+handler. To do that, we'll need to shadow the `FeedbackDialog` component.
+
+1. Create a new javascript file under
+   `src/gatsby-theme-carbon/components/FeedbackDialog/FeedbackDialog.js`.
+   Matching the filepath exactly is important here.
+
+2. Copy the following snippet into your new file
+
+```jsx
+import React from 'react';
+import ThemeFeedbackDialog from 'gatsby-theme-carbon/src/components/FeedbackDialog/FeedbackDialog';
+
+const FeedbackDialog = ({ props }) => {
+  const onSubmit = (data) => {
+    console.log({ ...data });
+  };
+
+  return <ThemeFeedbackDialog {...props} onSubmit={onSubmit} />;
+};
+
+export default FeedbackDialog;
+```
+
+## Creating a handler
+
+Next, you'll need a place to send the data. For the Carbon website, we use a
+serverless function that forwards the data to a
+[SurveyGizmo](https://www.surveygizmo.com/) quiz. You can see that function
+[here](https://github.com/carbon-design-system/carbon-website/blob/master/api/survey.ts).
+
+The handler can send a fetch request off to the endpoint you create. Update the
+`onSubmit` handler to send the data wherever you want. This function receives
+the following arguments:
+
+- `experience`: "Negative", "Positive" or "Neutral"
+- `comment`: An optional comment
+- `path`: the window location when the survey was submitted
+
+```jsx
+const FeedbackDialog = ({ props }) => {
+  const onSubmit = data => {
+    fetch(process.env.API_ENDPOINT, {
+      method: 'POST',
+      body: JSON.stringify(data),
+  });
+
+  return <ThemeFeedbackDialog {...props} onSubmit={onSubmit} />;
+};
+```

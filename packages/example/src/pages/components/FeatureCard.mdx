@@ -1,0 +1,66 @@
+---
+title: FeatureCard
+description: Usage instructions for the FeatureCard component
+---
+
+<PageDescription>
+
+The `<FeatureCard>` component takes the same props as the `<ResourceCard>`
+component (except for `aspectRatio`, this is fixed at `1:2` for the card), this
+component should not be used within `<Row>` or `<Column>` components as the grid
+is built in to the component already.
+
+</PageDescription>
+
+## Example
+
+<FeatureCard
+  subTitle="With subtitle"
+  title="Title"
+  actionIcon="arrowRight"
+  href="/"
+  >
+
+![demo image](/images/large-image.jpg)
+
+</FeatureCard>
+
+<FeatureCard
+  title="Title"
+  actionIcon="arrowRight"
+  href="/"
+  color="dark"
+  >
+
+![smart work](/images/smart-work.jpg)
+
+</FeatureCard>
+
+## Code
+
+```mdx path=components/FeatureCard/FeatureCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/FeatureCard
+<FeatureCard
+  subTitle="With subtitle"
+  title="Title"
+  actionIcon="arrowRight"
+  href="/"
+  disabled
+  color="dark">
+
+![demo image](/images/large-image.jpg)
+
+</FeatureCard>
+```
+
+### Props
+
+| property   | propType | required | default  | description                                                                                         |
+| ---------- | -------- | -------- | -------- | --------------------------------------------------------------------------------------------------- |
+| children   | node     |          |          | Use large image as child, will display above the card                                               |
+| href       | string   |          |          | Set url for card                                                                                    |
+| subTitle   | string   |          |          | Smaller title                                                                                       |
+| title      | string   |          |          | Large title                                                                                         |
+| actionIcon | string   |          | `launch` | Action icon, default is launch, options are `Launch`, `ArrowRight`, `Download`, `Disabled`, `Email` |
+| color      | string   |          | light    | Set to `dark` for dark background                                                                   |
+| disabled   | bool     |          | false    | Set for disabled card                                                                               |
+| className  | string   |          |          | Add custom class name                                                                               |

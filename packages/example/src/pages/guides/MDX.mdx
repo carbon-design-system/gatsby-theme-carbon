@@ -1,0 +1,79 @@
+---
+title: MDX
+description: guide for working with MDX and gatsby-theme-carbon
+date: 27 January 2021
+---
+
+export const Title = () => (
+  <span>
+    First line <br /> Second line
+  </span>
+);
+
+<PageDescription>
+
+MDX allows for certain things beyond what markdown is capable of. Content here
+will discuss using those features to augment or modify the default content
+layout.
+
+It's extremely important that for any rich text, or images represented through
+mark down, that they are left aligned. This is true even if they are within a
+component. Otherwise it will be processed as a regular string.
+
+</PageDescription>
+
+## Frontmatter
+
+You can declare frontmatter in your `.mdx` files to provide specific metadata
+for the theme to use.
+
+- `title`: Main page title: search results and SEO
+- `description`: SEO and search results
+- `date`: Enter a date that the page was last modified to be displayed at the
+  bottom left corner of the page. Refer to the
+  [IBM Style guide](https://www-03preprod.ibm.com/support/knowledgecenter/ibm_style/dates-and-times.html)
+  for the correct syntax.
+- `keywords`: just SEO (optional)
+- `hiddenFromSearch`: if true, page will be excluded from search
+
+```md
+---
+title: Markdown
+description: Usage instructions for the Markdown component
+keywords: 'ibm,carbon,gatsby,mdx,markdown'
+date: 27 January 2021
+hiddenFromSearch: true
+---
+```
+
+## Smart quotes
+
+The theme has a remark for processing straight quotes, into 'smart' quotes ('').
+However, this plugin isn't able to process text used in custom MDX components.
+When using quotes in custom components, content authors should manually use
+["smart quotes"](https://www.figma.com/design-systems/) to adhere to the IBM
+Design Language content guidelines.
+
+## Custom title
+
+You can export a `Title` component in order to render a unique title for a
+single page. This is particularly useful for including line breaks at a specific
+location.
+
+**Note:** You still need to provide a regular string title to the frontmatter
+for search, navigation, and the HTML header title to work.
+
+```mdx
+---
+title: MDX
+description: custom title page
+---
+
+export const Title = () => (
+  <span>
+    First line <br /> Second line
+  </span>
+);
+
+;
+```

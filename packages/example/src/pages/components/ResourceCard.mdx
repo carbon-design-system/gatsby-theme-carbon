@@ -1,0 +1,326 @@
+---
+title: ResourceCard
+description: Usage instructions for the ResourceCard component
+---
+
+import { Tag } from '@carbon/react';
+
+<PageDescription>
+
+The `<ResourceCard>` component should be wrapped with a `<Column>` inside of
+`<Row className="resource-card-group">` or
+`<Row className="resource-card-group-3-across">`. This allows the correct border
+placement between a group of cards spanning 2 or 3 across.
+
+</PageDescription>
+
+## Example
+
+### Group two across
+
+<Row className="resource-card-group">
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="With subtitle"
+      title="Title"
+      aspectRatio="2:1"
+      actionIcon="arrowRight"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Adobe Acrobat icon](/images/adobe-icon.svg)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Only subtitle"
+      actionIcon="download"
+      aspectRatio="2:1"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Mural icon](/images/mural-icon.png)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Alternate color"
+      title="Dark"
+      aspectRatio="2:1"
+      color="dark"
+      actionIcon="email"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Sketch icon](/images/sketch-icon.png)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      title="Disabled card"
+      aspectRatio="2:1"
+      disabled
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Sketch icon](/images/sketch-icon.png)
+
+  </ResourceCard>
+</Column>
+</Row>
+
+### Group three across
+
+<Row className="resource-card-group-3-across">
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="With subtitle"
+      title="Title"
+      aspectRatio="2:1"
+      actionIcon="arrowRight"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Adobe Acrobat icon](/images/adobe-icon.svg)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Only subtitle"
+      actionIcon="download"
+      aspectRatio="2:1"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Mural icon](/images/mural-icon.png)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Only subtitle"
+      aspectRatio="2:1"
+      actionIcon="email"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Sketch icon](/images/sketch-icon.png)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      title="Disabled card"
+      aspectRatio="2:1"
+      disabled
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Sketch icon](/images/sketch-icon.png)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="With subtitle"
+      title="Title"
+      aspectRatio="2:1"
+      actionIcon="arrowRight"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Adobe Acrobat icon](/images/adobe-icon.svg)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Only subtitle"
+      actionIcon="download"
+      aspectRatio="2:1"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Mural icon](/images/mural-icon.png)
+
+  </ResourceCard>
+</Column>
+</Row>
+
+### With Tag
+
+<Row className="resource-card-group">
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+       title="With Tag"
+       href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Adobe Acrobat icon](/images/adobe-icon.svg)
+
+<Tag type="blue">Feature flag</Tag>
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+       title="With Tag"
+       href="https://gatsby.carbondesignsystem.com"
+      >
+
+<Tag type="blue">Feature flag</Tag>
+
+  </ResourceCard>
+</Column>
+</Row>
+
+## Code
+
+<Title>Group two across</Title>
+
+```mdx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/ResourceCard
+<Row className="resource-card-group">
+  <Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Carbon Design System"
+      href="https://www.carbondesignsystem.com">
+
+![Github icon](/images/github-icon.png)
+
+    </ResourceCard>
+
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Carbon Design System"
+      href="https://www.carbondesignsystem.com">
+
+![Github icon](/images/github-icon.png)
+
+    </ResourceCard>
+
+  </Column>
+</Row>
+```
+
+<Title>Group three across</Title>
+
+```mdx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/ResourceCard
+<Row className="resource-card-group-3-across">
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="With subtitle"
+      title="Title"
+      aspectRatio="2:1"
+      actionIcon="arrowRight"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Adobe Acrobat icon](/images/adobe-icon.svg)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Only subtitle"
+      actionIcon="download"
+      aspectRatio="2:1"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Mural icon](/images/mural-icon.png)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Only subtitle"
+      aspectRatio="2:1"
+      actionIcon="email"
+      href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Sketch icon](/images/sketch-icon.png)
+
+  </ResourceCard>
+</Column>
+</Row>
+```
+
+<Title>With Tag</Title>
+
+```mdx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/ResourceCard
+<Row className="resource-card-group">
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+       title="With Tag"
+       href="https://gatsby.carbondesignsystem.com"
+      >
+
+![Adobe Acrobat icon](/images/adobe-icon.svg)
+
+<Tag type="blue">Feature flag</Tag>
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+       title="With Tag"
+       href="https://gatsby.carbondesignsystem.com"
+      >
+
+<Tag type="blue">Feature flag</Tag>
+
+  </ResourceCard>
+</Column>
+</Row>
+```
+
+<Title>Dark</Title>
+
+```mdx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/ResourceCard
+<Column colMd={4} colLg={4} noGutterSm>
+  <ResourceCard
+    subTitle="Alternate color"
+    title="Dark"
+    aspectRatio="2:1"
+    color="dark"
+    actionIcon="email"
+    href="https://gatsby.carbondesignsystem.com">
+
+![Sketch icon](/images/sketch-icon.png)
+
+  </ResourceCard>
+</Column>
+```
+
+<Title>Disabled</Title>
+
+```mdx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/ResourceCard
+<Column colMd={4} colLg={4} noGutterSm>
+  <ResourceCard
+    title="Disabled card"
+    aspectRatio="2:1"
+    disabled
+    href="https://gatsby.carbondesignsystem.com"
+  />
+</Column>
+```
+
+### Props
+
+| property    | propType | required | default  | description                                                                                                            |
+| ----------- | -------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------- |
+| children    | node     |          |          | Reccomend 32x32 image and/or Tag as child, will display in bottom left of card                                         |
+| href        | string   |          |          | Set url for card                                                                                                       |
+| subTitle    | string   |          |          | Smaller title                                                                                                          |
+| title       | string   |          |          | Large title                                                                                                            |
+| actionIcon  | string   |          | `launch` | Action icon, default is launch, options are `launch`, `arrowRight`, `download`, `disabled`, `email`, `calendar`,`none` |
+| aspectRatio | string   |          | 2:1      | Set card aspect ratio, default is 2:1, options are 1:1, 16:9, 4:3                                                      |
+| color       | string   |          | light    | Set to `dark` for dark background                                                                                      |
+| disabled    | bool     |          | false    | Set for disabled card                                                                                                  |
+| className   | string   |          |          | Add custom class name                                                                                                  |

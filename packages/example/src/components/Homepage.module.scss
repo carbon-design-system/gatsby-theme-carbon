@@ -1,0 +1,6 @@
+.callout-link {
+  @include type-style('body-long-02');
+  display: table-cell; // like display block, but the width fits to content rather than 100%
+  position: relative;
+  top: $spacing-06; //margin-top doesn't work on table-cell, and padding-top looks weird on focus
+}

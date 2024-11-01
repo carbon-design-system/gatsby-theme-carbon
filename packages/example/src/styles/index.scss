@@ -1,0 +1,9 @@
+// This is where your application styles could go.
+
+#gatsby-focus-wrapper {
+  padding-top: 4.5rem;
+
+  @include breakpoint('md') {
+    padding-top: $spacing-07;
+  }
+}

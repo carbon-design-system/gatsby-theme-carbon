@@ -1,0 +1,228 @@
+---
+title: Grid
+description: Usage instructions for the Grid component
+---
+
+<PageDescription>
+
+`<Row>` and `<Column>` components are used to arrange content and components on
+the grid within a page. To learn more about the grid is built, you can read the
+docs in the
+[Carbon](https://github.com/carbon-design-system/carbon/tree/master/packages/grid)
+repo.
+
+</PageDescription>
+
+## Row
+
+The `<Row>` component is a wrapper that adds the `cds--row` class to a wrapper
+div. You will want to use this to define rows that you will place `<Column>`
+components inside of.
+
+### Code
+
+```mdx path=components/Grid.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/Grid
+<Row>
+  <Column>
+    Content or additional <Components />
+  </Column>
+</Row>
+```
+
+<Title>Row props</Title>
+
+| property  | propType | required | default | description           |
+| --------- | -------- | -------- | ------- | --------------------- |
+| children  | node     |          |         |                       |
+| className | string   |          |         | Add custom class name |
+
+## Column
+
+The `<Column>` component is used to define column widths for your content, you
+can set the rules at different breakpoints with the props.
+
+### Example
+
+<Row>
+<Column colMd={4} colLg={4}>
+
+![Grid Example](images/Article_05.jpg)
+
+</Column>
+<Column colMd={4} colLg={4}>
+
+![Grid Example](images/Article_05.jpg)
+
+</Column>
+<Column colMd={4} colLg={4}>
+
+![Grid Example](images/Article_05.jpg)
+
+</Column>
+</Row>
+
+<Title>No gutter left</Title>
+
+<Row>
+<Column colMd={4} colLg={4} noGutterMdLeft>
+
+![Grid Example](images/Article_05.jpg)
+
+</Column>
+<Column colMd={4} colLg={4} noGutterMdLeft>
+
+![Grid Example](images/Article_05.jpg)
+
+</Column>
+<Column colMd={4} colLg={4} noGutterMdLeft>
+
+![Grid Example](images/Article_05.jpg)
+
+</Column>
+</Row>
+
+<Title>No gutter</Title>
+
+<Row>
+<Column colMd={4} colLg={4} noGutterSm>
+
+![Grid Example](images/Article_05.jpg)
+
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+
+![Grid Example](images/Article_05.jpg)
+
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+
+![Grid Example](images/Article_05.jpg)
+
+</Column>
+</Row>
+
+<Title>Offset</Title>
+
+<Row>
+<Column colMd={4} colLg={4} offsetLg={4}>
+
+![Grid Example](images/Article_05.jpg)
+
+</Column>
+<Column colMd={4} colLg={4}>
+
+![Grid Example](images/Article_05.jpg)
+
+</Column>
+</Row>
+
+### Code
+
+```mdx path=components/Grid.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/Grid
+<Row>
+  <Column colMd={4} colLg={4}>
+
+![Grid Example](images/Article_05.jpg)
+
+  </Column>
+  <Column colMd={4} colLg={4}>
+
+![Grid Example](images/Article_05.jpg)
+
+  </Column>
+  <Column colMd={4} colLg={4}>
+
+![Grid Example](images/Article_05.jpg)
+
+  </Column>
+</Row>
+```
+
+<Title>No gutter left</Title>
+
+```mdx path=components/Grid.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/Grid
+<Row>
+  <Column colMd={4} colLg={4} noGutterMdLeft>
+
+![Grid Example](images/Article_05.jpg)
+
+  </Column>
+  <Column colMd={4} colLg={4} noGutterMdLeft>
+
+![Grid Example](images/Article_05.jpg)
+
+  </Column>
+  <Column colMd={4} colLg={4} noGutterMdLeft>
+
+![Grid Example](images/Article_05.jpg)
+
+  </Column>
+</Row>
+```
+
+<Title>No gutter</Title>
+
+```mdx path=components/Grid.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/Grid
+<Row>
+  <Column colMd={4} colLg={4} noGutterSm>
+
+![Grid Example](images/Article_05.jpg)
+
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+
+![Grid Example](images/Article_05.jpg)
+
+  </Column>
+  <Column colMd={4} colLg={4} noGutterSm>
+
+![Grid Example](images/Article_05.jpg)
+
+  </Column>
+</Row>
+```
+
+<Title>Offset</Title>
+
+```mdx path=components/Grid.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/Grid
+<Row>
+  <Column colMd={4} colLg={4} offsetLg={4}>
+
+![Grid Example](images/Article_05.jpg)
+
+  </Column>
+  <Column colMd={4} colLg={4}>
+
+![Grid Example](images/Article_05.jpg)
+
+  </Column>
+</Row>
+```
+
+<Title>Column props</Title>
+
+| property        | propType | required | default | description                                                                                                                                                                                           |
+| --------------- | -------- | -------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| children        | node     |          |         |                                                                                                                                                                                                       |
+| className       | string   |          |         | Add custom class name                                                                                                                                                                                 |
+| colSm           | number   |          |         | Specify the col width at small breakpoint                                                                                                                                                             |
+| colMd           | number   |          |         | Specify the col width at medium breakpoint                                                                                                                                                            |
+| colLg           | number   |          | 12      | Specify the col width at large breakpoint                                                                                                                                                             |
+| colXl           | number   |          |         | Specify the col width at x-large breakpoint                                                                                                                                                           |
+| colMax          | number   |          |         | Specify the col width at max breakpoint                                                                                                                                                               |
+| offsetSm        | number   |          |         | Specify the col offset at small breakpoint                                                                                                                                                            |
+| offsetMd        | number   |          |         | Specify the col offset at medium breakpoint                                                                                                                                                           |
+| offsetLg        | number   |          |         | Specify the col offset at large breakpoint                                                                                                                                                            |
+| offsetXl        | number   |          |         | Specify the col offset at x-large breakpoint                                                                                                                                                          |
+| offsetMax       | number   |          |         | Specify the col offset at max breakpoint                                                                                                                                                              |
+| noGutterSm      | bool     |          |         | Specify no-gutter at small breakpoint                                                                                                                                                                 |
+| noGutterMd      | bool     |          |         | Specify no-gutter at medium breakpoint                                                                                                                                                                |
+| noGutterLg      | bool     |          |         | Specify no-gutter at large breakpoint                                                                                                                                                                 |
+| noGutterXl      | bool     |          |         | Specify no-gutter at x-large breakpoint                                                                                                                                                               |
+| noGutterMax     | bool     |          |         | Specify no-gutter at max breakpoint                                                                                                                                                                   |
+| noGutterSmLeft  | bool     |          |         | Specify no-gutter left at small breakpoint                                                                                                                                                            |
+| noGutterMdLeft  | bool     |          |         | Specify no-gutter left at medium breakpoint                                                                                                                                                           |
+| noGutterLgLeft  | bool     |          |         | Specify no-gutter left at large breakpoint                                                                                                                                                            |
+| noGutterXlLeft  | bool     |          |         | Specify no-gutter left at x-large breakpoint                                                                                                                                                          |
+| noGutterMaxLeft | bool     |          |         | Specify no-gutter left at max breakpoint                                                                                                                                                              |
+| gutterLg        | bool     |          |         | Specify to explictly bring back gutters at the large breakpoint. Used almost exclusivly with `noGutterSm` when you need content to have no gutters on mobile and bring the gutters back for desktops. |

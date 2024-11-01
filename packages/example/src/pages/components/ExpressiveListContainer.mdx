@@ -1,0 +1,63 @@
+---
+title: ExpressiveListContainer
+description: Usage instructions for the FeatureCard component
+---
+
+import { Connect } from '@carbon/pictograms-react';
+
+<PageDescription>
+
+The `<ExpressiveListContainer>` component can be used as a customizable
+component.
+
+</PageDescription>
+
+<InlineNotification kind="warning">
+
+**Disclaimer:** Nested grid support will be supported in v11. Currently this
+component requires custom styles to nest most of the gatsby components into the
+container.
+
+</InlineNotification>
+
+## Example
+
+<ExpressiveListContainer
+  title="Short Title"
+  text="Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum vulputate. Orci ac auctor augue mauris augue neque.">
+  <DoDontExample type="do" caption="Caption" captionTitle="Caption title">
+    <Video vimeoId="310583077" />
+  </DoDontExample>
+</ExpressiveListContainer>
+<ExpressiveListContainer title="Short Title">
+  <Video title="Carbon homepage video" vimeoId="322021187" />
+</ExpressiveListContainer>
+
+## Code
+
+<Title>Content only</Title>
+
+```mdx path=components/ExpressiveListContainer/ExpressiveListContainer.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/ExpressiveListContainer
+<ExpressiveListContainer
+  title="Short Title"
+  text="Lorem ipsum tempor incididunt ut labore et dolore magna aliqua. Quam lacus suspendisse faucibus interdum posuere lorem. At quis risus sed lorem ipsum vulputate. Orci ac auctor augue mauris augue neque.">
+  <DoDontExample type="do" caption="Caption" captionTitle="Caption title">
+    <Video vimeoId="310583077" />
+  </DoDontExample>
+</ExpressiveListContainer>
+
+<ExpressiveListContainer title="Short Title">
+  <Video title="Carbon homepage video" vimeoId="322021187" />
+</ExpressiveListContainer>
+```
+
+### Props
+
+| property         | propType | required | default       | description                                                                                                        |
+| ---------------- | -------- | -------- | ------------- | ------------------------------------------------------------------------------------------------------------------ |
+| contentClassName | string   |          |               | Optional prop for custom class names this will be applied to the right column.                                     |
+| children         | node     |          |               | This prop is used to insert the contents of the container right column                                             |
+| className        | string   |          |               | Optional prop to insert a custom class name. This class will be applied to the outermost conatiner                 |
+| text             | node     |          |               | Optional prop to use to insert content text                                                                        |
+| title            | string   |          |               | Prop used for a short title                                                                                        |
+| titleType        | string   |          | expressive-03 | Optional prop used for type options - default is `expressive-03`. Options are: `expressive-04` and `expressive-02` |

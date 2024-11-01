@@ -1,0 +1,80 @@
+---
+title: AnchorLinks
+description: Usage instructions for the AnchorLinks component
+---
+
+<PageDescription>
+
+The `<AnchorLinks>` and `<AnchorLink>` components are used together to display a
+list of anchor links for navigation within the page. Use these to link to `<h2>`
+or `<h3>` anywhere within your page. As long as the anchor link text and header
+text matches the link will work.
+
+For most pages, we recommend starting with a `PageDescription` followed by
+`AnchorLinks` if the content is long enough.
+
+</PageDescription>
+
+## Example
+
+<Title>Normal</Title>
+
+<AnchorLinks>
+  <AnchorLink>Link 1</AnchorLink>
+  <AnchorLink>Link 2</AnchorLink>
+  <AnchorLink>Link 3</AnchorLink>
+  <AnchorLink>Link 4</AnchorLink>
+  <AnchorLink>Link 5</AnchorLink>
+  <AnchorLink>Link 6</AnchorLink>
+  <AnchorLink>Link 7</AnchorLink>
+</AnchorLinks>
+
+<Title>Small</Title>
+
+<AnchorLinks small>
+  <AnchorLink>Small link 1</AnchorLink>
+  <AnchorLink>Small link 2</AnchorLink>
+  <AnchorLink>Small link 3</AnchorLink>
+</AnchorLinks>
+
+## Code
+
+<Title>Normal</Title>
+
+```mdx path=components/AnchorLinks/AnchorLinks.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/AnchorLinks
+<AnchorLinks>
+  <AnchorLink>Link 1</AnchorLink>
+  <AnchorLink>Link 2</AnchorLink>
+  <AnchorLink>Link 3</AnchorLink>
+  <AnchorLink>Link 4</AnchorLink>
+  <AnchorLink>Link 5</AnchorLink>
+  <AnchorLink>Link 6</AnchorLink>
+  <AnchorLink>Link 7</AnchorLink>
+</AnchorLinks>
+```
+
+<Title>Small</Title>
+
+```mdx path=components/AnchorLinks/AnchorLinks.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/components/AnchorLinks
+<AnchorLinks small>
+  <AnchorLink>Small link 1</AnchorLink>
+  <AnchorLink>Small link 2</AnchorLink>
+  <AnchorLink>Small link 3</AnchorLink>
+</AnchorLinks>
+```
+
+### Props
+
+<Title>AnchorLinks</Title>
+
+| property | propType | required | default | description             |
+| -------- | -------- | -------- | ------- | ----------------------- |
+| children | node     |          |         |                         |
+| small    | bool     |          |         | Display small font size |
+
+<Title>AnchorLink</Title>
+
+| property | propType | required | default        | description                                                                                              |
+| -------- | -------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------- |
+| children | node     |          |                |                                                                                                          |
+| to       | string   |          | props.children | By default, the `AnchorLink` slugifys the children you pass in. Use the to prop to override this target. |

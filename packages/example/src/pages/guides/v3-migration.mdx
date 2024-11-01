@@ -1,0 +1,176 @@
+---
+title: V3.0 Migration
+description: Guide for migrating to v3.0 of the theme
+---
+
+<PageDescription>
+
+Carbon's Gatsby Theme uses version 4 of the Gatsby library. This update combines
+the control and scalability of server-side rendering with the performance of
+static-site generation. The major version change comes with the potential for
+breaking changes, this guide aims to cover the most likely issues a site built
+with the Carbon Gatsby theme might encounter. To have the smoothest possible
+experience, we recommend [upgrading to v2](/guides/v2-migration) of Carbon's
+Gatsby Theme first if you haven't already done so.
+
+</PageDescription>
+
+## Breaking changes
+
+1. Bumped minimum version of Gatsby to `v4`
+2. Removed `carbon-components-react` and `carbon-components` in favor of
+   installing `@carbon/react` effectively migrating to Carbon v11.
+
+## Gatsby migration guide
+
+In this section we'll cover the most likely issues site's built with the Carbon
+gatsby theme might encounter when migrating. If you encounter any issues, or
+your site leverages more advanced gatsby configuration, check to see if it's
+covered in the
+[official Gatsby v4 migration guide](https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v3-to-v4/).
+To facilitate an easy upgrade path, we recommend
+[upgrading to v2](/guides/v2-migration) of Carbon's Gatsby Theme first if you
+haven't already done so.
+
+<InlineNotification>
+
+Note: We'll use yarn for the shell commands here. Replace them with the `npm`
+equivalent if your project uses `npm` as its package manager.
+
+</InlineNotification>
+
+1. Update Gatsby to v4
+
+   ```
+   yarn add gatsby@latest-v4
+   ```
+
+2. Update gatsby plugins (including the theme)
+
+   ```
+   yarn upgrade-interactive --latest
+   ```
+
+3. Run `yarn dev:clean` to delete and rebuild your projects development bundle
+
+## Troubleshooting
+
+- Try deleting your node_modules, running `yarn cache clean` and `yarn install`
+  (or `npm cache clean --force` and npm install)
+- Feel free to reach out in the #gatsby-theme-carbon slack channel or open an
+  issue on GitHub
+
+## Carbon v11 migration guide
+
+As part of this release, the theme has been updated to use Carbon v11. In this
+section we'll cover the areas that will need to be updated in relation to this
+dependency upgrade.
+
+1. Update your color, motion, and type tokens where appropriate. Use
+   [the migration guide from Github](https://github.com/carbon-design-system/carbon/blob/main/docs/migration/v11.md)
+   for a fantastic token reference guide.
+
+<InlineNotification>
+
+Pro tip: When attempting to build your local dev environment, it will usually
+throw an error because of an old v10 token. Do a search for the v10 token in
+question throughout the entire project. Once found, copy it to your clipboard,
+then switch over to the migration guide on Github. Hit `CMD+F` to search the
+page to find/replace with the corresponding v11 token.
+
+</InlineNotification>
+
+2. Update icon usage
+
+As part of v11, the usage pattern for icons has changed. Icons are no longer
+imported by size, instead size is configured via the `size` prop. Full details
+can be found in the
+[Carbon v11 migration guide](https://github.com/carbon-design-system/carbon/blob/main/docs/migration/v11.md#changes-to-size).
+
+{/* prettier-ignore-start */}
+```md path=Before
+import { Add32, Add24, Add20, Add16 } from '@carbon/icons-react';
+
+function MyComponent() {
+  return (
+    <>
+      <Add32 />
+      <Add24 />
+      <Add20 />
+      <Add16 />
+    </>
+  );
+}
+```
+
+```md path=After
+import { Add } from '@carbon/icons-react';
+
+function MyComponent() {
+  return (
+    <>
+      <Add size={32} />
+      <Add size={24} />
+      <Add size={20} />
+      <Add />
+    </>
+  );
+}
+```
+{/* prettier-ignore-end */}
+
+A very easy way to make this change is to use the automated migration tool
+available from the
+[Carbon Upgrade CLI](https://github.com/carbon-design-system/carbon/blob/main/packages/upgrade/README.md#usage).
+You can run a test of this automated migration against your codebase with the
+following command. When ready to write the changes, additionally pass the `-w`
+flag
+
+```
+npx @carbon/upgrade migrate icons-react-size-prop
+```
+
+<InlineNotification>
+
+This automated migration will not rewrite imports in `.mdx` files. Search all
+your `.mdx` files for `@carbon/icons-react` and manually update their import.
+Additionally update their usage to include the appropriate `size` prop.
+
+</InlineNotification>
+
+3. Remove any prefix imports. Replace the following in your classnames:
+
+```md path=Before
+<div className={`${prefix}--fancy-class`}>
+```
+
+```md path=After
+<div className='cds--fancy-class'>
+```
+
+The tips above should get you most, if not all of the way there, but your
+mileage may vary based on how much you have customized your site. If you have
+still have issues check out the v11 migration guides below.
+
+<Row className="resource-card-group">
+  <Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="v11 Migration Guide on Github"
+      href="https://github.com/carbon-design-system/carbon/blob/main/docs/migration/v11.md"
+      actionIcon="launch"
+      >
+
+![Github icon](/images/github-icon.png)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="v11 Migration Guide"
+     href="https://carbondesignsystem.com/migrating/guide/develop"
+      actionIcon="launch"
+      >
+
+  </ResourceCard>
+</Column>
+</Row>

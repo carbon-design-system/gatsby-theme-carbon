@@ -1,0 +1,59 @@
+---
+title: Styling
+description:
+  Guide for adding site-specific styles and targeting theme components
+---
+
+<PageDescription>
+
+The carbon theme uses Sass to take advantage of the carbon-components styles and
+variables while authoring novel components. In addition, we use css modules to
+ensure we don’t collide with devs and make sure our components are portable and
+shadowable.
+
+</PageDescription>
+
+## Local Styles
+
+For your application’s local styles, you can just import your style sheet
+[directly into a `gatsby-browser.js`](https://www.gatsbyjs.org/docs/global-css/#adding-global-styles-without-a-layout-component)
+file at the root of your project.
+
+You can also use sass modules like we do in the theme, this would make it easier
+for you to share your component with other theme consumers down the line.
+
+Every Sass file in your project automatically has access to the the following
+carbon resources:
+
+- colors – `background: gray-10;`
+- spacing - `margin: $spacing-05;`
+- theme-tokens - `color: $text-01;`
+- motion - `transition: all $duration-moderate-01 motion(entrance, productive);`
+- typography - `@include type-style('body-long-01');`
+
+## Targeting theme components
+
+<InlineNotification>
+
+We reserve the right to change classes between major releases. Use this strategy
+at your own risk.
+
+</InlineNotification>
+
+Theme component classes have a hash of their styles tacked on to the end. This
+is both to prevent collisions, and also to prevent sneaky breaking changes to
+your styles if we update the class underneath you and you were relying on our
+styles.
+
+However, you can target the classes without the hash by using a
+[partial selector](https://css-tricks.com/almanac/selectors/a/attribute/):
+
+```scss
+[class*='Banner-module--column'] {
+  color: $text-04;
+}
+```
+
+This will match the class that starts with `Banner-module--column` and would be
+immune to any changes to the hash. We may at some point remove the hash if this
+becomes an issue.

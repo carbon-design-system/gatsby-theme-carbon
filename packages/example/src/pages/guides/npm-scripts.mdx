@@ -1,0 +1,35 @@
+---
+title: npm scripts
+description:
+  Overview of scripts used to run and build sites using the Carbon Gatsby theme
+---
+
+<PageDescription>
+
+Sites built with the Carbon Gatsby theme starter come ready to go with some
+helpful npm scripts. You can run these commands by typing `yarn [command]` or
+`npm run [command]`
+
+</PageDescription>
+
+## Clean
+
+- **clean** - this is used to clean gatsby's cache and public directory. It
+  should be used sparingly, only when you're experiencing weird errors or
+  caching issues.
+
+## Develop
+
+- **dev** - this is your primary for starting up your gatsby site for
+  development
+- **dev:clean** - this is provided as a convenience; it first runs `clean` then
+  `dev`
+
+## Build
+
+- **build** - this is what you'll use to bundle your site. Gatsby will minimize
+  your images and create a static, blazing fast site in your `public` directory
+- **serve** - this can be run to serve the bundle locally after running `build`.
+  It can be used to debug locally if any issues are encountered durring build.
+- **build:clean** - this is a provided as a convenience, it first runs `clean`
+  then `build`

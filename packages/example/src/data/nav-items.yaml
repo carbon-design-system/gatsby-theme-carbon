@@ -1,0 +1,106 @@
+- title: Getting started
+  pages:
+    - path: /getting-started
+- title: Demo
+  pages:
+    - path: /demo
+- title: Demo level 1
+  pages:
+    - title: Demo page 1
+      path: /demo-level-1/demo-page-1
+    - title: Demo page 2
+      path: /demo-level-1/demo-page-2
+    - title: Demo level 2
+      pages:
+        - title: Demo page 1
+          path: /demo-level-1/demo-level-2/demo-page-1
+        - title: Demo page 2
+          path: /demo-level-1/demo-level-2/demo-page-2/tab-1
+        - title: Demo page 3
+          path: /demo-level-1/demo-level-2/demo-page-3
+- title: Gallery
+  pages:
+    - path: /gallery
+- title: Contributions
+  pages:
+    - path: /contributions
+- title: Guides
+  pages:
+    - title: Authoring MDX
+      path: /guides/MDX
+    - title: Configuration
+      path: /guides/configuration
+    - title: Gatsby Sketch kit
+      path: /guides/sketch-kit
+    - title: Hosting
+      path: /guides/hosting
+    - title: Navigation
+      path: /guides/navigation/sidebar
+    - title: npm scripts
+      path: /guides/npm-scripts
+    - title: Shadowing
+      path: /guides/shadowing
+    - title: Styling
+      path: /guides/styling
+    - title: v2.0 Migration
+      path: /guides/v2-migration
+    - title: v3.0 Migration
+      path: /guides/v3-migration
+    - title: v4.0 Migration
+      path: /guides/v4-migration
+- title: Components
+  pages:
+    - title: Accordion
+      path: /components/Accordion
+    - title: AnchorLinks
+      path: /components/AnchorLinks
+    - title: ArtDirection
+      path: /components/ArtDirection
+    - title: ArticleCard
+      path: /components/ArticleCard
+    - title: Aside
+      path: /components/Aside
+    - title: Caption
+      path: /components/Caption
+    - title: Code blocks
+      path: /components/code-blocks
+    - title: DoDontExample
+      path: /components/DoDontExample
+    - title: DoDontRow
+      path: /components/DoDontRow
+    - title: ExpressiveList
+      path: /components/ExpressiveList
+    - title: ExpressiveListContainer
+      path: /components/ExpressiveListContainer
+    - title: FeatureCard
+      path: /components/FeatureCard
+    - title: FeedbackDialog
+      path: /components/FeedbackDialog
+    - title: GifPlayer
+      path: /components/GifPlayer
+    - title: Grid
+      path: /components/Grid
+    - title: ImageCard
+      path: /components/ImageCard
+    - title: ImageGallery
+      path: /components/ImageGallery
+    - title: InlineNotification
+      path: /components/InlineNotification
+    - title: Markdown
+      path: /components/markdown
+    - title: MediumPosts
+      path: /components/MediumPosts
+    - title: MiniCard
+      path: /components/MiniCard
+    - title: PageDescription
+      path: /components/PageDescription
+    - title: ResourceCard
+      path: /components/ResourceCard
+    - title: SquareCard
+      path: /components/SquareCard
+    - title: Tabs
+      path: /components/Tabs
+    - title: Title
+      path: /components/Title
+    - title: Video
+      path: /components/Video
