@@ -1,5 +1,20 @@
 # Changelog
 
+## [4.1.9](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.8...v4.1.9) (2024-10-24)
+
+## [4.1.8](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.7...v4.1.8) (2024-10-21)
+
+## [4.1.7](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.6...v4.1.7) (2024-10-21)
+
+
+### Bug Fixes
+
+* **leftNavTree:** keyboard navigation ([#1536](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1536)) ([ff80bcf](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ff80bcf7f96ea9b2f3a8e58dbd2a0ac79514f761))
+
+## [4.1.6](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.5...v4.1.6) (2024-10-16)
+
+## [4.1.5](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.4...v4.1.5) (2024-10-09)
+
 ## [4.1.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.3...v4.1.4) (2024-09-26)
 
 ## [4.1.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.2...v4.1.3) (2024-09-23)
