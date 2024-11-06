@@ -28,7 +28,7 @@
     "@carbon/elements": "^11.56.0",
     "@carbon/grid": "^11.29.0",
     "@carbon/pictograms-react": "^11.68.0",
-    "@carbon/react": "^1.69.0",
+    "@carbon/react": "^1.70.0",
     "@carbon/themes": "^11.43.0",
     "@garcia-enterprise/gatsby-plugin-sass-resources": "^4.0.2",
     "@mdx-js/mdx": "^3.0.1",
