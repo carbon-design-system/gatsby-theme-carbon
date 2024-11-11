@@ -14,6 +14,8 @@ import {
   tab,
 } from './GlobalSearch.module.scss';
 
+import { convertFilePathToUrl } from '../../util/convertFilePathToUrl';
+
 export const MenuContext = createContext();
 
 const Menu = ({ results, onKeyDown }) => {
@@ -76,22 +78,6 @@ const MenuItem = ({ page, index, onKeyDown, id }) => {
   const className = cx(link, {
     [active]: focusedItem === index,
   });
-
-  function convertFilePathToUrl(filePath) {
-    const pagesIndex = filePath.lastIndexOf('/pages/');
-    if (filePath.lastIndexOf('/pages/') === -1) return null;
-
-    const fileName = filePath.slice(
-      pagesIndex + '/pages/'.length,
-      -'.mdx'.length
-    );
-    const normalizedFileName = fileName.endsWith('/index')
-      ? fileName.slice(0, -'/index'.length)
-      : fileName;
-    const urlPath = `/${normalizedFileName.split('/').join('/')}/`;
-
-    return urlPath;
-  }
 
   const url = convertFilePathToUrl(page.path);
 
