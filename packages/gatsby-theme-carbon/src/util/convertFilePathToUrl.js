@@ -1,4 +1,3 @@
-// utils/convertFilePathToUrl.js
 export function convertFilePathToUrl(filePath) {
   if (!filePath) return null;
 
