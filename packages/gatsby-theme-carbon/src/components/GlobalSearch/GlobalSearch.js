@@ -18,6 +18,7 @@ import { graphql, navigate, useStaticQuery } from 'gatsby';
 import cx from 'classnames';
 import NavContext from '../../util/context/NavContext';
 import { useOnClickOutside } from '../../util/hooks';
+import { convertFilePathToUrl } from '../../util/convertFilePathToUrl';
 
 import {
   container,
@@ -118,7 +119,7 @@ const GlobalSearchInput = () => {
       case 'Enter': {
         e.preventDefault();
         if (results[focusedItem]) {
-          navigate(results[focusedItem].path);
+          navigate(convertFilePathToUrl(results[focusedItem].path));
         }
         break;
       }
