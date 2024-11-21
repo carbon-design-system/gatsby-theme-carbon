@@ -1,7 +1,7 @@
 {
   "name": "example",
   "private": true,
-  "version": "4.1.13",
+  "version": "4.1.14",
   "license": "Apache 2.0",
   "scripts": {
     "dev": "gatsby develop -H 0.0.0.0",
@@ -14,7 +14,7 @@
   "dependencies": {
     "@carbon/icons-react": "^11.43.0",
     "gatsby": "^5.13.6",
-    "gatsby-theme-carbon": "^4.1.13",
+    "gatsby-theme-carbon": "^4.1.14",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   }
