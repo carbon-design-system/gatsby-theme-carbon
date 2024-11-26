@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.15](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.14...v4.1.15) (2024-11-26)
+
+
+### Bug Fixes
+
+* **search:** keyboard support for enter key ([#1545](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1545)) ([eaf0a12](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/eaf0a1244428877916517d7121fd6ade8c1fda43))
+
 ## [4.1.14](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.13...v4.1.14) (2024-11-21)
 
 ## [4.1.13](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.12...v4.1.13) (2024-11-06)
