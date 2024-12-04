@@ -1,5 +1,29 @@
 # Changelog
 
+## [4.1.17](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.16...v4.1.17) (2024-12-04)
+
+## [4.1.16](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.15...v4.1.16) (2024-12-03)
+
+## [4.1.15](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.14...v4.1.15) (2024-11-26)
+
+
+### Bug Fixes
+
+* **search:** keyboard support for enter key ([#1545](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1545)) ([eaf0a12](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/eaf0a1244428877916517d7121fd6ade8c1fda43))
+
+## [4.1.14](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.13...v4.1.14) (2024-11-21)
+
+## [4.1.13](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.12...v4.1.13) (2024-11-06)
+
+## [4.1.12](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.11...v4.1.12) (2024-11-06)
+
+## [4.1.11](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.10...v4.1.11) (2024-11-01)
+
+
+### Bug Fixes
+
+* **leftnavtree:** style updates ([#1520](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1520)) ([2f258ed](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/2f258ed9573b01f5f6521b28e0a306e7e51ec7c8))
+
 ## [4.1.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.9...v4.1.10) (2024-11-01)
 
 ## [4.1.9](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.8...v4.1.9) (2024-10-24)
