@@ -1,5 +1,75 @@
 # Changelog
 
+## [4.1.19](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.18...v4.1.19) (2024-12-04)
+
+## [4.1.18](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.17...v4.1.18) (2024-12-04)
+
+## [4.1.17](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.16...v4.1.17) (2024-12-04)
+
+## [4.1.16](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.15...v4.1.16) (2024-12-03)
+
+## [4.1.15](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.14...v4.1.15) (2024-11-26)
+
+
+### Bug Fixes
+
+* **search:** keyboard support for enter key ([#1545](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1545)) ([eaf0a12](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/eaf0a1244428877916517d7121fd6ade8c1fda43))
+
+## [4.1.14](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.13...v4.1.14) (2024-11-21)
+
+## [4.1.13](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.12...v4.1.13) (2024-11-06)
+
+## [4.1.12](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.11...v4.1.12) (2024-11-06)
+
+## [4.1.11](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.10...v4.1.11) (2024-11-01)
+
+
+### Bug Fixes
+
+* **leftnavtree:** style updates ([#1520](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1520)) ([2f258ed](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/2f258ed9573b01f5f6521b28e0a306e7e51ec7c8))
+
+## [4.1.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.9...v4.1.10) (2024-11-01)
+
+## [4.1.9](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.8...v4.1.9) (2024-10-24)
+
+## [4.1.8](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.7...v4.1.8) (2024-10-21)
+
+## [4.1.7](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.6...v4.1.7) (2024-10-21)
+
+
+### Bug Fixes
+
+* **leftNavTree:** keyboard navigation ([#1536](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1536)) ([ff80bcf](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ff80bcf7f96ea9b2f3a8e58dbd2a0ac79514f761))
+
+## [4.1.6](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.5...v4.1.6) (2024-10-16)
+
+## [4.1.5](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.4...v4.1.5) (2024-10-09)
+
+## [4.1.4](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.3...v4.1.4) (2024-09-26)
+
+## [4.1.3](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.2...v4.1.3) (2024-09-23)
+
+
+### Bug Fixes
+
+* page description with tag spacing ([#1519](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1519)) ([27452cf](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/27452cfc9abdb22a7203e35704ac21a1cceeec3c))
+
+## [4.1.2](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.1...v4.1.2) (2024-09-18)
+
+## [4.1.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.1.0...v4.1.1) (2024-09-13)
+
+
+### Bug Fixes
+
+* **leftnavtree:** highlight nav menu item for tabbed pages in level2 ([#1514](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1514)) ([0d5f9d5](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0d5f9d58cc4dace2e7942d5beb00c3e39cad9823))
+
+## [4.1.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.11...v4.1.0) (2024-09-12)
+
+
+### Features
+
+* add Tag styles for PageDescription and ResourceCard ([#1513](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1513)) ([50125c4](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/50125c450f28e849b7970d98259da142d20c510f))
+
 ## [4.0.11](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.10...v4.0.11) (2024-09-12)
 
 ## [4.0.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.0.9...v4.0.10) (2024-09-11)

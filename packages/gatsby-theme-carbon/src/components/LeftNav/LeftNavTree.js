@@ -1,7 +1,7 @@
 import React, { memo, useCallback, useEffect, useState } from 'react';
 import { useLocation } from '@reach/router';
-import { Theme, TreeNode, TreeView } from '@carbon/react';
-import { Link } from 'gatsby';
+import { TreeNode, TreeView } from '@carbon/react';
+import { Link, navigate } from 'gatsby';
 
 import cx from 'classnames';
 import slugify from 'slugify';
@@ -11,13 +11,16 @@ import { dfs } from '../../util/NavTree';
 
 import LeftNavResourceLinks from './ResourceLinks';
 
-const LeftNavTree = ({ items, theme, pathPrefix }) => {
+const LeftNavTree = ({ items, pathPrefix, theme }) => {
   const [itemNodes, setItemNodes] = useState([]);
   const [treeActiveItem, setTreeActiveItem] = useState({});
   const [activePath, setActivePath] = useState('');
   const location = useLocation();
 
-  const themeValue = theme === 'dark' ? 'g100' : theme;
+  const containerClassNames = cx(styles.container, {
+    [styles.container_g10]: theme === 'g10',
+    [styles.container_g90]: theme === 'g90',
+  });
 
   useEffect(() => {
     const newItemNodeArray = [];
@@ -85,9 +88,10 @@ const LeftNavTree = ({ items, theme, pathPrefix }) => {
   const isTabActive = useCallback(
     (node) => {
       const pathname = removeHashAndQuery(activePath);
+      const tabRootPath = pathname.split('/').slice(0, -1).join('/');
+
       const isActive =
-        `${node.path?.split('/')[1]}/${node.path?.split('/')[2]}` ===
-        `${pathname.split('/')[1]}/${pathname.split('/')[2]}`;
+        node.path?.split('/').slice(0, -1).join('/') === tabRootPath;
 
       return isActive;
     },
@@ -95,17 +99,26 @@ const LeftNavTree = ({ items, theme, pathPrefix }) => {
   );
 
   useEffect(() => {
-    let activeNode = dfs(itemNodes, isTreeNodeActive);
-    if (!activeNode) {
-      activeNode = dfs(itemNodes, isTabActive);
+    if (activePath) {
+      let activeNode = dfs(itemNodes, isTreeNodeActive);
+      if (!activeNode) {
+        activeNode = dfs(itemNodes, isTabActive);
+      }
+      setTreeActiveItem(activeNode);
     }
-    setTreeActiveItem(activeNode);
-  }, [isTreeNodeActive, itemNodes, isTabActive]);
+  }, [isTreeNodeActive, itemNodes, isTabActive, activePath]);
 
   const isTreeNodeExpanded = (node) =>
     !!dfs([node], (evalNode) =>
       evalNode.pages?.some((page) => page.id === treeActiveItem?.id)
     );
+
+  const handleKeyDownEvent = (event, path) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      navigate(path);
+    }
+  };
 
   function renderTree({ nodes }) {
     if (!nodes) {
@@ -133,6 +146,7 @@ const LeftNavTree = ({ items, theme, pathPrefix }) => {
           label={label}
           value={node.title}
           isExpanded={isTreeNodeExpanded(node)}
+          onKeyDown={(event) => handleKeyDownEvent(event, node.path)}
           className={cx({
             'cds--tree-node--active': node.id === treeActiveItem?.id,
             'cds--tree-node--selected': node.id === treeActiveItem?.id,
@@ -151,12 +165,12 @@ const LeftNavTree = ({ items, theme, pathPrefix }) => {
   }
 
   return (
-    <Theme className={styles.container} theme={themeValue}>
+    <nav className={containerClassNames}>
       <TreeView label="Side navigation" hideLabel>
         {renderTree({ nodes: itemNodes })}
         <LeftNavResourceLinks />
       </TreeView>
-    </Theme>
+    </nav>
   );
 };
 

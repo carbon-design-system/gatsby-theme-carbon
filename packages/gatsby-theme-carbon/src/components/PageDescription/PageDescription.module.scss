@@ -8,11 +8,24 @@
 }
 
 // Multiple paragaphs
-.page-description > * + * {
+.page-description > :global(.cds--row) + * {
   margin-top: var(--space);
 }
 
 .page-description code {
   font-size: 0.75em;
   line-height: 1.25;
+}
+
+// with tag
+body .page-description:has(:global(.cds--tag)) {
+  position: relative;
+}
+
+.page-description :global(.cds--tag) {
+  position: absolute;
+  top: -$spacing-08;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
 }
