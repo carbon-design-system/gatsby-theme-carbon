@@ -12,7 +12,19 @@ import {
 } from './Video.module.scss';
 import usePathPrefix from '../../util/hooks/usePathprefix';
 
-const Video = ({ autoPlay, vimeoId, title, src, poster, muted, ...props }) => {
+const defaults = {
+  autoPlay: false,
+};
+
+const Video = ({
+  autoPlay = defaults.autoPlay,
+  vimeoId,
+  title,
+  src,
+  poster,
+  muted,
+  ...props
+}) => {
   const [isPlaying, setIsPlaying] = useState(autoPlay);
   const pathPrefix = usePathPrefix();
   const videoRef = useRef(null);
@@ -162,10 +174,6 @@ Video.propTypes = {
       );
     }
   },
-};
-
-Video.defaultProps = {
-  autoPlay: false,
 };
 
 export default Video;

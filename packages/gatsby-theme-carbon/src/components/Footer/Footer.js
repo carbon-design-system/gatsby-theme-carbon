@@ -11,7 +11,41 @@ import {
   content,
 } from './Footer.module.scss';
 
-const Footer = ({ Content, links, Logo }) => {
+const defaults = {
+  links: {
+    firstCol: [
+      { href: 'https://www.ibm.com/design', linkText: 'Sample' },
+      { href: 'https://www.ibm.com/design', linkText: 'Links' },
+      {
+        href: 'https://www.ibm.com/design',
+        linkText: 'Column',
+      },
+      { href: 'https://www.ibm.com/design', linkText: 'One' },
+    ],
+    secondCol: [
+      {
+        href: 'https://www.ibm.com/design',
+        linkText: 'Dribbble',
+      },
+      {
+        href: 'https://www.ibm.com/design',
+        linkText: 'Medium',
+      },
+      {
+        href: 'https://www.ibm.com/design',
+        linkText: 'Twitter',
+      },
+    ],
+  },
+  Content: DefaultContent,
+  Logo: IBMLogo,
+};
+
+const Footer = ({
+  Content = defaults.Content,
+  links = defaults.links,
+  Logo = defaults.Logo,
+}) => {
   const { firstCol, secondCol } = links;
   const { site } = useStaticQuery(graphql`
     query BUILD_TIME_QUERY {
@@ -85,36 +119,6 @@ const DefaultContent = () => (
     props.
   </p>
 );
-
-Footer.defaultProps = {
-  links: {
-    firstCol: [
-      { href: 'https://www.ibm.com/design', linkText: 'Sample' },
-      { href: 'https://www.ibm.com/design', linkText: 'Links' },
-      {
-        href: 'https://www.ibm.com/design',
-        linkText: 'Column',
-      },
-      { href: 'https://www.ibm.com/design', linkText: 'One' },
-    ],
-    secondCol: [
-      {
-        href: 'https://www.ibm.com/design',
-        linkText: 'Dribbble',
-      },
-      {
-        href: 'https://www.ibm.com/design',
-        linkText: 'Medium',
-      },
-      {
-        href: 'https://www.ibm.com/design',
-        linkText: 'Twitter',
-      },
-    ],
-  },
-  Content: DefaultContent,
-  Logo: IBMLogo,
-};
 
 Footer.propTypes = {
   /**

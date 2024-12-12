@@ -5,7 +5,11 @@ import { Locked } from '@carbon/react/icons';
 import NavContext from '../../util/context/NavContext';
 import { nav, open, divider, link, linkDisabled } from './Switcher.module.scss';
 
-const Switcher = ({ children }) => {
+const defaults = {
+  children: <DefaultChildren />,
+};
+
+const Switcher = ({ children = defaults.children }) => {
   const lgBreakpoint = useMedia('min-width: 1056px');
   const { switcherIsOpen, toggleNavState } = useContext(NavContext);
   const listRef = useRef(null);
@@ -138,9 +142,5 @@ const DefaultChildren = () => (
     </SwitcherLink>
   </>
 );
-
-Switcher.defaultProps = {
-  children: <DefaultChildren />,
-};
 
 export default Switcher;

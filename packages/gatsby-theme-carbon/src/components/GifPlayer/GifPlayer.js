@@ -18,7 +18,17 @@ const Play = ({ hovering }) =>
 const ToggleIcon = ({ paused, hovering }) =>
   paused ? <Play hovering={hovering} /> : <Pause hovering={hovering} />;
 
-const GifPlayer = ({ children, color, className, isInDialog }) => {
+const defaults = {
+  color: 'light',
+  isInDialog: false,
+};
+
+const GifPlayer = ({
+  children,
+  color = defaults.color,
+  className,
+  isInDialog = defaults.isInDialog,
+}) => {
   const [paused, setPaused] = useState(false);
 
   const [hovering, setHovering] = useState(false);
@@ -94,11 +104,6 @@ GifPlayer.propTypes = {
    * Specify if the gifPlayer is inside the expanded ImageGallery (see ImageGallery.js)
    */
   isInDialog: PropTypes.bool,
-};
-
-GifPlayer.defaultProps = {
-  color: 'light',
-  isInDialog: false,
 };
 
 export default GifPlayer;

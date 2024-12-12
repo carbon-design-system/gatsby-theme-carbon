@@ -28,7 +28,15 @@ const Anchor = ({ id, string, position }) => {
   );
 };
 
-const AutolinkHeader = ({ is: Component, className, ...props }) => {
+const defaults = {
+  is: 'h2',
+};
+
+const AutolinkHeader = ({
+  is: Component = defaults.is,
+  className,
+  ...props
+}) => {
   const isMobile = useMedia({ maxWidth: breakpoints.md.width });
 
   const string = React.Children.map(
@@ -47,7 +55,5 @@ const AutolinkHeader = ({ is: Component, className, ...props }) => {
     </Component>
   );
 };
-
-AutolinkHeader.defaultProps = { is: 'h2' };
 
 export default AutolinkHeader;
