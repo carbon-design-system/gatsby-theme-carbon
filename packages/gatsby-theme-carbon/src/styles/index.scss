@@ -11,14 +11,14 @@
 //---------------------------------------
 
 @use './internal/page';
-@use '../components/Homepage/homepage.scss';
-@use '../components/PageTable/page-table.scss';
-@use '../components/DoDontExample/do-dont-example.scss';
-@use '../components/ResourceCard/resource-card.scss';
-@use '../components/ResourceCard/resource-card-group.scss';
-@use '../components/ArticleCard/article-card.scss';
-@use '../components/FeatureCard/feature-card.scss';
-@use '../components/ImageCard/image-card.scss';
+@use '../components/Homepage/homepage';
+@use '../components/PageTable/page-table';
+@use '../components/DoDontExample/do-dont-example';
+@use '../components/ResourceCard/resource-card';
+@use '../components/ResourceCard/resource-card-group';
+@use '../components/ArticleCard/article-card';
+@use '../components/FeatureCard/feature-card';
+@use '../components/ImageCard/image-card';
 
 //---------------------------------------
 // Included last to ensure that class
