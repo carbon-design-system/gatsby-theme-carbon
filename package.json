@@ -36,7 +36,8 @@
     "validate": "yarn format:ci && yarn lint"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "access": "public",
+    "provenance": true
   },
   "release-it": {
     "plugins": {
