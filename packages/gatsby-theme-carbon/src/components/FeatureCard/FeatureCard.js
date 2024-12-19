@@ -6,6 +6,10 @@ import { AspectRatio } from '@carbon/react';
 import { Row, Column } from '../Grid';
 import ResourceCard from '../ResourceCard';
 
+const defaults = {
+  disabled: false,
+  actionIcon: 'launch',
+};
 export default class FeatureCard extends React.Component {
   render() {
     const {
@@ -14,8 +18,8 @@ export default class FeatureCard extends React.Component {
       subTitle,
       title,
       color,
-      disabled,
-      actionIcon,
+      disabled = defaults.disabled,
+      actionIcon = defaults.actionIcon,
       className,
       ...resourceCardProps
     } = this.props;
@@ -122,9 +126,4 @@ FeatureCard.propTypes = {
    * Pass through props to resource card
    */
   resourceCardProps: PropTypes.object,
-};
-
-FeatureCard.defaultProps = {
-  disabled: false,
-  actionIcon: 'launch',
 };

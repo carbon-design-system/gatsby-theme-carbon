@@ -12,6 +12,13 @@ import {
 } from '@carbon/react/icons';
 import { AspectRatio } from '@carbon/react';
 
+const defaults = {
+  color: 'light',
+  disabled: false,
+  aspectRatio: '2:1',
+  actionIcon: 'launch',
+};
+
 export default class ResourceCard extends React.Component {
   render() {
     const {
@@ -19,10 +26,10 @@ export default class ResourceCard extends React.Component {
       href,
       subTitle,
       title,
-      color,
-      disabled,
-      aspectRatio,
-      actionIcon,
+      color = defaults.color,
+      disabled = defaults.disabled,
+      aspectRatio = defaults.aspectRatio,
+      actionIcon = defaults.actionIcon,
       className,
       ...rest
     } = this.props;
@@ -149,11 +156,4 @@ ResourceCard.propTypes = {
    * Specify a custom class
    */
   className: PropTypes.string,
-};
-
-ResourceCard.defaultProps = {
-  color: 'light',
-  disabled: false,
-  aspectRatio: '2:1',
-  actionIcon: 'launch',
 };

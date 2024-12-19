@@ -10,6 +10,12 @@ import {
   Email,
 } from '@carbon/react/icons';
 
+const defaults = {
+  color: 'light',
+  disabled: false,
+  actionIcon: '',
+};
+
 export default class ArticleCard extends React.Component {
   render() {
     const {
@@ -20,9 +26,9 @@ export default class ArticleCard extends React.Component {
       author,
       date,
       readTime,
-      color,
-      disabled,
-      actionIcon,
+      color = defaults.color,
+      disabled = defaults.disabled,
+      actionIcon = defaults.actionIcon,
       className,
       ...rest
     } = this.props;
@@ -167,10 +173,4 @@ ArticleCard.propTypes = {
    * Specify a custom class
    */
   className: PropTypes.string,
-};
-
-ArticleCard.defaultProps = {
-  color: 'light',
-  disabled: false,
-  actionIcon: '',
 };

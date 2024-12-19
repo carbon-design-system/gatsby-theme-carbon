@@ -34,11 +34,15 @@ Row.propTypes = {
   className: PropTypes.string,
 };
 
+const colDefaults = {
+  colLg: 12,
+};
+
 export const Column = ({
   children,
   colSm,
   colMd,
-  colLg,
+  colLg = colDefaults.colLg,
   colXl,
   colMax,
   offsetSm,
@@ -92,10 +96,6 @@ export const Column = ({
       {children}
     </CarbonColumn>
   );
-};
-
-Column.defaultProps = {
-  colLg: 12,
 };
 
 Column.propTypes = {

@@ -5,6 +5,9 @@ import { CheckmarkFilled, Misuse } from '@carbon/react/icons';
 import { Column } from '../Grid';
 import * as styles from './DoDontRow.module.scss';
 
+const defaults = {
+  type: 'do',
+};
 export default class DoDont extends React.Component {
   static renderCaption = (caption, captionTitle) => {
     if (caption || captionTitle) {
@@ -25,7 +28,7 @@ export default class DoDont extends React.Component {
       text,
       aspectRatio,
       color,
-      type,
+      type = defaults.type,
       className,
       ...columnProps
     } = this.props;
@@ -78,10 +81,6 @@ export default class DoDont extends React.Component {
     );
   }
 }
-
-DoDont.defaultProps = {
-  type: 'do',
-};
 
 DoDont.propTypes = {
   children: PropTypes.node,
