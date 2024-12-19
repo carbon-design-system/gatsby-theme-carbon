@@ -12,19 +12,26 @@ import {
 import { Column } from '../Grid';
 import * as styles from './SquareCard.module.scss';
 
+const defaults = {
+  color: 'light',
+  disabled: false,
+  smallTitle: false,
+  actionIcon: 'arrowRight',
+};
+
 export default class SquareCard extends React.Component {
   render() {
     const {
       children,
       href,
       title,
-      smallTitle,
-      disabled,
+      smallTitle = defaults.smallTitle,
+      disabled = defaults.disabled,
       bodyText,
       helperText,
       className,
-      actionIcon,
-      color,
+      actionIcon = defaults.actionIcon,
+      color = defaults.color,
       ...rest
     } = this.props;
 
@@ -157,11 +164,4 @@ SquareCard.propTypes = {
    * Specify a custom class
    */
   className: PropTypes.string,
-};
-
-SquareCard.defaultProps = {
-  color: 'light',
-  disabled: false,
-  smallTitle: false,
-  actionIcon: 'arrowRight',
 };

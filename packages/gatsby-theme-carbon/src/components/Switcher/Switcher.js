@@ -5,7 +5,69 @@ import { Locked } from '@carbon/react/icons';
 import NavContext from '../../util/context/NavContext';
 import { nav, open, divider, link, linkDisabled } from './Switcher.module.scss';
 
-const Switcher = ({ children }) => {
+// https://css-tricks.com/using-css-transitions-auto-dimensions/
+// Note: if you change this, update the max-height in the switcher stylesheet
+const DefaultChildren = () => (
+  <>
+    <SwitcherDivider>Foundations</SwitcherDivider>
+    <SwitcherLink href="https://ibm.com/brand" isInternal>
+      IBM Brand Center
+    </SwitcherLink>
+    <SwitcherLink href="https://ibm.com/design/language">
+      IBM Design Language
+    </SwitcherLink>
+    <SwitcherDivider>Implementation</SwitcherDivider>
+    <SwitcherLink href="https://www.carbondesignsystem.com/">
+      Carbon Design System
+    </SwitcherLink>
+    <SwitcherLink href="http://ibm.biz/carbon4ibmproducts" isInternal>
+      Carbon for IBM Products
+    </SwitcherLink>
+    <SwitcherLink href="https://ibm.biz/carbon4cloud" isInternal>
+      Carbon for Cloud
+    </SwitcherLink>
+    <SwitcherLink href="https://www.ibm.com/standards/carbon/">
+      Carbon for IBM.com
+    </SwitcherLink>
+    <SwitcherLink href="https://www.ibm.com/design/event/">
+      IBM Event Design
+    </SwitcherLink>
+    <SwitcherLink href="https://www.ibm.com/design/workplace/">
+      IBM Workplace Design
+    </SwitcherLink>
+    <SwitcherDivider>Practices</SwitcherDivider>
+    <SwitcherLink href="https://www.ibm.com/design/thinking/">
+      Enterprise Design Thinking
+    </SwitcherLink>
+    <SwitcherLink href="https://www.ibm.com/able/">
+      IBM Accessibility
+    </SwitcherLink>
+    <SwitcherLink href="https://www.ibm.com/design/ai">
+      IBM Design for AI
+    </SwitcherLink>
+    <SwitcherLink href="https://www.ibm.com/design/research/">
+      IBM Design Research
+    </SwitcherLink>
+    <SwitcherLink
+      isInternal
+      href="https://w3.ibm.com/design/experience-standards/">
+      IBM Experience Standards
+    </SwitcherLink>
+    <SwitcherDivider>Community</SwitcherDivider>
+    <SwitcherLink href="https://w3.ibm.com/design/" isInternal>
+      IBM Design
+    </SwitcherLink>
+    <SwitcherLink href="https://www.ibm.com/design/racial-equity-in-design">
+      Racial Equity in Design
+    </SwitcherLink>
+  </>
+);
+
+const defaults = {
+  children: <DefaultChildren />,
+};
+
+const Switcher = ({ children = defaults.children }) => {
   const lgBreakpoint = useMedia('min-width: 1056px');
   const { switcherIsOpen, toggleNavState } = useContext(NavContext);
   const listRef = useRef(null);
@@ -79,68 +141,6 @@ export const SwitcherLink = ({
       </a>
     </li>
   );
-};
-
-// https://css-tricks.com/using-css-transitions-auto-dimensions/
-// Note: if you change this, update the max-height in the switcher stylesheet
-const DefaultChildren = () => (
-  <>
-    <SwitcherDivider>Foundations</SwitcherDivider>
-    <SwitcherLink href="https://ibm.com/brand" isInternal>
-      IBM Brand Center
-    </SwitcherLink>
-    <SwitcherLink href="https://ibm.com/design/language">
-      IBM Design Language
-    </SwitcherLink>
-    <SwitcherDivider>Implementation</SwitcherDivider>
-    <SwitcherLink href="https://www.carbondesignsystem.com/">
-      Carbon Design System
-    </SwitcherLink>
-    <SwitcherLink href="http://ibm.biz/carbon4ibmproducts" isInternal>
-      Carbon for IBM Products
-    </SwitcherLink>
-    <SwitcherLink href="https://ibm.biz/carbon4cloud" isInternal>
-      Carbon for Cloud
-    </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/standards/carbon/">
-      Carbon for IBM.com
-    </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/design/event/">
-      IBM Event Design
-    </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/design/workplace/">
-      IBM Workplace Design
-    </SwitcherLink>
-    <SwitcherDivider>Practices</SwitcherDivider>
-    <SwitcherLink href="https://www.ibm.com/design/thinking/">
-      Enterprise Design Thinking
-    </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/able/">
-      IBM Accessibility
-    </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/design/ai">
-      IBM Design for AI
-    </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/design/research/">
-      IBM Design Research
-    </SwitcherLink>
-    <SwitcherLink
-      isInternal
-      href="https://w3.ibm.com/design/experience-standards/">
-      IBM Experience Standards
-    </SwitcherLink>
-    <SwitcherDivider>Community</SwitcherDivider>
-    <SwitcherLink href="https://w3.ibm.com/design/" isInternal>
-      IBM Design
-    </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/design/racial-equity-in-design">
-      Racial Equity in Design
-    </SwitcherLink>
-  </>
-);
-
-Switcher.defaultProps = {
-  children: <DefaultChildren />,
 };
 
 export default Switcher;

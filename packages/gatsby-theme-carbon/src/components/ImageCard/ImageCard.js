@@ -10,6 +10,15 @@ import {
   Email,
 } from '@carbon/react/icons';
 
+const defaults = {
+  disabled: false,
+  aspectRatio: '1:1',
+  titleColor: 'light',
+  subTitleColor: 'light',
+  iconColor: 'light',
+  hoverColor: 'light',
+};
+
 export default class ImageCard extends React.Component {
   render() {
     const {
@@ -17,12 +26,12 @@ export default class ImageCard extends React.Component {
       href,
       subTitle,
       title,
-      titleColor,
-      subTitleColor,
-      iconColor,
-      hoverColor,
-      disabled,
-      aspectRatio,
+      titleColor = defaults.titleColor,
+      subTitleColor = defaults.subTitleColor,
+      iconColor = defaults.iconColor,
+      hoverColor = defaults.hoverColor,
+      disabled = defaults.disabled,
+      aspectRatio = defaults.aspectRatio,
       actionIcon,
       className,
       ...rest
@@ -180,13 +189,4 @@ ImageCard.propTypes = {
    * Props to pass through to link component
    */
   linkProps: PropTypes.object,
-};
-
-ImageCard.defaultProps = {
-  disabled: false,
-  aspectRatio: '1:1',
-  titleColor: 'light',
-  subTitleColor: 'light',
-  iconColor: 'light',
-  hoverColor: 'light',
 };

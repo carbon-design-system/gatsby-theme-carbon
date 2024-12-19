@@ -17,7 +17,17 @@ import useMetadata from '../../util/hooks/useMetadata';
 
 import * as styles from './Header.module.scss';
 
-const Header = ({ children }) => {
+const DefaultHeaderText = () => (
+  <>
+    Carbon&nbsp;<span>Design System</span>
+  </>
+);
+
+const defaults = {
+  children: <DefaultHeaderText />,
+};
+
+const Header = ({ children = defaults.children }) => {
   const {
     leftNavIsOpen,
     toggleNavState,
@@ -73,16 +83,6 @@ const Header = ({ children }) => {
       </HeaderGlobalBar>
     </ShellHeader>
   );
-};
-
-const DefaultHeaderText = () => (
-  <>
-    Carbon&nbsp;<span>Design System</span>
-  </>
-);
-
-Header.defaultProps = {
-  children: <DefaultHeaderText />,
 };
 
 export default Header;
