@@ -15,15 +15,19 @@ const LeftNavResourceLinks = ({
   includeDividerSpace = true,
 }) => {
   const { toggleNavState, leftNavIsOpen } = useContext(NavContext);
-  const isLgWindow = window.matchMedia(`(min-width: ${breakpoints.lg.width} )`);
-
   useEffect(() => {
-    if (isLgWindow) {
-      toggleNavState('leftNavIsOpen', 'open');
-    } else {
-      toggleNavState('leftNavIsOpen', 'close');
+    if (typeof window !== 'undefined') {
+      const isLgWindow = window.matchMedia(
+        `(min-width: ${breakpoints.lg.width})`
+      ).matches;
+
+      if (isLgWindow) {
+        toggleNavState('leftNavIsOpen', 'open');
+      } else {
+        toggleNavState('leftNavIsOpen', 'close');
+      }
     }
-  }, []);
+  }, [toggleNavState]);
 
   if (!links) return null;
 
