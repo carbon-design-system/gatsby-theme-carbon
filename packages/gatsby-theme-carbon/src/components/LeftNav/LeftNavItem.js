@@ -20,15 +20,19 @@ const LeftNavItem = (props) => {
   const { toggleNavState, leftNavIsOpen } = useContext(NavContext);
   const { isServiceWorkerEnabled } = useMetadata();
   const isOnline = useNetworkState();
-  const isLgWindow = window.matchMedia(`(min-width: ${breakpoints.lg.width} )`);
-
   useEffect(() => {
-    if (isLgWindow) {
-      toggleNavState('leftNavIsOpen', 'open');
-    } else {
-      toggleNavState('leftNavIsOpen', 'close');
+    if (typeof window !== 'undefined') {
+      const isLgWindow = window.matchMedia(
+        `(min-width: ${breakpoints.lg.width})`
+      ).matches;
+
+      if (isLgWindow) {
+        toggleNavState('leftNavIsOpen', 'open');
+      } else {
+        toggleNavState('leftNavIsOpen', 'close');
+      }
     }
-  }, []);
+  }, [toggleNavState]);
 
   const handleClick = (event, to) => {
     toggleNavState('leftNavIsOpen', 'close');
