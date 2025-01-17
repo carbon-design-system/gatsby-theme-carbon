@@ -27,7 +27,7 @@ const LeftNavResourceLinks = ({
         toggleNavState('leftNavIsOpen', 'close');
       }
     }
-  }, [toggleNavState]);
+  }, []);
 
   if (!links) return null;
 

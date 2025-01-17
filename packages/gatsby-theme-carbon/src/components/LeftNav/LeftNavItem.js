@@ -32,7 +32,7 @@ const LeftNavItem = (props) => {
         toggleNavState('leftNavIsOpen', 'close');
       }
     }
-  }, [toggleNavState]);
+  }, []);
 
   const handleClick = (event, to) => {
     toggleNavState('leftNavIsOpen', 'close');
