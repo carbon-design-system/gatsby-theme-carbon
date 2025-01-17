@@ -1,8 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { Location } from '@reach/router';
 import cx from 'classnames';
 import { useNetworkState } from 'react-use';
+import { breakpoints } from '@carbon/elements';
 
 import { SideNavLink, SideNavMenu, SideNavMenuItem } from '@carbon/react';
 
@@ -16,9 +17,18 @@ export const SERVICE_WORKER_UPDATE_FOUND = 'GTC-ServiceWorkerUpdateFound';
 
 const LeftNavItem = (props) => {
   const { items, category, hasDivider } = props;
-  const { toggleNavState } = useContext(NavContext);
+  const { toggleNavState, leftNavIsOpen } = useContext(NavContext);
   const { isServiceWorkerEnabled } = useMetadata();
   const isOnline = useNetworkState();
+  const isLgWindow = window.matchMedia(`(min-width: ${breakpoints.lg.width} )`);
+
+  useEffect(() => {
+    if (isLgWindow) {
+      toggleNavState('leftNavIsOpen', 'open');
+    } else {
+      toggleNavState('leftNavIsOpen', 'close');
+    }
+  }, []);
 
   const handleClick = (event, to) => {
     toggleNavState('leftNavIsOpen', 'close');
@@ -48,6 +58,8 @@ const LeftNavItem = (props) => {
           return (
             <>
               <SideNavLink
+                isSideNavExpanded={leftNavIsOpen}
+                tabIndex={!leftNavIsOpen ? -1 : 0}
                 onClick={(e) => handleClick(e, to)}
                 icon={<span>dummy icon</span>}
                 element={Link}
@@ -68,7 +80,9 @@ const LeftNavItem = (props) => {
               icon={<span>dummy icon</span>}
               isActive={isActive} // TODO similar categories
               defaultExpanded={isActive}
-              title={category}>
+              title={category}
+              isSideNavExpanded={leftNavIsOpen}
+              tabIndex={!leftNavIsOpen ? -1 : 0}>
               <SubNavItems
                 onClick={handleClick}
                 items={items}
