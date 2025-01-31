@@ -33,7 +33,7 @@ const Layout = ({
   const { isSwitcherEnabled } = useMetadata();
 
   useEffect(() => {
-    // eslint-disable-next-line global-require
+     
     const scroll = require('smooth-scroll')('a[href*="#"]', {
       speed: 400,
       durationMin: 250,
