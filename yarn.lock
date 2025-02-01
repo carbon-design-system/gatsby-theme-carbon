@@ -9778,16 +9778,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-html@npm:^7.1.0":
-  version: 7.1.0
-  resolution: "eslint-plugin-html@npm:7.1.0"
-  dependencies:
-    htmlparser2: "npm:^8.0.1"
-  checksum: 10/f19a5fda32056c38c4bf75fcb37ae2e495e004220de0fa1c6249c92438f191dba0011cf677834242da4939c80b06260f39d7968bf8f22fba9a160dba9bff7ebf
-  languageName: node
-  linkType: hard
-
-"eslint-plugin-html@npm:^8.1.1":
+"eslint-plugin-html@npm:^8.1.1, eslint-plugin-html@npm:^8.1.2":
   version: 8.1.2
   resolution: "eslint-plugin-html@npm:8.1.2"
   dependencies:
@@ -10357,7 +10348,7 @@ __metadata:
   dependencies:
     "@carbon/icons-react": "npm:^11.43.0"
     gatsby: "npm:^5.13.6"
-    gatsby-theme-carbon: "npm:^4.2.5"
+    gatsby-theme-carbon: "npm:^4.2.6"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
   languageName: unknown
@@ -11639,7 +11630,7 @@ __metadata:
     eslint-config-airbnb: "npm:^19.0.4"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-config-wesbos: "npm:4.3.2"
-    eslint-plugin-html: "npm:^7.1.0"
+    eslint-plugin-html: "npm:^8.1.2"
     eslint-plugin-import: "npm:^2.29.1"
     eslint-plugin-jsx-a11y: "npm:^6.8.0"
     eslint-plugin-prettier: "npm:^5.1.3"
@@ -11657,7 +11648,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@npm:^4.2.5, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@npm:^4.2.6, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
