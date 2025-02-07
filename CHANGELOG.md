@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.8](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.2.7...v4.2.8) (2025-02-07)
+
+
+### Reverts
+
+* Revert "build(deps): bump release-it from 17.10.0 to 18.1.2 (#1570)" ([8d118a7](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8d118a71beec134597fa208a7fe86f8a0b518854)), closes [#1570](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1570)
+
 ## [4.2.7](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.2.6...v4.2.7) (2025-02-07)
 
 ## [4.2.6](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.2.5...v4.2.6) (2025-01-30)
