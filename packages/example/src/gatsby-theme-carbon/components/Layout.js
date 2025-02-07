@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React, { useEffect } from 'react';
 
 import { Information } from '@carbon/icons-react';
@@ -33,7 +32,7 @@ const Layout = ({
   const { isSwitcherEnabled } = useMetadata();
 
   useEffect(() => {
-    // eslint-disable-next-line global-require
+    // eslint-disable-next-line no-undef
     const scroll = require('smooth-scroll')('a[href*="#"]', {
       speed: 400,
       durationMin: 250,

@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import React, { useEffect } from 'react';
 
 import Meta from './Meta';
@@ -8,6 +7,7 @@ import { Switcher } from './Switcher';
 import Footer from './Footer';
 import Container from './Container';
 import useMetadata from '../util/hooks/useMetadata';
+import smoothScroll from 'smooth-scroll';
 
 import '../styles/index.scss';
 
@@ -25,8 +25,7 @@ const Layout = ({
   const { isSwitcherEnabled } = useMetadata();
 
   useEffect(() => {
-    // eslint-disable-next-line global-require
-    const scroll = require('smooth-scroll')('a[href*="#"]', {
+    const scroll = smoothScroll('a[href*="#"]', {
       speed: 400,
       durationMin: 250,
       durationMax: 700,

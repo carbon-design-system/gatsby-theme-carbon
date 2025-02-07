@@ -29,7 +29,7 @@ const LeftNavTree = ({ items, pathPrefix, theme }) => {
       // branch node with more than 1 leaf nodes
       if (item.pages && item.pages.length > 1) {
         item.isBranch = true;
-        item.pages.forEach((SubNavItem, i) => assignNodeType(SubNavItem));
+        item.pages.forEach((SubNavItem) => assignNodeType(SubNavItem));
       }
       // if it is branch node with only one leaf node, convert it to a leaf node
       else if (item.pages && item.pages.length) {
@@ -185,6 +185,7 @@ LeftNavTree.propTypes = {
   ),
 };
 
+// eslint-disable-next-line no-unused-vars
 const areEqual = (prevProps, nextProps) => true;
 
 export default memo(LeftNavTree, areEqual);

@@ -1,4 +1,3 @@
-/* eslint-disable import/no-duplicates */
 import React, { useContext, useEffect, useRef, useCallback } from 'react';
 import cx from 'classnames';
 import NavContext from '../../util/context/NavContext';
