@@ -5,7 +5,7 @@ const Content = ({ buildTime }) => (
   <>
     <p>
       The <code>Content</code> component receives a <code>buildTime</code> prop
-      that to display your site's build time: {buildTime}
+      that to display your site&apos;s build time: {buildTime}
     </p>
     <p>
       By importing the <strong>Footer</strong> component from

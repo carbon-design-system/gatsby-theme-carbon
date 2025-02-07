@@ -1,7 +1,4 @@
 // https://www.w3.org/TR/wai-aria-practices/examples/combobox/aria1.1pattern/listbox-combo.html/#ex1
-/* eslint-disable jsx-a11y/label-has-for */
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable jsx-a11y/role-has-required-aria-props */
 
 import React, {
   useState,
@@ -13,7 +10,7 @@ import React, {
 } from 'react';
 import { useLunr } from 'react-lunr';
 import { Close, Search } from '@carbon/react/icons';
-import _throttle from 'lodash.throttle';
+import _throttle from 'lodash.throttle'; // eslint-disable-line no-unused-vars
 import { graphql, navigate, useStaticQuery } from 'gatsby';
 import cx from 'classnames';
 import NavContext from '../../util/context/NavContext';

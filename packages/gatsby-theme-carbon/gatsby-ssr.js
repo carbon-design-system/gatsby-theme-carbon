@@ -1,5 +1,3 @@
- 
- 
 import React from 'react';
 import wrapRoot from './src/util/wrap-root-element';
 import { version } from './package.json';
