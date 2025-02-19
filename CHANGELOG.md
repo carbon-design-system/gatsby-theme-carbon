@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.2.9...v4.2.10) (2025-02-19)
+
+
+### Bug Fixes
+
+* fixed tab navigation in SideNav ([#1567](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1567)) ([ee284be](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ee284be3802e8a7f8fd4c8e4152bf9fa86a6376d))
+
 ## [4.2.9](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.2.8...v4.2.9) (2025-02-12)
 
 ## [4.2.8](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.2.7...v4.2.8) (2025-02-07)
