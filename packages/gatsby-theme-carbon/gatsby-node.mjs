@@ -35,7 +35,7 @@ export const onPreBootstrap = ({ store, reporter }) => {
 // We can't do page queries from MDX templates, so we'll add the page's relative path to context after it's created.
 // The context object **is** supplied to MDX templates through the pageContext prop.
 export const onCreatePage = (
-  { page, actions, getNodesByType, ...rest },
+  { page, actions, getNodesByType, ...rest }, // eslint-disable-line no-unused-vars
   pluginOptions
 ) => {
   // Don't override if it's already been provided

@@ -2,7 +2,7 @@ import { useState, useEffect, useLayoutEffect } from 'react';
 
 let serverHandoffComplete = false;
 let globalIndex = 0;
-// eslint-disable-next-line no-plusplus
+
 const genId = () => ++globalIndex;
 
 // https://medium.com/@alexandereardon/uselayouteffect-and-ssr-192986cdcf7a
@@ -28,7 +28,6 @@ export const useId = (label) => {
        */
       setId(genId());
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unknown-property */
-/* eslint-disable react/no-danger */
 import React from 'react';
 import wrapRoot from './src/util/wrap-root-element';
 import { version } from './package.json';

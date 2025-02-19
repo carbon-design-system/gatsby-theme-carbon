@@ -29,6 +29,7 @@ const MediumPosts = ({ postLimit = 3, cardProps, ...rest }) => {
     <Row {...rest}>
       {allPosts.slice(0, postLimit).map((latestPost) => (
         <Column
+          key={latestPost.slug}
           colSm={4}
           colMd={4}
           colLg={4}

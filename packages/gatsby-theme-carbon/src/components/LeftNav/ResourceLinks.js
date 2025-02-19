@@ -42,13 +42,13 @@ const LeftNavResourceLinks = ({
           [dividerSpace]: includeDividerSpace,
         })}
       />
+      {/* eslint-disable-next-line no-unused-vars */}
       {links.map(({ title, href, ...rest }, i) => {
         const outbound = !/^\/(?!\/)/.test(href);
         return (
           <SideNavLink
             key={i}
             renderIcon={outbound ? LaunchIcon : undefined}
-            // eslint-disable-next-line jsx-a11y/aria-proptypes
             aria-current=""
             to={href}
             href={href}

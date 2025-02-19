@@ -16,5 +16,4 @@ const Li = ({ children, ...rest }) =>
     )
   );
 
-// eslint-disable-next-line no-restricted-exports
 export { Li as default, LiConsumer };
