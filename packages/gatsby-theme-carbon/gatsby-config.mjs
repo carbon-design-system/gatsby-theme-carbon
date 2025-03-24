@@ -57,12 +57,17 @@ export default (themeOptions) => {
   const optionalPlugins = [];
 
   if (mediumAccount) {
-    optionalPlugins.push({
-      resolve: 'gatsby-source-medium-feed',
-      options: {
-        userName: mediumAccount, // Medium user name
-        name: 'MediumFeed',
-      },
+    const accounts = Array.isArray(mediumAccount)
+      ? mediumAccount
+      : [mediumAccount];
+    accounts.forEach((account) => {
+      optionalPlugins.push({
+        resolve: 'gatsby-source-medium-feed',
+        options: {
+          userName: account, // Medium user name
+          name: 'MediumFeed',
+        },
+      });
     });
   }
 
