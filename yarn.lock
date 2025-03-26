@@ -1584,38 +1584,38 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/elements@npm:^11.63.0":
-  version: 11.63.0
-  resolution: "@carbon/elements@npm:11.63.0"
+"@carbon/elements@npm:^11.64.0":
+  version: 11.64.0
+  resolution: "@carbon/elements@npm:11.64.0"
   dependencies:
     "@carbon/colors": "npm:^11.30.0"
-    "@carbon/grid": "npm:^11.32.0"
+    "@carbon/grid": "npm:^11.33.0"
     "@carbon/icons": "npm:^11.57.0"
-    "@carbon/layout": "npm:^11.30.0"
+    "@carbon/layout": "npm:^11.31.0"
     "@carbon/motion": "npm:^11.25.0"
-    "@carbon/themes": "npm:^11.48.0"
-    "@carbon/type": "npm:^11.36.0"
+    "@carbon/themes": "npm:^11.49.0"
+    "@carbon/type": "npm:^11.37.0"
     "@ibm/telemetry-js": "npm:^1.5.0"
-  checksum: 10/a106be49e59e14b4377003ba37f6e1a5a2d6b815e53e9ec8f5d261b41e850707a5cc850b316f42dfd39bcd480b36ef38a42acfac6e3a60f714d01cd5df2be1fe
+  checksum: 10/e88102b28545fa7ed9cfc58887b7b161edd338b70e412d621502029a0bdd6a9767cfa548a089ee020ffd83611b644893afe4c2e6c1ca53141c9c3112201d0e1f
   languageName: node
   linkType: hard
 
-"@carbon/feature-flags@npm:^0.24.0":
-  version: 0.24.0
-  resolution: "@carbon/feature-flags@npm:0.24.0"
+"@carbon/feature-flags@npm:^0.25.0":
+  version: 0.25.0
+  resolution: "@carbon/feature-flags@npm:0.25.0"
   dependencies:
     "@ibm/telemetry-js": "npm:^1.5.0"
-  checksum: 10/abfe35e02d45208e64ead6e22c76c1f97c3099013bb0f0bbca46893c33f4571c9c6f0a2cacc6e8b5cd78aa90696beef89145b7bfc06fcab06c8ca3ff7cd11e02
+  checksum: 10/e4a0ba4bcf73a2d1847120a707caa6ab1581795402316f01a3f7b4e374aca2682e7a0925f5bc59208234517f86930b4cd4f02327fce375c3336586e37ad953cf
   languageName: node
   linkType: hard
 
-"@carbon/grid@npm:^11.32.0":
-  version: 11.32.0
-  resolution: "@carbon/grid@npm:11.32.0"
+"@carbon/grid@npm:^11.33.0":
+  version: 11.33.0
+  resolution: "@carbon/grid@npm:11.33.0"
   dependencies:
-    "@carbon/layout": "npm:^11.30.0"
+    "@carbon/layout": "npm:^11.31.0"
     "@ibm/telemetry-js": "npm:^1.5.0"
-  checksum: 10/8aded0cf291a757feb90bd3eb683e87d4268a454513f37b1db50f1ba7ca978ae28cd13be1994b7a9a3d2851c13ca3909a2efb0dcdc37befeabb26a09a11065df
+  checksum: 10/4927cccb9ec6584a4e0f561f16c80b44dbce61e2ab4323b8a2ea426584124790e27eb584db42b10237ccbb93801e0de4dff12e07aa358f055259758f6697c2e8
   languageName: node
   linkType: hard
 
@@ -1672,12 +1672,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/layout@npm:^11.30.0":
-  version: 11.30.0
-  resolution: "@carbon/layout@npm:11.30.0"
+"@carbon/layout@npm:^11.31.0":
+  version: 11.31.0
+  resolution: "@carbon/layout@npm:11.31.0"
   dependencies:
     "@ibm/telemetry-js": "npm:^1.5.0"
-  checksum: 10/02583be31793fe9b449ad3d6cde9a649d10ac773680d37b10974f39a8c49f63dd1fd3a78edee362da1ee9ec3ca4bac6280c90079e5ccb1718bd79262853fd1ce
+  checksum: 10/a1b7825ae8e643d86a0c257fa93d87c7397f33a38af3c912728d31935b9350f0c555ed6f0119458908c8c43ffacaa4dc21a743c8c308ff45500d18d8afe8d6ac
   languageName: node
   linkType: hard
 
@@ -1703,15 +1703,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/react@npm:^1.78.0":
-  version: 1.78.0
-  resolution: "@carbon/react@npm:1.78.0"
+"@carbon/react@npm:^1.79.0":
+  version: 1.79.0
+  resolution: "@carbon/react@npm:1.79.0"
   dependencies:
     "@babel/runtime": "npm:^7.24.7"
-    "@carbon/feature-flags": "npm:^0.24.0"
+    "@carbon/feature-flags": "npm:^0.25.0"
     "@carbon/icons-react": "npm:^11.57.0"
-    "@carbon/layout": "npm:^11.30.0"
-    "@carbon/styles": "npm:^1.77.0"
+    "@carbon/layout": "npm:^11.31.0"
+    "@carbon/styles": "npm:^1.78.0"
     "@floating-ui/react": "npm:^0.27.4"
     "@ibm/telemetry-js": "npm:^1.5.0"
     classnames: "npm:2.5.1"
@@ -1730,21 +1730,21 @@ __metadata:
     react-dom: ^16.8.6 || ^17.0.1 || ^18.2.0 || ^19.0.0
     react-is: ^18.3.1 || ^19.0.0
     sass: ^1.33.0
-  checksum: 10/f5433d17cf537d287f09077dddd905760489ebd7c0e1e4288acae670d930a088261d967dcb7a1bde923a13cdc5e1827723505dafc0f4c8d19a1cd6ff7e95d9aa
+  checksum: 10/5488050d6b678984d30cedb2dace6d94b185e31987a5a55cfb58215e5282b798d10908bb1b0f38a349023afb204ecac214d57ebb552a35708a425535069ee742
   languageName: node
   linkType: hard
 
-"@carbon/styles@npm:^1.77.0":
-  version: 1.77.0
-  resolution: "@carbon/styles@npm:1.77.0"
+"@carbon/styles@npm:^1.78.0":
+  version: 1.78.0
+  resolution: "@carbon/styles@npm:1.78.0"
   dependencies:
     "@carbon/colors": "npm:^11.30.0"
-    "@carbon/feature-flags": "npm:^0.24.0"
-    "@carbon/grid": "npm:^11.32.0"
-    "@carbon/layout": "npm:^11.30.0"
+    "@carbon/feature-flags": "npm:^0.25.0"
+    "@carbon/grid": "npm:^11.33.0"
+    "@carbon/layout": "npm:^11.31.0"
     "@carbon/motion": "npm:^11.25.0"
-    "@carbon/themes": "npm:^11.48.0"
-    "@carbon/type": "npm:^11.36.0"
+    "@carbon/themes": "npm:^11.49.0"
+    "@carbon/type": "npm:^11.37.0"
     "@ibm/plex": "npm:6.0.0-next.6"
     "@ibm/plex-mono": "npm:0.0.3-alpha.0"
     "@ibm/plex-sans": "npm:0.0.3-alpha.0"
@@ -1760,31 +1760,31 @@ __metadata:
   peerDependenciesMeta:
     sass:
       optional: true
-  checksum: 10/1a446ef91e07512c57c7669822125293d559d75798b16ba13f934aababb7661a23f28595647f49252db51a9fb84bfc7523bff9f7d5df16fc0bb9c2fbcc295a7b
+  checksum: 10/9350c0c624ab49de70ebcd27eb64e9d2829f9f3f80f7ebb9028ee86bed513a144edfd8010b9b50b32fb0897d8d153e7c9006acb90a4cee4b76b8941ba0b9c265
   languageName: node
   linkType: hard
 
-"@carbon/themes@npm:^11.48.0":
-  version: 11.48.0
-  resolution: "@carbon/themes@npm:11.48.0"
+"@carbon/themes@npm:^11.49.0":
+  version: 11.49.0
+  resolution: "@carbon/themes@npm:11.49.0"
   dependencies:
     "@carbon/colors": "npm:^11.30.0"
-    "@carbon/layout": "npm:^11.30.0"
-    "@carbon/type": "npm:^11.36.0"
+    "@carbon/layout": "npm:^11.31.0"
+    "@carbon/type": "npm:^11.37.0"
     "@ibm/telemetry-js": "npm:^1.5.0"
     color: "npm:^4.0.0"
-  checksum: 10/5ffc721b4423d40c433f4fd197e4bfab88d38316e799993662e3ea7e33405cbb867ba712461ea5fc631f6a58c6a505ff1d9d960e55f4c9e76f5906f2cbde3975
+  checksum: 10/5a23a9150c30eba7d2c7e84295777867c3ffbf18b11350c8848fd91fb4aef7fdcab6e3f0af924bd3deb3e8b61cb510d29be6d94e01b2d71f936260b9e9b09164
   languageName: node
   linkType: hard
 
-"@carbon/type@npm:^11.36.0":
-  version: 11.36.0
-  resolution: "@carbon/type@npm:11.36.0"
+"@carbon/type@npm:^11.37.0":
+  version: 11.37.0
+  resolution: "@carbon/type@npm:11.37.0"
   dependencies:
-    "@carbon/grid": "npm:^11.32.0"
-    "@carbon/layout": "npm:^11.30.0"
+    "@carbon/grid": "npm:^11.33.0"
+    "@carbon/layout": "npm:^11.31.0"
     "@ibm/telemetry-js": "npm:^1.5.0"
-  checksum: 10/ef02c9bc1f3a777f85a91b88544edbf8da6cb6b6057f91cc52ae378807f62b7d703ef83f251b99929164df7274fdcb91cc9d0b49ad9ed315fec876e5fb388106
+  checksum: 10/a0e0183c9b6aa905c2ae3f535d00000a1d5fc77d45608d6248ba2f43921bcb91ae6dfa2c1d5736e1d40a527c2032e35e3671457638fca03f72f1492dadc0f8b7
   languageName: node
   linkType: hard
 
@@ -10379,7 +10379,7 @@ __metadata:
   dependencies:
     "@carbon/icons-react": "npm:^11.54.0"
     gatsby: "npm:^5.14.1"
-    gatsby-theme-carbon: "npm:^4.2.11"
+    gatsby-theme-carbon: "npm:^4.2.12"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
   languageName: unknown
@@ -11711,18 +11711,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@npm:^4.2.11, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@npm:^4.2.12, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
     "@babel/core": "npm:^7.26.7"
     "@babel/plugin-proposal-class-properties": "npm:^7.18.6"
     "@babel/plugin-syntax-jsx": "npm:^7.25.9"
-    "@carbon/elements": "npm:^11.63.0"
-    "@carbon/grid": "npm:^11.32.0"
+    "@carbon/elements": "npm:^11.64.0"
+    "@carbon/grid": "npm:^11.33.0"
     "@carbon/pictograms-react": "npm:^11.74.0"
-    "@carbon/react": "npm:^1.78.0"
-    "@carbon/themes": "npm:^11.48.0"
+    "@carbon/react": "npm:^1.79.0"
+    "@carbon/themes": "npm:^11.49.0"
     "@garcia-enterprise/gatsby-plugin-sass-resources": "npm:^4.0.2"
     "@mdx-js/mdx": "npm:^3.1.0"
     "@mdx-js/react": "npm:^3.1.0"
