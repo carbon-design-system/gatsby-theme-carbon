@@ -242,7 +242,7 @@ options object is now empty, delete it all together.
 
 In order to change the source account for the
 [`MediumPosts`](/components/MediumPosts) component, provide an account with the
-`mediumAccount` option.
+`mediumAccount` option or an array of Medium accounts (for multiple accounts).
 
 ```js
 plugins: [
@@ -250,6 +250,18 @@ plugins: [
     resolve: 'gatsby-theme-carbon',
     options: {
       mediumAccount: 'carbondesign',
+    },
+  },
+];
+```
+
+<Title>Multiple Medium Accounts</Title>
+```js
+plugins: [
+  {
+    resolve: 'gatsby-theme-carbon',
+    options: {
+      mediumAccount: ['carbondesign', 'design-ibm'],
     },
   },
 ];
