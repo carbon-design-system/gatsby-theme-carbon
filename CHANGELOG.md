@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.13](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.2.12...v4.2.13) (2025-03-31)
+
+
+### Bug Fixes
+
+* allow multiple medium accounts ([#1578](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1578)) ([4cdf1fb](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/4cdf1fb37594f869d8d7faa7d9e0ab0556ce3f0a))
+
 ## [4.2.12](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.2.11...v4.2.12) (2025-03-12)
 
 ## [4.2.11](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.2.10...v4.2.11) (2025-02-26)
