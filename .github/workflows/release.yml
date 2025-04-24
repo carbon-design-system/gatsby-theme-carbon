@@ -10,6 +10,9 @@ on:
 jobs:
   check-for-new-commits:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
     outputs:
       has_new_commits: ${{ steps.check-commits.outputs.has_new_commits }}
     steps:
