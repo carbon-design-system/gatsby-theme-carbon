@@ -28,9 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     # For scheduled events, don't depend on check-user
     # For manual events, depend on check-user
-    needs:
-      ${{ github.event_name == 'workflow_dispatch' && fromJSON('["check-user"]')
-      || fromJSON('[]') }}
+    # prettier-ignore
+    needs: ${{ github.event_name == 'workflow_dispatch' && fromJSON('["check-user"]') || fromJSON('[]') }}
     permissions:
       contents: read
       actions: read
