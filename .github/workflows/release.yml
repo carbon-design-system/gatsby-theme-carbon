@@ -6,6 +6,10 @@ on:
     - cron: '0 1 * * 1'
   workflow_dispatch:
     # Enable manual triggering from the GitHub UI
+    inputs:
+      # No inputs needed, but we need to specify the branches filter
+    branches:
+      - main
 
 jobs:
   check-for-new-commits:
