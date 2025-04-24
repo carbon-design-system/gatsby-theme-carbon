@@ -229,10 +229,16 @@ jobs:
               core.setFailed(`Latest ${workflow_name} run did not succeed. Status: ${latestRun.conclusion}`);
             }
 
+      - name: Debug output status
+        run: |
+          echo "Status output: ${{ steps.check-validate.outputs.status }}"
+
   release:
     runs-on: ubuntu-latest
     needs: check-validate-status
-    if: needs.check-validate-status.outputs.status == 'success'
+    if: |
+      needs.check-validate-status.result == 'success' && 
+      (needs.check-validate-status.outputs.status == 'success' || needs.check-validate-status.outputs.status == 'SUCCESS')
     # Needed as recommended by npm docs on publishing with provenance https://docs.npmjs.com/generating-provenance-statements
     permissions:
       id-token: write
