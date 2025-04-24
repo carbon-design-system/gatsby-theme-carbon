@@ -12,8 +12,25 @@ on:
       - main
 
 jobs:
+  check-user:
+    runs-on: ubuntu-latest
+    # Only run this check for workflow_dispatch events
+    if:
+      github.event_name == 'workflow_dispatch' &&
+      contains('["alisonjoseph","vpicone", "sstrubberg", "jnm2377", "eng618"]',
+      github.actor)
+    steps:
+      - name: User validation
+        run:
+          echo "User ${{ github.actor }} is authorized to trigger this workflow"
+
   check-for-new-commits:
     runs-on: ubuntu-latest
+    # For scheduled events, don't depend on check-user
+    # For manual events, depend on check-user
+    needs:
+      ${{ github.event_name == 'workflow_dispatch' && fromJSON('["check-user"]')
+      || fromJSON('[]') }}
     permissions:
       contents: read
       actions: read

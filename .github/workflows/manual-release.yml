@@ -2,10 +2,18 @@ name: Release
 on: workflow_dispatch
 
 jobs:
-  release:
+  check-user:
+    runs-on: ubuntu-latest
     if:
       contains('["alisonjoseph","vpicone", "sstrubberg", "jnm2377", "eng618"]',
       github.actor)
+    steps:
+      - name: User validation
+        run:
+          echo "User ${{ github.actor }} is authorized to trigger this workflow"
+
+  release:
+    needs: check-user
     runs-on: ubuntu-latest
     steps:
       # fetch-depth: 0 ensures we get commit messages for changelog/versioning
