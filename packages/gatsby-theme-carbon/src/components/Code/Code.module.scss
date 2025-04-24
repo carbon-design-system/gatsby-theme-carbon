@@ -1,7 +1,8 @@
 :global {
   code {
-    font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
-      'Bitstream Vera Sans Mono', Courier, monospace;
+    font-family:
+      'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+      Courier, monospace;
   }
 
   p > code,
@@ -32,8 +33,9 @@
   position: relative;
   color: $white-0;
   @include type-style('code-02');
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
-    'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family:
+    'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+    Courier, monospace;
   width: calc(100% + 2rem);
   @include breakpoint('lg') {
     width: calc(67% + 1.15rem);
