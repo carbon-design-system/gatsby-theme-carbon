@@ -47,9 +47,11 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            public
-            .cache
-          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
+            packages/example/public
+            packages/example/.cache
+          key:
+            ${{ runner.os }}-gatsby-build-${{
+            hashFiles('packages/example/public') }}
           restore-keys: |
             ${{ runner.os }}-gatsby-build-
 
@@ -64,7 +66,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./packages/example/public
 
   # Deployment job
   deploy:
