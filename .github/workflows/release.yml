@@ -24,12 +24,87 @@ jobs:
         run:
           echo "User ${{ github.actor }} is authorized to trigger this workflow"
 
-  check-for-new-commits:
+  # For workflow_dispatch events - depends on check-user
+  check-for-new-commits-manual:
     runs-on: ubuntu-latest
-    # For scheduled events, don't depend on check-user
-    # For manual events, depend on check-user
-    # prettier-ignore
-    needs: ${{ github.event_name == 'workflow_dispatch' && fromJSON('["check-user"]') || fromJSON('[]') }}
+    needs: check-user
+    if: github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: read
+      actions: read
+    outputs:
+      has_new_commits: ${{ steps.check-commits.outputs.has_new_commits }}
+    steps:
+      - name: Check for new commits since last successful release
+        id: check-commits
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // Get the current workflow ID
+            const { data: workflows } = await github.rest.actions.listRepoWorkflows({
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            });
+
+            const currentWorkflow = workflows.workflows.find(w => w.name === 'release-it' || w.path.includes('release.yml'));
+            if (!currentWorkflow) {
+              console.log('Could not find the current workflow');
+              core.setOutput('has_new_commits', 'true');
+              return;
+            }
+
+            // Get the last successful run of this workflow
+            const { data: runs } = await github.rest.actions.listWorkflowRuns({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: currentWorkflow.id,
+              status: 'success',
+              branch: 'main',
+              per_page: 1
+            });
+
+            if (runs.total_count === 0) {
+              console.log('No previous successful runs found, proceeding with release');
+              core.setOutput('has_new_commits', 'true');
+              return;
+            }
+
+            const lastSuccessfulRun = runs.workflow_runs[0];
+            const lastSuccessfulCommit = lastSuccessfulRun.head_sha;
+            console.log(`Last successful release commit: ${lastSuccessfulCommit}`);
+
+            // Get the latest commit on main branch
+            const { data: branch } = await github.rest.repos.getBranch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              branch: 'main'
+            });
+
+            const latestCommit = branch.commit.sha;
+            console.log(`Latest commit on main: ${latestCommit}`);
+
+            if (lastSuccessfulCommit === latestCommit) {
+              console.log('No new commits since last successful release, skipping workflow');
+              core.setOutput('has_new_commits', 'false');
+              return;
+            }
+
+            // Compare commits to see if there are any changes
+            const { data: comparison } = await github.rest.repos.compareCommits({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              base: lastSuccessfulCommit,
+              head: latestCommit
+            });
+
+            const hasNewCommits = comparison.total_commits > 0;
+            console.log(`Total new commits since last release: ${comparison.total_commits}`);
+            core.setOutput('has_new_commits', hasNewCommits ? 'true' : 'false');
+
+  # For scheduled events - no dependency
+  check-for-new-commits-scheduled:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
     permissions:
       contents: read
       actions: read
@@ -104,8 +179,12 @@ jobs:
 
   check-validate-status:
     runs-on: ubuntu-latest
-    needs: check-for-new-commits
-    if: needs.check-for-new-commits.outputs.has_new_commits == 'true'
+    needs: [check-for-new-commits-manual, check-for-new-commits-scheduled]
+    if:
+      always() && (needs.check-for-new-commits-manual.result == 'success' &&
+      needs.check-for-new-commits-manual.outputs.has_new_commits == 'true') ||
+      (needs.check-for-new-commits-scheduled.result == 'success' &&
+      needs.check-for-new-commits-scheduled.outputs.has_new_commits == 'true')
     outputs:
       status: ${{ steps.check-validate.outputs.status }}
     steps:
