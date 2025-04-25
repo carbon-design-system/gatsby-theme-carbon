@@ -207,7 +207,7 @@ jobs:
       (needs.check-for-new-commits-scheduled.result == 'success' && 
       needs.check-for-new-commits-scheduled.outputs.has_new_commits == 'true'))
     outputs:
-      status: ${{ steps.check-validate.outputs.status }}
+      status: ${{ steps.check-validate.outcome }}
     steps:
       - name: Check Validate workflow status
         id: check-validate
@@ -245,10 +245,10 @@ jobs:
             const latestRun = runs.workflow_runs[0];
             console.log(`Latest ${workflow_name} run conclusion: ${latestRun.conclusion}`);
 
-            // Set the output directly
-            core.setOutput('status', latestRun.conclusion);
-
-            if (latestRun.conclusion !== 'success') {
+            if (latestRun.conclusion === 'success') {
+              core.setOutput('status', 'success');
+            } else {
+              core.setOutput('status', latestRun.conclusion);
               core.setFailed(`Latest ${workflow_name} run did not succeed. Status: ${latestRun.conclusion}`);
             }
 
@@ -267,7 +267,6 @@ jobs:
           echo "Job result: ${{ job.status }}"
           echo "Step result: ${{ steps.check-validate.outcome }}"
           echo "Status output: ${{ steps.check-validate.outputs.status }}"
-          echo "Raw conclusion: ${{ steps.check-validate.outputs.status }}"
           echo "::endgroup::"
 
   release:
