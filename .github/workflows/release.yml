@@ -199,15 +199,15 @@ jobs:
     runs-on: ubuntu-latest
     needs: [check-for-new-commits-manual, check-for-new-commits-scheduled]
     permissions:
-      actions: read # Required for checking workflow status
-      contents: read # Required for accessing repo content
+      actions: read
+      contents: read
     if: |
       always() && ((needs.check-for-new-commits-manual.result == 'success' && 
       needs.check-for-new-commits-manual.outputs.has_new_commits == 'true') || 
       (needs.check-for-new-commits-scheduled.result == 'success' && 
       needs.check-for-new-commits-scheduled.outputs.has_new_commits == 'true'))
     outputs:
-      status: ${{ steps.check-validate.outcome }}
+      status: success
     steps:
       - name: Check Validate workflow status
         id: check-validate
@@ -245,37 +245,25 @@ jobs:
             const latestRun = runs.workflow_runs[0];
             console.log(`Latest ${workflow_name} run conclusion: ${latestRun.conclusion}`);
 
-            if (latestRun.conclusion === 'success') {
-              core.setOutput('status', 'success');
-            } else {
-              core.setOutput('status', latestRun.conclusion);
+            core.setOutput('validate_status', latestRun.conclusion);
+
+            if (latestRun.conclusion !== 'success') {
               core.setFailed(`Latest ${workflow_name} run did not succeed. Status: ${latestRun.conclusion}`);
             }
-
-      - name: Debug dependencies
-        run: |
-          echo "::group::Debug dependencies"
-          echo "manual commits check result: ${{ needs.check-for-new-commits-manual.result }}"
-          echo "manual commits has_new_commits: ${{ needs.check-for-new-commits-manual.outputs.has_new_commits }}"
-          echo "scheduled commits result: ${{ needs.check-for-new-commits-scheduled.result }}"
-          echo "scheduled commits has_new_commits: ${{ needs.check-for-new-commits-scheduled.outputs.has_new_commits }}"
-          echo "::endgroup::"
 
       - name: Debug output status
         run: |
           echo "::group::Debug check-validate-status outputs"
           echo "Job result: ${{ job.status }}"
           echo "Step result: ${{ steps.check-validate.outcome }}"
-          echo "Status output: ${{ steps.check-validate.outputs.status }}"
+          echo "Status output: ${{ steps.check-validate.outputs.validate_status }}"
+          echo "Job outputs.status: success"
           echo "::endgroup::"
 
   release:
     runs-on: ubuntu-latest
     needs: check-validate-status
-    if: |
-      needs.check-validate-status.result == 'success' && 
-      needs.check-validate-status.outputs.status == 'success'
-    # Needed as recommended by npm docs on publishing with provenance https://docs.npmjs.com/generating-provenance-statements
+    if: ${{ needs.check-validate-status.result == 'success' }}
     permissions:
       id-token: write
       contents: write
@@ -284,10 +272,7 @@ jobs:
         run: |
           echo "::group::Debug release conditions"
           echo "check-validate-status job result: '${{ needs.check-validate-status.result }}'"
-          echo "check-validate-status status output: '${{ needs.check-validate-status.outputs.status }}'"
-          echo "Result comparison: ${{ needs.check-validate-status.result == 'success' }}"
-          echo "Status comparison: ${{ needs.check-validate-status.outputs.status == 'success' }}"
-          echo "Complete condition: ${{ needs.check-validate-status.result == 'success' && needs.check-validate-status.outputs.status == 'success' }}"
+          echo "Job status direct comparison: ${{ needs.check-validate-status.result == 'success' }}"
           echo "::endgroup::"
 
       - uses: actions/checkout@v4
