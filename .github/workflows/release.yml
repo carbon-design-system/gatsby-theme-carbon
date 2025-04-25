@@ -11,9 +11,13 @@ on:
     branches:
       - main
 
+# Set default permissions as restrictive as possible
+permissions: {}
+
 jobs:
   check-user:
     runs-on: ubuntu-latest
+    permissions: {}  # No permissions needed for user check
     # Only run this check for workflow_dispatch events
     if:
       github.event_name == 'workflow_dispatch' &&
@@ -180,6 +184,9 @@ jobs:
   check-validate-status:
     runs-on: ubuntu-latest
     needs: [check-for-new-commits-manual, check-for-new-commits-scheduled]
+    permissions:
+      actions: read    # Required for checking workflow status
+      contents: read   # Required for accessing repo content
     if:
       always() && (needs.check-for-new-commits-manual.result == 'success' &&
       needs.check-for-new-commits-manual.outputs.has_new_commits == 'true') ||

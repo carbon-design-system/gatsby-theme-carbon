@@ -1,9 +1,15 @@
 name: Release
 on: workflow_dispatch
 
+permissions:
+  contents: write # Required for creating releases and git operations
+  id-token: write # Required for NPM provenance
+  packages: write # Required for NPM publishing
+
 jobs:
   check-user:
     runs-on: ubuntu-latest
+    permissions: {} # No permissions needed for user check
     if:
       contains('["alisonjoseph","vpicone", "sstrubberg", "jnm2377", "eng618"]',
       github.actor)
