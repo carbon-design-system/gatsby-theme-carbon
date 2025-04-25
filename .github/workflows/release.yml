@@ -201,11 +201,11 @@ jobs:
     permissions:
       actions: read # Required for checking workflow status
       contents: read # Required for accessing repo content
-    if:
-      always() && (needs.check-for-new-commits-manual.result == 'success' &&
-      needs.check-for-new-commits-manual.outputs.has_new_commits == 'true') ||
-      (needs.check-for-new-commits-scheduled.result == 'success' &&
-      needs.check-for-new-commits-scheduled.outputs.has_new_commits == 'true')
+    if: |
+      always() && ((needs.check-for-new-commits-manual.result == 'success' && 
+      needs.check-for-new-commits-manual.outputs.has_new_commits == 'true') || 
+      (needs.check-for-new-commits-scheduled.result == 'success' && 
+      needs.check-for-new-commits-scheduled.outputs.has_new_commits == 'true'))
     outputs:
       status: ${{ steps.check-validate.outputs.status }}
     steps:
@@ -274,7 +274,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: check-validate-status
     if: |
-      needs.check-validate-status.result == 'success' &&
+      needs.check-validate-status.result == 'success' && 
       needs.check-validate-status.outputs.status == 'success'
     # Needed as recommended by npm docs on publishing with provenance https://docs.npmjs.com/generating-provenance-statements
     permissions:
@@ -284,9 +284,11 @@ jobs:
       - name: Debug Conditions
         run: |
           echo "::group::Debug release conditions"
-          echo "check-validate-status job result: ${{ needs.check-validate-status.result }}"
-          echo "check-validate-status job status: ${{ needs.check-validate-status.outputs.status }}"
-          echo "Direct check-validate step status: ${{ needs.check-validate-status.outputs['check-validate'].outputs.status }}"
+          echo "check-validate-status job result: '${{ needs.check-validate-status.result }}'"
+          echo "check-validate-status status output: '${{ needs.check-validate-status.outputs.status }}'"
+          echo "Result comparison: ${{ needs.check-validate-status.result == 'success' }}"
+          echo "Status comparison: ${{ needs.check-validate-status.outputs.status == 'success' }}"
+          echo "Complete condition: ${{ needs.check-validate-status.result == 'success' && needs.check-validate-status.outputs.status == 'success' }}"
           echo "::endgroup::"
 
       - uses: actions/checkout@v4
