@@ -5,6 +5,7 @@ module.exports = {
     description: 'A Gatsby theme for the carbon design system',
     keywords: 'gatsby,theme,carbon',
   },
+  pathPrefix: `/gatsby-theme-carbon`,
   plugins: [
     {
       resolve: 'gatsby-plugin-manifest',
