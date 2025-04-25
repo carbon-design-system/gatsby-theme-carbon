@@ -1,5 +1,18 @@
 # Changelog
 
+## [4.3.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.2.21...v4.3.0) (2025-04-25)
+
+
+### Features
+
+* **gh-pages:** add GitHub Actions workflow for deploying Gatsby site to GitHub Pages ([#1591](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1591)) ([85fd2e9](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/85fd2e98a4988bdf86c98e1c6d85ac14d6260eb0))
+* **release:** batch release of all packages weekly ([#1590](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1590)) ([9e58dd8](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9e58dd808f744d86cc6df242885f1bc7a132415d))
+
+
+### Bug Fixes
+
+* remove unused prefix ([d68c65b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/d68c65ba7420ce3340cc371106f59029c1fae545))
+
 ## [4.2.21](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.2.20...v4.2.21) (2025-04-24)
 
 ## [4.2.20](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.2.19...v4.2.20) (2025-04-24)
