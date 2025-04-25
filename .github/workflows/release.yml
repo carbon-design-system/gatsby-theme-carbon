@@ -244,6 +244,11 @@ jobs:
       id-token: write
       contents: write
     steps:
+      - name: Debug Conditions
+        run: |
+          echo "check-validate-status.result: ${{ needs.check-validate-status.result }}"
+          echo "check-validate-status.outputs.status: ${{ needs.check-validate-status.outputs.status }}"
+
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
