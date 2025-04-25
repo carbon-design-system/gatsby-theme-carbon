@@ -35,75 +35,42 @@ jobs:
     if: github.event_name == 'workflow_dispatch'
     permissions:
       contents: read
-      actions: read
     outputs:
       has_new_commits: ${{ steps.check-commits.outputs.has_new_commits }}
     steps:
-      - name: Check for new commits since last successful release
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check for untagged commits
         id: check-commits
         uses: actions/github-script@v7
         with:
           script: |
-            // Get the current workflow ID
-            const { data: workflows } = await github.rest.actions.listRepoWorkflows({
-              owner: context.repo.owner,
-              repo: context.repo.repo
-            });
+            const { execSync } = require('child_process');
 
-            const currentWorkflow = workflows.workflows.find(w => w.name === 'release-it' || w.path.includes('release.yml'));
-            if (!currentWorkflow) {
-              console.log('Could not find the current workflow');
+            try {
+              // Get the latest commit hash
+              const latestCommit = execSync('git rev-parse HEAD').toString().trim();
+              console.log(`Latest commit: ${latestCommit}`);
+              
+              // Get the most recent tag
+              const latestTag = execSync('git describe --tags --abbrev=0').toString().trim();
+              console.log(`Latest tag: ${latestTag}`);
+              
+              // Get the commit hash of the latest tag
+              const taggedCommit = execSync(`git rev-list -n 1 ${latestTag}`).toString().trim();
+              console.log(`Tagged commit: ${taggedCommit}`);
+              
+              // Check if latest commit is different from the tagged commit
+              const hasNewCommits = latestCommit !== taggedCommit;
+              console.log(`Has new commits since last tag: ${hasNewCommits}`);
+              
+              core.setOutput('has_new_commits', hasNewCommits ? 'true' : 'false');
+            } catch (error) {
+              console.log('Error checking tags, assuming new commits needed:', error.message);
               core.setOutput('has_new_commits', 'true');
-              return;
             }
-
-            // Get the last successful run of this workflow
-            const { data: runs } = await github.rest.actions.listWorkflowRuns({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: currentWorkflow.id,
-              status: 'success',
-              branch: 'main',
-              per_page: 1
-            });
-
-            if (runs.total_count === 0) {
-              console.log('No previous successful runs found, proceeding with release');
-              core.setOutput('has_new_commits', 'true');
-              return;
-            }
-
-            const lastSuccessfulRun = runs.workflow_runs[0];
-            const lastSuccessfulCommit = lastSuccessfulRun.head_sha;
-            console.log(`Last successful release commit: ${lastSuccessfulCommit}`);
-
-            // Get the latest commit on main branch
-            const { data: branch } = await github.rest.repos.getBranch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              branch: 'main'
-            });
-
-            const latestCommit = branch.commit.sha;
-            console.log(`Latest commit on main: ${latestCommit}`);
-
-            if (lastSuccessfulCommit === latestCommit) {
-              console.log('No new commits since last successful release, skipping workflow');
-              core.setOutput('has_new_commits', 'false');
-              return;
-            }
-
-            // Compare commits to see if there are any changes
-            const { data: comparison } = await github.rest.repos.compareCommits({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              base: lastSuccessfulCommit,
-              head: latestCommit
-            });
-
-            const hasNewCommits = comparison.total_commits > 0;
-            console.log(`Total new commits since last release: ${comparison.total_commits}`);
-            core.setOutput('has_new_commits', hasNewCommits ? 'true' : 'false');
 
       - name: Debug commits check
         run: |
