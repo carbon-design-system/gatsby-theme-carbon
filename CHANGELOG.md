@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.3.1](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.0...v4.3.1) (2025-04-28)
+
+
+### Bug Fixes
+
+* add pathPrefix to gatsby-config ([d604cd9](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/d604cd903b58d1066f84a0835c70bf46777b7cb1))
+* update lock ([2c6d7e6](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/2c6d7e6a12d6c45be5b31532cda741a35d0e6e79))
+
 ## [4.3.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.2.21...v4.3.0) (2025-04-25)
 
 
