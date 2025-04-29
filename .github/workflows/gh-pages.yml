@@ -59,9 +59,10 @@ jobs:
         run: yarn install
 
       - name: Build with Gatsby
-        env:
-          PREFIX_PATHS: 'true'
         run: yarn build
+
+      - name: Copy page images and content into public
+        run: cp -r packages/example/src/pages/* packages/example/public/
 
       - name: Add CNAME record
         run:
