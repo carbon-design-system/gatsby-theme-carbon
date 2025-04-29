@@ -63,6 +63,10 @@ jobs:
           PREFIX_PATHS: 'true'
         run: yarn build
 
+      - name: Add CNAME record
+        run:
+          echo 'gatsby.carbondesignsystem.com' > ./packages/example/public/CNAME
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
