@@ -59,7 +59,7 @@ jobs:
         run: yarn install
 
       - name: Build with Gatsby
-        run: yarn build
+        run: yarn build:clean
 
       - name: Add CNAME record
         run:
