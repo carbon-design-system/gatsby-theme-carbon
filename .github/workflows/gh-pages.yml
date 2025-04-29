@@ -61,9 +61,6 @@ jobs:
       - name: Build with Gatsby
         run: yarn build
 
-      - name: Copy page images and content into public
-        run: cp -r packages/example/src/pages/* packages/example/public/
-
       - name: Add CNAME record
         run:
           echo 'gatsby.carbondesignsystem.com' > ./packages/example/public/CNAME
