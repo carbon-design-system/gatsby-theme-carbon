@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-carbon-workspace",
   "private": true,
-  "version": "4.3.5",
+  "version": "4.3.6",
   "packageManager": "yarn@4.6.0",
   "repository": {
     "url": "git@github.com:carbon-design-system/gatsby-theme-carbon.git",
