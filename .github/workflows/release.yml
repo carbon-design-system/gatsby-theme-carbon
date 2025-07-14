@@ -21,7 +21,7 @@ jobs:
     # Only run this check for workflow_dispatch events
     if:
       github.event_name == 'workflow_dispatch' &&
-      contains('["alisonjoseph","vpicone", "sstrubberg", "jnm2377", "eng618"]',
+      contains('["alisonjoseph","vpicone", "sstrubberg", "tay1orjones", "eng618"]',
       github.actor)
     steps:
       - name: User validation
