@@ -5211,12 +5211,12 @@ __metadata:
   linkType: hard
 
 "@vimeo/player@npm:^2.26.0":
-  version: 2.26.0
-  resolution: "@vimeo/player@npm:2.26.0"
+  version: 2.29.1
+  resolution: "@vimeo/player@npm:2.29.1"
   dependencies:
     native-promise-only: "npm:0.8.1"
     weakmap-polyfill: "npm:2.0.4"
-  checksum: 10/5969b21f23b727aa73e3fef17b9ce96cc8d148547a63803b43165aaec05341e59a03c844af487b5ea9e54da198fc75bc5b8abc205cf0bfdb0f8bfb294e275792
+  checksum: 10/a101e8ceda174ecf7554592fbfb5d5551f971614b33880658d967f0d32d9d51f4ffd6be025531e42c0e787413ed24e4083d5adcb63f10b58e9853658adf6b978
   languageName: node
   linkType: hard
 
@@ -10455,7 +10455,7 @@ __metadata:
   dependencies:
     "@carbon/icons-react": "npm:^11.59.0"
     gatsby: "npm:^5.14.3"
-    gatsby-theme-carbon: "npm:^4.3.9"
+    gatsby-theme-carbon: "npm:^4.3.10"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
   languageName: unknown
@@ -11794,7 +11794,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@npm:^4.3.9, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@npm:^4.3.10, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
