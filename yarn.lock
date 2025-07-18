@@ -6691,7 +6691,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"busboy@npm:^1.0.0":
+"busboy@npm:^1.6.0":
   version: 1.6.0
   resolution: "busboy@npm:1.6.0"
   dependencies:
@@ -7596,18 +7596,6 @@ __metadata:
   version: 0.0.1
   resolution: "concat-map@npm:0.0.1"
   checksum: 10/9680699c8e2b3af0ae22592cb764acaf973f292a7b71b8a06720233011853a58e256c89216a10cbe889727532fd77f8bcd49a760cedfde271b8e006c20e079f2
-  languageName: node
-  linkType: hard
-
-"concat-stream@npm:^1.5.2":
-  version: 1.6.2
-  resolution: "concat-stream@npm:1.6.2"
-  dependencies:
-    buffer-from: "npm:^1.0.0"
-    inherits: "npm:^2.0.3"
-    readable-stream: "npm:^2.2.2"
-    typedarray: "npm:^0.0.6"
-  checksum: 10/71db903c84fc073ca35a274074e8d26c4330713d299f8623e993c448c1f6bf8b967806dd1d1a7b0f8add6f15ab1af7435df21fe79b4fe7efd78420c89e054e28
   languageName: node
   linkType: hard
 
@@ -10455,7 +10443,7 @@ __metadata:
   dependencies:
     "@carbon/icons-react": "npm:^11.59.0"
     gatsby: "npm:^5.14.3"
-    gatsby-theme-carbon: "npm:^4.3.9"
+    gatsby-theme-carbon: "npm:^4.3.10"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
   languageName: unknown
@@ -11794,7 +11782,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@npm:^4.3.9, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@npm:^4.3.10, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
@@ -11882,8 +11870,8 @@ __metadata:
   linkType: hard
 
 "gatsby@npm:^5.14.3":
-  version: 5.14.3
-  resolution: "gatsby@npm:5.14.3"
+  version: 5.14.5
+  resolution: "gatsby@npm:5.14.5"
   dependencies:
     "@babel/code-frame": "npm:^7.18.6"
     "@babel/core": "npm:^7.20.12"
@@ -12004,7 +11992,7 @@ __metadata:
     mini-css-extract-plugin: "npm:1.6.2"
     mitt: "npm:^1.2.0"
     moment: "npm:^2.29.4"
-    multer: "npm:^1.4.5-lts.1"
+    multer: "npm:^2.0.1"
     node-fetch: "npm:^2.6.11"
     node-html-parser: "npm:^5.4.2"
     normalize-path: "npm:^3.0.0"
@@ -12060,7 +12048,7 @@ __metadata:
       optional: true
   bin:
     gatsby: ./cli.js
-  checksum: 10/070f2cba4add914f125684ffdbd18d73d1d0c6707c500e2fb80d6eeeca53aa3f0caf7e12e1d5cdeb96894d4770f724d1d58db983a2561811400414d438b63588
+  checksum: 10/8261295d2f732a27d6b7555c02544a33f76eb039cf176e288401cf642b66ba41b038429d4789a9ecdbc0c5a6d2fbc4f63342ea9756e1cd112c81897c1618329b
   languageName: node
   linkType: hard
 
@@ -17307,7 +17295,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mkdirp@npm:^0.5.1, mkdirp@npm:^0.5.4":
+"mkdirp@npm:^0.5.1, mkdirp@npm:^0.5.6":
   version: 0.5.6
   resolution: "mkdirp@npm:0.5.6"
   dependencies:
@@ -17414,18 +17402,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"multer@npm:^1.4.5-lts.1":
-  version: 1.4.5-lts.2
-  resolution: "multer@npm:1.4.5-lts.2"
+"multer@npm:^2.0.1":
+  version: 2.0.2
+  resolution: "multer@npm:2.0.2"
   dependencies:
     append-field: "npm:^1.0.0"
-    busboy: "npm:^1.0.0"
-    concat-stream: "npm:^1.5.2"
-    mkdirp: "npm:^0.5.4"
+    busboy: "npm:^1.6.0"
+    concat-stream: "npm:^2.0.0"
+    mkdirp: "npm:^0.5.6"
     object-assign: "npm:^4.1.1"
-    type-is: "npm:^1.6.4"
-    xtend: "npm:^4.0.0"
-  checksum: 10/9aa3ebc765954409e0adbb751ea7154a19ce1404e3b65091621685402c724b286552c89d7305facd3778eea73bff283f353a3beb036c094ed4e52c2cd726610f
+    type-is: "npm:^1.6.18"
+    xtend: "npm:^4.0.2"
+  checksum: 10/4bdcb07138cf72f93adc08a0dc27c058faab9f6721067a58f394fa546d73d11b7f100cdd66e733d649d184f9d1b402065f6888b31ec427409f056ee92c4367a6
   languageName: node
   linkType: hard
 
@@ -20268,7 +20256,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:^2.2.2, readable-stream@npm:~2.3.6":
+"readable-stream@npm:~2.3.6":
   version: 2.3.8
   resolution: "readable-stream@npm:2.3.8"
   dependencies:
@@ -23305,7 +23293,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-is@npm:^1.6.4, type-is@npm:~1.6.18":
+"type-is@npm:^1.6.18, type-is@npm:~1.6.18":
   version: 1.6.18
   resolution: "type-is@npm:1.6.18"
   dependencies:
@@ -25017,7 +25005,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xtend@npm:^4.0.0, xtend@npm:~4.0.1":
+"xtend@npm:^4.0.0, xtend@npm:^4.0.2, xtend@npm:~4.0.1":
   version: 4.0.2
   resolution: "xtend@npm:4.0.2"
   checksum: 10/ac5dfa738b21f6e7f0dd6e65e1b3155036d68104e67e5d5d1bde74892e327d7e5636a076f625599dc394330a731861e87343ff184b0047fef1360a7ec0a5a36a
