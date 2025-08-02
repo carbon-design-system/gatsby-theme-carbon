@@ -11952,7 +11952,7 @@ __metadata:
     lerna: "npm:^8.2.4"
     lint-staged: "npm:^16.1.2"
     prettier: "npm:^3.6.2"
-    prettier-config-carbon: "npm:^0.11.0"
+    prettier-config-carbon: "npm:^0.12.0"
     release-it: "npm:^17.11.0"
     stylelint: "npm:^16.23.0"
     stylelint-config-recommended-scss: "npm:^14.1.0"
@@ -19756,12 +19756,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-config-carbon@npm:^0.11.0":
-  version: 0.11.0
-  resolution: "prettier-config-carbon@npm:0.11.0"
+"prettier-config-carbon@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "prettier-config-carbon@npm:0.12.0"
   peerDependencies:
-    prettier: 2.x
-  checksum: 10/3f29bdd7d6ac5a006649737bc7574d43a3d734737f5dcecb2fa130d747ae79eb13f1b2bfc649750de4b4c9163cbdba5c6baae9a311aa1d51586b442cd9736d34
+    prettier: 3.x
+  checksum: 10/77e1029086103a5dcb30493654e6233fa95242bcc00f41b68e792a61458b507867a05e4bd27059d5c6b5759d599a6a2a036fe5b08fa45732f0b39f7e6467798a
   languageName: node
   linkType: hard
 
