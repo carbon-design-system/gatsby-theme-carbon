@@ -38,7 +38,7 @@ jobs:
     outputs:
       has_new_commits: ${{ steps.check-commits.outputs.has_new_commits }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -88,7 +88,7 @@ jobs:
     outputs:
       has_new_commits: ${{ steps.check-commits.outputs.has_new_commits }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -208,7 +208,7 @@ jobs:
           echo "check-validate-status result: '${{ needs.check-validate-status.result }}'"
           echo "::endgroup::"
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
