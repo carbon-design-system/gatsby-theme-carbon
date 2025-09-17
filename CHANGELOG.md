@@ -1,5 +1,18 @@
 # Changelog
 
+## [4.3.14](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.13...v4.3.14) (2025-09-10)
+
+## [4.3.13](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.12...v4.3.13) (2025-09-01)
+
+## [4.3.12](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.11...v4.3.12) (2025-08-25)
+
+## [4.3.11](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.10...v4.3.11) (2025-08-04)
+
+
+### Bug Fixes
+
+* lock file ([995548a](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/995548aab98cfe7859f7c293b10b752d2a91c5d3))
+
 ## [4.3.10](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.9...v4.3.10) (2025-07-18)
 
 ## [4.3.9](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.8...v4.3.9) (2025-07-14)
