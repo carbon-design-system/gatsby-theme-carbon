@@ -44,7 +44,7 @@ jobs:
 
       - name: Check for untagged commits
         id: check-commits
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const { execSync } = require('child_process');
@@ -94,7 +94,7 @@ jobs:
 
       - name: Check for untagged commits
         id: check-commits
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const { execSync } = require('child_process');
@@ -145,7 +145,7 @@ jobs:
     steps:
       - name: Check Validate workflow status
         id: check-validate
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const workflow_name = 'Validate';
