@@ -15,15 +15,14 @@ jobs:
       github.actor)
     steps:
       - name: User validation
-        run:
-          echo "User ${{ github.actor }} is authorized to trigger this workflow"
+        run: echo "User ${{ github.actor }} is authorized to trigger this workflow"
 
   release:
     needs: check-user
     runs-on: ubuntu-latest
     steps:
       # fetch-depth: 0 ensures we get commit messages for changelog/versioning
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 

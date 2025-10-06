@@ -29,12 +29,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node
         uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'yarn'
 
       - name: Setup Pages
@@ -49,8 +49,7 @@ jobs:
           path: |
             packages/example/public
             packages/example/.cache
-          key:
-            ${{ runner.os }}-gatsby-build-${{
+          key: ${{ runner.os }}-gatsby-build-${{
             hashFiles('packages/example/public') }}
           restore-keys: |
             ${{ runner.os }}-gatsby-build-
@@ -62,8 +61,7 @@ jobs:
         run: yarn build:clean
 
       - name: Add CNAME record
-        run:
-          echo 'gatsby.carbondesignsystem.com' > ./packages/example/public/CNAME
+        run: echo 'gatsby.carbondesignsystem.com' > ./packages/example/public/CNAME
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

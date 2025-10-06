@@ -6,10 +6,8 @@ on:
     - cron: '0 1 * * 1'
   workflow_dispatch:
     # Enable manual triggering from the GitHub UI
-    inputs:
+    inputs: {}
       # No inputs needed, but we need to specify the branches filter
-    branches:
-      - main
 
 # Set default permissions as restrictive as possible
 permissions: {}
@@ -19,14 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     permissions: {} # No permissions needed for user check
     # Only run this check for workflow_dispatch events
-    if:
-      github.event_name == 'workflow_dispatch' &&
+    if: github.event_name == 'workflow_dispatch' &&
       contains('["alisonjoseph","vpicone", "sstrubberg", "tay1orjones", "eng618"]',
       github.actor)
     steps:
       - name: User validation
-        run:
-          echo "User ${{ github.actor }} is authorized to trigger this workflow"
+        run: echo "User ${{ github.actor }} is authorized to trigger this workflow"
 
   # For workflow_dispatch events - depends on check-user
   check-for-new-commits-manual:
@@ -38,7 +34,7 @@ jobs:
     outputs:
       has_new_commits: ${{ steps.check-commits.outputs.has_new_commits }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -88,7 +84,7 @@ jobs:
     outputs:
       has_new_commits: ${{ steps.check-commits.outputs.has_new_commits }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -208,14 +204,14 @@ jobs:
           echo "check-validate-status result: '${{ needs.check-validate-status.result }}'"
           echo "::endgroup::"
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
       - name: Set up node
         uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'yarn'
           registry-url: https://registry.npmjs.org
 
@@ -247,3 +243,34 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  update-lockfile:
+    runs-on: ubuntu-latest
+    needs: release
+    if: needs.release.result == 'success'
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'yarn'
+
+      - name: Initialize Git user
+        run: |
+          git config --global user.name "Eric N. Garcia"
+          git config --global user.email "eng618@garciaericn.com"
+
+      - name: Update lockfile
+        run: yarn install
+
+      - name: Commit and push lockfile
+        run: |
+          git add yarn.lock
+          git commit -m "chore: update yarn.lock" || echo "No changes to commit"
+          git push origin main
