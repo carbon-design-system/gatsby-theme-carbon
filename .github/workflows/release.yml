@@ -18,7 +18,7 @@ jobs:
     permissions: {} # No permissions needed for user check
     # Only run this check for workflow_dispatch events
     if: github.event_name == 'workflow_dispatch' &&
-      contains('["alisonjoseph","vpicone", "sstrubberg", "tay1orjones", "eng618"]',
+      contains('["alisonjoseph", "kennylam", "sstrubberg", "tay1orjones", "eng618", "emyarod", "ariellalgilmore" , "riddhybansal" , "annawen1" , "2nikhiltom" , "heloiselui" , "Gururajj77" , "maradwan26" , "sunny-kukkar-ibm" ]',
       github.actor)
     steps:
       - name: User validation
