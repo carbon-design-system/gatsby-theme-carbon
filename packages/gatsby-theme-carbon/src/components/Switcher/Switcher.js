@@ -57,9 +57,6 @@ const DefaultChildren = () => (
     <SwitcherLink href="https://w3.ibm.com/design/" isInternal>
       IBM Design
     </SwitcherLink>
-    <SwitcherLink href="https://www.ibm.com/design/racial-equity-in-design">
-      Racial Equity in Design
-    </SwitcherLink>
   </>
 );
 
