@@ -1,5 +1,13 @@
 # Changelog
 
+## <small>4.3.20 (2025-11-13)</small>
+
+* build(deps): bump @release-it/conventional-changelog (#1621) ([5eb4a26](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/5eb4a26)), closes [#1621](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1621)
+* build(deps): bump actions/setup-node from 4 to 6 (#1643) ([7d90b3c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/7d90b3c)), closes [#1643](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1643)
+* build(deps): bump stylelint from 16.23.0 to 16.25.0 (#1644) ([9a4386b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9a4386b)), closes [#1644](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1644)
+* Remove Racial Equity in Design link from Switcher (#1646) ([6d0f273](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/6d0f273)), closes [#1646](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1646)
+* chore(release): update carbon deps (#1645) ([0075f0b](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0075f0b)), closes [#1645](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1645)
+
 ## [4.3.19](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.18...v4.3.19) (2025-10-22)
 
 ## [4.3.18](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.17...v4.3.18) (2025-10-13)
