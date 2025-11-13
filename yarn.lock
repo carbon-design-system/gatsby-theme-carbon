@@ -1826,7 +1826,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/feature-flags@npm:^0.32.0":
+"@carbon/feature-flags@npm:0.32.0":
   version: 0.32.0
   resolution: "@carbon/feature-flags@npm:0.32.0"
   dependencies:
@@ -1929,15 +1929,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/react@npm:^1.94.0":
-  version: 1.94.0
-  resolution: "@carbon/react@npm:1.94.0"
+"@carbon/react@npm:^1.95.0":
+  version: 1.95.0
+  resolution: "@carbon/react@npm:1.95.0"
   dependencies:
     "@babel/runtime": "npm:^7.27.3"
-    "@carbon/feature-flags": "npm:^0.32.0"
+    "@carbon/feature-flags": "npm:0.32.0"
     "@carbon/icons-react": "npm:^11.70.0"
     "@carbon/layout": "npm:^11.43.0"
-    "@carbon/styles": "npm:^1.93.0"
+    "@carbon/styles": "npm:^1.94.0"
     "@carbon/utilities": "npm:^0.12.0"
     "@floating-ui/react": "npm:^0.27.4"
     "@ibm/telemetry-js": "npm:^1.5.0"
@@ -1956,16 +1956,16 @@ __metadata:
     react-dom: ^16.8.6 || ^17.0.1 || ^18.2.0 || ^19.0.0
     react-is: ^16.13.1 || ^17.0.2 || ^18.3.1 || ^19.0.0
     sass: ^1.33.0
-  checksum: 10/18ed1097631bc8ed95951d6327118a0cab2f8ae0e92dc1b473501b1b503e50d6e0e924ffed0472a884980266f56a033aa470103d25da9ddd94594ed64b25c111
+  checksum: 10/564b468c8f7f668bc6fb4fe9a66c4832b50cd166c4e17609dfb9763f916804a49cbffa95a1a3f9fe1d3647ff47cd3b0b8686ef3a13c5535c8ba55c0cd3e6acec
   languageName: node
   linkType: hard
 
-"@carbon/styles@npm:^1.93.0":
-  version: 1.93.0
-  resolution: "@carbon/styles@npm:1.93.0"
+"@carbon/styles@npm:^1.94.0":
+  version: 1.94.0
+  resolution: "@carbon/styles@npm:1.94.0"
   dependencies:
     "@carbon/colors": "npm:^11.42.0"
-    "@carbon/feature-flags": "npm:^0.32.0"
+    "@carbon/feature-flags": "npm:0.32.0"
     "@carbon/grid": "npm:^11.45.0"
     "@carbon/layout": "npm:^11.43.0"
     "@carbon/motion": "npm:^11.37.0"
@@ -1986,7 +1986,7 @@ __metadata:
   peerDependenciesMeta:
     sass:
       optional: true
-  checksum: 10/6caf24c2adb852b2287959378b679eb9b7b94ab42888f1f1f00251a9ba65253a0901a8071f02bccda43186feab99c29ad0cb69be9a0712fc6514fe22e291cb1e
+  checksum: 10/df1822fc55742e6934d3d8d2449927e246c7f41f772fc1dfe1f6d3ffa085b9bb063033640d57ee1d161b3091ddb98bbd248f712228c852189777a503e88e1d04
   languageName: node
   linkType: hard
 
@@ -10923,7 +10923,7 @@ __metadata:
   dependencies:
     "@carbon/icons-react": "npm:^11.64.0"
     gatsby: "npm:^5.14.5"
-    gatsby-theme-carbon: "npm:^4.3.18"
+    gatsby-theme-carbon: "npm:^4.3.19"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
   languageName: unknown
@@ -12362,7 +12362,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@npm:^4.3.18, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@npm:^4.3.19, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
@@ -12372,7 +12372,7 @@ __metadata:
     "@carbon/elements": "npm:^11.78.0"
     "@carbon/grid": "npm:^11.45.0"
     "@carbon/pictograms-react": "npm:^11.89.0"
-    "@carbon/react": "npm:^1.94.0"
+    "@carbon/react": "npm:^1.95.0"
     "@carbon/themes": "npm:^11.62.0"
     "@garcia-enterprise/gatsby-plugin-sass-resources": "npm:^4.0.2"
     "@mdx-js/mdx": "npm:^3.1.0"
