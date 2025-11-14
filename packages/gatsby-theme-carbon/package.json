@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-carbon",
-  "version": "4.3.19",
+  "version": "4.3.20",
   "main": "index.js",
   "author": "vpicone <vp@vincepic.one> (@vpicone)",
   "repository": {
@@ -29,7 +29,7 @@
     "@carbon/elements": "^11.78.0",
     "@carbon/grid": "^11.45.0",
     "@carbon/pictograms-react": "^11.89.0",
-    "@carbon/react": "^1.94.0",
+    "@carbon/react": "^1.95.0",
     "@carbon/themes": "^11.62.0",
     "@garcia-enterprise/gatsby-plugin-sass-resources": "^4.0.2",
     "@mdx-js/mdx": "^3.1.0",
