@@ -4957,20 +4957,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@release-it-plugins/workspaces@npm:^4.2.1":
-  version: 4.2.1
-  resolution: "@release-it-plugins/workspaces@npm:4.2.1"
+"@release-it-plugins/workspaces@npm:^5.0.3":
+  version: 5.0.3
+  resolution: "@release-it-plugins/workspaces@npm:5.0.3"
   dependencies:
-    detect-indent: "npm:^6.0.0"
+    detect-indent: "npm:^6.1.0"
     detect-newline: "npm:^3.1.0"
-    semver: "npm:^7.1.3"
+    execa: "npm:^8.0.1"
+    semver: "npm:^7.7.2"
     url-join: "npm:^4.0.1"
-    validate-peer-dependencies: "npm:^1.0.0"
-    walk-sync: "npm:^2.0.2"
-    yaml: "npm:^2.1.1"
+    validate-peer-dependencies: "npm:^1.2.0"
+    walk-sync: "npm:^2.2.0"
+    yaml: "npm:^2.8.0"
   peerDependencies:
-    release-it: ^14.0.0 || ^15.2.0 || ^16.0.0 || ^17.0.0
-  checksum: 10/e1332d596cafa8e761a3349b076659f5caca82f018a176fc60dfb2c17203cabb3ca83ca72426e055c6e89f3a25b1d6c02050a76ae490aaaca9db45e18458012a
+    release-it: ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10/0ed4139845af4ec585613ded98ecd779e5f271584278e09a6962770d97f1abe1c4d7425fd94240ba3baba70935cde51408bad4bbce7c59bbaf32897208a3c39d
   languageName: node
   linkType: hard
 
@@ -9367,7 +9368,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"detect-indent@npm:^6.0.0":
+"detect-indent@npm:^6.1.0":
   version: 6.1.0
   resolution: "detect-indent@npm:6.1.0"
   checksum: 10/ab953a73c72dbd4e8fc68e4ed4bfd92c97eb6c43734af3900add963fd3a9316f3bc0578b018b24198d4c31a358571eff5f0656e81a1f3b9ad5c547d58b2d093d
@@ -10999,7 +11000,7 @@ __metadata:
   dependencies:
     "@carbon/icons-react": "npm:^11.64.0"
     gatsby: "npm:^5.14.5"
-    gatsby-theme-carbon: "npm:^4.3.19"
+    gatsby-theme-carbon: "npm:^4.3.20"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
   languageName: unknown
@@ -12413,7 +12414,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^18.6.3"
     "@eslint/compat": "npm:^1.3.1"
     "@eslint/js": "npm:^9.32.0"
-    "@release-it-plugins/workspaces": "npm:^4.2.1"
+    "@release-it-plugins/workspaces": "npm:^5.0.3"
     "@release-it/conventional-changelog": "npm:^10.0.1"
     eslint: "npm:^9.32.0"
     eslint-config-prettier: "npm:^10.1.8"
@@ -12435,7 +12436,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@npm:^4.3.19, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@npm:^4.3.20, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:
@@ -22082,7 +22083,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:7.6.3, semver@npm:^7.0.0, semver@npm:^7.1.1, semver@npm:^7.1.3, semver@npm:^7.2.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.7, semver@npm:^7.5.2, semver@npm:^7.5.3, semver@npm:^7.5.4, semver@npm:^7.6.0, semver@npm:^7.6.3":
+"semver@npm:7.6.3, semver@npm:^7.0.0, semver@npm:^7.1.1, semver@npm:^7.2.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.7, semver@npm:^7.5.2, semver@npm:^7.5.3, semver@npm:^7.5.4, semver@npm:^7.6.0, semver@npm:^7.6.3":
   version: 7.6.3
   resolution: "semver@npm:7.6.3"
   bin:
@@ -24870,7 +24871,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"validate-peer-dependencies@npm:^1.0.0":
+"validate-peer-dependencies@npm:^1.2.0":
   version: 1.2.0
   resolution: "validate-peer-dependencies@npm:1.2.0"
   dependencies:
@@ -24958,7 +24959,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"walk-sync@npm:^2.0.2":
+"walk-sync@npm:^2.2.0":
   version: 2.2.0
   resolution: "walk-sync@npm:2.2.0"
   dependencies:
@@ -25808,7 +25809,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:^2.0.0, yaml@npm:^2.1.1, yaml@npm:^2.6.0":
+"yaml@npm:^2.0.0, yaml@npm:^2.6.0":
   version: 2.6.1
   resolution: "yaml@npm:2.6.1"
   bin:
