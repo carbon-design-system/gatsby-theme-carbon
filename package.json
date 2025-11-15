@@ -53,7 +53,12 @@
     },
     "git": {
       "pushRepo": "git@github.com:carbon-design-system/gatsby-theme-carbon.git",
-      "commitMessage": "chore: release ${version} [skip ci],"
+      "commitMessage": "chore: release ${version} [skip ci]",
+      "addUntrackedFiles": true
+    },
+    "hooks": {
+      "after:bump": "yarn install && git add yarn.lock",
+      "before:release": "git add yarn.lock"
     },
     "npm": false
   },

@@ -244,33 +244,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-  update-lockfile:
-    runs-on: ubuntu-latest
-    needs: release
-    if: needs.release.result == 'success'
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Set up node
-        uses: actions/setup-node@v6
-        with:
-          node-version: '22'
-          cache: 'yarn'
-
-      - name: Initialize Git user
-        run: |
-          git config --global user.name "Eric N. Garcia"
-          git config --global user.email "eng618@garciaericn.com"
-
-      - name: Update lockfile
-        run: yarn install
-
-      - name: Commit and push lockfile
-        run: |
-          git add yarn.lock
-          git commit -m "chore: update yarn.lock" || echo "No changes to commit"
-          git push origin main
+    # Lockfile is now updated as part of the release commit via release-it hooks
