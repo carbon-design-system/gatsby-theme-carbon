@@ -12034,14 +12034,14 @@ __metadata:
   linkType: hard
 
 "gatsby-plugin-catch-links@npm:^5.14.0":
-  version: 5.14.0
-  resolution: "gatsby-plugin-catch-links@npm:5.14.0"
+  version: 5.15.0
+  resolution: "gatsby-plugin-catch-links@npm:5.15.0"
   dependencies:
     "@babel/runtime": "npm:^7.20.13"
     escape-string-regexp: "npm:^1.0.5"
   peerDependencies:
     gatsby: ^5.0.0-next
-  checksum: 10/75112511c0354a05eb36c5d35cc1d66cfb1d71844d703e102957e57fe260ea7597d9ae2580c5eddb1be30d1cd2e0631c0eb63dc0acbd0b1c6cdf4e6f7eb809e5
+  checksum: 10/1159cc5bb1684f7073d92e019cea5ca616474f32bf357d0acf833c0855924007842ac9554bccb7578ce795ecc7fd4ee2c3676331078138007e3c34b7bb599328
   languageName: node
   linkType: hard
 
