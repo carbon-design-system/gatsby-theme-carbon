@@ -17,9 +17,12 @@ on releasing the patch for the reasons mentioned above.
 ## How to publish a new theme version
 
 We publish to npm, create a GitHub release, and generate changelogs by using
-[release-it](https://www.npmjs.com/package/release-it). To practice, use
+[release-it](https://www.npmjs.com/package/release-it) with the workspaces plugin,
+which handles versioning and publishing for the monorepo. To practice, use
 `yarn release:dry` in step 2. This will take you through the whole process, but
 not actually do anything.
+
+For prereleases (e.g., betas), use `yarn release:pre`.
 
 1. Grab the latest changes. On the `main` branch, run
    `git pull upstream main --tags`

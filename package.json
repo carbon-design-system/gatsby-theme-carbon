@@ -70,7 +70,7 @@
   ],
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint --edit $HUSKY_GIT_PARAMS",
+      "commit-msg": "commitlint --edit $1",
       "pre-commit": "lint-staged"
     }
   },

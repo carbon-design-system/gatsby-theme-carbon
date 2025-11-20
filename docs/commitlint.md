@@ -61,6 +61,8 @@ fix(aside): remove aside margin
 
 #### Fixing the PR
 
+Commitlint is automatically enforced via husky hooks on commit. If a commit fails, amend it:
+
 1. On the command line, navigate to the repository that contains the commit you
    want to amend
 2. Type `git commit --amend -m "type: subject"` replacing the message with your
@@ -70,3 +72,5 @@ fix(aside): remove aside margin
 ```bash
 git push --force _my-branch_
 ```
+
+If hooks need setup, run `npx husky install`.

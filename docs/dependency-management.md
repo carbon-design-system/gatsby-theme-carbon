@@ -19,13 +19,15 @@ line using the `yarn` cli.
    `yarn workspace gatsby-theme-carbon add existing-package` or
    `yarn add -W -D existing-package` for dev dependencies
 
+Note: The root `package.json` includes a `packageManager` field specifying the Yarn version (`yarn@4.9.2`), ensuring consistent Yarn versions across environments.
+
 ## Workspaces
 
 This project uses [yarn workspaces](https://yarnpkg.com/features/workspaces) to
 keep our two "packages" in sync (the example app and the Gatsby theme itself. If
 you're in the project's root and want to run a command in a specific workspace
 you can run `yarn workspace X run my-command`. For example,
-`yarn workspace gatsby-theme-carbon remove my-speciall-dependency`.
+`yarn workspace gatsby-theme-carbon remove my-special-dependency`.
 
 Dev dependencies (linting, formatting etc.) aren't managed in either of the
 packages, their managed at the root of the project. However, if you try to run
@@ -57,7 +59,7 @@ chose which packages we want to update individually. If you want to include
 packages with updates beyond your version range (breaking/non-semver) pass the
 `latest` flag: `yarn upgrade-interactive --latest`
 
-![Demo of yarn upgrade-interactive command](./deps.png)
+![Demo of yarn upgrade-interactive command](deps.png)
 
 After selecting the package, and hitting enter, you'll notice nothing changed in
 the `package.json`. This is because after updating to
@@ -68,6 +70,15 @@ commit the changes to `yarn.lock` and you're good to go.
 If for some reason you really need to update a version in the `package.json` you
 can re-add the package with: `yarn add @carbon/icons-react` this will update the
 `package.json` to show the latest version.
+
+## Pre-commit hooks
+
+We use [husky](https://typicode.github.io/husky/) and [lint-staged](https://github.com/okonet/lint-staged) to automatically format, lint, and validate commits. These run on pre-commit hooks to ensure code quality.
+
+- Formatting and linting via lint-staged (see `.lintstagedrc` in root)
+- Commit message validation via commitlint
+
+If hooks aren't working, run `npx husky install` to set them up.
 
 ## Merge conflicts
 
