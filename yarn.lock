@@ -11724,6 +11724,7 @@ __metadata:
     "@eslint/js": "npm:^9.39.1"
     "@release-it-plugins/workspaces": "npm:^5.0.3"
     "@release-it/conventional-changelog": "npm:^10.0.2"
+    conventional-changelog-conventionalcommits: "npm:^9.1.0"
     eslint: "npm:^9.39.1"
     eslint-config-prettier: "npm:^10.1.8"
     eslint-plugin-html: "npm:^8.1.3"
