@@ -58,7 +58,7 @@
       "addUntrackedFiles": true
     },
     "hooks": {
-      "after:bump": "yarn install && git add yarn.lock",
+      "after:bump": "yarn install --no-immutable && git add yarn.lock",
       "before:release": "git add yarn.lock"
     },
     "npm": false
