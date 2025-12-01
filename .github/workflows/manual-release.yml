@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # fetch-depth: 0 ensures we get commit messages for changelog/versioning
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
