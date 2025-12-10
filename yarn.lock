@@ -10462,7 +10462,7 @@ __metadata:
   dependencies:
     "@carbon/icons-react": "npm:^11.70.0"
     gatsby: "npm:^5.15.0"
-    gatsby-theme-carbon: "npm:^4.3.22"
+    gatsby-theme-carbon: "npm:^4.3.23"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
   languageName: unknown
@@ -11780,7 +11780,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-theme-carbon@npm:^4.3.22, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
+"gatsby-theme-carbon@npm:^4.3.23, gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon":
   version: 0.0.0-use.local
   resolution: "gatsby-theme-carbon@workspace:packages/gatsby-theme-carbon"
   dependencies:

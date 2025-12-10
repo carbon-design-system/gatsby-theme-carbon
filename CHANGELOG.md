@@ -1,5 +1,11 @@
 # Changelog
 
+## [4.3.23](///compare/v4.3.22...v4.3.23) (2025-12-10)
+
+### Bug Fixes
+
+* Resolve SSR build issues by nullifying smooth-scroll during SSR and guarding window object access in hooks. 4d7c3f9
+
 ## [4.3.22](///compare/v4.3.21...v4.3.22) (2025-12-03)
 
 ## [4.3.21](///compare/v4.3.20...v4.3.21) (2025-11-20)
