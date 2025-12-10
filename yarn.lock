@@ -11005,21 +11005,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"focus-trap-react@npm:^10.3.1":
-  version: 10.3.1
-  resolution: "focus-trap-react@npm:10.3.1"
+"focus-trap-react@npm:^11.0.4":
+  version: 11.0.4
+  resolution: "focus-trap-react@npm:11.0.4"
   dependencies:
-    focus-trap: "npm:^7.6.1"
+    focus-trap: "npm:^7.6.5"
     tabbable: "npm:^6.2.0"
   peerDependencies:
-    prop-types: ^15.8.1
-    react: ">=16.3.0"
-    react-dom: ">=16.3.0"
-  checksum: 10/4a73f98d111117bb2f8a5285f43e8580ffe6bde4c7b4f366e7af016c1fa10044d7c52dfd3776a5eabb948c50f6343ce5c46ff42e8b4edfe4c580cd8eea24dda8
+    "@types/react": ^18.0.0 || ^19.0.0
+    "@types/react-dom": ^18.0.0 || ^19.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  checksum: 10/cdedee222cb990e768b5543bfa6905a97e4ebb8dfe775619ae92a6282875b880c5825cbd5e579e148553ba5b5e661c524bef22f6a4dc3e2071d6ef5aea0152af
   languageName: node
   linkType: hard
 
-"focus-trap@npm:^7.6.1":
+"focus-trap@npm:^7.6.5":
   version: 7.6.6
   resolution: "focus-trap@npm:7.6.6"
   dependencies:
@@ -11800,7 +11801,7 @@ __metadata:
     beautiful-react-hooks: "npm:^5.0.3"
     classnames: "npm:^2.5.1"
     copy-to-clipboard: "npm:^3.3.3"
-    focus-trap-react: "npm:^10.3.1"
+    focus-trap-react: "npm:^11.0.4"
     gatsby: "npm:^5.15.0"
     gatsby-plugin-catch-links: "npm:^5.15.0"
     gatsby-plugin-local-search: "npm:^2.0.1"
