@@ -39,7 +39,7 @@
     "beautiful-react-hooks": "^5.0.3",
     "classnames": "^2.5.1",
     "copy-to-clipboard": "^3.3.3",
-    "focus-trap-react": "^10.3.1",
+    "focus-trap-react": "^11.0.4",
     "gatsby-plugin-catch-links": "^5.15.0",
     "gatsby-plugin-local-search": "^2.0.1",
     "gatsby-plugin-manifest": "^5.15.0",
