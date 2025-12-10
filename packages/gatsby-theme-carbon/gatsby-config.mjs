@@ -139,6 +139,8 @@ export default (themeOptions) => {
         options: {
           sassOptions: {
             includePaths: [path.resolve(__dirname, 'node_modules')],
+            api: 'modern',
+            silenceDeprecations: ['legacy-js-api'],
           },
         },
       },
