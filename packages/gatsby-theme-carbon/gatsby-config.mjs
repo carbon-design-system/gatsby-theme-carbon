@@ -140,7 +140,7 @@ export default (themeOptions) => {
           sassOptions: {
             includePaths: [path.resolve(__dirname, 'node_modules')],
             api: 'modern',
-            silenceDeprecations: ['legacy-js-api'],
+            silenceDeprecations: ['legacy-js-api', 'global-builtin', 'if-function'],
           },
         },
       },
