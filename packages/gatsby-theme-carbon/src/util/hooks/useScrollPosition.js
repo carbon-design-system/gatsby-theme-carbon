@@ -3,18 +3,20 @@ import _throttle from 'lodash.throttle';
 
 let passiveListenerSupported;
 
-try {
-  const opts = Object.defineProperty({}, 'passive', {
-    // eslint-disable-next-line getter-return
-    get() {
-      passiveListenerSupported = true;
-    },
-  });
-  window.addEventListener('testPassive', null, opts);
-  window.removeEventListener('testPassive', null, opts);
-} catch (e) {
-  console.warn(e);
-  passiveListenerSupported = false;
+if (typeof window !== 'undefined') {
+  try {
+    const opts = Object.defineProperty({}, 'passive', {
+      // eslint-disable-next-line getter-return
+      get() {
+        passiveListenerSupported = true;
+      },
+    });
+    window.addEventListener('testPassive', null, opts);
+    window.removeEventListener('testPassive', null, opts);
+  } catch (e) {
+    console.warn(e);
+    passiveListenerSupported = false;
+  }
 }
 
 const getPosition = () => {

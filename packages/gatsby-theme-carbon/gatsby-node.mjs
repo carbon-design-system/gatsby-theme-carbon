@@ -4,8 +4,18 @@ import * as mkdirp from 'mkdirp';
 import startCase from 'lodash.startcase';
 import FilterWarningsPlugin from 'webpack-filter-warnings-plugin';
 
-export const onCreateWebpackConfig = ({ actions }) => {
+export const onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   actions.setWebpackConfig({
+    module: {
+      rules: [
+        stage === 'build-html' || stage === 'develop-html'
+          ? {
+              test: /smooth-scroll/,
+              use: loaders.null(),
+            }
+          : null,
+      ].filter(Boolean),
+    },
     plugins: [
       new FilterWarningsPlugin({
         exclude:
