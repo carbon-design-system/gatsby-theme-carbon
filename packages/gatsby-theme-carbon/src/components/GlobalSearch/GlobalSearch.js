@@ -56,7 +56,7 @@ const GlobalSearchInput = () => {
 
   const sanitizeQuery = (str) => {
     // Escape special characters to prevent queryParseError
-    return str.replace(/[`~!@#$%^&*()\-_=+\[\]{}\\|;:'",<.>/?]/g, '\\$1');
+    return str.replace(/[`~!@#$%^&*()\-_=+\[\]{}\\|;:'",<.>/?]/g, '\\$&');
   };
 
   const results = useLunr(sanitizeQuery(query), index, store);
