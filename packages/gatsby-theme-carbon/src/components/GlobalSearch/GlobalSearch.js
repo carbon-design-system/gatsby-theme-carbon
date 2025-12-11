@@ -53,7 +53,14 @@ const GlobalSearchInput = () => {
   const openButtonRef = useRef(null);
   const [inputIsFocused, setInputIsFocused] = useState(false);
   const [query, setQuery] = useState('');
-  const results = useLunr(query, index, store);
+
+  const sanitizeQuery = (str) => {
+    // Escape special characters to prevent queryParseError
+    return str.replace(/[`~!@#$%^&*()\-_=+\[\]{}\\|;:'",<.>/?]/g, '\\$1');
+  };
+
+  const results = useLunr(sanitizeQuery(query), index, store);
+
   const { toggleNavState, searchIsOpen, isManagingFocus, setIsManagingFocus } =
     useContext(NavContext);
 
