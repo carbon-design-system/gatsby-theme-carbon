@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.25](///compare/v4.3.24...v4.3.25) (2025-12-15)
+
+### Bug Fixes
+
+* **globalsearch:** fix page crash when typing : or ^ ([#1659](undefined/undefined/undefined/issues/1659)) cbb69ff
+* **globalsearch:** tweak regex to properly replace ([#1660](undefined/undefined/undefined/issues/1660)) ae2f687
+
 ## [4.3.24](///compare/v4.3.23...v4.3.24) (2025-12-10)
 
 ## [4.3.23](///compare/v4.3.22...v4.3.23) (2025-12-10)
