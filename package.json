@@ -61,7 +61,10 @@
       "after:bump": "yarn install --no-immutable && git add yarn.lock",
       "before:release": "git add yarn.lock"
     },
-    "npm": false
+    "npm": {
+      "publish": false,
+      "skipChecks": true
+    }
   },
   "eslintIgnore": [
     "**/node_modules/",
