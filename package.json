@@ -26,14 +26,15 @@
     "format": "prettier --write \"**/*.{css,scss,json,html,yaml,mdx}\"",
     "format:ci": "prettier --check \"**/*.{css,scss,json,html,yaml,mdx}\"",
     "lint": "eslint . --cache && stylelint \"packages/**/*.scss\"",
-    "lint:fix": "yarn lint:js && yarn lint:scss",
     "lint:js": "eslint . --cache --fix",
     "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
+    "lint:fix": "yarn lint:js && yarn lint:scss",
     "release": "release-it",
     "release:pre": "release-it --preRelease=next",
     "release:ci": "release-it --ci",
     "release:dry": "release-it --dry-run",
-    "validate": "yarn format:ci && yarn lint"
+    "validate": "yarn format:ci && yarn lint",
+    "prepare": "husky"
   },
   "publishConfig": {
     "access": "public",
@@ -48,7 +49,43 @@
       "@release-it/conventional-changelog": {
         "infile": "CHANGELOG.md",
         "header": "# Changelog",
-        "preset": "conventionalcommits"
+        "preset": {
+          "name": "conventionalcommits",
+          "types": [
+            {
+              "type": "feat",
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "section": "Bug Fixes"
+            },
+            {
+              "type": "chore",
+              "section": "Chores"
+            },
+            {
+              "type": "docs",
+              "section": "Documentation"
+            },
+            {
+              "type": "style",
+              "section": "Styles"
+            },
+            {
+              "type": "refactor",
+              "section": "Code Refactoring"
+            },
+            {
+              "type": "perf",
+              "section": "Performance Improvements"
+            },
+            {
+              "type": "test",
+              "section": "Tests"
+            }
+          ]
+        }
       }
     },
     "github": {
@@ -74,12 +111,6 @@
     "**/.cache/",
     "**/build/"
   ],
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint --edit $1",
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.js": [
       "eslint --fix"

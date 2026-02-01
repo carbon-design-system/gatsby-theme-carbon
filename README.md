@@ -25,6 +25,19 @@ The Gatsby Carbon theme includes all the configuration you need to build a
 beautiful site inspired by the
 [Carbon Design System](https://www.carbondesignsystem.com).
 
+## Development
+
+This repository is a monorepo using Yarn workspaces and Lerna.
+
+### Key Scripts
+
+- `yarn dev`: Starts the example site in development mode.
+- `yarn build`: Builds the example site.
+- `yarn lint`: Runs ESLint and Stylelint across the codebase.
+- `yarn lint:fix`: Automatically fixes linting and style errors.
+- `yarn format`: Formats code using Prettier.
+- `yarn validate`: Runs formatting checks and linting (used in CI).
+
 ## Resources
 
 - [Contribution guidelines](.github/CONTRIBUTING.md)
