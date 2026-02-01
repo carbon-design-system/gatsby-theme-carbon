@@ -223,12 +223,6 @@ jobs:
           git config --global user.name "Eric N. Garcia"
           git config --global user.email "eng618@garciaericn.com"
 
-      - name: Initialize the NPM config
-        run: |
-          npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
@@ -242,6 +236,5 @@ jobs:
         run: yarn release:ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     # Lockfile is now updated as part of the release commit via release-it hooks
