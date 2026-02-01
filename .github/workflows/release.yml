@@ -231,9 +231,13 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ SECRETS.SSH_PRIVATE_KEY }}
 
+      - name: Upgrade npm
+        run: npm install -g npm@latest
+
       - name: Run release command
         run: yarn release:ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          npm_config_provenance: true
 
     # Lockfile is now updated as part of the release commit via release-it hooks

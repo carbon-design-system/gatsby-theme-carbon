@@ -42,7 +42,9 @@
   },
   "release-it": {
     "plugins": {
-      "@release-it-plugins/workspaces": true,
+      "@release-it-plugins/workspaces": {
+        "skipChecks": true
+      },
       "@release-it/conventional-changelog": {
         "infile": "CHANGELOG.md",
         "header": "# Changelog",
