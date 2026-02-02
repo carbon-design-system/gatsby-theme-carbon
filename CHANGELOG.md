@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.35](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.34...v4.3.35) (2026-02-02)
+
+### Bug Fixes
+
+* **release:** force release ([135223a](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/135223a2fe10a79f265c33746fc9a89c4690dff1))
+* **release:** update publish command ([13ed0c4](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/13ed0c40f4d566f5e4c4699a348791527204e737))
+
 ## [4.3.34](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.33...v4.3.34) (2026-02-02)
 
 ### Bug Fixes
