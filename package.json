@@ -43,13 +43,7 @@
   },
   "release-it": {
     "plugins": {
-      "@release-it-plugins/workspaces": {
-        "skipChecks": true,
-        "versionArgs": [
-          "--allow-same-version",
-          "--workspaces=false"
-        ]
-      },
+      "@release-it-plugins/workspaces": true,
       "@release-it/conventional-changelog": {
         "infile": "CHANGELOG.md",
         "header": "# Changelog",
@@ -104,10 +98,7 @@
       "after:bump": "yarn install --no-immutable && git add yarn.lock",
       "before:release": "git add yarn.lock"
     },
-    "npm": {
-      "publish": false,
-      "skipChecks": true
-    }
+    "npm": false
   },
   "eslintIgnore": [
     "**/node_modules/",
