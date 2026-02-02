@@ -49,7 +49,7 @@
         "workspaces": [
           "packages/gatsby-theme-carbon"
         ],
-        "publishCommand": "npm publish --provenance --access public"
+        "publishCommand": "npm publish -w ${name} --provenance --access public"
       },
       "@release-it/conventional-changelog": {
         "infile": "CHANGELOG.md",
