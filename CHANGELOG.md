@@ -1,5 +1,21 @@
 # Changelog
 
+## [4.3.32](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.31...v4.3.32) (2026-02-02)
+
+### Bug Fixes
+
+* **release:** revert release-it config to v4.3.31 working state ([1fcded1](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/1fcded14ec6a2034f9c9f168f5c3f6e7b9d30d96))
+* test release with empty commit ([ea8d6c7](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ea8d6c72d0df55713cc93a1eaa7e885dc54e11f7))
+
+### Chores
+
+* configure release-it workspaces plugin to allow same version ([63b056d](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/63b056dc4e2e7d49a54bdd5c1cc7193ce4e42e3c))
+* modernize dev standards and refine release configuration ([7aa8849](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/7aa8849b96d9cd790900eb46b13e99aeeb141c37))
+* Remove explicit npm registry URL configuration from Node.js setup in release workflow. ([8b1f94c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8b1f94c024bd671720c9f71a030d954deee7aff5))
+* update dependencies across all packages, including Gatsby and Carbon components ([#1674](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1674)) ([73029b6](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/73029b6139cf1894014f50ca53454f248965a775))
+* Update Node.js engine to 20.x/22.x, configure release-it workspaces, and use `yarn install --immutable` in CI workflows. ([ea84e3e](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ea84e3e1bcc7139f97f5161146396551d655c126))
+* Update release npm configuration to disable publishing and skip checks. ([37cc2a6](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/37cc2a6b278e2653f697ce9cad1faf89573d8611))
+
 ## [4.3.31](///compare/v4.3.30...v4.3.31) (2026-01-28)
 
 ## [4.3.30](///compare/v4.3.29...v4.3.30) (2026-01-26)
