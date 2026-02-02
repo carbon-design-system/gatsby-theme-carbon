@@ -46,6 +46,9 @@
       "@release-it-plugins/workspaces": {
         "skipChecks": true,
         "publish": true,
+        "workspaces": [
+          "packages/gatsby-theme-carbon"
+        ],
         "publishCommand": "npm publish --provenance --access public"
       },
       "@release-it/conventional-changelog": {
