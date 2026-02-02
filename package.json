@@ -9,7 +9,7 @@
   },
   "license": "Apache 2.0",
   "engines": {
-    "node": "18.x || 20.x"
+    "node": "20.x || 22.x"
   },
   "workspaces": [
     "packages/*"
@@ -46,7 +46,8 @@
       "@release-it-plugins/workspaces": {
         "skipChecks": true,
         "versionArgs": [
-          "--allow-same-version"
+          "--allow-same-version",
+          "--workspaces=false"
         ]
       },
       "@release-it/conventional-changelog": {
