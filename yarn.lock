@@ -11141,27 +11141,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"focus-trap-react@npm:^11.0.6":
-  version: 11.0.6
-  resolution: "focus-trap-react@npm:11.0.6"
+"focus-trap-react@npm:^12.0.0":
+  version: 12.0.0
+  resolution: "focus-trap-react@npm:12.0.0"
   dependencies:
-    focus-trap: "npm:^7.8.0"
+    focus-trap: "npm:^8.0.0"
     tabbable: "npm:^6.4.0"
   peerDependencies:
     "@types/react": ^18.0.0 || ^19.0.0
     "@types/react-dom": ^18.0.0 || ^19.0.0
     react: ^18.0.0 || ^19.0.0
     react-dom: ^18.0.0 || ^19.0.0
-  checksum: 10/3049bef94174cbcff74ec9952577325f854a6721592f8a3f70188430acdfdf4d7ec5ef77e37561d04adfb34440f1d1b6628e8a4d7cdbfcd5b02cfcc3996f5557
+  checksum: 10/2dcf5cc834f98ef7c8083c0e3091f789b9a9630c02254dce237bac9cd0e3ed6e91e00bc4380e67dc382d7d02f26b55ad96022d40f9e2a5468fb480693d4bc7fd
   languageName: node
   linkType: hard
 
-"focus-trap@npm:^7.8.0":
-  version: 7.8.0
-  resolution: "focus-trap@npm:7.8.0"
+"focus-trap@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "focus-trap@npm:8.0.0"
   dependencies:
     tabbable: "npm:^6.4.0"
-  checksum: 10/363ecc13739da9829435fea7443436cec06058dc53511340078f77b00267fecc8f6048b1b3e9500b7c0edc686080213f9df77edb4fc44565fc9b93bc90866f04
+  checksum: 10/ffc737f567e3c66d51b3872778de324f28c013e195e3813f2bbe3d39e895581e6a231dc24aba222a37c5db11867671f8acce3ae96e959499f100978e343e15a2
   languageName: node
   linkType: hard
 
@@ -11937,7 +11937,7 @@ __metadata:
     beautiful-react-hooks: "npm:^5.0.3"
     classnames: "npm:^2.5.1"
     copy-to-clipboard: "npm:^3.3.3"
-    focus-trap-react: "npm:^11.0.6"
+    focus-trap-react: "npm:^12.0.0"
     gatsby: "npm:^5.16.0"
     gatsby-plugin-catch-links: "npm:^5.16.0"
     gatsby-plugin-local-search: "npm:^2.0.1"
