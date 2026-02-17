@@ -139,7 +139,7 @@
     "prettier-config-carbon": "^0.12.0",
     "release-it": "^19.2.4",
     "stylelint": "^17.1.1",
-    "stylelint-config-recommended-scss": "^14.1.0",
+    "stylelint-config-recommended-scss": "^17.0.0",
     "stylelint-scss": "^6.14.0"
   },
   "devDependencies": {
