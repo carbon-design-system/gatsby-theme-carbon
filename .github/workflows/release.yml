@@ -6,7 +6,8 @@ on:
     - cron: '0 1 * * 1'
   workflow_dispatch:
     # Enable manual triggering from the GitHub UI
-    inputs: {}
+    inputs:
+      {}
       # No inputs needed, but we need to specify the branches filter
 
 # Set default permissions as restrictive as possible
@@ -17,12 +18,15 @@ jobs:
     runs-on: ubuntu-latest
     permissions: {} # No permissions needed for user check
     # Only run this check for workflow_dispatch events
-    if: github.event_name == 'workflow_dispatch' &&
-      contains('["alisonjoseph", "kennylam", "sstrubberg", "tay1orjones", "eng618", "emyarod", "ariellalgilmore" , "riddhybansal" , "annawen1" , "2nikhiltom" , "heloiselui" , "Gururajj77" , "maradwan26" , "sunny-kukkar-ibm" ]',
-      github.actor)
+    if:
+      github.event_name == 'workflow_dispatch' && contains('["kennylam",
+      "sstrubberg", "tay1orjones", "eng618", "emyarod", "ariellalgilmore" ,
+      "riddhybansal" , "annawen1" , "2nikhiltom" , "heloiselui" , "Gururajj77" ,
+      "maradwan26" , "devadula-nandan", "sangeethababu9223" ]', github.actor)
     steps:
       - name: User validation
-        run: echo "User ${{ github.actor }} is authorized to trigger this workflow"
+        run:
+          echo "User ${{ github.actor }} is authorized to trigger this workflow"
 
   # For workflow_dispatch events - depends on check-user
   check-for-new-commits-manual:
