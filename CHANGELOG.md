@@ -1,5 +1,11 @@
 # Changelog
 
+## [4.3.46](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.45...v4.3.46) (2026-04-23)
+
+### Chores
+
+* **release:** update carbon deps ([#1700](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1700)) ([9886d27](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9886d27fc4a078663b7dcf93218482bf5cbf576e))
+
 ## [4.3.45](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.44...v4.3.45) (2026-04-08)
 
 ### Bug Fixes
