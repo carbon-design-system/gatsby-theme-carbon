@@ -1,5 +1,33 @@
 # Changelog
 
+## [4.3.48](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.47...v4.3.48) (2026-05-11)
+
+## [4.3.47](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.46...v4.3.47) (2026-05-04)
+
+## [4.3.46](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.45...v4.3.46) (2026-04-23)
+
+### Chores
+
+* **release:** update carbon deps ([#1700](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1700)) ([9886d27](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/9886d27fc4a078663b7dcf93218482bf5cbf576e))
+
+## [4.3.45](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.44...v4.3.45) (2026-04-08)
+
+### Bug Fixes
+
+* **actions:** git actios version issue ([#1698](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1698)) ([0379ca1](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0379ca15f8375b9a8df3b2ffe68e1e5f16d71ce7))
+* **actions:** regression work around ([#1699](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1699)) ([0cdb9bd](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/0cdb9bd83f8c42fcb1c12ab2d33804134bf7aea3))
+* **release:** add team members to user check ([92f089c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/92f089cb6e5f25b557b46023211a03d6fcea4caa))
+
+### Chores
+
+* **release:** update carbon deps ([#1695](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1695)) ([aa0ca86](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/aa0ca860aa2512c2c7744d512721e41194262f26))
+
+## [4.3.44](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.43...v4.3.44) (2026-03-25)
+
+### Chores
+
+* **release:** update carbon deps ([#1694](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1694)) ([dcfcc3d](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/dcfcc3de75b349ee7ef508b1b590b37f001d9bb2))
+
 ## [4.3.43](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.42...v4.3.43) (2026-03-11)
 
 ### Chores
