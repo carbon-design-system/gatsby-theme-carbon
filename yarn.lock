@@ -1679,6 +1679,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@carbon/colors@npm:^11.52.0":
+  version: 11.52.0
+  resolution: "@carbon/colors@npm:11.52.0"
+  dependencies:
+    "@ibm/telemetry-js": "npm:^1.5.0"
+  checksum: 10/2c63efe04cd2a8dfeacec18a4b7385642c2ef0ce8262fb4d9fd05871f094db0069a7ad6bab4defe0836abeb0e2a74008a7b2edb45e82ef6e1437135b83977f22
+  languageName: node
+  linkType: hard
+
 "@carbon/elements@npm:^11.88.0":
   version: 11.88.0
   resolution: "@carbon/elements@npm:11.88.0"
@@ -1711,6 +1720,16 @@ __metadata:
     "@carbon/layout": "npm:^11.52.0"
     "@ibm/telemetry-js": "npm:^1.5.0"
   checksum: 10/05f91dd126c5018fde16b504723fc178c0f5ee3b45eddfeea79c775c169e39cd6776ffbd234b217c1700791935c841a784897d5a508df9d7bd3795716da32c91
+  languageName: node
+  linkType: hard
+
+"@carbon/grid@npm:^11.56.0":
+  version: 11.56.0
+  resolution: "@carbon/grid@npm:11.56.0"
+  dependencies:
+    "@carbon/layout": "npm:^11.53.0"
+    "@ibm/telemetry-js": "npm:^1.5.0"
+  checksum: 10/4617e94889fcc3e422f7908cc718e68c9e2ff72c02c6f54432cb8ba82981b9af0b35eecb91bd9550e74d141adf482e6ad3422ab23038be04df845cca33409206
   languageName: node
   linkType: hard
 
@@ -1773,6 +1792,15 @@ __metadata:
   dependencies:
     "@ibm/telemetry-js": "npm:^1.5.0"
   checksum: 10/f0ece5195ae3bbc6accbe895aadb29198e476ff32931b654d0cb98a4953fe0eacbed421dc292dc37af569d48d396d39f9494a8c28a18bffe56e6ac38fea92f13
+  languageName: node
+  linkType: hard
+
+"@carbon/layout@npm:^11.53.0":
+  version: 11.53.0
+  resolution: "@carbon/layout@npm:11.53.0"
+  dependencies:
+    "@ibm/telemetry-js": "npm:^1.5.0"
+  checksum: 10/57b9bc1c527f34b7581f76abe921320fb5cfbbd6c3c41ce39c341cba75eb5353a689c4ee26685b459a6a0040a0672220a914b23e8ad6c2f6a37b42970a8cdb00
   languageName: node
   linkType: hard
 
@@ -1859,15 +1887,15 @@ __metadata:
   linkType: hard
 
 "@carbon/themes@npm:^11.72.0":
-  version: 11.72.0
-  resolution: "@carbon/themes@npm:11.72.0"
+  version: 11.74.0
+  resolution: "@carbon/themes@npm:11.74.0"
   dependencies:
-    "@carbon/colors": "npm:^11.51.0"
-    "@carbon/layout": "npm:^11.52.0"
-    "@carbon/type": "npm:^11.58.0"
+    "@carbon/colors": "npm:^11.52.0"
+    "@carbon/layout": "npm:^11.53.0"
+    "@carbon/type": "npm:^11.60.0"
     "@ibm/telemetry-js": "npm:^1.5.0"
     color: "npm:^4.0.0"
-  checksum: 10/cfdf5dfa4a4ce6e2694b8ce9d2271bd727be81e45ebc324a78a15d043884bd9cf98e41f7d91c9587c115dee3e48cba023e807915b756991d212dec1714f69257
+  checksum: 10/7409962fe3497f7998877876eba900cf52485ecaa9dbcde7f7764aee6f425c8082ee3a4f897ce8981acf14bd9ffa06f3f2e15d56e80fa829f75dddc04fdae438
   languageName: node
   linkType: hard
 
@@ -1879,6 +1907,17 @@ __metadata:
     "@carbon/layout": "npm:^11.52.0"
     "@ibm/telemetry-js": "npm:^1.5.0"
   checksum: 10/4eb406d3a612a878cc4343fb13a787741920094e8d9e791166419b086045612a767f4b1b288a5181eb395a6ce3a34b0d875fd15b6c92844a1663e861f200b6e0
+  languageName: node
+  linkType: hard
+
+"@carbon/type@npm:^11.60.0":
+  version: 11.60.0
+  resolution: "@carbon/type@npm:11.60.0"
+  dependencies:
+    "@carbon/grid": "npm:^11.56.0"
+    "@carbon/layout": "npm:^11.53.0"
+    "@ibm/telemetry-js": "npm:^1.5.0"
+  checksum: 10/5be19a81c22b268aaa2348448175f9a1071b84dfac1494795c4bbd1ffc6b18e31806c9421405578761cc9bc8e1001c44fede28ebe60523db508ac2034691e679
   languageName: node
   linkType: hard
 
