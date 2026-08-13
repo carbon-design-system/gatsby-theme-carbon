@@ -1,5 +1,11 @@
 # Changelog
 
+## [4.3.59](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.58...v4.3.59) (2026-08-13)
+
+### Chores
+
+* update carbon/react dependency ([#1729](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1729)) ([41abc58](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/41abc58aaf56c0bf7152d1528277ea9c1543edfe))
+
 ## [4.3.58](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.57...v4.3.58) (2026-08-12)
 
 ### Chores
