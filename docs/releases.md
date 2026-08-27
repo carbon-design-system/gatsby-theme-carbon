@@ -2,35 +2,54 @@
 
 ## When does the theme publish releases?
 
-At the moment, we intentionally publish releases manually. We want each release
-to have meaning and reduce constant release churn. For that reason we release
-when any of the following conditions are true:
+Releases are published **automatically on a weekly schedule** (Mondays at 1:00 AM UTC) when there are new commits since the last release. The automated workflow:
 
-- A bug fix or patch for something in Carbon, IBM Design Language, or the IBM
-  Brand Center sites
-- A bug fix that impacts every theme site
-- A new feature (includes a corresponding slack announcement)
+1. Checks for untagged commits on `main`
+2. Verifies the Validate workflow passed
+3. Bumps versions, generates changelog, and publishes to npm
 
-If a patch is narrow in scope(impacting a small subset of sites) we'll hold off
-on releasing the patch for the reasons mentioned above.
+Releases can also be **manually triggered** by authorized maintainers via the [GitHub Actions UI](https://github.com/carbon-design-system/gatsby-theme-carbon/actions/workflows/release.yml).
 
-## How to publish a new theme version
+## Automated CI Releases
 
-We publish to npm, create a GitHub release, and generate changelogs by using
-[release-it](https://www.npmjs.com/package/release-it) with the workspaces plugin,
-which handles versioning and publishing for the monorepo. To practice, use
-`yarn release:dry` in step 2. This will take you through the whole process, but
-not actually do anything.
+The release workflow uses [release-it](https://www.npmjs.com/package/release-it) with the `@release-it-plugins/workspaces` plugin for monorepo support.
 
-For prereleases (e.g., betas), use `yarn release:pre`.
+### npm Trusted Publishers (OIDC)
 
-1. Grab the latest changes. On the `main` branch, run
-   `git pull upstream main --tags`
-2. Run `yarn release` and check the generated changelog
-3. If there's a new feature, ensure we're bumping up the second number in the
-   new version (`1.X`)
+We use **npm trusted publishers** for secure, tokenless authentication:
+
+- No `NPM_TOKEN` secret required
+- Authentication happens via GitHub's OIDC tokens at publish time
+- Provenance attestations are automatically included
+
+The trusted publisher is configured on [npmjs.com](https://www.npmjs.com/package/gatsby-theme-carbon/access) to trust the `release.yml` workflow.
+
+### Key Configuration
+
+In `package.json`, the release-it config includes:
+
+```json
+"@release-it-plugins/workspaces": {
+  "skipChecks": true,
+  "publish": true,
+  "workspaces": ["packages/gatsby-theme-carbon"],
+  "publishCommand": "npm publish -w packages/gatsby-theme-carbon --provenance --access public"
+}
+```
+
+- `skipChecks: true` - Skips npm auth check (OIDC only works at publish time)
+- `workspaces` - Only publishes `gatsby-theme-carbon` (not the private root/example)
+- `publishCommand` - Custom command with `--provenance` for OIDC
+
+## Manual Releases (Local)
+
+For local releases or dry runs:
+
+1. On `main` branch, run `git pull origin main --tags`
+2. Run `yarn release` (or `yarn release:dry` to practice)
+3. For prereleases: `yarn release:pre`
 4. Complete the prompts
-5. 🚀 You did it! 🥳
+5. 🚀 Done!
 
 ## Updating the starter
 
