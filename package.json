@@ -127,7 +127,7 @@
   "dependencies": {
     "@babel/core": "^7.29.0",
     "@babel/eslint-parser": "^7.28.6",
-    "@babel/preset-react": "^7.28.5",
+    "@babel/preset-react": "^8.0.1",
     "@commitlint/cli": "^20.4.0",
     "@commitlint/config-conventional": "^20.4.0",
     "@release-it-plugins/workspaces": "^5.0.3",
