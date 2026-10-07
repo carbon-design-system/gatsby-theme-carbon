@@ -39,13 +39,14 @@ jobs:
           exempt-issue-labels:
             'status: help wanted 👐,hacktoberfest,severity: 1 🚨,severity:
             2,type: a11y ♿,security'
-          exempt-pinned: true
           exempt-assignees: true
 
           # Process the backlog gradually instead of spamming all at once
           operations-per-run: 30
           ascending: true
 
-          # Safety: dry run until the first scheduled/manual run is reviewed.
-          # Set to false in a follow-up once labeling looks correct.
-          dry-run: true
+          # Safety: log-only until labeling is reviewed. actions/stale v11
+          # has no dry-run input (it is ignored with a warning, and the
+          # action runs live) — debug-only is the real dry-run switch.
+          # Remove it in a follow-up once labeling looks correct.
+          debug-only: true
