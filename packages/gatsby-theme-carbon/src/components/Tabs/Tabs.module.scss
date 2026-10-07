@@ -1,3 +1,7 @@
+.tabs + * {
+  --space: #{$spacing-05};
+}
+
 .tab-list {
   display: flex;
   max-width: min-content;

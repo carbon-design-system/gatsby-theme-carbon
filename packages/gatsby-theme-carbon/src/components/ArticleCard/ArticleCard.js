@@ -155,7 +155,7 @@ ArticleCard.propTypes = {
   readTime: PropTypes.string,
 
   /**
-   * Action icon, default is blank, options are Launch, ArrowRight, Download
+   * Action icon, default is blank, options are launch, arrowRight, download, disabled, email
    */
   actionIcon: PropTypes.string,
 

@@ -141,21 +141,23 @@ export const Tabs = (props) => {
     [setActiveTab, activeTab, tabList.current]
   );
   return (
-    <TabContext.Provider value={value}>
-      {isMobile ? (
-        <Select _id={id}>{props.children}</Select>
-      ) : (
-        <TabList _id={id}>{props.children}</TabList>
-      )}
-      {React.Children.map(props.children, (child, index) => {
-        if (elementIsNullOrString(child)) return child;
-        return React.cloneElement(child, {
-          _id: `${id}__${index}`,
-          active: activeTab === index,
-          index,
-        });
-      })}
-    </TabContext.Provider>
+    <div className={cx(styles.tabs, props.className)}>
+      <TabContext.Provider value={value}>
+        {isMobile ? (
+          <Select _id={id}>{props.children}</Select>
+        ) : (
+          <TabList _id={id}>{props.children}</TabList>
+        )}
+        {React.Children.map(props.children, (child, index) => {
+          if (elementIsNullOrString(child)) return child;
+          return React.cloneElement(child, {
+            _id: `${id}__${index}`,
+            active: activeTab === index,
+            index,
+          });
+        })}
+      </TabContext.Provider>
+    </div>
   );
 };
 
