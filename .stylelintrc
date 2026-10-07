@@ -12,7 +12,6 @@
       {
         "ignoreProperties": ["composes"]
       }
-    ],
-    "no-descending-specificity": null
+    ]
   }
 }
