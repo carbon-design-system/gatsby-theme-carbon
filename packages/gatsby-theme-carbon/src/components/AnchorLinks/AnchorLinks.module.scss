@@ -32,6 +32,17 @@
     color: currentColor;
     cursor: pointer;
   }
+
+  &:focus-visible {
+    outline: 2px solid $focus;
+    outline-offset: 2px;
+  }
+}
+
+// Keep each link (and its focus ring) inside a single CSS column fragment
+.multiple-columns li,
+.multiple-columns .link {
+  break-inside: avoid;
 }
 
 .list--small .link {

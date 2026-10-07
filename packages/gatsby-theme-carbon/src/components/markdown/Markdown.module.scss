@@ -193,3 +193,11 @@ img {
 span:has(:global(.gatsby-resp-image-wrapper)) {
   display: block;
 }
+
+// Linked images ([![alt](src)](href)) inherit paragraph text padding.
+// Reset it so the image aligns flush like a standalone image.
+.paragraph > a:global(.gatsby-resp-image-link) {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
