@@ -1,0 +1,51 @@
+name: Triage Stale Issues
+
+on:
+  schedule:
+    # Weekly on Monday at 09:00 UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mark and close stale issues
+        uses: actions/stale@v11
+        with:
+          # Issues only — PRs are triaged manually
+          days-before-issue-stale: 90
+          days-before-issue-close: 30
+          days-before-pr-stale: -1
+          days-before-pr-close: -1
+
+          stale-issue-label: 'status: stale 💤'
+          stale-issue-message: >
+            This issue has been open with no activity for 90 days. If it is
+            still relevant, please comment to keep it open — otherwise it will
+            be closed in 30 days. To reopen a closed issue, comment or remove
+            the `status: stale 💤` label.
+          close-issue-message: >
+            Closing due to inactivity. If this is still an issue, please comment
+            and it can be reopened.
+
+          # Any update (comment, label change) un-marks stale
+          remove-issue-stale-when-updated: true
+
+          # Never go stale: contributor funnels, high severity, a11y, security
+          exempt-issue-labels:
+            'status: help wanted 👐,hacktoberfest,severity: 1 🚨,severity:
+            2,type: a11y ♿,security'
+          exempt-pinned: true
+          exempt-assignees: true
+
+          # Process the backlog gradually instead of spamming all at once
+          operations-per-run: 30
+          ascending: true
+
+          # Safety: dry run until the first scheduled/manual run is reviewed.
+          # Set to false in a follow-up once labeling looks correct.
+          dry-run: true
