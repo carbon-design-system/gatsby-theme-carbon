@@ -67,6 +67,44 @@ li .row {
   text-wrap: wrap;
 }
 
+// Reserve room for the absolutely positioned Show more/less button so it
+// doesn't cover code in default and nested-list contexts (see #868).
+.has-button .highlight {
+  padding-bottom: $spacing-10;
+}
+
+// Opt-in soft wrap via ```lang wrap. Breaks long log lines/URLs instead of
+// forcing horizontal scroll, while keeping copy content unchanged.
+.highlight.wrap {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  overflow-x: hidden;
+  // Reserve room for the copy/src buttons so wrapped line endings never
+  // render underneath the sidebar (see #868).
+  padding-right: 3rem;
+}
+
+.wrapped-line {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+// In wrap mode nothing scrolls under the sidebar, so drop the fade gradient
+// (it would obscure wrapped line endings) and shrink to the button column.
+.wrap-container .sidebar {
+  background: transparent;
+  padding-left: 8px;
+}
+
+.wrap-container .sidebar.dark {
+  background: transparent;
+}
+
+// Don't force extra scroll width when wrapping; keep it for scroll mode only.
+.highlight.wrap :global(.token:last-of-type) {
+  margin-right: 0;
+}
+
 .sideBarMinHeight {
   min-height: 96px;
 }

@@ -51,6 +51,7 @@ export default (themeOptions) => {
     gatsbyPluginSharpOptions = {},
     isServiceWorkerEnabled = false,
     isSwitcherEnabled = true,
+    isCodeWrapEnabled = false,
   } = themeOptions;
 
   const theme = { ...defaultTheme, ...themeOption };
@@ -101,6 +102,7 @@ export default (themeOptions) => {
       interiorTheme: theme.interior,
       isServiceWorkerEnabled,
       isSwitcherEnabled,
+      isCodeWrapEnabled,
       title: 'Gatsby Theme Carbon',
       description:
         'Add a description by supplying it to siteMetadata in your gatsby-config.js file.',

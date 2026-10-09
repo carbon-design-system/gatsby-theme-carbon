@@ -12,6 +12,7 @@ const useMetadata = () => {
           isSwitcherEnabled
           homepageTheme
           interiorTheme
+          isCodeWrapEnabled
           navigationStyle
           lang
         }

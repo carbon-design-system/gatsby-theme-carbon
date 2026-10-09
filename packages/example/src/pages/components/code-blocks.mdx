@@ -7,7 +7,7 @@ description: Usage instructions for the Code blocks component
 
 When authoring markdown using the Carbon Gatsby theme, code blocks have some
 extra superpowers you can take advantage of. We provide carbon-themed syntax
-highlighting as well as optional `path`, `src` and `showAll` features.
+highlighting as well as optional `path`, `src`, `showAll` and `wrap` features.
 
 </PageDescription>
 
@@ -64,9 +64,36 @@ placerat iaculis. Duis bibendum fermentum aliquet.
 
 ### Props
 
-| property | propType | required | default | description                                                                                                                                                               |
-| -------- | -------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| language | string   |          |         | [Available languages.](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js)                                               |
-| src      | string   |          |         | The full url of a relevant link (source)                                                                                                                                  |
-| path     | string   |          |         | A string indicating the filename or path. Due to markdown limitations this can only be a single word                                                                      |
-| showAll  | boolean  |          | false   | A boolean indicating if the code block should show all the code at once. If not set, a "Show more" button will be displayed (only if a code block has more than 9 lines.) |
+| property | propType | required | default | description                                                                                                                                                                                          |
+| -------- | -------- | -------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| language | string   |          |         | [Available languages.](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js)                                                                          |
+| src      | string   |          |         | The full url of a relevant link (source)                                                                                                                                                             |
+| path     | string   |          |         | A string indicating the filename or path. Due to markdown limitations this can only be a single word                                                                                                 |
+| showAll  | boolean  |          | false   | A boolean indicating if the code block should show all the code at once. If not set, a "Show more" button will be displayed (only if a code block has more than 9 lines.)                            |
+| wrap     | boolean  |          | false   | A boolean indicating if long lines should soft-wrap instead of scrolling horizontally. Use `wrap` for logs or wide output. Use `wrap=false` to override the global `isCodeWrapEnabled` theme option. |
+
+### Wrap
+
+Add `wrap` to soft-wrap long lines instead of horizontal scrolling:
+
+````markdown wrap
+```bash wrap
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+```
+````
+
+```bash wrap
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+```
+
+You can also enable wrapping globally for all code blocks:
+
+```js
+// gatsby-config.js
+{
+  resolve: 'gatsby-theme-carbon',
+  options: {
+    isCodeWrapEnabled: true,
+  },
+}
+```

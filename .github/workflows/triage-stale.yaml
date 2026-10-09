@@ -3,7 +3,7 @@ name: Triage Stale Issues
 on:
   schedule:
     # Weekly on Monday at 09:00 UTC
-    - cron: "0 9 * * 1"
+    - cron: '0 9 * * 1'
   workflow_dispatch:
 
 permissions:
@@ -22,7 +22,7 @@ jobs:
           days-before-pr-stale: -1
           days-before-pr-close: -1
 
-          stale-issue-label: "status: stale 💤"
+          stale-issue-label: 'status: stale 💤'
           stale-issue-message: >
             This issue has been open with no activity for 90 days. If it is
             still relevant, please comment to keep it open — otherwise it will
@@ -37,8 +37,8 @@ jobs:
 
           # Never go stale: contributor funnels, high severity, a11y, security
           exempt-issue-labels:
-            "status: help wanted 👐,hacktoberfest,severity: 1 🚨,severity:
-            2,type: a11y ♿,security"
+            'status: help wanted 👐,hacktoberfest,severity: 1 🚨,severity:
+            2,type: a11y ♿,security'
           exempt-assignees: true
 
           # Process the backlog gradually instead of spamming all at once
