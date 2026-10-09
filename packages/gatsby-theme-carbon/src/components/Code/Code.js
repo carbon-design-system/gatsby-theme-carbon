@@ -60,10 +60,14 @@ export const parseCodeMetaData = (metaData) => {
 };
 
 const Code = ({ children, className: classNameProp = '', metaData }) => {
-  const [path, setPath] = useState('');
-  const [src, setSrc] = useState('');
-  const [showAll, setShowAll] = useState(false);
-  const [wrap, setWrap] = useState(null);
+  // Initialize from metaData so SSR/first paint already reflects
+  // path/src/showAll/wrap (useEffect below keeps them in sync on change).
+  const [path, setPath] = useState(() => parseCodeMetaData(metaData).path);
+  const [src, setSrc] = useState(() => parseCodeMetaData(metaData).src);
+  const [showAll, setShowAll] = useState(
+    () => parseCodeMetaData(metaData).showAll
+  );
+  const [wrap, setWrap] = useState(() => parseCodeMetaData(metaData).wrap);
   const [hasMoreThanNineLines, setHasMoreThanNineLines] = useState(false);
   const [shouldShowMore, setShouldShowMore] = useState(false);
   const [isInlineCode, setIsInlineCode] = useState(false);
@@ -76,21 +80,10 @@ const Code = ({ children, className: classNameProp = '', metaData }) => {
 
   useEffect(() => {
     const parsed = parseCodeMetaData(metaData);
-    if (parsed.path) {
-      setPath(parsed.path);
-    }
-
-    if (parsed.src) {
-      setSrc(parsed.src);
-    }
-
-    if (parsed.showAll) {
-      setShowAll(true);
-    }
-
-    if (parsed.wrap !== null) {
-      setWrap(parsed.wrap);
-    }
+    setPath(parsed.path);
+    setSrc(parsed.src);
+    setShowAll(parsed.showAll);
+    setWrap(parsed.wrap);
   }, [metaData]);
 
   const { interiorTheme, isCodeWrapEnabled } = useMetadata();
@@ -138,6 +131,7 @@ const Code = ({ children, className: classNameProp = '', metaData }) => {
           <div
             className={cx(styles.container, {
               [styles.hasButton]: showToggleButton,
+              [styles.wrapContainer]: shouldWrap,
             })}>
             <pre
               className={cx(styles.highlight, {
