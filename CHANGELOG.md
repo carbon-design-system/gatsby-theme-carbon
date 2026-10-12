@@ -1,5 +1,23 @@
 # Changelog
 
+## [4.4.0](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.66...v4.4.0) (2026-10-12)
+
+### Features
+
+* **code:** add wrap flag and code-wrap default (refs [#868](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/868)) ([#1751](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1751)) ([c4ef20d](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c4ef20d5b52f97d2542d83c67b37e9e78446c8b6))
+* **issues:** start triage ([c5933ca](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/c5933cafe78c118f848c0971e8668f3990522d7c))
+
+### Bug Fixes
+
+* easy-wins batch from issue triage ([#1748](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1748)) ([ff91b21](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ff91b2171433e85ae4cde2b1f7c262c61bb48148)), references [#892](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/892) [#844](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/844) [#1145](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1145) [#1005](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1005)
+* use valid actions/stale v11 inputs (debug-only, drop exempt-pinned) ([#1750](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1750)) ([85642ca](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/85642cabd99d07070ef02b402455c6b44df7733b))
+
+### Chores
+
+* add stale-issue triage bot (dry-run) ([#1749](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1749)) ([8b40060](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/8b40060cec375f6ab5998d44ed8923fd23da4f9e))
+* migrate to stylelint 17 and stylelint-config-recommended-scss 17 ([#1747](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1747)) ([fee8ff5](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/fee8ff507bc15dd754a0bfbd385873f17619c98a)), references [#1678](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1678) [#1678](https://github.com/carbon-design-system/gatsby-theme-carbon/issues/1678)
+* upgrade yarn to v4.18.1 ([ac9885c](https://github.com/carbon-design-system/gatsby-theme-carbon/commit/ac9885c92f77e974d575f3c85c013536876e1bdc))
+
 ## [4.3.66](https://github.com/carbon-design-system/gatsby-theme-carbon/compare/v4.3.65...v4.3.66) (2026-10-07)
 
 ### Bug Fixes
