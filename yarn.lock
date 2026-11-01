@@ -12027,7 +12027,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-parcel-config@npm:^1.16.0":
+"gatsby-parcel-config@npm:1.16.0":
   version: 1.16.0
   resolution: "gatsby-parcel-config@npm:1.16.0"
   dependencies:
@@ -12501,8 +12501,8 @@ __metadata:
   linkType: hard
 
 "gatsby@npm:^5.16.0":
-  version: 5.16.0
-  resolution: "gatsby@npm:5.16.0"
+  version: 5.16.1
+  resolution: "gatsby@npm:5.16.1"
   dependencies:
     "@babel/code-frame": "npm:^7.18.6"
     "@babel/core": "npm:^7.20.12"
@@ -12591,7 +12591,7 @@ __metadata:
     gatsby-legacy-polyfills: "npm:^3.16.0"
     gatsby-link: "npm:^5.16.0"
     gatsby-page-utils: "npm:^3.16.0"
-    gatsby-parcel-config: "npm:^1.16.0"
+    gatsby-parcel-config: "npm:1.16.0"
     gatsby-plugin-page-creator: "npm:^5.16.0"
     gatsby-plugin-typescript: "npm:^5.16.0"
     gatsby-plugin-utils: "npm:^4.16.0"
@@ -12679,7 +12679,7 @@ __metadata:
       optional: true
   bin:
     gatsby: ./cli.js
-  checksum: 10/1eb9ae26b06e4e8c1f4231c19d6455c7cce9686c96899879295b2affdb540a72c2fe32f4a720d164ec5253c12552bf418260d4b19223454ee01f899ac74a4374
+  checksum: 10/6a6b220dcb44b5f553909fa6c94a2c56363fdc6670d7a65d7543f2cbe219aaa8390163d277f4cf0cf440b070b6d9bafab166b4f68781fa169f6d6e90a5c8b3bb
   languageName: node
   linkType: hard
 
